@@ -35,29 +35,43 @@ const features = [
 
 const WhyChooseUs = () => {
   return (
-    <section className="bg-muted/50 py-20 md:py-28">
-      <div className="container">
+    <section className="relative py-20 md:py-28 overflow-hidden">
+      {/* Background Image */}
+      <div className="absolute inset-0">
+        <img
+          src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1920&h=1080&fit=crop"
+          alt="Modern office"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-primary/95" />
+      </div>
+
+      <div className="container relative">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="font-display text-3xl font-bold tracking-tight text-foreground md:text-4xl">
+          <span className="inline-block px-4 py-1.5 mb-4 text-sm font-medium text-gold bg-gold/10 rounded-full animate-fade-in">
+            Why Choose Us
+          </span>
+          <h2 className="font-display text-3xl font-bold tracking-tight text-white md:text-4xl animate-fade-in [animation-delay:100ms]">
             Why Choose Henleaze Tax?
           </h2>
-          <p className="mt-4 text-lg text-muted-foreground">
+          <p className="mt-4 text-lg text-white/80 animate-fade-in [animation-delay:200ms]">
             We combine expert knowledge with personal service to deliver exceptional results for our clients.
           </p>
         </div>
 
-        <div className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {features.map((feature, index) => (
             <div
               key={index}
-              className="group flex items-start space-x-4 rounded-xl bg-background p-6 card-shadow transition-all duration-300 hover:card-shadow-hover"
+              className="group flex items-start space-x-4 rounded-xl bg-white/5 backdrop-blur-sm p-6 border border-white/10 transition-all duration-300 hover:bg-white/10 hover:border-gold/30 animate-fade-in"
+              style={{ animationDelay: `${(index + 3) * 100}ms` }}
             >
-              <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg bg-secondary text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
+              <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg bg-gold/10 text-gold transition-all duration-300 group-hover:bg-gold group-hover:text-primary">
                 <feature.icon className="h-6 w-6" />
               </div>
               <div>
-                <h3 className="font-display text-lg font-semibold text-foreground">{feature.title}</h3>
-                <p className="mt-2 text-sm text-muted-foreground">{feature.description}</p>
+                <h3 className="font-display text-lg font-semibold text-white">{feature.title}</h3>
+                <p className="mt-2 text-sm text-white/70">{feature.description}</p>
               </div>
             </div>
           ))}

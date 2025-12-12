@@ -30,10 +30,10 @@ const Header = () => {
   ];
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 transition-all duration-300">
       <div className="container flex h-16 items-center justify-between">
-        <Link to="/" className="flex items-center space-x-2">
-          <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary">
+        <Link to="/" className="flex items-center space-x-2 group">
+          <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary transition-all duration-300 group-hover:bg-gold">
             <span className="font-display text-lg font-bold text-primary-foreground">H</span>
           </div>
           <div className="flex flex-col">
@@ -42,25 +42,24 @@ const Header = () => {
           </div>
         </Link>
 
-        {/* Desktop Navigation */}
         <nav className="hidden items-center space-x-1 md:flex">
           <Link
             to="/"
-            className={`px-3 py-2 text-sm font-medium transition-colors hover:text-primary ${
-              isActive("/") ? "text-primary" : "text-muted-foreground"
+            className={`px-3 py-2 text-sm font-medium transition-all duration-300 hover:text-gold ${
+              isActive("/") ? "text-gold" : "text-muted-foreground"
             }`}
           >
             Home
           </Link>
 
           <DropdownMenu>
-            <DropdownMenuTrigger className="flex items-center px-3 py-2 text-sm font-medium text-muted-foreground transition-colors hover:text-primary">
+            <DropdownMenuTrigger className="flex items-center px-3 py-2 text-sm font-medium text-muted-foreground transition-all duration-300 hover:text-gold">
               Services <ChevronDown className="ml-1 h-4 w-4" />
             </DropdownMenuTrigger>
             <DropdownMenuContent align="start" className="w-48">
               {services.map((service) => (
                 <DropdownMenuItem key={service.path} asChild>
-                  <Link to={service.path} className="w-full cursor-pointer">
+                  <Link to={service.path} className="w-full cursor-pointer hover:text-gold">
                     {service.name}
                   </Link>
                 </DropdownMenuItem>
@@ -72,8 +71,8 @@ const Header = () => {
             <Link
               key={link.path}
               to={link.path}
-              className={`px-3 py-2 text-sm font-medium transition-colors hover:text-primary ${
-                isActive(link.path) ? "text-primary" : "text-muted-foreground"
+              className={`px-3 py-2 text-sm font-medium transition-all duration-300 hover:text-gold ${
+                isActive(link.path) ? "text-gold" : "text-muted-foreground"
               }`}
             >
               {link.name}
@@ -83,13 +82,13 @@ const Header = () => {
 
         <div className="hidden items-center space-x-4 md:flex">
           <a
-            href="tel:01onal234567"
-            className="flex items-center text-sm font-medium text-muted-foreground hover:text-primary"
+            href="tel:01171234567"
+            className="flex items-center text-sm font-medium text-muted-foreground hover:text-gold transition-colors"
           >
             <Phone className="mr-2 h-4 w-4" />
             0117 123 4567
           </a>
-          <Button asChild>
+          <Button asChild className="bg-gold hover:bg-gold-light text-navy font-semibold transition-all duration-300">
             <Link to="/contact">Get a Quote</Link>
           </Button>
         </div>
