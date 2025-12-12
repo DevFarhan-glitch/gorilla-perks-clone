@@ -1,13 +1,29 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { Helmet } from "react-helmet-async";
+import Layout from "@/components/layout/Layout";
+import Hero from "@/components/home/Hero";
+import ServiceCards from "@/components/home/ServiceCards";
+import WhyChooseUs from "@/components/home/WhyChooseUs";
+import Testimonials from "@/components/home/Testimonials";
+import CTASection from "@/components/home/CTASection";
 
 const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
-    </div>
+    <>
+      <Helmet>
+        <title>Henleaze Tax Consultancy | Expert Accounting & Tax Services Bristol</title>
+        <meta
+          name="description"
+          content="Professional accounting and tax services for contractors, small businesses, and landlords in Bristol. Fixed fees, dedicated accountants, free consultation."
+        />
+      </Helmet>
+      <Layout>
+        <Hero />
+        <ServiceCards />
+        <WhyChooseUs />
+        <Testimonials />
+        <CTASection />
+      </Layout>
+    </>
   );
 };
 
