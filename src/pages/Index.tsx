@@ -4,7 +4,9 @@ import Hero from "@/components/home/Hero";
 import ServiceCards from "@/components/home/ServiceCards";
 import WhyChooseUs from "@/components/home/WhyChooseUs";
 import Testimonials from "@/components/home/Testimonials";
+import BlogSection from "@/components/home/BlogSection";
 import CTASection from "@/components/home/CTASection";
+import LiveChat from "@/components/LiveChat";
 
 const Index = () => {
   return (
@@ -21,7 +23,9 @@ const Index = () => {
         <ServiceCards />
         <WhyChooseUs />
         <Testimonials />
+        <BlogSection />
         <CTASection />
+        <LiveChat />
       </Layout>
     </>
   );
