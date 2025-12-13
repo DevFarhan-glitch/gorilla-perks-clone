@@ -2,39 +2,7 @@ import { Link } from "react-router-dom";
 import { ArrowRight, Calendar, Clock, User } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-
-const blogPosts = [
-  {
-    id: 1,
-    title: "IR35 Changes 2024: What Contractors Need to Know",
-    excerpt: "Understanding the latest IR35 legislation changes and how they affect your contracting business.",
-    author: "Sarah Mitchell",
-    date: "Dec 10, 2024",
-    readTime: "5 min read",
-    category: "IR35",
-    image: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=400&h=250&fit=crop",
-  },
-  {
-    id: 2,
-    title: "Tax-Efficient Strategies for Small Business Owners",
-    excerpt: "Discover legitimate ways to reduce your tax burden while growing your business.",
-    author: "James Thompson",
-    date: "Dec 5, 2024",
-    readTime: "7 min read",
-    category: "Tax Planning",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=250&fit=crop",
-  },
-  {
-    id: 3,
-    title: "Landlord Tax Guide: Maximizing Your Rental Income",
-    excerpt: "Essential tax tips for property investors and landlords in the UK.",
-    author: "Emma Davies",
-    date: "Nov 28, 2024",
-    readTime: "6 min read",
-    category: "Property",
-    image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=400&h=250&fit=crop",
-  },
-];
+import { blogPosts } from "@/data/blogPosts";
 
 const BlogSection = () => {
   return (
@@ -82,9 +50,11 @@ const BlogSection = () => {
                     {post.readTime}
                   </span>
                 </div>
-                <h3 className="font-display text-lg font-semibold text-foreground mb-2 group-hover:text-gold transition-colors line-clamp-2">
-                  {post.title}
-                </h3>
+                <Link to={`/blog/${post.id}`}>
+                  <h3 className="font-display text-lg font-semibold text-foreground mb-2 group-hover:text-gold transition-colors line-clamp-2">
+                    {post.title}
+                  </h3>
+                </Link>
                 <p className="text-sm text-muted-foreground mb-4 line-clamp-2">
                   {post.excerpt}
                 </p>
@@ -94,7 +64,7 @@ const BlogSection = () => {
                     {post.author}
                   </span>
                   <Link
-                    to="#"
+                    to={`/blog/${post.id}`}
                     className="text-sm font-medium text-gold hover:text-gold-light transition-colors flex items-center gap-1"
                   >
                     Read More

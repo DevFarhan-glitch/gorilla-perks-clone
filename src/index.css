@@ -104,11 +104,32 @@
     @apply border-border;
   }
 
-  body {
-    @apply bg-background text-foreground font-sans antialiased;
+  html {
+    scroll-behavior: smooth;
+    cursor: none;
+    /* We use a custom cursor overlay, but keep default visible */
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  a,
+  button {
+    cursor: none;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    @apply bg-gold/30 text-foreground;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     @apply font-display;
   }
 }
@@ -131,7 +152,7 @@
   }
 
   .hover-glow {
-    @apply transition-all duration-300 hover:shadow-[0_0_30px_rgba(202,169,87,0.3)];
+    @apply transition-all duration-300 hover:shadow-[0_0_30px_rgba(202, 169, 87, 0.3)];
   }
 
   .animate-on-scroll {
@@ -140,5 +161,10 @@
 
   .animate-on-scroll.visible {
     @apply opacity-100 translate-y-0;
+  }
+
+  .card-shadow {
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.1);
+    @apply transition-shadow duration-300 hover:shadow-xl;
   }
 }

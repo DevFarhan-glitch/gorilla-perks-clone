@@ -13,6 +13,9 @@ import Contractors from "./pages/services/Contractors";
 import SmallBusiness from "./pages/services/SmallBusiness";
 import Landlords from "./pages/services/Landlords";
 import NotFound from "./pages/NotFound";
+import Article from "./pages/Article";
+import CustomCursor from "./components/ui/CustomCursor";
+import ScrollToTop from "./components/ui/ScrollToTop";
 
 const queryClient = new QueryClient();
 
@@ -20,9 +23,11 @@ const App = () => (
   <HelmetProvider>
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
+        <CustomCursor />
         <Toaster />
         <Sonner />
         <BrowserRouter>
+          <ScrollToTop />
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/about" element={<About />} />
@@ -32,6 +37,8 @@ const App = () => (
             <Route path="/services/contractors" element={<Contractors />} />
             <Route path="/services/small-business" element={<SmallBusiness />} />
             <Route path="/services/landlords" element={<Landlords />} />
+            <Route path="/services/landlords" element={<Landlords />} />
+            <Route path="/blog/:id" element={<Article />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>

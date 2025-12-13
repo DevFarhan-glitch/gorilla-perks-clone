@@ -33,8 +33,8 @@ const Header = () => {
     <header className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 transition-all duration-300">
       <div className="container flex h-16 items-center justify-between">
         <Link to="/" className="flex items-center space-x-2 group">
-          <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary transition-all duration-300 group-hover:bg-gold">
-            <span className="font-display text-lg font-bold text-primary-foreground">H</span>
+          <div className="flex h-12 w-12 items-center justify-center rounded-full overflow-hidden border-2 border-gold/20 transition-all duration-300 group-hover:border-gold">
+             <img src="/logo.jpg" alt="Henleaze Tax Consultancy Logo" className="h-full w-full object-cover" />
           </div>
           <div className="flex flex-col">
             <span className="font-display text-lg font-bold text-foreground">Henleaze</span>
