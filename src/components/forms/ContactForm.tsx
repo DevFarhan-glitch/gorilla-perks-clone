@@ -1,15 +1,15 @@
-import { useState } from "react";
-import { z } from "zod";
-import { useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
+import { useForm, ValidationError } from "@formspree/react";
 import { Loader2, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
+import { useForm as useHookForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import * as z from "zod";
 import { useToast } from "@/hooks/use-toast";
-import { supabase } from "@/integrations/supabase/client";
+import { useEffect } from "react";
 
 const contactSchema = z.object({
   name: z.string().trim().min(2, "Name must be at least 2 characters").max(100, "Name must be less than 100 characters"),
@@ -27,10 +27,11 @@ interface ContactFormProps {
 }
 
 const ContactForm = ({ defaultService }: ContactFormProps) => {
-  const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
+  // Formspree hook: Replace "YOUR_FORM_ID" with your actual Formspree form ID
+  const [state, handleSubmit] = useForm("YOUR_FORM_ID");
 
-  const form = useForm<ContactFormValues>({
+  const form = useHookForm<ContactFormValues>({
     resolver: zodResolver(contactSchema),
     defaultValues: {
       name: "",
@@ -42,41 +43,31 @@ const ContactForm = ({ defaultService }: ContactFormProps) => {
     },
   });
 
-  const onSubmit = async (data: ContactFormValues) => {
-    setIsSubmitting(true);
-
-    try {
-      const { error } = await supabase.from("contact_submissions").insert({
-        name: data.name,
-        email: data.email,
-        phone: data.phone || null,
-        company: data.company || null,
-        service_interest: data.service_interest || null,
-        message: data.message,
-      });
-
-      if (error) throw error;
-
+  // Handle Formspree success state
+  useEffect(() => {
+    if (state.succeeded) {
       toast({
         title: "Message Sent!",
         description: "Thank you for your enquiry. We'll be in touch within 24 hours.",
       });
-
       form.reset();
-    } catch (error) {
-      toast({
+    }
+  }, [state.succeeded, toast, form]);
+
+  // Handle Formspree errors
+  useEffect(() => {
+    if (state.errors) {
+       toast({
         title: "Something went wrong",
         description: "Please try again or call us directly.",
         variant: "destructive",
       });
-    } finally {
-      setIsSubmitting(false);
     }
-  };
+  }, [state.errors, toast]);
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+      <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-6">
         <div className="grid gap-6 sm:grid-cols-2">
           <FormField
             control={form.control}
@@ -87,6 +78,7 @@ const ContactForm = ({ defaultService }: ContactFormProps) => {
                 <FormControl>
                   <Input placeholder="John Smith" {...field} />
                 </FormControl>
+                <ValidationError prefix="Name" field="name" errors={state.errors} className="text-destructive text-sm" />
                 <FormMessage />
               </FormItem>
             )}
@@ -100,6 +92,7 @@ const ContactForm = ({ defaultService }: ContactFormProps) => {
                 <FormControl>
                   <Input type="email" placeholder="john@example.com" {...field} />
                 </FormControl>
+                <ValidationError prefix="Email" field="email" errors={state.errors} className="text-destructive text-sm" />
                 <FormMessage />
               </FormItem>
             )}
@@ -116,6 +109,7 @@ const ContactForm = ({ defaultService }: ContactFormProps) => {
                 <FormControl>
                   <Input type="tel" placeholder="07123 456789" {...field} />
                 </FormControl>
+                <ValidationError prefix="Phone" field="phone" errors={state.errors} className="text-destructive text-sm" />
                 <FormMessage />
               </FormItem>
             )}
@@ -129,6 +123,7 @@ const ContactForm = ({ defaultService }: ContactFormProps) => {
                 <FormControl>
                   <Input placeholder="Your Company Ltd" {...field} />
                 </FormControl>
+                <ValidationError prefix="Company" field="company" errors={state.errors} className="text-destructive text-sm" />
                 <FormMessage />
               </FormItem>
             )}
@@ -154,6 +149,7 @@ const ContactForm = ({ defaultService }: ContactFormProps) => {
                   <SelectItem value="other">Other / General Enquiry</SelectItem>
                 </SelectContent>
               </Select>
+              <ValidationError prefix="Service" field="service_interest" errors={state.errors} className="text-destructive text-sm" />
               <FormMessage />
             </FormItem>
           )}
@@ -172,13 +168,14 @@ const ContactForm = ({ defaultService }: ContactFormProps) => {
                   {...field}
                 />
               </FormControl>
+              <ValidationError prefix="Message" field="message" errors={state.errors} className="text-destructive text-sm" />
               <FormMessage />
             </FormItem>
           )}
         />
 
-        <Button type="submit" size="lg" className="w-full" disabled={isSubmitting}>
-          {isSubmitting ? (
+        <Button type="submit" size="lg" className="w-full" disabled={state.submitting}>
+          {state.submitting ? (
             <>
               <Loader2 className="mr-2 h-4 w-4 animate-spin" />
               Sending...
