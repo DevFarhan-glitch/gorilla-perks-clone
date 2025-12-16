@@ -96,6 +96,10 @@ const Calculator = () => {
     const NI_RATE_MAIN = 0.08; // 8%
     const NI_RATE_UPPER = 0.02; // 2%
 
+    // Employer NI 2025/26
+    const EMPLOYER_NI_THRESHOLD = 5000;
+    const EMPLOYER_NI_RATE = 0.15;
+
     // 3. Handle Pension
     let pensionDeduction = 0;
     let adjustedGrossForTax = yearlyGross;
@@ -215,7 +219,13 @@ const Calculator = () => {
         }
     }
 
-    // 10. Totals
+    // 10. Employer NI
+    let employerNI = 0;
+    if (adjustedGrossForNI > EMPLOYER_NI_THRESHOLD) {
+        employerNI = (adjustedGrossForNI - EMPLOYER_NI_THRESHOLD) * EMPLOYER_NI_RATE;
+    }
+
+    // 11. Totals
     // Note: Pension Deduction behavior
     // If Salary Sacrifice: It's gone from gross, so it's not a "deduction from net", but we might want to show it.
     // If Net Pay: It's a deduction from net pay.
@@ -226,6 +236,7 @@ const Calculator = () => {
     
     const totalDeductions = tax + ni + studentLoanDeduction + pensionDeduction;
     const takeHome = yearlyGross - totalDeductions;
+    const employerCost = yearlyGross + employerNI;
     
     return {
         yearlyGross,
@@ -235,11 +246,22 @@ const Calculator = () => {
         ni,
         studentLoan: studentLoanDeduction,
         pension: pensionDeduction,
+        employerNI,
+        employerCost,
         totalDeductions,
         takeHome,
         percentageCurrent: yearlyGross > 0 ? (takeHome / yearlyGross) * 100 : 0
     };
   }, [grossIncome, period, taxCode, age, pensionContrib, pensionType, isBlind, studentLoan]);
+
+  // Helper to scale values for display
+  const formatCurrency = (val: number) => {
+    let divisor = 1;
+    if (period === "Monthly") divisor = 12;
+    if (period === "Weekly") divisor = 52;
+    
+    return (val / divisor).toLocaleString(undefined, { maximumFractionDigits: 2 });
+  };
 
   return (
     <>
@@ -402,17 +424,26 @@ const Calculator = () => {
                         </CardHeader>
                         <CardContent>
                             <div className="text-5xl font-bold tracking-tight">
-                                £{calculations.takeHome.toLocaleString(undefined, { maximumFractionDigits: 0 })}
+                                £{formatCurrency(calculations.takeHome)}
                             </div>
                             <div className="mt-2 flex gap-4 text-sm opacity-80">
-                                <div>
+                                <div className={period === "Monthly" ? "hidden" : ""}>
                                     <span className="block font-semibold">Monthly</span>
                                     <span>£{(calculations.takeHome/12).toLocaleString(undefined, { maximumFractionDigits: 0 })}</span>
                                 </div>
-                                <div className="w-px bg-primary-foreground/30"></div>
-                                <div>
-                                    <span className="block font-semibold">Weekly</span>
-                                    <span>£{(calculations.takeHome/52).toLocaleString(undefined, { maximumFractionDigits: 0 })}</span>
+                                <div className={period === "Yearly" ? "" : "hidden"}>
+                                    <div className="w-px bg-primary-foreground/30 h-full"></div>
+                                </div>
+                                <div className={period === "Weekly" ? "hidden" : ""}>
+                                     <span className="block font-semibold">Weekly</span>
+                                     <span>£{(calculations.takeHome/52).toLocaleString(undefined, { maximumFractionDigits: 0 })}</span>
+                                </div>
+                                <div className={period === "Yearly" ? "hidden" : ""}>
+                                    <div className="w-px bg-primary-foreground/30 h-full"></div>
+                                    <div>
+                                         <span className="block font-semibold">Yearly</span>
+                                         <span>£{calculations.takeHome.toLocaleString(undefined, { maximumFractionDigits: 0 })}</span>
+                                    </div>
                                 </div>
                             </div>
                         </CardContent>
@@ -423,9 +454,9 @@ const Calculator = () => {
                 <div className="lg:col-span-7">
                     <Card className="h-full border-border/50 shadow-sm">
                         <CardHeader>
-                            <CardTitle className="font-display">Tax Breakdown</CardTitle>
+                            <CardTitle className="font-display">Tax Breakdown ({period})</CardTitle>
                             <CardDescription>
-                                Based on a gross income of £{calculations.yearlyGross.toLocaleString()}
+                                Based on a gross income of £{formatCurrency(calculations.yearlyGross)}
                             </CardDescription>
                         </CardHeader>
                         <CardContent className="space-y-6">
@@ -457,23 +488,27 @@ const Calculator = () => {
                                 <Row 
                                     label="Taxable Income" 
                                     value={calculations.taxableIncome} 
+                                    displayValue={formatCurrency(calculations.taxableIncome)}
                                     subtext={`Personal Allowance: £${calculations.personalAllowance.toLocaleString()}`}
                                 />
                                 <div className="my-2 h-px bg-border/50" />
                                 <Row 
                                     label="Income Tax" 
                                     value={calculations.tax} 
+                                    displayValue={formatCurrency(calculations.tax)}
                                     isDeduction 
                                 />
                                 <Row 
                                     label="National Insurance" 
                                     value={calculations.ni} 
+                                    displayValue={formatCurrency(calculations.ni)}
                                     isDeduction 
                                 />
                                 {calculations.pension > 0 && (
                                      <Row 
                                         label={`Pension (${pensionType})`}
                                         value={calculations.pension} 
+                                        displayValue={formatCurrency(calculations.pension)}
                                         isDeduction 
                                     />
                                 )}
@@ -481,6 +516,7 @@ const Calculator = () => {
                                     <Row 
                                         label="Student Loan" 
                                         value={calculations.studentLoan} 
+                                        displayValue={formatCurrency(calculations.studentLoan)}
                                         isDeduction 
                                     />
                                 )}
@@ -488,12 +524,25 @@ const Calculator = () => {
                                 <div className="flex justify-between items-center py-1">
                                     <span className="font-semibold">Total Deductions</span>
                                     <span className="font-semibold text-red-500">
-                                        -£{calculations.totalDeductions.toLocaleString(undefined, { maximumFractionDigits: 0 })}
+                                        -£{formatCurrency(calculations.totalDeductions)}
                                     </span>
                                 </div>
                                 <div className="flex justify-between items-center py-1 text-lg font-bold text-primary">
                                     <span>Net Pay</span>
-                                    <span>£{calculations.takeHome.toLocaleString(undefined, { maximumFractionDigits: 0 })}</span>
+                                    <span>£{formatCurrency(calculations.takeHome)}</span>
+                                </div>
+
+                                <div className="mt-6 p-4 bg-muted/20 rounded-lg space-y-2">
+                                    <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">Employer Costs</span>
+                                    <Row 
+                                        label="Employer NI" 
+                                        value={calculations.employerNI}
+                                        displayValue={formatCurrency(calculations.employerNI)}
+                                    />
+                                    <div className="flex justify-between items-center py-1 font-semibold">
+                                        <span>Total Employer Cost</span>
+                                        <span>£{formatCurrency(calculations.employerCost)}</span>
+                                    </div>
                                 </div>
                             </div>
                         </CardContent>
@@ -510,14 +559,14 @@ const Calculator = () => {
   );
 };
 
-const Row = ({ label, value, isDeduction = false, subtext }: { label: string, value: number, isDeduction?: boolean, subtext?: string }) => (
+const Row = ({ label, value, displayValue, isDeduction = false, subtext }: { label: string, value: number, displayValue?: string, isDeduction?: boolean, subtext?: string }) => (
     <div className="flex justify-between items-start py-1">
         <div className="flex flex-col">
             <span className="text-foreground/80">{label}</span>
             {subtext && <span className="text-xs text-muted-foreground">{subtext}</span>}
         </div>
         <span className={isDeduction ? "text-red-500" : "text-foreground"}>
-            {isDeduction ? "-" : ""}£{value.toLocaleString(undefined, { maximumFractionDigits: 0 })}
+            {isDeduction ? "-" : ""}£{displayValue || value.toLocaleString(undefined, { maximumFractionDigits: 0 })}
         </span>
     </div>
 );
