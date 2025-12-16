@@ -147,54 +147,6 @@ const SmallBusiness = () => {
           </div>
         </section>
 
-        {/* Pricing */}
-        <section className="bg-muted/50 py-20">
-          <div className="container">
-            <div className="mx-auto max-w-2xl text-center">
-              <h2 className="font-display text-3xl font-bold tracking-tight text-foreground">
-                Packages That Grow With You
-              </h2>
-              <p className="mt-4 text-lg text-muted-foreground">
-                Start with what you need and upgrade as your business grows.
-              </p>
-            </div>
-            <div className="mt-12 grid gap-8 md:grid-cols-3">
-              {packages.map((pkg, index) => (
-                <Card key={index} className={pkg.popular ? "border-primary ring-2 ring-primary" : ""}>
-                  {pkg.popular && (
-                    <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                      <span className="rounded-full bg-primary px-4 py-1 text-xs font-semibold text-primary-foreground">
-                        Most Popular
-                      </span>
-                    </div>
-                  )}
-                  <CardHeader className="text-center">
-                    <CardTitle className="font-display text-xl">{pkg.name}</CardTitle>
-                    <CardDescription>{pkg.description}</CardDescription>
-                    <div className="mt-4">
-                      <span className="font-display text-4xl font-bold text-foreground">£{pkg.price}</span>
-                      <span className="text-muted-foreground">/month</span>
-                    </div>
-                  </CardHeader>
-                  <CardContent>
-                    <ul className="mb-6 space-y-3">
-                      {pkg.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-start text-sm">
-                          <Check className="mr-2 mt-0.5 h-4 w-4 flex-shrink-0 text-primary" />
-                          <span className="text-muted-foreground">{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
-                    <Button asChild className="w-full" variant={pkg.popular ? "default" : "outline"}>
-                      <Link to="/contact">Get Started</Link>
-                    </Button>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </div>
-        </section>
-
         <CTASection />
       </Layout>
     </>

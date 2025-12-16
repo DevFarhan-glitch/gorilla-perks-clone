@@ -18,7 +18,7 @@ const Header = () => {
   const navLinks = [
     { name: "Home", path: "/" },
     { name: "About", path: "/about" },
-    { name: "Pricing", path: "/pricing" },
+    { name: "Careers", path: "/careers" },
     { name: "Calculator", path: "/calculator" },
     { name: "Contact", path: "/contact" },
   ];
@@ -82,11 +82,11 @@ const Header = () => {
 
         <div className="hidden items-center space-x-4 md:flex">
           <a
-            href="tel:01171234567"
+            href="tel:07481 758526"
             className="flex items-center text-sm font-medium text-muted-foreground hover:text-gold transition-colors"
           >
             <Phone className="mr-2 h-4 w-4" />
-            0117 123 4567
+            07481 758526
           </a>
           <Button asChild className="bg-gold hover:bg-gold-light text-navy font-semibold transition-all duration-300">
             <Link to="/contact">Get a Quote</Link>

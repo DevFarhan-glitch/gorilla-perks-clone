@@ -99,21 +99,21 @@ const Footer = () => {
             <ul className="space-y-3 text-sm">
               <li className="flex items-start space-x-3">
                 <MapPin className="mt-0.5 h-4 w-4 flex-shrink-0 text-gold" />
-                <span className="text-white/70">
-                  123 Henleaze Road<br />
-                  Bristol, BS9 4NE
+                <span className="text-white/70 hover:text-gold">
+                  Park House Business Centre, 10 Park Street<br/>
+                  Bristol, England, BS1 5HX
                 </span>
               </li>
               <li className="flex items-center space-x-3">
                 <Phone className="h-4 w-4 flex-shrink-0 text-gold" />
                 <a href="tel:01171234567" className="text-white/70 hover:text-gold transition-colors">
-                  0117 123 4567
+                  07481 758526
                 </a>
               </li>
               <li className="flex items-center space-x-3">
                 <Mail className="h-4 w-4 flex-shrink-0 text-gold" />
                 <a href="mailto:info@henleazetax.co.uk" className="text-white/70 hover:text-gold transition-colors">
-                  info@henleazetax.co.uk
+                  info@henleazetaxconsultancy.com
                 </a>
               </li>
             </ul>
@@ -124,9 +124,7 @@ const Footer = () => {
           <div className="flex flex-col items-center justify-between space-y-4 text-sm text-white/60 md:flex-row md:space-y-0">
             <p>© {new Date().getFullYear()} Henleaze Tax Consultancy. All rights reserved.</p>
             <div className="flex items-center space-x-4">
-              <span>Registered in England & Wales</span>
-              <span>•</span>
-              <span>Company No. 12345678</span>
+             
             </div>
           </div>
         </div>

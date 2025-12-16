@@ -88,7 +88,7 @@ const ServiceCards = () => {
                 </ul>
                 <div className="flex items-center justify-between">
                   <span className="font-display text-lg font-semibold text-gold">{service.price}</span>
-                  <Button variant="ghost" size="sm" asChild className="text-foreground hover:text-gold">
+                  <Button variant="ghost" size="sm" asChild className="text-foreground hover:text-white">
                     <Link to={service.path}>
                       Learn More
                       <ArrowRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" />

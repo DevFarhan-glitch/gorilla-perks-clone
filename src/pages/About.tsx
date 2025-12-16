@@ -76,7 +76,7 @@ const About = () => {
               <h2 className="font-display text-3xl font-bold tracking-tight text-foreground">Our Story</h2>
               <div className="mt-6 space-y-4 text-muted-foreground">
                 <p>
-                  Founded in 2010, Henleaze Tax Consultancy began with a simple mission: to provide exceptional accounting services with a personal touch. We believed that small businesses and contractors deserved the same level of expertise and attention as large corporations.
+                  Henleaze Tax Consultancy began with a simple mission: to provide exceptional accounting services with a personal touch. We believed that small businesses and contractors deserved the same level of expertise and attention as large corporations.
                 </p>
                 <p>
                   Over the years, we've grown to serve hundreds of clients across Bristol and the wider UK. But our commitment to personalized service has never wavered. Every client still has a dedicated accountant who knows their business inside out.
