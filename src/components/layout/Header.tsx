@@ -9,6 +9,8 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 
+import { servicesList } from "@/lib/data";
+
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
@@ -21,12 +23,6 @@ const Header = () => {
     { name: "Careers", path: "/careers" },
     { name: "Calculator", path: "/calculator" },
     { name: "Contact", path: "/contact" },
-  ];
-
-  const services = [
-    { name: "Contractor Accounting", path: "/services/contractors" },
-    { name: "Small Business", path: "/services/small-business" },
-    { name: "Landlord Services", path: "/services/landlords" },
   ];
 
   return (
@@ -56,14 +52,19 @@ const Header = () => {
             <DropdownMenuTrigger className="flex items-center px-3 py-2 text-sm font-medium text-muted-foreground transition-all duration-300 hover:text-gold">
               Services <ChevronDown className="ml-1 h-4 w-4" />
             </DropdownMenuTrigger>
-            <DropdownMenuContent align="start" className="w-48">
-              {services.map((service) => (
-                <DropdownMenuItem key={service.path} asChild>
-                  <Link to={service.path} className="w-full cursor-pointer hover:text-gold">
-                    {service.name}
+            <DropdownMenuContent align="start" className="w-56">
+              {servicesList.slice(0, 5).map((service) => (
+                <DropdownMenuItem key={service} asChild>
+                  <Link to={`/services`} className="w-full cursor-pointer hover:text-gold">
+                    {service}
                   </Link>
                 </DropdownMenuItem>
               ))}
+              <DropdownMenuItem asChild>
+                <Link to="/services" className="w-full cursor-pointer font-semibold text-gold hover:text-gold/80 pt-2 border-t mt-1">
+                  View All Services
+                </Link>
+              </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
 
@@ -124,16 +125,23 @@ const Header = () => {
               <p className="px-3 py-2 text-xs font-semibold uppercase text-muted-foreground">
                 Services
               </p>
-              {services.map((service) => (
+              {servicesList.slice(0, 5).map((service) => (
                 <Link
-                  key={service.path}
-                  to={service.path}
+                  key={service}
+                  to={`/services`}
                   className="block rounded-md px-3 py-2 text-sm font-medium text-muted-foreground hover:bg-muted"
                   onClick={() => setIsOpen(false)}
                 >
-                  {service.name}
+                  {service}
                 </Link>
               ))}
+              <Link
+                to="/services"
+                className="block rounded-md px-3 py-2 text-sm font-semibold text-gold hover:bg-muted mt-2"
+                onClick={() => setIsOpen(false)}
+              >
+                View All Services
+              </Link>
             </div>
             <div className="border-t border-border pt-4">
               <Button asChild className="w-full">

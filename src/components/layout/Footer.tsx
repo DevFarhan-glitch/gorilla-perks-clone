@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin, Linkedin, Facebook, Twitter } from "lucide-react";
+import { servicesList } from "@/lib/data";
 
 const Footer = () => {
   return (
@@ -34,29 +35,30 @@ const Footer = () => {
           </div>
 
           {/* Services */}
+          {/* Services */}
+          {/* Services */}
           <div>
             <h3 className="mb-4 font-display text-sm font-semibold uppercase tracking-wider text-gold">
               Services
             </h3>
             <ul className="space-y-3 text-sm">
+              {servicesList.slice(0, 6).map((service) => (
+                <li key={service}>
+                  <Link 
+                    to="/services" 
+                    className="text-white/70 hover:text-gold transition-colors"
+                  >
+                    {service}
+                  </Link>
+                </li>
+              ))}
               <li>
-                <Link to="/services/contractors" className="text-white/70 hover:text-gold transition-colors">
-                  Contractor Accounting
-                </Link>
-              </li>
-              <li>
-                <Link to="/services/small-business" className="text-white/70 hover:text-gold transition-colors">
-                  Small Business Accounting
-                </Link>
-              </li>
-              <li>
-                <Link to="/services/landlords" className="text-white/70 hover:text-gold transition-colors">
-                  Landlord Services
-                </Link>
-              </li>
-              <li>
-                <Link to="/pricing" className="text-white/70 hover:text-gold transition-colors">
-                  View All Pricing
+                <Link 
+                  to="/services" 
+                  className="font-semibold text-gold hover:text-white transition-colors flex items-center group"
+                >
+                  View All Services 
+                  <span className="ml-1 transition-transform group-hover:translate-x-1">→</span>
                 </Link>
               </li>
             </ul>

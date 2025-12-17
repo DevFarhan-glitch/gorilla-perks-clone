@@ -5,19 +5,22 @@ import CTASection from "@/components/home/CTASection";
 
 const team = [
   {
-    name: "David Henleaze",
-    role: "Founder & Director",
-    bio: "With over 20 years of experience in accounting and tax, David founded Henleaze Tax Consultancy to provide personalized service to contractors and small businesses.",
+    name: "Muhammad Irfan",
+    role: "Senior Accountant",
+    image: "/irfan.jpeg",
+    bio: "Muhammad brings strong expertise in UK accounting, taxation, and compliance. He works closely with individuals, sole traders, and limited companies, providing practical advice and dependable financial support to help clients meet their obligations and grow with confidence.",
   },
   {
-    name: "Sarah Collins",
-    role: "Senior Tax Advisor",
-    bio: "Sarah specializes in contractor taxation and IR35 compliance, helping clients navigate complex tax regulations with confidence.",
+    name: "Deljona Vela",
+    role: "Accountant",
+    image: "/DeljonaVela .jpeg",
+    bio: "AAT Level 3 Diploma qualified. Deljona specializes in preparing financial statements, VAT returns, and providing day-to-day accounting support to ensure smooth business operations for our clients.",
   },
   {
-    name: "Michael Roberts",
-    role: "Business Accountant",
-    bio: "Michael works with small businesses and landlords, providing strategic advice to help them grow and optimize their tax position.",
+    name: "Dua Rubab",
+    role: "Accountant",
+    image: "/Dua.jpg",
+    bio: "AAT Level 3 Diploma qualified. Dua specializes in preparing financial statements, VAT returns, and providing day-to-day accounting support to ensure smooth business operations for our clients.",
   },
 ];
 
@@ -124,8 +127,12 @@ const About = () => {
             <div className="mt-12 grid gap-8 md:grid-cols-3">
               {team.map((member, index) => (
                 <div key={index} className="rounded-xl bg-card p-6 card-shadow text-center">
-                  <div className="mx-auto mb-4 flex h-20 w-20 items-center justify-center rounded-full bg-secondary font-display text-2xl font-bold text-secondary-foreground">
-                    {member.name.split(' ').map(n => n[0]).join('')}
+                  <div className="mx-auto mb-4 h-32 w-32 overflow-hidden rounded-full border-4 border-secondary/20">
+                    <img 
+                      src={member.image} 
+                      alt={member.name} 
+                      className="h-full w-full object-cover"
+                    />
                   </div>
                   <h3 className="font-display text-xl font-semibold text-foreground">{member.name}</h3>
                   <p className="text-sm font-medium text-primary">{member.role}</p>

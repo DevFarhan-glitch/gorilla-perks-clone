@@ -23,7 +23,6 @@ const Index = () => {
         <ServiceCards />
         <WhyChooseUs />
         <Testimonials />
-        <BlogSection />
         <CTASection />
         <LiveChat />
       </Layout>
