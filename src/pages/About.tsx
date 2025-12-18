@@ -11,16 +11,22 @@ const team = [
     bio: "Muhammad brings strong expertise in UK accounting, taxation, and compliance. He works closely with individuals, sole traders, and limited companies, providing practical advice and dependable financial support to help clients meet their obligations and grow with confidence.",
   },
   {
-    name: "Deljona Vela",
+    name: "Adeel Khan",
     role: "Accountant",
-    image: "/DeljonaVela .jpeg",
-    bio: "AAT Level 3 Diploma qualified. Deljona specializes in preparing financial statements, VAT returns, and providing day-to-day accounting support to ensure smooth business operations for our clients.",
+    image: "/adeel.jfif",
+    bio: "Adeel specializes in preparing financial statements, VAT returns, and providing day-to-day accounting support to ensure smooth business operations for our clients.",
   },
   {
-    name: "Dua Rubab",
+    name: "Danial Islam",
     role: "Accountant",
-    image: "/Dua.jpg",
-    bio: "AAT Level 3 Diploma qualified. Dua specializes in preparing financial statements, VAT returns, and providing day-to-day accounting support to ensure smooth business operations for our clients.",
+    image: "/danial.jpg",
+    bio: "Danial provides expert financial guidance, including accounting, VAT returns, and daily bookkeeping support to help clients manage and grow their businesses efficiently.",
+  },
+  {
+    name: "Shamas Ahmad",
+    role: "Accountant",
+    image: "/shamas.png",
+    bio: "Shamas delivers reliable accounting services, including financial statements, VAT returns, and daily bookkeeping support to help clients run their businesses smoothly.",
   },
 ];
 
@@ -116,6 +122,7 @@ const About = () => {
         </section>
 
         {/* Our Team */}
+        {/* Our Team */}
         <section className="py-20">
           <div className="container">
             <div className="mx-auto max-w-2xl text-center">
@@ -124,24 +131,28 @@ const About = () => {
                 Experienced professionals dedicated to your financial success.
               </p>
             </div>
-            <div className="mt-12 grid gap-8 md:grid-cols-3">
+
+            <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
               {team.map((member, index) => (
-                <div key={index} className="rounded-xl bg-card p-6 card-shadow text-center">
-                  <div className="mx-auto mb-4 h-32 w-32 overflow-hidden rounded-full border-4 border-secondary/20">
-                    <img 
-                      src={member.image} 
-                      alt={member.name} 
+                <div key={index} className="rounded-xl bg-primary p-6 card-shadow text-primary-foreground text-center">
+                  <div className="mx-auto mb-4 h-32 w-32 overflow-hidden rounded-full border-4 border-primary/40">
+                    <img
+                      src={member.image}
+                      alt={member.name}
                       className="h-full w-full object-cover"
                     />
                   </div>
-                  <h3 className="font-display text-xl font-semibold text-foreground">{member.name}</h3>
-                  <p className="text-sm font-medium text-primary">{member.role}</p>
-                  <p className="mt-4 text-sm text-muted-foreground">{member.bio}</p>
+                  <h3 className="font-display text-xl font-semibold">{member.name}</h3>
+                  <p className="text-sm font-medium">{member.role}</p>
+                  <p className="mt-4 text-sm">{member.bio}</p>
                 </div>
               ))}
             </div>
           </div>
         </section>
+
+
+
 
         {/* Accreditations */}
         <section className="bg-muted/50 py-20">
