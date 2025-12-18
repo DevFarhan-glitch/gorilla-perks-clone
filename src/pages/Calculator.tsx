@@ -70,6 +70,11 @@ const Calculator = () => {
         ni += band2 * NI_RATE_UPPER;
     }
 
+    // Employer NI (2025/2026 rates as per Gorilla calculator)
+    const EMP_NI_THRESHOLD = 5000;
+    const EMP_NI_RATE = 0.15;
+    const employerNi = Math.max(0, (yearlyGross - EMP_NI_THRESHOLD) * EMP_NI_RATE);
+
     const totalDeductions = tax + ni;
     const takeHome = yearlyGross - totalDeductions;
 
@@ -78,9 +83,10 @@ const Calculator = () => {
         taxable: taxableIncome,
         tax,
         ni,
+        employerNi,
         takeHome
     };
-  }, [grossIncome]);
+  }, [grossIncome, period]);
 
   return (
     <>
@@ -182,7 +188,8 @@ const ResultColumn = ({ title, data, divisor, highlight = false }: { title: stri
                 <Row label="Taxable Income" value={format(data.taxable)} className={highlight ? "text-primary-foreground/70 text-sm" : "text-muted-foreground text-sm"} />
                 <div className={`h-px my-2 ${highlight ? "bg-primary-foreground/20" : "bg-border/50"}`} />
                 <Row label="Tax" value={`-${format(data.tax)}`} className={highlight ? "text-red-300" : "text-red-500"} />
-                <Row label="National Insurance" value={`-${format(data.ni)}`} className={highlight ? "text-red-300" : "text-red-500"} />
+                <Row label="Employee NI" value={`-${format(data.ni)}`} className={highlight ? "text-red-300" : "text-red-500"} />
+                <Row label="Employer NIC" value={`${format(data.employerNi)}`} className={highlight ? "text-white/70 text-xs" : "text-muted-foreground text-xs italic"} />
                 <div className={`h-px my-2 ${highlight ? "bg-primary-foreground/20" : "bg-border"}`} />
                 <div className="flex justify-between items-center pt-1">
                     <span className={`font-bold text-lg ${highlight ? "text-white" : ""}`}>Take Home</span>
