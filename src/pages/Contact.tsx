@@ -58,7 +58,7 @@ const Contact = () => {
                       <div>
                         <h3 className="font-display font-semibold text-foreground">Phone</h3>
                         <a href="tel:01171234567" className="text-muted-foreground hover:text-primary">
-                          07481 758526
+                          01174420310
                         </a>
                       </div>
                     </CardContent>

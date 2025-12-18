@@ -10,8 +10,8 @@ const Footer = () => {
           {/* Company Info */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
-              <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-gold">
-                <span className="font-display text-lg font-bold text-navy">H</span>
+              <div className="flex h-10 w-10 items-center justify-center rounded-full overflow-hidden border border-gold/20">
+                <img src="/logo.jpg" alt="Henleaze Tax Consultancy Logo" className="h-full w-full object-cover" />
               </div>
               <div className="flex flex-col">
                 <span className="font-display text-lg font-bold text-white">Henleaze</span>

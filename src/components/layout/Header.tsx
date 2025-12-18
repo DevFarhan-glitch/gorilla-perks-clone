@@ -83,11 +83,11 @@ const Header = () => {
 
         <div className="hidden items-center space-x-4 md:flex">
           <a
-            href="tel:07481 758526"
+            href="tel:01174420310"
             className="flex items-center text-sm font-medium text-muted-foreground hover:text-gold transition-colors"
           >
             <Phone className="mr-2 h-4 w-4" />
-            07481 758526
+            01174420310
           </a>
           <Button asChild className="bg-gold hover:bg-gold-light text-navy font-semibold transition-all duration-300">
             <Link to="/contact">Get a Quote</Link>
