@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Phone, Mail, MapPin, Linkedin, Facebook, Twitter } from "lucide-react";
+import { Phone, Mail, MapPin, Linkedin, Facebook, Twitter, Instagram } from "lucide-react";
 import { servicesList } from "@/lib/data";
 
 const Footer = () => {
@@ -25,11 +25,11 @@ const Footer = () => {
               <a href="#" className="text-white/60 hover:text-gold transition-colors">
                 <Linkedin className="h-5 w-5" />
               </a>
-              <a href="#" className="text-white/60 hover:text-gold transition-colors">
+              <a href="https://www.facebook.com/share/1AoDJjTkQY/?mibextid=wwXIfr" className="text-white/60 hover:text-gold transition-colors">
                 <Facebook className="h-5 w-5" />
               </a>
-              <a href="#" className="text-white/60 hover:text-gold transition-colors">
-                <Twitter className="h-5 w-5" />
+              <a href="https://www.instagram.com/henleazetaxconsultancy?igsh=MTZvcWdmZXVheGV5NA%3D%3D&utm_source=qr" className="text-white/60 hover:text-gold transition-colors">
+                <Instagram className="h-5 w-5" />
               </a>
             </div>
           </div>
@@ -78,6 +78,16 @@ const Footer = () => {
               <li>
                 <Link to="/calculator" className="text-white/70 hover:text-gold transition-colors">
                   Tax Calculator
+                </Link>
+              </li>
+               <li>
+                <Link to="/pricing" className="text-white/70 hover:text-gold transition-colors">
+                  Pricing
+                </Link>
+              </li>
+               <li>
+                <Link to="/careers" className="text-white/70 hover:text-gold transition-colors">
+                  Careers
                 </Link>
               </li>
               <li>
