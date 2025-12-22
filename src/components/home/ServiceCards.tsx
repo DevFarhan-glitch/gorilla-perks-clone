@@ -21,7 +21,6 @@ const services = [
     description: "Specialist services for IT contractors and freelancers. Limited company formation, IR35 advice, tax-efficient salary and dividend strategies.",
     features: ["Company Formation", "IR35 Compliance", "Tax Planning", "Payroll Services"],
     path: "/services/contractors",
-    price: "From £99/month",
     image: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=400&h=200&fit=crop",
   },
   {
@@ -30,7 +29,6 @@ const services = [
     description: "Comprehensive accounting for growing businesses. From bookkeeping to year-end accounts, VAT returns, and business advisory.",
     features: ["Bookkeeping", "VAT Returns", "Year-End Accounts", "Business Advisory"],
     path: "/services/small-business",
-    price: "From £149/month",
     image: "https://images.unsplash.com/photo-1664575602554-2087b04935a5?w=400&h=200&fit=crop",
   },
   {
@@ -39,7 +37,6 @@ const services = [
     description: "Tailored solutions for property investors. Rental income management, buy-to-let accounting, and property portfolio optimization.",
     features: ["Rental Income Tax", "Property Portfolios", "Capital Gains", "Expense Tracking"],
     path: "/services/landlords",
-    price: "From £79/month",
     image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=400&h=200&fit=crop",
   },
   {
@@ -154,7 +151,6 @@ const ServiceCards = ({ limit }: { limit?: number }) => {
                   ))}
                 </ul>
                 <div className="flex items-center justify-between">
-                  <span className="font-display text-lg font-semibold text-gold">{service.price}</span>
                   <Button variant="ghost" size="sm" asChild className="text-foreground hover:text-white">
                     <Link to={service.path}>
                       Learn More
