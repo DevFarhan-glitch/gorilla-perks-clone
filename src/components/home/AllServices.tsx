@@ -17,7 +17,7 @@ const AllServices = () => {
           </p>
         </div>
 
-        <div className="grid gap-x-8 gap-y-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-x-8 gap-y-4 grid-cols-1 md:grid-cols-3">
           {servicesList.map((service, index) => (
             <div 
               key={index} 

@@ -1,5 +1,16 @@
 import { Link } from "react-router-dom";
-import { Briefcase, Building2, Home, ArrowRight } from "lucide-react";
+import { 
+  Briefcase, 
+  Building2, 
+  Home, 
+  ArrowRight, 
+  Users, 
+  Calculator, 
+  FileCheck, 
+  Scale, 
+  Zap, 
+  UserCheck 
+} from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
@@ -31,9 +42,65 @@ const services = [
     price: "From £79/month",
     image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=400&h=200&fit=crop",
   },
+  {
+    icon: Users,
+    title: "Payroll & HR",
+    description: "Full payroll management for your team. We handle RTI submissions, auto-enrollment, and ensure you remain fully compliant with employment law.",
+    features: ["Monthly Payroll", "Pension Auto-enrollment", "RTI Submissions", "P60s & P45s"],
+    path: "/services/payroll-hr",
+    price: "From £50/month",
+    image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=400&h=200&fit=crop",
+  },
+  {
+    icon: Calculator,
+    title: "Tax Planning",
+    description: "Strategic tax advice to protect your wealth. We help you navigate complex tax legislation and minimize your liabilities effectively.",
+    features: ["Corporation Tax", "Capital Gains Tax", "Inheritance Tax", "Strategic Planning"],
+    path: "/services/tax-planning",
+    price: "From £199/month",
+    image: "https://images.unsplash.com/photo-1554415707-6e8cfc93fe23?w=400&h=200&fit=crop",
+  },
+  {
+    icon: FileCheck,
+    title: "VAT & Bookkeeping",
+    description: "Accurate record-keeping and timely VAT returns. We use the latest cloud technology to keep your finances organized and accessible.",
+    features: ["VAT Returns", "Dext/Xero Support", "Bank Reconciliation", "MTD Compliance"],
+    path: "/services/vat-bookkeeping",
+    price: "From £89/month",
+    image: "https://images.unsplash.com/photo-1544377193-33dcf4d68fb5?w=400&h=200&fit=crop",
+  },
+  {
+    icon: Scale,
+    title: "Company Secretarial",
+    description: "Full support for your company's statutory requirements. We handle all filings with Companies House so you stay in good standing.",
+    features: ["Registered Office", "Confirmation Statement", "Share Management", "Statutory Registers"],
+    path: "/services/company-secretarial",
+    price: "From £30/month",
+    image: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=400&h=200&fit=crop",
+  },
+  {
+    icon: Zap,
+    title: "R&D Tax Credits",
+    description: "Unlock funding for your innovation. We help you identify qualifying research and development costs to maximize your tax relief.",
+    features: ["Technical Report", "Cost Identification", "HMRC Submission", "Expert Review"],
+    path: "/services/rd-claims",
+    price: "Contingency Based",
+    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&h=200&fit=crop",
+  },
+  {
+    icon: UserCheck,
+    title: "Personal Tax",
+    description: "Hassle-free self-assessment for individuals. We ensure your personal tax return is filed accurately and on time, every time.",
+    features: ["Self Assessment", "Rental Income", "Investment Income", "Tax Optimization"],
+    path: "/services/personal-tax",
+    price: "From £150",
+    image: "https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?w=400&h=200&fit=crop",
+  },
 ];
 
-const ServiceCards = () => {
+const ServiceCards = ({ limit }: { limit?: number }) => {
+  const displayedServices = limit ? services.slice(0, limit) : services;
+
   return (
     <section className="py-20 md:py-28 bg-background">
       <div className="container">
@@ -50,7 +117,7 @@ const ServiceCards = () => {
         </div>
 
         <div className="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {services.map((service, index) => (
+          {displayedServices.map((service, index) => (
             <Card 
               key={index} 
               className="group relative overflow-hidden hover-lift border-0 shadow-lg animate-fade-in"
