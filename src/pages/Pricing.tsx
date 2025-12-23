@@ -1,5 +1,5 @@
 import { Helmet } from "react-helmet-async";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { Check, X } from "lucide-react";
 import Layout from "@/components/layout/Layout";
 import CTASection from "@/components/home/CTASection";
@@ -154,16 +154,16 @@ const Pricing = () => {
                   {/* ✅ REDIRECT WITH PLAN */}
                   <Button
                     size="lg"
+                    asChild
                     className={`mt-8 w-full ${
                       plan.highlight
                         ? "bg-white text-primary hover:bg-white/90"
                         : ""
                     }`}
-                    onClick={() =>
-                      navigate(`/contact?plan=${encodeURIComponent(plan.name)}`)
-                    }
                   >
-                    Get Started
+                    <Link to={`/contact?plan=${encodeURIComponent(plan.name)}`}>
+                      Get Started
+                    </Link>
                   </Button>
                 </CardContent>
               </Card>

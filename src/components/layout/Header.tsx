@@ -26,6 +26,14 @@ const Header = () => {
     { name: "Contact", path: "/contact" },
   ];
 
+  const mainServices = [
+    { name: "Contractor Accounting", path: "/services/contractors" },
+    { name: "Small Business", path: "/services/small-business" },
+    { name: "Landlord Services", path: "/services/landlords" },
+    { name: "Payroll & HR", path: "/services/payroll-hr" },
+    { name: "Tax Planning", path: "/services/tax-planning" },
+  ];
+
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 transition-all duration-300">
       <div className="container flex h-16 items-center justify-between">
@@ -50,19 +58,25 @@ const Header = () => {
           </Link>
 
           <DropdownMenu>
-            <DropdownMenuTrigger className="flex items-center px-3 py-2 text-sm font-medium text-muted-foreground transition-all duration-300 hover:text-gold">
+            <DropdownMenuTrigger className="flex items-center px-3 py-2 text-sm font-medium text-muted-foreground transition-all duration-300 hover:text-gold uppercase tracking-wide">
               Services <ChevronDown className="ml-1 h-4 w-4" />
             </DropdownMenuTrigger>
-            <DropdownMenuContent align="start" className="w-56">
-              {servicesList.slice(0, 5).map((service) => (
-                <DropdownMenuItem key={service} asChild>
-                  <Link to={`/services`} className="w-full cursor-pointer hover:text-gold">
-                    {service}
+            <DropdownMenuContent align="start" className="w-64 p-2 bg-white border-border shadow-xl rounded-xl">
+              {mainServices.map((service) => (
+                <DropdownMenuItem key={service.path} asChild>
+                  <Link 
+                    to={service.path} 
+                    className="flex w-full cursor-pointer items-center rounded-lg px-3 py-2 text-sm text-navy hover:bg-gold/10 hover:text-gold transition-colors"
+                  >
+                    {service.name}
                   </Link>
                 </DropdownMenuItem>
               ))}
               <DropdownMenuItem asChild>
-                <Link to="/services" className="w-full cursor-pointer font-semibold text-gold hover:text-gold/80 pt-2 border-t mt-1">
+                <Link 
+                  to="/services" 
+                  className="mt-2 flex w-full cursor-pointer items-center justify-center rounded-lg border-t pt-3 text-sm font-bold text-gold hover:text-gold-light transition-colors"
+                >
                   View All Services
                 </Link>
               </DropdownMenuItem>
@@ -126,14 +140,14 @@ const Header = () => {
               <p className="px-3 py-2 text-xs font-semibold uppercase text-muted-foreground">
                 Services
               </p>
-              {servicesList.slice(0, 5).map((service) => (
+              {mainServices.map((service) => (
                 <Link
-                  key={service}
-                  to={`/services`}
-                  className="block rounded-md px-3 py-2 text-sm font-medium text-muted-foreground hover:bg-muted"
+                  key={service.path}
+                  to={service.path}
+                  className="block rounded-md px-3 py-2 text-sm font-medium text-muted-foreground hover:bg-muted transition-colors"
                   onClick={() => setIsOpen(false)}
                 >
-                  {service}
+                  {service.name}
                 </Link>
               ))}
               <Link
