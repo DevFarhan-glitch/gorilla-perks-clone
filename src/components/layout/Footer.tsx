@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Phone, Mail, MapPin, Linkedin, Facebook, Twitter, Instagram } from "lucide-react";
+import { Phone, Mail, MapPin, Facebook, Instagram } from "lucide-react";
 import { servicesList } from "@/lib/data";
 
 const Footer = () => {
@@ -22,9 +22,7 @@ const Footer = () => {
               Professional accounting and tax services for contractors, small businesses, and landlords in Bristol and beyond.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-white/60 hover:text-gold transition-colors">
-                <Linkedin className="h-5 w-5" />
-              </a>
+
               <a href="https://www.facebook.com/share/1AoDJjTkQY/?mibextid=wwXIfr" className="text-white/60 hover:text-gold transition-colors">
                 <Facebook className="h-5 w-5" />
               </a>

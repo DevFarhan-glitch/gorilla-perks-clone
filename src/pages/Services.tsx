@@ -1,7 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import Layout from "@/components/layout/Layout";
 import ServiceCards from "@/components/home/ServiceCards";
-import AllServices from "@/components/home/AllServices";
 import CTASection from "@/components/home/CTASection";
 
 const Services = () => {
@@ -16,7 +15,6 @@ const Services = () => {
       </Helmet>
       <Layout>
         <ServiceCards />
-        <AllServices />
         <CTASection />
       </Layout>
     </>
