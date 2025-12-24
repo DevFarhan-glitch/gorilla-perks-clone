@@ -73,6 +73,48 @@ const VATBookkeeping = () => {
           </div>
         </section>
 
+        {/* Digital Transformation Section */}
+        <section className="py-16 bg-muted/30">
+          <div className="container">
+            <div className="mx-auto max-w-4xl">
+              <div className="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                  <h2 className="text-3xl font-display font-bold text-foreground mb-6">Digital Transformation & Cloud Accounting</h2>
+                  <p className="text-muted-foreground leading-relaxed mb-4">
+                    The days of paper receipts and manual spreadsheets are over. At Henleaze Tax Consultancy, we champion a "cloud-first" approach to bookkeeping. By leveraging powerful tools like Xero and QuickBooks, we provide you with real-time access to your financial data from any device.
+                  </p>
+                  <p className="text-muted-foreground leading-relaxed">
+                    This digital transition not only ensures you are ready for Making Tax Digital (MTD) but also provides invaluable insights into your business's health. You'll be able to track invoices, monitor expenses, and view your bank balance in one centralized, secure location.
+                  </p>
+                </div>
+                <div className="bg-primary rounded-2xl p-8 text-white shadow-xl">
+                  <h3 className="text-xl font-bold mb-4">The Benefits of Our Approach</h3>
+                  <ul className="space-y-4">
+                    <li className="flex items-start gap-3">
+                      <div className="mt-1 h-5 w-5 rounded-full bg-gold/20 flex items-center justify-center flex-shrink-0">
+                        <Check className="h-3 w-3 text-gold" />
+                      </div>
+                      <p className="text-sm">Automated bank feeds reduce manual data entry and errors.</p>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <div className="mt-1 h-5 w-5 rounded-full bg-gold/20 flex items-center justify-center flex-shrink-0">
+                        <Check className="h-3 w-3 text-gold" />
+                      </div>
+                      <p className="text-sm">Dext integration allows you to snap photos of receipts on the go.</p>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <div className="mt-1 h-5 w-5 rounded-full bg-gold/20 flex items-center justify-center flex-shrink-0">
+                        <Check className="h-3 w-3 text-gold" />
+                      </div>
+                      <p className="text-sm">Collaboration with your accountant in real-time on live data.</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Features */}
         <section className="py-20">
           <div className="container">
@@ -98,6 +140,21 @@ const VATBookkeeping = () => {
                   </CardContent>
                 </Card>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Informational Section */}
+        <section className="py-16 bg-background">
+          <div className="container">
+            <div className="mx-auto max-w-3xl text-center">
+              <h2 className="text-2xl font-bold text-foreground mb-6">Expert VAT Guidance and MTD Compliance</h2>
+              <p className="text-muted-foreground leading-relaxed mb-6">
+                VAT can be one of the most complex areas of UK taxation. Whether you need help with registration, choosing the right VAT scheme (like Flat Rate or Cash Accounting), or submitting quarterly returns, our experts are here to help.
+              </p>
+              <p className="text-muted-foreground leading-relaxed">
+                We ensure that your business remains compliant with all Making Tax Digital regulations, giving you the confidence that your filings are accurate and submitted on time to HMRC.
+              </p>
             </div>
           </div>
         </section>

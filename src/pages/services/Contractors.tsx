@@ -119,6 +119,48 @@ const Contractors = () => {
           </div>
         </section>
 
+        {/* Contractor Specialist Support */}
+        <section className="py-16 bg-muted/30">
+          <div className="container">
+            <div className="mx-auto max-w-4xl">
+              <div className="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                  <h2 className="text-3xl font-display font-bold text-foreground mb-6">Why Specialist Contractor Accounting?</h2>
+                  <p className="text-muted-foreground leading-relaxed mb-4">
+                    Accounting for contractors requires a specific set of skills and knowledge, particularly regarding IR35 legislation and optimal dividend-to-salary ratios. At Henleaze Tax Consultancy, we specialize in these nuances, ensuring you stay compliant while maximizing your income.
+                  </p>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Our dedicated contractor accountants understand the dynamic nature of contract work. We provide the tools and advice necessary to manage your company's finances with minimal effort on your part, so you can focus on delivering excellence to your clients.
+                  </p>
+                </div>
+                <div className="bg-primary rounded-2xl p-8 text-white shadow-xl">
+                  <h3 className="text-xl font-bold mb-4">Our Commitment to You</h3>
+                  <ul className="space-y-4">
+                    <li className="flex items-start gap-3">
+                      <div className="mt-1 h-5 w-5 rounded-full bg-gold/20 flex items-center justify-center flex-shrink-0">
+                        <Check className="h-3 w-3 text-gold" />
+                      </div>
+                      <p className="text-sm">Direct access to your dedicated accountant via phone or email.</p>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <div className="mt-1 h-5 w-5 rounded-full bg-gold/20 flex items-center justify-center flex-shrink-0">
+                        <Check className="h-3 w-3 text-gold" />
+                      </div>
+                      <p className="text-sm">Real-time tax advice to help you planning your finances effectively.</p>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <div className="mt-1 h-5 w-5 rounded-full bg-gold/20 flex items-center justify-center flex-shrink-0">
+                        <Check className="h-3 w-3 text-gold" />
+                      </div>
+                      <p className="text-sm">We handle all HMRC correspondence, so you don't have to.</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Features */}
         <section className="py-20">
           <div className="container">
@@ -144,6 +186,22 @@ const Contractors = () => {
                   </CardContent>
                 </Card>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Informational Section */}
+        <section className="py-20 bg-background">
+          <div className="container">
+            <div className="mx-auto max-w-3xl text-center">
+              <h2 className="text-2xl font-bold text-foreground mb-6">Stay Ahead of HMRC with Proactive Planning</h2>
+              <p className="text-muted-foreground leading-relaxed mb-8">
+                The tax landscape for contractors is constantly evolving. From changes in Corporation Tax rates to the latest IR35 enforcement trends, staying informed is critical. Our team doesn't just process your year-end accounts; we provide year-round guidance to ensure you are taking advantage of all legitimate tax-saving opportunities. 
+              </p>
+              <div className="h-1 w-20 bg-gold mx-auto mb-8"></div>
+              <p className="italic text-foreground font-medium">
+                "Our mission is to provide the peace of mind that comes from knowing your finances are in expert hands."
+              </p>
             </div>
           </div>
         </section>

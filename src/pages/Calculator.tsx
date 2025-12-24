@@ -166,11 +166,51 @@ const Calculator = () => {
                     <ResultColumn title="Weekly" data={calculations} divisor={52} highlight={period === "Weekly"} />
                 </div>
             </div>
+
+            {/* Educational Content */}
+            <div className="mx-auto max-w-4xl space-y-12 pt-12">
+              <div className="grid md:grid-cols-2 gap-12">
+                <div>
+                  <h2 className="text-2xl font-bold text-foreground mb-4">How to Use This Calculator</h2>
+                  <p className="text-muted-foreground leading-relaxed mb-4">
+                    Our UK Salary Calculator is designed to provide you with a quick and accurate breakdown of your take-home pay for the 2025/2026 tax year. Simply enter your gross income and select the time period (yearly, monthly, or weekly).
+                  </p>
+                  <p className="text-muted-foreground leading-relaxed">
+                    The results will update in real-time, showing you exactly how much Income Tax and National Insurance will be deducted from your earnings. We also include a calculation for Employer National Insurance contributions, which is particularly useful for contractors and small business owners.
+                  </p>
+                </div>
+                <div>
+                  <h2 className="text-2xl font-bold text-foreground mb-4">Understanding Your Pay</h2>
+                  <p className="text-muted-foreground leading-relaxed mb-4">
+                    Your "Take Home" pay is the amount you actually receive in your bank account after all mandatory deductions have been made.
+                  </p>
+                  <ul className="space-y-3">
+                    <li className="text-sm text-muted-foreground flex gap-2">
+                       <span className="font-bold text-foreground">• Income Tax:</span> Based on your taxable income after your Personal Allowance.
+                    </li>
+                    <li className="text-sm text-muted-foreground flex gap-2">
+                       <span className="font-bold text-foreground">• National Insurance (NI):</span> Contributions that qualify you for certain benefits and the State Pension.
+                    </li>
+                    <li className="text-sm text-muted-foreground flex gap-2">
+                       <span className="font-bold text-foreground">• Personal Allowance:</span> The amount of income you can receive each year without paying tax.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div className="bg-muted/50 rounded-2xl p-8 border border-border">
+                <h2 className="text-2xl font-bold text-foreground mb-4">Important Note for Limited Companies</h2>
+                <p className="text-muted-foreground leading-relaxed">
+                  While this calculator provides an accurate view of a standard PAYE salary, contractors operating through a limited company may find it more tax-efficient to take a combination of a lower salary and dividends. Our team can provide a comprehensive tax planning review to ensure you are utilizing the most efficient structure for your specific circumstances.
+                </p>
+              </div>
+            </div>
           </div>
         </section>
 
         <CTASection />
       </Layout>
+
     </>
   );
 };
