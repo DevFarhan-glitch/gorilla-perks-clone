@@ -3,25 +3,25 @@ import { Card, CardContent } from "@/components/ui/card";
 
 const testimonials = [
   {
-    name: "Muhammad Irfan",
-    role: "Senior Accountant",
-    content: "Our team is dedicated to providing the best tax advice. We ensure all our clients are fully compliant and tax-efficient.",
+    name: "Sophie Bennett",
+    role: "E-commerce Founder",
+    content: "Henleaze Tax made the transition from sole trader to a limited company completely seamless. Their ongoing support with VAT and payroll has been world-class and invaluable to my business growth.",
     rating: 5,
-    image: "/irfan.jpeg",
+    image: "/client-1.jpg",
   },
   {
-    name: "Adeel Khan",
-    role: "Accountant",
-    content: "We take pride in our fast turnaround and personal service. Your financial success is our priority.",
+    name: "Michael Chen",
+    role: "Creative Director",
+    content: "The fixed monthly fee and proactive advice give me total peace of mind. I always know where my finances stand, which allows me to focus purely on the creative side of my agency.",
     rating: 5,
-    image: "/adeel.jfif",
+    image: "/client-2.jpg",
   },
   {
-    name: "Danial Islam",
-    role: "Accountant",
-    content: "Helping small businesses and landlords navigate complex tax laws is what we do best.",
+    name: "Linda O'Reilly",
+    role: "Property Investor",
+    content: "Managing a growing property portfolio used to be a major tax headache. The team at Henleaze truly understands the property market and has helped me optimize my portfolio's efficiency.",
     rating: 5,
-    image: "/danial.jpg",
+    image: "/client-3.jpg",
   },
 ];
 

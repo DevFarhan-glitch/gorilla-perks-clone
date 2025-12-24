@@ -1,0 +1,26 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # Enforce HTTPS
+  # If you are behind a proxy (like Hostinger's load balancer), use this:
+  RewriteCond %{HTTP:X-Forwarded-Proto} !https
+  # Otherwise, use the standard:
+  RewriteCond %{HTTPS} off
+  RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+  # Enforce Non-WWW (matches the sitemap)
+  RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+  RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
+
+  # Remove trailing slash from non-existent directories (301 redirect)
+  # This prevents duplicate page content issues for SEO
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule ^(.+)/$ /$1 [L,R=301]
+
+  # SPA Routing: Fallback all requests to index.html if file or directory doesn't exist
+  # This allows React Router to handle the URL on the client side
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule . /index.html [L]
+</IfModule>

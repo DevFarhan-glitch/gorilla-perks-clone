@@ -58,7 +58,7 @@ const Header = () => {
           </Link>
 
           <DropdownMenu>
-            <DropdownMenuTrigger className="flex items-center px-3 py-2 text-sm font-medium text-muted-foreground transition-all duration-300 hover:text-gold uppercase tracking-wide">
+            <DropdownMenuTrigger className="flex items-center px-3 py-2 text-sm font-medium text-muted-foreground transition-all duration-300 hover:text-gold">
               Services <ChevronDown className="ml-1 h-4 w-4" />
             </DropdownMenuTrigger>
             <DropdownMenuContent align="start" className="w-64 p-2 bg-white border-border shadow-xl rounded-xl">
@@ -137,7 +137,7 @@ const Header = () => {
               </Link>
             ))}
             <div className="border-t border-border pt-2">
-              <p className="px-3 py-2 text-xs font-semibold uppercase text-muted-foreground">
+              <p className="px-3 py-2 text-xs font-semibold text-muted-foreground">
                 Services
               </p>
               {mainServices.map((service) => (

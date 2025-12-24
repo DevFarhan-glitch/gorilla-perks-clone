@@ -25,6 +25,8 @@ import Article from "./pages/Article";
 import CustomCursor from "./components/ui/CustomCursor";
 import ScrollToTop from "./components/ui/ScrollToTop";
 
+import CanonicalURL from "./components/SEO/CanonicalURL";
+
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -35,6 +37,7 @@ const App = () => (
         <Toaster />
         <Sonner />
         <BrowserRouter>
+          <CanonicalURL />
           <ScrollToTop />
           <Routes>
             <Route path="/" element={<Index />} />

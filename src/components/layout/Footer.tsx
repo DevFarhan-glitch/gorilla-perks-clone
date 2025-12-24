@@ -36,7 +36,7 @@ const Footer = () => {
           {/* Services */}
           {/* Services */}
           <div>
-            <h3 className="mb-4 font-display text-sm font-semibold uppercase tracking-wider text-gold">
+            <h3 className="mb-4 font-display text-sm font-semibold text-gold">
               Services
             </h3>
             <ul className="space-y-3 text-sm">
@@ -64,7 +64,7 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h3 className="mb-4 font-display text-sm font-semibold uppercase tracking-wider text-gold">
+            <h3 className="mb-4 font-display text-sm font-semibold text-gold">
               Quick Links
             </h3>
             <ul className="space-y-3 text-sm">
@@ -103,7 +103,7 @@ const Footer = () => {
 
           {/* Contact Info */}
           <div>
-            <h3 className="mb-4 font-display text-sm font-semibold uppercase tracking-wider text-gold">
+            <h3 className="mb-4 font-display text-sm font-semibold text-gold">
               Contact
             </h3>
             <ul className="space-y-3 text-sm">
