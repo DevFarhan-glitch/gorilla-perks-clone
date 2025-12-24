@@ -3,25 +3,25 @@ import { Card, CardContent } from "@/components/ui/card";
 
 const testimonials = [
   {
-    name: "Sarah Mitchell",
-    role: "IT Contractor",
-    content: "Henleaze Tax has been fantastic. They set up my limited company, handle all my accounts, and their IR35 advice has been invaluable. Highly recommend!",
+    name: "Muhammad Irfan",
+    role: "Senior Accountant",
+    content: "Our team is dedicated to providing the best tax advice. We ensure all our clients are fully compliant and tax-efficient.",
     rating: 5,
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop",
+    image: "/irfan.jpeg",
   },
   {
-    name: "James Thompson",
-    role: "Small Business Owner",
-    content: "Moving to Henleaze was the best business decision I made. Their proactive advice has saved me thousands in tax, and I love the fixed monthly fee.",
+    name: "Adeel Khan",
+    role: "Accountant",
+    content: "We take pride in our fast turnaround and personal service. Your financial success is our priority.",
     rating: 5,
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop",
+    image: "/adeel.jfif",
   },
   {
-    name: "Emily Watson",
-    role: "Property Investor",
-    content: "As a landlord with multiple properties, I needed specialist advice. Henleaze understands the property market and keeps my tax affairs in perfect order.",
+    name: "Danial Islam",
+    role: "Accountant",
+    content: "Helping small businesses and landlords navigate complex tax laws is what we do best.",
     rating: 5,
-    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop",
+    image: "/danial.jpg",
   },
 ];
 

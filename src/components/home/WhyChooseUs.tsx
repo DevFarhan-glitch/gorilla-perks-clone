@@ -39,7 +39,7 @@ const WhyChooseUs = () => {
       {/* Background Image */}
       <div className="absolute inset-0">
         <img
-          src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1920&h=1080&fit=crop"
+          src="/office-bg.png"
           alt="Modern office"
           className="w-full h-full object-cover"
         />

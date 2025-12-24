@@ -44,7 +44,6 @@ const WhatsAppChat = () => {
           className={`fixed bottom-6 left-6 z-50 w-80 sm:w-96 rounded-2xl bg-[#E5DDD5] shadow-2xl border border-border transition-all duration-300 font-sans ${
             isMinimized ? "h-14" : "h-[450px]"
           }`}
-          style={{ backgroundImage: "url('https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png')", backgroundBlendMode: "overlay" }}
         >
           {/* Header */}
           <div className="flex items-center justify-between rounded-t-2xl bg-[#075E54] px-4 py-3 text-white">

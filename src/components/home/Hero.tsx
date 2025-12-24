@@ -61,7 +61,7 @@ const Hero = () => {
           <div className="relative hidden lg:block animate-fade-in-right [animation-delay:300ms]">
             <div className="relative">
               <img
-                src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&h=500&fit=crop"
+                src="/hero-main.png"
                 alt="Professional tax consultants at work"
                 className="rounded-2xl shadow-2xl"
               />

@@ -21,7 +21,7 @@ const services = [
     description: "Specialist services for IT contractors and freelancers. Limited company formation, IR35 advice, tax-efficient salary and dividend strategies.",
     features: ["Company Formation", "IR35 Compliance", "Tax Planning", "Payroll Services"],
     path: "/services/contractors",
-    image: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=400&h=200&fit=crop",
+    image: "/hero-main.png",
   },
   {
     icon: Building2,
@@ -29,7 +29,7 @@ const services = [
     description: "Comprehensive accounting for growing businesses. From bookkeeping to year-end accounts, VAT returns, and business advisory.",
     features: ["Bookkeeping", "VAT Returns", "Year-End Accounts", "Business Advisory"],
     path: "/services/small-business",
-    image: "https://images.unsplash.com/photo-1664575602554-2087b04935a5?w=400&h=200&fit=crop",
+    image: "/small-business-guide.png",
   },
   {
     icon: Home,
@@ -37,7 +37,7 @@ const services = [
     description: "Tailored solutions for property investors. Rental income management, buy-to-let accounting, and property portfolio optimization.",
     features: ["Rental Income Tax", "Property Portfolios", "Capital Gains", "Expense Tracking"],
     path: "/services/landlords",
-    image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=400&h=200&fit=crop",
+    image: "/landlord-guide.png",
   },
   {
     icon: Users,
@@ -46,7 +46,7 @@ const services = [
     features: ["Monthly Payroll", "Pension Auto-enrollment", "RTI Submissions", "P60s & P45s"],
     path: "/services/payroll-hr",
     price: "From £50/month",
-    image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=400&h=200&fit=crop",
+    image: "/cta-consult.png",
   },
   {
     icon: Calculator,
@@ -55,7 +55,7 @@ const services = [
     features: ["Corporation Tax", "Capital Gains Tax", "Inheritance Tax", "Strategic Planning"],
     path: "/services/tax-planning",
     price: "From £199/month",
-    image: "https://images.unsplash.com/photo-1554415707-6e8cfc93fe23?w=400&h=200&fit=crop",
+    image: "/cgt-guide.png",
   },
   {
     icon: FileCheck,
@@ -64,7 +64,7 @@ const services = [
     features: ["VAT Returns", "Dext/Xero Support", "Bank Reconciliation", "MTD Compliance"],
     path: "/services/vat-bookkeeping",
     price: "From £89/month",
-    image: "https://images.unsplash.com/photo-1544377193-33dcf4d68fb5?w=400&h=200&fit=crop",
+    image: "/small-business-guide.png",
   },
   {
     icon: Scale,
@@ -73,7 +73,7 @@ const services = [
     features: ["Registered Office", "Confirmation Statement", "Share Management", "Statutory Registers"],
     path: "/services/company-secretarial",
     price: "From £30/month",
-    image: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=400&h=200&fit=crop",
+    image: "/cta-consult.png",
   },
   {
     icon: Zap,
@@ -82,7 +82,7 @@ const services = [
     features: ["Technical Report", "Cost Identification", "HMRC Submission", "Expert Review"],
     path: "/services/rd-claims",
     price: "Contingency Based",
-    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&h=200&fit=crop",
+    image: "/office-bg.png",
   },
   {
     icon: UserCheck,
@@ -91,7 +91,7 @@ const services = [
     features: ["Self Assessment", "Rental Income", "Investment Income", "Tax Optimization"],
     path: "/services/personal-tax",
     price: "From £150",
-    image: "https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?w=400&h=200&fit=crop",
+    image: "/hero-main.png",
   },
 ];
 
