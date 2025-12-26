@@ -12,7 +12,7 @@ const Contact = () => {
   return (
     <>
       <Helmet>
-        <title>Contact Us | Henleaze Tax Consultancy Bristol</title>
+        <title>Contact Our Expert Accountants | Henleaze Tax Consultancy</title>
         <meta
           name="description"
           content="Get in touch with Henleaze Tax Consultancy for a free quote. Call us or fill out our contact form."

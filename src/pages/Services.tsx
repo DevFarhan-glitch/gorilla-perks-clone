@@ -7,7 +7,7 @@ const Services = () => {
   return (
     <>
       <Helmet>
-        <title>Our Services | Henleaze Tax Consultancy</title>
+        <title>Expert Accounting & Tax Services | Henleaze Tax Consultancy</title>
         <meta
           name="description"
           content="Explore our comprehensive range of accounting and tax services. From bookkeeping to complex tax planning, we have the expertise to support you."

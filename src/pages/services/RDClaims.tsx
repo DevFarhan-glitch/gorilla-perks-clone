@@ -43,7 +43,7 @@ const RDClaims = () => {
   return (
     <>
       <Helmet>
-        <title>R&D Tax Credits | Henleaze Tax Consultancy</title>
+        <title>R&D Tax Credit Claims & Advice | Henleaze Tax Consultancy</title>
         <meta
           name="description"
           content="Identify and claim R&D tax credits for your innovation. We help you maximize your claims with expert technical and financial reports."

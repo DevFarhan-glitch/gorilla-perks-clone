@@ -43,7 +43,7 @@ const PersonalTax = () => {
   return (
     <>
       <Helmet>
-        <title>Personal Tax Services | Henleaze Tax Consultancy</title>
+        <title>Personal Tax & Self-Assessment | Henleaze Tax Consultancy</title>
         <meta
           name="description"
           content="Hassle-free personal tax and self-assessment services. We ensure your personal tax return is filed accurately and on time."

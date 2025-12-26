@@ -43,7 +43,7 @@ const PayrollHR = () => {
   return (
     <>
       <Helmet>
-        <title>Payroll & HR Services | Henleaze Tax Consultancy</title>
+        <title>Payroll & HR Management Services | Henleaze Tax Consultancy</title>
         <meta
           name="description"
           content="Full payroll and HR management services. We handle RTI submissions, pension auto-enrollment, and employment law compliance."

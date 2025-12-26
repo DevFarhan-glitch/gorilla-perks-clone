@@ -76,7 +76,7 @@ const Pricing = () => {
   return (
     <>
       <Helmet>
-        <title>Pricing & Payment Plans | Henleaze Tax Consultancy</title>
+        <title>Fixed Fee Accounting Packages | Henleaze Tax Consultancy</title>
         <meta
           name="description"
           content="Choose from our transparent and affordable accounting packages for limited companies and small businesses."

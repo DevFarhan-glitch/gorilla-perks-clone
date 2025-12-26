@@ -43,7 +43,7 @@ const CompanySecretarial = () => {
   return (
     <>
       <Helmet>
-        <title>Company Secretarial Services | Henleaze Tax Consultancy</title>
+        <title>Professional Company Secretarial | Henleaze Tax Consultancy</title>
         <meta
           name="description"
           content="Full company secretarial support. We handle registered office services, confirmation statements, and statutory filings."

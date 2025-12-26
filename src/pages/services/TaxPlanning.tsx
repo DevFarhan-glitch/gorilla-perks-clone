@@ -43,7 +43,7 @@ const TaxPlanning = () => {
   return (
     <>
       <Helmet>
-        <title>Tax Planning Services | Henleaze Tax Consultancy</title>
+        <title>Strategic Tax Planning & Advice | Henleaze Tax Consultancy</title>
         <meta
           name="description"
           content="Strategic tax planning services to protect your wealth and minimize liabilities. Expert advice on corporation tax, CGT, and IHT."
