@@ -46,7 +46,7 @@ const TaxPlanning = () => {
         <title>Strategic Tax Planning & Advice | Henleaze Tax Consultancy</title>
         <meta
           name="description"
-          content="Strategic tax planning services to protect your wealth and minimize liabilities. Expert advice on corporation tax, CGT, and IHT."
+          content="Maximize your wealth with strategic tax planning and advice. Our experts identify tax-saving opportunities for corporation tax, capital gains, and inheritance tax."
         />
       </Helmet>
       <Layout>

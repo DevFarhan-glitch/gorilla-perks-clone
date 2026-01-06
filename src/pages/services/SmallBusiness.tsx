@@ -88,7 +88,7 @@ const SmallBusiness = () => {
         <title>Small Business Accounting Services | Henleaze Tax Consultancy</title>
         <meta
           name="description"
-          content="Comprehensive accounting for small businesses. Bookkeeping, VAT returns, year-end accounts, and business advisory from £149/month."
+          content="Dedicated accounting support for small businesses from £149/month. Includes year-end accounts, corporation tax, and proactive business advisory."
         />
       </Helmet>
       <Layout>

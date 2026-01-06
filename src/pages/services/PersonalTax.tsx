@@ -46,7 +46,7 @@ const PersonalTax = () => {
         <title>Personal Tax & Self-Assessment | Henleaze Tax Consultancy</title>
         <meta
           name="description"
-          content="Hassle-free personal tax and self-assessment services. We ensure your personal tax return is filed accurately and on time."
+          content="Take the stress out of Self-Assessment with our personal tax services. We ensure accurate filing, meet all deadlines, and optimize your personal tax position."
         />
       </Helmet>
       <Layout>

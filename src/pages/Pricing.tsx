@@ -79,7 +79,7 @@ const Pricing = () => {
         <title>Fixed Fee Accounting Packages | Henleaze Tax Consultancy</title>
         <meta
           name="description"
-          content="Choose from our transparent and affordable accounting packages for limited companies and small businesses."
+          content="Transparent, fixed-fee accounting packages for every stage of your business. No hidden costs, just expert support tailored to your specific needs."
         />
       </Helmet>
 

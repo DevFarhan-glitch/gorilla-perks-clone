@@ -46,7 +46,7 @@ const VATBookkeeping = () => {
         <title>VAT Returns & Bookkeeping Services | Henleaze Tax Consultancy</title>
         <meta
           name="description"
-          content="Accurate VAT returns and professional bookkeeping services. We use the latest cloud technology to keep your finances organized."
+          content="Save time and stay compliant with our professional VAT and bookkeeping services. We leverage cloud technology like Xero and Dext for real-time financial tracking."
         />
       </Helmet>
       <Layout>

@@ -89,7 +89,7 @@ const Contractors = () => {
         <title>Contractor Accounting Services | Henleaze Tax Consultancy</title>
         <meta
           name="description"
-          content="Specialist accounting for IT contractors and freelancers. Limited company formation, IR35 advice, tax-efficient salary and dividend strategies from £99/month."
+          content="Specialist contractor accounting with IR35 expertise. Limited company formation, dividend planning, and dedicated support from £99/month."
         />
       </Helmet>
       <Layout>

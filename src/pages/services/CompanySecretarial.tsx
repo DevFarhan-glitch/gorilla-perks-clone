@@ -46,7 +46,7 @@ const CompanySecretarial = () => {
         <title>Professional Company Secretarial | Henleaze Tax Consultancy</title>
         <meta
           name="description"
-          content="Full company secretarial support. We handle registered office services, confirmation statements, and statutory filings."
+          content="Ensure your limited company remains compliant with our professional secretarial services. We handle Companies House filings, registered office, and statutory books."
         />
       </Helmet>
       <Layout>
