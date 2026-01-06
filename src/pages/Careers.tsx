@@ -8,10 +8,10 @@ const Careers = () => {
   return (
     <>
       <Helmet>
-        <title>Careers | Henleaze Tax Consultancy Bristol</title>
+        <title>Join Our Team: Careers at Henleaze Tax Consultancy</title>
         <meta
           name="description"
-          content="Explore career opportunities at Henleaze Tax Consultancy. Join our growing team of accounting and tax professionals in Bristol."
+          content="Passionate about tax and accounting? Explore exciting career opportunities at Henleaze Tax Consultancy and help us support Bristol's growing businesses."
         />
       </Helmet>
 

@@ -51,7 +51,7 @@ const Hero = () => {
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
-              <Button size="lg" variant="outline" asChild className="w-full sm:w-auto border-white/30 text-white hover:bg-white/10 hover:border-gold">
+              <Button size="lg" variant="outline" asChild className="w-full sm:w-auto border-white/30 text-black hover:bg-white/10 hover:text-white hover:border-gold">
                 <Link to="/calculator">Try Our Tax Calculator</Link>
               </Button>
             </div>
@@ -61,7 +61,7 @@ const Hero = () => {
           <div className="relative hidden lg:block animate-fade-in-right [animation-delay:300ms]">
             <div className="relative">
               <img
-                src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&h=500&fit=crop"
+                src="/hero-main.png"
                 alt="Professional tax consultants at work"
                 className="rounded-2xl shadow-2xl"
               />

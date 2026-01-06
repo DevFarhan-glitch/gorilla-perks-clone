@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Phone, Mail, MapPin, Linkedin, Facebook, Twitter } from "lucide-react";
+import { Phone, Mail, MapPin, Facebook, Instagram } from "lucide-react";
 import { servicesList } from "@/lib/data";
 
 const Footer = () => {
@@ -10,8 +10,8 @@ const Footer = () => {
           {/* Company Info */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
-              <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-gold">
-                <span className="font-display text-lg font-bold text-navy">H</span>
+              <div className="flex h-10 w-10 items-center justify-center rounded-full overflow-hidden border border-gold/20">
+                <img src="/logo.jpg" alt="Henleaze Tax Consultancy Logo" className="h-full w-full object-cover" />
               </div>
               <div className="flex flex-col">
                 <span className="font-display text-lg font-bold text-white">Henleaze</span>
@@ -22,14 +22,12 @@ const Footer = () => {
               Professional accounting and tax services for contractors, small businesses, and landlords in Bristol and beyond.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-white/60 hover:text-gold transition-colors">
-                <Linkedin className="h-5 w-5" />
-              </a>
-              <a href="#" className="text-white/60 hover:text-gold transition-colors">
+
+              <a href="https://www.facebook.com/share/1AoDJjTkQY/?mibextid=wwXIfr" className="text-white/60 hover:text-gold transition-colors">
                 <Facebook className="h-5 w-5" />
               </a>
-              <a href="#" className="text-white/60 hover:text-gold transition-colors">
-                <Twitter className="h-5 w-5" />
+              <a href="https://www.instagram.com/henleazetaxconsultancy?igsh=MTZvcWdmZXVheGV5NA%3D%3D&utm_source=qr" className="text-white/60 hover:text-gold transition-colors">
+                <Instagram className="h-5 w-5" />
               </a>
             </div>
           </div>
@@ -38,7 +36,7 @@ const Footer = () => {
           {/* Services */}
           {/* Services */}
           <div>
-            <h3 className="mb-4 font-display text-sm font-semibold uppercase tracking-wider text-gold">
+            <h3 className="mb-4 font-display text-sm font-semibold text-gold">
               Services
             </h3>
             <ul className="space-y-3 text-sm">
@@ -66,7 +64,7 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h3 className="mb-4 font-display text-sm font-semibold uppercase tracking-wider text-gold">
+            <h3 className="mb-4 font-display text-sm font-semibold text-gold">
               Quick Links
             </h3>
             <ul className="space-y-3 text-sm">
@@ -78,6 +76,16 @@ const Footer = () => {
               <li>
                 <Link to="/calculator" className="text-white/70 hover:text-gold transition-colors">
                   Tax Calculator
+                </Link>
+              </li>
+               <li>
+                <Link to="/pricing" className="text-white/70 hover:text-gold transition-colors">
+                  Pricing
+                </Link>
+              </li>
+               <li>
+                <Link to="/careers" className="text-white/70 hover:text-gold transition-colors">
+                  Careers
                 </Link>
               </li>
               <li>
@@ -95,7 +103,7 @@ const Footer = () => {
 
           {/* Contact Info */}
           <div>
-            <h3 className="mb-4 font-display text-sm font-semibold uppercase tracking-wider text-gold">
+            <h3 className="mb-4 font-display text-sm font-semibold text-gold">
               Contact
             </h3>
             <ul className="space-y-3 text-sm">

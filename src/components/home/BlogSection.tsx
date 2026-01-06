@@ -75,13 +75,6 @@ const BlogSection = () => {
             </Card>
           ))}
         </div>
-
-        <div className="text-center mt-12 animate-fade-in [animation-delay:600ms]">
-          <Button variant="outline" size="lg" className="border-gold text-gold hover:bg-gold hover:text-primary-foreground">
-            View All Articles
-            <ArrowRight className="ml-2 h-4 w-4" />
-          </Button>
-        </div>
       </div>
     </section>
   );

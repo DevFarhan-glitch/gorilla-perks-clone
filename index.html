@@ -15,7 +15,43 @@
   </head>
 
   <body>
-    <div id="root"></div>
+    <!-- This div will be replaced by the React app. We include static links here for SEO crawlers that do not execute JavaScript. -->
+    <div id="root">
+      <header>
+        <nav>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/services">Our Services</a></li>
+            <li><a href="/pricing">Pricing</a></li>
+            <li><a href="/calculator">Tax Calculator</a></li>
+            <li><a href="/careers">Careers</a></li>
+            <li><a href="/contact">Contact Us</a></li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <h1>Henleaze Tax Consultancy</h1>
+        <p>Expert accounting and tax services for contractors, small businesses, and landlords in Bristol.</p>
+        <section>
+          <h2>Our Core Services</h2>
+          <ul>
+            <li><a href="/services/contractors">Contractor Accounting</a></li>
+            <li><a href="/services/small-business">Small Business Accounting</a></li>
+            <li><a href="/services/landlords">Landlord Tax Services</a></li>
+            <li><a href="/services/payroll-hr">Payroll & HR</a></li>
+            <li><a href="/services/tax-planning">Tax Planning</a></li>
+            <li><a href="/services/vat-bookkeeping">VAT & Bookkeeping</a></li>
+            <li><a href="/services/company-secretarial">Company Secretarial</a></li>
+            <li><a href="/services/rd-claims">R&D Tax Credits</a></li>
+            <li><a href="/services/personal-tax">Personal Tax</a></li>
+          </ul>
+        </section>
+      </main>
+      <footer>
+        <p>© 2024 Henleaze Tax Consultancy. All rights reserved.</p>
+      </footer>
+    </div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

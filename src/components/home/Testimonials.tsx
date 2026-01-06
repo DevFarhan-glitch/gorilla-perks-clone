@@ -3,25 +3,25 @@ import { Card, CardContent } from "@/components/ui/card";
 
 const testimonials = [
   {
-    name: "Sarah Mitchell",
-    role: "IT Contractor",
-    content: "Henleaze Tax has been fantastic. They set up my limited company, handle all my accounts, and their IR35 advice has been invaluable. Highly recommend!",
+    name: "Sophie Bennett",
+    role: "E-commerce Founder",
+    content: "Henleaze Tax made the transition from sole trader to a limited company completely seamless. Their ongoing support with VAT and payroll has been world-class and invaluable to my business growth.",
     rating: 5,
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop",
+    image: "/client-1.jpg",
   },
   {
-    name: "James Thompson",
-    role: "Small Business Owner",
-    content: "Moving to Henleaze was the best business decision I made. Their proactive advice has saved me thousands in tax, and I love the fixed monthly fee.",
+    name: "Michael Chen",
+    role: "Creative Director",
+    content: "The fixed monthly fee and proactive advice give me total peace of mind. I always know where my finances stand, which allows me to focus purely on the creative side of my agency.",
     rating: 5,
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop",
+    image: "/client-2.jpg",
   },
   {
-    name: "Emily Watson",
+    name: "Linda O'Reilly",
     role: "Property Investor",
-    content: "As a landlord with multiple properties, I needed specialist advice. Henleaze understands the property market and keeps my tax affairs in perfect order.",
+    content: "Managing a growing property portfolio used to be a major tax headache. The team at Henleaze truly understands the property market and has helped me optimize my portfolio's efficiency.",
     rating: 5,
-    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop",
+    image: "/client-3.jpg",
   },
 ];
 

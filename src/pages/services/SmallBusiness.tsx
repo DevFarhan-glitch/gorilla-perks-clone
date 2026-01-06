@@ -88,7 +88,7 @@ const SmallBusiness = () => {
         <title>Small Business Accounting Services | Henleaze Tax Consultancy</title>
         <meta
           name="description"
-          content="Comprehensive accounting for small businesses. Bookkeeping, VAT returns, year-end accounts, and business advisory from £149/month."
+          content="Dedicated accounting support for small businesses from £149/month. Includes year-end accounts, corporation tax, and proactive business advisory."
         />
       </Helmet>
       <Layout>
@@ -113,6 +113,48 @@ const SmallBusiness = () => {
                 <Button size="lg" variant="outline" asChild className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10">
                   <Link to="/pricing">View All Pricing</Link>
                 </Button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Business Support Section */}
+        <section className="py-16 bg-muted/30">
+          <div className="container">
+            <div className="mx-auto max-w-4xl">
+              <div className="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                  <h2 className="text-3xl font-display font-bold text-foreground mb-6">Expert Support for Your Growing Business</h2>
+                  <p className="text-muted-foreground leading-relaxed mb-4">
+                    Managing a small business is a full-time job. Between serving your clients and managing operations, finding time for bookkeeping and tax compliance can be a challenge. At Henleaze Tax Consultancy, we act as your extended finance team.
+                  </p>
+                  <p className="text-muted-foreground leading-relaxed">
+                    We don't just crunch the numbers; we provide the strategic financial advice you need to scale efficiently. Our team helps you understand your cash flow, optimize your tax position, and make informed decisions that drive long-term profitability.
+                  </p>
+                </div>
+                <div className="bg-primary rounded-2xl p-8 text-white shadow-xl">
+                  <h3 className="text-xl font-bold mb-4">Why Choose Henleaze?</h3>
+                  <ul className="space-y-4">
+                    <li className="flex items-start gap-3">
+                      <div className="mt-1 h-5 w-5 rounded-full bg-gold/20 flex items-center justify-center flex-shrink-0">
+                        <Check className="h-3 w-3 text-gold" />
+                      </div>
+                      <p className="text-sm">Cloud-first approach using Xero and QuickBooks for 24/7 access.</p>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <div className="mt-1 h-5 w-5 rounded-full bg-gold/20 flex items-center justify-center flex-shrink-0">
+                        <Check className="h-3 w-3 text-gold" />
+                      </div>
+                      <p className="text-sm">Proactive advice on tax-saving opportunities for your industry.</p>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <div className="mt-1 h-5 w-5 rounded-full bg-gold/20 flex items-center justify-center flex-shrink-0">
+                        <Check className="h-3 w-3 text-gold" />
+                      </div>
+                      <p className="text-sm">Fixed monthly fees with no hidden costs for calls or advice.</p>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
@@ -143,6 +185,21 @@ const SmallBusiness = () => {
                   </CardContent>
                 </Card>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Informational Section */}
+        <section className="py-16 bg-background">
+          <div className="container">
+            <div className="mx-auto max-w-3xl text-center bg-muted/50 rounded-3xl p-10 border border-border">
+              <h2 className="text-2xl font-bold text-foreground mb-6">Navigating MTD and Regulatory Changes</h2>
+              <p className="text-muted-foreground leading-relaxed mb-6">
+                The introduction of Making Tax Digital (MTD) has fundamentally changed how small businesses interact with HMRC. We ensure your business is fully compliant with the latest digital record-keeping requirements, minimizing the risk of penalties and errors.
+              </p>
+              <p className="text-muted-foreground leading-relaxed">
+                Beyond compliance, we provide quarterly reviews to discuss your business performance and planning. Our goal is to ensure you have a clear financial roadmap, allowing you to focus on what you do best—running your business.
+              </p>
             </div>
           </div>
         </section>

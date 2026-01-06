@@ -88,7 +88,7 @@ const Landlords = () => {
         <title>Landlord Accounting Services | Henleaze Tax Consultancy</title>
         <meta
           name="description"
-          content="Specialist accounting for landlords and property investors. Rental income tax, capital gains, portfolio management from £79/month."
+          content="Expert property accounting for landlords. We help you navigate Section 24, manage portfolios, and optimize tax on rental income and capital gains."
         />
       </Helmet>
       <Layout>

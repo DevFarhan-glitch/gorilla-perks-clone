@@ -70,6 +70,11 @@ const Calculator = () => {
         ni += band2 * NI_RATE_UPPER;
     }
 
+    // Employer NI (2025/2026 rates as per Gorilla calculator)
+    const EMP_NI_THRESHOLD = 5000;
+    const EMP_NI_RATE = 0.15;
+    const employerNi = Math.max(0, (yearlyGross - EMP_NI_THRESHOLD) * EMP_NI_RATE);
+
     const totalDeductions = tax + ni;
     const takeHome = yearlyGross - totalDeductions;
 
@@ -78,9 +83,10 @@ const Calculator = () => {
         taxable: taxableIncome,
         tax,
         ni,
+        employerNi,
         takeHome
     };
-  }, [grossIncome]);
+  }, [grossIncome, period]);
 
   return (
     <>
@@ -160,11 +166,51 @@ const Calculator = () => {
                     <ResultColumn title="Weekly" data={calculations} divisor={52} highlight={period === "Weekly"} />
                 </div>
             </div>
+
+            {/* Educational Content */}
+            <div className="mx-auto max-w-4xl space-y-12 pt-12">
+              <div className="grid md:grid-cols-2 gap-12">
+                <div>
+                  <h2 className="text-2xl font-bold text-foreground mb-4">How to Use This Calculator</h2>
+                  <p className="text-muted-foreground leading-relaxed mb-4">
+                    Our UK Salary Calculator is designed to provide you with a quick and accurate breakdown of your take-home pay for the 2025/2026 tax year. Simply enter your gross income and select the time period (yearly, monthly, or weekly).
+                  </p>
+                  <p className="text-muted-foreground leading-relaxed">
+                    The results will update in real-time, showing you exactly how much Income Tax and National Insurance will be deducted from your earnings. We also include a calculation for Employer National Insurance contributions, which is particularly useful for contractors and small business owners.
+                  </p>
+                </div>
+                <div>
+                  <h2 className="text-2xl font-bold text-foreground mb-4">Understanding Your Pay</h2>
+                  <p className="text-muted-foreground leading-relaxed mb-4">
+                    Your "Take Home" pay is the amount you actually receive in your bank account after all mandatory deductions have been made.
+                  </p>
+                  <ul className="space-y-3">
+                    <li className="text-sm text-muted-foreground flex gap-2">
+                       <span className="font-bold text-foreground">• Income Tax:</span> Based on your taxable income after your Personal Allowance.
+                    </li>
+                    <li className="text-sm text-muted-foreground flex gap-2">
+                       <span className="font-bold text-foreground">• National Insurance (NI):</span> Contributions that qualify you for certain benefits and the State Pension.
+                    </li>
+                    <li className="text-sm text-muted-foreground flex gap-2">
+                       <span className="font-bold text-foreground">• Personal Allowance:</span> The amount of income you can receive each year without paying tax.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div className="bg-muted/50 rounded-2xl p-8 border border-border">
+                <h2 className="text-2xl font-bold text-foreground mb-4">Important Note for Limited Companies</h2>
+                <p className="text-muted-foreground leading-relaxed">
+                  While this calculator provides an accurate view of a standard PAYE salary, contractors operating through a limited company may find it more tax-efficient to take a combination of a lower salary and dividends. Our team can provide a comprehensive tax planning review to ensure you are utilizing the most efficient structure for your specific circumstances.
+                </p>
+              </div>
+            </div>
           </div>
         </section>
 
         <CTASection />
       </Layout>
+
     </>
   );
 };
@@ -182,7 +228,8 @@ const ResultColumn = ({ title, data, divisor, highlight = false }: { title: stri
                 <Row label="Taxable Income" value={format(data.taxable)} className={highlight ? "text-primary-foreground/70 text-sm" : "text-muted-foreground text-sm"} />
                 <div className={`h-px my-2 ${highlight ? "bg-primary-foreground/20" : "bg-border/50"}`} />
                 <Row label="Tax" value={`-${format(data.tax)}`} className={highlight ? "text-red-300" : "text-red-500"} />
-                <Row label="National Insurance" value={`-${format(data.ni)}`} className={highlight ? "text-red-300" : "text-red-500"} />
+                <Row label="Employee NI" value={`-${format(data.ni)}`} className={highlight ? "text-red-300" : "text-red-500"} />
+                <Row label="Employer NIC" value={`${format(data.employerNi)}`} className={highlight ? "text-white/70 text-xs" : "text-muted-foreground text-xs italic"} />
                 <div className={`h-px my-2 ${highlight ? "bg-primary-foreground/20" : "bg-border"}`} />
                 <div className="flex justify-between items-center pt-1">
                     <span className={`font-bold text-lg ${highlight ? "text-white" : ""}`}>Take Home</span>

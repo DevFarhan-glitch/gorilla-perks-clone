@@ -8,7 +8,7 @@ const CTASection = () => {
       {/* Background Image */}
       <div className="absolute inset-0">
         <img
-          src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1920&h=600&fit=crop"
+          src="/cta-consult.png"
           alt="Professional consultation"
           className="w-full h-full object-cover"
         />
@@ -30,10 +30,10 @@ const CTASection = () => {
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </Button>
-            <Button size="lg" variant="outline" asChild className="border-white/30 text-white hover:bg-white/10 hover:border-gold">
-              <a href="tel:07481 758526">
+            <Button size="lg" variant="outline" asChild className="border-white/30 text-black hover:bg-white/10 hover:text-white hover:border-gold">
+              <a href="tel:01174420310">
                 <Phone className="mr-2 h-4 w-4" />
-                07481 758526
+                01174420310
               </a>
             </Button>
           </div>
