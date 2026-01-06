@@ -9,17 +9,14 @@ const Contact = () => {
   const [searchParams] = useSearchParams();
   const selectedPlan = searchParams.get("plan");
 
+  
   return (
     <>
       <Helmet>
         <title>Contact Our Expert Accountants | Henleaze Tax Consultancy</title>
         <meta
           name="description"
-<<<<<<< HEAD
           content="Get in touch with Henleaze Tax Consultancy for a free quote. Call us or fill out our contact form."
-=======
-          content="Ready to optimize your taxes? Contact our expert accountants today for a free consultation and a tailored quote for your business or personal needs."
->>>>>>> 5ae272d06fd806c824f1477106c0fc90db16b9d9
         />
       </Helmet>
 
