@@ -85,10 +85,10 @@ const SmallBusiness = () => {
   return (
     <>
       <Helmet>
-        <title>Small Business Accounting Services | Henleaze Tax Consultancy</title>
+        <title>Small Business Accountants in Bristol | Henleaze Tax Consultancy</title>
         <meta
           name="description"
-          content="Dedicated accounting support for small businesses from £149/month. Includes year-end accounts, corporation tax, and proactive business advisory."
+          content="Expert small business accountants in Bristol. We provide bookkeeping, VAT, and tax planning services for Bristol startups and SMEs. Fixed monthly fees from £149."
         />
       </Helmet>
       <Layout>
@@ -97,7 +97,7 @@ const SmallBusiness = () => {
           <div className="container">
             <div className="mx-auto max-w-3xl text-center">
               <h1 className="font-display text-4xl font-bold tracking-tight text-primary-foreground md:text-5xl">
-                Small Business Accounting
+                Small Business Accountants in Bristol
               </h1>
               <p className="mt-6 text-lg text-primary-foreground/90">
                 Comprehensive accounting services to help your business thrive. 

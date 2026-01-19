@@ -195,4 +195,34 @@ export const blogPosts: BlogPost[] = [
     category: "Property",
     image: "/landlord-guide.png",
   },
+  {
+    id: 4,
+    title: "5 Essential Tax Savings for Bristol Small Businesses in 2026",
+    excerpt: "Maximize your profits with these local tax-saving strategies specifically for Bristol-based entrepreneurs.",
+    content: `
+      <p class="mb-4">As we enter 2026, Bristol's economy continues to thrive, from the tech hubs in Temple Meads to the creative independent shops on Gloucester Road. However, with economic growth comes the responsibility of managing your business taxes efficiently. At Henleaze Tax Consultancy, we've identified the top five tax-saving strategies for Bristol small businesses this year.</p>
+
+      <h3 class="text-xl font-bold mb-3 mt-6">1. Utilize Local Enterprise Grants</h3>
+      <p class="mb-4">Bristol City Council and West of England Combined Authority (WECA) often offer grants for sustainability and innovation. These grants are often tax-free or come with favorable tax treatments. Ensuring you account for these correctly can save thousands in corporation tax.</p>
+
+      <h3 class="text-xl font-bold mb-3 mt-6">2. Remote Work & Home Office Claims</h3>
+      <p class="mb-4">Many Bristol businesses have moved to hybrid models. If you're running your business from a home office in Henleaze, Clifton, or Bedminster, you can claim a proportion of your household bills. For many, the "simplified expenses" method is the easiest, but a calculated proportion often yields higher tax savings.</p>
+
+      <h3 class="text-xl font-bold mb-3 mt-6">3. R&D Tax Credits for Bristol Tech</h3>
+      <p class="mb-4">If your company is developing new software or hardware (a common trend in the 'Silicon Gorge'), you may be eligible for R&D tax credits. This can significantly reduce your corporation tax bill or even result in a cash payment from HMRC.</p>
+
+      <h3 class="text-xl font-bold mb-3 mt-6">4. Sustainable Business Incentives</h3>
+      <p class="mb-4">Bristol is a leader in sustainability. Investing in electric delivery vans or energy-efficient office equipment allows you to claim 100% First Year Allowances, meaning you can deduct the full cost from your pre-tax profits immediately.</p>
+
+      <h3 class="text-xl font-bold mb-3 mt-6">5. Pension Contributions as Business Expenses</h3>
+      <p class="mb-4">Paying into your pension via your limited company is one of the most efficient ways to reduce your tax bill. These contributions are treated as a business expense, saving you 19-25% in corporation tax while securing your future.</p>
+
+      <p class="mb-4 italic">Want to know more? As your local Bristol accountants, we're here to help you navigate these savings. Book a free consultation with us today.</p>
+    `,
+    author: "Muhammad Irfan",
+    date: "Jan 19, 2026",
+    readTime: "8 min read",
+    category: "Business Advice",
+    image: "/office-bg.png",
+  },
 ];

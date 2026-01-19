@@ -43,10 +43,10 @@ const TaxPlanning = () => {
   return (
     <>
       <Helmet>
-        <title>Strategic Tax Planning & Advice | Henleaze Tax Consultancy</title>
+        <title>Strategic Tax Planning Bristol | Henleaze Tax Consultancy</title>
         <meta
           name="description"
-          content="Maximize your wealth with strategic tax planning and advice. Our experts identify tax-saving opportunities for corporation tax, capital gains, and inheritance tax."
+          content="Maximize your wealth with professional tax planning in Bristol. Our experts identify tax-saving opportunities for Bristol business owners and individuals."
         />
       </Helmet>
       <Layout>
@@ -55,7 +55,7 @@ const TaxPlanning = () => {
           <div className="container">
             <div className="mx-auto max-w-3xl text-center">
               <h1 className="font-display text-4xl font-bold tracking-tight text-primary-foreground md:text-5xl">
-                Strategic Tax Planning
+                Strategic Tax Planning in Bristol
               </h1>
               <p className="mt-6 text-lg text-primary-foreground/90">
                 Protect your wealth and maximize your efficiency with our expert tax planning services. 

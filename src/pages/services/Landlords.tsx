@@ -85,10 +85,10 @@ const Landlords = () => {
   return (
     <>
       <Helmet>
-        <title>Landlord Accounting Services | Henleaze Tax Consultancy</title>
+        <title>Landlord Accounting Services Bristol | Property Tax Experts</title>
         <meta
           name="description"
-          content="Expert property accounting for landlords. We help you navigate Section 24, manage portfolios, and optimize tax on rental income and capital gains."
+          content="Specialist landlord accountants in Bristol. We help Bristol property investors navigate Section 24, manage portfolios, and minimize tax on rental income. Fixed fees from £79."
         />
       </Helmet>
       <Layout>
@@ -97,7 +97,7 @@ const Landlords = () => {
           <div className="container">
             <div className="mx-auto max-w-3xl text-center">
               <h1 className="font-display text-4xl font-bold tracking-tight text-primary-foreground md:text-5xl">
-                Landlord Services
+                Landlord Accountants in Bristol
               </h1>
               <p className="mt-6 text-lg text-primary-foreground/90">
                 Specialist accounting for property investors and landlords. 
