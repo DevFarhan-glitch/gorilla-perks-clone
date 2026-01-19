@@ -53,33 +53,121 @@ export const blogPosts: BlogPost[] = [
       <p class="mb-4">Capital Gains Tax requires attention to detail. If you are selling a second home, investment property, or stocks, you will likely face CGT. Utilize your £6,000 tax-free allowance (for 2023/2024) and remember rates vary: 10% or 20% for most assets, but 18% or 28% for residential property. Reporting is time-sensitive; you have 60 days to declare gains from UK residential property sales via HMRC online services.</p>
     `,
     author: "Laiba Hassan",
-    date: "Dec 24, 2024",
+    date: "Dec 2025",
     readTime: "6 min read",
     category: "Tax Planning",
     image: "/cgt-guide.png",
   },
-  {
-    id: 2,
-    title: "Tax-Efficient Strategies for Small Business Owners",
-    excerpt: "Discover legitimate ways to reduce your tax burden while growing your business.",
-    content: `
-      <p class="mb-4">Running a small business is challenging enough without the added stress of a hefty tax bill. Fortunately, there are several legitimate strategies you can employ to minimize your corporation tax liability and keep more of your hard-earned profits.</p>
+ {
+  id: 2,
+  title: "Paper Tax Returns for Pension Scheme Trustees and Non-Resident Companies: HMRC Deadline Explained",
+  excerpt: "HMRC requires pension scheme trustees and non-resident companies to file paper tax returns for 2024–25. Learn who must file, which forms are required, deadlines, penalties, and payment rules.",
+  content: `
+    <!-- SEO Keywords -->
+    <meta name="keywords" content="paper tax return HMRC, SA970 pension scheme, non resident company tax return UK, HMRC 31 January 2026 deadline, trustee tax filing, HMRC paper return, R63N repayment form, HMRC penalties, UK self assessment paper filing">
 
-      <h3 class="text-xl font-bold mb-3 mt-6">1. Claim All Allowable Expenses</h3>
-      <p class="mb-4">Ensure you are claiming every business expense you are entitled to. This includes office equipment, travel costs, professional subscriptions, and even a portion of your home costs if you work from home.</p>
+    <p class="mb-4">
+      Certain taxpayers in the United Kingdom are required to submit a <strong>paper tax return</strong> instead of filing online. This applies to <strong>trustees of registered pension schemes</strong> and <strong>non-resident companies</strong> that fall under HMRC’s Self Assessment rules.
+    </p>
 
-      <h3 class="text-xl font-bold mb-3 mt-6">2. Utilize Capital Allowances</h3>
-      <p class="mb-4">If you buy assets for your business, such as machinery, computers, or vehicles, you can claim capital allowances. The Annual Investment Allowance (AIA) allows you to deduct the full value of the item from your profits before tax.</p>
+    <p class="mb-4">
+      For the <strong>2024–25 tax year</strong>, HMRC has confirmed that online filing is not available for these taxpayers. This means paper filing is <strong>mandatory</strong>, even if no tax is due.
+    </p>
 
-      <h3 class="text-xl font-bold mb-3 mt-6">3. Pension Contributions</h3>
-      <p class="mb-4">Contributing to a pension scheme through your limited company is one of the most tax-efficient ways to extract profits. Employer contributions are an allowable business expense, reducing your corporation tax bill.</p>
-    `,
-    author: "James Thompson",
-    date: "Dec 5, 2024",
-    readTime: "7 min read",
-    category: "Tax Planning",
-    image: "/small-business-guide.png",
-  },
+    <h3 class="text-xl font-bold mb-3 mt-6">Who Must File a Paper Tax Return</h3>
+    <ul class="list-disc pl-6 mb-4 space-y-2">
+      <li>Trustees of a registered pension scheme</li>
+      <li>Non-resident companies required to submit a Self Assessment return</li>
+    </ul>
+
+    <p class="mb-4">
+      A paper tax return is required if HMRC has issued a <strong>notice to file</strong> and online filing is not available. This applies even if no tax is payable.
+    </p>
+
+    <h3 class="text-xl font-bold mb-3 mt-6">Forms You Must Use</h3>
+    <ul class="list-disc pl-6 mb-4 space-y-2">
+      <li><strong>SA970</strong> – For trustees of registered pension schemes</li>
+      <li><strong>Relevant Self Assessment paper form</strong> – For non-resident companies</li>
+      <li><strong>R63N</strong> – To claim tax repayments during the tax year</li>
+    </ul>
+
+    <h3 class="text-xl font-bold mb-3 mt-6">When Can You Submit?</h3>
+    <p class="mb-4">
+      Paper tax returns for the <strong>2024–25</strong> tax year can be submitted from <strong>6 April 2025</strong>. You do not need to wait until later in the year.
+    </p>
+
+    <h3 class="text-xl font-bold mb-3 mt-6">HMRC Deadline</h3>
+    <p class="mb-4">
+      All paper returns must be <strong>received by HMRC by 31 January 2026</strong>. Posting the return does not guarantee compliance, it must arrive by this date.
+    </p>
+
+    <div class="overflow-x-auto my-8 rounded-lg shadow-md">
+      <table class="w-full border border-gray-200 text-sm text-left">
+        <thead class="bg-gradient-to-r from-blue-600 to-blue-500 text-white">
+          <tr>
+            <th class="px-4 py-3">Taxpayer Type</th>
+            <th class="px-4 py-3">Form Required</th>
+            <th class="px-4 py-3">Filing Method</th>
+            <th class="px-4 py-3">Submission Window</th>
+            <th class="px-4 py-3">HMRC Deadline</th>
+            <th class="px-4 py-3">Important Notes</th>
+          </tr>
+        </thead>
+        <tbody class="bg-white divide-y divide-gray-200">
+          <tr class="hover:bg-blue-50">
+            <td class="px-4 py-3 font-medium">Pension scheme trustees</td>
+            <td class="px-4 py-3">SA970</td>
+            <td class="px-4 py-3">Paper only</td>
+            <td class="px-4 py-3">From 6 April 2025</td>
+            <td class="px-4 py-3 font-semibold text-red-600">31 January 2026</td>
+            <td class="px-4 py-3">Must submit even if no tax is due</td>
+          </tr>
+          <tr class="hover:bg-blue-50">
+            <td class="px-4 py-3 font-medium">Non-resident companies</td>
+            <td class="px-4 py-3">SA paper form</td>
+            <td class="px-4 py-3">Paper only</td>
+            <td class="px-4 py-3">From 6 April 2025</td>
+            <td class="px-4 py-3 font-semibold text-red-600">31 January 2026</td>
+            <td class="px-4 py-3">HMRC will issue notice to file</td>
+          </tr>
+          <tr class="hover:bg-blue-50">
+            <td class="px-4 py-3 font-medium">Repayment claims</td>
+            <td class="px-4 py-3">R63N</td>
+            <td class="px-4 py-3">Paper only</td>
+            <td class="px-4 py-3">During the tax year</td>
+            <td class="px-4 py-3">Reported in final return</td>
+            <td class="px-4 py-3">Must also appear in SA970</td>
+          </tr>
+          <tr class="hover:bg-blue-50">
+            <td class="px-4 py-3 font-medium">Tax payments</td>
+            <td class="px-4 py-3">N/A</td>
+            <td class="px-4 py-3">Bank, card, Direct Debit, cheque</td>
+            <td class="px-4 py-3">Before deadline</td>
+            <td class="px-4 py-3 font-semibold text-red-600">31 January 2026</td>
+            <td class="px-4 py-3">Includes first payment on account</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 class="text-xl font-bold mb-3 mt-6">Penalties for Late Filing</h3>
+    <ul class="list-disc pl-6 mb-4 space-y-2">
+      <li>£100 initial late filing penalty</li>
+      <li>Daily penalties may apply if still outstanding</li>
+      <li>Penalties apply even if no tax is due</li>
+    </ul>
+
+    <p class="mb-4">
+      Trustees and non-resident companies should submit their returns early to avoid postal delays, penalties, and compliance issues with HMRC.
+    </p>
+  `,
+  author: "Ryan Afzal",
+  date: "Jan 2026",
+  readTime: "7 min read",
+  category: "HMRC Compliance",
+  image: "/small-business-guide.png",
+},
+
   {
     id: 3,
     title: "Landlord Tax Guide: Maximizing Your Rental Income",
