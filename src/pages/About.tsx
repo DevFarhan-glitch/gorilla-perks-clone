@@ -57,10 +57,10 @@ const About = () => {
   return (
     <>
       <Helmet>
-        <title>About Henleaze Tax Consultancy | Accounting Experts Bristol</title>
+        <title>Accountants in Bristol - About Henleaze Tax Consultancy</title>
         <meta
           name="description"
-          content="Meet the team at Henleaze Tax Consultancy. We combine years of accounting expertise with a modern, cloud-first approach to support Bristol's business community."
+          content="Henleaze Tax Consultancy is a trusted Bristol-based accounting firm. Our team of tax experts helps Henleaze and Bristol businesses grow with expert advice and support."
         />
       </Helmet>
       <Layout>

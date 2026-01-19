@@ -43,10 +43,10 @@ const VATBookkeeping = () => {
   return (
     <>
       <Helmet>
-        <title>VAT Returns & Bookkeeping Services | Henleaze Tax Consultancy</title>
+        <title>VAT Returns & Bookkeeping Services Bristol | MTD Compliant</title>
         <meta
           name="description"
-          content="Save time and stay compliant with our professional VAT and bookkeeping services. We leverage cloud technology like Xero and Dext for real-time financial tracking."
+          content="Professional VAT and bookkeeping services in Bristol. We help Bristol businesses stay MTD compliant with cloud accounting software like Xero and QuickBooks."
         />
       </Helmet>
       <Layout>
@@ -55,7 +55,7 @@ const VATBookkeeping = () => {
           <div className="container">
             <div className="mx-auto max-w-3xl text-center">
               <h1 className="font-display text-4xl font-bold tracking-tight text-primary-foreground md:text-5xl">
-                VAT & Bookkeeping
+                VAT & Bookkeeping Services in Bristol
               </h1>
               <p className="mt-6 text-lg text-primary-foreground/90">
                 Stay organized and compliant with our expert bookkeeping services. 

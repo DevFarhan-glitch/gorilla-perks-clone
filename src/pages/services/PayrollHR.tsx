@@ -43,10 +43,10 @@ const PayrollHR = () => {
   return (
     <>
       <Helmet>
-        <title>Payroll & HR Management Services | Henleaze Tax Consultancy</title>
+        <title>Payroll & HR Management Bristol | Henleaze Tax Consultancy</title>
         <meta
           name="description"
-          content="Streamline your employee management with our comprehensive payroll and HR services. We handle RTI, pensions, and compliance so you can focus on your team."
+          content="Streamlined payroll and HR solutions for Bristol businesses. We handle RTI, auto-enrolment, and employment contracts for Henleaze and wider Bristol companies."
         />
       </Helmet>
       <Layout>
@@ -55,7 +55,7 @@ const PayrollHR = () => {
           <div className="container">
             <div className="mx-auto max-w-3xl text-center">
               <h1 className="font-display text-4xl font-bold tracking-tight text-primary-foreground md:text-5xl">
-                Payroll & HR Solutions
+                Payroll & HR Services in Bristol
               </h1>
               <p className="mt-6 text-lg text-primary-foreground/90">
                 Take the stress out of employing people. Our comprehensive payroll and HR services 

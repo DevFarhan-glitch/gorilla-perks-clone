@@ -14,10 +14,10 @@ const Index = () => {
   return (
     <>
       <Helmet>
-        <title>Henleaze Tax Consultancy | Expert Accounting & Tax Services Bristol</title>
+        <title>Accountant in Bristol | Henleaze Tax Consultancy | Tax Experts</title>
         <meta
           name="description"
-          content="Henleaze Tax Consultancy offers expert accounting & tax services in Bristol. Specializing in contractors, small businesses, and landlords with fixed-fee packages."
+          content="Henleaze Tax Consultancy: Leading accountants in Bristol. Expert tax planning, contractor accounting & bookkeeping services with transparent fixed fees. Contact us today."
         />
       </Helmet>
       <Layout>

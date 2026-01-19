@@ -86,10 +86,10 @@ const Contractors = () => {
   return (
     <>
       <Helmet>
-        <title>Contractor Accounting Services | Henleaze Tax Consultancy</title>
+        <title>Contractor Accountants in Bristol | Specialist IR35 Support</title>
         <meta
           name="description"
-          content="Specialist contractor accounting with IR35 expertise. Limited company formation, dividend planning, and dedicated support from £99/month."
+          content="Looking for a contractor accountant in Bristol? We specialize in IR35, dividend planning, and tax efficiency for Bristol-based freelancers and IT contractors."
         />
       </Helmet>
       <Layout>
@@ -98,7 +98,7 @@ const Contractors = () => {
           <div className="container">
             <div className="mx-auto max-w-3xl text-center">
               <h1 className="font-display text-4xl font-bold tracking-tight text-primary-foreground md:text-5xl">
-                Contractor Accounting
+                Contractor Accountants in Bristol
               </h1>
               <p className="mt-6 text-lg text-primary-foreground/90">
                 Specialist accounting services for IT contractors and freelancers. 

@@ -43,10 +43,10 @@ const RDClaims = () => {
   return (
     <>
       <Helmet>
-        <title>R&D Tax Credit Claims & Advice | Henleaze Tax Consultancy</title>
+        <title>R&D Tax Credits Bristol | Research & Development Tax Relief</title>
         <meta
           name="description"
-          content="Unlock hidden funding for your business with R&D tax credit claims. We provide end-to-end support, from identifying qualifying projects to HMRC submission."
+          content="Maximize your R&D tax credit claims with our Bristol-based experts. Specialist support for Bristol's tech and innovation sectors to unlock hidden funding."
         />
       </Helmet>
       <Layout>
@@ -55,7 +55,7 @@ const RDClaims = () => {
           <div className="container">
             <div className="mx-auto max-w-3xl text-center">
               <h1 className="font-display text-4xl font-bold tracking-tight text-primary-foreground md:text-5xl">
-                R&D Tax Credits
+                R&D Tax Credit Claims in Bristol
               </h1>
               <p className="mt-6 text-lg text-primary-foreground/90">
                 Unlock thousands of pounds in tax relief for your business innovation. 

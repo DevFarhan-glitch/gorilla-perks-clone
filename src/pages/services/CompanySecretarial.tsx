@@ -43,10 +43,10 @@ const CompanySecretarial = () => {
   return (
     <>
       <Helmet>
-        <title>Professional Company Secretarial | Henleaze Tax Consultancy</title>
+        <title>Company Secretarial Services Bristol | Professional Support</title>
         <meta
           name="description"
-          content="Ensure your limited company remains compliant with our professional secretarial services. We handle Companies House filings, registered office, and statutory books."
+          content="Expert company secretarial services in Bristol. We handle Companies House filings and registered office services for Bristol-based limited companies."
         />
       </Helmet>
       <Layout>
@@ -55,7 +55,7 @@ const CompanySecretarial = () => {
           <div className="container">
             <div className="mx-auto max-w-3xl text-center">
               <h1 className="font-display text-4xl font-bold tracking-tight text-primary-foreground md:text-5xl">
-                Company Secretarial
+                Company Secretarial Services in Bristol
               </h1>
               <p className="mt-6 text-lg text-primary-foreground/90">
                 Let us handle the administrative burden of running a limited company. Our secretarial services 

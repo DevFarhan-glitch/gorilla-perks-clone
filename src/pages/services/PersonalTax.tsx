@@ -43,10 +43,10 @@ const PersonalTax = () => {
   return (
     <>
       <Helmet>
-        <title>Personal Tax & Self-Assessment | Henleaze Tax Consultancy</title>
+        <title>Personal Tax & Self-Assessment Bristol | Tax Experts</title>
         <meta
           name="description"
-          content="Take the stress out of Self-Assessment with our personal tax services. We ensure accurate filing, meet all deadlines, and optimize your personal tax position."
+          content="Take the stress out of Self-Assessment with our Bristol personal tax services. We ensure accurate filing and optimize your tax position for Bristol residents."
         />
       </Helmet>
       <Layout>
@@ -55,7 +55,7 @@ const PersonalTax = () => {
           <div className="container">
             <div className="mx-auto max-w-3xl text-center">
               <h1 className="font-display text-4xl font-bold tracking-tight text-primary-foreground md:text-5xl">
-                Personal Tax Services
+                Personal Tax & Self-Assessment in Bristol
               </h1>
               <p className="mt-6 text-lg text-primary-foreground/90">
                 Let us handle your self-assessment. Our personal tax experts ensure your returns are accurate, 
