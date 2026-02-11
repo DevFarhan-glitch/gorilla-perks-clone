@@ -110,7 +110,7 @@ const Landlords = () => {
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
                 </Button>
-                <Button size="lg" variant="outline" asChild className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10">
+                <Button size="lg" variant="outline" asChild className="border-primary-foreground/30 text-black hover:bg-primary-foreground/10">
                   <Link to="/pricing">View All Pricing</Link>
                 </Button>
               </div>
