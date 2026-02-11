@@ -93,6 +93,21 @@ const services = [
     price: "From £150",
     image: "/hero-main.png",
   },
+  {
+  icon: Users,
+  title: "Outsourced Accounting",
+  description: "Professional outsourced accounting solutions for businesses seeking reliable financial management without the cost of in-house staff.",
+  features: [
+    "Dedicated Accountant",
+    "Bookkeeping & Reporting",
+    "Payroll Management",
+    "Full Financial Compliance"
+  ],
+  path: "/services/outsourced-accounting",
+  price: "Custom Pricing",
+  image: "/cta-consult.png",
+},
+
 ];
 
 const ServiceCards = ({ limit }: { limit?: number }) => {

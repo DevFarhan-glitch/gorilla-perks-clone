@@ -26,6 +26,7 @@ import CustomCursor from "./components/ui/CustomCursor";
 import ScrollToTop from "./components/ui/ScrollToTop";
 
 import CanonicalURL from "./components/SEO/CanonicalURL";
+import OutsourcedAccounting from "./pages/services/OutsourcedAccounting";
 
 const queryClient = new QueryClient();
 
@@ -56,6 +57,7 @@ const App = () => (
             <Route path="/services/company-secretarial" element={<CompanySecretarial />} />
             <Route path="/services/rd-claims" element={<RDClaims />} />
             <Route path="/services/personal-tax" element={<PersonalTax />} />
+            <Route path="/services/outsourced-accounting" element={<OutsourcedAccounting />} />
             <Route path="/blog/:id" element={<Article />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
