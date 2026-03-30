@@ -111,7 +111,12 @@ const Contractors = () => {
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
                 </Button>
-                <Button size="lg" variant="outline" asChild className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10">
+                <Button
+  size="lg"
+  variant="outline"
+  asChild
+  className="border-primary-foreground/30 text-black hover:text-white hover:bg-primary-foreground/10"
+>
                   <Link to="/calculator">Try Our Calculator</Link>
                 </Button>
               </div>
