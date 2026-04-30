@@ -189,8 +189,8 @@ export const blogPosts: BlogPost[] = [
 
       <p class="mb-4">Consider operating through a limited company (SPV) for new purchases, as this can offer corporation tax rates and full interest deductibility.</p>
     `,
-    author: "Emma Davies",
-    date: "Nov 28, 2024",
+    author: "Farhan Tariq",
+    date: "Feb, 2024",
     readTime: "6 min read",
     category: "Property",
     image: "/landlord-guide.png",
@@ -220,9 +220,135 @@ export const blogPosts: BlogPost[] = [
       <p class="mb-4 italic">Want to know more? As your local Bristol accountants, we're here to help you navigate these savings. Book a free consultation with us today.</p>
     `,
     author: "Muhammad Irfan",
-    date: "Jan 19, 2026",
+    date: "March, 2026",
     readTime: "8 min read",
     category: "Business Advice",
     image: "/office-bg.png",
   },
+  {
+  id: 5,
+  title: "How to Reduce Your Tax Bill Legally in the UK (2026 Guide)",
+  excerpt: "Discover practical and legal strategies to reduce your tax bill in the UK, including allowances, pensions, ISAs, and business structures.",
+  content: `
+   <h3 class="text-xl font-bold mb-3 mt-6">Make Full Use of Your Personal Allowance</h3>
+<p class="mb-4">
+  One of the simplest ways to reduce your tax bill is to fully utilise your Personal Allowance—the amount of income you can earn tax-free each year.
+</p>
+<p class="mb-4">
+  <strong>Tip:</strong> If your income is slightly above the threshold, consider pension contributions or charitable donations to bring it down.
+</p>
+
+<h3 class="text-xl font-bold mb-3 mt-6">Claim Marriage Allowance (If Eligible)</h3>
+<p class="mb-4">
+  If you’re married or in a civil partnership, you may be able to transfer part of your Personal Allowance to your partner. This can reduce your overall household tax bill—yet many couples never claim it.
+</p>
+
+<h3 class="text-xl font-bold mb-3 mt-6">Claim All Allowable Expenses</h3>
+<p class="mb-4">
+  If you’re self-employed or a business owner, this is one of the most powerful tax-saving strategies.
+</p>
+<p class="mb-2">You can claim expenses such as:</p>
+<ul class="list-disc pl-6 mb-4 space-y-2">
+  <li>Office costs (rent, utilities)</li>
+  <li>Travel expenses</li>
+  <li>Equipment and software</li>
+  <li>Professional services</li>
+</ul>
+<p class="mb-4">
+  Make sure expenses are wholly and exclusively for business use as per HM Revenue and Customs rules.
+</p>
+
+<h3 class="text-xl font-bold mb-3 mt-6">Use Tax-Efficient Savings (ISAs)</h3>
+<p class="mb-4">
+  Savings in ISAs (Individual Savings Accounts) are tax-free, meaning:
+</p>
+<ul class="list-disc pl-6 mb-4 space-y-2">
+  <li>No income tax on interest</li>
+  <li>No capital gains tax</li>
+</ul>
+<p class="mb-4">
+  This is one of the easiest long-term strategies to legally reduce tax.
+</p>
+
+<h3 class="text-xl font-bold mb-3 mt-6">Contribute to a Pension</h3>
+<p class="mb-4">Pension contributions are highly tax-efficient:</p>
+<ul class="list-disc pl-6 mb-4 space-y-2">
+  <li>You get tax relief on contributions</li>
+  <li>It reduces your taxable income</li>
+  <li>Helps you save for retirement</li>
+</ul>
+<p class="mb-4">
+  Higher-rate taxpayers benefit even more from pension tax relief.
+</p>
+
+<h3 class="text-xl font-bold mb-3 mt-6">Take Advantage of Tax Reliefs</h3>
+<p class="mb-2">There are several tax reliefs available depending on your situation:</p>
+<ul class="list-disc pl-6 mb-4 space-y-2">
+  <li>Work-from-home relief</li>
+  <li>Professional subscription relief</li>
+  <li>Gift Aid on charitable donations</li>
+</ul>
+<p class="mb-4">
+  These are often overlooked but can add up significantly.
+</p>
+
+<h3 class="text-xl font-bold mb-3 mt-6">Choose the Right Business Structure</h3>
+<p class="mb-4">
+  If you run a business, choosing between:
+</p>
+<ul class="list-disc pl-6 mb-4 space-y-2">
+  <li>Sole trader</li>
+  <li>Limited company</li>
+</ul>
+<p class="mb-4">
+  …can impact how much tax you pay.
+</p>
+<p class="mb-2">Many business owners reduce tax by:</p>
+<ul class="list-disc pl-6 mb-4 space-y-2">
+  <li>Taking a mix of salary and dividends</li>
+  <li>Planning income distribution efficiently</li>
+</ul>
+
+<h3 class="text-xl font-bold mb-3 mt-6">Don’t Miss Tax Deadlines</h3>
+<p class="mb-4">
+  Late filings and payments can result in:
+</p>
+<ul class="list-disc pl-6 mb-4 space-y-2">
+  <li>Penalties</li>
+  <li>Interest charges</li>
+</ul>
+<p class="mb-4">
+  Staying compliant ensures you don’t pay unnecessary extra costs.
+</p>
+
+<h3 class="text-xl font-bold mb-3 mt-6">Common Tax Mistakes to Avoid</h3>
+<ul class="list-disc pl-6 mb-4 space-y-2">
+  <li>Not keeping proper records</li>
+  <li>Failing to claim deductions</li>
+  <li>Misunderstanding HMRC rules</li>
+  <li>Filing returns late</li>
+</ul>
+<p class="mb-4">
+  Avoiding these mistakes alone can save you a significant amount each year.
+</p>
+
+<h3 class="text-xl font-bold mb-3 mt-6">Final Thoughts: Plan Early, Save More</h3>
+<p class="mb-4">
+  Reducing your tax bill legally in the UK comes down to planning, awareness, and smart financial decisions. The earlier you start, the more opportunities you have to save.
+</p>
+<p class="mb-4">
+  If you’re unsure about your tax situation or want to maximise your savings, professional guidance can make a big difference.
+</p>
+
+<h3 class="text-xl font-bold mb-3 mt-6">Need Help Reducing Your Tax Bill?</h3>
+<p class="mb-4">
+  At Henleaze Tax Consultancy, we specialise in helping individuals and businesses legally reduce their tax liabilities while staying fully compliant with HM Revenue and Customs.
+</p>
+  `,
+  author: "Ryan Afzal",
+  date: "April, 2026",
+  readTime: "6 min read",
+  category: "Tax Planning",
+  image: "/tax-saving-guide.jpg",
+}
 ];
