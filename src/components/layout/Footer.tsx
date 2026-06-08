@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin, Facebook, Instagram } from "lucide-react";
-import { servicesList } from "@/lib/data";
 
 const Footer = () => {
   return (
@@ -19,7 +18,7 @@ const Footer = () => {
               </div>
             </div>
             <p className="text-sm text-white/70">
-              Professional accounting and tax services for contractors, small businesses, and landlords in Bristol and beyond.
+              Tax and accounting doesn’t have to be complicated. We’re here to support contractors, landlords and small businesses with clear, straightforward help when you need it.
             </p>
             <div className="flex space-x-4">
 
@@ -40,22 +39,30 @@ const Footer = () => {
               Services
             </h3>
             <ul className="space-y-3 text-sm">
-              {servicesList.slice(0, 6).map((service) => (
-                <li key={service}>
-                  <Link 
-                    to="/services" 
-                    className="text-white/70 hover:text-gold transition-colors"
-                  >
-                    {service}
-                  </Link>
-                </li>
-              ))}
               <li>
-                <Link 
-                  to="/services" 
+                <Link to="/services/contractor-accountants" className="text-white/70 hover:text-gold transition-colors">Contractor Accounting</Link>
+              </li>
+              <li>
+                <Link to="/services/small-business-accountants" className="text-white/70 hover:text-gold transition-colors">Small Business Accounting</Link>
+              </li>
+              <li>
+                <Link to="/services/landlord-accountants" className="text-white/70 hover:text-gold transition-colors">Landlord Services</Link>
+              </li>
+              <li>
+                <Link to="/services/payroll-and-hr-services" className="text-white/70 hover:text-gold transition-colors">Payroll & HR Services</Link>
+              </li>
+              <li>
+                <Link to="/services/tax-planning" className="text-white/70 hover:text-gold transition-colors">Tax Planning</Link>
+              </li>
+              <li>
+                <Link to="/services/personal-tax-and-self-assessment-service" className="text-white/70 hover:text-gold transition-colors">Personal Tax Services</Link>
+              </li>
+              <li>
+                <Link
+                  to="/services"
                   className="font-semibold text-gold hover:text-white transition-colors flex items-center group"
                 >
-                  View All Services 
+                  View All Services
                   <span className="ml-1 transition-transform group-hover:translate-x-1">→</span>
                 </Link>
               </li>
@@ -78,12 +85,12 @@ const Footer = () => {
                   Tax Calculator
                 </Link>
               </li>
-               <li>
+              <li>
                 <Link to="/pricing" className="text-white/70 hover:text-gold transition-colors">
                   Pricing
                 </Link>
               </li>
-               <li>
+              <li>
                 <Link to="/careers" className="text-white/70 hover:text-gold transition-colors">
                   Careers
                 </Link>
@@ -92,11 +99,6 @@ const Footer = () => {
                 <Link to="/contact" className="text-white/70 hover:text-gold transition-colors">
                   Contact Us
                 </Link>
-              </li>
-              <li>
-                <a href="#" className="text-white/70 hover:text-gold transition-colors">
-                  Privacy Policy
-                </a>
               </li>
             </ul>
           </div>
@@ -110,14 +112,14 @@ const Footer = () => {
               <li className="flex items-start space-x-3">
                 <MapPin className="mt-0.5 h-4 w-4 flex-shrink-0 text-gold" />
                 <span className="text-white/70 hover:text-gold">
-                  Park House Business Centre, 10 Park Street<br/>
+                  Park House Business Centre, 10 Park Street<br />
                   Bristol, England, BS1 5HX
                 </span>
               </li>
               <li className="flex items-center space-x-3">
                 <Phone className="h-4 w-4 flex-shrink-0 text-gold" />
                 <a href="tel:01171234567" className="text-white/70 hover:text-gold transition-colors">
-                  07481 758526
+                  +44 7949 956279
                 </a>
               </li>
               <li className="flex items-center space-x-3">
@@ -134,7 +136,7 @@ const Footer = () => {
           <div className="flex flex-col items-center justify-between space-y-4 text-sm text-white/60 md:flex-row md:space-y-0">
             <p>© {new Date().getFullYear()} Henleaze Tax Consultancy. All rights reserved.</p>
             <div className="flex items-center space-x-4">
-             
+
             </div>
           </div>
         </div>

@@ -141,7 +141,7 @@ const ContactForm = ({ selectedPlan }: ContactFormProps) => {
               <FormItem>
                 <FormLabel>Phone Number</FormLabel>
                 <FormControl>
-                  <Input placeholder="07123 456789" {...field} />
+                  <Input placeholder="+44 7949 956279" {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>

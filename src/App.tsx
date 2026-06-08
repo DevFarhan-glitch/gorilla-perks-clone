@@ -48,16 +48,16 @@ const App = () => (
             <Route path="/careers" element={<Careers />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/services" element={<Services />} />
-            <Route path="/services/contractors" element={<Contractors />} />
-            <Route path="/services/small-business" element={<SmallBusiness />} />
-            <Route path="/services/landlords" element={<Landlords />} />
+            <Route path="/services/contractor-accountants" element={<Contractors />} />
+            <Route path="/services/small-business-accountants" element={<SmallBusiness />} />
+            <Route path="/services/landlord-accountants" element={<Landlords />} />
             <Route path="/services/tax-planning" element={<TaxPlanning />} />
-            <Route path="/services/payroll-hr" element={<PayrollHR />} />
-            <Route path="/services/vat-bookkeeping" element={<VATBookkeeping />} />
-            <Route path="/services/company-secretarial" element={<CompanySecretarial />} />
-            <Route path="/services/rd-claims" element={<RDClaims />} />
-            <Route path="/services/personal-tax" element={<PersonalTax />} />
-            <Route path="/services/outsourced-accounting" element={<OutsourcedAccounting />} />
+            <Route path="/services/payroll-and-hr-services" element={<PayrollHR />} />
+            <Route path="/services/vat-and-bookkeeping-accounting-services" element={<VATBookkeeping />} />
+            <Route path="/services/company-secretarial-services" element={<CompanySecretarial />} />
+            <Route path="/services/rd-tax-credit-claim" element={<RDClaims />} />
+            <Route path="/services/personal-tax-and-self-assessment-service" element={<PersonalTax />} />
+            <Route path="/services/outsourced-accounting-services" element={<OutsourcedAccounting />} />
             <Route path="/blog/:id" element={<Article />} />
             <Route path="*" element={<NotFound />} />
           </Routes>

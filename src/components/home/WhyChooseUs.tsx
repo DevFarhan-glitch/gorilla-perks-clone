@@ -1,35 +1,37 @@
-import { Shield, Clock, Users, Award, Headphones, PiggyBank } from "lucide-react";
+import { Shield, Clock, Users, Award, Headphones, PiggyBank, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
 
 const features = [
   {
     icon: PiggyBank,
-    title: "Fixed Fee Pricing",
-    description: "No hidden costs or surprise bills. Know exactly what you'll pay each month.",
+    title: "Clear, Fixed Pricing",
+    description: "We keep things simple with fixed fees and no hidden charges, so you always know what your accounting costs will be each month.",
   },
   {
     icon: Users,
-    title: "Dedicated Accountant",
-    description: "Work with the same accountant who understands your business inside out.",
-  },
-  {
-    icon: Clock,
-    title: "Fast Turnaround",
-    description: "Quick response times and efficient processing of your accounts and returns.",
-  },
-  {
-    icon: Shield,
-    title: "HMRC Registered",
-    description: "Fully compliant and registered with HMRC. Peace of mind guaranteed.",
-  },
-  {
-    icon: Headphones,
-    title: "Unlimited Support",
-    description: "Ask as many questions as you need. We're here to help you succeed.",
+    title: "Local Accountants You Can Rely On",
+    description: "You’ll work directly with experienced accountants in Bristol who understand your business and give you consistent, practical support.",
   },
   {
     icon: Award,
-    title: "Award Winning",
-    description: "Recognized for excellence in client service and accounting expertise.",
+    title: "Practical Tax Advice (Not Just Compliance)",
+    description: "We don’t just complete your returns, we help you make better tax decisions throughout the year to avoid unnecessary costs.",
+  },
+  {
+    icon: Clock,
+    title: "Fast, Responsive Support",
+    description: "When you need help or have a question, we respond quickly so you’re never left waiting during important financial moments.",
+  },
+  {
+    icon: Shield,
+    title: "Fully HMRC Compliant",
+    description: "We make sure your accounts, tax filings and reports are always accurate and fully compliant with HMRC requirements.",
+  },
+  {
+    icon: Headphones,
+    title: "Straightforward Financial Guidance",
+    description: "Think of us as your accountants in Bristol, helping you understand your numbers and make confident business decisions.",
   },
 ];
 
@@ -52,10 +54,10 @@ const WhyChooseUs = () => {
             Why Choose Us
           </span>
           <h2 className="font-display text-3xl font-bold tracking-tight text-white md:text-4xl animate-fade-in [animation-delay:100ms]">
-            Why Choose Henleaze Tax?
+            Why Choose Henleaze Tax Consultancy in Bristol
           </h2>
           <p className="mt-4 text-lg text-white/80 animate-fade-in [animation-delay:200ms]">
-            We combine expert knowledge with personal service to deliver exceptional results for our clients.
+            Finding the right accountant is about more than just handling your books. It’s about having someone you can rely on for clear advice, accurate work and support when you need it. Here at Henleaze Tax Consultancy, we focus on making your finances simpler and easier to manage, while helping you stay tax-efficient and compliant.
           </p>
         </div>
 
@@ -75,6 +77,19 @@ const WhyChooseUs = () => {
               </div>
             </div>
           ))}
+        </div>
+
+        <div className="mt-16 flex justify-center animate-fade-in [animation-delay:300ms]">
+          <Button
+            size="lg"
+            className="bg-gold hover:bg-gold-light text-navy font-bold h-14 px-8"
+            asChild
+          >
+            <Link to="/pricing" className="flex items-center">
+              See Our Transparent Pricing
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </Link>
+          </Button>
         </div>
       </div>
     </section>

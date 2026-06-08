@@ -85,13 +85,13 @@ const About = () => {
               <h2 className="font-display text-3xl font-bold tracking-tight text-foreground">Our Story</h2>
               <div className="mt-6 space-y-4 text-muted-foreground">
                 <p>
-                  Henleaze Tax Consultancy began with a simple mission: to provide exceptional accounting services with a personal touch. We believed that small businesses and contractors deserved the same level of expertise and attention as large corporations.
+                  Henleaze Tax Consultancy is a trusted tax consultancy and accounting firm based in Bristol, UK, dedicated to supporting contractors, small businesses, and landlords with expert financial and tax solutions. Founded with a clear mission to deliver high-quality accounting services with a personalised approach, the firm believes that every client—regardless of size—deserves the same level of professional expertise and attention as large corporations.
                 </p>
                 <p>
-                  Over the years, we've grown to serve hundreds of clients across Bristol and the wider UK. But our commitment to personalized service has never wavered. Every client still has a dedicated accountant who knows their business inside out.
+                  Over the years, Henleaze Tax Consultancy has grown steadily, now serving hundreds of clients across Bristol and throughout the UK. Despite this growth, the firm remains committed to its core value of personalised service, ensuring every client is assigned a dedicated accountant who understands their business in detail and provides tailored financial guidance
                 </p>
                 <p>
-                  Today, we're proud to be one of Bristol's most trusted accounting firms, specializing in contractor accounting, small business services, and landlord tax planning. Our team of experienced professionals is passionate about helping our clients succeed.
+                  Today, Henleaze Tax Consultancy is recognised as one of Bristol’s reliable accounting and tax advisory firms, specialising in contractor accounting, small business accounting, landlord tax planning, self-assessment tax returns, and business tax compliance. The experienced team is passionate about helping clients reduce tax liabilities, stay compliant with HMRC regulations, and achieve long-term financial success through strategic and professional tax planning services in Bristol, UK.
                 </p>
               </div>
             </div>
