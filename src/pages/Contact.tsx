@@ -9,7 +9,7 @@ const Contact = () => {
   const [searchParams] = useSearchParams();
   const selectedPlan = searchParams.get("plan");
 
-  
+
   return (
     <>
       <Helmet>
@@ -17,6 +17,7 @@ const Contact = () => {
         <meta
           name="description"
           content="Get in touch with Henleaze Tax Consultancy for a free quote. Call us or fill out our contact form."
+          key="description"
         />
       </Helmet>
 

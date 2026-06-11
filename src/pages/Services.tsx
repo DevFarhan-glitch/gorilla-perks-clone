@@ -13,6 +13,8 @@ const Services = () => {
         <meta
           name="description"
           content="Henleaze Tax Consultancy provides expert tax consultancy services in Bristol and across the UK. Trusted tax consultants offering HMRC tax help, tax planning, and accounting support for businesses and individuals."
+          key="description"
+
         />
       </Helmet>
       <Layout>
@@ -63,7 +65,7 @@ const Services = () => {
                   strategic insights that help you grow with confidence.
                 </p>
               </div>
-              
+
               <div className="text-center mb-12">
                 <h2 className="font-display text-3xl font-bold text-foreground mb-6">
                   Trusted Tax Consultants in Bristol & Henleaze
@@ -171,21 +173,21 @@ const Services = () => {
                   <div className="absolute -top-4 -right-4 w-12 h-12 rounded-full bg-gradient-to-br from-gold to-gold-light flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
                     <span className="text-sm font-bold text-navy">{item.step}</span>
                   </div>
-                  
+
                   {/* Icon */}
                   <div className="w-12 h-12 rounded-xl bg-navy/10 flex items-center justify-center mb-5 group-hover:bg-gold/20 transition-colors duration-300">
                     <svg className="w-6 h-6 text-navy group-hover:text-gold transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d={item.icon} />
                     </svg>
                   </div>
-                  
+
                   <h4 className="text-lg font-bold text-foreground mb-3">
                     {item.title}
                   </h4>
                   <p className="text-sm text-muted-foreground leading-relaxed">
                     {item.desc}
                   </p>
-                  
+
                   {/* Connector line (hidden on last item and mobile) */}
                   {idx < 3 && (
                     <div className="hidden lg:block absolute top-1/2 -right-3 w-6 h-0.5 bg-gradient-to-r from-gold/50 to-transparent"></div>
@@ -206,7 +208,7 @@ const Services = () => {
                 {/* Decorative elements */}
                 <div className="absolute top-0 right-0 w-64 h-64 bg-gold/10 rounded-full blur-3xl"></div>
                 <div className="absolute bottom-0 left-0 w-48 h-48 bg-gold/5 rounded-full blur-2xl"></div>
-                
+
                 <div className="relative z-10">
                   <div className="flex items-center gap-3 mb-6">
                     <div className="w-12 h-12 rounded-xl bg-gold/20 flex items-center justify-center">
@@ -232,7 +234,7 @@ const Services = () => {
                     Consultancy, you're not just getting a service; you're getting a
                     dedicated financial partner.
                   </p>
-                  
+
                   {/* Decorative line */}
                   <div className="mt-8 pt-6 border-t border-white/10 flex items-center gap-4">
                     <div className="flex -space-x-2">

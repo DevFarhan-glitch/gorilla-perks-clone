@@ -12,6 +12,8 @@ const Careers = () => {
         <meta
           name="description"
           content="Passionate about tax and accounting? Explore exciting career opportunities at Henleaze Tax Consultancy and help us support Bristol's growing businesses."
+          key="description"
+
         />
       </Helmet>
 
@@ -114,8 +116,8 @@ const Careers = () => {
 
                 {/* No Jobs State */}
                 <div className="mt-6 rounded-xl border border-dashed p-6 text-center text-muted-foreground">
-                  No active vacancies at the moment.  
-                  Please check back soon or email your CV to  
+                  No active vacancies at the moment.
+                  Please check back soon or email your CV to
                   <span className="font-medium text-primary"> info@henleazetaxconsultancy.com</span>
                 </div>
               </div>

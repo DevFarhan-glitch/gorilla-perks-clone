@@ -1,144 +1,116 @@
 import { Link } from "react-router-dom";
-import { Phone, Mail, MapPin, Facebook, Instagram } from "lucide-react";
+import { Facebook, Instagram, MapPin, Phone, Mail, ArrowRight } from "lucide-react";
+
+const linkStyle = "text-sm text-white/70 hover:text-gold hover:translate-x-1 transition-all duration-300 inline-block";
 
 const Footer = () => {
   return (
-    <footer className="border-t border-border bg-primary text-white">
-      <div className="container py-12 md:py-16">
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-          {/* Company Info */}
-          <div className="space-y-4">
-            <div className="flex items-center space-x-2">
-              <div className="flex h-10 w-10 items-center justify-center rounded-full overflow-hidden border border-gold/20">
-                <img src="/logo.jpg" alt="Henleaze Tax Consultancy Logo" className="h-full w-full object-cover" />
-              </div>
-              <div className="flex flex-col">
-                <span className="font-display text-lg font-bold text-white">Henleaze</span>
-                <span className="text-xs text-white/60">Tax Consultancy</span>
-              </div>
-            </div>
-            <p className="text-sm text-white/70">
-              Tax and accounting doesn’t have to be complicated. We’re here to support contractors, landlords and small businesses with clear, straightforward help when you need it.
-            </p>
-            <div className="flex space-x-4">
+    <footer>
+      {/* Main Footer */}
+      <div className="bg-navy text-white py-16">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
 
-              <a href="https://www.facebook.com/share/1AoDJjTkQY/?mibextid=wwXIfr" className="text-white/60 hover:text-gold transition-colors">
-                <Facebook className="h-5 w-5" />
-              </a>
-              <a href="https://www.instagram.com/henleazetaxconsultancy?igsh=MTZvcWdmZXVheGV5NA%3D%3D&utm_source=qr" className="text-white/60 hover:text-gold transition-colors">
-                <Instagram className="h-5 w-5" />
-              </a>
-            </div>
-          </div>
-
-          {/* Services */}
-          {/* Services */}
-          {/* Services */}
-          <div>
-            <h3 className="mb-4 font-display text-sm font-semibold text-gold">
-              Services
-            </h3>
-            <ul className="space-y-3 text-sm">
-              <li>
-                <Link to="/services/contractor-accountants" className="text-white/70 hover:text-gold transition-colors">Contractor Accounting</Link>
-              </li>
-              <li>
-                <Link to="/services/small-business-accountants" className="text-white/70 hover:text-gold transition-colors">Small Business Accounting</Link>
-              </li>
-              <li>
-                <Link to="/services/landlord-accountants" className="text-white/70 hover:text-gold transition-colors">Landlord Services</Link>
-              </li>
-              <li>
-                <Link to="/services/payroll-and-hr-services" className="text-white/70 hover:text-gold transition-colors">Payroll & HR Services</Link>
-              </li>
-              <li>
-                <Link to="/services/tax-planning" className="text-white/70 hover:text-gold transition-colors">Tax Planning</Link>
-              </li>
-              <li>
-                <Link to="/services/personal-tax-and-self-assessment-service" className="text-white/70 hover:text-gold transition-colors">Personal Tax Services</Link>
-              </li>
-              <li>
-                <Link
-                  to="/services"
-                  className="font-semibold text-gold hover:text-white transition-colors flex items-center group"
+            {/* Column 1 – Branding */}
+            <div>
+              <Link to="/" className="flex items-center space-x-3 mb-6 group">
+                <div className="h-10 w-10 rounded-full overflow-hidden border-2 border-gold/30 group-hover:border-gold transition-colors duration-300">
+                  <img
+                    src="/logo.jpg"
+                    alt="Henleaze Tax Consultancy Logo"
+                    className="h-full w-full object-cover"
+                  />
+                </div>
+                <div className="flex flex-col">
+                  <span className="font-display text-lg font-bold text-white">Henleaze</span>
+                  <span className="text-xs text-white/60">Tax Consultancy</span>
+                </div>
+              </Link>
+              <p className="text-sm text-white/70 leading-relaxed mb-6">
+                Tax and accounting doesn't have to be complicated. We're here to support contractors, landlords and small businesses with clear, straightforward help when you need it.
+              </p>
+              <div className="flex space-x-4">
+                <a
+                  href="https://www.facebook.com/share/1HjX6hmtDX/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="h-9 w-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-gold hover:text-navy hover:-translate-y-1 transition-all duration-300"
                 >
+                  <Facebook className="h-4 w-4" />
+                </a>
+                <a
+                  href="https://www.instagram.com/henleazetaxconsultancy?igsh=MTFyNjJnZGJzeXozaA=="
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="h-9 w-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-gold hover:text-navy hover:-translate-y-1 transition-all duration-300"
+                >
+                  <Instagram className="h-4 w-4" />
+                </a>
+              </div>
+            </div>
+
+            {/* Column 2 – Services */}
+            <div>
+              <h4 className="font-bold text-gold mb-6 text-base tracking-wide">Services</h4>
+              <nav className="flex flex-col space-y-3">
+                <Link to="/services/contractor-accountants" className={linkStyle}>Contractor Accounting</Link>
+                <Link to="/services/small-business-accountants" className={linkStyle}>Small Business Accounting</Link>
+                <Link to="/services/landlord-accountants" className={linkStyle}>Landlord Services</Link>
+                <Link to="/services/payroll-and-hr-services" className={linkStyle}>Payroll & HR Services</Link>
+                <Link to="/services/tax-planning" className={linkStyle}>Tax Planning</Link>
+                <Link to="/services/personal-tax-and-self-assessment-service" className={linkStyle}>Personal Tax Services</Link>
+                <Link to="/services" className="text-sm text-gold font-semibold hover:text-gold-light hover:translate-x-1 transition-all duration-300 inline-flex items-center group mt-1">
                   View All Services
-                  <span className="ml-1 transition-transform group-hover:translate-x-1">→</span>
+                  <ArrowRight className="ml-1 h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
                 </Link>
-              </li>
-            </ul>
-          </div>
+              </nav>
+            </div>
 
-          {/* Quick Links */}
-          <div>
-            <h3 className="mb-4 font-display text-sm font-semibold text-gold">
-              Quick Links
-            </h3>
-            <ul className="space-y-3 text-sm">
-              <li>
-                <Link to="/about" className="text-white/70 hover:text-gold transition-colors">
-                  About Us
-                </Link>
-              </li>
-              <li>
-                <Link to="/calculator" className="text-white/70 hover:text-gold transition-colors">
-                  Tax Calculator
-                </Link>
-              </li>
-              <li>
-                <Link to="/pricing" className="text-white/70 hover:text-gold transition-colors">
-                  Pricing
-                </Link>
-              </li>
-              <li>
-                <Link to="/careers" className="text-white/70 hover:text-gold transition-colors">
-                  Careers
-                </Link>
-              </li>
-              <li>
-                <Link to="/contact" className="text-white/70 hover:text-gold transition-colors">
-                  Contact Us
-                </Link>
-              </li>
-            </ul>
-          </div>
+            {/* Column 3 – Quick Links */}
+            <div>
+              <h4 className="font-bold text-gold mb-6 text-base tracking-wide">Quick Links</h4>
+              <nav className="flex flex-col space-y-3">
+                <Link to="/about" className={linkStyle}>About Us</Link>
+                <Link to="/calculator" className={linkStyle}>Tax Calculator</Link>
+                <Link to="/pricing" className={linkStyle}>Pricing</Link>
+                <Link to="/careers" className={linkStyle}>Careers</Link>
+                <Link to="/contact" className={linkStyle}>Contact Us</Link>
+                <Link to="/privacy-policy" className={linkStyle}>Privacy Policy</Link>
+              </nav>
+            </div>
 
-          {/* Contact Info */}
-          <div>
-            <h3 className="mb-4 font-display text-sm font-semibold text-gold">
-              Contact
-            </h3>
-            <ul className="space-y-3 text-sm">
-              <li className="flex items-start space-x-3">
-                <MapPin className="mt-0.5 h-4 w-4 flex-shrink-0 text-gold" />
-                <span className="text-white/70 hover:text-gold">
-                  Park House Business Centre, 10 Park Street<br />
-                  Bristol, England, BS1 5HX
-                </span>
-              </li>
-              <li className="flex items-center space-x-3">
-                <Phone className="h-4 w-4 flex-shrink-0 text-gold" />
-                <a href="tel:01171234567" className="text-white/70 hover:text-gold transition-colors">
-                  +44 7949 956279
+            {/* Column 4 – Contact */}
+            <div>
+              <h4 className="font-bold text-gold mb-6 text-base tracking-wide">Contact</h4>
+              <div className="flex flex-col space-y-4">
+                <div className="flex items-start space-x-3 hover:translate-x-1 transition-transform duration-300">
+                  <MapPin className="h-5 w-5 text-gold mt-0.5 shrink-0" />
+                  <span className="text-sm text-white/70 leading-relaxed">
+                    Park House Business Centre, 10 Park Street<br />
+                    Bristol, England, BS1 5HX
+                  </span>
+                </div>
+                <a href="tel:+447949956279" className="flex items-center space-x-3 group hover:translate-x-1 transition-all duration-300">
+                  <Phone className="h-5 w-5 text-gold shrink-0" />
+                  <span className="text-sm text-white/70 group-hover:text-gold transition-colors duration-300">+44 7949 956279</span>
                 </a>
-              </li>
-              <li className="flex items-center space-x-3">
-                <Mail className="h-4 w-4 flex-shrink-0 text-gold" />
-                <a href="mailto:info@henleazetax.co.uk" className="text-white/70 hover:text-gold transition-colors">
-                  info@henleazetaxconsultancy.com
+                <a href="mailto:info@henleazetaxconsultancy.com" className="flex items-center space-x-3 group hover:translate-x-1 transition-all duration-300">
+                  <Mail className="h-5 w-5 text-gold shrink-0" />
+                  <span className="text-sm text-white/70 group-hover:text-gold transition-colors duration-300">info@henleazetaxconsultancy.com</span>
                 </a>
-              </li>
-            </ul>
+              </div>
+            </div>
+
           </div>
         </div>
+      </div>
 
-        <div className="mt-12 border-t border-white/10 pt-8">
-          <div className="flex flex-col items-center justify-between space-y-4 text-sm text-white/60 md:flex-row md:space-y-0">
-            <p>© {new Date().getFullYear()} Henleaze Tax Consultancy. All rights reserved.</p>
-            <div className="flex items-center space-x-4">
-
-            </div>
-          </div>
+      {/* Bottom Bar */}
+      <div className="bg-navy py-5 border-t border-white/10">
+        <div className="container mx-auto px-4">
+          <p className="text-sm text-white/50 text-center md:text-left">
+            © {new Date().getFullYear()} Henleaze Tax Consultancy. All rights reserved.
+          </p>
         </div>
       </div>
     </footer>

@@ -34,21 +34,23 @@ const Article = () => {
     <>
       <Helmet>
         <title>{post.title} | Henleaze Tax Consultancy</title>
-        <meta name="description" content={post.excerpt} />
+        <meta name="description"
+          key="description"
+          content={post.excerpt} />
       </Helmet>
       <Layout>
         <div className="pt-24 pb-12 bg-muted/20">
           <div className="container max-w-4xl">
-            <Link 
-              to="/#blog" 
+            <Link
+              to="/#blog"
               className="inline-flex items-center text-sm font-medium text-muted-foreground hover:text-gold transition-colors mb-8"
             >
               <ArrowLeft className="mr-2 h-4 w-4" />
               Back to Articles
             </Link>
-            
+
             <div className="space-y-4 text-center mb-8">
-               <span className="inline-block px-3 py-1 text-xs font-semibold text-primary-foreground bg-primary rounded-full">
+              <span className="inline-block px-3 py-1 text-xs font-semibold text-primary-foreground bg-primary rounded-full">
                 {post.category}
               </span>
               <h1 className="font-display text-3xl md:text-5xl font-bold text-foreground leading-tight">
@@ -69,11 +71,11 @@ const Article = () => {
                 </span>
               </div>
             </div>
-            
-             <div className="rounded-2xl overflow-hidden shadow-xl mb-12 aspect-video">
-              <img 
-                src={post.image} 
-                alt={post.title} 
+
+            <div className="rounded-2xl overflow-hidden shadow-xl mb-12 aspect-video">
+              <img
+                src={post.image}
+                alt={post.title}
                 className="w-full h-full object-cover"
               />
             </div>
@@ -82,11 +84,11 @@ const Article = () => {
 
         <article className="pb-20">
           <div className="container max-w-3xl">
-            <div 
+            <div
               className="prose prose-lg max-w-none prose-headings:font-display prose-headings:font-bold prose-headings:text-foreground prose-p:text-muted-foreground ProseMirror p-4"
-              dangerouslySetInnerHTML={{ __html: post.content }} 
+              dangerouslySetInnerHTML={{ __html: post.content }}
             />
-            
+
             <div className="mt-12 pt-8 border-t border-border">
               <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
                 <h4 className="font-display font-bold text-lg">Share this article:</h4>
@@ -108,7 +110,7 @@ const Article = () => {
             </div>
           </div>
         </article>
-        
+
         <CTASection />
       </Layout>
     </>
