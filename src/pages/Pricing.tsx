@@ -1,6 +1,6 @@
 import { Helmet } from "react-helmet-async";
-import { useNavigate } from "react-router-dom";
-import { Check, X, ArrowRight, PoundSterling, Sparkles, HelpCircle, FileText, CheckCircle2, ShieldCheck } from "lucide-react";
+import { useNavigate, Link } from "react-router-dom";
+import { Check, X, ArrowRight, PoundSterling, Sparkles, HelpCircle, FileText, CheckCircle2, ShieldCheck, Phone } from "lucide-react";
 import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 
@@ -136,7 +136,7 @@ const Pricing = () => {
           {/* Decorative Glow elements */}
           <div className="absolute top-1/2 left-10 w-96 h-96 bg-gold/10 blur-3xl rounded-full -z-10 animate-pulse duration-5000"></div>
           <div className="absolute bottom-0 right-10 w-96 h-96 bg-gold/5 blur-3xl rounded-full -z-10"></div>
-          
+
           <div className="container relative z-10 text-center">
             <span className="inline-flex items-center gap-2 px-4 py-1.5 mb-6 text-xs font-semibold text-gold bg-gold/10 rounded-full border border-gold/20 tracking-wider uppercase animate-fade-in">
               <Sparkles className="w-3.5 h-3.5 text-gold animate-spin" />
@@ -182,11 +182,10 @@ const Pricing = () => {
               {plans.map((plan, index) => (
                 <div
                   key={index}
-                  className={`relative flex flex-col justify-between rounded-3xl p-8 transition-all duration-500 ease-out animate-fade-up ${plan.delay} ${
-                    plan.highlight
-                      ? "bg-navy text-white border-2 border-gold/60 shadow-[0_20px_50px_rgba(15,23,42,0.15)] scale-100 md:scale-[1.03] lg:scale-[1.05] hover:scale-[1.05] md:hover:scale-[1.08] hover:border-gold hover:shadow-[0_25px_60px_-15px_rgba(202,169,87,0.35)] group z-20"
-                      : "bg-white text-navy border border-slate-200/80 shadow-[0_10px_35px_-15px_rgba(0,0,0,0.05)] hover:-translate-y-2 hover:border-gold/40 hover:shadow-[0_25px_50px_-10px_rgba(0,0,0,0.12)] group z-10"
-                  }`}
+                  className={`relative flex flex-col justify-between rounded-3xl p-8 transition-all duration-500 ease-out animate-fade-up ${plan.delay} ${plan.highlight
+                    ? "bg-navy text-white border-2 border-gold/60 shadow-[0_20px_50px_rgba(15,23,42,0.15)] scale-100 md:scale-[1.03] lg:scale-[1.05] hover:scale-[1.05] md:hover:scale-[1.08] hover:border-gold hover:shadow-[0_25px_60px_-15px_rgba(202,169,87,0.35)] group z-20"
+                    : "bg-white text-navy border border-slate-200/80 shadow-[0_10px_35px_-15px_rgba(0,0,0,0.05)] hover:-translate-y-2 hover:border-gold/40 hover:shadow-[0_25px_50px_-10px_rgba(0,0,0,0.12)] group z-10"
+                    }`}
                 >
                   {/* Decorative top accent line for non-highlighted cards */}
                   {!plan.highlight && (
@@ -221,7 +220,7 @@ const Pricing = () => {
                         {plan.price}
                       </span>
                       <span className={`text-sm ml-2 ${plan.highlight ? "text-white/70" : "text-muted-foreground"}`}>
-                         / month
+                        / month
                       </span>
                     </div>
 
@@ -249,11 +248,10 @@ const Pricing = () => {
                   {/* Button */}
                   <Button
                     size="lg"
-                    className={`mt-10 w-full rounded-full py-6 font-bold shadow-md transition-all duration-300 ${
-                      plan.highlight
-                        ? "bg-gold hover:bg-gold-light text-navy border-none shadow-[0_5px_20px_rgba(202,169,87,0.3)] hover:scale-[1.02]"
-                        : "bg-white border-2 border-navy text-navy hover:bg-navy hover:text-white hover:scale-[1.02]"
-                    }`}
+                    className={`mt-10 w-full rounded-full py-6 font-bold shadow-md transition-all duration-300 ${plan.highlight
+                      ? "bg-gold hover:bg-gold-light text-navy border-none shadow-[0_5px_20px_rgba(202,169,87,0.3)] hover:scale-[1.02]"
+                      : "bg-white border-2 border-navy text-navy hover:bg-navy hover:text-white hover:scale-[1.02]"
+                      }`}
                     onClick={() =>
                       navigate(`/contact?plan=${encodeURIComponent(plan.name)}`)
                     }
@@ -329,7 +327,7 @@ const Pricing = () => {
 
             <div className="bg-gradient-to-br from-slate-50 to-slate-100 border border-slate-200/80 rounded-[3rem] p-8 md:p-16 shadow-[0_20px_50px_rgba(0,0,0,0.08)] relative overflow-hidden">
               <div className="absolute top-0 right-0 w-80 h-80 bg-gold/5 rounded-full blur-3xl -z-10"></div>
-              
+
               <div className="grid lg:grid-cols-[1.3fr_0.7fr] gap-12 lg:gap-16 items-center">
                 <div className="space-y-6">
                   <h3 className="text-2xl font-bold text-navy mb-4">
@@ -341,7 +339,7 @@ const Pricing = () => {
                   <p className="text-base md:text-lg text-gray-600 leading-relaxed">
                     Whether you're looking for ongoing accounting support, specialist tax advice, payroll services or a combination of services, we'll provide a clear, personalised quote based on your requirements. Our transparent approach ensures you understand the costs involved from the outset, with clear pricing and no hidden fees.
                   </p>
-                  
+
                   {/* Elegant features list inside tailored section */}
                   <div className="grid sm:grid-cols-2 gap-4 pt-4">
                     {[
@@ -361,7 +359,7 @@ const Pricing = () => {
                 {/* Highly elevated call-out card on the right */}
                 <div className="relative group bg-navy text-white rounded-[2rem] p-8 md:p-10 shadow-2xl border-2 border-gold/40 flex flex-col items-center text-center overflow-hidden hover:scale-[1.03] hover:border-gold hover:shadow-[0_25px_60px_-15px_rgba(202,169,87,0.3)] transition-all duration-500">
                   <div className="absolute inset-0 bg-gradient-to-b from-navy via-navy-light to-navy-dark opacity-90 -z-10"></div>
-                  
+
                   <div className="h-16 w-16 bg-gold rounded-2xl flex items-center justify-center text-navy mb-6 shadow-lg shadow-gold/20 transition-all duration-300 group-hover:rotate-6 group-hover:scale-110">
                     <PoundSterling className="h-8 w-8 text-navy" />
                   </div>
@@ -369,7 +367,7 @@ const Pricing = () => {
                   <p className="text-sm text-white/70 leading-relaxed mb-8">
                     Get an instant custom quote structured explicitly around your unique operational activities.
                   </p>
-                  
+
                   <Button
                     size="lg"
                     className="w-full bg-gold hover:bg-gold-light text-navy font-extrabold rounded-full py-6 text-base transition-all duration-300 shadow-[0_5px_15px_rgba(202,169,87,0.3)] hover:scale-105 group"
@@ -390,7 +388,7 @@ const Pricing = () => {
           {/* Glowing blobs */}
           <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gold/5 rounded-full blur-3xl -z-10 animate-pulse"></div>
           <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-navy-light/25 rounded-full blur-3xl -z-10"></div>
-          
+
           <div className="container max-w-5xl relative z-10">
             <div className="text-center max-w-3xl mx-auto mb-20 animate-fade-in">
               <span className="inline-flex items-center gap-2 px-4 py-1.5 mb-4 text-xs font-semibold text-gold bg-gold/10 rounded-full border border-gold/20 tracking-wider uppercase">
@@ -440,14 +438,18 @@ const Pricing = () => {
             <p className="text-lg md:text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto mb-10">
               Take the next step with confidence. From accounting and bookkeeping to tax planning and compliance support, Henleaze Tax Consultancy provides clear pricing and reliable expertise tailored to your needs. Get in touch today to discuss your requirements and receive a personalised quote.
             </p>
-            <div className="flex justify-center">
-              <Button
-                size="lg"
-                className="bg-gold hover:bg-gold-light text-navy font-bold rounded-full px-12 py-8 text-base md:text-lg transition-all duration-300 hover:scale-105 shadow-[0_10px_35px_rgba(202,169,87,0.35)] hover:shadow-[0_15px_45px_rgba(202,169,87,0.5)] group"
-                onClick={() => navigate("/contact")}
-              >
-                Book a Free Consultation
-                <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+            <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row animate-fade-in [animation-delay:200ms]">
+              <Button size="lg" asChild className="bg-gold hover:bg-gold-light text-navy font-semibold shadow-lg hover:shadow-gold/30 transition-all duration-300">
+                <Link to="/contact" className="flex items-center">
+                  Book Your Free Consultation
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </Button>
+              <Button size="lg" variant="outline" asChild className="border-white/30 text-white bg-navy hover:bg-white/10 hover:text-gold hover:border-gold">
+                <a href="tel:+44 7949 956279">
+                  <Phone className="mr-2 h-4 w-4" />
+                  +44 7949 956279
+                </a>
               </Button>
             </div>
           </div>

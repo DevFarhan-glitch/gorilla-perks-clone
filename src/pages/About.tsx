@@ -457,33 +457,33 @@ const About = () => {
         {/* Trusted Accounting CTA (White Section with Glass Card) */}
         <section className="relative py-32 overflow-hidden bg-gray-50">
 
-          <div className="w-full relative z-10">
-            <div className="absolute inset-0">
-              <img
-                src="/cta-consult.png"
-                alt="Background"
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-navy/85" />
-              <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/80 to-navy/60" />
-            </div>
-            <div className="mx-auto max-w-5xl text-center bg-white p-10 md:p-16 rounded-[3rem] shadow-[0_20px_60px_-15px_rgba(0,0,0,0.1)] border border-gray-100">
+          <div className="w-full relative z-10 px-4">
+            <div className="mx-auto max-w-5xl text-center relative overflow-hidden p-10 md:p-16 rounded-[3rem] shadow-[0_20px_60px_-15px_rgba(0,0,0,0.15)] border border-white/10">
+              <div className="absolute inset-0 -z-10">
+                <img
+                  src="/cta-consult.png"
+                  alt="Background"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-navy/85" />
+                <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/80 to-navy/60" />
+              </div>
               <h2 className="font-display text-3xl font-bold tracking-tight text-white md:text-4xl animate-fade-in leading-tight mb-6">
                 Trusted Accounting & Tax Support Starts Here
               </h2>
               <p className="text-base md:text-lg text-white animate-fade-in [animation-delay:100ms] leading-relaxed max-w-3xl mx-auto mb-10">
                 Learn how Henleaze Tax Consultancy can help manage your accounting, tax and financial responsibilities with confidence. Speak with the team today to discuss your requirements and discover the right solution for your needs.
               </p>
-              <div className="flex flex-col items-center justify-center gap-6 sm:flex-row animate-fade-in [animation-delay:200ms]">
-                <Button size="lg" className="w-full sm:w-auto px-8 py-5 rounded-full border-gray-300 text-navy bg-white  hover:bg-gray-50 hover:border-gold transition-all duration-300 hover:-translate-y-1 group" asChild>
+              <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row animate-fade-in [animation-delay:200ms]">
+                <Button size="lg" asChild className="bg-gold hover:bg-gold-light text-navy font-semibold shadow-lg hover:shadow-gold/30 transition-all duration-300">
                   <Link to="/contact" className="flex items-center">
-                    Get in Touch
-                    <ArrowRight className="ml-3 h-5 w-5 group-hover:translate-x-2 transition-transform" />
+                    Book Your Free Consultation
+                    <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
                 </Button>
-                <Button size="lg" variant="outline" asChild className="w-full sm:w-auto px-8 py-5 rounded-full border-gray-300 text-navy hover:bg-gray-50 hover:border-gold transition-all duration-300 hover:-translate-y-1 group">
-                  <a href="tel:+44 7949 956279" className="flex items-center">
-                    <Phone className="mr-3 h-5 w-5 group-hover:rotate-12 transition-transform text-gold" />
+                <Button size="lg" variant="outline" asChild className="border-white/30 text-white bg-navy hover:bg-white/10 hover:text-gold hover:border-gold">
+                  <a href="tel:+44 7949 956279">
+                    <Phone className="mr-2 h-4 w-4" />
                     +44 7949 956279
                   </a>
                 </Button>

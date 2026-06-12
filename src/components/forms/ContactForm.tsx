@@ -1,5 +1,5 @@
 import { useForm, ValidationError } from "@formspree/react";
-import { Loader2, Send } from "lucide-react";
+import { Loader2, Send, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -74,6 +74,20 @@ const ContactForm = ({ selectedPlan }: ContactFormProps) => {
     },
   });
 
+  // Watch field values in real-time to calculate completion progress
+  const nameValue = form.watch("name") || "";
+  const emailValue = form.watch("email") || "";
+  const messageValue = form.watch("message") || "";
+
+  const isNameFilled = nameValue.trim().length > 0;
+  const isEmailFilled = emailValue.trim().includes("@") && emailValue.trim().length > 4;
+  const isMessageFilled = messageValue.trim().length > 0;
+
+  let progress = 0;
+  if (isNameFilled) progress += 33;
+  if (isEmailFilled) progress += 33;
+  if (isMessageFilled) progress += 34;
+
   /* ------------------ Success Handling ------------------ */
   useEffect(() => {
     if (state.succeeded) {
@@ -99,6 +113,23 @@ const ContactForm = ({ selectedPlan }: ContactFormProps) => {
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-6">
+        {/* Progress Bar */}
+        <div className="p-4 bg-slate-50 border border-slate-100 rounded-2xl transition-all duration-300">
+          <div className="flex justify-between items-center text-sm font-bold text-navy mb-2">
+            <span className="flex items-center gap-1.5">
+              <Sparkles className="h-4 w-4 text-gold animate-pulse" />
+              Form Completion Progress
+            </span>
+            <span className="text-gold font-mono">{progress}%</span>
+          </div>
+          <div className="h-2.5 w-full bg-slate-200/60 rounded-full overflow-hidden">
+            <div
+              className="h-full bg-gradient-to-r from-gold to-gold-light transition-all duration-500 ease-out"
+              style={{ width: `${progress}%` }}
+            />
+          </div>
+        </div>
+
         {/* Name & Email */}
         <div className="grid gap-6 sm:grid-cols-2">
           <FormField
@@ -224,7 +255,12 @@ const ContactForm = ({ selectedPlan }: ContactFormProps) => {
         />
 
         {/* Submit */}
-        <Button type="submit" size="lg" className="w-full" disabled={state.submitting}>
+        <Button
+          type="submit"
+          size="lg"
+          className="w-full h-14 bg-gold hover:bg-gold-light text-navy font-bold rounded-xl py-6 text-base transition-all duration-300 shadow-[0_5px_15px_rgba(202,169,87,0.2)] hover:shadow-[0_8px_25px_rgba(202,169,87,0.45)] hover:scale-[1.01] flex items-center justify-center gap-2 group cursor-pointer border-0"
+          disabled={state.submitting}
+        >
           {state.submitting ? (
             <>
               <Loader2 className="mr-2 h-4 w-4 animate-spin" />
@@ -232,7 +268,7 @@ const ContactForm = ({ selectedPlan }: ContactFormProps) => {
             </>
           ) : (
             <>
-              <Send className="mr-2 h-4 w-4" />
+              <Send className="mr-2 h-4 w-4 transition-transform group-hover:translate-x-1 group-hover:-translate-y-0.5" />
               Send Message
             </>
           )}

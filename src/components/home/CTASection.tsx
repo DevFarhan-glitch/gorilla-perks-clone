@@ -15,7 +15,7 @@ const CTASection = () => {
             Whether you need help with accounting, tax planning or ongoing financial support, our team is here to make things simple. Get clear advice from trusted accountants in Bristol and find the right solution for your business or personal finances.
           </p>
           <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row animate-fade-in [animation-delay:200ms]">
-            <Button size="lg" className="bg-gold hover:bg-gold-light text-navy font-semibold shadow-lg hover:shadow-gold/30 transition-all duration-300">
+            <Button size="lg" asChild className="bg-gold hover:bg-gold-light text-navy font-semibold shadow-lg hover:shadow-gold/30 transition-all duration-300">
               <Link to="/contact" className="flex items-center">
                 Book Your Free Consultation
                 <ArrowRight className="ml-2 h-4 w-4" />

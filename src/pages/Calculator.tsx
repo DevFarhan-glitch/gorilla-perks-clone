@@ -1,12 +1,14 @@
 import { useState, useMemo } from "react";
 import { Helmet } from "react-helmet-async";
-import { PoundSterling, ArrowRight, Check, Calculator as CalculatorIcon, TrendingUp, Shield, Info } from "lucide-react";
+import { PoundSterling, ArrowRight, Check, Calculator as CalculatorIcon, TrendingUp, Shield, Info, Phone } from "lucide-react";
+import { Link } from "react-router-dom";
 import Layout from "@/components/layout/Layout";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Slider } from "@/components/ui/slider";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { Button } from "@/components/ui/button";
 
 interface ResultColumnProps {
   title: string;
@@ -115,11 +117,11 @@ const Calculator: React.FC = () => {
                 Updated for 2026 Tax Year
               </span>
 
-              <h1 className="font-display text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-8 drop-shadow-2xl animate-fade-up">
+              <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-8 drop-shadow-2xl animate-fade-up">
                 Salary Calculator UK
               </h1>
 
-              <p className="text-xl md:text-2xl leading-relaxed text-white/90 max-w-4xl mx-auto animate-fade-up">
+              <p className="text-xl md:text-xl leading-relaxed text-white/90 max-w-4xl mx-auto animate-fade-up">
                 Calculate your take-home pay instantly. View yearly, monthly and weekly earnings after
                 <span className="text-gold font-semibold"> Income Tax</span> and
                 <span className="text-gold font-semibold"> National Insurance</span> deductions.
@@ -128,14 +130,14 @@ const Calculator: React.FC = () => {
               <div className="flex flex-col sm:flex-row gap-4 justify-center mt-12 animate-fade-up">
                 <a
                   href="#calculator"
-                  className="inline-flex items-center justify-center rounded-full bg-white text-navy px-8 py-4 font-semibold text-lg shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 group"
+                  className="inline-flex items-center justify-center rounded-full bg-white text-navy px-8 py-4 font-semibold text-md shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 group"
                 >
                   Start Calculating
                   <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                 </a>
                 <a
                   href="#how-it-works"
-                  className="inline-flex items-center justify-center rounded-full border-2 border-white/50 px-8 py-4 font-semibold text-lg hover:bg-white/10 hover:scale-105 transition-all duration-300"
+                  className="inline-flex items-center justify-center rounded-full border-2 border-white/50 px-8 py-4 font-semibold text-md hover:bg-white/10 hover:scale-105 transition-all duration-300"
                 >
                   How It Works
                 </a>
@@ -233,7 +235,7 @@ const Calculator: React.FC = () => {
           <div className="absolute inset-0 bg-navy"></div>
           <div className="container relative z-10">
             <div className="mx-auto max-w-6xl">
-              <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">How Salary is Calculated in the UK</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">How Salary is Calculated in the UK</h2>
 
               <div className="space-y-8 text-white/90 leading-relaxed max-w-4xl mx-auto mb-16">
                 <p className="text-lg hover:text-white transition-colors duration-300">
@@ -298,7 +300,7 @@ const Calculator: React.FC = () => {
         <section className="py-20 bg-white">
           <div className="container">
             <div className="mx-auto max-w-6xl">
-              <h2 className="text-4xl md:text-5xl font-bold text-center text-navy mb-16">How to Use This UK Salary Calculator For 2026</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-center text-navy mb-16">How to Use This UK Salary Calculator For 2026</h2>
 
               <div className="grid md:grid-cols-5 gap-6 text-white">
                 {[
@@ -335,7 +337,7 @@ const Calculator: React.FC = () => {
           <div className="absolute inset-0 bg-navy"></div>
           <div className="container relative z-10">
             <div className="mx-auto max-w-6xl">
-              <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">Frequently Asked Questions</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">Frequently Asked Questions</h2>
 
               <div className="grid md:grid-cols-2 gap-6">
                 {[
@@ -382,7 +384,7 @@ const Calculator: React.FC = () => {
         <section className="py-20 bg-white">
           <div className="container">
             <div className="mx-auto max-w-6xl text-center">
-              <h2 className="text-4xl md:text-5xl font-bold text-navy mb-8">Get Expert Help With Your Salary & Tax Planning</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-navy mb-8">Get Expert Help With Your Salary & Tax Planning</h2>
 
               <p className="text-gray-600 leading-relaxed mb-6 max-w-3xl mx-auto hover:text-navy blue-900 transition-colors">
                 Understanding your salary should not stop at calculations. While our salary calculator gives you a clear view
@@ -394,21 +396,19 @@ const Calculator: React.FC = () => {
                 and make more informed decisions about your income, taxes and financial future.
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-6 justify-center">
-                <a
-                  href="/contact"
-                  className="inline-flex items-center justify-center rounded-full bg-navy text-white px-10 py-5 font-semibold text-lg shadow-xl hover:bg-white hover:text-navy hover:shadow-2xl hover:scale-105 transition-all duration-300 group"
-                >
-                  Get Your Free Quote
-                  <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-                </a>
-
-                <a
-                  href="tel:+447949956279"
-                  className="inline-flex items-center justify-center rounded-full border-2 border-navy text-navy px-10 py-5 font-semibold text-lg hover:bg-navy hover:text-white hover:shadow-2xl hover:scale-105 transition-all duration-300 group"
-                >
-                  +44 7949 956279
-                </a>
+              <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row animate-fade-in [animation-delay:200ms]">
+                <Button size="lg" asChild className="bg-gold hover:bg-gold-light text-navy font-semibold shadow-lg hover:shadow-gold/30 transition-all duration-300">
+                  <Link to="/contact" className="flex items-center">
+                    Book Your Free Consultation
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Link>
+                </Button>
+                <Button size="lg" variant="outline" asChild className="border-white/30 text-white bg-navy hover:bg-white/10 hover:text-gold hover:border-gold">
+                  <a href="tel:+44 7949 956279">
+                    <Phone className="mr-2 h-4 w-4" />
+                    +44 7949 956279
+                  </a>
+                </Button>
               </div>
             </div>
           </div>
