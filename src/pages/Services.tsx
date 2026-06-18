@@ -631,41 +631,30 @@ const Services = () => {
           </div>
         </section>
 
-        <section className="py-20 md:py-28 bg-white relative overflow-hidden">
-          <div className="absolute top-1/2 left-0 -translate-y-1/2 w-96 h-96 bg-gold/5 rounded-full blur-3xl pointer-events-none" />
-          <div className="absolute top-1/2 right-0 -translate-y-1/2 w-96 h-96 bg-gold/5 rounded-full blur-3xl pointer-events-none" />
-          <div className="container relative z-10 max-w-4xl text-center group border border-border p-10 md:p-16 rounded-3xl bg-slate-50/50 hover:bg-white hover:border-gold/30 hover:shadow-[0_30px_60px_rgba(202,169,87,0.12)] transition-all duration-700">
-            <div className="inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-gold/15 text-gold mb-6 transition-all duration-500 group-hover:scale-110 group-hover:rotate-6">
-              <Award className="h-6 w-6" />
-            </div>
-            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-navy mb-6 transition-colors duration-500 group-hover:text-gold">
-              Professional Accountancy &amp; Tax Support Starts Here
-            </h2>
-            <p className="text-lg text-muted-foreground leading-relaxed mb-10 max-w-3xl mx-auto transition-colors duration-500 group-hover:text-navy/90">
-              Take the stress out of managing your finances with expert accountancy services in Bristol, tax and advisory services tailored to your needs. Whether you&rsquo;re an individual, contractor, landlord or business owner, Henleaze Tax Consultancy provides the support and guidance needed to help you stay compliant, improve tax efficiency and focus on what matters most.
-            </p>
-            <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
-              <Button
-                size="lg"
-                asChild
-                className="bg-gold hover:bg-gold-light text-navy font-bold h-14 px-8 rounded-xl shadow-xl hover:shadow-gold/30 transition-all duration-500 hover:-translate-y-1 hover:scale-105"
-              >
-                <Link to="/contact" className="inline-flex items-center">
-                  Book a Free Consultation
-                  <ArrowRight className="ml-2 h-5 w-5 animate-pulse" />
-                </Link>
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                asChild
-                className="border-white/30 text-white bg-navy hover:bg-white/10 hover:text-gold hover:border-gold h-14 px-8 rounded-xl shadow-xl hover:shadow-navy/30 transition-all duration-500 hover:-translate-y-1 hover:scale-105"
-              >
-                <a href="tel:+44 7949 956279" className="inline-flex items-center">
-                  <Phone className="mr-2 h-4 w-4" />
-                  +44 7949 956279
-                </a>
-              </Button>
+        <section className="relative py-20 overflow-hidden bg-white">
+          {/* Background Image */}
+          <div className="container relative">
+            <div className="mx-auto max-w-3xl text-center">
+              <h2 className="font-display text-3xl font-bold tracking-tight text-navy md:text-4xl animate-fade-in">
+                Professional Accountancy & Tax Support Starts Here
+              </h2>
+              <p className="mt-4 text-lg text-gray-600 animate-fade-in [animation-delay:100ms]">
+                Take the stress out of managing your finances with expert accountancy services in Bristol, tax and advisory services tailored to your needs. Whether you're an individual, contractor, landlord or business owner, Henleaze Tax Consultancy provides the support and guidance needed to help you stay compliant, improve tax efficiency and focus on what matters most.
+              </p>
+              <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row animate-fade-in [animation-delay:200ms]">
+                <Button size="lg" asChild className="bg-gold hover:bg-gold-light text-navy font-semibold shadow-lg hover:shadow-gold/30 transition-all duration-300">
+                  <Link to="/contact" className="flex items-center">
+                    Book Your Free Consultation
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Link>
+                </Button>
+                <Button size="lg" variant="outline" asChild className="border-white/30 text-white bg-navy hover:bg-white/10 hover:text-gold hover:border-gold">
+                  <a href="tel:+44 7949 956279">
+                    <Phone className="mr-2 h-4 w-4" />
+                    +44 7949 956279
+                  </a>
+                </Button>
+              </div>
             </div>
           </div>
         </section>

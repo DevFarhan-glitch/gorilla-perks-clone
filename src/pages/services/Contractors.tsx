@@ -224,7 +224,7 @@ const Contractors = () => {
                   {/* Top glowing edge */}
                   <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-gold to-transparent opacity-80" />
 
-                  <h3 className="text-xl font-bold text-white mb-6">Expert Contractor Tax Support</h3>
+                  <p className="text-xl font-bold text-white mb-6">Expert Contractor Tax Support</p>
 
                   <div className="space-y-4">
                     {[
@@ -359,6 +359,159 @@ const Contractors = () => {
           </div>
         </section>
 
+        {/* Why Choose Specialist Contractor Accountants Section */}
+        <section className="relative overflow-hidden py-24 bg-gradient-to-br from-navy via-navy-light to-navy-dark">
+          {/* Background pattern */}
+          <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0zNiAxOGMtNi42MjcgMC0xMiA1LjM3My0xMiAxMnM1LjM3MyAxMiAxMiAxMiAxMi01LjM3MyAxMi0xMi01LjM3My0xMi0xMi0xMnptMCAxOGMtMy4zMTQgMC02LTIuNjg2LTYtNnMyLjY4Ni02IDYtNiA2IDIuNjg2IDYgNi0yLjY4NiA2LTYgNnoiIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iLjAzIi8+PC9nPjwvc3ZnPg==')] opacity-40" />
+          {/* Gold accent top line */}
+          <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-transparent via-gold to-transparent" />
+          {/* Decorative glow blobs */}
+          <div className="absolute -top-32 -left-32 w-96 h-96 bg-gold/10 blur-3xl rounded-full pointer-events-none" />
+          <div className="absolute -bottom-32 -right-32 w-96 h-96 bg-navy-light/60 blur-3xl rounded-full pointer-events-none" />
+
+          <div className="container relative z-10">
+            {/* Section label */}
+            <div className="mb-12 flex items-center justify-center">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gold/10 border border-gold/25 text-gold text-xs font-bold uppercase tracking-wider">
+                <Shield className="h-3.5 w-3.5" />
+                Why Choose Specialist Support
+              </div>
+            </div>
+
+            <div className="grid gap-12 lg:grid-cols-12 items-start">
+
+              {/* ── LEFT SIDEBAR ── */}
+              <div className="lg:col-span-4 lg:sticky lg:top-28 space-y-8">
+                {/* Glass card */}
+                <div className="relative rounded-[2rem] bg-white/5 border border-white/10 backdrop-blur-xl p-8 overflow-hidden group hover:border-gold/30 transition-all duration-500">
+                  {/* Top shimmer line */}
+                  <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-gold to-transparent opacity-80" />
+
+                  <h2 className="font-display text-3xl md:text-4xl font-bold tracking-tight text-white leading-tight">
+                    Why Choose Specialist Contractor Accountants
+                    <span className="block text-gold mt-1">in Bristol?</span>
+                  </h2>
+
+                  <div className="w-16 h-0.5 bg-gold rounded-full my-6" />
+
+                  <p className="text-base text-white/80 leading-relaxed">
+                    Contractors face a unique set of financial and tax responsibilities that often require more than standard accounting support. Whether you operate through a limited company or provide specialist consulting services, having an accountant who understands the contractor sector can make managing your finances simpler, more efficient and more tax-effective.
+                  </p>
+
+                  <div className="mt-8">
+                    <Link
+                      to="/pricing"
+                      className="group/btn relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-gold px-6 py-3 text-sm font-bold text-navy shadow-lg transition-all duration-300 hover:bg-gold-light hover:scale-105 hover:shadow-[0_0_24px_rgba(212,175,55,0.4)]"
+                    >
+                      <span className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 translate-x-[-120%] transition-transform duration-700 group/btn-hover:translate-x-[120%]" />
+                      <span className="relative">View Our Pricing</span>
+                      <span className="relative flex h-6 w-6 items-center justify-center rounded-full bg-navy/20 transition-all duration-300 group-hover/btn:translate-x-1">
+                        <ArrowRight className="h-3.5 w-3.5" />
+                      </span>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+
+              {/* ── RIGHT: PILLAR CARDS ── */}
+              <div className="lg:col-span-8 grid gap-5 sm:grid-cols-2">
+                {pillars.map((pillar, index) => (
+                  <div
+                    key={index}
+                    className="group relative overflow-hidden rounded-[1.75rem] bg-white/5 border border-white/10 p-7 transition-all duration-500 hover:-translate-y-1.5 hover:bg-white/10 hover:border-gold/30 hover:shadow-[0_20px_50px_rgba(0,0,0,0.25)]"
+                  >
+                    {/* Top accent on hover */}
+                    <div className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-transparent via-gold to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                    {/* Glow blob */}
+                    <div className="absolute -top-10 -right-10 h-28 w-28 rounded-full bg-gold/10 blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+
+                    <div className="relative z-10">
+                      {/* Number badge */}
+                      <div className="mb-5 inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-gold/10 border border-gold/20 text-gold font-display font-extrabold text-sm tracking-tight transition-all duration-500 group-hover:bg-gold group-hover:text-navy group-hover:scale-110 group-hover:rotate-6 group-hover:border-gold">
+                        {pillar.num}
+                      </div>
+
+                      <h3 className="font-display text-lg font-bold text-white mb-3 leading-snug transition-colors duration-300 group-hover:text-gold">
+                        {pillar.title}
+                      </h3>
+
+                      <p className="text-sm text-white/70 leading-relaxed transition-colors duration-300 group-hover:text-white/90">
+                        {pillar.description}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+        {/* Supporting Contractors Across Bristol & the UK */}
+        <section className="relative overflow-hidden py-20 bg-gradient-to-b from-slate-50 via-white to-slate-50">
+          <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-gold/40 to-transparent" />
+          <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-gold/20 to-transparent" />
+          <div className="absolute top-0 right-0 w-80 h-80 bg-gold/5 rounded-full blur-3xl pointer-events-none" />
+
+          <div className="container relative z-10">
+            {/* Two-column sidebox card */}
+            <div className="relative overflow-hidden rounded-[2.5rem] bg-white border border-gold/15 shadow-[0_20px_60px_rgba(15,23,42,0.08)] flex flex-col lg:flex-row">
+              {/* Gold left stripe */}
+              <div className="absolute top-0 left-0 bottom-0 w-1 bg-gradient-to-b from-gold/40 via-gold to-gold/40 rounded-l-[2.5rem]" />
+
+              {/* LEFT - icon + label */}
+              <div className="relative flex-shrink-0 flex flex-col items-center justify-center gap-6 px-10 py-12 lg:py-16 bg-gradient-to-br from-navy via-navy-light to-navy-dark lg:w-72 xl:w-80">
+                {/* Dot pattern */}
+                <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0zNiAxOGMtNi42MjcgMC0xMiA1Lj2F4sQnHVSdd9fA7KHhaNojdk7i1xRCMiAxMi01LjM3MyAxMiAxMi01LjM3MyAxMi0xMiAxMnptMCAxOGMtMy4zMTQgMC02LTIuNjg2LTYtNnMyLjY4Ni02IDYtNiA2IDIuNjg2IDYgNi0yLjY4NiA2LTYgNnoiIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iLjAzIi8+PC9nPjwvc3ZnPg==')] opacity-50" />
+                <div className="relative z-10 flex flex-col items-center text-center gap-4">
+                  <div className="inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-gold/15 border border-gold/25 text-gold">
+                    <Building className="h-8 w-8" />
+                  </div>
+                  <div className="h-px w-12 bg-gold/40 rounded-full" />
+                  <p className="text-xs font-bold uppercase tracking-[0.2em] text-gold">Our Reach</p>
+                  <p className="text-white/70 text-sm leading-relaxed">Bristol & across the UK</p>
+                </div>
+              </div>
+
+              {/* RIGHT - text content */}
+              <div className="flex-1 px-8 py-12 lg:px-12 lg:py-14 xl:px-16 flex flex-col justify-center">
+                <div className="mb-4 inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gold/10 border border-gold/25 text-gold text-xs font-bold uppercase tracking-wider w-fit">
+                  <Users className="h-3.5 w-3.5" />
+                  Nationwide Support
+                </div>
+
+                <h2 className="font-display text-2xl md:text-3xl font-bold tracking-tight text-navy leading-tight mb-4">
+                  Supporting Contractors Across Bristol &amp; the UK
+                </h2>
+
+                <div className="w-14 h-0.5 bg-gold rounded-full mb-6" />
+
+                <div className="space-y-4 text-gray-600 leading-relaxed text-base">
+                  <p>
+                    While we work closely with contractors looking for specialist accounting support in Bristol, our services are not limited to the local area. We also support contractors across the UK, providing practical accounting, tax and compliance guidance tailored to their individual circumstances.
+                  </p>
+                  <p>
+                    Whether you&apos;re searching for experienced contractor accountants in Bristol or need reliable support for your contracting business elsewhere in the UK, our team is here to help you stay compliant, manage your finances effectively and focus on your professional goals with confidence.
+                  </p>
+                </div>
+
+                <div className="mt-8">
+                  <Link
+                    to="/contact"
+                    className="group relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-navy px-7 py-3.5 text-sm font-bold text-white shadow-md transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_14px_28px_rgba(15,23,42,0.18)]"
+                  >
+                    <span className="absolute inset-0 bg-gradient-to-r from-gold/0 via-white/15 to-gold/0 translate-x-[-120%] transition-transform duration-700 group-hover:translate-x-[120%]" />
+                    <span className="relative">Speak to a Contractor Accountant</span>
+                    <span className="relative flex h-6 w-6 items-center justify-center rounded-full bg-gold text-navy transition-all duration-300 group-hover:translate-x-1 group-hover:scale-110">
+                      <ArrowRight className="h-3.5 w-3.5" />
+                    </span>
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Industries We Work With Section */}
         <section className="py-24 bg-white relative">
           <div className="container relative z-10">
@@ -403,57 +556,60 @@ const Contractors = () => {
           </div>
         </section>
 
+
+
         {/* Ready to Simplify Section (Bottom CTA) */}
-        <section className="w-full relative py-32 overflow-hidden bg-gray-50 w-full">
-          <div className="w-full relative z-10 px-4">
-            <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center relative overflow-hidden p-10 md:p-16 rounded-[3rem] shadow-[0_20px_60px_-15px_rgba(0,0,0,0.15)] border border-white/10">
-              {/* Background overlay images and gradient */}
-              <div className="absolute inset-0 -z-10">
-                <img
-                  src="/cta-consult.png"
-                  alt="Professional tax consultation"
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 bg-navy/85" />
-                <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/80 to-navy/60" />
-              </div>
+        <section className="relative w-full py-32 overflow-hidden">
+          {/* Full-bleed background - no inner card, spans 100% width */}
+          <div className="absolute inset-0 -z-10">
+            <img
+              src="/cta-consult.png"
+              alt="Professional tax consultation"
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-navy/85" />
+            <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/80 to-navy/60" />
+          </div>
+          {/* Gold accent lines top & bottom */}
+          <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-transparent via-gold to-transparent" />
+          <div className="absolute inset-x-0 bottom-0 h-1 bg-gradient-to-r from-transparent via-gold/40 to-transparent" />
 
-              <h2 className="font-display text-3xl font-bold tracking-tight text-white md:text-4xl leading-tight mb-6">
-                Ready to Simplify Your Contractor Accounting?
-              </h2>
+          <div className="container relative z-10 text-center">
+            <h2 className="font-display text-3xl font-bold tracking-tight text-white md:text-4xl leading-tight mb-6">
+              Ready to Simplify Your Contractor Accounting?
+            </h2>
 
-              <div className="max-w-3xl mx-auto space-y-4 text-white/90 mb-10 leading-relaxed text-base md:text-lg">
-                <p>
-                  Whether you're just starting out as a contractor or already running an established limited company, having the right accounting support can make a real difference. At Henleaze Tax Consultancy, we provide practical advice, proactive guidance and reliable support to help you stay compliant and focused on growing your business.
-                </p>
-                <p className="font-semibold text-white">
-                  Speak with our team today to discuss your requirements and discover how we can support your contracting journey.
-                </p>
-              </div>
+            <div className="max-w-3xl mx-auto space-y-4 text-white/90 mb-10 leading-relaxed text-base md:text-lg">
+              <p>
+                Whether you&apos;re just starting out as a contractor or already running an established limited company, having the right accounting support can make a real difference. At Henleaze Tax Consultancy, we provide practical advice, proactive guidance and reliable support to help you stay compliant and focused on growing your business.
+              </p>
+              <p className="font-semibold text-white">
+                Speak with our team today to discuss your requirements and discover how we can support your contracting journey.
+              </p>
+            </div>
 
-              <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
-                <Button
-                  size="lg"
-                  asChild
-                  className="bg-gold hover:bg-gold-light text-navy font-bold rounded-full px-8 py-6 shadow-lg hover:shadow-gold/30 hover:scale-105 transition-all duration-300"
-                >
-                  <Link to="/contact" className="flex items-center">
-                    Book Your Free Consultation
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Link>
-                </Button>
-                <Button
-                  size="lg"
-                  variant="outline"
-                  asChild
-                  className="border-white/30 text-white bg-navy hover:bg-white/10 hover:text-gold hover:border-gold rounded-full px-8 py-6"
-                >
-                  <a href="tel:+447949956279">
-                    <Phone className="mr-2 h-4 w-4" />
-                    +44 7949 956279
-                  </a>
-                </Button>
-              </div>
+            <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
+              <Button
+                size="lg"
+                asChild
+                className="bg-gold hover:bg-gold-light text-navy font-bold rounded-full px-8 py-6 shadow-lg hover:shadow-gold/30 hover:scale-105 transition-all duration-300"
+              >
+                <Link to="/contact" className="flex items-center">
+                  Book Your Free Consultation
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </Button>
+              <Button
+                size="lg"
+                variant="outline"
+                asChild
+                className="border-white/30 text-white bg-white/5 hover:bg-white/10 hover:text-gold hover:border-gold rounded-full px-8 py-6 backdrop-blur-sm"
+              >
+                <a href="tel:+447949956279" className="flex items-center">
+                  <Phone className="mr-2 h-4 w-4" />
+                  +44 7949 956279
+                </a>
+              </Button>
             </div>
           </div>
         </section>

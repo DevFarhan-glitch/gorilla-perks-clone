@@ -454,34 +454,57 @@ const About = () => {
           </div>
         </section>
 
-        {/* Trusted Accounting CTA (White Section with Glass Card) */}
-        <section className="relative py-32 overflow-hidden bg-gray-50">
+        {/* Trusted Accounting CTA */}
+        <section className="relative w-full py-32 overflow-hidden">
+          {/* Background */}
+          <div className="absolute inset-0">
+            <img
+              src="/cta-consult.png"
+              alt="Background"
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-navy/85" />
+            <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/80 to-navy/60" />
+          </div>
 
-          <div className="w-full relative z-10 px-4">
-            <div className="mx-auto max-w-5xl text-center relative overflow-hidden p-10 md:p-16 rounded-[3rem] shadow-[0_20px_60px_-15px_rgba(0,0,0,0.15)] border border-white/10">
-              <div className="absolute inset-0 -z-10">
-                <img
-                  src="/cta-consult.png"
-                  alt="Background"
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 bg-navy/85" />
-                <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/80 to-navy/60" />
-              </div>
-              <h2 className="font-display text-3xl font-bold tracking-tight text-white md:text-4xl animate-fade-in leading-tight mb-6">
+          {/* Top separator */}
+          <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-transparent via-gold to-transparent" />
+
+          {/* Bottom separator */}
+          <div className="absolute inset-x-0 bottom-0 h-1 bg-gradient-to-r from-transparent via-gold/40 to-transparent" />
+
+          {/* Content */}
+          <div className="relative z-10 w-full px-6 md:px-12 lg:px-20">
+            <div className="w-full text-center">
+              <h2 className="font-display text-3xl font-bold tracking-tight text-white md:text-5xl leading-tight mb-6">
                 Trusted Accounting & Tax Support Starts Here
               </h2>
-              <p className="text-base md:text-lg text-white animate-fade-in [animation-delay:100ms] leading-relaxed max-w-3xl mx-auto mb-10">
-                Learn how Henleaze Tax Consultancy can help manage your accounting, tax and financial responsibilities with confidence. Speak with the team today to discuss your requirements and discover the right solution for your needs.
+
+              <p className="text-base md:text-lg text-white leading-relaxed max-w-3xl mx-auto mb-10">
+                Learn how Henleaze Tax Consultancy can help manage your accounting,
+                tax and financial responsibilities with confidence. Speak with the
+                team today to discuss your requirements and discover the right
+                solution for your needs.
               </p>
-              <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row animate-fade-in [animation-delay:200ms]">
-                <Button size="lg" asChild className="bg-gold hover:bg-gold-light text-navy font-semibold shadow-lg hover:shadow-gold/30 transition-all duration-300">
-                  <Link to="/contact" className="flex items-center">
+
+              <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
+                <Button
+                  size="lg"
+                  asChild
+                  className="bg-gold hover:bg-gold-light text-navy font-semibold"
+                >
+                  <Link to="/contact">
                     Book Your Free Consultation
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
                 </Button>
-                <Button size="lg" variant="outline" asChild className="border-white/30 text-white bg-navy hover:bg-white/10 hover:text-gold hover:border-gold">
+
+                <Button
+                  size="lg"
+                  variant="outline"
+                  asChild
+                  className="border-white/30 text-white bg-navy hover:bg-white/10 hover:text-gold hover:border-gold"
+                >
                   <a href="tel:+44 7949 956279">
                     <Phone className="mr-2 h-4 w-4" />
                     +44 7949 956279
@@ -491,7 +514,6 @@ const About = () => {
             </div>
           </div>
         </section>
-
       </Layout>
     </>
   );
