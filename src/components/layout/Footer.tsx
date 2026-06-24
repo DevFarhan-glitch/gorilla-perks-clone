@@ -83,11 +83,11 @@ const Footer = () => {
             <div>
               <h4 className="font-bold text-gold mb-6 text-base tracking-wide">Contact</h4>
               <div className="flex flex-col space-y-4">
-                <div className="flex items-start space-x-3 hover:translate-x-1 transition-transform duration-300">
+                <div className="flex items-start space-x-3 hover:translate-x-1 transition-transform duration-300 hover: text-gold">
                   <MapPin className="h-5 w-5 text-gold mt-0.5 shrink-0" />
-                  <span className="text-sm text-white/70 leading-relaxed">
-                    Park House Business Centre, 10 Park Street<br />
-                    Bristol, England, BS1 5HX
+                  <span className="text-sm text-white/70 leading-relaxed hover:text-gold transition-colors duration-300">
+                    CEED House, 97-107 Wilder Street, St Pauls<br />
+                    Bristol, England, BS2 8QU
                   </span>
                 </div>
                 <a href="tel:+447949956279" className="flex items-center space-x-3 group hover:translate-x-1 transition-all duration-300">

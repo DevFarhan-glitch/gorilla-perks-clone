@@ -1,108 +1,646 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import { Check, ArrowRight, Scale, Building2, UserCheck, Shield, ClipboardCheck, ClipboardList } from "lucide-react";
+import {
+  Check,
+  ArrowRight,
+  Shield,
+  Users,
+  Clock,
+  Phone,
+  ArrowUpRight,
+  Building2,
+  Scale,
+  ClipboardCheck,
+  ClipboardList,
+  UserCheck,
+  Coins,
+  ShieldCheck,
+  Briefcase,
+  TrendingUp
+} from "lucide-react";
 import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import CTASection from "@/components/home/CTASection";
 
-const features = [
+const services = [
   {
     icon: Building2,
-    title: "Registered Office",
-    description: "Provide your business with a professional image while we handle all your official statutory mail.",
+    title: "Registered Office Service",
+    description:
+      "We provide a professional address for your company’s official correspondence, helping you maintain a credible business presence while ensuring important statutory mail is handled securely. We also provide registered office services for businesses that need a professional UK address for official correspondence and compliance purposes.",
+    included: [
+      "Use of a professional registered address",
+      "Handling of official statutory correspondence",
+      "Mail forwarding and notification support"
+    ]
   },
   {
     icon: ClipboardCheck,
-    title: "Confirmation Statements",
-    description: "Electronic filing of your annual confirmation statements to ensure your company remains in good standing.",
+    title: "Confirmation Statement Filing",
+    description:
+      "Every UK company must submit an annual confirmation statement to remain compliant with Companies House requirements. We handle the full process of filing a confirmation statement online, ensuring everything is completed accurately and on time.",
+    included: [
+      "Preparation and submission of confirmation statements",
+      "Review of company details before filing",
+      "Deadline tracking and compliance support"
+    ]
   },
   {
     icon: UserCheck,
     title: "Appointment of Officers",
-    description: "Handling the paperwork for any changes to your company directors or secretary appointments.",
+    description:
+      "When changes occur within your company structure, such as directors or secretaries, we handle the necessary filings to keep your records accurate and up to date.",
+    included: [
+      "Director appointments and resignations",
+      "Company secretary updates",
+      "Companies House filings"
+    ]
   },
   {
-    icon: Shield,
+    icon: Coins,
     title: "Share Management",
-    description: "Maintenance of your company's share register and processing of any share transfers or allotments.",
+    description:
+      "We help maintain clear and accurate records of your company’s share structure, including any changes in ownership or share distribution.",
+    included: [
+      "Share transfers",
+      "New share allotments",
+      "Maintenance of share registers"
+    ]
   },
   {
     icon: ClipboardList,
-    title: "Statutory Registers",
-    description: "Ensuring all your company's internal registers are kept up to date as required by the Companies Act.",
+    title: "Statutory Registers Management",
+    description:
+      "Companies are required to maintain up-to-date statutory records under UK law. We ensure your internal registers remain properly organised and compliant, supporting the correct maintenance of statutory registers in line with legal requirements.",
+    included: [
+      "Maintenance of statutory company records",
+      "Updates in line with Companies Act requirements",
+      "Ongoing compliance support"
+    ]
   },
   {
     icon: Scale,
-    title: "Company Incorporations",
-    description: "Fast and professional setup of new limited companies with all necessary documentation.",
+    title: "Company Incorporation Services",
+    description:
+      "Starting a new business is a major step and we make the incorporation process simple and efficient, ensuring all legal requirements are completed correctly from the start.",
+    included: [
+      "Limited company formation",
+      "Companies House registration",
+      "Setup documentation and guidance"
+    ]
+  }
+];
+
+const pillars = [
+  {
+    num: "01",
+    title: "Reliable Ongoing Support",
+    description:
+      "We stay on top of your company’s ongoing obligations, helping ensure key filings and updates are handled on time and without stress."
   },
+  {
+    num: "02",
+    title: "Clear Communication",
+    description:
+      "We explain requirements in simple terms so you always understand what needs to be done and why it matters."
+  },
+  {
+    num: "03",
+    title: "Attention to Detail",
+    description:
+      "From company records to statutory filings, accuracy is at the core of everything we do to help keep your business compliant."
+  },
+  {
+    num: "04",
+    title: "Support You Can Rely On",
+    description:
+      "Whether you need regular assistance or help with specific company changes, we’re available when you need us most."
+  }
+];
+
+const audience = [
+  {
+    icon: Scale,
+    name: "Startups & New Businesses",
+    description:
+      "We help new companies get set up correctly from the beginning, ensuring all essential filings and records are in place."
+  },
+  {
+    icon: TrendingUp,
+    name: "Small & Medium-Sized Businesses",
+    description:
+      "For growing businesses, we provide ongoing support to keep company records updated and compliance requirements under control."
+  },
+  {
+    icon: Building2,
+    name: "Limited Companies",
+    description:
+      "We work with UK limited companies that need help managing statutory obligations, filings and company structure updates."
+  },
+  {
+    icon: Users,
+    name: "Directors & Business Owners",
+    description:
+      "We also support individual directors who want reliable help managing their company responsibilities without handling everything themselves."
+  }
 ];
 
 const CompanySecretarial = () => {
   return (
     <>
       <Helmet>
-        <title>Company Secretarial Services Bristol | Professional Support</title>
+        <title>Company Secretarial Services in Bristol | Expert Support</title>
         <meta
           name="description"
-          content="Expert company secretarial services in Bristol. We handle Companies House filings and registered office services for Bristol-based limited companies."
+          content="Company secretarial services in Bristol and across the UK, supporting businesses with compliance, filings and company secretary responsibilities."
         />
       </Helmet>
       <Layout>
         {/* Hero Section */}
-        <section className="hero-gradient py-20">
-          <div className="container">
-            <div className="mx-auto max-w-3xl text-center">
-              <h1 className="font-display text-4xl font-bold tracking-tight text-primary-foreground md:text-5xl">
-                Company Secretarial Services in Bristol
-              </h1>
-              <p className="mt-6 text-lg text-primary-foreground/90">
-                Let us handle the administrative burden of running a limited company. Our secretarial services 
-                ensure you stay compliant with all Companies House requirements.
-              </p>
-              <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
-                <Button size="lg" variant="secondary" asChild>
-                  <Link to="/contact">
-                    Get Your Free Quote
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Link>
-                </Button>
+        <section className="relative overflow-hidden hero-gradient py-24 md:py-32 flex items-center">
+          {/* Background Pattern */}
+          <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAxIiBoZWlnaHQ9IjYwMSIgdmlld0JveD0iMCAwIDYwMCA2MDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj48cGF0aCBkPSJNMzYgMThjLTYuNjI3IDAtMTIgNS4zNzMtMTIgMTJzNS4zNzMgMTIgMTIgMTIgMTItNS4zNzMgMTItMTItNS4zNzMtMTItMTItMTJ6bTAgMThjLTMuMzE0IDAtNi0yLjY4Ni02LTZzMi42ODYtNiA2LTYgNiAyLjY4NiA2IDYtMi42ODYgNi02IDZ6IiBmaWxsPSIjZmZmIiBmaWxsLW9wYWNpdHk9Ii4wMyIvPjwvZz48L3N2Zz4=')] opacity-40" />
+
+          {/* Decorative Glows */}
+          <div className="absolute -top-40 -left-40 w-96 h-96 bg-gold/10 blur-3xl rounded-full" />
+          <div className="absolute -bottom-40 -right-40 w-96 h-96 bg-navy-light/40 blur-3xl rounded-full" />
+
+          {/* Gold Accent Line */}
+          <div className="absolute top-0 left-0 right-0 h-1 gold-gradient" />
+
+          <div className="container relative z-10">
+            <div className="grid gap-12 lg:grid-cols-12 items-center">
+              {/* Hero Content */}
+              <div className="lg:col-span-7 text-center lg:text-left">
+                <div className="mb-6 flex items-center justify-center lg:justify-start">
+                  <div className="h-8 w-1 bg-gold rounded-full mr-3" />
+                  <span className="text-gold font-bold uppercase tracking-[0.2em] text-xs">
+                    Specialist Company Administration
+                  </span>
+                </div>
+
+                <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-tight">
+                  Company Secretarial Services
+                  <span className="block text-gold mt-2">in Bristol</span>
+                </h1>
+
+                <p className="mt-8 text-lg text-white/85 leading-relaxed max-w-2xl">
+                  Running a company comes with ongoing administrative and legal responsibilities that need to be handled
+                  accurately and on time. From maintaining statutory records to meeting filing deadlines, these tasks are
+                  essential for keeping your business compliant and well-organised.
+                </p>
+
+                <p className="mt-4 text-base text-white/75 leading-relaxed max-w-2xl">
+                  At Henleaze Tax Consultancy, we support businesses in Bristol and across the UK with practical company
+                  secretarial support. Whether you need help managing routine compliance tasks or ongoing company
+                  administration, we’re here to make the process straightforward and stress-free.
+                </p>
+
+                <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                  <Button
+                    size="lg"
+                    className="bg-gold hover:bg-gold-light text-navy font-bold rounded-full px-8 py-6 transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(212,175,55,0.4)] group"
+                    asChild
+                  >
+                    <Link to="/contact" className="flex items-center">
+                      Speak to a Company Secretary
+                      <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                    </Link>
+                  </Button>
+                  <Button
+                    size="lg"
+                    variant="outline"
+                    className="border-white/30 text-white bg-white/5 hover:bg-navy hover:text-white rounded-full px-8 py-6 transition-all duration-300"
+                    asChild
+                  >
+                    <Link to="/pricing">View Our Pricing</Link>
+                  </Button>
+                </div>
+              </div>
+
+              {/* Hero Right Visual Column */}
+              <div className="lg:col-span-5 hidden lg:block">
+                <div className="relative p-8 rounded-[2rem] bg-white/5 border border-white/10 backdrop-blur-xl shadow-2xl overflow-hidden group hover:border-gold/30 transition-all duration-500 hover:-translate-y-2">
+                  {/* Top glowing edge */}
+                  <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-gold to-transparent opacity-80" />
+
+                  <p className="text-xl font-bold text-white mb-6">Expert Secretarial Support</p>
+
+                  <div className="space-y-4">
+                    {[
+                      {
+                        title: "Registered Office Address",
+                        text: "Professional business address & mail handling",
+                        icon: Building2
+                      },
+                      {
+                        title: "Confirmation Statements",
+                        text: "Annual filing & deadline tracking",
+                        icon: ClipboardCheck
+                      },
+                      {
+                        title: "Officer Appointments",
+                        text: "Director & secretary changes filed",
+                        icon: UserCheck
+                      },
+                      {
+                        title: "Share Management",
+                        text: "Transfers & registers maintenance",
+                        icon: Coins
+                      }
+                    ].map((item, index) => (
+                      <div
+                        key={index}
+                        className="flex gap-4 p-4 rounded-2xl bg-white/5 border border-white/5 hover:bg-white/10 hover:border-white/10 transition-all duration-300"
+                      >
+                        <div className="flex-shrink-0 h-10 w-10 rounded-xl bg-gold/10 flex items-center justify-center text-gold">
+                          <item.icon className="h-5 w-5" />
+                        </div>
+                        <div>
+                          <p className="text-sm font-bold text-white leading-tight">{item.title}</p>
+                          <p className="text-xs text-white/60 mt-1">{item.text}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+
+                  {/* Trust indicator line */}
+                  <div className="mt-6 pt-6 border-t border-white/10 flex items-center justify-between text-white/80">
+                    <span className="text-xs font-semibold uppercase tracking-wider text-gold">
+                      Companies House Compliant
+                    </span>
+                    <span className="text-xs">Bristol &amp; Nationwide Support</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Features */}
-        <section className="py-20">
-          <div className="container">
-            <div className="mx-auto max-w-2xl text-center">
-              <h2 className="font-display text-3xl font-bold tracking-tight text-foreground">
-                Stay Compliant with Ease
+        {/* Services Section */}
+        <section className="relative overflow-hidden py-24 bg-gradient-to-b from-slate-50 via-white to-slate-50">
+          <div className="absolute top-24 left-0 w-80 h-80 bg-gold/5 rounded-full blur-3xl pointer-events-none" />
+          <div className="absolute bottom-24 right-0 w-80 h-80 bg-navy/5 rounded-full blur-3xl pointer-events-none" />
+          <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-gold/40 to-transparent" />
+
+          <div className="container relative z-10">
+            <div className="mx-auto max-w-3xl text-center">
+              <div className="mb-4 inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gold/10 border border-gold/25 text-gold text-xs font-bold uppercase tracking-wider">
+                <ClipboardCheck className="h-3.5 w-3.5" />
+                Services &amp; Compliance
+              </div>
+
+              <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-navy leading-tight mt-3">
+                Our Company Secretarial Services
               </h2>
-              <p className="mt-4 text-lg text-muted-foreground">
-                Professional support for your company's statutory requirements.
+
+              <div className="w-20 h-1 bg-gold mx-auto my-6 rounded-full" />
+
+              <p className="text-lg text-gray-600 leading-relaxed max-w-2xl mx-auto">
+                Managing statutory requirements is an important part of running a limited company. Our company secretarial
+                support helps you stay compliant, keep accurate records and handle essential filings without unnecessary stress.
               </p>
             </div>
-            <div className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-              {features.map((feature, index) => (
-                <Card key={index} className="card-shadow">
-                  <CardHeader>
-                    <div className="mb-2 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-secondary text-primary">
-                      <feature.icon className="h-6 w-6" />
-                    </div>
-                    <CardTitle className="font-display">{feature.title}</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <CardDescription className="text-base">{feature.description}</CardDescription>
-                  </CardContent>
-                </Card>
-              ))}
+
+            <div className="mt-16 grid gap-8 md:grid-cols-2 xl:grid-cols-3">
+              {services.map((service, index) => {
+                const IconComponent = service.icon;
+                return (
+                  <Card
+                    key={index}
+                    className="group relative overflow-hidden rounded-[2rem] border border-gold/15 bg-gradient-to-br from-slate-50 via-white to-gold/10 shadow-[0_10px_30px_rgba(15,23,42,0.06)] transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_25px_60px_rgba(15,23,42,0.12)] hover:border-gold/35"
+                  >
+                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(202,169,87,0.20),transparent_35%),radial-gradient(circle_at_bottom_left,rgba(15,23,42,0.08),transparent_42%)] pointer-events-none" />
+                    <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-gold/20 via-gold to-gold/20 opacity-90" />
+                    <div className="absolute -top-20 -right-20 h-40 w-40 rounded-full bg-gold/15 blur-3xl transition-all duration-500 group-hover:bg-gold/25" />
+                    <div className="absolute -top-20 -right-20 h-40 w-40 rounded-full bg-gold/10 blur-3xl transition-all duration-500 group-hover:bg-gold/15" />
+
+                    <CardHeader className="p-8 pb-0 relative z-10">
+                      <div className="mb-6 flex items-start justify-between gap-4">
+                        <div className="inline-flex items-center gap-2 rounded-full bg-gold/10 px-3 py-1 text-[11px] font-bold uppercase tracking-widest text-gold">
+                          <ArrowUpRight className="h-3.5 w-3.5" />
+                          Specialist
+                        </div>
+
+                        <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-navy/5 via-white to-gold/10 text-gold ring-1 ring-slate-200 transition-all duration-500 group-hover:scale-110 group-hover:rotate-6 group-hover:bg-gold group-hover:text-navy group-hover:ring-gold/40">
+                          <IconComponent className="h-7 w-7 transition-transform duration-500 group-hover:scale-110" />
+                        </div>
+                      </div>
+
+                      <CardTitle className="font-display text-2xl font-bold text-navy leading-snug transition-colors duration-300 group-hover:text-gold">
+                        {service.title}
+                      </CardTitle>
+                    </CardHeader>
+
+                    <CardContent className="p-8 pt-5">
+                      <CardDescription className="text-gray-600 text-sm leading-relaxed mb-6">
+                        {service.description}
+                      </CardDescription>
+
+                      <div className="mb-5 rounded-2xl border border-slate-100 bg-slate-50/70 p-4">
+                        <p className="text-[11px] font-bold uppercase tracking-wider text-navy mb-3">
+                          What&apos;s included
+                        </p>
+                        <ul className="space-y-2.5">
+                          {service.included.map((item, idx) => (
+                            <li key={idx} className="flex items-start gap-2.5">
+                              <div className="mt-1 h-4 w-4 rounded-full bg-gold/15 flex items-center justify-center flex-shrink-0 text-gold">
+                                <Check className="h-2.5 w-2.5 stroke-[3px]" />
+                              </div>
+                              <span className="text-sm text-gray-700 leading-tight">{item}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+
+                      <div className="flex items-center justify-between pt-2">
+                        <span className="text-xs font-semibold text-gray-500">Tailored support</span>
+
+                        <Link
+                          to="/contact"
+                          className="group relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-navy px-4 py-2 text-sm font-bold text-white shadow-md transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_14px_28px_rgba(15,23,42,0.18)]"
+                        >
+                          <span className="absolute inset-0 bg-gradient-to-r from-gold/0 via-white/20 to-gold/0 translate-x-[-120%] transition-transform duration-700 group-hover:translate-x-[120%]" />
+                          <span className="relative">Enquire Now</span>
+                          <span className="relative flex h-6 w-6 items-center justify-center rounded-full bg-gold text-navy transition-all duration-300 group-hover:translate-x-1 group-hover:scale-110">
+                            <ArrowRight className="h-3.5 w-3.5" />
+                          </span>
+                        </Link>
+                      </div>
+                    </CardContent>
+                  </Card>
+                );
+              })}
             </div>
           </div>
         </section>
 
-        <CTASection />
+        {/* Why Choose Section */}
+        <section className="relative overflow-hidden py-24 bg-gradient-to-br from-navy via-navy-light to-navy-dark">
+          {/* Background pattern */}
+          <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0zNiAxOGMtNi42MjcgMC0xMiA1LjM3My0xMiAxMnM1LjM3MyAxMiAxMiAxMiAxMi01LjM3MyAxMi0xMi01LjM3My0xMi0xMi0xMnptMCAxOGMtMy4zMTQgMC02LTIuNjg2LTYtNnMyLjY4Ni02IDYtNiA2IDIuNjg2IDYgNi0yLjY4NiA2LTYgNnoiIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iLjAzIi8+PC9nPjwvc3ZnPg==')] opacity-40" />
+          {/* Gold accent top line */}
+          <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-transparent via-gold to-transparent" />
+          {/* Decorative glow blobs */}
+          <div className="absolute -top-32 -left-32 w-96 h-96 bg-gold/10 blur-3xl rounded-full pointer-events-none" />
+          <div className="absolute -bottom-32 -right-32 w-96 h-96 bg-navy-light/60 blur-3xl rounded-full pointer-events-none" />
+
+          <div className="container relative z-10">
+            {/* Section label */}
+            <div className="mb-12 flex items-center justify-center">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gold/10 border border-gold/25 text-gold text-xs font-bold uppercase tracking-wider">
+                <Shield className="h-3.5 w-3.5" />
+                Why Choose Specialist Support
+              </div>
+            </div>
+
+            <div className="grid gap-12 lg:grid-cols-12 items-start">
+              {/* ── LEFT SIDEBAR ── */}
+              <div className="lg:col-span-4 lg:sticky lg:top-28 space-y-8">
+                {/* Glass card */}
+                <div className="relative rounded-[2rem] bg-white/5 border border-white/10 backdrop-blur-xl p-8 overflow-hidden group hover:border-gold/30 transition-all duration-500">
+                  {/* Top shimmer line */}
+                  <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-gold to-transparent opacity-80" />
+
+                  <h2 className="font-display text-3xl md:text-4xl font-bold tracking-tight text-white leading-tight">
+                    Why Choose Henleaze for Company Secretarial Support?
+                  </h2>
+
+                  <div className="w-16 h-0.5 bg-gold rounded-full my-6" />
+
+                  <p className="text-base text-white/80 leading-relaxed">
+                    Company secretarial work is often time-sensitive and detail-driven, where even small mistakes can lead
+                    to compliance issues or missed deadlines. Having the right support in place helps you stay organised
+                    and confident that everything is being handled correctly.
+                  </p>
+
+                  <p className="text-sm text-white/70 leading-relaxed mt-4">
+                    At Henleaze Tax Consultancy, we focus on making these responsibilities simple and manageable for
+                    business owners. We take care of the administrative burden so you can focus on running and growing
+                    your business.
+                  </p>
+
+                  <div className="mt-8">
+                    <Link
+                      to="/pricing"
+                      className="group/btn relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-gold px-6 py-3 text-sm font-bold text-navy shadow-lg transition-all duration-300 hover:bg-gold-light hover:scale-105 hover:shadow-[0_0_24px_rgba(212,175,55,0.4)]"
+                    >
+                      <span className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 translate-x-[-120%] transition-transform duration-700 group/btn-hover:translate-x-[120%]" />
+                      <span className="relative">View Our Pricing</span>
+                      <span className="relative flex h-6 w-6 items-center justify-center rounded-full bg-navy/20 transition-all duration-300 group-hover/btn:translate-x-1">
+                        <ArrowRight className="h-3.5 w-3.5" />
+                      </span>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+
+              {/* ── RIGHT: PILLAR CARDS ── */}
+              <div className="lg:col-span-8 grid gap-5 sm:grid-cols-2">
+                {pillars.map((pillar, index) => (
+                  <div
+                    key={index}
+                    className="group relative overflow-hidden rounded-[1.75rem] bg-white/5 border border-white/10 p-7 transition-all duration-500 hover:-translate-y-1.5 hover:bg-white/10 hover:border-gold/30 hover:shadow-[0_20px_50px_rgba(0,0,0,0.25)]"
+                  >
+                    {/* Top accent on hover */}
+                    <div className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-transparent via-gold to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                    {/* Glow blob */}
+                    <div className="absolute -top-10 -right-10 h-28 w-28 rounded-full bg-gold/10 blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+
+                    <div className="relative z-10">
+                      {/* Number badge */}
+                      <div className="mb-5 inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-gold/10 border border-gold/20 text-gold font-display font-extrabold text-sm tracking-tight transition-all duration-500 group-hover:bg-gold group-hover:text-navy group-hover:scale-110 group-hover:rotate-6 group-hover:border-gold">
+                        {pillar.num}
+                      </div>
+
+                      <h3 className="font-display text-lg font-bold text-white mb-3 leading-snug transition-colors duration-300 group-hover:text-gold">
+                        {pillar.title}
+                      </h3>
+
+                      <p className="text-sm text-white/70 leading-relaxed transition-colors duration-300 group-hover:text-white/90">
+                        {pillar.description}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Supporting Businesses Section */}
+        <section className="relative overflow-hidden py-20 bg-gradient-to-b from-slate-50 via-white to-slate-50">
+          <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-gold/40 to-transparent" />
+          <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-gold/20 to-transparent" />
+          <div className="absolute top-0 right-0 w-80 h-80 bg-gold/5 rounded-full blur-3xl pointer-events-none" />
+
+          <div className="container relative z-10">
+            {/* Two-column sidebox card */}
+            <div className="relative overflow-hidden rounded-[2.5rem] bg-white border border-gold/15 shadow-[0_20px_60px_rgba(15,23,42,0.08)] flex flex-col lg:flex-row">
+              {/* Gold left stripe */}
+              <div className="absolute top-0 left-0 bottom-0 w-1 bg-gradient-to-b from-gold/40 via-gold to-gold/40 rounded-l-[2.5rem]" />
+
+              {/* LEFT - icon + label */}
+              <div className="relative flex-shrink-0 flex flex-col items-center justify-center gap-6 px-10 py-12 lg:py-16 bg-gradient-to-br from-navy via-navy-light to-navy-dark lg:w-72 xl:w-80">
+                {/* Dot pattern */}
+                <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAxIiBoZWlnaHQ9IjYwMSIgdmlld0JveD0iMCAwIDYwMCA2MDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj48cGF0aCBkPSJNMzYgMThjLTYuNjI3IDAtMTIgNS4zNzMtMTIgMTJzNS4zNzMgMTIgMTIgMTIgMTItNS4zNzMgMTItMTItNS4zNzMtMTItMTItMTJ6bTAgMThjLTMuMzE0IDAtNi0yLjY4Ni02LTZzMi42ODYtNiA2LTYgNiAyLjY4NiA2IDYtMi42ODYgNi0yLTYgNnoiIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iLjAzIi8+PC9nPjwvc3ZnPg==')] opacity-50" />
+                <div className="relative z-10 flex flex-col items-center text-center gap-4">
+                  <div className="inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-gold/15 border border-gold/25 text-gold">
+                    <Building2 className="h-8 w-8" />
+                  </div>
+                  <div className="h-px w-12 bg-gold/40 rounded-full" />
+                  <p className="text-xs font-bold uppercase tracking-[0.2em] text-gold">Our Reach</p>
+                  <p className="text-white/70 text-sm leading-relaxed">Bristol &amp; across the UK</p>
+                </div>
+              </div>
+
+              {/* RIGHT - text content */}
+              <div className="flex-1 px-8 py-12 lg:px-12 lg:py-14 xl:px-16 flex flex-col justify-center">
+                <div className="mb-4 inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gold/10 border border-gold/25 text-gold text-xs font-bold uppercase tracking-wider w-fit">
+                  <Users className="h-3.5 w-3.5" />
+                  Nationwide Support
+                </div>
+
+                <h2 className="font-display text-2xl md:text-3xl font-bold tracking-tight text-navy leading-tight mb-4">
+                  Supporting Businesses Across Bristol &amp; the UK
+                </h2>
+
+                <div className="w-14 h-0.5 bg-gold rounded-full mb-6" />
+
+                <div className="space-y-4 text-gray-600 leading-relaxed text-base">
+                  <p>
+                    While many of our clients are based in Bristol, we also work with businesses across the UK who need
+                    reliable company secretarial support.
+                  </p>
+                  <p>
+                    From day-to-day administrative tasks to ongoing compliance requirements, we help ensure your company
+                    records are kept accurate and your statutory obligations are met without stress or confusion.
+                  </p>
+                  <p>
+                    Whether you’re a new business setting things up for the first time or an established company looking
+                    for dependable ongoing support, we provide clear guidance and consistent assistance whenever you need
+                    it.
+                  </p>
+                </div>
+
+                <div className="mt-8">
+                  <Link
+                    to="/contact"
+                    className="group relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-navy px-7 py-3.5 text-sm font-bold text-white shadow-md transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_14px_28px_rgba(15,23,42,0.18)]"
+                  >
+                    <span className="absolute inset-0 bg-gradient-to-r from-gold/0 via-white/15 to-gold/0 translate-x-[-120%] transition-transform duration-700 group-hover:translate-x-[120%]" />
+                    <span className="relative">Speak to Our Team</span>
+                    <span className="relative flex h-6 w-6 items-center justify-center rounded-full bg-gold text-navy transition-all duration-300 group-hover:translate-x-1 group-hover:scale-110">
+                      <ArrowRight className="h-3.5 w-3.5" />
+                    </span>
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Who We Work With Section */}
+        <section className="py-24 bg-white relative">
+          <div className="container relative z-10">
+            <div className="mx-auto max-w-3xl text-center">
+              <h2 className="font-display text-3xl md:text-4xl font-bold tracking-tight text-navy leading-tight">
+                Who We Work With
+              </h2>
+              <div className="w-20 h-1 bg-gold mx-auto my-6 rounded-full" />
+              <p className="text-lg text-gray-600 leading-relaxed max-w-2xl mx-auto">
+                We provide company secretarial support to a wide range of businesses, from new startups to established
+                companies that need ongoing compliance assistance.
+              </p>
+            </div>
+            <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4 mt-16">
+              {audience.map((item, index) => {
+                const IconComponent = item.icon;
+                return (
+                  <div
+                    key={index}
+                    className="group relative overflow-hidden rounded-[2rem] border border-slate-200/70 bg-gradient-to-br from-white via-slate-50 to-gold/10 p-8 shadow-[0_10px_30px_rgba(15,23,42,0.06)] transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_25px_60px_rgba(15,23,42,0.12)] hover:border-gold/30"
+                  >
+                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(202,169,87,0.16),transparent_38%),radial-gradient(circle_at_bottom_left,rgba(15,23,42,0.06),transparent_45%)] opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+                    <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-gold/20 via-gold to-gold/20 opacity-80" />
+                    <div className="absolute -top-16 -right-16 h-32 w-32 rounded-full bg-gold/10 blur-3xl transition-all duration-500 group-hover:bg-gold/20" />
+
+                    <div className="relative z-10">
+                      <div className="mb-6 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-navy/5 via-white to-gold/10 text-navy ring-1 ring-slate-200 transition-all duration-500 group-hover:scale-110 group-hover:rotate-6 group-hover:bg-gold group-hover:text-navy group-hover:ring-gold/40">
+                        <IconComponent className="h-7 w-7 transition-transform duration-500 group-hover:scale-110" />
+                      </div>
+
+                      <h3 className="font-display text-xl font-bold text-navy mb-3 transition-colors duration-300 group-hover:text-gold">
+                        {item.name}
+                      </h3>
+
+                      <p className="text-sm text-gray-600 leading-relaxed">{item.description}</p>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* Ready to Simplify Section (Bottom CTA) */}
+        <section className="relative w-full py-32 overflow-hidden">
+          {/* Full-bleed background */}
+          <div className="absolute inset-0 -z-10">
+            <img src="/cta-consult.png" alt="Professional tax consultation" className="w-full h-full object-cover" />
+            <div className="absolute inset-0 bg-navy/85" />
+            <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/80 to-navy/60" />
+          </div>
+          {/* Gold accent lines top & bottom */}
+          <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-transparent via-gold to-transparent" />
+          <div className="absolute inset-x-0 bottom-0 h-1 bg-gradient-to-r from-transparent via-gold/40 to-transparent" />
+
+          <div className="container relative z-10 text-center">
+            <h2 className="font-display text-3xl font-bold tracking-tight text-white md:text-4xl leading-tight mb-6">
+              Ready to Simplify Your Company Administration?
+            </h2>
+
+            <div className="max-w-3xl mx-auto space-y-4 text-white/90 mb-10 leading-relaxed text-base md:text-lg">
+              <p>
+                Keeping up with company filings, records and compliance requirements can quickly become time-consuming
+                when you’re focused on running your business. Having the right support in place helps you stay organised
+                and avoid unnecessary stress.
+              </p>
+              <p>
+                At Henleaze Tax Consultancy, we make company secretarial responsibilities straightforward, so you can stay
+                compliant and confident that everything is being handled properly.
+              </p>
+              <p className="font-semibold text-white">
+                Get in touch with our team today to discuss your requirements and find the right level of support for
+                your business.
+              </p>
+            </div>
+
+            <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
+              <Button
+                size="lg"
+                asChild
+                className="bg-gold hover:bg-gold-light text-navy font-bold rounded-full px-8 py-6 shadow-lg hover:shadow-gold/30 hover:scale-105 transition-all duration-300"
+              >
+                <Link to="/contact" className="flex items-center">
+                  Book a Consultation
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </Button>
+              <Button
+                size="lg"
+                variant="outline"
+                asChild
+                className="border-white/30 text-white bg-white/5 hover:bg-white/10 hover:text-gold hover:border-gold rounded-full px-8 py-6 backdrop-blur-sm"
+              >
+                <a href="tel:+447949956279" className="flex items-center">
+                  <Phone className="mr-2 h-4 w-4" />
+                  +44 7949 956279
+                </a>
+              </Button>
+            </div>
+          </div>
+        </section>
       </Layout>
     </>
   );

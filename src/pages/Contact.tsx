@@ -145,9 +145,9 @@ const Contact = () => {
                       <h4 className="font-display font-bold text-navy text-lg">Office Address</h4>
                       <p className="text-xs text-muted-foreground mb-1">Visit us in Bristol</p>
                       <p className="text-sm font-semibold text-muted-foreground leading-relaxed">
-                        Park House Business Centre, 10 Park Street
+                        CEED House, 97-107 Wilder Street, St Pauls
                         <br />
-                        Bristol, England, BS1 5HX
+                        Bristol, England, BS2 8QU
                       </p>
                     </div>
                   </div>
@@ -161,9 +161,9 @@ const Contact = () => {
                       <h4 className="font-display font-bold text-navy text-lg">Business Hours</h4>
                       <p className="text-xs text-muted-foreground mb-1">UK standard operating hours</p>
                       <p className="text-sm font-semibold text-muted-foreground leading-relaxed">
-                        Monday – Friday: 9:00am – 6:00pm
+                        Monday – Saturday: 9:00am – 6:00pm
                         <br />
-                        Saturday & Sunday: Closed
+                        Sunday: Closed
                       </p>
                     </div>
                   </div>
