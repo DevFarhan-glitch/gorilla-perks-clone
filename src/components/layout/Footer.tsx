@@ -31,7 +31,7 @@ const Footer = () => {
               </p>
               <div className="flex space-x-4">
                 <a
-                  href="https://www.facebook.com/share/1HjX6hmtDX/"
+                  href="https://www.facebook.com/people/Henleaze-Tax-Consultancy-Limited/61587364742113/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="h-9 w-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-gold hover:text-navy hover:-translate-y-1 transition-all duration-300"
@@ -39,7 +39,7 @@ const Footer = () => {
                   <Facebook className="h-4 w-4" />
                 </a>
                 <a
-                  href="https://www.instagram.com/henleazetaxconsultancy?igsh=MTFyNjJnZGJzeXozaA=="
+                  href="https://www.instagram.com/henleazetaxconsultancy"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="h-9 w-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-gold hover:text-navy hover:-translate-y-1 transition-all duration-300"

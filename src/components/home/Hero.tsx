@@ -122,7 +122,7 @@ const Hero = () => {
             <div className="relative">
               <img
                 src="/hero-main.png"
-                alt="Professional tax consultants at work"
+                alt="Accountants in Bristol"
                 className="rounded-3xl shadow-2xl w-full"
               />
 

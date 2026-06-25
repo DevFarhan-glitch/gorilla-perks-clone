@@ -80,17 +80,20 @@ const team = [
     name: "Muhammad Irfan",
     role: "Senior Accountant",
     image: "/irfan.jpeg",
+    alt: "Muhammad Irfan",
     bio: "Muhammad brings strong expertise in UK accounting, taxation, and compliance. He works closely with individuals, sole traders, and limited companies, providing practical advice and dependable financial support to help clients meet their obligations and grow with confidence.",
   },
   {
     name: "Adeel",
     role: "Accountant",
     image: "/adeel.jfif",
+    alt: "Adeel",
     bio: "AAT Level 3 Diploma qualified. Adeel specializes in preparing financial statements, VAT returns, and providing day-to-day accounting support to ensure smooth business operations for our clients.",
   },
   {
     name: "Danial",
     role: "Accountant",
+    alt: "Danial",
     image: "/danial.jpg",
     bio: "AAT Level 3 Diploma qualified, Danial provides expert financial guidance, including accounting, VAT returns, and daily bookkeeping support to help clients manage and grow their businesses efficiently.",
   },
@@ -98,6 +101,7 @@ const team = [
     name: "Shamas",
     role: "Accountant",
     image: "/shamas.png",
+    alt: "Shamas",
     bio: "AAT Level 3 Diploma qualified, Shamas delivers reliable accounting services, including financial statements, VAT returns, and daily bookkeeping support to help clients run their businesses smoothly.",
   },
 ];

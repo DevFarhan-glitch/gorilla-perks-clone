@@ -118,6 +118,8 @@ const Services = () => {
       path: "/services/contractor-accountants",
       icon: Briefcase,
       image: "landlord-guide.png",
+      alt: "Contractor Accountants in Bristol",
+
     },
     {
       title: "Small Business Accounting",
@@ -127,6 +129,7 @@ const Services = () => {
       path: "/services/small-business-accountants",
       icon: Building2,
       image: "cta-consult.png",
+      alt: "Small Business Accountants in Bristol",
     },
     {
       title: "Landlord Services",
@@ -136,6 +139,8 @@ const Services = () => {
       path: "/services/landlord-accountants",
       icon: Home,
       image: "cgt-guide.png",
+      alt: "Landlord Accountants in Bristol",
+
     },
     {
       title: "Payroll & HR",
@@ -145,6 +150,8 @@ const Services = () => {
       path: "/services/payroll-and-hr-services",
       icon: Users,
       image: "R&D Tax Credits.jpg",
+      alt: "Payroll and HR Services in Bristol",
+
     },
     {
       title: "Tax Planning",
@@ -154,6 +161,9 @@ const Services = () => {
       path: "/services/tax-planning",
       icon: Calculator,
       image: "small-business-guide.png",
+      alt: "Tax Planning in Bristol",
+
+
     },
     {
       title: "VAT & Bookkeeping",
@@ -163,6 +173,8 @@ const Services = () => {
       path: "/services/vat-and-bookkeeping-accounting-services",
       icon: FileText,
       image: "office-bg.png",
+      alt: "VAT & Bookkeeping Accounting Services in Bristol",
+
     },
     {
       title: "Company Secretarial",
@@ -172,6 +184,8 @@ const Services = () => {
       path: "/services/company-secretarial-services",
       icon: Scale,
       image: "Company Secretarial.jpg",
+      alt: "Company Secretarial Services in Bristol",
+
     },
     {
       title: "R&D Tax Credits",
@@ -181,6 +195,8 @@ const Services = () => {
       path: "/services/rd-tax-credit-claim",
       icon: Zap,
       image: "tax-saving-guide.jpg",
+      alt: "R&D Tax Credit Claim in Bristol"
+
     },
     {
       title: "Personal Tax",
@@ -190,6 +206,8 @@ const Services = () => {
       path: "/services/personal-tax-and-self-assessment-service",
       icon: UserCheck,
       image: "personal tax.jpg",
+      alt: "Personal Tax & Self-Assessment Service in Bristol ",
+
     },
     {
       title: "Outsourced Accounting",
@@ -199,6 +217,8 @@ const Services = () => {
       path: "/services/outsourced-accounting-services",
       icon: Users,
       image: "outsourced accounting.jpg",
+      alt: "Outsourced Accounting Services in Bristol",
+
     },
   ];
 
