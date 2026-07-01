@@ -50,7 +50,7 @@ const BlogSection = () => {
                     {post.readTime}
                   </span>
                 </div>
-                <Link to={`/blog/${post.id}`}>
+                <Link to={post.slug || `/blog/${post.id}`}>
                   <h3 className="font-display text-lg font-semibold text-foreground mb-2 group-hover:text-gold transition-colors line-clamp-2">
                     {post.title}
                   </h3>
@@ -64,7 +64,7 @@ const BlogSection = () => {
                     {post.author}
                   </span>
                   <Link
-                    to={`/blog/${post.id}`}
+                    to={post.slug || `/blog/${post.id}`}
                     className="text-sm font-medium text-gold hover:text-gold-light transition-colors flex items-center gap-1"
                   >
                     Read More

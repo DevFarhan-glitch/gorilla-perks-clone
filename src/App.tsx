@@ -23,6 +23,8 @@ import RDClaims from "./pages/services/RDClaims";
 import PersonalTax from "./pages/services/PersonalTax";
 import NotFound from "./pages/NotFound";
 import Article from "./pages/Article";
+import WhatIsAContractorAccountant from "./pages/WhatIsAContractorAccountant";
+import HowToChooseContractorAccountant from "./pages/HowToChooseContractorAccountant";
 import CustomCursor from "./components/ui/CustomCursor";
 import ScrollToTop from "./components/ui/ScrollToTop";
 
@@ -61,6 +63,8 @@ const App = () => (
             <Route path="/services/personal-tax-and-self-assessment-service" element={<PersonalTax />} />
             <Route path="/services/outsourced-accounting-services" element={<OutsourcedAccounting />} />
             <Route path="/blog/:id" element={<Article />} />
+            <Route path="/what-is-a-contractor-accountant" element={<WhatIsAContractorAccountant />} />
+            <Route path="/how-to-choose-contractor-accountant" element={<HowToChooseContractorAccountant />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           </Routes>
         </BrowserRouter>

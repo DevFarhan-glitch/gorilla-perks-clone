@@ -9,7 +9,7 @@ const Footer = () => {
       {/* Main Footer */}
       <div className="bg-navy text-white py-16">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-12">
 
             {/* Column 1 – Branding */}
             <div>
@@ -79,7 +79,16 @@ const Footer = () => {
               </nav>
             </div>
 
-            {/* Column 4 – Contact */}
+            {/* Column 4 – Insights */}
+            <div>
+              <h4 className="font-bold text-gold mb-6 text-base tracking-wide">Insights</h4>
+              <nav className="flex flex-col space-y-3">
+                <Link to="/what-is-a-contractor-accountant" className={linkStyle}>What is a Contractor Accountant?</Link>
+                <Link to="/how-to-choose-contractor-accountant" className={linkStyle}>How to Choose a Contractor Accountant</Link>
+              </nav>
+            </div>
+
+            {/* Column 5 – Contact */}
             <div>
               <h4 className="font-bold text-gold mb-6 text-base tracking-wide">Contact</h4>
               <div className="flex flex-col space-y-4">
