@@ -88,11 +88,11 @@ const HowToChooseContractorAccountant = () => {
             {/* Back link */}
             <div className="mb-6">
               <Link
-                to="/#blog"
+                to="/blog"
                 className="inline-flex items-center gap-2 text-sm font-semibold text-gray-700 bg-gray-100 hover:bg-amber-500 hover:text-white border border-gray-200 hover:border-amber-500 px-4 py-2 rounded-full transition-all duration-200 group shadow-sm hover:shadow-md"
               >
                 <ArrowLeft className="h-4 w-4 transition-transform duration-200 group-hover:-translate-x-0.5" />
-                Back to Insights
+                Back to Blog
               </Link>
             </div>
 
@@ -144,16 +144,14 @@ const HowToChooseContractorAccountant = () => {
                     <li key={section.id}>
                       <button
                         onClick={() => scrollToSection(section.id)}
-                        className={`group flex items-baseline gap-3 w-full text-left text-sm transition-colors duration-150 ${
-                          activeSection === section.id
+                        className={`group flex items-baseline gap-3 w-full text-left text-sm transition-colors duration-150 ${activeSection === section.id
                             ? "text-amber-700 font-semibold"
                             : "text-gray-600 hover:text-gray-900"
-                        }`}
+                          }`}
                       >
                         <span
-                          className={`text-xs font-mono shrink-0 w-5 ${
-                            activeSection === section.id ? "text-amber-600" : "text-gray-400"
-                          }`}
+                          className={`text-xs font-mono shrink-0 w-5 ${activeSection === section.id ? "text-amber-600" : "text-gray-400"
+                            }`}
                         >
                           {String(idx + 1).padStart(2, "0")}
                         </span>
@@ -193,6 +191,14 @@ const HowToChooseContractorAccountant = () => {
                 9 Key Factors to Consider When Choosing a Contractor Accountant
               </h2>
               <div className="w-10 h-0.5 bg-amber-500 mb-8" />
+
+              <div className="my-8 rounded-xl overflow-hidden shadow-md max-w-2xl mx-auto">
+                <img
+                  src="/key reasons.jpeg"
+                  alt="Key reasons why contractors need a specialist accountant"
+                  className="w-full h-auto object-cover"
+                />
+              </div>
 
               {/* Factor 1 */}
               <h3 id="factor-1" className="scroll-mt-28 text-2xl font-bold text-gray-900 mt-10 mb-3">
@@ -291,8 +297,15 @@ const HowToChooseContractorAccountant = () => {
                 Some firms assign you a single named accountant who gets to know your business. Others operate a shared team model where you deal with whoever picks up your query on any given day.
               </p>
               <p className="text-gray-700 leading-relaxed mb-4">
-                Neither model is automatically wrong, but for contractors — particularly those with complex tax situations, IR35 considerations or multiple income streams — having a dedicated point of contact makes a real difference. Your accountant should know your contracts, your working arrangements and your financial goals without you having to explain them from scratch every time you call.
+                Neither model is automatically wrong, but for contractors particularly those with complex tax situations, IR35 considerations or multiple income streams having a dedicated point of contact makes a real difference. Your accountant should know your contracts, your working arrangements and your financial goals without you having to explain them from scratch every time you call.
               </p>
+              <div className="my-8 rounded-xl overflow-hidden shadow-md max-w-2xl mx-auto">
+                <img
+                  src="/blog-3.jpeg"
+                  alt="Dedicated Accountant vs Shared Team"
+                  className="w-full h-auto object-cover"
+                />
+              </div>
               <div className="bg-amber-50 border-l-4 border-amber-400 pl-5 py-3 mb-8 rounded-r-lg">
                 <p className="text-amber-900 text-sm font-medium m-0">
                   💡 Ask before signing up: <em>"Will I have a named accountant and what happens if they are unavailable?"</em>
@@ -304,7 +317,7 @@ const HowToChooseContractorAccountant = () => {
                 6. Cloud Accounting Software Included
               </h3>
               <p className="text-gray-700 leading-relaxed mb-4">
-                A good contractor accountant will use market-standard cloud accounting software — typically <strong>FreeAgent</strong>, <strong>Xero</strong> or <strong>QuickBooks</strong>. These platforms give you real-time visibility of your finances, easy mobile expense tracking, automated VAT return preparation and instant access to key figures like your corporation tax liability.
+                A good contractor accountant will use market-standard cloud accounting software typically <strong>FreeAgent</strong>, <strong>Xero</strong> or <strong>QuickBooks</strong>. These platforms give you real-time visibility of your finances, easy mobile expense tracking, automated VAT return preparation and instant access to key figures like your corporation tax liability.
               </p>
               <p className="text-gray-700 leading-relaxed mb-3">A few things worth checking:</p>
               <ul className="list-disc pl-6 space-y-2 text-gray-700 mb-4">
@@ -313,7 +326,7 @@ const HowToChooseContractorAccountant = () => {
                 <li>Can you access your own data easily if you decide to move to a different firm?</li>
               </ul>
               <p className="text-gray-700 leading-relaxed mb-8">
-                At Henleaze, we use <strong>FreeAgent as standard</strong>, included in your monthly fee — no hidden software charges.
+                At Henleaze, we use <strong>FreeAgent as standard</strong>, included in your monthly fee no hidden software charges.
               </p>
 
               {/* Factor 7 */}
@@ -327,7 +340,7 @@ const HowToChooseContractorAccountant = () => {
               <ul className="list-disc pl-6 space-y-2 text-gray-700 mb-4">
                 <li>What is your typical response time for client queries?</li>
                 <li>Do I contact you directly by phone and email, or through a ticketing system?</li>
-                <li>What happens around busy periods like January — do response times change?</li>
+                <li>What happens around busy periods like January do response times change?</li>
               </ul>
               <blockquote className="border-l-4 border-gray-300 pl-6 italic text-gray-600 text-base leading-relaxed mb-8">
                 "How a firm handles your questions before you become a client is usually a good indicator of how they will handle them after."
@@ -342,10 +355,10 @@ const HowToChooseContractorAccountant = () => {
               </p>
               <p className="text-gray-700 leading-relaxed mb-3">Check the following:</p>
               <ul className="list-disc pl-6 space-y-2 text-gray-700 mb-4">
-                <li><strong>Google Reviews</strong> — look for volume and consistency, not just the star rating</li>
-                <li><strong>Trustpilot</strong> — useful for spotting patterns in how complaints are handled</li>
-                <li><strong>ContractorUK forums</strong> — one of the most honest sources of contractor feedback in the UK</li>
-                <li><strong>Personal recommendations</strong> — ask fellow contractors who they use and whether they would recommend them</li>
+                <li><strong>Google Reviews</strong> look for volume and consistency, not just the star rating</li>
+                <li><strong>Trustpilot</strong> useful for spotting patterns in how complaints are handled</li>
+                <li><strong>ContractorUK forums</strong> one of the most honest sources of contractor feedback in the UK</li>
+                <li><strong>Personal recommendations</strong> ask fellow contractors who they use and whether they would recommend them</li>
               </ul>
               <div className="bg-gray-50 border border-gray-200 rounded-lg p-4 mb-8">
                 <p className="text-sm text-gray-700 m-0">
@@ -355,13 +368,13 @@ const HowToChooseContractorAccountant = () => {
 
               {/* Factor 9 */}
               <h3 id="factor-9" className="scroll-mt-28 text-2xl font-bold text-gray-900 mt-10 mb-3">
-                9. Online vs Local — What Suits You?
+                9. Online vs Local What Suits You?
               </h3>
               <p className="text-gray-700 leading-relaxed mb-4">
                 Most contractor accountants in the UK now operate primarily online and for the majority of contractors this works perfectly well. Online-only firms tend to have lower overheads and pass some of that saving on through their pricing. Communication happens via email, phone and video call and cloud software means your records are always accessible.
               </p>
               <p className="text-gray-700 leading-relaxed mb-4">
-                That said, some contractors prefer face-to-face contact — particularly when dealing with more complex matters like IR35 disputes, tax planning or significant business changes. If that applies to you, a local specialist firm is worth considering.
+                That said, some contractors prefer face-to-face contact particularly when dealing with more complex matters like IR35 disputes, tax planning or significant business changes. If that applies to you, a local specialist firm is worth considering.
               </p>
               <p className="text-gray-700 leading-relaxed mb-8">
                 For Bristol-based contractors, working with a local firm means your accountant understands the local contractor market, is available to meet in person when needed and is easy to reach without relying entirely on digital communication.
@@ -373,7 +386,7 @@ const HowToChooseContractorAccountant = () => {
               </h2>
               <div className="w-10 h-0.5 bg-amber-500 mb-6" />
               <p className="text-gray-700 leading-relaxed mb-4">
-                Bristol has a growing and active contracting community across technology, engineering and the creative industries. At Henleaze Tax Consultancy, we work exclusively with contractors, freelancers and limited company directors — so everything we do is built around the way contractors actually work.
+                Bristol has a growing and active contracting community across technology, engineering and the creative industries. At Henleaze Tax Consultancy, we work exclusively with contractors, freelancers and limited company directors so everything we do is built around the way contractors actually work.
               </p>
               <ul className="list-disc pl-6 space-y-2 text-gray-700 mb-6">
                 <li>Fixed monthly fees with no hidden extras</li>
@@ -387,7 +400,7 @@ const HowToChooseContractorAccountant = () => {
                 <div className="flex-1">
                   <p className="font-bold text-lg mb-1">Book a free consultation</p>
                   <p className="text-gray-300 text-sm leading-relaxed">
-                    Talk to a specialist contractor accountant today. No pressure, no jargon — just straightforward advice.
+                    Talk to a specialist contractor accountant today. No pressure, no jargon just straightforward advice.
                   </p>
                 </div>
                 <Button

@@ -71,6 +71,7 @@ const Footer = () => {
               <h4 className="font-bold text-gold mb-6 text-base tracking-wide">Quick Links</h4>
               <nav className="flex flex-col space-y-3">
                 <Link to="/about" className={linkStyle}>About Us</Link>
+                <Link to="/blog" className={linkStyle}>Blog</Link>
                 <Link to="/calculator" className={linkStyle}>Tax Calculator</Link>
                 <Link to="/pricing" className={linkStyle}>Pricing</Link>
                 <Link to="/careers" className={linkStyle}>Careers</Link>
@@ -85,6 +86,7 @@ const Footer = () => {
               <nav className="flex flex-col space-y-3">
                 <Link to="/what-is-a-contractor-accountant" className={linkStyle}>What is a Contractor Accountant?</Link>
                 <Link to="/how-to-choose-contractor-accountant" className={linkStyle}>How to Choose a Contractor Accountant</Link>
+                <Link to="/why-contractors-need-specialist-accountant" className={linkStyle}>Why Contractors Need a Specialist Accountant</Link>
               </nav>
             </div>
 
