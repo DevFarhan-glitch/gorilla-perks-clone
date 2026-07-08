@@ -35,5 +35,29 @@ export const blogPosts: BlogPost[] = [
     category: "Contractor Accounting",
     image: "/choose-contractor-accountant.png",
     slug: "/how-to-choose-contractor-accountant"
+  },
+  {
+    id: 8,
+    title: "How Much Does a Contractor Accountant Cost in the UK",
+    excerpt: "Wondering how much a contractor accountant costs? Learn about contractor accountant fees, what's included, pricing models and what to expect in the UK.",
+    content: "Redirecting...",
+    author: "Henleaze Team",
+    date: "July 2026",
+    readTime: "8 min read",
+    category: "Contractor Accounting",
+    image: "/factors.jpeg",
+    slug: "/how-much-does-a-contractor-accountant-cost-in-the-uk"
+  },
+  {
+    id: 9,
+    title: "6 Best Accounting Firms for Contractors in the UK (2026)",
+    excerpt: "Compare the top accounting firms for contractors in the UK. Explore specialist services, IR35 expertise, pricing and choose the right accountant today.",
+    content: "Redirecting...",
+    author: "Henleaze Team",
+    date: "July 2026",
+    readTime: "9 min read",
+    category: "Contractor Accounting",
+    image: "/top-accounting-firms.jpeg",
+    slug: "/top-accounting-firms-for-contractors-uk"
   }
 ];

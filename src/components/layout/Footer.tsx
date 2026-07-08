@@ -87,6 +87,8 @@ const Footer = () => {
                 <Link to="/what-is-a-contractor-accountant" className={linkStyle}>What is a Contractor Accountant?</Link>
                 <Link to="/how-to-choose-contractor-accountant" className={linkStyle}>How to Choose a Contractor Accountant</Link>
                 <Link to="/why-contractors-need-specialist-accountant" className={linkStyle}>Why Contractors Need a Specialist Accountant</Link>
+                <Link to="/how-much-does-a-contractor-accountant-cost-in-the-uk" className={linkStyle}>How Much Does a Contractor Accountant Cost?</Link>
+                <Link to="/top-accounting-firms-for-contractors-uk" className={linkStyle}>6 Best Accounting Firms for Contractors</Link>
               </nav>
             </div>
 

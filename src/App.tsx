@@ -26,6 +26,8 @@ import Article from "./pages/Article";
 import WhatIsAContractorAccountant from "./pages/WhatIsAContractorAccountant";
 import HowToChooseContractorAccountant from "./pages/HowToChooseContractorAccountant";
 import WhyContractorsNeedSpecialistAccountant from "./pages/WhyContractorsNeedSpecialistAccountant";
+import HowMuchDoesContractorAccountantCost from "./pages/HowMuchDoesContractorAccountantCost";
+import TopAccountingFirmsForContractors from "./pages/TopAccountingFirmsForContractors";
 import Blog from "./pages/Blog";
 import CustomCursor from "./components/ui/CustomCursor";
 import ScrollToTop from "./components/ui/ScrollToTop";
@@ -69,6 +71,8 @@ const App = () => (
             <Route path="/what-is-a-contractor-accountant" element={<WhatIsAContractorAccountant />} />
             <Route path="/how-to-choose-contractor-accountant" element={<HowToChooseContractorAccountant />} />
             <Route path="/why-contractors-need-specialist-accountant" element={<WhyContractorsNeedSpecialistAccountant />} />
+            <Route path="/how-much-does-a-contractor-accountant-cost-in-the-uk" element={<HowMuchDoesContractorAccountantCost />} />
+            <Route path="/top-accounting-firms-for-contractors-uk" element={<TopAccountingFirmsForContractors />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           </Routes>
         </BrowserRouter>

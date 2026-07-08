@@ -53,6 +53,38 @@ const allBlogs = [
     featured: false,
     tags: ["IR35", "Tax Efficiency", "HMRC", "Limited Company"],
   },
+  {
+    id: "how-much-does-a-contractor-accountant-cost-in-the-uk",
+    slug: "/how-much-does-a-contractor-accountant-cost-in-the-uk",
+    title: "How Much Does a Contractor Accountant Cost?",
+    subtitle: "Contractor Accountant Fees (2026): A Complete Guide for UK Contractors",
+    excerpt:
+      "Wondering how much a contractor accountant costs? Learn about contractor accountant fees, what's included, pricing models and what to expect in the UK.",
+    category: "Contractor Accounting Guide",
+    categoryColor: "blue",
+    image: "/factors.jpeg",
+    author: "Henleaze Team",
+    date: "July 2026",
+    readTime: "8 min read",
+    featured: false,
+    tags: ["Fees", "Pricing Models", "Tax Relief", "Limited Company"],
+  },
+  {
+    id: "top-accounting-firms-for-contractors-uk",
+    slug: "/top-accounting-firms-for-contractors-uk",
+    title: "6 Best Accounting Firms for Contractors in the UK (2026)",
+    subtitle: "Top Accounting Firms for Contractors in the UK (2026 Guide)",
+    excerpt:
+      "Compare the top accounting firms for contractors in the UK. Explore specialist services, IR35 expertise, pricing and choose the right accountant today.",
+    category: "Contractor Accounting Guide",
+    categoryColor: "blue",
+    image: "/top-accounting-firms.jpeg",
+    author: "Henleaze Team",
+    date: "July 2026",
+    readTime: "9 min read",
+    featured: false,
+    tags: ["Accounting Firms", "IR35", "Fees", "Contractor Accounting"],
+  },
 ];
 
 const categoryColors: Record<string, { badge: string }> = {
@@ -242,18 +274,16 @@ const Blog = () => {
                 <button
                   key={cat}
                   onClick={() => setActiveFilter(cat)}
-                  className={`text-sm px-4 py-2 rounded-full font-medium transition-all duration-200 border ${
-                    activeFilter === cat
-                      ? "bg-amber-500 text-white border-amber-500 shadow-md"
-                      : "bg-white text-gray-600 border-gray-200 hover:border-amber-400 hover:text-amber-700"
-                  }`}
+                  className={`text-sm px-4 py-2 rounded-full font-medium transition-all duration-200 border ${activeFilter === cat
+                    ? "bg-amber-500 text-white border-amber-500 shadow-md"
+                    : "bg-white text-gray-600 border-gray-200 hover:border-amber-400 hover:text-amber-700"
+                    }`}
                 >
                   {cat}
                   {cat === "All" && (
                     <span
-                      className={`ml-1.5 text-xs rounded-full px-1.5 py-0.5 ${
-                        activeFilter === cat ? "bg-white/20 text-white" : "bg-gray-100 text-gray-500"
-                      }`}
+                      className={`ml-1.5 text-xs rounded-full px-1.5 py-0.5 ${activeFilter === cat ? "bg-white/20 text-white" : "bg-gray-100 text-gray-500"
+                        }`}
                     >
                       {allBlogs.length}
                     </span>
