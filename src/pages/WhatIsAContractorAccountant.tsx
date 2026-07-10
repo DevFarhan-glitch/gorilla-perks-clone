@@ -271,17 +271,16 @@ const WhatIsAContractorAccountant = () => {
                 <li>A landlord juggling property income with contracting</li>
                 <li>Leaving full-time employment and seeking to maximise take-home pay</li>
               </ul>
-              <figure className="my-8">
+              <div className="my-12 p-4 sm:p-6 bg-gray-50 border border-gray-200 rounded-2xl shadow-sm">
                 <img
                   src="/Who-needs.jpeg"
                   alt="Who needs a contractor accountant"
-                  className="w-full rounded-lg object-cover"
-                  style={{ maxHeight: "380px", objectPosition: "center" }}
+                  className="w-full h-auto rounded-xl object-contain shadow-sm bg-white"
                 />
-                <figcaption className="text-sm text-center text-gray-500 mt-3">
+                <p className="text-center text-sm text-gray-500 mt-4 italic">
                   A growing number of UK professionals work through their own limited companies.
-                </figcaption>
-              </figure>
+                </p>
+              </div>
 
               {/* Section 4 */}
               <h2 id="services" className="scroll-mt-28 text-3xl font-bold text-gray-900 mt-12 mb-4">
@@ -314,14 +313,13 @@ const WhatIsAContractorAccountant = () => {
                 Understanding IR35 Legislation
               </h2>
               <div className="w-10 h-0.5 bg-amber-500 mb-6" />
-              <figure className="my-8">
+              <div className="my-12 p-4 sm:p-6 bg-gray-50 border border-gray-200 rounded-2xl shadow-sm">
                 <img
                   src="/ir35.jpeg"
                   alt="Understanding IR35 legislation"
-                  className="w-full rounded-lg object-cover"
-                  style={{ maxHeight: "360px", objectPosition: "center" }}
+                  className="w-full h-auto rounded-xl object-contain shadow-sm bg-white"
                 />
-              </figure>
+              </div>
               <p className="text-gray-700 leading-relaxed mb-4">
                 IR35 is a piece of UK tax legislation officially called the Intermediaries Legislation introduced in 2000. Its purpose is to prevent <strong>"disguised employment"</strong>: a situation where someone is effectively working as an employee but operating through a limited company to pay less tax.
               </p>

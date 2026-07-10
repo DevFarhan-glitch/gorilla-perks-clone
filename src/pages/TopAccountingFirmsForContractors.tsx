@@ -68,12 +68,11 @@ const TopAccountingFirmsForContractors = () => {
 
       <Layout>
         {/* ── FEATURED IMAGE ─────────────────────────────────────────── */}
-        <div className="w-full" style={{ paddingTop: "72px" }}>
+        <div className="w-full shadow-inner" style={{ paddingTop: "72px" }}>
           <img
             src="/top-accounting-firms.jpeg"
             alt="Best Accounting Firms for Contractors in the UK"
-            className="w-full object-cover"
-            style={{ maxHeight: "520px", objectPosition: "center" }}
+            className="w-full h-auto max-h-[520px] object-contain bg-gray-50 mx-auto"
           />
         </div>
 
@@ -256,7 +255,7 @@ const TopAccountingFirmsForContractors = () => {
                 Gorilla Accounting
               </h2>
               <p className="text-sm text-gray-500 mb-2">
-                Website: <a href="https://gorillaaccounting.com/" target="_blank" rel="noopener noreferrer" className="text-amber-700 underline hover:text-amber-900">https://gorillaaccounting.com/</a>
+                Website: gorillaaccounting.com
               </p>
               <p className="text-gray-700 leading-relaxed mb-4">
                 Founded in 2015, Gorilla has built one of the highest Trustpilot ratings of any UK accountancy firm, 5.0 out of 5 from over 2,100 verified reviews. Their standout feature is a Client Service Guarantee: respond to any query before 3pm the same day, or they pay you £50.
@@ -277,7 +276,7 @@ const TopAccountingFirmsForContractors = () => {
                 Clever Accounts
               </h2>
               <p className="text-sm text-gray-500 mb-2">
-                Website: <a href="https://cleveraccountants.co.uk/" target="_blank" rel="noopener noreferrer" className="text-amber-700 underline hover:text-amber-900">https://cleveraccountants.co.uk/</a>
+                Website: cleveraccountants.co.uk
               </p>
               <p className="text-gray-700 leading-relaxed mb-4">
                 Clever Accounts offers something genuinely unique in the market — their IR35 FLEX solution allows contractors to move between limited company and umbrella arrangements within a single monthly package. For contractors whose IR35 status changes between contracts, this removes a significant administrative headache.
@@ -298,7 +297,7 @@ const TopAccountingFirmsForContractors = () => {
                 SG Accounting
               </h2>
               <p className="text-sm text-gray-500 mb-2">
-                Website: <a href="https://sg-accounting.co.uk/" target="_blank" rel="noopener noreferrer" className="text-amber-700 underline hover:text-amber-900">https://sg-accounting.co.uk/</a>
+                Website: sg-accounting.co.uk
               </p>
               <p className="text-gray-700 leading-relaxed mb-4">
                 SG Accounting consistently appears on trusted contractor directories including ContractorUK and ITContracting. They are known for offering solid, reliable contractor accounting at one of the most competitive monthly rates in the market, making them a popular choice for contractors who want quality without paying premium prices.
@@ -340,7 +339,7 @@ const TopAccountingFirmsForContractors = () => {
                 Integro Accounting
               </h2>
               <p className="text-sm text-gray-500 mb-2">
-                Website: <a href="https://www.integroaccounting.com/" target="_blank" rel="noopener noreferrer" className="text-amber-700 underline hover:text-amber-900">https://www.integroaccounting.com/</a>
+                Website: integroaccounting.com
               </p>
               <p className="text-gray-700 leading-relaxed mb-4">
                 Integro Accounting is a specialist contractor accountant with a strong following among IT and technology contractors. They appear consistently on ContractorEye and ITContracting recommended lists and offer a flexible introductory pricing structure that makes switching straightforward.
@@ -361,7 +360,7 @@ const TopAccountingFirmsForContractors = () => {
                 Dolan Accountancy
               </h2>
               <p className="text-sm text-gray-500 mb-2">
-                Website: <a href="https://www.dolanaccountancy.com/" target="_blank" rel="noopener noreferrer" className="text-amber-700 underline hover:text-amber-900">https://www.dolanaccountancy.com/</a>
+                Website: dolanaccountancy.com
               </p>
               <p className="text-gray-700 leading-relaxed mb-4">
                 Dolan Accountancy has built a specialist reputation particularly among locum doctors, dentists, nurses and other healthcare professionals contracting through limited companies. Their understanding of the specific IR35 considerations in the NHS and private healthcare sector sets them apart from generalist contractor accountants.

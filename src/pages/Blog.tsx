@@ -85,6 +85,21 @@ const allBlogs = [
     featured: false,
     tags: ["Accounting Firms", "IR35", "Fees", "Contractor Accounting"],
   },
+  {
+    id: "contractor-accountant-services-in-the-uk",
+    slug: "/contractor-accountant-services-in-the-uk",
+    title: "Contractor Accounting Services in the UK: What's Included?",
+    subtitle: "What Services Do Contractor Accountants Provide in the UK?",
+    excerpt: "Wondering what contractor accounting services cover? From IR35 compliance to payroll & tax planning, here is everything contractor accountant provides in UK.",
+    category: "Contractor Accounting Guide",
+    categoryColor: "blue",
+    image: "/services.jpeg",
+    author: "Henleaze Team",
+    date: "July 2026",
+    readTime: "8 min read",
+    featured: false,
+    tags: ["Services", "IR35", "Tax Planning", "Payroll"],
+  },
 ];
 
 const categoryColors: Record<string, { badge: string }> = {

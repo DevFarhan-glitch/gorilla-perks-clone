@@ -103,12 +103,11 @@ const WhyContractorsNeedSpecialistAccountant = () => {
 
       <Layout>
         {/* ── FEATURED IMAGE ─────────────────────────────────────────── */}
-        <div className="w-full" style={{ paddingTop: "72px" }}>
+        <div className="w-full shadow-inner" style={{ paddingTop: "72px" }}>
           <img
             src="/why-is-a-specialist-accountant-important-for-uk-contractors.jpeg"
             alt="Why Contractors Need a Specialist Accountant"
-            className="w-full object-cover"
-            style={{ maxHeight: "520px", objectPosition: "center" }}
+            className="w-full h-auto max-h-[520px] object-contain bg-gray-50 mx-auto"
           />
         </div>
 
@@ -175,16 +174,14 @@ const WhyContractorsNeedSpecialistAccountant = () => {
                     <li key={section.id}>
                       <button
                         onClick={() => scrollToSection(section.id)}
-                        className={`group flex items-baseline gap-3 w-full text-left text-sm transition-colors duration-150 ${
-                          activeSection === section.id
+                        className={`group flex items-baseline gap-3 w-full text-left text-sm transition-colors duration-150 ${activeSection === section.id
                             ? "text-amber-700 font-semibold"
                             : "text-gray-600 hover:text-gray-900"
-                        }`}
+                          }`}
                       >
                         <span
-                          className={`text-xs font-mono shrink-0 w-5 ${
-                            activeSection === section.id ? "text-amber-600" : "text-gray-400"
-                          }`}
+                          className={`text-xs font-mono shrink-0 w-5 ${activeSection === section.id ? "text-amber-600" : "text-gray-400"
+                            }`}
                         >
                           {String(idx + 1).padStart(2, "0")}
                         </span>
@@ -232,14 +229,13 @@ const WhyContractorsNeedSpecialistAccountant = () => {
               </p>
 
               {/* Key Reasons Image */}
-              <div className="my-10 rounded-xl overflow-hidden shadow-md">
+              <div className="my-12 w-full">
                 <img
-                  src="/key-reasons-why-contractors-need-a-specialist-accountant.jpeg"
+                  src="/key-reasons-why.jpeg"
                   alt="Key Reasons Why Contractors Need a Specialist Accountant"
-                  className="w-full object-cover"
-                  style={{ maxHeight: "420px", objectPosition: "center" }}
+                  className="w-full h-auto object-contain shadow-md"
                 />
-                <p className="text-center text-xs text-gray-400 mt-3 mb-1 italic px-4">
+                <p className="text-center text-sm text-gray-500 mt-4 italic">
                   Key reasons why UK contractors benefit from a specialist accountant
                 </p>
               </div>
@@ -484,9 +480,8 @@ const WhyContractorsNeedSpecialistAccountant = () => {
                     >
                       <span>{faq.q}</span>
                       <ChevronDown
-                        className={`h-4 w-4 text-amber-500 shrink-0 ml-4 transition-transform duration-200 ${
-                          openFaq === idx ? "rotate-180" : ""
-                        }`}
+                        className={`h-4 w-4 text-amber-500 shrink-0 ml-4 transition-transform duration-200 ${openFaq === idx ? "rotate-180" : ""
+                          }`}
                       />
                     </button>
                     {openFaq === idx && (

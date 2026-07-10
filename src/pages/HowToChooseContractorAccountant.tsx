@@ -74,7 +74,7 @@ const HowToChooseContractorAccountant = () => {
         {/* ── FEATURED IMAGE ─────────────────────────────────────────── */}
         <div className="w-full" style={{ paddingTop: "72px" }}>
           <img
-            src="/choose-contractor-accountant.png"
+            src="/blog-3.jpeg"
             alt="How to Choose a Contractor Accountant"
             className="w-full object-cover"
             style={{ maxHeight: "520px", objectPosition: "center" }}
@@ -145,8 +145,8 @@ const HowToChooseContractorAccountant = () => {
                       <button
                         onClick={() => scrollToSection(section.id)}
                         className={`group flex items-baseline gap-3 w-full text-left text-sm transition-colors duration-150 ${activeSection === section.id
-                            ? "text-amber-700 font-semibold"
-                            : "text-gray-600 hover:text-gray-900"
+                          ? "text-amber-700 font-semibold"
+                          : "text-gray-600 hover:text-gray-900"
                           }`}
                       >
                         <span
@@ -192,11 +192,11 @@ const HowToChooseContractorAccountant = () => {
               </h2>
               <div className="w-10 h-0.5 bg-amber-500 mb-8" />
 
-              <div className="my-8 rounded-xl overflow-hidden shadow-md max-w-2xl mx-auto">
+              <div className="my-12 p-4 sm:p-6 bg-gray-50 border border-gray-200 rounded-2xl shadow-sm">
                 <img
                   src="/key reasons.jpeg"
                   alt="Key reasons why contractors need a specialist accountant"
-                  className="w-full h-auto object-cover"
+                  className="w-full h-auto rounded-xl object-contain shadow-sm bg-white"
                 />
               </div>
 
