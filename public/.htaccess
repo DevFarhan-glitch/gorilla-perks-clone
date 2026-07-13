@@ -2,6 +2,42 @@
   RewriteEngine On
   RewriteBase /
 
+  # ── 301 REDIRECTS: Old URLs → New URLs ─────────────────────────────────────
+  # These MUST come before the HTTPS/WWW enforcement and the SPA fallback rule
+  # so that crawlers receive a proper 301 and PageRank is passed to the new URLs.
+
+  # Service pages — old slugs to new slugs
+  RewriteRule ^services/contractor/?$                             /services/contractor-accountants [R=301,L]
+  RewriteRule ^services/small-business/?$                        /services/small-business-accountants [R=301,L]
+  RewriteRule ^services/landlord/?$                              /services/landlord-accountants [R=301,L]
+  RewriteRule ^services/tax-planning-and-advice/?$               /services/tax-planning [R=301,L]
+  RewriteRule ^services/payroll/?$                               /services/payroll-and-hr-services [R=301,L]
+  RewriteRule ^services/payroll-hr/?$                            /services/payroll-and-hr-services [R=301,L]
+  RewriteRule ^services/vat-bookkeeping/?$                       /services/vat-and-bookkeeping-accounting-services [R=301,L]
+  RewriteRule ^services/vat-and-bookkeeping/?$                   /services/vat-and-bookkeeping-accounting-services [R=301,L]
+  RewriteRule ^services/bookkeeping/?$                           /services/vat-and-bookkeeping-accounting-services [R=301,L]
+  RewriteRule ^services/company-secretarial/?$                   /services/company-secretarial-services [R=301,L]
+  RewriteRule ^services/rd-tax-credits/?$                        /services/rd-tax-credit-claim [R=301,L]
+  RewriteRule ^services/r-and-d/?$                               /services/rd-tax-credit-claim [R=301,L]
+  RewriteRule ^services/personal-tax/?$                          /services/personal-tax-and-self-assessment-service [R=301,L]
+  RewriteRule ^services/self-assessment/?$                       /services/personal-tax-and-self-assessment-service [R=301,L]
+  RewriteRule ^services/outsourced-accounting/?$                 /services/outsourced-accounting-services [R=301,L]
+
+  # Blog / guide pages — common old slug patterns
+  RewriteRule ^what-is-contractor-accountant/?$                  /what-is-a-contractor-accountant [R=301,L]
+  RewriteRule ^contractor-accountant-guide/?$                    /what-is-a-contractor-accountant [R=301,L]
+  RewriteRule ^how-to-choose-a-contractor-accountant/?$          /how-to-choose-contractor-accountant [R=301,L]
+  RewriteRule ^choosing-a-contractor-accountant/?$               /how-to-choose-contractor-accountant [R=301,L]
+  RewriteRule ^why-contractors-need-specialist/?$                /why-contractors-need-specialist-accountant [R=301,L]
+  RewriteRule ^specialist-contractor-accountant/?$               /why-contractors-need-specialist-accountant [R=301,L]
+  RewriteRule ^contractor-accountant-cost/?$                     /how-much-does-a-contractor-accountant-cost-in-the-uk [R=301,L]
+  RewriteRule ^how-much-does-contractor-accountant-cost/?$       /how-much-does-a-contractor-accountant-cost-in-the-uk [R=301,L]
+  RewriteRule ^contractor-accountant-fees/?$                     /how-much-does-a-contractor-accountant-cost-in-the-uk [R=301,L]
+  RewriteRule ^top-accounting-firms-contractors/?$               /top-accounting-firms-for-contractors-uk [R=301,L]
+  RewriteRule ^best-contractor-accountants/?$                    /top-accounting-firms-for-contractors-uk [R=301,L]
+  RewriteRule ^contractor-accounting-services/?$                 /contractor-accountant-services-in-the-uk [R=301,L]
+  RewriteRule ^services/contractor-accountants-uk/?$             /contractor-accountant-services-in-the-uk [R=301,L]
+
   # Enforce HTTPS
   # If you are behind a proxy (like Hostinger's load balancer), use this:
   RewriteCond %{HTTP:X-Forwarded-Proto} !https

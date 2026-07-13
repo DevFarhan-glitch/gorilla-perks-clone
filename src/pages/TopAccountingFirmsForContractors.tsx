@@ -126,7 +126,7 @@ const TopAccountingFirmsForContractors = () => {
 
             {/* Opening paragraphs */}
             <p className="text-lg text-gray-700 leading-relaxed mb-4">
-              If you are a UK contractor looking for an accountant, the honest answer is that the best firm is not the most famous one — it is the one that genuinely specialises in contractor accounting, understands IR35 inside out and gives you a clear fixed fee with no hidden surprises.
+              If you are a UK <Link to="/what-is-a-contractor-accountant" className="text-amber-700 hover:underline">contractor looking for an accountant</Link>, the honest answer is that the best firm is not the most famous one — it is the one that genuinely specialises in <Link to="/services/contractor-accountants" className="text-amber-700 hover:underline">contractor accounting</Link>, understands IR35 inside out and gives you a clear fixed fee with no hidden surprises.
             </p>
             <p className="text-lg text-gray-700 leading-relaxed mb-4">
               This guide lists six of the top accounting firms for contractors in the UK in 2026, covering what each one is known for, who they suit best and what to expect from them. Whether you are setting up your first limited company, switching from a generalist accountant or looking for stronger IR35 support, this guide will help you find the right fit.
@@ -174,7 +174,7 @@ const TopAccountingFirmsForContractors = () => {
               <p className="text-gray-700 leading-relaxed mb-6">
                 Before getting into the list, it helps to know what separates a genuinely strong contractor accounting firm from one that just markets itself as one. The key factors are:
               </p>
-              
+
               <ul className="list-disc pl-6 space-y-2 text-gray-700 mb-6">
                 <li><strong>Contractor specialism</strong> — the firm should work primarily with limited company contractors, not just occasionally</li>
                 <li><strong>IR35 expertise</strong> — deep, current knowledge of off-payroll working rules, not just a passing mention on their website</li>
@@ -205,7 +205,7 @@ const TopAccountingFirmsForContractors = () => {
                 6 Top Accounting Firms for Contractors in the UK (2026)
               </h2>
               <div className="w-10 h-0.5 bg-amber-500 mb-6" />
-              
+
               <div className="overflow-x-auto mb-8">
                 <table className="w-full border-collapse text-sm text-gray-700 mb-2">
                   <thead>
@@ -327,11 +327,18 @@ const TopAccountingFirmsForContractors = () => {
               <ul className="list-disc pl-6 space-y-1 text-gray-700 mb-6">
                 <li>Fixed monthly fees, no hidden costs</li>
                 <li>Dedicated accountant and IR35 guidance</li>
-                <li>Salary and dividend planning, VAT, payroll, Self Assessment</li>
+                <li><Link to="/services/tax-planning" className="text-amber-700 hover:underline">Salary and dividend planning</Link>, <Link to="/services/vat-and-bookkeeping-accounting-services" className="text-amber-700 hover:underline">VAT</Link>, <Link to="/services/payroll-and-hr-services" className="text-amber-700 hover:underline">payroll</Link>, <Link to="/services/personal-tax-and-self-assessment-service" className="text-amber-700 hover:underline">Self Assessment</Link></li>
                 <li>Face-to-face meetings available locally</li>
               </ul>
-              <p className="text-sm text-gray-500 italic mb-8">
-                Accreditation: ACCA | Pricing: Fixed fee — contact for quote
+              <p className="text-sm text-gray-500 italic mb-4">
+                Accreditation: ACCA | Pricing <Link to="/pricing" className="text-amber-700 hover:underline">Fixed fee</Link> :  —  <Link to="/contact" className="text-amber-700 hover:underline">Contact for quote</Link>
+              </p>
+              <p className="text-gray-700 mb-8 font-medium">
+                Learn{" "}
+                <Link to="/contractor-accountant-services-in-the-uk" className="text-amber-700 underline hover:text-amber-900 font-semibold">
+                  what services contractor accountants provide in the UK
+                </Link>
+                .
               </p>
 
               {/* Section 7 */}
@@ -369,7 +376,7 @@ const TopAccountingFirmsForContractors = () => {
               <ul className="list-disc pl-6 space-y-1 text-gray-700 mb-6">
                 <li>Deep specialist knowledge of locum and healthcare contractor accounting</li>
                 <li>IR35 expertise specific to NHS and private sector arrangements</li>
-                <li>Salary and dividend planning for healthcare income patterns</li>
+                <li><Link to="/services/tax-planning" className="text-amber-700 hover:underline">Salary and dividend planning</Link> for healthcare income patterns</li>
                 <li>Regularly featured on top UK contractor accountant lists</li>
               </ul>
               <p className="text-sm text-gray-500 italic mb-8">
@@ -388,11 +395,11 @@ const TopAccountingFirmsForContractors = () => {
                 <li><strong>New to contracting</strong> — Gorilla Accounting and SG Accounting both offer strong onboarding support and competitive pricing, making them a solid starting point for first-time limited company directors.</li>
                 <li><strong>Complex IR35 situation</strong> — Clever Accounts is the standout choice, with their unique IR35 FLEX solution and written contract opinions included as standard.</li>
                 <li><strong>Healthcare or locum work</strong> — Dolan Accountancy has deep sector-specific expertise in NHS and private sector contractor arrangements that generalist firms cannot match.</li>
-                <li><strong>Bristol-based contractors</strong> — Henleaze Tax Consultancy offers local specialist knowledge and face-to-face availability that national online firms simply do not provide.</li>
+                <li><strong>Bristol-based contractors</strong> — <Link to="/henleazetaxconsultancy.com" className="text-amber-700 underline hover:text-amber-900 font-semibold">Henleaze Tax Consultancy</Link> offers local specialist knowledge and face-to-face availability that national online firms simply do not provide.</li>
                 <li><strong>Value for money</strong> — SG Accounting consistently offers one of the most competitive monthly rates in the market without compromising on core service quality.</li>
               </ul>
               <p className="text-gray-700 mb-8 font-medium">
-                For a full breakdown of what to look for: <Link to="/how-to-choose-contractor-accountant" className="text-amber-700 underline hover:text-amber-900 font-semibold">How to Choose a Contractor Accountant: 10 Key Factors</Link>
+                For a full breakdown of what to look for: <Link to="/how-to-choose-contractor-accountant" className="text-amber-700 underline hover:text-amber-900 font-semibold">How to Choose a Contractor Accountant: 9 Key Factors</Link>
               </p>
 
               {/* Section 10 */}
@@ -401,14 +408,14 @@ const TopAccountingFirmsForContractors = () => {
               </h2>
               <div className="w-10 h-0.5 bg-amber-500 mb-6" />
               <p className="text-gray-700 leading-relaxed mb-4">
-                Bristol has a growing contractor community across technology, engineering and financial services. At Henleaze Tax Consultancy, every client works with a dedicated accountant, pays a fixed monthly fee with no surprises and has access to face-to-face meetings when needed. We cover IR35 guidance, salary planning, VAT, Self Assessment and Companies House filings — all under one straightforward package.
+                Bristol has a growing contractor community across technology, engineering and financial services. At Henleaze Tax Consultancy, every client works with a dedicated accountant, pays a fixed monthly fee with no surprises and has access to face-to-face meetings when needed. We cover IR35 guidance, <Link to="/services/tax-planning" className="text-amber-700 underline hover:text-amber-900">salary planning</Link>, <Link to="/services/vat-and-bookkeeping-accounting-services" className="text-amber-700 underline hover:text-amber-900">VAT</Link>, <Link to="/services/personal-tax-and-self-assessment-service" className="text-amber-700 underline hover:text-amber-900">Self Assessment</Link> and <Link to="/services/company-secretarial-services" className="text-amber-700 underline hover:text-amber-900">Companies House filings</Link> — all under one straightforward package.
               </p>
-              
+
               <div className="bg-gray-900 text-white rounded-xl p-8 mb-8 flex flex-col sm:flex-row items-center gap-6">
                 <div className="flex-1">
                   <p className="font-bold text-lg mb-1">Book a free consultation with Henleaze Tax Consultancy</p>
                   <p className="text-gray-300 text-sm leading-relaxed">
-                    Get clear guidance on your contractor status, tax planning, and how we can support you.
+                    Get clear guidance on your contractor status, <Link to="/services/tax-planning" className="text-amber-400 hover:underline">tax planning</Link>, and how we can support you.
                   </p>
                 </div>
                 <Button
@@ -427,8 +434,19 @@ const TopAccountingFirmsForContractors = () => {
               <p className="text-gray-700 leading-relaxed mb-4">
                 Finding the right accounting firm as a contractor comes down to three things: genuine specialism, transparent pricing and solid IR35 knowledge. All six firms on this list meet that standard in their own way and the best choice simply depends on your situation and what matters most to you.
               </p>
-              <p className="text-gray-700 leading-relaxed mb-8">
+              <p className="text-gray-700 leading-relaxed mb-4">
                 The right contractor accountant should do more than prepare your accounts. They should help you stay compliant, minimise tax and support your business as it grows.
+              </p>
+              <p className="text-gray-700 leading-relaxed mb-8">
+                Before making your decision, it is worth understanding{" "}
+                <Link to="/how-much-does-a-contractor-accountant-cost-in-the-uk" className="text-amber-700 underline hover:text-amber-900">
+                  how much a contractor accountant costs in the UK
+                </Link>
+                {" "}and reviewing the key factors in our guide on{" "}
+                <Link to="/how-to-choose-contractor-accountant" className="text-amber-700 underline hover:text-amber-900">
+                  how to choose a contractor accountant
+                </Link>
+                .
               </p>
 
             </div>

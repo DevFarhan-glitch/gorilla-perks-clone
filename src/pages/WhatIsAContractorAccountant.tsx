@@ -149,10 +149,10 @@ const WhatIsAContractorAccountant = () => {
 
             {/* Opening paragraph */}
             <p className="text-lg text-gray-700 leading-relaxed mb-4">
-              If you've recently gone freelance, set up a limited company, or started contracting one of the first questions you'll face is: <strong>do I need a specialist accountant and what exactly do they do?</strong>
+              If you've recently gone freelance, set up a limited company, or started contracting — one of the first questions you'll face is: <strong>do I need a specialist accountant and what exactly do they do?</strong>
             </p>
             <p className="text-lg text-gray-700 leading-relaxed mb-8">
-              The short answer? A contractor accountant is not just any accountant. They're a specialist who understands how contractors work, how they get paid and critically how to keep them on the right side of HMRC. This guide walks you through everything you need to know.
+              The short answer? A <Link to="/services/contractor-accountants" className="text-amber-700 hover:underline">contractor accountant</Link> is not just any accountant. They're a specialist who understands how contractors work, how they get paid and critically how to keep them on the right side of HMRC. This guide walks you through everything you need to know.
             </p>
 
             {/* Pull quote */}
@@ -200,7 +200,7 @@ const WhatIsAContractorAccountant = () => {
                 A contractor accountant is a specialist accountant who provides tax and accounting services to people who work for themselves — typically through their own limited company, also known as a Personal Service Company (PSC).
               </p>
               <p className="text-gray-700 leading-relaxed mb-6">
-                Unlike a high-street generalist, a contractor accountant understands the specific financial and legal landscape that contractors operate in. That means things like IR35 legislation, salary and dividend planning, VAT returns and Companies House filings — all handled for you.
+                Unlike a high-street generalist, a contractor accountant understands the specific financial and legal landscape that contractors operate in. That means things like IR35 legislation, <Link to="/services/tax-planning" className="text-amber-700 hover:underline">salary and dividend planning</Link>, <Link to="/services/vat-and-bookkeeping-accounting-services" className="text-amber-700 hover:underline">VAT returns</Link> and <Link to="/services/company-secretarial-services" className="text-amber-700 hover:underline">Companies House filings</Link> — all handled for you.
               </p>
               <p className="text-gray-700 leading-relaxed mb-4">
                 They work with a wide range of self-employed professionals, including:
@@ -261,7 +261,7 @@ const WhatIsAContractorAccountant = () => {
               </h2>
               <div className="w-10 h-0.5 bg-amber-500 mb-6" />
               <p className="text-gray-700 leading-relaxed mb-4">
-                You should seriously consider a specialist contractor accountant if you are:
+                You should seriously<Link to="/why-contractors-need-specialist-accountant" className="text-amber-700 hover:underline"> consider a specialist contractor accountant</Link> if you are:
               </p>
               <ul className="list-disc pl-6 space-y-2 text-gray-700 mb-8">
                 <li>A limited company contractor (taking salary plus dividends)</li>
@@ -291,22 +291,31 @@ const WhatIsAContractorAccountant = () => {
                 A good contractor accountant doesn't just file your tax return once a year. Their service typically covers the full picture of your financial life as a contractor:
               </p>
               <ul className="list-disc pl-6 space-y-2 text-gray-700 mb-4">
-                <li><strong>Annual accounts and corporation tax return</strong>prepared and submitted to HMRC and Companies House</li>
-                <li><strong>Self Assessment (personal tax return)</strong>as a company director, you'll need this every year</li>
-                <li><strong>Payroll management</strong>setting up and running your salary through PAYE</li>
-                <li><strong>Salary and dividend planning</strong>structuring your income to be as tax-efficient as possible</li>
-                <li><strong>VAT registration and quarterly returns</strong>including advice on the Flat Rate VAT Scheme if relevant</li>
-                <li><strong>IR35 contract reviews</strong>assessing whether your contracts fall inside or outside IR35</li>
-                <li><strong>Bookkeeping</strong>keeping your records clean and up to date throughout the year</li>
-                <li><strong>Company formation</strong>setting up your limited company correctly from the start</li>
-                <li><strong>Company secretarial</strong>filing confirmation statements, updating Companies House records</li>
-                <li><strong>Tax planning advice</strong>making the most of allowable expenses, pension contributions, and reliefs</li>
+                <li><strong><Link to="/services/year-end-accounts" className="text-amber-700 hover:underline">Annual accounts and corporation tax return</Link></strong> — prepared and submitted to HMRC and Companies House</li>
+                <li><strong><Link to="/services/personal-tax-and-self-assessment-service" className="text-amber-700 hover:underline">Self Assessment (personal tax return)</Link></strong> — as a company director, you'll need this every year</li>
+                <li><strong><Link to="/services/payroll-and-hr-services" className="text-amber-700 hover:underline">Payroll management</Link></strong> — setting up and running your salary through PAYE</li>
+                <li><strong><Link to="/services/tax-planning" className="text-amber-700 hover:underline">Salary and dividend planning</Link></strong> — structuring your income to be as tax-efficient as possible</li>
+                <li><strong><Link to="/services/vat-and-bookkeeping-accounting-services" className="text-amber-700 hover:underline">VAT registration and quarterly returns</Link></strong> — including advice on the Flat Rate VAT Scheme if relevant</li>
+                <li><strong>IR35 contract reviews</strong> — assessing whether your contracts fall inside or outside IR35</li>
+                <li><strong><Link to="/services/vat-and-bookkeeping-accounting-services" className="text-amber-700 hover:underline">Bookkeeping</Link></strong> — keeping your records clean and up to date throughout the year</li>
+                <li><strong><Link to="/services/company-secretarial-services" className="text-amber-700 hover:underline">Company formation</Link></strong> — setting up your limited company correctly from the start</li>
+                <li><strong><Link to="/services/company-secretarial-services" className="text-amber-700 hover:underline">Company secretarial</Link></strong> — filing confirmation statements, updating Companies House records</li>
+                <li><strong><Link to="/services/tax-planning" className="text-amber-700 hover:underline">Tax planning advice</Link></strong> — making the most of allowable expenses, pension contributions, and reliefs</li>
               </ul>
-              <div className="bg-amber-50 border border-amber-200 rounded-lg p-4 mb-8">
+              <div className="bg-amber-50 border border-amber-200 rounded-lg p-4 mb-6">
                 <p className="text-sm text-amber-900 m-0">
-                  Some firms also offer add-ons like <strong>R&amp;D Tax Credits</strong> (if you work in tech or innovation), business insurance introductions and mortgage references — useful for contractors who often struggle to prove income to lenders.
+                  Some <Link to="/top-accounting-firms-for-contractors-uk" className="text-amber-700 underline hover:text-amber-900">
+                    accounting firms
+                  </Link>  also offer add-ons like <strong><Link to="/services/rd-tax-credit-claim" className="text-amber-700 underline hover:text-amber-900">R&amp;D Tax Credits</Link></strong> (if you work in tech or innovation), business insurance introductions and mortgage references — useful for contractors who often struggle to prove income to lenders.
                 </p>
+
               </div>
+              <p className="text-gray-700 leading-relaxed mb-8">
+                For a detailed breakdown, read our guide:{" "}
+                <Link to="/contractor-accountant-services-in-the-uk" className="text-amber-700 underline hover:text-amber-900">
+                  What services do contractor accountants provide in the UK?
+                </Link>
+              </p>
 
               {/* Section 5 */}
               <h2 id="ir35" className="scroll-mt-28 text-3xl font-bold text-gray-900 mt-12 mb-4">
@@ -321,7 +330,8 @@ const WhatIsAContractorAccountant = () => {
                 />
               </div>
               <p className="text-gray-700 leading-relaxed mb-4">
-                IR35 is a piece of UK tax legislation officially called the Intermediaries Legislation introduced in 2000. Its purpose is to prevent <strong>"disguised employment"</strong>: a situation where someone is effectively working as an employee but operating through a limited company to pay less tax.
+                <Link to="https://www.gov.uk/guidance/understanding-off-payroll-working-ir35
+                " className="text-amber-700 underline hover:text-amber-900">IR35 is a piece of UK tax legislation officially called the Intermediaries Legislation introduced in 2000.</Link>  Its purpose is to prevent <strong>"disguised employment"</strong>: a situation where someone is effectively working as an employee but operating through a limited company to pay less tax.
               </p>
               <p className="text-gray-700 leading-relaxed mb-6">
                 HMRC uses IR35 to determine whether a contractor is genuinely self-employed or is, in reality, an employee in all but name. The distinction matters enormously:
@@ -384,8 +394,8 @@ const WhatIsAContractorAccountant = () => {
               </div>
               <p className="text-sm text-gray-500 mb-8">
                 Always check what's included and what's charged as an extra — things like company formation, IR35 contract reviews or mortgage references are sometimes add-ons.{" "}
-                <Link to="/pricing" className="text-amber-700 underline hover:text-amber-900">
-                  For a detailed breakdown, read our guide: Contractor Accountant Fees →
+                <Link to="/how-much-does-a-contractor-accountant-cost-in-the-uk" className="text-amber-700 underline hover:text-amber-900">
+                  For a detailed breakdown, read our guide: Contractor Accountant Fees: How Much Does a Contractor Accountant Cost in the UK?
                 </Link>
               </p>
 
@@ -420,6 +430,12 @@ const WhatIsAContractorAccountant = () => {
                   <strong>Local Face-to-Face Option</strong> Online work is great, but consider local options if you value in-person consultations.
                 </li>
               </ol>
+              <p className="text-gray-700 leading-relaxed mb-8">
+                For a full checklist, see our guide:{" "}
+                <Link to="/how-to-choose-contractor-accountant" className="text-amber-700 underline hover:text-amber-900">
+                  How to Choose a Contractor Accountant: 9 Key Factors
+                </Link>
+              </p>
 
               {/* Section 8 */}
               <h2 id="bristol" className="scroll-mt-28 text-3xl font-bold text-gray-900 mt-12 mb-4">
@@ -463,7 +479,10 @@ const WhatIsAContractorAccountant = () => {
                 A contractor accountant isn't just someone who files your paperwork. The right one saves you money, protects you from HMRC risk, helps you structure your income efficiently and gives you peace of mind to focus on the work you're actually good at.
               </p>
               <p className="text-gray-700 leading-relaxed mb-4">
-                If you're contracting in the UK whether you're new to it or a seasoned professional working with a specialist is almost always worth it. The key is choosing one with genuine expertise in IR35, limited company accounting and contractor tax planning.
+                If you're contracting in the UK whether you're new to it or a seasoned professional working with a specialist is almost always worth it. The key is choosing one with genuine expertise in IR35, limited company accounting and contractor tax planning. For more on why specialist support matters, see our guide:{" "}
+                <Link to="/why-contractors-need-specialist-accountant" className="text-amber-700 underline hover:text-amber-900">
+                  Why Do Contractors Need a Specialist Accountant in the UK?
+                </Link>
               </p>
               <p className="text-gray-700 leading-relaxed mb-8">
                 If you're based in Bristol or looking for clear, fixed-fee support, we'd love to have a conversation. <Link to="/contact" className="text-amber-700 underline hover:text-amber-900">Get in touch with Henleaze Tax Consultancy today →</Link>
