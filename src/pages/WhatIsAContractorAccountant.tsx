@@ -291,16 +291,16 @@ const WhatIsAContractorAccountant = () => {
                 A good contractor accountant doesn't just file your tax return once a year. Their service typically covers the full picture of your financial life as a contractor:
               </p>
               <ul className="list-disc pl-6 space-y-2 text-gray-700 mb-4">
-                <li><strong><Link to="/services/year-end-accounts" className="text-amber-700 hover:underline">Annual accounts and corporation tax return</Link></strong> — prepared and submitted to HMRC and Companies House</li>
+                <li><strong>Annual accounts and corporation tax return</strong> — prepared and submitted to HMRC and Companies House</li>
                 <li><strong><Link to="/services/personal-tax-and-self-assessment-service" className="text-amber-700 hover:underline">Self Assessment (personal tax return)</Link></strong> — as a company director, you'll need this every year</li>
                 <li><strong><Link to="/services/payroll-and-hr-services" className="text-amber-700 hover:underline">Payroll management</Link></strong> — setting up and running your salary through PAYE</li>
-                <li><strong><Link to="/services/tax-planning" className="text-amber-700 hover:underline">Salary and dividend planning</Link></strong> — structuring your income to be as tax-efficient as possible</li>
-                <li><strong><Link to="/services/vat-and-bookkeeping-accounting-services" className="text-amber-700 hover:underline">VAT registration and quarterly returns</Link></strong> — including advice on the Flat Rate VAT Scheme if relevant</li>
+                <li><strong>Salary and dividend planning</strong> — structuring your income to be as tax-efficient as possible</li>
+                <li><strong>VAT registration and quarterly returns</strong> — including advice on the Flat Rate VAT Scheme if relevant</li>
                 <li><strong>IR35 contract reviews</strong> — assessing whether your contracts fall inside or outside IR35</li>
-                <li><strong><Link to="/services/vat-and-bookkeeping-accounting-services" className="text-amber-700 hover:underline">Bookkeeping</Link></strong> — keeping your records clean and up to date throughout the year</li>
-                <li><strong><Link to="/services/company-secretarial-services" className="text-amber-700 hover:underline">Company formation</Link></strong> — setting up your limited company correctly from the start</li>
-                <li><strong><Link to="/services/company-secretarial-services" className="text-amber-700 hover:underline">Company secretarial</Link></strong> — filing confirmation statements, updating Companies House records</li>
-                <li><strong><Link to="/services/tax-planning" className="text-amber-700 hover:underline">Tax planning advice</Link></strong> — making the most of allowable expenses, pension contributions, and reliefs</li>
+                <li><strong>Bookkeeping</strong> — keeping your records clean and up to date throughout the year</li>
+                <li><strong>Company formation</strong> — setting up your limited company correctly from the start</li>
+                <li><strong>Company secretarial</strong> — filing confirmation statements, updating Companies House records</li>
+                <li><strong>Tax planning advice</strong> — making the most of allowable expenses, pension contributions, and reliefs</li>
               </ul>
               <div className="bg-amber-50 border border-amber-200 rounded-lg p-4 mb-6">
                 <p className="text-sm text-amber-900 m-0">

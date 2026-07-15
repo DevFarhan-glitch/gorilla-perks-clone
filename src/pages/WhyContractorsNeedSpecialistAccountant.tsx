@@ -218,20 +218,15 @@ const WhyContractorsNeedSpecialistAccountant = () => {
               <ul className="list-disc pl-6 space-y-2 text-gray-700 mb-4">
                 <li>IR35 and off-payroll working rules</li>
                 <li><Link to="/services/tax-planning" className="text-amber-700 hover:underline">Salary and dividend planning</Link> within your company</li>
-                <li>Both a <Link to="/services/year-end-accounts" className="text-amber-700 hover:underline">corporation tax return</Link> and a personal <Link to="/services/personal-tax-and-self-assessment-service" className="text-amber-700 hover:underline">Self Assessment</Link> each year</li>
+                <li>Both a corporation tax return and a personal <Link to="/services/personal-tax-and-self-assessment-service" className="text-amber-700 hover:underline">Self Assessment</Link> each year</li>
                 <li><Link to="/services/vat-and-bookkeeping-accounting-services" className="text-amber-700 hover:underline">VAT registration</Link> and quarterly returns</li>
                 <li>Annual filings with <Link to="/services/company-secretarial-services" className="text-amber-700 hover:underline">Companies House</Link></li>
-                <li><Link to="/services/vat-and-bookkeeping-accounting-services" className="text-amber-700 hover:underline">Making Tax Digital</Link> requirements from HMRC</li>
+                <li>Making Tax Digital requirements from HMRC</li>
               </ul>
               <p className="text-gray-700 leading-relaxed mb-4">
                 A high-street accountant who handles small shops and sole traders will rarely have the depth of knowledge to manage all of this efficiently, let alone proactively.
               </p>
-              <p className="text-gray-700 leading-relaxed mb-8">
-                Unlike employees whose taxes are deducted automatically through PAYE, contractors often manage multiple tax obligations simultaneously. Running a limited company means balancing compliance, tax planning and business administration, all while delivering work to clients. For a full explanation of what a contractor accountant does, see our guide:{" "}
-                <Link to="/what-is-a-contractor-accountant" className="text-amber-700 underline hover:text-amber-900">
-                  What Is a Contractor Accountant?
-                </Link>
-              </p>
+
 
               {/* Key Reasons Image */}
               <div className="my-12 w-full">
@@ -301,17 +296,17 @@ const WhyContractorsNeedSpecialistAccountant = () => {
               </p>
               <p className="text-gray-700 leading-relaxed mb-3">A specialist contractor accountant will:</p>
               <ul className="list-disc pl-6 space-y-2 text-gray-700 mb-4">
-                <li>Structure the right <Link to="/services/tax-planning" className="text-amber-700 hover:underline">salary and dividend split</Link></li>
+                <li>Structure the right salary and dividend split</li>
                 <li>Identify all your allowable business expenses</li>
                 <li>Explore pension contributions through the company to reduce your corporation tax bill</li>
-                <li>Assess whether the <Link to="/services/vat-and-bookkeeping-accounting-services" className="text-amber-700 hover:underline">VAT Flat Rate Scheme</Link> works in your favour</li>
+                <li>Assess whether the VAT Flat Rate Scheme works in your favour</li>
               </ul>
               <p className="text-gray-700 leading-relaxed mb-8">
                 Most contractors save considerably more than their monthly <Link to="/pricing" className="text-amber-700 underline hover:text-amber-900">
-                  accountancy fee
-                </Link> through proper <Link to="/services/tax-planning" className="text-amber-700 underline hover:text-amber-900">
-                  specialist tax planning.
-                </Link>
+                  accountancy fee                </Link>
+
+                through specialist tax planning.
+
               </p>
 
               {/* Reason 3 */}
@@ -323,11 +318,11 @@ const WhyContractorsNeedSpecialistAccountant = () => {
                 Many new contractors do not realise that becoming a company director comes with serious legal responsibilities under the Companies Act. As a director, you are personally responsible for:
               </p>
               <ul className="list-disc pl-6 space-y-2 text-gray-700 mb-4">
-                <li><Link to="/services/year-end-accounts" className="text-amber-700 hover:underline">Annual accounts</Link> filed with Companies House on time</li>
-                <li><Link to="/services/company-secretarial-services" className="text-amber-700 hover:underline">Confirmation statement</Link> submitted each year</li>
-                <li><Link to="/services/year-end-accounts" className="text-amber-700 hover:underline">Corporation tax return</Link> filed with HMRC</li>
+                <li>Annual accounts filed with Companies House on time</li>
+                <li>Confirmation statement submitted each year</li>
+                <li>Corporation tax return filed with HMRC</li>
                 <li><Link to="/services/payroll-and-hr-services" className="text-amber-700 hover:underline">PAYE payroll</Link> set up and run correctly</li>
-                <li><Link to="/services/personal-tax-and-self-assessment-service" className="text-amber-700 hover:underline">Self Assessment</Link> personal tax return filed by 31 January</li>
+                <li>Self Assessment personal tax return filed by 31 January</li>
               </ul>
               <p className="text-gray-700 leading-relaxed mb-8">
                 Miss a deadline and fines start immediately. A specialist accountant keeps track of all of it so nothing falls through the cracks.
@@ -351,7 +346,7 @@ const WhyContractorsNeedSpecialistAccountant = () => {
               </h2>
               <div className="w-10 h-0.5 bg-amber-500 mb-6" />
               <p className="text-gray-700 leading-relaxed mb-4">
-                As a contractor, every hour spent on <Link to="/services/vat-and-bookkeeping-accounting-services" className="text-amber-700 hover:underline">bookkeeping</Link> or chasing <Link to="/services/vat-and-bookkeeping-accounting-services" className="text-amber-700 hover:underline">VAT deadlines </Link> is an hour you are not billing. Specialist contractor accountants use cloud software like FreeAgent or Xero to handle the day-to-day admin, giving you real-time visibility of your finances and keeping your accounts up to date throughout the year — not just at year end.
+                As a contractor, every hour spent on bookkeeping or chasing VAT deadlines is an hour you are not billing. Specialist contractor accountants use cloud software like FreeAgent or Xero to handle the day-to-day admin, giving you real-time visibility of your finances and keeping your accounts up to date throughout the year — not just at year end.
               </p>
               <div className="bg-amber-50 border-l-4 border-amber-400 pl-5 py-3 mb-8 rounded-r-lg">
                 <p className="text-amber-900 text-sm font-medium m-0">

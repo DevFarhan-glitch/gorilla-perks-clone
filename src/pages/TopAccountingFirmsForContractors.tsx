@@ -376,7 +376,7 @@ const TopAccountingFirmsForContractors = () => {
               <ul className="list-disc pl-6 space-y-1 text-gray-700 mb-6">
                 <li>Deep specialist knowledge of locum and healthcare contractor accounting</li>
                 <li>IR35 expertise specific to NHS and private sector arrangements</li>
-                <li><Link to="/services/tax-planning" className="text-amber-700 hover:underline">Salary and dividend planning</Link> for healthcare income patterns</li>
+                <li>Salary and dividend planning for healthcare income patterns</li>
                 <li>Regularly featured on top UK contractor accountant lists</li>
               </ul>
               <p className="text-sm text-gray-500 italic mb-8">
@@ -408,7 +408,7 @@ const TopAccountingFirmsForContractors = () => {
               </h2>
               <div className="w-10 h-0.5 bg-amber-500 mb-6" />
               <p className="text-gray-700 leading-relaxed mb-4">
-                Bristol has a growing contractor community across technology, engineering and financial services. At Henleaze Tax Consultancy, every client works with a dedicated accountant, pays a fixed monthly fee with no surprises and has access to face-to-face meetings when needed. We cover IR35 guidance, <Link to="/services/tax-planning" className="text-amber-700 underline hover:text-amber-900">salary planning</Link>, <Link to="/services/vat-and-bookkeeping-accounting-services" className="text-amber-700 underline hover:text-amber-900">VAT</Link>, <Link to="/services/personal-tax-and-self-assessment-service" className="text-amber-700 underline hover:text-amber-900">Self Assessment</Link> and <Link to="/services/company-secretarial-services" className="text-amber-700 underline hover:text-amber-900">Companies House filings</Link> — all under one straightforward package.
+                Bristol has a growing contractor community across technology, engineering and financial services. At Henleaze Tax Consultancy, every client works with a dedicated accountant, pays a fixed monthly fee with no surprises and has access to face-to-face meetings when needed. We cover IR35 guidance, salary planning, VAT, Self Assessment and Companies House filings — all under one straightforward package.
               </p>
 
               <div className="bg-gray-900 text-white rounded-xl p-8 mb-8 flex flex-col sm:flex-row items-center gap-6">

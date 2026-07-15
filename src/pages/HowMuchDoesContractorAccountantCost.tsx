@@ -132,7 +132,7 @@ const HowMuchDoesContractorAccountantCost = () => {
             {/* Introduction section */}
             <div id="intro" className="scroll-mt-28">
               <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                Pricing is usually one of the first things contractors want to know before hiring an accountant. And fair enough — you want to know what you are getting into before committing to a monthly fee. The good news is that <Link to="/services/contractor-accountants" className="text-amber-700 underline hover:text-amber-900">contractor accountant fees in the UK</Link> are generally transparent, predictable and in most cases, well worth what you pay.
+                Pricing is usually one of the first things contractors want to know before hiring an accountant. And fair enough — you want to know what you are getting into before committing to a monthly fee. The good news is that <Link to="/services/contractor-accountants" className="text-amber-700 underline hover:text-amber-900">contractor accountant </Link> fees in the UK are generally transparent, predictable and in most cases, well worth what you pay.
               </p>
               <p className="text-lg text-gray-700 leading-relaxed mb-8">
                 The typical monthly cost sits between £60 and £150 plus VAT, depending on the services included and the firm you choose. This article breaks down exactly what that money gets you, what to watch out for and how to decide whether the fee represents good value.
@@ -182,7 +182,7 @@ const HowMuchDoesContractorAccountantCost = () => {
               </h2>
               <div className="w-10 h-0.5 bg-amber-500 mb-6" />
               <p className="text-gray-700 leading-relaxed mb-4">
-                Most <Link to="/services/contractor-accountants" className="text-amber-700 underline hover:text-amber-900">specialist contractor accountants</Link> in the UK charge a fixed monthly fee. Here is what you can generally expect across different price points:
+                Most <Link to="/what-is-a-contractor-accountant" className="text-amber-700 underline hover:text-amber-900">specialist contractor accountants</Link> in the UK charge a fixed monthly fee. Here is what you can generally expect across different price points:
               </p>
 
               <div className="overflow-x-auto mb-8 rounded-xl border border-gray-200 shadow-sm">
@@ -264,8 +264,8 @@ const HowMuchDoesContractorAccountantCost = () => {
                 <li><Link to="/services/personal-tax-and-self-assessment-service" className="text-amber-700 underline hover:text-amber-900">Self Assessment personal tax return</Link> for you as a director</li>
                 <li>Director <Link to="/services/payroll-and-hr-services" className="text-amber-700 underline hover:text-amber-900">payroll</Link> set up and run each month</li>
                 <li><Link to="/services/vat-and-bookkeeping-accounting-services" className="text-amber-700 underline hover:text-amber-900">VAT registration and quarterly VAT returns</Link></li>
-                <li>Access to cloud <Link to="/services/vat-and-bookkeeping-accounting-services" className="text-amber-700 underline hover:text-amber-900">bookkeeping software</Link> such as FreeAgent or Xero</li>
-                <li><Link to="/services/company-secretarial-services" className="text-amber-700 underline hover:text-amber-900">Companies House confirmation statement</Link> filed annually</li>
+                <li>Access to cloud bookkeeping softwaresuch as FreeAgent or Xero</li>
+                <li>Companies House confirmation statement filed annually</li>
                 <li>Ongoing support for HMRC queries and general tax questions</li>
                 <li><Link to="/services/tax-planning" className="text-amber-700 underline hover:text-amber-900">Salary and dividend planning advice</Link></li>
               </ul>
@@ -316,7 +316,7 @@ const HowMuchDoesContractorAccountantCost = () => {
                 For the vast majority of limited company contractors, the answer is yes — and by a significant margin.
               </p>
               <p className="text-gray-700 leading-relaxed mb-4">
-                Consider what a <Link to="/what-is-a-contractor-accountant" className="text-amber-700 underline hover:text-amber-900">specialist contractor accountant</Link> actually delivers. The right <Link to="/services/tax-planning" className="text-amber-700 underline hover:text-amber-900">salary and dividend structure</Link> alone can save most contractors between £2,000 and £5,000 per year compared to drawing everything as salary. Identifying all allowable business expenses, equipment, professional subscriptions, home office costs, travel, adds further savings. Pension contributions made through the company reduce your corporation tax bill on top of that.
+                Consider what a specialist contractor accountant actually delivers. The right salary and dividend structure alone can save most contractors between £2,000 and £5,000 per year compared to drawing everything as salary. Identifying all allowable business expenses, equipment, professional subscriptions, home office costs, travel, adds further savings. Pension contributions made through the company reduce your corporation tax bill on top of that.
               </p>
               <p className="text-gray-700 leading-relaxed mb-4">
                 Then there is the protection side. HMRC fines for late filing start at £100 and escalate quickly. An IR35 mistake can result in years of back tax and National Insurance being demanded at once. A missed VAT registration threshold means back-dated VAT owed from the point you should have registered.
@@ -325,7 +325,7 @@ const HowMuchDoesContractorAccountantCost = () => {
                 When you look at the full picture, the monthly fee is not really a cost at all, it is what you pay to avoid much larger losses while keeping more of what you earn.
               </p>
               <p className="text-gray-700 leading-relaxed mb-6">
-                Not all <Link to="/top-accounting-firms-for-contractors-uk" className="text-amber-700 underline hover:text-amber-900">accounting firms for contractors</Link> offer the same level of expertise or support. Comparing services, contractor experience and fixed-fee packages can help you choose an accountant that delivers long-term value rather than simply the lowest monthly cost.
+                Not all accounting firms for contractors offer the same level of expertise or support. Comparing services, contractor experience and fixed-fee packages can help you choose an accountant that delivers long-term value rather than simply the lowest monthly cost.
               </p>
 
               <div className="bg-amber-50 border-l-4 border-amber-400 pl-5 py-4 mb-8 rounded-r-lg">

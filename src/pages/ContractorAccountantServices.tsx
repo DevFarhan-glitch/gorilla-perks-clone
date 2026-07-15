@@ -147,7 +147,7 @@ const ContractorAccountantServices = () => {
             </h2>
             <div className="w-10 h-0.5 bg-amber-500 mb-6" />
             <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              A <Link to="/services/contractor-accountants" className="text-amber-700 underline hover:text-amber-900">contractor accountant</Link> provides far more than a standard tax return. For UK contractors operating through a limited company, the service covers everything from setting up your business correctly to managing IR35 compliance, <Link to="/services/payroll-and-hr-services" className="text-amber-700 hover:underline">payroll</Link>, <Link to="/services/vat-and-bookkeeping-accounting-services" className="text-amber-700 hover:underline">VAT</Link>, <Link to="/services/year-end-accounts" className="text-amber-700 hover:underline">annual accounts</Link> and ongoing <Link to="/services/tax-planning" className="text-amber-700 hover:underline">tax planning</Link> — all under one fixed monthly fee.
+              A <Link to="/services/contractor-accountants" className="text-amber-700 underline hover:text-amber-900">contractor accountant</Link> provides far more than a standard tax return. For UK contractors operating through a limited company, the service covers everything from setting up your business correctly to managing IR35 compliance, <Link to="/services/payroll-and-hr-services" className="text-amber-700 hover:underline">payroll</Link>, VAT, annual accounts and ongoing <Link to="/services/tax-planning" className="text-amber-700 hover:underline">tax planning</Link> — all under one fixed monthly fee.
             </p>
             <p className="text-lg text-gray-700 leading-relaxed mb-8">
               Unlike a general accountant, a specialist contractor accountant understands the specific financial and legal obligations that come with limited company contracting. This guide breaks down every core service you can expect, so you know exactly what you are getting before you sign up.
@@ -162,16 +162,14 @@ const ContractorAccountantServices = () => {
                     <li key={section.id}>
                       <button
                         onClick={() => scrollToSection(section.id)}
-                        className={`group flex items-baseline gap-3 w-full text-left text-sm transition-colors duration-150 ${
-                          activeSection === section.id
-                            ? "text-amber-700 font-semibold"
-                            : "text-gray-600 hover:text-gray-900"
-                        }`}
+                        className={`group flex items-baseline gap-3 w-full text-left text-sm transition-colors duration-150 ${activeSection === section.id
+                          ? "text-amber-700 font-semibold"
+                          : "text-gray-600 hover:text-gray-900"
+                          }`}
                       >
                         <span
-                          className={`text-xs font-mono shrink-0 w-5 ${
-                            activeSection === section.id ? "text-amber-600" : "text-gray-400"
-                          }`}
+                          className={`text-xs font-mono shrink-0 w-5 ${activeSection === section.id ? "text-amber-600" : "text-gray-400"
+                            }`}
                         >
                           {String(idx + 1).padStart(2, "0")}
                         </span>
@@ -221,7 +219,7 @@ const ContractorAccountantServices = () => {
                 <li><Link to="/services/company-secretarial-services" className="text-amber-700 hover:underline">Limited company registration</Link> with Companies House</li>
                 <li>Corporation Tax registration with HMRC</li>
                 <li>Guidance on the most appropriate business structure for your situation</li>
-                <li>Initial setup of your <Link to="/services/company-secretarial-services" className="text-amber-700 hover:underline">company records and statutory registers</Link></li>
+                <li>Initial setup of your company records and statutory registers</li>
               </ul>
               <p className="text-gray-700 leading-relaxed mb-8">
                 Getting this right at the outset avoids costly structural mistakes that can be complicated and expensive to correct later. For contractors transitioning from employment or sole trader work, having a specialist guide this process makes a significant practical difference. For more on this, see our guide: <Link to="/what-is-a-contractor-accountant" className="text-amber-700 underline hover:text-amber-900">What is a contractor accountant?</Link>
@@ -261,14 +259,14 @@ const ContractorAccountantServices = () => {
               </p>
               <p className="text-gray-700 leading-relaxed mb-3">This typically includes:</p>
               <ul className="list-disc pl-6 space-y-2 text-gray-700 mb-4">
-                <li>Setting a <Link to="/services/tax-planning" className="text-amber-700 hover:underline">tax-efficient director's salary</Link> based on the current tax rules and your individual circumstances</li>
-                <li><Link to="/services/tax-planning" className="text-amber-700 hover:underline">Planning dividend payments</Link> to minimise your overall tax bill</li>
+                <li>Setting a tax-efficient director's salary based on the current tax rules and your individual circumstances</li>
+                <li>Planning dividend payments to minimise your overall tax bill</li>
                 <li>Identifying all allowable business expenses you can legitimately claim</li>
                 <li>Advising on pension contributions through your company to reduce your corporation tax liability</li>
                 <li>Ongoing tax efficiency reviews as your income or circumstances change</li>
               </ul>
               <p className="text-gray-700 leading-relaxed mb-8">
-                For most contractors, <Link to="/services/tax-planning" className="text-amber-700 underline hover:text-amber-900">proper tax planning</Link> saves considerably more than the monthly accountancy fee. The salary and dividend structure alone, when set up correctly, can make a meaningful difference to your annual take-home pay.
+                For most contractors, proper tax planning saves considerably more than the monthly accountancy fee. The salary and dividend structure alone, when set up correctly, can make a meaningful difference to your annual take-home pay.
               </p>
 
               <h2 id="annual-accounts" className="scroll-mt-28 text-3xl font-bold text-gray-900 mt-14 mb-4">
@@ -280,10 +278,10 @@ const ContractorAccountantServices = () => {
               </p>
               <p className="text-gray-700 leading-relaxed mb-3">A specialist contractor accountant handles all of this on your behalf:</p>
               <ul className="list-disc pl-6 space-y-2 text-gray-700 mb-4">
-                <li>Preparation of your company's <Link to="/services/year-end-accounts" className="text-amber-700 hover:underline">annual accounts</Link> to the required standard</li>
+                <li>Preparation of your company's annual accounts to the required standard</li>
                 <li>Submission of annual accounts to Companies House</li>
                 <li>Preparation and submission of your corporation tax return to HMRC</li>
-                <li>Completion and filing of your personal <Link to="/services/personal-tax-and-self-assessment-service" className="text-amber-700 hover:underline">Self Assessment</Link> tax return</li>
+                <li>Completion and filing of your personal Self Assessment tax return</li>
                 <li>Proactive reminders well ahead of key deadlines so nothing is missed</li>
               </ul>
               <p className="text-gray-700 leading-relaxed mb-8">
@@ -302,7 +300,7 @@ const ContractorAccountantServices = () => {
                 <li><Link to="/services/payroll-and-hr-services" className="text-amber-700 hover:underline">Monthly payroll processing</Link> for the director and any additional employees</li>
                 <li>Payslip preparation each month</li>
                 <li>RTI submissions to HMRC on time</li>
-                <li><Link to="/services/payroll-and-hr-services" className="text-amber-700 hover:underline">PAYE scheme registration</Link> and management</li>
+                <li>PAYE scheme registration and management</li>
                 <li>Support with auto-enrolment pension obligations where applicable</li>
               </ul>
               <p className="text-gray-700 leading-relaxed mb-8">
@@ -332,7 +330,7 @@ const ContractorAccountantServices = () => {
               </h2>
               <div className="w-10 h-0.5 bg-amber-500 mb-6" />
               <p className="text-gray-700 leading-relaxed mb-4">
-                Accurate, up-to-date <Link to="/services/vat-and-bookkeeping-accounting-services" className="text-amber-700 underline hover:text-amber-900">bookkeeping</Link> throughout the year is the foundation of good contractor accounting. Without it, producing accurate annual accounts or responding quickly to an HMRC query becomes significantly harder.
+                Accurate, up-to-date bookkeeping throughout the year is the foundation of good contractor accounting. Without it, producing accurate annual accounts or responding quickly to an HMRC query becomes significantly harder.
               </p>
               <p className="text-gray-700 leading-relaxed mb-3">
                 Most specialist contractor accountants provide access to cloud accounting software — typically FreeAgent or Xero — as part of their monthly package. These platforms give you:
@@ -340,14 +338,14 @@ const ContractorAccountantServices = () => {
               <ul className="list-disc pl-6 space-y-2 text-gray-700 mb-4">
                 <li>Real-time visibility of your income, expenses, and tax position</li>
                 <li>Simple mobile expense tracking so nothing gets missed</li>
-                <li>Automated <Link to="/services/vat-and-bookkeeping-accounting-services" className="text-amber-700 hover:underline">VAT return preparation</Link> linked directly to your records</li>
-                <li><Link to="/services/vat-and-bookkeeping-accounting-services" className="text-amber-700 hover:underline">Making Tax Digital</Link> compliance built in from the outset</li>
+                <li>Automated VAT return preparation linked directly to your records</li>
+                <li>Making Tax Digital compliance built in from the outset</li>
               </ul>
               <p className="text-gray-700 leading-relaxed mb-4">
                 For contractors in Bristol and across the UK, cloud software means your accountant and your records are always in sync — no year-end scramble, no boxes of receipts.
               </p>
               <p className="text-gray-700 leading-relaxed mb-8">
-                Most contractor accounting services are offered on a <Link to="/how-much-does-a-contractor-accountant-cost-in-the-uk" className="text-amber-700 underline hover:text-amber-900">fixed monthly package</Link>, giving contractors predictable costs while covering their routine accounting and tax obligations.<br/><br/>
+                Most contractor accounting services are offered on a <Link to="/how-much-does-a-contractor-accountant-cost-in-the-uk" className="text-amber-700 underline hover:text-amber-900">fixed monthly package</Link>, giving contractors predictable costs while covering their routine accounting and tax obligations.<br /><br />
                 Read our guide on: <Link to="/how-to-choose-contractor-accountant" className="text-amber-700 underline hover:text-amber-900">How to choose a contractor accountant in the UK.</Link>
               </p>
 
@@ -381,10 +379,10 @@ const ContractorAccountantServices = () => {
               </h2>
               <div className="w-10 h-0.5 bg-amber-500 mb-6" />
               <p className="text-gray-700 leading-relaxed mb-4">
-                A specialist contractor accountant does far more than prepare your <Link to="/services/year-end-accounts" className="text-amber-700 hover:underline">annual accounts</Link>. From <Link to="/services/company-secretarial-services" className="text-amber-700 hover:underline">setting up your limited company</Link> and managing IR35 to <Link to="/services/tax-planning" className="text-amber-700 hover:underline">planning your salary and dividends</Link>, handling <Link to="/services/payroll-and-hr-services" className="text-amber-700 hover:underline">payroll</Link> and giving you real-time support throughout the year, the right contractor accounting service covers every aspect of your financial life as a contractor.
+                A specialist contractor accountant does far more than prepare your annual accounts. From setting up your limited company and managing IR35 to planning your salary and dividends, handling payroll and giving you real-time support throughout the year, the right contractor accounting service covers every aspect of your financial life as a contractor.
               </p>
               <p className="text-gray-700 leading-relaxed mb-10">
-                If you want to understand exactly what is included and what the monthly fee covers, read our guide: <Link to="/how-much-does-a-contractor-accountant-cost-in-the-uk" className="text-amber-700 underline hover:text-amber-900">Contractor accountant fees.</Link>
+                If you want to understand exactly what is included and what the monthly fee covers, read our guide: Contractor accountant fees.
               </p>
 
               <h2 id="faqs" className="scroll-mt-28 text-3xl font-bold text-gray-900 mt-12 mb-4">
@@ -403,9 +401,8 @@ const ContractorAccountantServices = () => {
                     >
                       <span>{faq.q}</span>
                       <ChevronDown
-                        className={`h-4 w-4 text-amber-500 shrink-0 ml-4 transition-transform duration-200 ${
-                          openFaq === idx ? "rotate-180" : ""
-                        }`}
+                        className={`h-4 w-4 text-amber-500 shrink-0 ml-4 transition-transform duration-200 ${openFaq === idx ? "rotate-180" : ""
+                          }`}
                       />
                     </button>
                     {openFaq === idx && (
