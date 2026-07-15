@@ -59,5 +59,17 @@ export const blogPosts: BlogPost[] = [
     category: "Contractor Accounting",
     image: "/top-accounting-firms.jpeg",
     slug: "/top-accounting-firms-for-contractors-uk"
+  },
+  {
+    id: 10,
+    title: "IR35 for UK Contractors: The Complete 2026 Overview",
+    excerpt: "Everything UK contractors need to know about IR35 in one guide — how status is decided, what changed in 2026, and what it means for your pay.",
+    content: "Redirecting...",
+    author: "Henleaze Team",
+    date: "July 2026",
+    readTime: "10 min read",
+    category: "Contractor Tax",
+    image: "/what-is-ir35.jpeg",
+    slug: "/what-is-ir35-uk"
   }
 ];

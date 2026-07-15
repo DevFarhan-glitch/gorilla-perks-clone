@@ -29,7 +29,9 @@ import WhyContractorsNeedSpecialistAccountant from "./pages/WhyContractorsNeedSp
 import HowMuchDoesContractorAccountantCost from "./pages/HowMuchDoesContractorAccountantCost";
 import TopAccountingFirmsForContractors from "./pages/TopAccountingFirmsForContractors";
 import ContractorAccountantServices from "./pages/ContractorAccountantServices";
+import WhatIsIR35UK from "./pages/WhatIsIR35UK";
 import Blog from "./pages/Blog";
+
 import CustomCursor from "./components/ui/CustomCursor";
 import ScrollToTop from "./components/ui/ScrollToTop";
 
@@ -75,6 +77,8 @@ const App = () => (
             <Route path="/how-much-does-a-contractor-accountant-cost-in-the-uk" element={<HowMuchDoesContractorAccountantCost />} />
             <Route path="/top-accounting-firms-for-contractors-uk" element={<TopAccountingFirmsForContractors />} />
             <Route path="/contractor-accountant-services-in-the-uk" element={<ContractorAccountantServices />} />
+            <Route path="/what-is-ir35-uk" element={<WhatIsIR35UK />} />
+            <Route path="/what-is-ir35-uk/" element={<WhatIsIR35UK />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             {/* ── 301-EQUIVALENT CLIENT-SIDE REDIRECTS ────────────────── */}
             {/* Service page — old slugs that may have been indexed */}

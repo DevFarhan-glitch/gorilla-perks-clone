@@ -100,6 +100,21 @@ const allBlogs = [
     featured: false,
     tags: ["Services", "IR35", "Tax Planning", "Payroll"],
   },
+  {
+    id: "what-is-ir35-uk",
+    slug: "/what-is-ir35-uk",
+    title: "IR35 for UK Contractors: The Complete 2026 Overview",
+    subtitle: "Everything UK contractors need to know about IR35 in one guide",
+    excerpt: "Everything UK contractors need to know about IR35 in one guide — how status is decided, what changed in 2026, and what it means for your pay.",
+    category: "Contractor Tax Guide",
+    categoryColor: "amber",
+    image: "/what-is-ir35.jpeg",
+    author: "Henleaze Team",
+    date: "July 2026",
+    readTime: "10 min read",
+    featured: false,
+    tags: ["IR35", "Off-payroll", "Contractor Tax", "Umbrella Reform"],
+  },
 ];
 
 const categoryColors: Record<string, { badge: string }> = {
