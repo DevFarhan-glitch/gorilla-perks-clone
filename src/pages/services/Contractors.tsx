@@ -28,56 +28,57 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 const services = [
   {
     icon: Building,
-    title: "Company Formation for Contractors in Bristol",
+    title: "Company Formation",
     description: "Starting a limited company is one of the first steps many contractors take. As experienced company formation accountants, we provide a complete company formation service to help contractors establish their business correctly from day one. Whether you're new to contracting or transitioning from employment, we'll guide you through the process and ensure your company is set up efficiently and in line with UK requirements.",
     included: [
-      "Limited company registration",
-      "Companies House filings",
-      "Corporation Tax registration",
-      "Guidance on business structure"
+      "Same-day company registration",
+      "Corporation Tax registered for you",
+      "One-to-one structure consultation",
+      "Free registered office address"
     ]
   },
   {
     icon: Shield,
-    title: "IR35 Compliance for Contractors in Bristol",
+    title: "IR35 Compliance",
     description: "IR35 rules can be challenging to navigate, particularly for contractors working on long-term or high-value assignments. Our team helps contractors understand their IR35 position, review contracts and ensure they are meeting HMRC requirements. If you're looking for an experienced IR35 accountant in Bristol, we provide practical advice tailored to your working arrangements.",
     included: [
-      "Contract reviews",
-      "Working practice assessments",
-      "IR35 status guidance",
-      "Ongoing compliance support"
+      "Written IR35 status opinion",
+      "CEST-based working practices review",
+      "End-client dispute support",
+      "Direct access to specialist"
     ]
   },
   {
     icon: Coins,
-    title: "Tax-Efficient Planning for Contractors in Bristol",
+    title: "Tax-Efficient Planning",
     description: "Effective tax planning can help contractors retain more of their hard-earned income while remaining fully compliant with UK tax regulations. We work closely with contractors to identify tax-saving opportunities, optimise remuneration strategies, and ensure their finances are structured as efficiently as possible.",
     included: [
-      "Efficient tax planning for contractors",
-      "Salary and dividend planning",
-      "Advice on allowable business expenses",
-      "Ongoing tax efficiency reviews"
+      "Personalised salary/dividend split",
+      "Annual tax efficiency review",
+      "Sector-specific expense planning",
+      "Pension contribution guidance"
     ]
   },
   {
     icon: FileCheck,
-    title: "Annual Accounts & Tax Returns for Contractors in Bristol",
+    title: "Annual Accounts & Tax Returns",
     description: "Keeping your accounts accurate and up to date is essential for maintaining compliance and avoiding unnecessary penalties. Our team prepares annual accounts, corporation tax returns and personal tax returns, ensuring all submissions are completed accurately and on time.",
     included: [
-      "Preparation of annual accounts for contractors",
-      "Detailed annual accounts report for contractors",
-      "Submission of annual accounts and tax returns",
-      "Support with tax return throughout UK for contractors"
+      "Early filing, before deadlines",
+      "Personal Self Assessment included",
+      "Same-day HMRC confirmation",
+      "Plain-English annual summary"
     ]
   },
   {
     icon: Users,
-    title: "Payroll Services for Contractors in Bristol",
+    title: "Payroll Services for Contractors",
     description: "Running payroll correctly is essential when operating through a limited company. Our dedicated payroll support helps ensure your salary is processed accurately and on time. Whether you're paying yourself as a director or managing additional employees, we ensure payroll is handled accurately and in line with HMRC requirements.",
     included: [
-      "Monthly payroll services for contractors",
-      "Payslip preparation and payroll processing",
-      "RTI submissions to HMRC"
+      "Monthly payslips, always on time",
+      "RTI submissions filed automatically",
+      "Support for additional employees",
+      "Automatic tax code updates"
     ]
   },
   {
@@ -85,10 +86,10 @@ const services = [
     title: "Real-Time Support for Contractors",
     description: "Contractors often need quick answers to financial and tax questions. That's why we provide responsive, ongoing support whenever you need it.",
     included: [
-      "Fast responses by phone and email",
-      "Practical guidance from contractor specialists",
-      "Ongoing accounting and tax assistance",
-      "Support tailored to your business circumstances"
+      "Named dedicated accountant",
+      "Fast phone and email support",
+      "Quarterly proactive check-ins",
+      "Client portal access"
     ]
   }
 ];
@@ -97,22 +98,22 @@ const pillars = [
   {
     num: "01",
     title: "Contractor-Focused Expertise",
-    description: "Unlike general accountants, specialist contractor accountants understand the unique challenges of contract work. From company finances and director remuneration to sector-specific tax requirements, tailored advice helps you make informed financial decisions."
+    description: "Unlike general accountants, we understand the specific challenges of contract work — from director remuneration to sector-specific tax rules."
   },
   {
     num: "02",
     title: "Tax Efficiency & Compliance",
-    description: "Keeping up with changing tax regulations can be time-consuming. Specialist contractor accountants help ensure your accounts, tax returns and statutory filings are completed accurately and on time."
+    description: "Regulations shift constantly. We keep your accounts, returns and statutory filings accurate and on time, so you don't have to track every change yourself."
   },
   {
     num: "03",
     title: "More Time to Focus on Your Work",
-    description: "Managing bookkeeping, payroll and tax obligations can take valuable time away from running your business. By working with experienced contractor accountants, you can focus on delivering your services while knowing your financial responsibilities are being handled professionally."
+    description: "Bookkeeping, payroll and tax obligations take time away from client work. Handing this over means you can focus on delivering, not admin."
   },
   {
     num: "04",
     title: "Ongoing Support as Your Business Grows",
-    description: "Your accounting needs may change as your contracting business develops. Whether you're taking on larger contracts or reviewing your business structure, specialist support can help you plan confidently."
+    description: "Your accounting needs change as your business does. Whether you're taking on bigger contracts or reviewing your structure, we help you plan the next step with confidence."
   }
 ];
 
@@ -120,32 +121,32 @@ const industries = [
   {
     icon: Laptop,
     name: "IT Contractors",
-    description: "From software developers and engineers to IT consultants and project managers, we help technology professionals stay compliant and tax-efficient while focusing on delivering successful projects."
+    description: "Software developers, engineers, consultants and project managers — we keep the accounting side sorted so you can focus on delivery."
   },
   {
     icon: Settings,
     name: "Engineering Contractors",
-    description: "We work with contractors across various engineering disciplines, providing support with company accounts, tax planning, payroll and ongoing compliance requirements."
+    description: "Company accounts, tax planning, payroll and compliance, handled with an understanding of how engineering contracts typically run."
   },
   {
     icon: TrendingUp,
     name: "Management Consultants",
-    description: "Our team helps management consultants manage their finances effectively, ensuring their accounting and tax obligations are handled accurately and on time."
+    description: "Your time is billed by the hour — so is ours saving you from chasing your own paperwork. We keep your finances accurate and on schedule."
   },
   {
     icon: Palette,
     name: "Marketing & Creative Professionals",
-    description: "We support marketing consultants, designers, content specialists and other creative professionals with practical accounting solutions tailored to their way of working."
+    description: "Irregular income, project-based work, mixed expense types — we've built our approach around how creative freelancers actually work."
   },
   {
     icon: HardHat,
     name: "Construction Contractors",
-    description: "From independent tradespeople to specialist contractors, we provide accounting and tax support designed to meet the needs of those working in the construction sector."
+    description: "From sole traders to specialist subcontractors, we handle the accounting complexities specific to construction work, including CIS where relevant."
   },
   {
     icon: UserCheck,
     name: "Freelancers & Independent Professionals",
-    description: "We help freelancers and self-employed professionals across a variety of industries manage their accounts, meet HMRC requirements and focus on growing their businesses."
+    description: "Wherever you sit outside the categories above, we help you manage your accounts, stay on top of HMRC requirements, and grow with confidence."
   }
 ];
 
@@ -193,7 +194,7 @@ const Contractors = () => {
                 </p>
 
                 <p className="mt-4 text-base text-white/75 leading-relaxed max-w-2xl">
-                  At Henleaze Tax Consultancy, our contractor accountants in Bristol provide practical, tailored support for contractors, freelancers and consultants across a wide range of industries. We help you stay on top of your accounts, meet important deadlines and make informed decisions that support the long-term success of your business.
+                  At Henleaze Tax Consultancy, we support contractors, freelancers and consultants across a wide range of industries with clear, practical accounting help. We keep you on top of your accounts, ahead of important deadlines, and confident in the decisions that shape your business.
                 </p>
 
                 <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
@@ -272,15 +273,15 @@ const Contractors = () => {
               </div>
 
               <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-navy leading-tight mt-3">
-                Our Contractor Accounting Services &amp; Tax Support in Bristol
+                Our Contractor Accounting Services &amp; Tax Support
               </h2>
 
               <div className="w-20 h-1 bg-gold mx-auto my-6 rounded-full" />
 
               <p className="text-lg text-gray-600 leading-relaxed max-w-2xl mx-auto">
-                As experienced accountants for contractors in Bristol, we provide tailored support for freelancers, consultants and
-                limited company contractors across a wide range of industries. Our accounting services for contractors are designed
-                to simplify compliance, improve tax efficiency and give you more time to focus on your work.
+                As experienced accountants for contractors, we work with freelancers, consultants and limited company directors across many sectors.
+                Our services are built to simplify compliance, improve tax efficiency and free up your time to focus on the work that matters.
+
               </p>
             </div>
 
@@ -356,6 +357,20 @@ const Contractors = () => {
                 );
               })}
             </div>
+
+            {/* View All Services Button */}
+            <div className="mt-14 flex justify-center">
+              <Link
+                to="/services"
+                className="group relative inline-flex items-center gap-3 overflow-hidden rounded-full bg-gold px-8 py-4 text-base font-bold text-navy shadow-lg transition-all duration-300 hover:bg-gold-light hover:scale-105 hover:shadow-[0_0_32px_rgba(212,175,55,0.45)]"
+              >
+                <span className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/25 to-white/0 translate-x-[-120%] transition-transform duration-700 group-hover:translate-x-[120%]" />
+                <span className="relative">View All Services</span>
+                <span className="relative flex h-7 w-7 items-center justify-center rounded-full bg-navy/20 transition-all duration-300 group-hover:translate-x-1 group-hover:scale-110">
+                  <ArrowRight className="h-4 w-4" />
+                </span>
+              </Link>
+            </div>
           </div>
         </section>
 
@@ -395,8 +410,7 @@ const Contractors = () => {
                   <div className="w-16 h-0.5 bg-gold rounded-full my-6" />
 
                   <p className="text-base text-white/80 leading-relaxed">
-                    Contractors face a unique set of financial and tax responsibilities that often require more than standard accounting support. Whether you operate through a limited company or provide specialist consulting services, having an accountant who understands the contractor sector can make managing your finances simpler, more efficient and more tax-effective.
-                  </p>
+                    Contractors face a different set of financial and tax responsibilities than most businesses. Whether you operate through a limited company or provide specialist consulting services, working with an accountant who understands the contractor sector makes managing your finances simpler and more effective.                  </p>
 
                   <div className="mt-8">
                     <Link
@@ -521,7 +535,7 @@ const Contractors = () => {
               </h2>
               <div className="w-20 h-1 bg-gold mx-auto my-6 rounded-full" />
               <p className="text-lg text-gray-600 leading-relaxed max-w-2xl mx-auto">
-                We support contractors across a wide range of industries, providing tailored accounting and tax advice based on the unique requirements of each sector.
+                We support contractors across a wide range of industries, with advice shaped by the realities of each sector.
               </p>
             </div>
             <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 mt-16">

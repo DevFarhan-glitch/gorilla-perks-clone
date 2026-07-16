@@ -370,6 +370,20 @@ const TaxPlanning = () => {
                 );
               })}
             </div>
+
+            {/* View All Services Button */}
+            <div className="mt-14 flex justify-center">
+              <Link
+                to="/services"
+                className="group relative inline-flex items-center gap-3 overflow-hidden rounded-full bg-gold px-8 py-4 text-base font-bold text-navy shadow-lg transition-all duration-300 hover:bg-gold-light hover:scale-105 hover:shadow-[0_0_32px_rgba(212,175,55,0.45)]"
+              >
+                <span className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/25 to-white/0 translate-x-[-120%] transition-transform duration-700 group-hover:translate-x-[120%]" />
+                <span className="relative">View All Services</span>
+                <span className="relative flex h-7 w-7 items-center justify-center rounded-full bg-navy/20 transition-all duration-300 group-hover:translate-x-1 group-hover:scale-110">
+                  <ArrowRight className="h-4 w-4" />
+                </span>
+              </Link>
+            </div>
           </div>
         </section>
 

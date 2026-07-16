@@ -11,19 +11,14 @@ import {
   BarChart3,
   Lightbulb,
   Shield,
-  Clock,
-  TrendingUp,
+  Phone,
+  ArrowUpRight,
   Store,
   Wrench,
   Coffee,
   Building,
   Rocket,
-  Phone,
-  ArrowUpRight,
   ShieldCheck,
-  Coins,
-  FileCheck,
-  Star,
 } from "lucide-react";
 import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
@@ -40,9 +35,9 @@ import {
 const services = [
   {
     icon: BookOpen,
-    title: "Bookkeeping Services for Small Businesses in Bristol",
+    title: "Bookkeeping Services",
     description:
-      "Accurate bookkeeping is the foundation of effective financial management. Our bookkeeping services for small business owners help keep your records organised and up to date, giving you a clear understanding of your income, expenses and overall financial position. Whether you need ongoing support or assistance catching up on overdue records, we can help simplify your bookkeeping for small business requirements.",
+      "Accurate bookkeeping is the foundation of effective financial management. Our bookkeeping services help keep your records organised and up to date, giving you a clear understanding of your income, expenses and overall financial position. Whether you need ongoing support or help catching up on overdue records, we can simplify this side of running your business.",
     included: [
       "Transaction recording and reconciliation",
       "Bank account reconciliation",
@@ -52,9 +47,9 @@ const services = [
   },
   {
     icon: Receipt,
-    title: "VAT Returns for Small Businesses in Bristol",
+    title: "VAT Returns",
     description:
-      "Managing VAT for small business owners can be time-consuming, particularly when you're focused on running day-to-day operations. We prepare and submit VAT returns accurately and on time, helping you meet HMRC requirements while reducing administrative burdens.",
+      "Managing VAT can be time-consuming, particularly when you're focused on running day-to-day operations. We prepare and submit VAT returns accurately and on time, helping you meet HMRC requirements while reducing administrative burdens.",
     included: [
       "VAT registration support",
       "VAT return preparation",
@@ -64,9 +59,9 @@ const services = [
   },
   {
     icon: FileText,
-    title: "Annual Accounts & Tax Returns for Small Businesses in Bristol",
+    title: "Annual Accounts & Tax Returns",
     description:
-      "Preparing annual accounts is an important part of running a compliant business. Our team provides annual accounts services for small businesses that help ensure your financial statements are accurate and submitted on time. We also assist with annual accounts and tax returns in Bristol, helping business owners meet their reporting obligations with confidence.",
+      "Preparing annual accounts looks different depending on how your business is structured — sole trader, partnership or limited company each carry different reporting requirements and things like stock valuation or multiple revenue streams can add complexity most templates don't account for. Our team prepares accurate financial statements suited to your specific setup and submits them on time, whichever structure you operate under.",
     included: [
       "Preparation of annual accounts",
       "Annual accounts report preparation",
@@ -76,7 +71,7 @@ const services = [
   },
   {
     icon: Users,
-    title: "Payroll Services for Small Businesses in Bristol",
+    title: "Payroll Services for Small Businesses",
     description:
       "Managing employee pay, pensions and HMRC reporting can quickly become complex as your business grows. Our payroll services for small businesses help ensure your team is paid accurately and on time while keeping your business compliant with current regulations.",
     included: [
@@ -88,9 +83,9 @@ const services = [
   },
   {
     icon: BarChart3,
-    title: "Management Reporting for Small Businesses in Bristol",
+    title: "Management Reporting",
     description:
-      "Making informed decisions starts with understanding your numbers. We provide clear financial reports for small business owners, helping you monitor performance, identify trends and make better business decisions. Our reporting can also include expense reports for small business operations, giving you greater visibility over costs and profitability.",
+      "Once you're managing more than just your own time, understanding the numbers behind the business becomes essential — margins by product or service line, seasonal cash flow patterns, and where costs are creeping up. We provide clear financial reports that give small business owners this visibility, helping you spot trends early and make better decisions before they become urgent.",
     included: [
       "Monthly or quarterly management reports",
       "Financial performance analysis",
@@ -100,7 +95,7 @@ const services = [
   },
   {
     icon: Lightbulb,
-    title: "Business Advisory Services for Small Businesses in Bristol",
+    title: "Business Advisory Services",
     description:
       "Beyond compliance, we help small business owners plan for the future. Our small business advisory services provide practical guidance on growth, profitability, cash flow and financial planning. Through our accounting and business advisory services, we help you make confident decisions that support the long-term success of your business.",
     included: [
@@ -123,19 +118,19 @@ const pillars = [
     num: "02",
     title: "More Than Just Compliance",
     description:
-      "While keeping your business compliant is essential, effective accounting goes beyond submitting returns and meeting deadlines. Our accountant services for small businesses in Bristol are designed to help improve financial visibility, support growth and identify opportunities to operate more efficiently.",
+      "While keeping your business compliant is essential, effective accounting goes beyond submitting returns and meeting deadlines. Our service is designed to help improve financial visibility, support growth and identify opportunities to operate more efficiently.",
   },
   {
     num: "03",
     title: "Practical Tax & Financial Guidance",
     description:
-      "From day-to-day bookkeeping to strategic planning, working with a dedicated small business tax accountant in Bristol can help you stay on top of your obligations while making informed financial decisions throughout the year.",
+      "From day-to-day bookkeeping to strategic planning, working with a dedicated small business tax accountant can help you stay on top of your obligations while making informed financial decisions throughout the year.",
   },
   {
     num: "04",
     title: "A Trusted Partner for Long-Term Growth",
     description:
-      "The best small business accountants in Bristol do more than prepare accounts, they help business owners plan ahead with confidence. As your business evolves, we provide ongoing advice and support to help you navigate new challenges and opportunities.",
+      "Good small business accountants do more than prepare accounts — they help business owners plan ahead with confidence. As your business evolves, we provide ongoing advice and support to help you navigate new challenges and opportunities.",
   },
 ];
 
@@ -144,37 +139,37 @@ const industries = [
     icon: Store,
     name: "Retail Businesses",
     description:
-      "From independent shops to growing retail brands, we help small business owners manage bookkeeping, payroll, VAT and financial reporting requirements.",
+      "From independent shops to growing retail brands, we help owners manage bookkeeping, payroll, VAT and financial reporting requirements.",
   },
   {
     icon: Briefcase,
     name: "Professional Services",
     description:
-      "We work with consultants, agencies and other service-based small businesses, providing practical accounting support and ongoing financial guidance.",
+      "Consultants, agencies and other service-based businesses turn to us for practical accounting support and ongoing financial guidance.",
   },
   {
     icon: Wrench,
     name: "Construction & Trades",
     description:
-      "Our team supports builders, electricians, plumbers and other tradespeople with accounting, tax compliance and business management support.",
+      "Builders, electricians, plumbers and other tradespeople rely on our team for accounting, tax compliance and business management support.",
   },
   {
     icon: Coffee,
     name: "Hospitality Businesses",
     description:
-      "We help restaurants, cafes, takeaways and other hospitality businesses stay on top of their finances and meet their reporting obligations.",
+      "Restaurants, cafes, takeaways and other hospitality businesses stay on top of their finances and reporting obligations with our support.",
   },
   {
     icon: Building,
     name: "Property & Real Estate Businesses",
     description:
-      "From property management companies to real estate professionals, we provide accounting and tax support tailored to the property sector.",
+      "From property management companies to real estate professionals, we provide accounting and tax support suited to the property sector.",
   },
   {
     icon: Rocket,
     name: "Start-Ups & Growing Businesses",
     description:
-      "We support new and growing small businesses with accounting, tax planning and business advisory services to help them build strong financial foundations.",
+      "New and growing businesses work with us on accounting, tax planning and advisory services to help build strong financial foundations.",
   },
 ];
 
@@ -195,7 +190,7 @@ const SmallBusiness = () => {
         {/* ── HERO ── */}
         <section className="relative overflow-hidden hero-gradient py-24 md:py-32 flex items-center">
           {/* Background pattern */}
-          <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0zNiAxOGMtNi42MjcgMC0xMiA1LjM3My0xMiAxMnM1LjM3MyAxMiAxMiAxMiAxMi01LjM3MyAxMi0xMi01LjM3My0xMi0xMi0xMnptMCAxOGMtMy4zMTQgMC02LTIuNjg2LTYtNnMyLjY4Ni02IDYtNiA2IDIuNjg2IDYgNi0yLjY4NiA2LTYgNnoiIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iLjAzIi8+PC9nPjwvc3ZnPg==')] opacity-40" />
+          <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAxIiBoZWlnaHQ9IjYwMSIgdmlld0JveD0iMCAwIDYwIDYwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PHBhdGggZD0iTTM2IDE4Yy02LjYyNyAwLTEyIDUuMzc3LTEyIDEyczUuMzc3IDEyIDEyIDEyIDEyLTUuMzc3IDEyLTEyLTUuMzc3LTEyLTEyLTEydnptMCAxOGMtMy4zMTQgMC02LTIuNjg2LTYtNnMyLjY4Ni02IDYtNiA2IDIuNjg2IDYgNi0yLjY4NiA2LTYgNnoiIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iLjAzIi8+PC9nPjwvc3ZnPg==')] opacity-40" />
           <div className="absolute -top-40 -left-40 w-96 h-96 bg-gold/10 blur-3xl rounded-full" />
           <div className="absolute -bottom-40 -right-40 w-96 h-96 bg-navy-light/40 blur-3xl rounded-full" />
           <div className="absolute top-0 left-0 right-0 h-1 gold-gradient" />
@@ -208,7 +203,7 @@ const SmallBusiness = () => {
                 <div className="mb-6 flex items-center justify-center lg:justify-start">
                   <div className="h-8 w-1 bg-gold rounded-full mr-3" />
                   <span className="text-gold font-bold uppercase tracking-[0.2em] text-xs">
-                    Specialist Small Business Support
+                    Primary Keyword: small business accountants in bristol
                   </span>
                 </div>
 
@@ -222,7 +217,11 @@ const SmallBusiness = () => {
                 </p>
 
                 <p className="mt-4 text-base text-white/75 leading-relaxed max-w-2xl">
-                  At Henleaze Tax Consultancy, our experienced small business accountants in Bristol provide practical, tailored support for businesses across a wide range of sectors. Whether you&apos;re looking for trusted accountants for a small business in Bristol or an online accountant for a small business in the UK, our team is here to provide clear advice and dependable support tailored tp ypur needs.
+                  At Henleaze Tax Consultancy, our experienced small business accountants in Bristol provide practical, tailored support for businesses across a wide range of sectors. From day-to-day bookkeeping and tax compliance to strategic financial guidance, our small business accounting services in Bristol are designed to support your business at every stage.
+                </p>
+
+                <p className="mt-4 text-base text-white/75 leading-relaxed max-w-2xl">
+                  Whether you're based here in Bristol or looking for an online accountant elsewhere in the UK, our team is here to provide clear advice and dependable support.
                 </p>
 
                 <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
@@ -235,14 +234,6 @@ const SmallBusiness = () => {
                       Speak to a Small Business Accountant
                       <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                     </Link>
-                  </Button>
-                  <Button
-                    size="lg"
-                    variant="outline"
-                    className="border-white/30 text-white bg-white/5 hover:bg-navy hover:text-white rounded-full px-8 py-6 transition-all duration-300"
-                    asChild
-                  >
-                    <Link to="/calculator">Try Our Calculator</Link>
                   </Button>
                 </div>
               </div>
@@ -258,7 +249,7 @@ const SmallBusiness = () => {
                     {[
                       { title: "Bookkeeping & VAT", text: "Accurate records & timely returns", icon: BookOpen },
                       { title: "Payroll Managed", text: "RTI compliant, on time every time", icon: Users },
-                      { title: "Annual Accounts", text: "Statutory filing & tax submissions", icon: FileCheck },
+                      { title: "Annual Accounts", text: "Statutory filing & tax submissions", icon: FileText },
                       { title: "Business Advisory", text: "Growth, cash flow & tax planning", icon: Lightbulb },
                     ].map((item, index) => (
                       <div
@@ -278,7 +269,7 @@ const SmallBusiness = () => {
 
                   <div className="mt-6 pt-6 border-t border-white/10 flex items-center justify-between text-white/80">
                     <span className="text-xs font-semibold uppercase tracking-wider text-gold">HMRC Compliant</span>
-                    <span className="text-xs">Tailored to Sole Traders & Limited Co&apos;s</span>
+                    <span className="text-xs">Tailored to Sole Traders & Limited Co's</span>
                   </div>
                 </div>
               </div>
@@ -301,13 +292,13 @@ const SmallBusiness = () => {
               </div>
 
               <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-navy leading-tight mt-3">
-                Our Small Business Accounting &amp; Tax Services in Bristol
+                Our Small Business Accounting &amp; Tax Services
               </h2>
 
               <div className="w-20 h-1 bg-gold mx-auto my-6 rounded-full" />
 
               <p className="text-lg text-gray-600 leading-relaxed max-w-2xl mx-auto">
-                As trusted small business accountants in Bristol, we provide a complete range of accounting and tax services designed to support growing businesses. Whether you&apos;re a sole trader, partnership or limited company, our team helps you stay compliant, organised and focused on running your business.
+                As trusted small business accountants in Bristol, we provide a complete range of accounting and tax services designed to support growing businesses. Whether you're a sole trader, partnership or limited company, our team helps you stay compliant, organised and focused on running your business.
               </p>
             </div>
 
@@ -346,7 +337,7 @@ const SmallBusiness = () => {
 
                       <div className="mb-5 rounded-2xl border border-slate-100 bg-slate-50/70 p-4">
                         <p className="text-[11px] font-bold uppercase tracking-wider text-navy mb-3">
-                          What&apos;s included
+                          What's included:
                         </p>
                         <ul className="space-y-2.5">
                           {service.included.map((item, idx) => (
@@ -359,31 +350,30 @@ const SmallBusiness = () => {
                           ))}
                         </ul>
                       </div>
-
-                      <div className="flex items-center justify-between pt-2">
-                        <span className="text-xs font-semibold text-gray-500">Tailored support</span>
-                        <Link
-                          to="/contact"
-                          className="group relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-navy px-4 py-2 text-sm font-bold text-white shadow-md transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_14px_28px_rgba(15,23,42,0.18)]"
-                        >
-                          <span className="absolute inset-0 bg-gradient-to-r from-gold/0 via-white/20 to-gold/0 translate-x-[-120%] transition-transform duration-700 group-hover:translate-x-[120%]" />
-                          <span className="relative">Enquire Now</span>
-                          <span className="relative flex h-6 w-6 items-center justify-center rounded-full bg-gold text-navy transition-all duration-300 group-hover:translate-x-1 group-hover:scale-110">
-                            <ArrowRight className="h-3.5 w-3.5" />
-                          </span>
-                        </Link>
-                      </div>
                     </CardContent>
                   </Card>
                 );
               })}
+            </div>
+
+            <div className="text-center mt-12">
+              <Button
+                size="lg"
+                asChild
+                className="bg-navy hover:bg-navy-light text-white font-bold h-14 px-8 rounded-xl shadow-lg transition-all duration-300"
+              >
+                <Link to="/services" className="inline-flex items-center">
+                  View All Services
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </Button>
             </div>
           </div>
         </section>
 
         {/* ── WHY CHOOSE ── */}
         <section className="relative overflow-hidden py-24 bg-gradient-to-br from-navy via-navy-light to-navy-dark">
-          <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0zNiAxOGMtNi42MjcgMC0xMiA1LjM3My0xMiAxMnM1LjM3MyAxMiAxMiAxMiAxMi01LjM3MyAxMi0xMi01LjM3My0xMi0xMi0xMnptMCAxOGMtMy4zMTQgMC02LTIuNjg2LTYtNnMyLjY4Ni02IDYtNiA2IDIuNjg2IDYgNi0yLjY4NiA2LTYgNnoiIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iLjAzIi8+PC9nPjwvc3ZnPg==')] opacity-40" />
+          <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAxIiBoZWlnaHQ9IjYwMSIgdmlld0JveD0iMCAwIDYwIDYwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PHBhdGggZD0iTTM2IDE4Yy02LjYyNyAwLTEyIDUuMzc3LTEyIDEyczUuMzc3IDEyIDEyIDEyIDEyLTUuMzc3IDEyLTEyLTUuMzc3LTEyLTEyLTEydnptMCAxOGMtMy4zMTQgMC02LTIuNjg2LTYtNnMyLjY4Ni02IDYtNiA2IDIuNjg2IDYgNi0yLjY4NiA2LTYgNnoiIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iLjAzIi8+PC9nPjwvc3ZnPg==')] opacity-40" />
           <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-transparent via-gold to-transparent" />
           <div className="absolute -top-32 -left-32 w-96 h-96 bg-gold/10 blur-3xl rounded-full pointer-events-none" />
           <div className="absolute -bottom-32 -right-32 w-96 h-96 bg-navy-light/60 blur-3xl rounded-full pointer-events-none" />
@@ -391,7 +381,7 @@ const SmallBusiness = () => {
           <div className="container relative z-10">
             <div className="mb-12 flex items-center justify-center">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gold/10 border border-gold/25 text-gold text-xs font-bold uppercase tracking-wider">
-                <Shield className="h-3.5 w-3.5" />
+                <ShieldCheck className="h-3.5 w-3.5" />
                 Why Choose Henleaze
               </div>
             </div>
@@ -404,8 +394,7 @@ const SmallBusiness = () => {
                   <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-gold to-transparent opacity-80" />
 
                   <h2 className="font-display text-3xl md:text-4xl font-bold tracking-tight text-white leading-tight">
-                    Why Choose Henleaze as Your Small Business Accountant
-                    <span className="block text-gold mt-1">in Bristol?</span>
+                    Why Choose Henleaze as Your Small Business Accountant?
                   </h2>
 
                   <div className="w-16 h-0.5 bg-gold rounded-full my-6" />
@@ -459,7 +448,7 @@ const SmallBusiness = () => {
           </div>
         </section>
 
-        {/* ── SUPPORTING SMALL BUSINESSES SIDEBOX ── */}
+        {/* ── SUPPORTING SMALL BUSINESSES NATIONWIDE ── */}
         <section className="relative overflow-hidden py-20 bg-gradient-to-b from-slate-50 via-white to-slate-50">
           <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-gold/40 to-transparent" />
           <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-gold/20 to-transparent" />
@@ -472,7 +461,7 @@ const SmallBusiness = () => {
 
               {/* Left - navy icon panel */}
               <div className="relative flex-shrink-0 flex flex-col items-center justify-center gap-6 px-10 py-12 lg:py-16 bg-gradient-to-br from-navy via-navy-light to-navy-dark lg:w-72 xl:w-80">
-                <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0zNiAxOGMtNi42MjcgMC0xMiA1LjM3My0xMiAxMnM1LjM3MyAxMiAxMiAxMiAxMi01LjM3MyAxMiAxMi01LjM3MyAxMiAxMiAxMnptMCAxOGMtMy4zMTQgMC02LTIuNjg2LTYtNnMyLjY4Ni02IDYtNiA2IDIuNjg2IDYgNi0yLjY4NiA2LTYgNnoiIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iLjAzIi8+PC9nPjwvc3ZnPg==')] opacity-50" />
+                <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAxIiBoZWlnaHQ9IjYwMSIgdmlld0JveD0iMCAwIDYwIDYwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PHBhdGggZD0iTTM2IDE4Yy02LjYyNyAwLTEyIDUuMzc3LTEyIDEyczUuMzc3IDEyIDEyIDEyIDEyLTUuMzc3IDEyLTEyLTUuMzc3LTEyLTEyLTEydnptMCAxOGMtMy4zMTQgMC02LTIuNjg2LTYtNnMyLjY4Ni02IDYtNiA2IDIuNjg2IDYgNi0yLjY4NiA2LTYgNnoiIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iLjAzIi8+PC9nPjwvc3ZnPg==')] opacity-50" />
                 <div className="relative z-10 flex flex-col items-center text-center gap-4">
                   <div className="inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-gold/15 border border-gold/25 text-gold">
                     <Building className="h-8 w-8" />
@@ -501,7 +490,7 @@ const SmallBusiness = () => {
                     While we work closely with businesses seeking small business accounting in Bristol, our services are not limited to the local area. We also support business owners throughout the UK, providing practical accounting, tax and financial guidance tailored to their individual needs.
                   </p>
                   <p>
-                    Whether you&apos;re looking for local expertise or need an accountant for a small business in the UK, our team is here to provide reliable support that helps your business stay compliant and grow with confidence.
+                    Whether you're looking for local expertise or need an accountant for a small business in the UK, our team is here to provide reliable support that helps your business stay compliant and grow with confidence.
                   </p>
                 </div>
 
@@ -527,11 +516,11 @@ const SmallBusiness = () => {
           <div className="container relative z-10">
             <div className="mx-auto max-w-3xl text-center">
               <h2 className="font-display text-3xl md:text-4xl font-bold tracking-tight text-navy leading-tight">
-                Industries We Work With in Bristol
+                Industries We Work With
               </h2>
               <div className="w-20 h-1 bg-gold mx-auto my-6 rounded-full" />
               <p className="text-lg text-gray-600 leading-relaxed max-w-2xl mx-auto">
-                We support small businesses across a wide range of industries, providing tailored accounting, tax and business advisory services based on the unique needs of each sector. Whether you&apos;re launching a new venture or managing an established business, our team can provide the financial support you need to operate with confidence.
+                We support small businesses across a wide range of industries, providing tailored accounting, tax and business advisory services based on the unique needs of each sector. Whether you're launching a new venture or managing an established business, our team can provide the financial support you need to operate with confidence.
               </p>
             </div>
 

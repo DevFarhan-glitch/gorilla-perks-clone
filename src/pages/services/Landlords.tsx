@@ -10,13 +10,9 @@ import {
   TrendingUp,
   Building,
   Users,
-  Shield,
-  Coins,
   ShieldCheck,
-  Clock,
   Phone,
   ArrowUpRight,
-  Briefcase,
 } from "lucide-react";
 import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
@@ -25,9 +21,9 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 const services = [
   {
     icon: PoundSterling,
-    title: "Rental Income Tax Services for Landlords",
+    title: "Rental Income Tax Services",
     description:
-      "Understanding and reporting tax on rental income can be complex, particularly if you own multiple properties or have different sources of rental income. We help landlords accurately report earnings, calculate rental income tax and meet their tax obligations with confidence. Our team provides practical guidance on landlord tax on rental income and assists with calculating landlords income tax to ensure compliance and accuracy.",
+      "Understanding and reporting tax on rental income can be complex, particularly if you own multiple properties or have several sources of rental income. We help landlords accurately report earnings, calculate what's owed and meet their tax obligations with confidence — whether that's a single buy-to-let or a wider portfolio generating income from different property types.",
     included: [
       "Rental income reporting",
       "Tax calculations and submissions",
@@ -37,9 +33,9 @@ const services = [
   },
   {
     icon: Home,
-    title: "Property Portfolio Accounting for Landlords",
+    title: "Property Portfolio Accounting",
     description:
-      "Managing multiple properties requires clear financial oversight and accurate record-keeping. We provide accounting support for landlords with growing portfolios, helping you monitor income, expenses and overall property performance. Whether you work with a property management company, use property management services or manage properties independently as a landlord, we can help keep your finances organised.",
+      "Managing multiple properties requires clear financial oversight and accurate record-keeping. We provide accounting support for landlords with growing portfolios, helping you monitor income, expenses and overall property performance — whether you manage everything independently or work alongside a property management company.",
     included: [
       "Portfolio income tracking",
       "Property performance reporting",
@@ -49,9 +45,9 @@ const services = [
   },
   {
     icon: TrendingUp,
-    title: "Capital Gains Tax Services for Landlords",
+    title: "Capital Gains Tax Services",
     description:
-      "Selling a property can create significant tax implications. Our team provides capital gains tax advice for landlords, helping you understand potential liabilities before a sale takes place. We also assist with capital gains tax reporting and provide guidance on capital gains tax for landlords to help you manage your obligations effectively.",
+      "Selling a property can create significant tax implications. Our team helps landlords understand potential Capital Gains Tax liabilities before a sale takes place, and supports you through the reporting process once it does — so there are no surprises either side of a transaction.",
     included: [
       "Capital gains tax calculations",
       "Property disposal planning",
@@ -61,9 +57,9 @@ const services = [
   },
   {
     icon: FileText,
-    title: "Expense Tracking Services for Landlords",
+    title: "Expense Tracking",
     description:
-      "Keeping accurate records of property-related expenses is essential for maximising allowable deductions and maintaining accurate financial records. Our expense tracking for landlords service helps ensure costs are properly recorded and reported, making landlord expense tracking simpler and more efficient throughout the year.",
+      "Keeping accurate records of property-related expenses is essential for maximising allowable deductions and maintaining clean, audit-ready financial records. Our expense tracking service ensures costs are properly categorised and reported throughout the year, rather than reconstructed under pressure at tax return time.",
     included: [
       "Expense categorisation",
       "Rental property cost tracking",
@@ -73,9 +69,9 @@ const services = [
   },
   {
     icon: BarChart2,
-    title: "Investment Analysis for Landlords",
+    title: "Investment Analysis",
     description:
-      "Making informed investment decisions requires a clear understanding of property performance. Through detailed investment analysis, we help landlords assess profitability, review cash flow and understand long-term returns. Our insights support better decision-making and provide valuable return on investment analysis for both existing and prospective property investments.",
+      "Making informed investment decisions requires a clear understanding of how each property is actually performing. Through detailed analysis, we help landlords assess profitability, review cash flow and understand long-term returns — insights that support better decisions on both existing holdings and prospective purchases.",
     included: [
       "Property performance reviews",
       "Profitability analysis",
@@ -87,7 +83,7 @@ const services = [
     icon: Building,
     title: "Structure Advice for Landlords",
     description:
-      "Choosing the right ownership structure can have a significant impact on tax efficiency and long-term investment goals. We provide practical structure advice for landlords, helping you understand whether holding properties personally or through a limited company may be more suitable for your circumstances.",
+      "Choosing the right ownership structure can significantly affect tax efficiency and long-term investment goals. We help you weigh up whether holding properties personally or through a limited company is the better fit for your circumstances and plans.",
     included: [
       "Ownership structure reviews",
       "Limited company considerations",
@@ -102,25 +98,25 @@ const pillars = [
     num: "01",
     title: "Specialist Support for Landlords",
     description:
-      "Unlike general accountants, we understand the unique financial and tax considerations that come with property ownership. As experienced accountants for landlords in Bristol, we provide tailored advice based on your property portfolio, investment goals and reporting requirements.",
+      "Unlike general accountants, we understand the financial and tax considerations that come with property ownership. As experienced accountants for landlords in Bristol, our advice is shaped around your portfolio, investment goals and reporting requirements.",
   },
   {
     num: "02",
     title: "Clear Tax & Compliance Guidance",
     description:
-      "Property taxation can be complex, particularly when managing multiple properties or planning future sales. Our team helps landlords stay compliant with HMRC requirements while providing practical guidance on rental income, allowable expenses and long-term tax planning.",
+      "Property taxation gets complicated fast, particularly when managing multiple properties or planning a sale. We help landlords stay compliant with HMRC while keeping rental income, allowable expenses and long-term tax planning straightforward.",
   },
   {
     num: "03",
     title: "Support for Smarter Property Decisions",
     description:
-      "Good accounting is about more than compliance. From cash flow management and profitability reviews to investment planning, we help landlords make informed decisions that support the growth and performance of their property portfolios.",
+      "Good accounting is about more than compliance. From cash flow management and profitability reviews to investment planning, we help landlords make decisions that support the growth and performance of their portfolios.",
   },
   {
     num: "04",
     title: "A Long-Term Partner for Property Investors",
     description:
-      "As your portfolio grows, your accounting and tax requirements may become more complex. We provide ongoing support and proactive advice to help landlords navigate new opportunities, manage risks and plan confidently for the future.",
+      "As your portfolio grows, so do your accounting and tax requirements. We provide ongoing, proactive advice to help you navigate new opportunities, manage risk and plan confidently for what's next.",
   },
 ];
 
@@ -129,37 +125,37 @@ const propertyOwners = [
     icon: Home,
     name: "Buy-to-Let Landlords",
     description:
-      "We help buy-to-let landlords manage rental income, track expenses and meet their ongoing tax obligations with confidence.",
+      "Rental income, expense tracking and ongoing tax obligations, handled with confidence, whether this is your first property or your fifth.",
   },
   {
     icon: Building,
     name: "Portfolio Landlords",
     description:
-      "For landlords with multiple properties, we provide structured accounting support, financial reporting and tax planning tailored to larger property portfolios.",
+      "More properties means more moving parts. We bring structure to your accounting, reporting and tax planning as your portfolio scales.",
   },
   {
     icon: Users,
     name: "First-Time Landlords",
     description:
-      "If you're new to property investment, we can help you understand your tax responsibilities and establish effective financial processes from the outset.",
+      "New to property investment? We'll walk you through your tax responsibilities and help you set up sound financial processes from day one, before habits form the hard way.",
   },
   {
-    icon: Briefcase,
+    icon: Building,
     name: "Limited Company Property Investors",
     description:
-      "We support landlords who own investment properties through limited companies, providing accounting, tax and compliance guidance tailored to corporate property ownership.",
+      "Corporate ownership brings its own compliance requirements. We handle the accounting and tax side so your structure works as efficiently as intended.",
   },
   {
     icon: TrendingUp,
     name: "Residential Property Investors",
     description:
-      "From single-property investors to those expanding their holdings, we provide practical financial support designed to help maximise returns and maintain compliance.",
+      "From a single buy-to-let to an expanding residential portfolio, we help you stay compliant while keeping an eye on maximising returns.",
   },
   {
     icon: BarChart2,
     name: "Property Developers",
     description:
-      "We also assist property developers with accounting, tax planning and financial reporting to support successful project management and long-term growth.",
+      "Projects bring different financial demands — we support developers with accounting, tax planning and reporting throughout each stage of a build or renovation.",
   },
 ];
 
@@ -177,7 +173,7 @@ const Landlords = () => {
         {/* Hero Section */}
         <section className="relative overflow-hidden hero-gradient py-24 md:py-32 flex items-center">
           {/* Background Pattern */}
-          <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0zNiAxOGMtNi42MjcgMC0xMiA1LjM3My0xMiAxMnM1LjM3MyAxMiAxMiAxMiAxMi01LjM3MyAxMi0xMi01LjM3My0xMi0xMi0xMnptMCAxOGMtMy4zMTQgMC02LTIuNjg2LTYtNnMyLjY4Ni02IDYtNiA2IDIuNjg2IDYgNi0yLjY4NiA2LTYgNnoiIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iLjAzIi8+PC9nPjwvc3ZnPg==')] opacity-40" />
+          <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAxIiBoZWlnaHQ9IjYwMSIgdmlld0JveD0iMCAwIDYwIDYwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PHBhdGggZD0iTTM2IDE4Yy02LjYyNyAwLTEyIDUuMzc3LTEyIDEyczUuMzc3IDEyIDEyIDEyIDEyLTUuMzc3IDEyLTEyLTUuMzc3LTEyLTEyLTEydnptMCAxOGMtMy4zMTQgMC02LTIuNjg2LTYtNnMyLjY4Ni02IDYtNiA2IDIuNjg2IDYgNi0yLjY4NiA2LTYgNnoiIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iLjAzIi8+PC9nPjwvc3ZnPg==')] opacity-40" />
 
           {/* Decorative Glows */}
           <div className="absolute -top-40 -left-40 w-96 h-96 bg-gold/10 blur-3xl rounded-full" />
@@ -193,7 +189,7 @@ const Landlords = () => {
                 <div className="mb-6 flex items-center justify-center lg:justify-start">
                   <div className="h-8 w-1 bg-gold rounded-full mr-3" />
                   <span className="text-gold font-bold uppercase tracking-[0.2em] text-xs">
-                    Specialist Landlord Advice
+                    Primary Keyword: Landlord Accountants in Bristol
                   </span>
                 </div>
 
@@ -203,17 +199,11 @@ const Landlords = () => {
                 </h1>
 
                 <p className="mt-8 text-lg text-white/85 leading-relaxed max-w-2xl">
-                  Managing rental properties comes with ongoing financial and tax responsibilities, from tracking rental
-                  income and expenses to filing accurate tax returns and planning for future investments. Working with
-                  experienced landlord accountants in Bristol can help you stay compliant, reduce stress and make more
-                  informed financial decisions.
+                  Managing rental properties comes with ongoing financial and tax responsibilities, from tracking rental income and expenses to filing accurate tax returns and planning for future investments. Working with experienced landlord accountants in Bristol can help you stay compliant, reduce stress and make more informed financial decisions.
                 </p>
 
                 <p className="mt-4 text-base text-white/75 leading-relaxed max-w-2xl">
-                  At Henleaze Tax Consultancy, we provide tailored support for landlords, property investors and
-                  buy-to-let owners across Bristol and the wider UK. Whether you need help with bookkeeping, rental
-                  income reporting, annual tax returns or long-term tax planning, our team offers practical advice
-                  designed around the needs of landlords.
+                  At Henleaze Tax Consultancy, we provide tailored support for landlords, property investors and buy-to-let owners across Bristol and the wider UK. Whether you need help with bookkeeping, rental income reporting, annual tax returns or long-term tax planning, our team offers practical advice built around how landlords actually manage their properties.
                 </p>
 
                 <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
@@ -226,14 +216,6 @@ const Landlords = () => {
                       Speak to a Landlord Accountant
                       <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                     </Link>
-                  </Button>
-                  <Button
-                    size="lg"
-                    variant="outline"
-                    className="border-white/30 text-white bg-white/5 hover:bg-navy hover:text-white rounded-full px-8 py-6 transition-all duration-300"
-                    asChild
-                  >
-                    <Link to="/pricing">View Our Pricing</Link>
                   </Button>
                 </div>
               </div>
@@ -293,16 +275,13 @@ const Landlords = () => {
               </div>
 
               <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-navy leading-tight mt-3">
-                Our Landlord Accounting Services in Bristol
+                Our Landlord Accounting Services
               </h2>
 
               <div className="w-20 h-1 bg-gold mx-auto my-6 rounded-full" />
 
               <p className="text-lg text-gray-600 leading-relaxed max-w-2xl mx-auto">
-                As experienced landlord accountants in Bristol, we provide specialist accounting and tax support for
-                landlords, buy-to-let investors and property owners. Our services are designed to help you manage your
-                rental income efficiently, remain compliant with HMRC requirements and make informed decisions about
-                your property investments.
+                As experienced landlord accountants in Bristol, we provide specialist accounting and tax support for landlords, buy-to-let investors and property owners. Our services help you manage rental income efficiently, remain compliant with HMRC requirements and make informed decisions about your property investments.
               </p>
             </div>
 
@@ -317,7 +296,6 @@ const Landlords = () => {
                     <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(202,169,87,0.20),transparent_35%),radial-gradient(circle_at_bottom_left,rgba(15,23,42,0.08),transparent_42%)] pointer-events-none" />
                     <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-gold/20 via-gold to-gold/20 opacity-90" />
                     <div className="absolute -top-20 -right-20 h-40 w-40 rounded-full bg-gold/15 blur-3xl transition-all duration-500 group-hover:bg-gold/25" />
-                    <div className="absolute -top-20 -right-20 h-40 w-40 rounded-full bg-gold/10 blur-3xl transition-all duration-500 group-hover:bg-gold/15" />
 
                     <CardHeader className="p-8 pb-0 relative z-10">
                       <div className="mb-6 flex items-start justify-between gap-4">
@@ -343,7 +321,7 @@ const Landlords = () => {
 
                       <div className="mb-5 rounded-2xl border border-slate-100 bg-slate-50/70 p-4">
                         <p className="text-[11px] font-bold uppercase tracking-wider text-navy mb-3">
-                          What&apos;s included
+                          What's included:
                         </p>
                         <ul className="space-y-2.5">
                           {service.included.map((item, idx) => (
@@ -356,33 +334,31 @@ const Landlords = () => {
                           ))}
                         </ul>
                       </div>
-
-                      <div className="flex items-center justify-between pt-2">
-                        <span className="text-xs font-semibold text-gray-500">Tailored support</span>
-
-                        <Link
-                          to="/contact"
-                          className="group relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-navy px-4 py-2 text-sm font-bold text-white shadow-md transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_14px_28px_rgba(15,23,42,0.18)]"
-                        >
-                          <span className="absolute inset-0 bg-gradient-to-r from-gold/0 via-white/20 to-gold/0 translate-x-[-120%] transition-transform duration-700 group-hover:translate-x-[120%]" />
-                          <span className="relative">Enquire Now</span>
-                          <span className="relative flex h-6 w-6 items-center justify-center rounded-full bg-gold text-navy transition-all duration-300 group-hover:translate-x-1 group-hover:scale-110">
-                            <ArrowRight className="h-3.5 w-3.5" />
-                          </span>
-                        </Link>
-                      </div>
                     </CardContent>
                   </Card>
                 );
               })}
             </div>
+
+            <div className="text-center mt-12">
+              <Button
+                size="lg"
+                asChild
+                className="bg-navy hover:bg-navy-light text-white font-bold h-14 px-8 rounded-xl shadow-lg transition-all duration-300"
+              >
+                <Link to="/services" className="inline-flex items-center">
+                  View All Services
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </Button>
+            </div>
           </div>
         </section>
 
-        {/* Why Choose Henleaze Section */}
+        {/* Why Choose Section */}
         <section className="relative overflow-hidden py-24 bg-gradient-to-br from-navy via-navy-light to-navy-dark">
           {/* Background pattern */}
-          <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0zNiAxOGMtNi42MjcgMC0xMiA1LjM3My0xMiAxMnM1LjM3MyAxMiAxMiAxMiAxMi01LjM3MyAxMiAxMi01LjM3MyAxMiAxMiAxMnptMCAxOGMtMy4zMTQgMC02LTIuNjg2LTYtNnMyLjY4Ni02IDYtNiA2IDIuNjg2IDYgNi0yLjY4NiA2LTYgNnoiIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iLjAzIi8+PC9nPjwvc3ZnPg==')] opacity-40" />
+          <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAxIiBoZWlnaHQ9IjYwMSIgdmlld0JveD0iMCAwIDYwIDYwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PHBhdGggZD0iTTM2IDE4Yy02LjYyNyAwLTEyIDUuMzc3LTEyIDEyczUuMzc3IDEyIDEyIDEyIDEyLTUuMzc3IDEyLTEyLTUuMzc3LTEyLTEyLTEydnptMCAxOGMtMy4zMTQgMC02LTIuNjg2LTYtNnMyLjY4Ni02IDYtNiA2IDIuNjg2IDYgNi0yLjY4NiA2LTYgNnoiIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iLjAzIi8+PC9nPjwvc3ZnPg==')] opacity-40" />
           {/* Gold accent top line */}
           <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-transparent via-gold to-transparent" />
           {/* Decorative glow blobs */}
@@ -393,7 +369,7 @@ const Landlords = () => {
             {/* Section label */}
             <div className="mb-12 flex items-center justify-center">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gold/10 border border-gold/25 text-gold text-xs font-bold uppercase tracking-wider">
-                <Shield className="h-3.5 w-3.5" />
+                <ShieldCheck className="h-3.5 w-3.5" />
                 Why Choose Specialist Support
               </div>
             </div>
@@ -408,15 +384,13 @@ const Landlords = () => {
                   <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-gold to-transparent opacity-80" />
 
                   <h2 className="font-display text-3xl md:text-4xl font-bold tracking-tight text-white leading-tight">
-                    Why Choose Henleaze as Your Landlord Accountant
-                    <span className="block text-gold mt-1">in Bristol?</span>
+                    Why Choose Henleaze as Your Landlord Accountant?
                   </h2>
 
                   <div className="w-16 h-0.5 bg-gold rounded-full my-6" />
 
                   <p className="text-base text-white/80 leading-relaxed">
-                    At Henleaze Tax Consultancy, we provide practical accounting and tax support designed specifically
-                    for landlords, helping you manage your property finances with confidence.
+                    At Henleaze Tax Consultancy, we provide accounting and tax support designed specifically for landlords, helping you manage your property finances with confidence.
                   </p>
 
                   <div className="mt-8">
@@ -424,7 +398,6 @@ const Landlords = () => {
                       to="/pricing"
                       className="group/btn relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-gold px-6 py-3 text-sm font-bold text-navy shadow-lg transition-all duration-300 hover:bg-gold-light hover:scale-105 hover:shadow-[0_0_24px_rgba(212,175,55,0.4)]"
                     >
-                      <span className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 translate-x-[-120%] transition-transform duration-700 group/btn-hover:translate-x-[120%]" />
                       <span className="relative">View Our Pricing</span>
                       <span className="relative flex h-6 w-6 items-center justify-center rounded-full bg-navy/20 transition-all duration-300 group-hover/btn:translate-x-1">
                         <ArrowRight className="h-3.5 w-3.5" />
@@ -467,6 +440,7 @@ const Landlords = () => {
             </div>
           </div>
         </section>
+
         {/* Supporting Landlords Across Bristol & the UK */}
         <section className="relative overflow-hidden py-20 bg-gradient-to-b from-slate-50 via-white to-slate-50">
           <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-gold/40 to-transparent" />
@@ -482,10 +456,10 @@ const Landlords = () => {
               {/* LEFT - icon + label */}
               <div className="relative flex-shrink-0 flex flex-col items-center justify-center gap-6 px-10 py-12 lg:py-16 bg-gradient-to-br from-navy via-navy-light to-navy-dark lg:w-72 xl:w-80">
                 {/* Dot pattern */}
-                <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0zNiAxOGMtNi42MjcgMC0xMiA1Lji3X133QqstvUSBBpiYbKy4nFL22koGMiAxMi01LjM3MyAxMiAxMi01LjM3MyAxMiAxMiAxMnptMCAxOGMtMy4zMTQgMC02LTIuNjg2LTYtNnMyLjY4Ni02IDYtNiA2IDIuNjg2IDYgNi0yLjY4NiA2LTYgNnoiIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iLjAzIi8+PC9nPjwvc3ZnPg==')] opacity-50" />
+                <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAxIiBoZWlnaHQ9IjYwMSIgdmlld0JveD0iMCAwIDYwIDYwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PHBhdGggZD0iTTM2IDE4Yy02LjYyNyAwLTEyIDUuMzc3LTEyIDEyczUuMzc3IDEyIDEyIDEyIDEyLTUuMzc3IDEyLTEyLTUuMzc3LTEyLTEyLTEydnptMCAxOGMtMy4zMTQgMC02LTIuNjg2LTYtNnMyLjY4Ni02IDYtNiA2IDIuNjg2IDYgNi0yLjY4NiA2LTYgNnoiIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iLjAzIi8+PC9nPjwvc3ZnPg==')] opacity-50" />
                 <div className="relative z-10 flex flex-col items-center text-center gap-4">
                   <div className="inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-gold/15 border border-gold/25 text-gold">
-                    <Building className="h-8 w-8" />
+                    <Home className="h-8 w-8" />
                   </div>
                   <div className="h-px w-12 bg-gold/40 rounded-full" />
                   <p className="text-xs font-bold uppercase tracking-[0.2em] text-gold">Our Reach</p>
@@ -508,16 +482,10 @@ const Landlords = () => {
 
                 <div className="space-y-4 text-gray-600 leading-relaxed text-base">
                   <p>
-                    While we work closely with property owners seeking experienced landlord accountants in Bristol, our
-                    services are not limited to the local area. We support landlords throughout the UK, providing
-                    specialist accounting, tax and financial guidance tailored to the needs of property investors and
-                    buy-to-let owners.
+                    While we work closely with property owners seeking experienced landlord accountants in Bristol, our services are not limited to the local area. We support landlords throughout the UK, providing specialist accounting, tax and financial guidance tailored to the needs of property investors and buy-to-let owners.
                   </p>
                   <p>
-                    Whether you&apos;re looking for a trusted landlord accountant in Bristol, require support from
-                    online landlord accountants in the UK or need experienced landlord tax accountants to help manage
-                    your property finances, our team is here to provide reliable advice and ongoing support wherever
-                    you&apos;re based.
+                    Whether you're looking for a trusted landlord accountant in Bristol or need experienced landlord tax accountants to help manage your property finances, our team is here to provide reliable advice and ongoing support wherever you're based.
                   </p>
                 </div>
 
@@ -543,13 +511,11 @@ const Landlords = () => {
           <div className="container relative z-10">
             <div className="mx-auto max-w-3xl text-center">
               <h2 className="font-display text-3xl md:text-4xl font-bold tracking-tight text-navy leading-tight">
-                Property Owners We Support in Bristol
+                Property Owners We Support
               </h2>
               <div className="w-20 h-1 bg-gold mx-auto my-6 rounded-full" />
               <p className="text-lg text-gray-600 leading-relaxed max-w-2xl mx-auto">
-                We work with a wide range of landlords and property investors, providing tailored accounting and tax
-                support based on their individual circumstances. Whether you own a single rental property or manage a
-                growing portfolio, our team can help you stay compliant and make informed financial decisions.
+                We work with a wide range of landlords and property investors, with advice shaped by each person's specific situation. Whether you own a single rental property or manage a growing portfolio, our team can help you stay compliant and make informed financial decisions.
               </p>
             </div>
             <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 mt-16">
@@ -582,8 +548,6 @@ const Landlords = () => {
           </div>
         </section>
 
-
-
         {/* Bottom CTA Section */}
         <section className="relative w-full py-32 overflow-hidden">
           {/* Full-bleed background */}
@@ -607,14 +571,10 @@ const Landlords = () => {
 
             <div className="max-w-3xl mx-auto space-y-4 text-white/90 mb-10 leading-relaxed text-base md:text-lg">
               <p>
-                Whether you own a single rental property or manage a growing portfolio, having the right accounting
-                support can help you stay compliant, improve tax efficiency and make confident financial decisions. At
-                Henleaze Tax Consultancy, we provide practical advice and ongoing support tailored to the needs of
-                landlords and property investors across Bristol and the UK.
+                Whether you own a single rental property or manage a growing portfolio, having the right accounting support can help you stay compliant, improve tax efficiency and make confident financial decisions. At Henleaze Tax Consultancy, we provide practical advice and ongoing support tailored to the needs of landlords and property investors across Bristol and the UK.
               </p>
               <p className="font-semibold text-white">
-                Get in touch today to discuss your requirements and discover how we can help you manage your property
-                finances more effectively.
+                Get in touch today to discuss your requirements and discover how we can help you manage your property finances more effectively.
               </p>
             </div>
 
