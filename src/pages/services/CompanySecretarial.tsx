@@ -16,7 +16,8 @@ import {
   Coins,
   ShieldCheck,
   Briefcase,
-  TrendingUp
+  TrendingUp,
+  HelpCircle,
 } from "lucide-react";
 import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
@@ -123,25 +124,52 @@ const audience = [
     icon: Scale,
     name: "Startups & New Businesses",
     description:
-      "We help new companies get set up correctly from the beginning, ensuring all essential filings and records are in place."
+      "Getting set up correctly from day one — essential filings and records in place before anything can slip through the cracks."
   },
   {
     icon: TrendingUp,
     name: "Small & Medium-Sized Businesses",
     description:
-      "For growing businesses, we provide ongoing support to keep company records updated and compliance requirements under control."
+      "As a business grows, so does the paperwork behind it. We keep company records updated and compliance requirements under control."
   },
   {
     icon: Building2,
     name: "Limited Companies",
     description:
-      "We work with UK limited companies that need help managing statutory obligations, filings and company structure updates."
+      "Statutory obligations, filings, structure updates — UK limited companies rely on us to manage the ongoing detail."
   },
   {
     icon: Users,
     name: "Directors & Business Owners",
     description:
-      "We also support individual directors who want reliable help managing their company responsibilities without handling everything themselves."
+      "Prefer not to handle every filing yourself? We support individual directors who want reliable help managing their company responsibilities."
+  }
+];
+
+const faqs = [
+  {
+    q: "What is a confirmation statement, and how often do I need to file one?",
+    a: "It's an annual filing confirming your company's details are up to date with Companies House due once every 12 months, regardless of your company's size or activity."
+  },
+  {
+    q: "Do I legally need a registered office address, or can you use my home address?",
+    a: "You need a registered office address on public record, but it doesn't have to be your home many directors use a professional address specifically to keep their home address private."
+  },
+  {
+    q: "What happens if I miss a Companies House filing deadline?",
+    a: "Late filings can result in financial penalties and, in more serious or repeated cases, action against the company or its directors so it's worth flagging deadlines well in advance."
+  },
+  {
+    q: "Do I need a company secretary for a small limited company?",
+    a: "No since 2008 private limited companies aren't legally required to appoint a company secretary, though many still use secretarial support to manage the associated admin."
+  },
+  {
+    q: "Can you handle a change of company director for me?",
+    a: "Yes we prepare and file the required Companies House paperwork for director appointments, resignations and other officer changes."
+  },
+  {
+    q: "Is company secretarial support only for existing companies, or can you help with new company setup too?",
+    a: "Both we handle incorporation for new companies as well as ongoing compliance support once you're up and running."
   }
 ];
 
@@ -596,6 +624,52 @@ const CompanySecretarial = () => {
             </div>
           </div>
         </section>
+
+        {/* FAQ Section */}
+        <section className="py-24 bg-navy text-white relative overflow-hidden">
+          <div className="absolute inset-0">
+            <img
+              src="/cta-consult.png"
+              alt="Professional consultation"
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 hero-gradient opacity-95" />
+          </div>
+          <div className="container max-w-5xl relative z-10">
+            <div className="text-center max-w-3xl mx-auto mb-16">
+              <span className="inline-flex items-center gap-2 px-3 py-1 mb-4 text-xs font-bold text-gold bg-gold/10 rounded-full border border-gold/25 tracking-wider uppercase">
+                <HelpCircle className="h-3.5 w-3.5" />
+                FAQ
+              </span>
+              <h2 className="font-display text-3xl md:text-4xl font-bold text-white mt-3">
+                Frequently Asked Questions
+              </h2>
+              <div className="w-20 h-1 bg-gold mx-auto mt-4 rounded-full" />
+            </div>
+
+            <div className="grid gap-6 md:grid-cols-2">
+              {faqs.map((faq, index) => (
+                <div
+                  key={index}
+                  className="group bg-white/10 border border-white/20 rounded-2xl p-6 md:p-8 backdrop-blur-sm hover:border-gold/40 hover:bg-white/15 hover:-translate-y-1.5 hover:shadow-[0_15px_30px_rgba(0,0,0,0.08)] transition-all duration-300 cursor-default"
+                >
+                  <h3 className="text-lg font-bold text-white mb-3 flex items-start gap-3 transition-transform duration-300 group-hover:translate-x-1">
+                    <span className="flex-shrink-0 w-8 h-8 rounded-lg bg-gold/15 flex items-center justify-center text-gold text-sm font-bold transition-all duration-300 group-hover:bg-gold group-hover:text-navy group-hover:rotate-6 group-hover:scale-105">
+                      Q
+                    </span>
+                    <span className="group-hover:text-gold transition-colors duration-300">
+                      {faq.q}
+                    </span>
+                  </h3>
+                  <p className="text-sm md:text-base text-gray-300 leading-relaxed pl-11 transition-colors duration-300 group-hover:text-gray-200">
+                    {faq.a}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
 
         {/* Ready to Simplify Section (Bottom CTA) */}
         <section className="relative w-full py-32 overflow-hidden">

@@ -22,6 +22,7 @@ import {
   FileText,
   BarChart3,
   Coins,
+  HelpCircle,
 } from "lucide-react";
 import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
@@ -40,7 +41,7 @@ const services = [
     icon: Clock,
     title: "Monthly Payroll Services",
     description:
-      "Accurate payroll processing is essential for maintaining employee trust and ensuring compliance with HMRC requirements. Our monthly payroll services are tailored to businesses of all sizes, helping you manage salaries, deductions and employee payments efficiently. Whether you have a small team or a growing workforce, we provide reliable monthly payroll support that keeps your payroll running smoothly.",
+      "Accurate payroll processing is essential for maintaining employee trust and ensuring compliance with HMRC requirements. Our monthly payroll service helps you manage salaries, deductions and employee payments efficiently — whether you have a small team or a growing workforce.",
     included: [
       "Salary and wage processing",
       "Payslip generation",
@@ -52,7 +53,7 @@ const services = [
     icon: Shield,
     title: "RTI Submission Services",
     description:
-      "HMRC requires employers to report payroll information in real time. We handle HMRC RTI submissions accurately and on time, helping your business remain compliant with reporting requirements. Whether you require support with RTI submission online or ongoing payroll compliance, our team ensures your submissions are completed correctly every pay period.",
+      "HMRC requires employers to report payroll information in real time. We handle RTI submissions accurately and on time, helping your business remain compliant with reporting requirements every pay period.",
     included: [
       "RTI reporting to HMRC",
       "Payroll data submissions",
@@ -64,7 +65,7 @@ const services = [
     icon: PiggyBank,
     title: "Pension Auto-Enrolment Services",
     description:
-      "Meeting workplace pension obligations is an important responsibility for employers. Our pension auto-enrolment services help businesses manage assessments, enrolment duties and ongoing compliance. We work with a range of auto enrolment pension providers and provide auto enrolment pension services tailored to your workforce requirements.",
+      "Meeting workplace pension obligations is an important responsibility for employers. Our auto-enrolment service helps businesses manage assessments, enrolment duties and ongoing compliance, working with a range of pension providers to suit your workforce.",
     included: [
       "Employee eligibility assessments",
       "Pension scheme setup support",
@@ -121,7 +122,7 @@ const pillars = [
     num: "02",
     title: "Practical HR Advice",
     description:
-      "Employment matters can be complex, especially as your business grows. Our experienced team provides clear guidance on contracts, policies and employee relations, helping you make confident decisions when workplace issues arise. As a trusted human resources management company, we deliver practical human resource solutions tailored to businesses of all sizes.",
+      "Employment matters can be complex, especially as your business grows. Our experienced team provides clear guidance on contracts, policies and employee relations, helping you make confident decisions when workplace issues arise.",
   },
   {
     num: "03",
@@ -133,13 +134,13 @@ const pillars = [
     num: "04",
     title: "Local Expertise with UK-Wide Support",
     description:
-      "Businesses looking for payroll and HR services in Bristol value local expertise, but our support extends far beyond the city. We work with organisations across the UK, providing tailored payroll and human resources solutions designed around their individual requirements.",
+      "Businesses looking for payroll and HR services in Bristol value local expertise, but our support extends far beyond the city. We work with organisations across the UK, providing solutions designed around their individual requirements.",
   },
   {
     num: "05",
     title: "A Trusted Partner for Employers",
     description:
-      "From day-to-day administration to long-term workforce planning, we aim to become a trusted extension of your business. Our payroll and HR services Bristol businesses rely on are built around reliability, responsiveness and practical advice.",
+      "From day-to-day administration to long-term workforce planning, we aim to become a trusted extension of your business — built around reliability, responsiveness and practical advice.",
   },
 ];
 
@@ -154,33 +155,55 @@ const industries = [
     icon: Briefcase,
     name: "Small & Medium-Sized Businesses",
     description:
-      "From payroll processing to employee support, we work closely with SMEs to simplify administration and help them manage their workforce with confidence.",
+      "Payroll processing, employee support, day-to-day administration — we work closely with SMEs to simplify this side of running a team.",
   },
   {
     icon: Star,
     name: "Professional Services Firms",
     description:
-      "We support consultants, agencies and professional service providers with reliable payroll and HR solutions tailored to their operational needs.",
+      "Consultants, agencies and other professional service providers turn to us for reliable payroll and HR solutions built around how they operate.",
   },
   {
     icon: Store,
     name: "Retail & Hospitality Businesses",
     description:
-      "Managing shift patterns, seasonal staff and payroll can be challenging. Our team helps businesses in the retail and hospitality sectors stay organised and compliant.",
+      "Shift patterns, seasonal staff and fluctuating payroll can be genuinely tricky to manage. Our team helps retail and hospitality businesses stay organised and compliant through it.",
   },
   {
     icon: Wrench,
     name: "Construction & Trade Businesses",
     description:
-      "We provide payroll and HR support to construction companies and trade businesses, helping them manage employees and meet their employer obligations.",
-  },
-  {
-    icon: Building,
-    name: "Property & Real Estate Businesses",
-    description:
-      "From property management companies to real estate professionals, we provide payroll and HR support tailored to the specific needs of the property sector.",
+      "Construction companies and trade businesses rely on us for payroll and HR support that keeps them on top of their employer obligations.",
   },
 ];
+
+const faqs = [
+  {
+    q: "At what point does a business need payroll support?",
+    a: "As soon as you take on your first employee even a single member of staff requires PAYE registration and RTI reporting to HMRC.",
+  },
+  {
+    q: "Do I need pension auto-enrolment if I only have one or two employees?",
+    a: "Yes auto-enrolment applies regardless of headcount, as long as your staff meet the eligibility criteria on age and earnings.",
+  },
+  {
+    q: "Can you handle payroll if my employees are paid weekly rather than monthly?",
+    a: "Yes — payroll frequency is set by your business, and we run reporting and submissions in line with whatever pay schedule you use.",
+  },
+  {
+    q: "Do small businesses really need formal HR support, or is that just for larger companies?",
+    a: "Even a single employee brings legal obligations around contracts, policies and employment rights, so basic HR support matters from day one, not just at scale.",
+  },
+  {
+    q: "What happens if I make a payroll error, like an incorrect RTI submission?",
+    a: "It can usually be corrected with an amended submission to HMRC the key is catching and fixing it quickly to avoid penalties or employee pay issues.",
+  },
+  {
+    q: "Can you take over payroll partway through the tax year?",
+    a: "Yes we can pick up payroll mid-year and carry across existing year-to-date figures, so nothing is lost in the switch.",
+  },
+];
+
 
 /* ─────────────────────────── COMPONENT ─────────────────────────── */
 
@@ -212,7 +235,7 @@ const PayrollHR = () => {
                 <div className="mb-6 flex items-center justify-center lg:justify-start">
                   <div className="h-8 w-1 bg-gold rounded-full mr-3" />
                   <span className="text-gold font-bold uppercase tracking-[0.2em] text-xs">
-                    Specialist Payroll &amp; HR Support
+                    Payroll and HR Services in Bristol
                   </span>
                 </div>
 
@@ -226,7 +249,11 @@ const PayrollHR = () => {
                 </p>
 
                 <p className="mt-4 text-base text-white/75 leading-relaxed max-w-2xl">
-                  At Henleaze Tax Consultancy, we provide reliable payroll and HR services in Bristol &amp; across the UK, tailored to businesses of all sizes. Whether you need ongoing payroll services, practical HR services in Bristol or specialist guidance from experienced HR professionals, our team is here to help.
+                  At Henleaze Tax Consultancy, we provide reliable payroll and HR services across Bristol and the UK. Whether you need ongoing payroll support, practical HR guidance, or specialist advice from experienced professionals, our team is here to help.
+                </p>
+
+                <p className="mt-4 text-base text-white/75 leading-relaxed max-w-2xl">
+                  We support businesses across Bristol and the UK with flexible payroll and human resources solutions designed to keep your business compliant, efficient and focused on growth.
                 </p>
 
                 <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
@@ -422,8 +449,7 @@ const PayrollHR = () => {
                   <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-gold to-transparent opacity-80" />
 
                   <h2 className="font-display text-3xl md:text-4xl font-bold tracking-tight text-white leading-tight">
-                    Why Choose Henleaze for Payroll &amp; HR
-                    <span className="block text-gold mt-1">Support?</span>
+                    Why Choose Henleaze Tax Consultancy for Payroll &amp; HR Support?
                   </h2>
 
                   <div className="w-16 h-0.5 bg-gold rounded-full my-6" />
@@ -549,7 +575,7 @@ const PayrollHR = () => {
               </h2>
               <div className="w-20 h-1 bg-gold mx-auto my-6 rounded-full" />
               <p className="text-lg text-gray-600 leading-relaxed max-w-2xl mx-auto">
-                We provide payroll and HR support to businesses of all sizes across a wide range of industries. Whether you&apos;re employing your first team member or managing a growing workforce, our services are tailored to meet the needs of your business.
+                We provide payroll and HR support to businesses of all sizes across a wide range of industries. Whether you&apos;re employing your first team member or managing a growing workforce, our services are shaped around what your business actually needs.
               </p>
             </div>
 
@@ -581,6 +607,51 @@ const PayrollHR = () => {
                   </div>
                 );
               })}
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ Section */}
+        <section className="py-24 bg-navy text-white relative overflow-hidden">
+          <div className="absolute inset-0">
+            <img
+              src="/cta-consult.png"
+              alt="Professional consultation"
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 hero-gradient opacity-95" />
+          </div>
+          <div className="container max-w-5xl relative z-10">
+            <div className="text-center max-w-3xl mx-auto mb-16">
+              <span className="inline-flex items-center gap-2 px-3 py-1 mb-4 text-xs font-bold text-gold bg-gold/10 rounded-full border border-gold/25 tracking-wider uppercase">
+                <HelpCircle className="h-3.5 w-3.5" />
+                FAQ
+              </span>
+              <h2 className="font-display text-3xl md:text-4xl font-bold text-white mt-3">
+                Frequently Asked Questions
+              </h2>
+              <div className="w-20 h-1 bg-gold mx-auto mt-4 rounded-full" />
+            </div>
+
+            <div className="grid gap-6 md:grid-cols-2">
+              {faqs.map((faq, index) => (
+                <div
+                  key={index}
+                  className="group bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 md:p-8 hover:border-gold/50 hover:bg-white/10 hover:-translate-y-1.5 hover:shadow-[0_20px_40px_-15px_rgba(202,169,87,0.2)] transition-all duration-300 ease-out cursor-default"
+                >
+                  <h3 className="text-lg font-bold text-white mb-3 flex items-start gap-3 transition-transform duration-300 group-hover:translate-x-1">
+                    <span className="flex-shrink-0 w-8 h-8 rounded-lg bg-gold/15 flex items-center justify-center text-gold text-sm font-bold transition-all duration-300 group-hover:bg-gold group-hover:text-navy group-hover:scale-105 group-hover:rotate-6">
+                      Q
+                    </span>
+                    <span className="group-hover:text-gold transition-colors duration-300">
+                      {faq.q}
+                    </span>
+                  </h3>
+                  <p className="text-sm md:text-base text-white/80 leading-relaxed pl-11 transition-colors duration-300 group-hover:text-white/95">
+                    {faq.a}
+                  </p>
+                </div>
+              ))}
             </div>
           </div>
         </section>

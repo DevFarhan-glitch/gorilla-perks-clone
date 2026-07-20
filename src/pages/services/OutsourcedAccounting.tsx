@@ -18,6 +18,7 @@ import {
   Store,
   Layers,
   Rocket,
+  HelpCircle,
 } from "lucide-react";
 import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
@@ -28,7 +29,7 @@ const services = [
     icon: Calculator,
     title: "Bookkeeping & Financial Records",
     description:
-      "Keeping accurate records is essential for making informed business decisions. Our outsourced accounting bookkeeping services give businesses access to reliable financial record management without the cost of an in-house team. Whether you need day-to-day bookkeeping support or regular financial oversight, we provide support that fits your business.",
+      "Keeping accurate records is essential for making informed business decisions. Our bookkeeping service gives businesses access to reliable financial record management without the cost of an in-house team — whether you need day-to-day support or regular oversight.",
     included: [
       "Transaction recording and reconciliations",
       "Bank and credit card reconciliation",
@@ -40,7 +41,7 @@ const services = [
     icon: BarChart2,
     title: "Management Accounts",
     description:
-      "Regular financial reporting helps you understand how your business is performing and identify opportunities for growth. Our management accounting services provide clear insights into cash flow, profitability and performance through accurate management accounting reports.",
+      "Regular financial reporting helps you understand how your business is performing and identify opportunities for growth. Our management accounting service provides clear insight into cash flow, profitability and overall performance.",
     included: [
       "Monthly or quarterly reporting",
       "Cash flow analysis",
@@ -64,7 +65,7 @@ const services = [
     icon: Building2,
     title: "Year-End Accounts",
     description:
-      "Preparing accurate year end accounts is essential for meeting statutory obligations and understanding your business performance. Our end of year accounting services help ensure your accounts are prepared correctly and submitted on time.",
+      "Preparing accurate year-end accounts is essential for meeting statutory obligations and understanding your business performance. Our service helps ensure your accounts are prepared correctly and submitted on time.",
     included: [
       "Statutory accounts preparation",
       "Financial statement preparation",
@@ -76,7 +77,7 @@ const services = [
     icon: Shield,
     title: "Compliance & Advisory",
     description:
-      "Beyond compliance, businesses often need financial guidance to support growth and decision-making. Our outsourced accounting advisory and outsourced finance support help you make informed decisions while staying on top of your obligations.",
+      "Beyond compliance, businesses often need financial guidance to support growth and decision-making. Our advisory support helps you make informed decisions while staying on top of your obligations.",
     included: [
       "Financial compliance reviews",
       "Business advisory support",
@@ -103,7 +104,7 @@ const pillars = [
     num: "01",
     title: "Support That Grows With Your Business",
     description:
-      "Whether you're a start-up or an established company, your accounting requirements evolve over time. We provide outsourced accounting for startups and growing businesses, helping them manage finances efficiently at every stage of growth.",
+      "Whether you're a start-up or an established company, your accounting requirements evolve over time. We help businesses manage their finances efficiently at every stage of growth.",
   },
   {
     num: "02",
@@ -115,7 +116,7 @@ const pillars = [
     num: "03",
     title: "A Trusted Extension of Your Business",
     description:
-      "We work closely with clients to become part of their wider team, providing reliable financial support and practical advice whenever needed. Businesses looking to outsource accounting services can rely on us for responsive and professional support.",
+      "We work closely with clients to become part of their wider team, providing reliable financial support and practical advice whenever needed — the kind of responsive, professional support you'd expect from an in-house hire.",
   },
   {
     num: "04",
@@ -127,7 +128,7 @@ const pillars = [
     num: "05",
     title: "Local Expertise with UK-Wide Support",
     description:
-      "As one of the trusted accounting outsourcing providers supporting businesses across Bristol and the UK, we help clients manage their finances with confidence and clarity.",
+      "We support businesses across Bristol and the UK, helping clients manage their finances with confidence and clarity wherever they're based.",
   },
 ];
 
@@ -136,37 +137,64 @@ const businessTypes = [
     icon: Rocket,
     name: "Start-Ups",
     description:
-      "New businesses often need reliable financial support without the cost of building an in-house team. We help start-ups establish strong financial processes from day one.",
+      "Reliable financial support from day one, without the cost of building an in-house team — helping new businesses establish strong processes early.",
   },
   {
     icon: Briefcase,
     name: "Small Businesses",
     description:
-      "From bookkeeping to compliance, we provide accounting support that allows business owners to focus on running and growing their business.",
+      "From bookkeeping to compliance, our support lets business owners focus on running and growing their business rather than the admin behind it.",
   },
   {
     icon: TrendingUp,
     name: "Growing Companies",
     description:
-      "As businesses expand, financial requirements become more complex. We provide scalable support that grows alongside your business.",
+      "As a business expands, its financial requirements get more complex. We provide support that scales alongside it.",
   },
   {
     icon: Users,
     name: "Professional Service Firms",
     description:
-      "We work with consultants, agencies and professional firms that need accurate financial reporting and ongoing accounting support.",
+      "Consultants, agencies and other professional firms rely on us for accurate financial reporting and ongoing accounting support.",
   },
   {
     icon: Store,
     name: "E-commerce Businesses",
     description:
-      "Online businesses often manage high transaction volumes and changing reporting requirements. We help keep finances organised and up to date.",
+      "High transaction volumes and shifting reporting requirements are part of the territory — we help keep finances organised and up to date through it.",
   },
   {
     icon: Layers,
     name: "Established SMEs",
     description:
-      "For established businesses, outsourced accounting can provide additional expertise and improve financial visibility without increasing overhead costs.",
+      "For established businesses, outsourcing can add expertise and improve financial visibility without increasing overhead costs.",
+  },
+];
+
+const faqs = [
+  {
+    q: "Is outsourced accounting cheaper than hiring in-house?",
+    a: "Usually, yes. You avoid salary, NI, pension and software costs, and only pay for the support you actually need.",
+  },
+  {
+    q: "Do I lose control over my finances by outsourcing?",
+    a: "No. You still see every report and figure and make all the decisions — we handle the processing and compliance behind the scenes.",
+  },
+  {
+    q: "Can I outsource just one part, like payroll or VAT, and keep the rest in-house?",
+    a: "Yes. It doesn't have to be all-or-nothing many businesses start with one function and expand later.",
+  },
+  {
+    q: "What accounting software do you work with?",
+    a: "The major cloud platforms most UK businesses already use. If you're not on one yet, we'll help you get set up.",
+  },
+  {
+    q: "How quickly can outsourced accounting be set up?",
+    a: "A simple handover, like bookkeeping or VAT, is usually running within a couple of weeks. Larger setups take a bit longer.",
+  },
+  {
+    q: "What if I'm not happy with the service after switching?",
+    a: "We adjust the scope or approach until it fits you're not locked into a rigid contract.",
   },
 ];
 
@@ -217,9 +245,8 @@ const OutsourcedAccounting = () => {
 
                 <p className="mt-4 text-base text-white/75 leading-relaxed max-w-2xl">
                   At Henleaze Tax Consultancy, we provide outsourced accounting services in Bristol and across the UK,
-                  helping businesses manage their finances efficiently and stay compliant. Whether you're looking for
-                  outsourced accounting for small businesses, support for a growing startup or experienced outsourced
-                  accountants, our team is here to help.
+                  helping businesses manage their finances efficiently and stay compliant. Whether you're a small business,
+                  a growing startup or an established company, our team is here to help.
                 </p>
 
                 <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
@@ -306,7 +333,7 @@ const OutsourcedAccounting = () => {
 
               <p className="text-lg text-gray-600 leading-relaxed max-w-2xl mx-auto">
                 Outsourcing your finance function gives you access to experienced professionals without the cost and
-                commitment of hiring an in-house team. Our outsourced accounting services are designed to help
+                commitment of hiring an in-house team. Our services are designed to help
                 businesses improve efficiency, maintain compliance and gain better visibility over their finances.
               </p>
             </div>
@@ -593,6 +620,51 @@ const OutsourcedAccounting = () => {
                   </div>
                 );
               })}
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ Section */}
+        <section className="py-24 bg-navy text-white relative overflow-hidden">
+          <div className="absolute inset-0">
+            <img
+              src="/cta-consult.png"
+              alt="Professional consultation"
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 hero-gradient opacity-95" />
+          </div>
+          <div className="container max-w-5xl relative z-10">
+            <div className="text-center max-w-3xl mx-auto mb-16">
+              <span className="inline-flex items-center gap-2 px-3 py-1 mb-4 text-xs font-bold text-gold bg-gold/10 rounded-full border border-gold/25 tracking-wider uppercase">
+                <HelpCircle className="h-3.5 w-3.5" />
+                FAQ
+              </span>
+              <h2 className="font-display text-3xl md:text-4xl font-bold text-white mt-3">
+                Frequently Asked Questions
+              </h2>
+              <div className="w-20 h-1 bg-gold mx-auto mt-4 rounded-full" />
+            </div>
+
+            <div className="grid gap-6 md:grid-cols-2">
+              {faqs.map((faq, index) => (
+                <div
+                  key={index}
+                  className="group bg-white/10 border border-white/20 rounded-2xl p-6 md:p-8 backdrop-blur-sm hover:border-gold/40 hover:bg-white/15 hover:-translate-y-1.5 hover:shadow-[0_15px_30px_rgba(0,0,0,0.08)] transition-all duration-300 cursor-default"
+                >
+                  <h3 className="text-lg font-bold text-white mb-3 flex items-start gap-3 transition-transform duration-300 group-hover:translate-x-1">
+                    <span className="flex-shrink-0 w-8 h-8 rounded-lg bg-gold/15 flex items-center justify-center text-gold text-sm font-bold transition-all duration-300 group-hover:bg-gold group-hover:text-navy group-hover:rotate-6 group-hover:scale-105">
+                      Q
+                    </span>
+                    <span className="group-hover:text-gold transition-colors duration-300">
+                      {faq.q}
+                    </span>
+                  </h3>
+                  <p className="text-sm md:text-base text-gray-300 leading-relaxed pl-11 transition-colors duration-300 group-hover:text-gray-200">
+                    {faq.a}
+                  </p>
+                </div>
+              ))}
             </div>
           </div>
         </section>

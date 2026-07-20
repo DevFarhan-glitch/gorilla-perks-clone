@@ -189,7 +189,7 @@ const Landlords = () => {
                 <div className="mb-6 flex items-center justify-center lg:justify-start">
                   <div className="h-8 w-1 bg-gold rounded-full mr-3" />
                   <span className="text-gold font-bold uppercase tracking-[0.2em] text-xs">
-                    Primary Keyword: Landlord Accountants in Bristol
+                    Landlord Accountants in Bristol
                   </span>
                 </div>
 

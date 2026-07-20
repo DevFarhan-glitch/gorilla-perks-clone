@@ -18,6 +18,7 @@ import {
   ArrowUpRight,
   Home,
   UserCheck,
+  HelpCircle,
 } from "lucide-react";
 import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
@@ -28,7 +29,7 @@ const services = [
     icon: Building,
     title: "Corporation Tax Planning",
     description:
-      "Managing corporation tax effectively is an important part of running a business. We help companies understand their obligations under corporate tax UK rules, prepare accurate company tax returns and ensure all available reliefs are considered. Whether you need support with a company tax return UK filing or guidance on corporation tax services, our team is here to help.",
+      "Managing corporation tax effectively is an important part of running a business. We help companies understand their obligations, prepare accurate company tax returns and make sure every available relief has been considered before filing.",
     included: [
       "Corporation tax calculations",
       "Company tax return preparation",
@@ -52,7 +53,7 @@ const services = [
     icon: PieChart,
     title: "Capital Gains Tax Advice",
     description:
-      "Selling assets or investments can have significant tax implications. We provide capital gains tax advice to help you understand potential liabilities and make informed decisions before a sale takes place. Our team also assists with capital gain tax return requirements and provides support from an experienced capital gains tax accountant in the UK.",
+      "Selling assets or investments can have significant tax implications. We help you understand potential liabilities and make informed decisions before a sale takes place, then support you through the return itself once it's time to report it.",
     included: [
       "Capital gains tax calculations",
       "Asset disposal planning",
@@ -64,7 +65,7 @@ const services = [
     icon: FileCheck,
     title: "Inheritance Tax Planning",
     description:
-      "Planning ahead can help protect your estate and preserve wealth for future generations. Our inheritance tax planning services provide clear guidance on inheritance tax UK rules and available reliefs. Whether you need advice from an inheritance tax advisor in the UK or ongoing inheritance tax services, we're here to help.",
+      "Planning ahead can help protect your estate and preserve wealth for future generations. Our inheritance tax planning services provide clear guidance on inheritance tax UK rules and available reliefs.",
     included: [
       "Estate planning support",
       "Inheritance tax calculations",
@@ -130,39 +131,61 @@ const whoWeHelp = [
     icon: Briefcase,
     name: "Business Owners",
     description:
-      "We help business owners structure their finances efficiently, plan for future growth and manage their tax obligations effectively.",
+      "Structuring finances efficiently, planning for future growth, managing tax obligations — we handle it so you can focus on running the business.",
   },
   {
     icon: Home,
     name: "Landlords & Property Investors",
     description:
-      "From rental income and capital gains tax to succession planning, we support landlords and property investors with practical tax advice.",
+      "Rental income, capital gains tax, succession planning — property brings its own set of tax questions, and we help you work through them.",
   },
   {
     icon: Building,
     name: "Company Directors",
     description:
-      "Directors often face unique tax considerations. We provide guidance on remuneration, dividends and long-term tax planning strategies.",
+      "Directors face their own tax considerations. We advise on remuneration, dividends and long-term planning strategies suited to your position.",
   },
   {
     icon: UserCheck,
     name: "Families & Individuals",
     description:
-      "Whether you're planning for retirement, passing on wealth or managing personal finances, we help individuals make informed tax decisions.",
+      "Retirement planning, passing on wealth, or simply managing personal finances more effectively — we help individuals make informed tax decisions.",
   },
   {
     icon: TrendingUp,
     name: "Growing Businesses",
     description:
-      "As businesses evolve, tax requirements can become more complex. We provide ongoing support to help businesses plan ahead and remain compliant.",
-  },
-  {
-    icon: Shield,
-    name: "Experienced Support You Can Trust",
-    description:
-      "Whether you need ongoing support or a one-off review, our tax planning specialists are here to help you manage your affairs efficiently and plan for the future with confidence.",
+      "As a business evolves, so does its tax position. We provide ongoing support to help growing businesses plan ahead and stay compliant.",
   },
 ];
+
+const faqs = [
+  {
+    q: "When should I start tax planning, rather than just filing a return each year?",
+    a: "Ideally before a major decision selling an asset, taking on a director role, or passing on wealth since most tax planning only works if it's done in advance, not after the fact.",
+  },
+  {
+    q: "Is tax planning legal, or is it the same as tax avoidance?",
+    a: "Tax planning is fully legal it means using reliefs and allowances Parliament has specifically made available, unlike aggressive avoidance schemes designed to exploit loopholes.",
+  },
+  {
+    q: "Do I need tax planning if I only have one source of income?",
+    a: "Often yes — even a single income source can benefit from pension contributions, allowance use, or timing decisions that reduce what you owe.",
+  },
+  {
+    q: "How is tax planning different for a business owner versus an individual?",
+    a: "Business owners typically plan around profit extraction, dividends and Corporation Tax, while individuals focus more on income tax, savings allowances and estate planning.",
+  },
+  {
+    q: "Can tax planning help reduce Inheritance Tax on my estate?",
+    a: "Yes reliefs, gifting strategies and trust structures can all reduce an estate's IHT liability, but they need to be set up well before they're needed.",
+  },
+  {
+    q: "How often should my tax plan be reviewed?",
+    a: "At least once a year, and after any major life or business change tax rules and personal circumstances both shift, and a plan that worked last year may not this year.",
+  },
+];
+
 
 const TaxPlanning = () => {
   return (
@@ -194,7 +217,7 @@ const TaxPlanning = () => {
                 <div className="mb-6 flex items-center justify-center lg:justify-start">
                   <div className="h-8 w-1 bg-gold rounded-full mr-3" />
                   <span className="text-gold font-bold uppercase tracking-[0.2em] text-xs">
-                    Specialist Tax Planning Advice
+                    Tax Planning in Bristol
                   </span>
                 </div>
 
@@ -208,7 +231,7 @@ const TaxPlanning = () => {
                 </p>
 
                 <p className="mt-4 text-base text-white/75 leading-relaxed max-w-2xl">
-                  At Henleaze Tax Consultancy, we provide tailored tax planning in Bristol and across the UK, helping clients structure their finances efficiently while remaining fully compliant with HMRC requirements. Our experienced tax planning specialists offer practical advice designed around your personal and business goals.
+                  At Henleaze Tax Consultancy, we provide tax planning support across Bristol and the UK, helping clients structure their finances efficiently while remaining fully compliant with HMRC requirements. Our experienced tax planning specialists offer advice built around your personal and business goals.
                 </p>
 
                 <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
@@ -578,6 +601,51 @@ const TaxPlanning = () => {
                   </div>
                 );
               })}
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ Section */}
+        <section className="py-24 bg-navy text-white relative overflow-hidden">
+          <div className="absolute inset-0">
+            <img
+              src="/cta-consult.png"
+              alt="Professional consultation"
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 hero-gradient opacity-95" />
+          </div>
+          <div className="container max-w-5xl relative z-10">
+            <div className="text-center max-w-3xl mx-auto mb-16">
+              <span className="inline-flex items-center gap-2 px-3 py-1 mb-4 text-xs font-bold text-gold bg-gold/10 rounded-full border border-gold/25 tracking-wider uppercase">
+                <HelpCircle className="h-3.5 w-3.5" />
+                FAQ
+              </span>
+              <h2 className="font-display text-3xl md:text-4xl font-bold text-white mt-3">
+                Frequently Asked Questions
+              </h2>
+              <div className="w-20 h-1 bg-gold mx-auto mt-4 rounded-full" />
+            </div>
+
+            <div className="grid gap-6 md:grid-cols-2">
+              {faqs.map((faq, index) => (
+                <div
+                  key={index}
+                  className="group bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 md:p-8 hover:border-gold/50 hover:bg-white/10 hover:-translate-y-1.5 hover:shadow-[0_20px_40px_-15px_rgba(202,169,87,0.2)] transition-all duration-300 ease-out cursor-default"
+                >
+                  <h3 className="text-lg font-bold text-white mb-3 flex items-start gap-3 transition-transform duration-300 group-hover:translate-x-1">
+                    <span className="flex-shrink-0 w-8 h-8 rounded-lg bg-gold/15 flex items-center justify-center text-gold text-sm font-bold transition-all duration-300 group-hover:bg-gold group-hover:text-navy group-hover:scale-105 group-hover:rotate-6">
+                      Q
+                    </span>
+                    <span className="group-hover:text-gold transition-colors duration-300">
+                      {faq.q}
+                    </span>
+                  </h3>
+                  <p className="text-sm md:text-base text-white/80 leading-relaxed pl-11 transition-colors duration-300 group-hover:text-white/95">
+                    {faq.a}
+                  </p>
+                </div>
+              ))}
             </div>
           </div>
         </section>

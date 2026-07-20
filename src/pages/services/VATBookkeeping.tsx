@@ -19,6 +19,7 @@ import {
   Store,
   UserCheck,
   Layers,
+  HelpCircle,
 } from "lucide-react";
 import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
@@ -29,7 +30,7 @@ const services = [
     icon: Receipt,
     title: "VAT Return Services",
     description:
-      "Preparing and submitting an accurate VAT return UK businesses can rely on is an important part of maintaining compliance. We handle VAT calculations, submissions and reporting requirements, helping ensure your returns are completed correctly and on time.",
+      "Preparing and submitting an accurate VAT return is an important part of maintaining compliance. We handle the calculations, submissions and reporting requirements, helping ensure your returns are completed correctly and on time.",
     included: [
       "VAT return preparation",
       "HMRC submissions",
@@ -53,7 +54,7 @@ const services = [
     icon: Cloud,
     title: "Cloud Accounting Support",
     description:
-      "As experienced cloud accountants, we help businesses make the most of modern accounting software. Our cloud accounting services and solutions provide secure access to financial information, making it easier to manage your finances from anywhere.",
+      "As experienced cloud accountants, we help businesses make the most of modern accounting software, giving you secure access to your financial information from anywhere.",
     included: [
       "Xero support",
       "QuickBooks support",
@@ -65,7 +66,7 @@ const services = [
     icon: RefreshCw,
     title: "Bank Reconciliation Services",
     description:
-      "Regular bank reconciliation helps ensure your financial records accurately reflect your business activity. Our bank reconciliation accounting services help identify discrepancies early and keep your accounts accurate.",
+      "Regular bank reconciliation helps ensure your financial records accurately reflect your business activity. Our service helps identify discrepancies early and keep your accounts accurate.",
     included: [
       "Bank account reconciliation",
       "Transaction matching",
@@ -110,19 +111,25 @@ const pillars = [
     num: "02",
     title: "Accurate Records & Reliable Reporting",
     description:
-      "Good financial records are essential for making informed business decisions. Our bookkeeping accounting services help ensure your records remain organised, accurate and ready whenever you need them.",
+      "Good financial records are essential for making informed business decisions. Our services help ensure your records remain organised, accurate and ready whenever you need them.",
   },
   {
     num: "03",
     title: "Keeping You Compliant",
     description:
-      "VAT regulations and reporting requirements can change over time. We provide professional VAT services that help businesses meet their obligations, submit returns accurately and avoid unnecessary compliance issues.",
+      "VAT regulations and reporting requirements can change over time. We help businesses meet their obligations, submit returns accurately and avoid unnecessary compliance issues.",
   },
   {
     num: "04",
     title: "Flexible Support for Modern Businesses",
     description:
       "Many businesses now prefer digital accounting solutions that provide greater flexibility and visibility. Our VAT online services, combined with cloud-based bookkeeping support, make it easier to access and manage your financial information.",
+  },
+  {
+    num: "05",
+    title: "Local Expertise with UK-Wide Support",
+    description:
+      "Businesses looking for VAT and bookkeeping services in Bristol value local expertise, but our support extends across the UK — wherever you're based, our team is here to help.",
   },
 ];
 
@@ -131,37 +138,64 @@ const whoWeWorkWith = [
     icon: Building,
     name: "Start-Ups",
     description:
-      "New businesses often need support setting up bookkeeping systems, managing VAT obligations and keeping financial records organised from the outset.",
+      "Setting up bookkeeping systems, managing VAT obligations, keeping records organised from day one — we help new businesses get this right from the start.",
   },
   {
     icon: Briefcase,
     name: "Small Businesses",
     description:
-      "We help small business owners stay on top of bookkeeping, VAT returns and financial administration, allowing them to focus on running and growing their business.",
+      "Bookkeeping, VAT returns, financial admin — we handle it so small business owners can focus on running and growing what they've built.",
   },
   {
     icon: Layers,
     name: "Limited Companies",
     description:
-      "From day-to-day bookkeeping to VAT compliance and financial reporting, we support limited companies with reliable accounting assistance.",
+      "From day-to-day bookkeeping to VAT compliance and financial reporting, limited companies rely on us for consistent, reliable support.",
   },
   {
     icon: UserCheck,
     name: "Contractors & Freelancers",
     description:
-      "Managing finances while serving clients can be challenging. We help contractors and freelancers maintain accurate records and meet their tax and VAT responsibilities.",
+      "Managing finances while serving clients can be genuinely difficult to juggle. We help contractors and freelancers stay on top of records, tax and VAT responsibilities.",
   },
   {
     icon: Store,
     name: "Retail & E-Commerce Businesses",
     description:
-      "Businesses with high transaction volumes need accurate record-keeping and reporting. We help retail and e-commerce businesses maintain organised financial records and stay compliant.",
+      "High transaction volumes demand accurate record-keeping. We help retail and e-commerce businesses stay organised and compliant despite the volume.",
   },
   {
     icon: Users,
     name: "Professional Service Firms",
     description:
-      "We work with consultants, agencies and professional firms that require dependable bookkeeping and VAT support to keep their finances running smoothly.",
+      "Consultants, agencies and professional firms turn to us for dependable bookkeeping and VAT support that keeps their finances running smoothly.",
+  },
+];
+
+const faqs = [
+  {
+    q: "How often do I need to submit a VAT return?",
+    a: "Most VAT-registered businesses file quarterly, though some are on monthly or annual schemes depending on turnover and the scheme they're registered under.",
+  },
+  {
+    q: "At what turnover do I need to register for VAT?",
+    a: "You must register once your taxable turnover passes £90,000 in a rolling 12-month period, though you can register voluntarily below that threshold.",
+  },
+  {
+    q: "Do I need Making Tax Digital software if I run a small business?",
+    a: "Yes MTD applies to all VAT-registered businesses, regardless of size, so digital record-keeping and MTD-compatible software are required by law.",
+  },
+  {
+    q: "Can you take over my bookkeeping if it's fallen behind?",
+    a: "Yes catching up overdue bookkeeping is one of the most common requests we handle, and we can bring records up to date before your next filing deadline.",
+  },
+  {
+    q: "Do I have to use Xero or QuickBooks, or can you work with what I already use?",
+    a: "We work with most major cloud platforms and can usually fit around what you're already using rather than requiring a switch.",
+  },
+  {
+    q: "Is bookkeeping different from accounting?",
+    a: "Yes bookkeeping is the ongoing recording of transactions, while accounting covers the reporting, analysis and tax submissions built on top of those records.",
   },
 ];
 
@@ -579,6 +613,51 @@ const VATBookkeeping = () => {
                   </div>
                 );
               })}
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ Section */}
+        <section className="py-24 bg-navy text-white relative overflow-hidden">
+          <div className="absolute inset-0">
+            <img
+              src="/cta-consult.png"
+              alt="Professional consultation"
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 hero-gradient opacity-95" />
+          </div>
+          <div className="container max-w-5xl relative z-10">
+            <div className="text-center max-w-3xl mx-auto mb-16">
+              <span className="inline-flex items-center gap-2 px-3 py-1 mb-4 text-xs font-bold text-gold bg-gold/10 rounded-full border border-gold/25 tracking-wider uppercase">
+                <HelpCircle className="h-3.5 w-3.5" />
+                FAQ
+              </span>
+              <h2 className="font-display text-3xl md:text-4xl font-bold text-white mt-3">
+                Frequently Asked Questions
+              </h2>
+              <div className="w-20 h-1 bg-gold mx-auto mt-4 rounded-full" />
+            </div>
+
+            <div className="grid gap-6 md:grid-cols-2">
+              {faqs.map((faq, index) => (
+                <div
+                  key={index}
+                  className="group bg-white/10 border border-white/20 rounded-2xl p-6 md:p-8 backdrop-blur-sm hover:border-gold/40 hover:bg-white/15 hover:-translate-y-1.5 hover:shadow-[0_15px_30px_rgba(0,0,0,0.08)] transition-all duration-300 cursor-default"
+                >
+                  <h3 className="text-lg font-bold text-white mb-3 flex items-start gap-3 transition-transform duration-300 group-hover:translate-x-1">
+                    <span className="flex-shrink-0 w-8 h-8 rounded-lg bg-gold/15 flex items-center justify-center text-gold text-sm font-bold transition-all duration-300 group-hover:bg-gold group-hover:text-navy group-hover:rotate-6 group-hover:scale-105">
+                      Q
+                    </span>
+                    <span className="group-hover:text-gold transition-colors duration-300">
+                      {faq.q}
+                    </span>
+                  </h3>
+                  <p className="text-sm md:text-base text-gray-300 leading-relaxed pl-11 transition-colors duration-300 group-hover:text-gray-200">
+                    {faq.a}
+                  </p>
+                </div>
+              ))}
             </div>
           </div>
         </section>
