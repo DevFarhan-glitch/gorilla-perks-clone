@@ -1,5 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
+import { useState, useEffect, useRef } from "react";
 import {
   Check,
   ArrowRight,
@@ -22,7 +23,9 @@ import {
   Building,
   FileText,
   Lightbulb,
-  Calculator
+  Calculator,
+  ChevronDown,
+  Search
 } from "lucide-react";
 import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
@@ -45,7 +48,7 @@ const services = [
     icon: FileText,
     title: "Technical Report Preparation",
     description:
-      "A well-prepared technical report helps explain the innovation and technical challenges involved in your project. We assist with preparing a clear and detailed R&D technical report that supports your claim and meets HMRC expectations.",
+      "A well-prepared technical report helps explain the innovation and technical challenges involved in your project. We assist with preparing a clear, detailed report that supports your claim and meets HMRC expectations.",
     included: [
       "Preparation of a technical R&D tax report",
       "Project documentation support",
@@ -57,7 +60,7 @@ const services = [
     icon: Calculator,
     title: "Cost Analysis & Claim Calculations",
     description:
-      "Accurately identifying qualifying costs is essential to achieving the correct level of relief. We carry out a detailed R&D cost assessment and calculate all eligible expenditure associated with your projects.",
+      "Accurately identifying qualifying costs is essential to achieving the correct level of relief. We assess all eligible expenditure across your projects — staff costs, software, materials and subcontractor costs — and calculate your claim to reflect the full scope of what you're entitled to.",
     included: [
       "R&D claim cost calculation",
       "Review of staff costs",
@@ -66,22 +69,22 @@ const services = [
     ]
   },
   {
-    icon: TrendingUp,
-    title: "Maximising Your Claim",
+    icon: Search,
+    title: "R&D Claim Review & Second Opinion",
     description:
-      "We help ensure your claim reflects all eligible activities and expenditure, giving your business the best opportunity to benefit from available tax relief.",
+      "If a claim has already been prepared — whether by a previous adviser or in-house — we can review it against current HMRC guidance to check whether it's complete, correctly calculated, and appropriately supported. This is often where businesses discover costs or projects that were missed the first time round.",
     included: [
-      "R&D tax claim optimisation",
-      "Review of eligible expenditure",
-      "Claim enhancement opportunities",
-      "Identification of potential R&D tax savings"
+      "Review of existing R&D claims",
+      "Identification of missed qualifying costs",
+      "Second opinion on claim accuracy",
+      "Recommendations before resubmission or future claims"
     ]
   },
   {
     icon: ShieldCheck,
     title: "HMRC Compliance Support",
     description:
-      "Preparing a claim that meets current HMRC requirements is essential. We help businesses maintain HMRC R&D compliance by ensuring claims are accurate, well-documented and supported by appropriate evidence.",
+      "Preparing a claim that meets current HMRC requirements is essential. We make sure claims are accurate, well-documented and supported by appropriate evidence, reducing the risk of enquiry or rejection.",
     included: [
       "R&D tax relief compliance reviews",
       "Supporting documentation checks",
@@ -108,13 +111,13 @@ const pillars = [
     num: "01",
     title: "Experienced Guidance Throughout the Process",
     description:
-      "Our team works closely with businesses to understand their projects, identify qualifying activities and prepare well-supported claims. As experienced R&D tax credit specialists, we help make the process clear and manageable from start to finish."
+      "Our team works closely with businesses to understand their projects, identify qualifying activities and prepare well-supported claims — making the process clear and manageable from start to finish."
   },
   {
     num: "02",
     title: "Focused on Maximising Legitimate Relief",
     description:
-      "Many businesses underestimate the value of their qualifying activities. We take the time to understand your work in detail, helping ensure eligible costs and projects are properly considered when claiming R&D tax credits."
+      "Many businesses underestimate the value of their qualifying activities. We take the time to understand your work in detail, helping ensure eligible costs and projects are properly considered."
   },
   {
     num: "03",
@@ -132,7 +135,7 @@ const pillars = [
     num: "05",
     title: "Reliable Compliance Support",
     description:
-      "As experienced R&D tax credit consultants, we prepare claims with accuracy and attention to detail, helping businesses meet HMRC requirements and submit claims with confidence."
+      "We prepare claims with accuracy and attention to detail, helping businesses meet HMRC requirements and submit with confidence."
   }
 ];
 
@@ -141,41 +144,111 @@ const audience = [
     icon: Laptop,
     name: "Technology & Software Companies",
     description:
-      "Businesses developing software, digital platforms, applications or technical solutions often undertake qualifying research and development activities."
+      "Building software, digital platforms or technical solutions often means the qualifying research and development work is happening without anyone labelling it as such."
   },
   {
     icon: Settings,
     name: "Engineering & Manufacturing Businesses",
     description:
-      "We work with companies that improve products, processes, systems or production methods while overcoming technical challenges."
+      "Improving products, processes, systems or production methods — and overcoming technical challenges along the way — is exactly the kind of work R&D relief was designed for."
   },
   {
     icon: Building,
     name: "Construction & Property Businesses",
     description:
-      "Many construction and property-related businesses carry out innovative work, including developing new methods, materials or solutions to complex project requirements."
+      "New methods, materials or solutions to complex project requirements often go unclaimed simply because they weren't recognised as R&D at the time."
   },
   {
     icon: TrendingUp,
     name: "Startups & Growing Businesses",
     description:
-      "Growing businesses frequently invest significant resources into product development and innovation. We help startups understand whether their activities may qualify for relief and support them throughout the claims process."
+      "Growing businesses frequently invest significant resources into product development. We help you understand whether that work qualifies and support you through the claims process."
   },
   {
     icon: Briefcase,
     name: "Professional & Specialist Service Providers",
     description:
-      "Businesses across a range of specialist sectors often develop new systems, processes and technical solutions that may be eligible for R&D tax relief."
+      "Developing new systems, processes or technical solutions isn't limited to traditional \"R&D\" industries — many specialist service businesses qualify without realising it."
   },
   {
     icon: Users,
     name: "Established SMEs",
     description:
-      "We support established businesses looking to maximise available tax relief while maintaining compliance and preparing robust claims supported by the appropriate documentation."
+      "For businesses already claiming, there's often more available than what's currently being captured — we help maximise relief while keeping claims well-documented and compliant."
+  }
+];
+
+const faqs = [
+  {
+    question: "What counts as qualifying R&D for tax relief purposes?",
+    answer:
+      "Work that seeks a scientific or technological advance and involves overcoming genuine technical uncertainty — this covers far more everyday problem-solving than most businesses assume, not just lab research."
+  },
+  {
+    question: "How far back can I claim R&D tax relief?",
+    answer:
+      "You can typically claim for the previous two accounting periods, so it's worth reviewing recent projects even if they weren't claimed for at the time."
+  },
+  {
+    question: "How long does an R&D tax credit claim take to process?",
+    answer:
+      "HMRC's standard processing time is around 40 days from submission, though this can vary depending on claim complexity and whether HMRC opens an enquiry."
+  },
+  {
+    question: "Can loss-making companies still claim R&D tax relief?",
+    answer:
+      "Yes — loss-making companies can typically claim a cash credit rather than a Corporation Tax reduction, which can be a valuable source of funding for early-stage businesses."
+  },
+  {
+    question: "Will claiming R&D tax relief increase my chances of an HMRC enquiry?",
+    answer:
+      "Not inherently, but poorly documented or overstated claims are more likely to be queried — accurate, well-evidenced claims reduce this risk significantly."
+  },
+  {
+    question: "Can you review a claim my previous accountant already submitted?",
+    answer:
+      "Yes — we regularly review existing claims and often identify qualifying costs or projects that were missed the first time around."
   }
 ];
 
 const RDClaims = () => {
+  const [openFaq, setOpenFaq] = useState<number | null>(null);
+  const sectionRefs = useRef<(HTMLElement | null)[]>([]);
+
+  useEffect(() => {
+    const observers: IntersectionObserver[] = [];
+    sectionRefs.current.forEach((el) => {
+      if (!el) return;
+      const children = Array.from(el.querySelectorAll<HTMLElement>("[data-animate]"));
+      children.forEach((child, i) => {
+        child.style.opacity = "0";
+        child.style.transform = "translateY(28px)";
+        child.style.transition = `opacity 0.6s ease ${i * 80}ms, transform 0.6s ease ${i * 80}ms`;
+      });
+      const obs = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              children.forEach((child) => {
+                child.style.opacity = "1";
+                child.style.transform = "translateY(0)";
+              });
+              obs.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.08 }
+      );
+      obs.observe(el);
+      observers.push(obs);
+    });
+    return () => observers.forEach((o) => o.disconnect());
+  }, []);
+
+  const addRef = (el: HTMLElement | null, idx: number) => {
+    sectionRefs.current[idx] = el;
+  };
+
   return (
     <>
       <Helmet>
@@ -205,24 +278,24 @@ const RDClaims = () => {
                 <div className="mb-6 flex items-center justify-center lg:justify-start">
                   <div className="h-8 w-1 bg-gold rounded-full mr-3" />
                   <span className="text-gold font-bold uppercase tracking-[0.2em] text-xs">
-                    Specialist R&D Advice
+                    Specialist R&amp;D Advice
                   </span>
                 </div>
 
                 <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-tight">
-                  R&D Tax Credit Claim
+                  R&amp;D Tax Credit Claim
                   <span className="block text-gold mt-2">in Bristol</span>
                 </h1>
 
                 <p className="mt-8 text-lg text-white/85 leading-relaxed max-w-2xl">
                   Many businesses invest time and money into developing new products, improving processes or overcoming
-                  technical challenges without realising they may be eligible for valuable tax relief. The UK's R&D tax
+                  technical challenges without realising they may be eligible for valuable tax relief. The UK's R&amp;D tax
                   relief scheme is designed to reward innovation and help businesses recover some of the costs
                   associated with qualifying research and development activities.
                 </p>
 
                 <p className="mt-4 text-base text-white/75 leading-relaxed max-w-2xl">
-                  At Henleaze Tax Consultancy, we help businesses with their R&D tax credit claim in Bristol and across the UK,
+                  At Henleaze Tax Consultancy, we help businesses with their R&amp;D tax credit claim in Bristol and across the UK,
                   identifying eligible projects, preparing supporting documentation and submitting claims with confidence.
                   Whether you're making your first claim or looking for expert guidance on an existing application, our team is
                   here to help you maximise the relief available to your business.
@@ -235,7 +308,7 @@ const RDClaims = () => {
                     asChild
                   >
                     <Link to="/contact" className="flex items-center">
-                      Speak to an R&D Tax Specialist
+                      Speak to an R&amp;D Tax Specialist
                       <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                     </Link>
                   </Button>
@@ -310,26 +383,29 @@ const RDClaims = () => {
         </section>
 
         {/* Services Section */}
-        <section className="relative overflow-hidden py-24 bg-gradient-to-b from-slate-50 via-white to-slate-50">
+        <section
+          ref={(el) => addRef(el, 0)}
+          className="relative overflow-hidden py-24 bg-gradient-to-b from-slate-50 via-white to-slate-50"
+        >
           <div className="absolute top-24 left-0 w-80 h-80 bg-gold/5 rounded-full blur-3xl pointer-events-none" />
           <div className="absolute bottom-24 right-0 w-80 h-80 bg-navy/5 rounded-full blur-3xl pointer-events-none" />
           <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-gold/40 to-transparent" />
 
           <div className="container relative z-10">
-            <div className="mx-auto max-w-3xl text-center">
+            <div className="mx-auto max-w-3xl text-center" data-animate>
               <div className="mb-4 inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gold/10 border border-gold/25 text-gold text-xs font-bold uppercase tracking-wider">
                 <Briefcase className="h-3.5 w-3.5" />
                 Services &amp; Tax Support
               </div>
 
               <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-navy leading-tight mt-3">
-                Our R&D Tax Credit Claim Services
+                Our R&amp;D Tax Credit Claim Services
               </h2>
 
               <div className="w-20 h-1 bg-gold mx-auto my-6 rounded-full" />
 
               <p className="text-lg text-gray-600 leading-relaxed max-w-2xl mx-auto">
-                Claiming R&D tax relief involves more than simply submitting an application. From identifying qualifying
+                Claiming R&amp;D tax relief involves more than simply submitting an application. From identifying qualifying
                 activities to preparing supporting documentation, every stage of the process plays an important role in
                 building a strong claim and maximising the relief available to your business.
               </p>
@@ -341,12 +417,12 @@ const RDClaims = () => {
                 return (
                   <Card
                     key={index}
+                    data-animate
                     className="group relative overflow-hidden rounded-[2rem] border border-gold/15 bg-gradient-to-br from-slate-50 via-white to-gold/10 shadow-[0_10px_30px_rgba(15,23,42,0.06)] transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_25px_60px_rgba(15,23,42,0.12)] hover:border-gold/35"
                   >
                     <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(202,169,87,0.20),transparent_35%),radial-gradient(circle_at_bottom_left,rgba(15,23,42,0.08),transparent_42%)] pointer-events-none" />
                     <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-gold/20 via-gold to-gold/20 opacity-90" />
                     <div className="absolute -top-20 -right-20 h-40 w-40 rounded-full bg-gold/15 blur-3xl transition-all duration-500 group-hover:bg-gold/25" />
-                    <div className="absolute -top-20 -right-20 h-40 w-40 rounded-full bg-gold/10 blur-3xl transition-all duration-500 group-hover:bg-gold/15" />
 
                     <CardHeader className="p-8 pb-0 relative z-10">
                       <div className="mb-6 flex items-start justify-between gap-4">
@@ -407,7 +483,7 @@ const RDClaims = () => {
             </div>
 
             {/* View All Services Button */}
-            <div className="mt-14 flex justify-center">
+            <div className="mt-14 flex justify-center" data-animate>
               <Link
                 to="/services"
                 className="group relative inline-flex items-center gap-3 overflow-hidden rounded-full bg-gold px-8 py-4 text-base font-bold text-navy shadow-lg transition-all duration-300 hover:bg-gold-light hover:scale-105 hover:shadow-[0_0_32px_rgba(212,175,55,0.45)]"
@@ -423,7 +499,10 @@ const RDClaims = () => {
         </section>
 
         {/* Why Choose Section */}
-        <section className="relative overflow-hidden py-24 bg-gradient-to-br from-navy via-navy-light to-navy-dark">
+        <section
+          ref={(el) => addRef(el, 1)}
+          className="relative overflow-hidden py-24 bg-gradient-to-br from-navy via-navy-light to-navy-dark"
+        >
           {/* Background pattern */}
           <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0zNiAxOGMtNi42MjcgMC0xMiA1LjM3My0xMiAxMnM1LjM3MyAxMiAxMiAxMiAxMi01LjM3MyAxMi0xMi01LjM3My0xMi0xMi0xMnptMCAxOGMtMy4zMTQgMC02LTIuNjg2LTYtNnMyLjY4Ni02IDYtNiA2IDIuNjg2IDYgNi0yLjY4NiA2LTYgNnoiIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iLjAzIi8+PC9nPjwvc3ZnPg==')] opacity-40" />
           {/* Gold accent top line */}
@@ -434,7 +513,7 @@ const RDClaims = () => {
 
           <div className="container relative z-10">
             {/* Section label */}
-            <div className="mb-12 flex items-center justify-center">
+            <div className="mb-12 flex items-center justify-center" data-animate>
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gold/10 border border-gold/25 text-gold text-xs font-bold uppercase tracking-wider">
                 <Shield className="h-3.5 w-3.5" />
                 Why Choose Specialist Support
@@ -443,20 +522,20 @@ const RDClaims = () => {
 
             <div className="grid gap-12 lg:grid-cols-12 items-start">
               {/* ── LEFT SIDEBAR ── */}
-              <div className="lg:col-span-4 lg:sticky lg:top-28 space-y-8">
+              <div className="lg:col-span-4 lg:sticky lg:top-28 space-y-8" data-animate>
                 {/* Glass card */}
                 <div className="relative rounded-[2rem] bg-white/5 border border-white/10 backdrop-blur-xl p-8 overflow-hidden group hover:border-gold/30 transition-all duration-500">
                   {/* Top shimmer line */}
                   <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-gold to-transparent opacity-80" />
 
                   <h2 className="font-display text-3xl md:text-4xl font-bold tracking-tight text-white leading-tight">
-                    Why Choose Henleaze for Your R&D Tax Credit Claim?
+                    Why Choose Henleaze for Your R&amp;D Tax Credit Claim?
                   </h2>
 
                   <div className="w-16 h-0.5 bg-gold rounded-full my-6" />
 
                   <p className="text-base text-white/80 leading-relaxed">
-                    Preparing an R&D tax claim requires more than identifying qualifying activities. A successful claim
+                    Preparing an R&amp;D tax claim requires more than identifying qualifying activities. A successful claim
                     relies on accurate calculations, clear supporting documentation and a thorough understanding of HMRC
                     requirements. Having experienced support can make the process far more straightforward and help reduce
                     the risk of errors or missed opportunities.
@@ -482,6 +561,7 @@ const RDClaims = () => {
                 {pillars.map((pillar, index) => (
                   <div
                     key={index}
+                    data-animate
                     className="group relative overflow-hidden rounded-[1.75rem] bg-white/5 border border-white/10 p-7 transition-all duration-500 hover:-translate-y-1.5 hover:bg-white/10 hover:border-gold/30 hover:shadow-[0_20px_50px_rgba(0,0,0,0.25)]"
                   >
                     {/* Top accent on hover */}
@@ -511,14 +591,17 @@ const RDClaims = () => {
         </section>
 
         {/* Supporting Innovative Businesses Section */}
-        <section className="relative overflow-hidden py-20 bg-gradient-to-b from-slate-50 via-white to-slate-50">
+        <section
+          ref={(el) => addRef(el, 2)}
+          className="relative overflow-hidden py-20 bg-gradient-to-b from-slate-50 via-white to-slate-50"
+        >
           <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-gold/40 to-transparent" />
           <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-gold/20 to-transparent" />
           <div className="absolute top-0 right-0 w-80 h-80 bg-gold/5 rounded-full blur-3xl pointer-events-none" />
 
           <div className="container relative z-10">
             {/* Two-column sidebox card */}
-            <div className="relative overflow-hidden rounded-[2.5rem] bg-white border border-gold/15 shadow-[0_20px_60px_rgba(15,23,42,0.08)] flex flex-col lg:flex-row">
+            <div data-animate className="relative overflow-hidden rounded-[2.5rem] bg-white border border-gold/15 shadow-[0_20px_60px_rgba(15,23,42,0.08)] flex flex-col lg:flex-row">
               {/* Gold left stripe */}
               <div className="absolute top-0 left-0 bottom-0 w-1 bg-gradient-to-b from-gold/40 via-gold to-gold/40 rounded-l-[2.5rem]" />
 
@@ -557,7 +640,7 @@ const RDClaims = () => {
                   <p>
                     Whether you're developing new products, improving existing processes, creating software solutions or
                     overcoming technical challenges within your industry, we can help you understand whether your
-                    activities may qualify for R&D tax relief.
+                    activities may qualify for R&amp;D tax relief.
                   </p>
                   <p>
                     From first-time claims to ongoing support for established businesses, we provide practical guidance
@@ -584,9 +667,12 @@ const RDClaims = () => {
         </section>
 
         {/* Who We Work With Section */}
-        <section className="py-24 bg-white relative">
+        <section
+          ref={(el) => addRef(el, 3)}
+          className="py-24 bg-white relative"
+        >
           <div className="container relative z-10">
-            <div className="mx-auto max-w-3xl text-center">
+            <div className="mx-auto max-w-3xl text-center" data-animate>
               <h2 className="font-display text-3xl md:text-4xl font-bold tracking-tight text-navy leading-tight">
                 Who We Work With
               </h2>
@@ -594,7 +680,7 @@ const RDClaims = () => {
               <p className="text-lg text-gray-600 leading-relaxed max-w-2xl mx-auto">
                 We support a wide range of businesses that invest in innovation, development and problem-solving. Whether
                 you're an established company or a growing business exploring new ideas, we can help you assess
-                potential eligibility for R&D tax relief.
+                potential eligibility for R&amp;D tax relief.
               </p>
             </div>
             <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 mt-16">
@@ -603,6 +689,7 @@ const RDClaims = () => {
                 return (
                   <div
                     key={index}
+                    data-animate
                     className="group relative overflow-hidden rounded-[2rem] border border-slate-200/70 bg-gradient-to-br from-white via-slate-50 to-gold/10 p-8 shadow-[0_10px_30px_rgba(15,23,42,0.06)] transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_25px_60px_rgba(15,23,42,0.12)] hover:border-gold/30"
                   >
                     <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(202,169,87,0.16),transparent_38%),radial-gradient(circle_at_bottom_left,rgba(15,23,42,0.06),transparent_45%)] opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
@@ -627,6 +714,71 @@ const RDClaims = () => {
           </div>
         </section>
 
+        {/* FAQ Section */}
+        <section
+          ref={(el) => addRef(el, 4)}
+          className="relative overflow-hidden py-24 bg-gradient-to-b from-slate-50 via-white to-slate-50"
+        >
+          <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-gold/40 to-transparent" />
+          <div className="absolute top-0 left-0 w-80 h-80 bg-gold/5 rounded-full blur-3xl pointer-events-none" />
+          <div className="absolute bottom-0 right-0 w-80 h-80 bg-navy/5 rounded-full blur-3xl pointer-events-none" />
+
+          <div className="container relative z-10">
+            <div className="mx-auto max-w-3xl text-center mb-14" data-animate>
+              <div className="mb-4 inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gold/10 border border-gold/25 text-gold text-xs font-bold uppercase tracking-wider">
+                <ClipboardList className="h-3.5 w-3.5" />
+                Frequently Asked Questions
+              </div>
+              <h2 className="font-display text-3xl md:text-4xl font-bold tracking-tight text-navy leading-tight mt-3">
+                Common Questions About R&amp;D Tax Relief
+              </h2>
+              <div className="w-20 h-1 bg-gold mx-auto mt-6 rounded-full" />
+            </div>
+
+            <div className="mx-auto max-w-3xl space-y-4">
+              {faqs.map((faq, index) => (
+                <div
+                  key={index}
+                  data-animate
+                  className="group rounded-2xl border border-slate-200/80 bg-white shadow-[0_4px_20px_rgba(15,23,42,0.05)] overflow-hidden transition-all duration-300 hover:border-gold/30 hover:shadow-[0_8px_30px_rgba(15,23,42,0.08)]"
+                >
+                  <button
+                    onClick={() => setOpenFaq(openFaq === index ? null : index)}
+                    className="w-full flex items-center justify-between gap-4 px-7 py-5 text-left"
+                    aria-expanded={openFaq === index}
+                  >
+                    <span className="font-display text-base font-bold text-navy leading-snug group-hover:text-gold transition-colors duration-300">
+                      {faq.question}
+                    </span>
+                    <span
+                      className={`flex-shrink-0 flex h-8 w-8 items-center justify-center rounded-full border transition-all duration-300 ${
+                        openFaq === index
+                          ? "bg-gold border-gold text-navy rotate-180"
+                          : "bg-slate-50 border-slate-200 text-navy group-hover:border-gold/40 group-hover:bg-gold/5"
+                      }`}
+                    >
+                      <ChevronDown className="h-4 w-4" />
+                    </span>
+                  </button>
+
+                  <div
+                    className="overflow-hidden transition-all duration-400 ease-in-out"
+                    style={{
+                      maxHeight: openFaq === index ? "300px" : "0",
+                      opacity: openFaq === index ? 1 : 0
+                    }}
+                  >
+                    <div className="px-7 pb-6 pt-0">
+                      <div className="w-full h-px bg-gradient-to-r from-gold/30 via-gold/60 to-gold/30 mb-4" />
+                      <p className="text-gray-600 text-sm leading-relaxed">{faq.answer}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* Ready to Explore Section (Bottom CTA) */}
         <section className="relative w-full py-32 overflow-hidden">
           {/* Full-bleed background */}
@@ -641,7 +793,7 @@ const RDClaims = () => {
 
           <div className="container relative z-10 text-center">
             <h2 className="font-display text-3xl font-bold tracking-tight text-white md:text-4xl leading-tight mb-6">
-              Ready to Explore Your R&D Tax Relief Opportunities?
+              Ready to Explore Your R&amp;D Tax Relief Opportunities?
             </h2>
 
             <div className="max-w-3xl mx-auto space-y-4 text-white/90 mb-10 leading-relaxed text-base md:text-lg">
@@ -652,7 +804,7 @@ const RDClaims = () => {
               </p>
               <p className="font-semibold text-white">
                 Get in touch with our team today to discuss your projects and find out whether your business could benefit
-                from an R&D tax credit claim.
+                from an R&amp;D tax credit claim.
               </p>
             </div>
 
@@ -671,7 +823,7 @@ const RDClaims = () => {
                 size="lg"
                 variant="outline"
                 asChild
-                className="border-white/30 text-white bg-white/5 hover:bg-white/10 hover:text-gold hover:border-gold rounded-full px-8 py-6 backdrop-blur-sm"
+                className="border border-amber-400 bg-transparent text-amber-400 hover:bg-amber-400 hover:text-slate-950 font-semibold px-8 py-6 rounded-lg transition-all duration-300"
               >
                 <a href="tel:+447949956279" className="flex items-center">
                   <Phone className="mr-2 h-4 w-4" />

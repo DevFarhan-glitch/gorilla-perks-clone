@@ -37,6 +37,7 @@ import ScrollToTop from "./components/ui/ScrollToTop";
 
 import CanonicalURL from "./components/SEO/CanonicalURL";
 import OutsourcedAccounting from "./pages/services/OutsourcedAccounting";
+import AccountantsInBirmingham from "./pages/AccountantsInBirmingham";
 
 const queryClient = new QueryClient();
 
@@ -79,10 +80,14 @@ const App = () => (
             <Route path="/contractor-accountant-services-in-the-uk" element={<ContractorAccountantServices />} />
             <Route path="/what-is-ir35-uk" element={<WhatIsIR35UK />} />
             <Route path="/what-is-ir35-uk/" element={<WhatIsIR35UK />} />
+            <Route path="/accountants-in-birmingham-uk" element={<AccountantsInBirmingham />} />
+            <Route path="/accountants-in-birmingham-uk/" element={<AccountantsInBirmingham />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             {/* ── 301-EQUIVALENT CLIENT-SIDE REDIRECTS ────────────────── */}
             {/* Service page — old slugs that may have been indexed */}
             <Route path="/services/contractor" element={<Navigate to="/services/contractor-accountants" replace />} />
+            <Route path="/services/contractors" element={<Navigate to="/services" replace />} />
+            <Route path="/services/contractors/" element={<Navigate to="/services" replace />} />
             <Route path="/services/small-business" element={<Navigate to="/services/small-business-accountants" replace />} />
             <Route path="/services/landlord" element={<Navigate to="/services/landlord-accountants" replace />} />
             <Route path="/services/tax-planning-and-advice" element={<Navigate to="/services/tax-planning" replace />} />

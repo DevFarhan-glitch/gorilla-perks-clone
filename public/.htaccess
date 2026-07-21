@@ -7,6 +7,7 @@
   # so that crawlers receive a proper 301 and PageRank is passed to the new URLs.
 
   # Service pages — old slugs to new slugs
+  RewriteRule ^services/contractors/?$                            /services [R=301,L]
   RewriteRule ^services/contractor/?$                             /services/contractor-accountants [R=301,L]
   RewriteRule ^services/small-business/?$                        /services/small-business-accountants [R=301,L]
   RewriteRule ^services/landlord/?$                              /services/landlord-accountants [R=301,L]

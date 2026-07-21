@@ -1,5 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
+import { useState, useEffect, useRef } from "react";
 import {
   Check,
   ArrowRight,
@@ -9,7 +10,6 @@ import {
   Phone,
   ArrowUpRight,
   Building2,
-  Scale,
   ClipboardCheck,
   ClipboardList,
   UserCheck,
@@ -18,13 +18,12 @@ import {
   Briefcase,
   TrendingUp,
   Laptop,
-  Settings,
   Building,
   FileText,
-  Lightbulb,
   Calculator,
   PiggyBank,
-  Landmark
+  Landmark,
+  ChevronDown
 } from "lucide-react";
 import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
@@ -83,7 +82,7 @@ const services = [
     icon: Shield,
     title: "HMRC Investigation Support",
     description:
-      "If HMRC opens an enquiry into your tax affairs, professional advice can make the process much easier. Our tax investigation accountants provide practical support and representation throughout the investigation.",
+      "If HMRC opens an enquiry into your tax affairs, professional advice can make the process much easier. We provide support and representation throughout the investigation, from initial correspondence to resolution.",
     included: [
       "HMRC correspondence",
       "Investigation support",
@@ -128,13 +127,13 @@ const pillars = [
     num: "04",
     title: "Support Beyond Self-Assessment",
     description:
-      "From capital gains tax to tax planning and HMRC enquiries, we provide ongoing assistance whenever you need it. Our team is here to offer practical advice and long-term support as your circumstances evolve."
+      "From capital gains tax to tax planning and HMRC enquiries, we provide ongoing assistance whenever you need it — support that evolves as your circumstances do."
   },
   {
     num: "05",
     title: "Local Expertise with UK-Wide Support",
     description:
-      "Businesses and individuals looking for personal tax advice in Bristol value local expertise, but our support extends across the UK. Whether you need a personal tax consultant for a one-off return or ongoing tax guidance, we're here to help."
+      "Individuals looking for personal tax advice in Bristol value local expertise, but our support extends across the UK — whether you need a one-off return or ongoing tax guidance."
   }
 ];
 
@@ -143,48 +142,118 @@ const audience = [
     icon: Briefcase,
     name: "Sole Traders",
     description:
-      "We help sole traders prepare accurate self-assessment tax returns, manage business income and meet HMRC filing deadlines."
+      "Accurate self-assessment returns, business income management, HMRC deadlines met — without it eating into your working hours."
   },
   {
     icon: Building,
     name: "Landlords & Property Owners",
     description:
-      "From rental income reporting to capital gains tax guidance, we support landlords in managing their personal tax responsibilities efficiently."
+      "From rental income reporting to capital gains tax guidance, property brings its own layer of personal tax to manage."
   },
   {
     icon: Users,
     name: "Company Directors",
     description:
-      "Directors often receive income from multiple sources, including salaries and dividends. We help ensure everything is reported correctly while providing ongoing tax guidance."
+      "Salaries, dividends, multiple income sources — directors' tax affairs rarely fit a simple template, and we make sure everything's reported correctly."
   },
   {
     icon: Laptop,
     name: "Contractors & Freelancers",
     description:
-      "We work with contractors and freelancers to simplify self-assessment, organise financial records and provide support throughout the tax year."
+      "Self-assessment, financial records, ongoing support through the tax year — simplified, so you can focus on client work instead."
   },
   {
     icon: Coins,
     name: "High-Net-Worth Individuals",
     description:
-      "For individuals with more complex financial affairs, we provide clear advice on personal tax planning, investments and capital gains reporting."
+      "More complex financial affairs call for closer attention — we advise on personal tax planning, investments and capital gains reporting."
   },
   {
     icon: TrendingUp,
     name: "Retirees & Investors",
     description:
-      "Whether you're receiving pension income, investment returns or other sources of income, we help you understand your tax position and meet your reporting obligations with confidence."
+      "Pension income, investment returns, other sources layered together — we help you understand where you stand and meet your reporting obligations with confidence."
+  }
+];
+
+const faqs = [
+  {
+    question: "Who needs to file a Self Assessment tax return?",
+    answer:
+      "Anyone who's self-employed, a company director, a landlord, or has income from dividends, capital gains or other untaxed sources typically needs to file — even if tax is already deducted from your main salary."
+  },
+  {
+    question: "When is the Self Assessment deadline?",
+    answer:
+      "The online filing deadline is 31 January following the end of the tax year, with the same date also applying to any tax owed for that year."
+  },
+  {
+    question: "What happens if I file my tax return late?",
+    answer:
+      "HMRC applies an automatic £100 penalty for missing the deadline, even by a day, with further penalties accruing the longer it remains unfiled."
+  },
+  {
+    question: "Do I need to report Capital Gains Tax separately from my Self Assessment return?",
+    answer:
+      "Residential property sales usually need reporting within 60 days of completion, in addition to being included on your annual return — the two aren't a substitute for each other."
+  },
+  {
+    question: "Can you help if HMRC has already opened an enquiry into my tax return?",
+    answer:
+      "Yes — we can step in at any stage of an investigation, handling correspondence and representation to help resolve it as smoothly as possible."
+  },
+  {
+    question: "Do I still need an accountant if my tax affairs are fairly simple?",
+    answer:
+      "Often yes, since even straightforward situations can miss allowances or reliefs you're entitled to — a review usually costs less than what it can save."
   }
 ];
 
 const PersonalTax = () => {
+  const [openFaq, setOpenFaq] = useState<number | null>(null);
+  const sectionRefs = useRef<(HTMLElement | null)[]>([]);
+
+  useEffect(() => {
+    const observers: IntersectionObserver[] = [];
+    sectionRefs.current.forEach((el) => {
+      if (!el) return;
+      const children = Array.from(el.querySelectorAll<HTMLElement>("[data-animate]"));
+      children.forEach((child, i) => {
+        child.style.opacity = "0";
+        child.style.transform = "translateY(28px)";
+        child.style.transition = `opacity 0.6s ease ${i * 80}ms, transform 0.6s ease ${i * 80}ms`;
+      });
+      const obs = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              children.forEach((child) => {
+                child.style.opacity = "1";
+                child.style.transform = "translateY(0)";
+              });
+              obs.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.08 }
+      );
+      obs.observe(el);
+      observers.push(obs);
+    });
+    return () => observers.forEach((o) => o.disconnect());
+  }, []);
+
+  const addRef = (el: HTMLElement | null, idx: number) => {
+    sectionRefs.current[idx] = el;
+  };
+
   return (
     <>
       <Helmet>
-        <title>Personal Tax & Self-Assessment Service in Bristol</title>
+        <title>Personal Tax &amp; Self-Assessment Service in Bristol</title>
         <meta
           name="description"
-          content="Personal Tax & Self-Assessment service in Bristol for individuals, landlords and sole traders. Expert tax advice, accurate returns and reliable support."
+          content="Personal Tax &amp; Self-Assessment service in Bristol for individuals, landlords and sole traders. Expert tax advice, accurate returns and reliable support."
         />
       </Helmet>
       <Layout>
@@ -212,7 +281,7 @@ const PersonalTax = () => {
                 </div>
 
                 <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-tight">
-                  Personal Tax & Self-Assessment
+                  Personal Tax &amp; Self-Assessment
                   <span className="block text-gold mt-2">Service in Bristol</span>
                 </h1>
 
@@ -224,10 +293,10 @@ const PersonalTax = () => {
                 </p>
 
                 <p className="mt-4 text-base text-white/75 leading-relaxed max-w-2xl">
-                  At Henleaze Tax Consultancy, we provide a reliable Personal Tax & Self-Assessment service in Bristol and
+                  At Henleaze Tax Consultancy, we provide a reliable Personal Tax &amp; Self-Assessment service in Bristol and
                   across the UK, helping individuals meet their tax obligations accurately and on time. From preparing
-                  self-assessment tax returns to providing practical tax advice, our team helps make the process
-                  straightforward, giving you confidence that your tax affairs are handled accurately and on time.
+                  self-assessment tax returns to providing tax advice built around your circumstances, our team helps
+                  make the process straightforward and stress-free.
                 </p>
 
                 <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
@@ -312,13 +381,16 @@ const PersonalTax = () => {
         </section>
 
         {/* Services Section */}
-        <section className="relative overflow-hidden py-24 bg-gradient-to-b from-slate-50 via-white to-slate-50">
+        <section
+          ref={(el) => addRef(el, 0)}
+          className="relative overflow-hidden py-24 bg-gradient-to-b from-slate-50 via-white to-slate-50"
+        >
           <div className="absolute top-24 left-0 w-80 h-80 bg-gold/5 rounded-full blur-3xl pointer-events-none" />
           <div className="absolute bottom-24 right-0 w-80 h-80 bg-navy/5 rounded-full blur-3xl pointer-events-none" />
           <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-gold/40 to-transparent" />
 
           <div className="container relative z-10">
-            <div className="mx-auto max-w-3xl text-center">
+            <div className="mx-auto max-w-3xl text-center" data-animate>
               <div className="mb-4 inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gold/10 border border-gold/25 text-gold text-xs font-bold uppercase tracking-wider">
                 <Briefcase className="h-3.5 w-3.5" />
                 Services &amp; Tax Support
@@ -343,6 +415,7 @@ const PersonalTax = () => {
                 return (
                   <Card
                     key={index}
+                    data-animate
                     className="group relative overflow-hidden rounded-[2rem] border border-gold/15 bg-gradient-to-br from-slate-50 via-white to-gold/10 shadow-[0_10px_30px_rgba(15,23,42,0.06)] transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_25px_60px_rgba(15,23,42,0.12)] hover:border-gold/35"
                   >
                     <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(202,169,87,0.20),transparent_35%),radial-gradient(circle_at_bottom_left,rgba(15,23,42,0.08),transparent_42%)] pointer-events-none" />
@@ -409,7 +482,7 @@ const PersonalTax = () => {
             </div>
 
             {/* View All Services Button */}
-            <div className="mt-14 flex justify-center">
+            <div className="mt-14 flex justify-center" data-animate>
               <Link
                 to="/services"
                 className="group relative inline-flex items-center gap-3 overflow-hidden rounded-full bg-gold px-8 py-4 text-base font-bold text-navy shadow-lg transition-all duration-300 hover:bg-gold-light hover:scale-105 hover:shadow-[0_0_32px_rgba(212,175,55,0.45)]"
@@ -425,7 +498,10 @@ const PersonalTax = () => {
         </section>
 
         {/* Why Choose Section */}
-        <section className="relative overflow-hidden py-24 bg-gradient-to-br from-navy via-navy-light to-navy-dark">
+        <section
+          ref={(el) => addRef(el, 1)}
+          className="relative overflow-hidden py-24 bg-gradient-to-br from-navy via-navy-light to-navy-dark"
+        >
           {/* Background pattern */}
           <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0zNiAxOGMtNi42MjcgMC0xMiA1LjM3My0xMiAxMnM1LjM3MyAxMiAxMiAxMiAxMi01LjM3MyAxMi0xMi01LjM3My0xMi0xMi0xMnptMCAxOGMtMy4zMTQgMC02LTIuNjg2LTYtNnMyLjY4Ni02IDYtNiA2IDIuNjg2IDYgNi0yLjY4NiA2LTYgNnoiIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iLjAzIi8+PC9nPjwvc3ZnPg==')] opacity-40" />
           {/* Gold accent top line */}
@@ -436,7 +512,7 @@ const PersonalTax = () => {
 
           <div className="container relative z-10">
             {/* Section label */}
-            <div className="mb-12 flex items-center justify-center">
+            <div className="mb-12 flex items-center justify-center" data-animate>
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gold/10 border border-gold/25 text-gold text-xs font-bold uppercase tracking-wider">
                 <Shield className="h-3.5 w-3.5" />
                 Why Choose Specialist Support
@@ -445,7 +521,7 @@ const PersonalTax = () => {
 
             <div className="grid gap-12 lg:grid-cols-12 items-start">
               {/* ── LEFT SIDEBAR ── */}
-              <div className="lg:col-span-4 lg:sticky lg:top-28 space-y-8">
+              <div className="lg:col-span-4 lg:sticky lg:top-28 space-y-8" data-animate>
                 {/* Glass card */}
                 <div className="relative rounded-[2rem] bg-white/5 border border-white/10 backdrop-blur-xl p-8 overflow-hidden group hover:border-gold/30 transition-all duration-500">
                   {/* Top shimmer line */}
@@ -484,6 +560,7 @@ const PersonalTax = () => {
                 {pillars.map((pillar, index) => (
                   <div
                     key={index}
+                    data-animate
                     className="group relative overflow-hidden rounded-[1.75rem] bg-white/5 border border-white/10 p-7 transition-all duration-500 hover:-translate-y-1.5 hover:bg-white/10 hover:border-gold/30 hover:shadow-[0_20px_50px_rgba(0,0,0,0.25)]"
                   >
                     {/* Top accent on hover */}
@@ -513,14 +590,17 @@ const PersonalTax = () => {
         </section>
 
         {/* Supporting Individuals Section */}
-        <section className="relative overflow-hidden py-20 bg-gradient-to-b from-slate-50 via-white to-slate-50">
+        <section
+          ref={(el) => addRef(el, 2)}
+          className="relative overflow-hidden py-20 bg-gradient-to-b from-slate-50 via-white to-slate-50"
+        >
           <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-gold/40 to-transparent" />
           <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-gold/20 to-transparent" />
           <div className="absolute top-0 right-0 w-80 h-80 bg-gold/5 rounded-full blur-3xl pointer-events-none" />
 
           <div className="container relative z-10">
             {/* Two-column sidebox card */}
-            <div className="relative overflow-hidden rounded-[2.5rem] bg-white border border-gold/15 shadow-[0_20px_60px_rgba(15,23,42,0.08)] flex flex-col lg:flex-row">
+            <div data-animate className="relative overflow-hidden rounded-[2.5rem] bg-white border border-gold/15 shadow-[0_20px_60px_rgba(15,23,42,0.08)] flex flex-col lg:flex-row">
               {/* Gold left stripe */}
               <div className="absolute top-0 left-0 bottom-0 w-1 bg-gradient-to-b from-gold/40 via-gold to-gold/40 rounded-l-[2.5rem]" />
 
@@ -558,12 +638,11 @@ const PersonalTax = () => {
                   </p>
                   <p>
                     Whether you need help preparing your annual tax return, managing income from multiple sources, reporting
-                    capital gains or understanding your tax obligations, our team provides practical advice and dependable
-                    support every step of the way.
+                    capital gains or understanding your tax obligations, our team provides dependable support every step of the way.
                   </p>
                   <p>
-                    From straightforward self-assessment returns to more complex personal tax matters, we provide practical
-                    support that gives you confidence in your tax affairs throughout the year.
+                    From straightforward self-assessment returns to more complex personal tax matters, we give you confidence
+                    in your tax affairs throughout the year.
                   </p>
                 </div>
 
@@ -585,9 +664,12 @@ const PersonalTax = () => {
         </section>
 
         {/* Who We Work With Section */}
-        <section className="py-24 bg-white relative">
+        <section
+          ref={(el) => addRef(el, 3)}
+          className="py-24 bg-white relative"
+        >
           <div className="container relative z-10">
-            <div className="mx-auto max-w-3xl text-center">
+            <div className="mx-auto max-w-3xl text-center" data-animate>
               <h2 className="font-display text-3xl md:text-4xl font-bold tracking-tight text-navy leading-tight">
                 Who We Work With
               </h2>
@@ -604,6 +686,7 @@ const PersonalTax = () => {
                 return (
                   <div
                     key={index}
+                    data-animate
                     className="group relative overflow-hidden rounded-[2rem] border border-slate-200/70 bg-gradient-to-br from-white via-slate-50 to-gold/10 p-8 shadow-[0_10px_30px_rgba(15,23,42,0.06)] transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_25px_60px_rgba(15,23,42,0.12)] hover:border-gold/30"
                   >
                     <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(202,169,87,0.16),transparent_38%),radial-gradient(circle_at_bottom_left,rgba(15,23,42,0.06),transparent_45%)] opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
@@ -628,7 +711,72 @@ const PersonalTax = () => {
           </div>
         </section>
 
-        {/* Ready to Explore Section (Bottom CTA) */}
+        {/* FAQ Section */}
+        <section
+          ref={(el) => addRef(el, 4)}
+          className="relative overflow-hidden py-24 bg-gradient-to-b from-slate-50 via-white to-slate-50"
+        >
+          <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-gold/40 to-transparent" />
+          <div className="absolute top-0 left-0 w-80 h-80 bg-gold/5 rounded-full blur-3xl pointer-events-none" />
+          <div className="absolute bottom-0 right-0 w-80 h-80 bg-navy/5 rounded-full blur-3xl pointer-events-none" />
+
+          <div className="container relative z-10">
+            <div className="mx-auto max-w-3xl text-center mb-14" data-animate>
+              <div className="mb-4 inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gold/10 border border-gold/25 text-gold text-xs font-bold uppercase tracking-wider">
+                <ClipboardList className="h-3.5 w-3.5" />
+                Frequently Asked Questions
+              </div>
+              <h2 className="font-display text-3xl md:text-4xl font-bold tracking-tight text-navy leading-tight mt-3">
+                Common Questions About Personal Tax
+              </h2>
+              <div className="w-20 h-1 bg-gold mx-auto mt-6 rounded-full" />
+            </div>
+
+            <div className="mx-auto max-w-3xl space-y-4">
+              {faqs.map((faq, index) => (
+                <div
+                  key={index}
+                  data-animate
+                  className="group rounded-2xl border border-slate-200/80 bg-white shadow-[0_4px_20px_rgba(15,23,42,0.05)] overflow-hidden transition-all duration-300 hover:border-gold/30 hover:shadow-[0_8px_30px_rgba(15,23,42,0.08)]"
+                >
+                  <button
+                    onClick={() => setOpenFaq(openFaq === index ? null : index)}
+                    className="w-full flex items-center justify-between gap-4 px-7 py-5 text-left"
+                    aria-expanded={openFaq === index}
+                  >
+                    <span className="font-display text-base font-bold text-navy leading-snug group-hover:text-gold transition-colors duration-300">
+                      {faq.question}
+                    </span>
+                    <span
+                      className={`flex-shrink-0 flex h-8 w-8 items-center justify-center rounded-full border transition-all duration-300 ${
+                        openFaq === index
+                          ? "bg-gold border-gold text-navy rotate-180"
+                          : "bg-slate-50 border-slate-200 text-navy group-hover:border-gold/40 group-hover:bg-gold/5"
+                      }`}
+                    >
+                      <ChevronDown className="h-4 w-4" />
+                    </span>
+                  </button>
+
+                  <div
+                    className="overflow-hidden transition-all duration-400 ease-in-out"
+                    style={{
+                      maxHeight: openFaq === index ? "300px" : "0",
+                      opacity: openFaq === index ? 1 : 0
+                    }}
+                  >
+                    <div className="px-7 pb-6 pt-0">
+                      <div className="w-full h-px bg-gradient-to-r from-gold/30 via-gold/60 to-gold/30 mb-4" />
+                      <p className="text-gray-600 text-sm leading-relaxed">{faq.answer}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Bottom CTA Section */}
         <section className="relative w-full py-32 overflow-hidden">
           {/* Full-bleed background */}
           <div className="absolute inset-0 -z-10">
@@ -672,7 +820,7 @@ const PersonalTax = () => {
                 size="lg"
                 variant="outline"
                 asChild
-                className="border-white/30 text-white bg-white/5 hover:bg-white/10 hover:text-gold hover:border-gold rounded-full px-8 py-6 backdrop-blur-sm"
+                className="border border-amber-400 bg-transparent text-amber-400 hover:bg-amber-400 hover:text-slate-950 font-semibold px-8 py-6 rounded-lg transition-all duration-300"
               >
                 <a href="tel:+447949956279" className="flex items-center">
                   <Phone className="mr-2 h-4 w-4" />
