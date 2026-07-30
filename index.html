@@ -13,92 +13,61 @@
   </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- Title is injected per-page by react-helmet-async -->
-  <!-- Meta description is injected per-page by react-helmet-async -->
   <meta name="author" content="Henleaze Tax Consultancy" />
-<link rel="icon" type="image/x-icon" href="/favicon.ico" />
-<link rel="icon" type="image/png" href="/logo.jpg" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="icon" type="image/png" href="/logo.jpg" />
   <meta property="og:title" content="Accountants in Bristol | Expert Tax & Accounting Support" />
   <meta property="og:description"
     content="Looking for accountants in Bristol? Henleaze Tax Consultancy provides tax & accounting services for individuals & businesses with fixed fees & clear advice." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="/logo.jpg" />
-  <!-- Canonical URL is injected per-page by react-helmet-async via CanonicalURL component -->
   <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "TaxConsultancy",
-        "name": "Henleaze Tax Consultancy",
-        "alternateName": "Henleaze Tax",
-        "url": "https://henleazetaxconsultancy.com/",
-        "logo": "https://henleazetaxconsultancy.com/logo.jpg",
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "telephone": "07481 758526",
-          "contactType": "customer service",
-          "areaServed": "GB",
-          "availableLanguage": "en"
-        },
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "Park House Business Centre, 10 Park Street",
-          "addressLocality": "Bristol",
-          "postalCode": "BS1 5HX",
-          "addressCountry": "GB"
-        },
-        "geo": {
-          "@type": "GeoCoordinates",
-          "latitude": 51.4545,
-          "longitude": -2.5979
-        },
-        "sameAs": [
-          "https://www.facebook.com/share/1AoDJjTkQY/",
-          "https://www.instagram.com/henleazetaxconsultancy"
-        ],
-        "description": "Expert tax consultancy services for contractors, small businesses, and landlords in Bristol. Specializing in tax planning, accounting, and bookkeeping."
-      }
-    </script>
-
+{
+  "@context": "https://schema.org",
+  "@type": "AccountingService",
+  "name": "Henleaze Tax Consultancy",
+  "alternateName": "Henleaze Tax",
+  "url": "https://henleazetaxconsultancy.com/",
+  "logo": "https://henleazetaxconsultancy.com/logo.jpg",
+  "priceRange": "££ (£70-£199/month)",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+44 7949 956279",
+    "email": "info@henleazetaxconsultancy.com",
+    "contactType": "customer service",
+    "areaServed": "GB",
+    "availableLanguage": "en"
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "CEED House, 97-107 Wilder Street, St Pauls",
+    "addressLocality": "Bristol",
+    "postalCode": "BS2 8QU",
+    "addressCountry": "GB"
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday"
+    ],
+    "opens": "10:00",
+    "closes": "18:00"
+  },
+  "sameAs": [
+    "https://www.facebook.com/people/Henleaze-Tax-Consultancy-Limited/61587364742113/",
+    "https://www.instagram.com/henleazetaxconsultancy"
+  ],
+  "description": "Looking for accountants in Bristol? Henleaze Tax Consultancy provides tax and accounting services for individuals and businesses with fixed fees and clear advice."
+}
+</script>
 </head>
 
 <body>
-  <!-- This div will be replaced by the React app. We include static links here for SEO crawlers that do not execute JavaScript. -->
-  <div id="root">
-    <header>
-      <nav>
-        <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/about">About Us</a></li>
-          <li><a href="/services">Our Services</a></li>
-          <li><a href="/pricing">Pricing</a></li>
-          <li><a href="/calculator">Tax Calculator</a></li>
-          <li><a href="/careers">Careers</a></li>
-          <li><a href="/contact">Contact Us</a></li>
-        </ul>
-      </nav>
-    </header>
-    <main>
-      <h1>Henleaze Tax Consultancy</h1>
-      <p>Expert accounting and tax services for contractors, small businesses, and landlords in Bristol.</p>
-      <section>
-        <h2>Our Core Services</h2>
-        <ul>
-          <li><a href="/services/contractors">Contractor Accounting</a></li>
-          <li><a href="/services/small-business">Small Business Accounting</a></li>
-          <li><a href="/services/landlords">Landlord Tax Services</a></li>
-          <li><a href="/services/payroll-hr">Payroll & HR</a></li>
-          <li><a href="/services/tax-planning">Tax Planning</a></li>
-          <li><a href="/services/vat-bookkeeping">VAT & Bookkeeping</a></li>
-          <li><a href="/services/company-secretarial">Company Secretarial</a></li>
-          <li><a href="/services/rd-claims">R&D Tax Credits</a></li>
-          <li><a href="/services/personal-tax">Personal Tax</a></li>
-        </ul>
-      </section>
-    </main>
-    <footer>
-      <p>© 2024 Henleaze Tax Consultancy. All rights reserved.</p>
-    </footer>
-  </div>
+  <div id="root"></div>
   <script type="module" src="/src/main.tsx"></script>
 </body>
 

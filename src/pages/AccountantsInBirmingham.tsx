@@ -282,30 +282,6 @@ const AccountantsInBirmingham: React.FC = () => {
     setExpandedCard(expandedCard === id ? null : id);
   };
 
-  // Scroll Animation Observer for Smooth Reveal on Scroll
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("visible");
-          }
-        });
-      },
-      {
-        threshold: 0.08,
-        rootMargin: "0px 0px -40px 0px",
-      }
-    );
-
-    const animatedElements = document.querySelectorAll(".animate-on-scroll");
-    animatedElements.forEach((el) => observer.observe(el));
-
-    return () => {
-      animatedElements.forEach((el) => observer.unobserve(el));
-    };
-  }, []);
-
   return (
     <>
       <Helmet>
@@ -406,12 +382,12 @@ const AccountantsInBirmingham: React.FC = () => {
         <TrustBar />
 
         {/* ── EXPERT ACCOUNTANTS SUPPORTING BIRMINGHAM (SPLIT DESIGN) ────────── */}
-        <section className="py-20 bg-slate-900 text-slate-100 relative overflow-hidden animate-on-scroll">
+        <section className="py-20 bg-slate-900 text-slate-100 relative overflow-hidden">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
 
               {/* Left Column Text */}
-              <div className="lg:col-span-7 space-y-6 animate-on-scroll">
+              <div className="lg:col-span-7 space-y-6">
                 <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-amber-500/10 border border-amber-500/30 text-amber-400 text-sm font-medium">
                   <Sparkles className="w-4 h-4 text-amber-400" />
                   <span>Remote-First Accounting Specialist</span>
@@ -435,7 +411,7 @@ const AccountantsInBirmingham: React.FC = () => {
               </div>
 
               {/* Right Column Visual Card */}
-              <div className="lg:col-span-5 animate-on-scroll" style={{ transitionDelay: "150ms" }}>
+              <div className="lg:col-span-5">
                 <div className="relative rounded-2xl bg-gradient-to-b from-slate-800 to-slate-900 p-8 border border-slate-700/80 shadow-2xl space-y-6 transform transition-transform hover:-translate-y-1 duration-300">
                   <div className="w-14 h-14 rounded-xl bg-amber-500/20 border border-amber-500/40 flex items-center justify-center text-amber-400">
                     <Laptop className="w-7 h-7" />
@@ -480,7 +456,7 @@ const AccountantsInBirmingham: React.FC = () => {
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
 
             {/* Section Header */}
-            <div className="max-w-3xl mx-auto text-center space-y-4 mb-16 animate-on-scroll">
+            <div className="max-w-3xl mx-auto text-center space-y-4 mb-16">
               <span className="px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs sm:text-sm font-semibold tracking-wide uppercase">
                 Services
               </span>
@@ -502,8 +478,7 @@ const AccountantsInBirmingham: React.FC = () => {
                 return (
                   <div
                     key={service.id}
-                    className="bg-slate-900/80 rounded-2xl p-6 border border-slate-800 hover:border-amber-500/40 hover:bg-slate-900 shadow-xl transition-all duration-500 flex flex-col justify-between group hover:-translate-y-1 animate-on-scroll"
-                    style={{ transitionDelay: `${(index % 3) * 100}ms` }}
+                    className="bg-slate-900/80 rounded-2xl p-6 border border-slate-800 hover:border-amber-500/40 hover:bg-slate-900 shadow-xl transition-all duration-300 flex flex-col justify-between group hover:-translate-y-1"
                   >
                     <div className="space-y-4">
 
@@ -582,7 +557,7 @@ const AccountantsInBirmingham: React.FC = () => {
             </div>
 
             {/* Quick Link Banner to All Services */}
-            <div className="mt-14 text-center animate-on-scroll">
+            <div className="mt-14 text-center">
               <Link
                 to="/services"
                 className="inline-flex items-center gap-2 border border-amber-400 text-amber-400 hover:bg-amber-400 hover:text-gray-900 font-semibold px-6 py-3 rounded-lg transition-all duration-300"
@@ -597,7 +572,7 @@ const AccountantsInBirmingham: React.FC = () => {
         {/* ── WHO WE WORK WITH (BENTO GRID DESIGN) ────────────────────────── */}
         <section className="py-20 bg-slate-900 text-white relative">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="max-w-3xl mx-auto text-center space-y-4 mb-16 animate-on-scroll">
+            <div className="max-w-3xl mx-auto text-center space-y-4 mb-16">
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold font-display text-white">
                 Who We Work With
               </h2>
@@ -610,8 +585,7 @@ const AccountantsInBirmingham: React.FC = () => {
 
               {/* Audience 1: Contractors */}
               <div
-                className="bg-slate-950/80 p-6 rounded-2xl border border-slate-800 hover:border-amber-500/40 transition-all duration-500 hover:-translate-y-1 space-y-3 animate-on-scroll"
-                style={{ transitionDelay: "0ms" }}
+                className="bg-slate-950/80 p-6 rounded-2xl border border-slate-800 hover:border-amber-500/40 transition-all duration-300 hover:-translate-y-1 space-y-3"
               >
                 <div className="w-10 h-10 rounded-lg bg-amber-500/10 flex items-center justify-center text-amber-400">
                   <Briefcase className="w-5 h-5" />
@@ -624,8 +598,7 @@ const AccountantsInBirmingham: React.FC = () => {
 
               {/* Audience 2: Small Businesses */}
               <div
-                className="bg-slate-950/80 p-6 rounded-2xl border border-slate-800 hover:border-amber-500/40 transition-all duration-500 hover:-translate-y-1 space-y-3 animate-on-scroll"
-                style={{ transitionDelay: "100ms" }}
+                className="bg-slate-950/80 p-6 rounded-2xl border border-slate-800 hover:border-amber-500/40 transition-all duration-300 hover:-translate-y-1 space-y-3"
               >
                 <div className="w-10 h-10 rounded-lg bg-amber-500/10 flex items-center justify-center text-amber-400">
                   <Building2 className="w-5 h-5" />
@@ -638,8 +611,7 @@ const AccountantsInBirmingham: React.FC = () => {
 
               {/* Audience 3: Sole Traders */}
               <div
-                className="bg-slate-950/80 p-6 rounded-2xl border border-slate-800 hover:border-amber-500/40 transition-all duration-500 hover:-translate-y-1 space-y-3 animate-on-scroll"
-                style={{ transitionDelay: "200ms" }}
+                className="bg-slate-950/80 p-6 rounded-2xl border border-slate-800 hover:border-amber-500/40 transition-all duration-300 hover:-translate-y-1 space-y-3"
               >
                 <div className="w-10 h-10 rounded-lg bg-amber-500/10 flex items-center justify-center text-amber-400">
                   <UserCheck className="w-5 h-5" />
@@ -652,8 +624,7 @@ const AccountantsInBirmingham: React.FC = () => {
 
               {/* Audience 4: Limited Companies */}
               <div
-                className="bg-slate-950/80 p-6 rounded-2xl border border-slate-800 hover:border-amber-500/40 transition-all duration-500 hover:-translate-y-1 space-y-3 animate-on-scroll"
-                style={{ transitionDelay: "0ms" }}
+                className="bg-slate-950/80 p-6 rounded-2xl border border-slate-800 hover:border-amber-500/40 transition-all duration-300 hover:-translate-y-1 space-y-3"
               >
                 <div className="w-10 h-10 rounded-lg bg-amber-500/10 flex items-center justify-center text-amber-400">
                   <ShieldCheck className="w-5 h-5" />
@@ -666,8 +637,7 @@ const AccountantsInBirmingham: React.FC = () => {
 
               {/* Audience 5: Landlords */}
               <div
-                className="bg-slate-950/80 p-6 rounded-2xl border border-slate-800 hover:border-amber-500/40 transition-all duration-500 hover:-translate-y-1 space-y-3 animate-on-scroll"
-                style={{ transitionDelay: "100ms" }}
+                className="bg-slate-950/80 p-6 rounded-2xl border border-slate-800 hover:border-amber-500/40 transition-all duration-300 hover:-translate-y-1 space-y-3"
               >
                 <div className="w-10 h-10 rounded-lg bg-amber-500/10 flex items-center justify-center text-amber-400">
                   <Home className="w-5 h-5" />
@@ -680,8 +650,7 @@ const AccountantsInBirmingham: React.FC = () => {
 
               {/* Audience 6: Start-ups & Growing Businesses */}
               <div
-                className="bg-slate-950/80 p-6 rounded-2xl border border-slate-800 hover:border-amber-500/40 transition-all duration-500 hover:-translate-y-1 space-y-3 animate-on-scroll"
-                style={{ transitionDelay: "200ms" }}
+                className="bg-slate-950/80 p-6 rounded-2xl border border-slate-800 hover:border-amber-500/40 transition-all duration-300 hover:-translate-y-1 space-y-3"
               >
                 <div className="w-10 h-10 rounded-lg bg-amber-500/10 flex items-center justify-center text-amber-400">
                   <Sparkles className="w-5 h-5" />
@@ -695,7 +664,7 @@ const AccountantsInBirmingham: React.FC = () => {
             </div>
 
             {/* Pricing Callout */}
-            <div className="mt-12 text-center animate-on-scroll">
+            <div className="mt-12 text-center">
               <Button
                 asChild
                 size="lg"
@@ -712,7 +681,7 @@ const AccountantsInBirmingham: React.FC = () => {
         </section>
 
         {/* ── WHY BIRMINGHAM CLIENTS CHOOSE HENLEAZE TAX CONSULTANCY ─────────── */}
-        <section className="py-20 bg-slate-950 text-white relative border-t border-b border-slate-800/80 animate-on-scroll">
+        <section className="py-20 bg-slate-950 text-white relative border-t border-b border-slate-800/80">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-4xl mx-auto bg-gradient-to-r from-slate-900 via-slate-900/90 to-slate-900 rounded-3xl p-8 sm:p-12 border border-slate-800 shadow-2xl relative overflow-hidden">
 
@@ -760,7 +729,7 @@ const AccountantsInBirmingham: React.FC = () => {
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-4xl mx-auto space-y-12">
 
-              <div className="text-center space-y-4 animate-on-scroll">
+              <div className="text-center space-y-4">
                 <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-amber-500/10 text-amber-400 text-sm font-medium">
                   <HelpCircle className="w-4 h-4" />
                   <span>Clear Answers</span>
@@ -777,11 +746,10 @@ const AccountantsInBirmingham: React.FC = () => {
                   return (
                     <div
                       key={index}
-                      className={`rounded-2xl border transition-all duration-500 overflow-hidden animate-on-scroll ${isOpen
+                      className={`rounded-2xl border transition-all duration-300 overflow-hidden ${isOpen
                         ? "bg-slate-950 border-amber-500/50 shadow-xl"
                         : "bg-slate-950/50 border-slate-800 hover:border-slate-700"
                         }`}
-                      style={{ transitionDelay: `${index * 80}ms` }}
                     >
                       <button
                         onClick={() => toggleFaq(index)}
@@ -811,7 +779,7 @@ const AccountantsInBirmingham: React.FC = () => {
         </section>
 
         {/* ── GET ACCOUNTING SUPPORT FROM OUR TEAM (FINAL CALL TO ACTION) ─────── */}
-        <section className="py-20 bg-slate-950 text-white relative overflow-hidden animate-on-scroll">
+        <section className="py-20 bg-slate-950 text-white relative overflow-hidden">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="max-w-4xl mx-auto text-center bg-gradient-to-b from-slate-900 to-slate-950 rounded-3xl p-10 sm:p-16 border border-slate-800 shadow-2xl space-y-8 relative">
 

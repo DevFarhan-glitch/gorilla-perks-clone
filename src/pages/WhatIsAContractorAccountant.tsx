@@ -272,11 +272,7 @@ const WhatIsAContractorAccountant = () => {
                 <li>Leaving full-time employment and seeking to maximise take-home pay</li>
               </ul>
               <div className="my-12 p-4 sm:p-6 bg-gray-50 border border-gray-200 rounded-2xl shadow-sm">
-                <img
-                  src="/Who-needs.jpeg"
-                  alt="Who needs a contractor accountant"
-                  className="w-full h-auto rounded-xl object-contain shadow-sm bg-white"
-                />
+
                 <p className="text-center text-sm text-gray-500 mt-4 italic">
                   A growing number of UK professionals work through their own limited companies.
                 </p>

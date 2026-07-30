@@ -71,5 +71,30 @@ export const blogPosts: BlogPost[] = [
     category: "Contractor Tax",
     image: "/what-is-ir35.jpeg",
     slug: "/what-is-ir35-uk"
+  },
+  {
+    id: 11,
+    title: "How Does IR35 Work: The Full Process for UK Contractors",
+    excerpt: "Curious how an IR35 status decision actually happens? See the real process, your appeal rights, and what working practice changes truly mean for you today.",
+    content: "Redirecting...",
+    author: "Henleaze Team",
+    date: "July 2026",
+    readTime: "9 min read",
+    category: "Contractor Tax",
+    image: "/how-does-ir35-work.jpeg",
+    slug: "/how-does-ir35-work-in-the-uk"
+  },
+  {
+    id: 12,
+    title: "Inside vs Outside IR35: The Real Difference for Contractors",
+    excerpt: "Confused about inside vs outside IR35? This guide breaks down the difference, how tax works, a worked example, and what rate makes inside IR35 worth it.",
+    content: "Redirecting...",
+    author: "Henleaze Team",
+    date: "July 2026",
+    readTime: "10 min read",
+    category: "Contractor Tax",
+    image: "/inside-vs-outside-ir35.jpeg",
+    slug: "/inside-vs-outside-ir35"
   }
 ];
+
