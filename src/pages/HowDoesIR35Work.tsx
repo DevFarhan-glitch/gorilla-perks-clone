@@ -160,16 +160,14 @@ const HowDoesIR35Work = () => {
                     <li key={section.id}>
                       <button
                         onClick={() => scrollToSection(section.id)}
-                        className={`group flex items-baseline gap-3 w-full text-left text-sm transition-colors duration-150 ${
-                          activeSection === section.id
-                            ? "text-amber-700 font-semibold"
-                            : "text-gray-600 hover:text-gray-900"
-                        }`}
+                        className={`group flex items-baseline gap-3 w-full text-left text-sm transition-colors duration-150 ${activeSection === section.id
+                          ? "text-amber-700 font-semibold"
+                          : "text-gray-600 hover:text-gray-900"
+                          }`}
                       >
                         <span
-                          className={`text-xs font-mono shrink-0 w-5 ${
-                            activeSection === section.id ? "text-amber-600" : "text-gray-400"
-                          }`}
+                          className={`text-xs font-mono shrink-0 w-5 ${activeSection === section.id ? "text-amber-600" : "text-gray-400"
+                            }`}
                         >
                           {String(idx + 1).padStart(2, "0")}
                         </span>
@@ -196,7 +194,7 @@ const HowDoesIR35Work = () => {
               </h2>
               <div className="w-10 h-0.5 bg-amber-500 mb-6" />
               <p className="text-gray-700 leading-relaxed mb-4">
-                IR35 works by testing whether the reality of your working relationship with a client looks like employment, regardless of what your contract says — and that outcome mechanically decides who deducts your tax. If an engagement is inside IR35, the fee-payer deducts Income Tax and National Insurance before you're paid, similar to being on payroll. If it's outside, your limited company invoices and gets paid gross and you manage your own tax as a genuine business would.
+                IR35 works by testing whether the reality of your working relationship with a client looks like employment, regardless of what your contract says — and that outcome mechanically decides who deducts your tax. If an engagement is inside <Link to="/what-is-ir35-uk" className="text-amber-700 underline hover:text-amber-900">IR35</Link>, the fee-payer deducts Income Tax and National Insurance before you're paid, similar to being on payroll. If it's outside, your limited company invoices and gets paid gross and you manage your own tax as a genuine business would.
               </p>
               <p className="text-gray-700 leading-relaxed mb-8">
                 That's the short version. The fuller answer involves an actual process with steps, deadlines and responsibilities — something most explanations skip in favour of just listing the legal tests. This guide covers both: how a determination actually happens from the start of a contract and the tests behind it.
@@ -247,6 +245,8 @@ const HowDoesIR35Work = () => {
               </p>
               <p className="text-gray-700 leading-relaxed mb-6">
                 <strong>Mutuality of Obligation</strong> looks at whether there's an ongoing expectation the client will keep offering work and you'll keep accepting it, the way there is in employment. Project-based, defined-scope work tends to sit outside this; an open-ended expectation of continuous work tends to sit inside it.
+                We've covered these three tests in more depth, with worked examples,<Link to="/what-are-ir35-rules" className="text-amber-700 underline hover:text-amber-900"> in our guide to what IR35 rules currently say.</Link>
+
               </p>
 
               <div className="my-8 rounded-xl overflow-hidden shadow-md">
@@ -256,15 +256,6 @@ const HowDoesIR35Work = () => {
                   className="w-full object-cover"
                 />
               </div>
-
-              <p className="text-gray-700 leading-relaxed mb-8">
-                We've covered these three tests in more depth, with worked examples, in our guide to{" "}
-                <Link to="/what-is-ir35-uk" className="text-amber-700 underline hover:text-amber-900">
-                  what IR35 rules currently say
-                </Link>
-                .
-              </p>
-
               {/* Section 4 */}
               <h2 id="worked-example" className="scroll-mt-28 text-3xl font-bold text-gray-900 mt-12 mb-4">
                 A Worked Example
@@ -328,7 +319,7 @@ const HowDoesIR35Work = () => {
                 </li>
                 <li>
                   <strong>Treating CEST as the final word</strong> — it's a starting point, not a substitute for proper review on anything borderline. Our full breakdown of{" "}
-                  <Link to="/what-is-ir35-uk" className="text-amber-700 underline hover:text-amber-900">
+                  <Link to="/inside-vs-outside-ir35" className="text-amber-700 underline hover:text-amber-900">
                     inside vs outside IR35
                   </Link>{" "}
                   covers what's financially at stake if this gets misjudged.
@@ -382,15 +373,13 @@ const HowDoesIR35Work = () => {
                     >
                       <span>{faq.question}</span>
                       <ChevronDown
-                        className={`h-5 w-5 text-gray-500 transition-transform duration-200 shrink-0 ml-4 ${
-                          openFaq === idx ? "rotate-180" : ""
-                        }`}
+                        className={`h-5 w-5 text-gray-500 transition-transform duration-200 shrink-0 ml-4 ${openFaq === idx ? "rotate-180" : ""
+                          }`}
                       />
                     </button>
                     <div
-                      className={`overflow-hidden transition-all duration-300 ${
-                        openFaq === idx ? "max-h-[300px] border-t border-gray-100" : "max-h-0"
-                      }`}
+                      className={`overflow-hidden transition-all duration-300 ${openFaq === idx ? "max-h-[300px] border-t border-gray-100" : "max-h-0"
+                        }`}
                     >
                       <div className="px-6 py-4 text-gray-600 bg-gray-50 text-sm leading-relaxed">
                         {faq.answer}

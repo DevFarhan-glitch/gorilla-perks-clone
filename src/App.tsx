@@ -43,6 +43,7 @@ import OutsourcedAccounting from "./pages/services/OutsourcedAccounting";
 import AccountantsInBirmingham from "./pages/AccountantsInBirmingham";
 import AccountancyFirmInManchester from "./pages/AccountancyFirmInManchester";
 import AccountantInLeeds from "./pages/AccountantInLeeds";
+import AccountantInLiverpool from "./pages/Accountant-in-Liverpool";
 
 const queryClient = new QueryClient();
 
@@ -83,6 +84,7 @@ export const AppRoutes = () => (
       <Route path="/how-does-ir35-work-in-the-uk/" element={<HowDoesIR35Work />} />
       <Route path="/what-are-ir35-rules" element={<WhatAreIR35Rules />} />
       <Route path="/what-are-ir35-rules/" element={<WhatAreIR35Rules />} />
+      <Route path="/inside-vs-outside-ir35" element={<InsideVsOutsideIR35 />} />
       <Route path="/inside-vs-outside-ir35/" element={<InsideVsOutsideIR35 />} />
       <Route path="/accountants-in-birmingham-uk" element={<AccountantsInBirmingham />} />
       <Route path="/accountants-in-birmingham-uk/" element={<AccountantsInBirmingham />} />
@@ -90,6 +92,8 @@ export const AppRoutes = () => (
       <Route path="/accountancy-firm-in-manchester/" element={<AccountancyFirmInManchester />} />
       <Route path="/accountant-in-leeds" element={<AccountantInLeeds />} />
       <Route path="/accountant-in-leeds/" element={<AccountantInLeeds />} />
+      <Route path="/accountant-in-liverpool" element={<AccountantInLiverpool />} />
+      <Route path="/accountant-in-liverpool/" element={<AccountantInLiverpool />} />
       <Route path="/privacy-policy" element={<PrivacyPolicy />} />
       {/* ── 301-EQUIVALENT CLIENT-SIDE REDIRECTS ────────────────── */}
       {/* Service page — old slugs that may have been indexed */}

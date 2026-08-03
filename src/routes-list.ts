@@ -32,4 +32,5 @@ export const PRERENDER_ROUTES = [
   "/accountancy-firm-in-manchester",
   "/accountant-in-leeds",
   "/inside-vs-outside-ir35",
+  "/accountant-in-liverpool",
 ];

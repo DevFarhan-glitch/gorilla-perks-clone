@@ -139,7 +139,7 @@ const WhatAreIR35Rules = () => {
 
             {/* Subtitle */}
             <p className="text-xl text-gray-600 leading-relaxed mb-6" style={{ fontFamily: "'Georgia', serif" }}>
-              From thresholds to record-keeping, here are the IR35 rules that actually apply to you in 2026 — and what happens if a client gets one wrong.
+              From thresholds to record-keeping, here are the IR35 rules that actually apply to you in 2026 and what happens if a client gets one wrong.
             </p>
 
             {/* Meta row */}
@@ -167,11 +167,10 @@ const WhatAreIR35Rules = () => {
                     <li key={section.id}>
                       <button
                         onClick={() => scrollToSection(section.id)}
-                        className={`group flex items-baseline gap-3 w-full text-left text-sm transition-colors duration-150 ${
-                          activeSection === section.id
-                            ? "text-amber-700 font-semibold"
-                            : "text-gray-600 hover:text-gray-900"
-                        }`}
+                        className={`group flex items-baseline gap-3 w-full text-left text-sm transition-colors duration-150 ${activeSection === section.id
+                          ? "text-amber-700 font-semibold"
+                          : "text-gray-600 hover:text-gray-900"
+                          }`}
                       >
                         <span className={`text-xs font-mono shrink-0 w-5 ${activeSection === section.id ? "text-amber-600" : "text-gray-400"}`}>
                           {String(idx + 1).padStart(2, "0")}
@@ -192,7 +191,7 @@ const WhatAreIR35Rules = () => {
 
               {/* Intro */}
               <p className="text-gray-700 leading-relaxed mb-6">
-                The IR35 rules require anyone contracting through a limited company to be taxed as an employee if their actual working relationship looks like employment — and they set out exactly who must assess that, when, and what happens if they get it wrong. In 2026, the rules that matter most are the raised small company thresholds, a contractor's right to request their client's size classification, a ban on blanket status decisions, and clear obligations around record-keeping.
+                The <Link to="/what-is-ir35-uk" className="text-amber-700 underline hover:text-amber-900">IR35</Link> rules require anyone contracting through a limited company to be taxed as an employee if their actual working relationship looks like employment — and they set out exactly who must assess that, when, and what happens if they get it wrong. In 2026, the rules that matter most are the raised small company thresholds, a contractor's right to request their client's size classification, a ban on blanket status decisions, and clear obligations around record-keeping.
               </p>
               <p className="text-gray-700 leading-relaxed mb-8">
                 This guide covers each one directly, so you know exactly where you stand and what's legally required of you or your client.
@@ -394,7 +393,16 @@ const WhatAreIR35Rules = () => {
                     "Check your client's current size classification each tax year, and request confirmation if you're unsure",
                     "Keep a written record of your actual working practices, not just your contract",
                     "Review your IR35 status if your role or working pattern changes mid-contract",
-                    "Don't rely on CEST alone for anything borderline — see our full breakdown of inside vs outside IR35 for what's at stake either way",
+                    <>
+                      Don't rely on CEST alone for anything borderline —{" "}
+                      <Link
+                        to="/inside-vs-outside-ir35"
+                        className="text-amber-700 underline hover:text-amber-900 font-medium"
+                      >
+                        see our full breakdown of inside vs outside IR35
+                      </Link>{" "}
+                      for what's at stake either way.
+                    </>,
                     "Get a professional review before signing a long-term or high-value contract",
                   ].map((item, idx) => (
                     <li key={idx} className="flex items-start gap-3">
@@ -460,15 +468,13 @@ const WhatAreIR35Rules = () => {
                     >
                       <span>{faq.question}</span>
                       <ChevronDown
-                        className={`h-5 w-5 text-gray-500 transition-transform duration-200 shrink-0 ml-4 ${
-                          openFaq === idx ? "rotate-180" : ""
-                        }`}
+                        className={`h-5 w-5 text-gray-500 transition-transform duration-200 shrink-0 ml-4 ${openFaq === idx ? "rotate-180" : ""
+                          }`}
                       />
                     </button>
                     <div
-                      className={`overflow-hidden transition-all duration-300 ${
-                        openFaq === idx ? "max-h-[300px] border-t border-gray-100" : "max-h-0"
-                      }`}
+                      className={`overflow-hidden transition-all duration-300 ${openFaq === idx ? "max-h-[300px] border-t border-gray-100" : "max-h-0"
+                        }`}
                     >
                       <div className="px-6 py-4 text-gray-600 bg-gray-50 text-sm leading-relaxed">
                         {faq.answer}

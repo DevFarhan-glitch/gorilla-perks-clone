@@ -50,13 +50,21 @@
   RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
   RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
 
-  # Remove trailing slash from non-existent directories (301 redirect)
-  # This prevents duplicate page content issues for SEO
+  # Pre-rendered pages: if a directory/index.html exists for the URL (without trailing slash),
+  # serve it directly. This fixes the white-screen-on-refresh for pre-rendered SPA routes.
+  RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI}/index.html -f
+  RewriteRule ^(.+)$ /$1/index.html [L]
+
+  # Remove trailing slash ONLY from paths that don't have a pre-rendered directory behind them
+  # This prevents duplicate content for non-prerendered URLs
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI}index.html !-f
   RewriteRule ^(.+)/$ /$1 [L,R=301]
 
-  # SPA Routing: Fallback all requests to index.html if file or directory doesn't exist
-  # This allows React Router to handle the URL on the client side
+  # SPA Routing: Fallback all remaining requests to index.html
+  # (handles routes not pre-rendered, e.g. /blog/:id dynamic routes)
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteRule . /index.html [L]

@@ -225,7 +225,7 @@ const WhatIsIR35UK = () => {
                 </li>
               </ul>
               <p className="text-gray-700 leading-relaxed mb-6">
-                Assessments also weigh financial risk, who supplies your equipment and whether you're genuinely trading as an independent business. <Link to="/services/contractor-accountants" className="text-amber-700 underline hover:text-amber-900">Experienced contractor accountants</Link> will say it's rarely one obvious factor — it's the combination that tips a borderline IR35 status check one way or the other. Read our full guide on how IR35 works for a deeper breakdown of each test with real-world examples.
+                Assessments also weigh financial risk, who supplies your equipment and whether you're genuinely trading as an independent business. <Link to="/services/contractor-accountants" className="text-amber-700 underline hover:text-amber-900">Experienced contractor accountants</Link> will say it's rarely one obvious factor — it's the combination that tips a borderline IR35 status check one way or the other. Read our full guide on  <Link to="/how-does-ir35-work-in-the-uk" className="text-amber-700 underline hover:text-amber-900">how IR35 works</Link> for a deeper breakdown of each test with real-world examples.
               </p>
 
               <div className="my-8 rounded-xl overflow-hidden shadow-md">
@@ -329,6 +329,7 @@ const WhatIsIR35UK = () => {
 
               <p className="text-gray-700 leading-relaxed mb-8">
                 A company needs to meet two of the three criteria to count as small. HMRC estimates around 14,000 UK businesses will move from &quot;medium&quot; to &quot;small,&quot; shifting IR35 determination responsibility on those contracts back to the contractor's own company. If your client was medium-sized last year, check whether it's now dropped into the small category — a contractor accountant reviewing your engagement each tax year is the easiest way to catch that before it causes a problem.
+                Read our full guide on the <Link to="/what-are-ir35-rules" className="text-amber-700 underline hover:text-amber-900">current IR35 rules for 2026</Link> for the complete threshold breakdown and what it means depending on your sector.
               </p>
 
               {/* Section 5 */}
@@ -344,7 +345,7 @@ const WhatIsIR35UK = () => {
               </p>
               <p className="text-gray-700 leading-relaxed mb-4">
                 On a £60,000 annual contract, the rough gap in take-home pay between outside and inside IR35 works out to around £8,000 a year, widening as day rates rise. The exact figure depends on your expenses, pension contributions, and salary/dividend split. An <Link to="/calculator" className="text-amber-700 underline hover:text-amber-900">IR35 take-home pay calculator</Link> can give you a rough figure, but a proper calculation from your accountant, based on your actual contract, is worth far more than a rule of thumb.
-              </p>
+              </p>Read our full guide on <Link to="/inside-vs-outside-ir35" className="text-amber-700 underline hover:text-amber-900">inside vs outside IR35</Link> for worked examples across different day rates and salary/dividend splits.
 
 
               <div className="overflow-x-auto mb-8">

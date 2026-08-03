@@ -202,7 +202,7 @@ const InsideVsOutsideIR35 = () => {
               </h2>
               <div className="w-10 h-0.5 bg-amber-500 mb-6" />
               <p className="text-gray-700 leading-relaxed mb-6">
-                Inside and outside IR35 describe two different tax outcomes for the same kind of work, and which one applies to you changes how much of your contract income you actually keep. Get it wrong, or misunderstand which one you're operating under and the financial gap can run into thousands of pounds a year. This guide breaks down what each status means day to day, shows a worked example and covers the questions contractors ask most once a determination has landed in their inbox.
+                Inside and outside link <Link to="/what-is-ir35-uk" className="text-amber-700 underline hover:text-amber-900">IR35 </Link>describe two different tax outcomes for the same kind of work, and which one applies to you changes how much of your contract income you actually keep. Get it wrong, or misunderstand which one you're operating under and the financial gap can run into thousands of pounds a year. This guide breaks down what each status means day to day, shows a worked example and covers the questions contractors ask most once a determination has landed in their inbox.
               </p>
 
               {/* Section 2 */}
