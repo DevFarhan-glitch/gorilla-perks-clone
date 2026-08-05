@@ -43,7 +43,8 @@ import OutsourcedAccounting from "./pages/services/OutsourcedAccounting";
 import AccountantsInBirmingham from "./pages/AccountantsInBirmingham";
 import AccountancyFirmInManchester from "./pages/AccountancyFirmInManchester";
 import AccountantInLeeds from "./pages/AccountantInLeeds";
-import AccountantInLiverpool from "./pages/Accountant-in-Liverpool";
+import AccountantInLiverpool from "./pages/AccountantInLiverpool";
+import AccountantsInSheffield from "./pages/AccountantsInSheffield";
 
 const queryClient = new QueryClient();
 
@@ -94,6 +95,8 @@ export const AppRoutes = () => (
       <Route path="/accountant-in-leeds/" element={<AccountantInLeeds />} />
       <Route path="/accountant-in-liverpool" element={<AccountantInLiverpool />} />
       <Route path="/accountant-in-liverpool/" element={<AccountantInLiverpool />} />
+      <Route path="/accountants-in-sheffield" element={<AccountantsInSheffield />} />
+      <Route path="/accountants-in-sheffield/" element={<AccountantsInSheffield />} />
       <Route path="/privacy-policy" element={<PrivacyPolicy />} />
       {/* ── 301-EQUIVALENT CLIENT-SIDE REDIRECTS ────────────────── */}
       {/* Service page — old slugs that may have been indexed */}
