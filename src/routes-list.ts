@@ -34,4 +34,6 @@ export const PRERENDER_ROUTES = [
   "/inside-vs-outside-ir35",
   "/accountant-in-liverpool",
   "/accountants-in-sheffield",
+  "/accountant-in-nottingham",
+  "/what-is-tax-planning-uk-guide",
 ];

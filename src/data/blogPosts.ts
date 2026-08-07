@@ -95,6 +95,18 @@ export const blogPosts: BlogPost[] = [
     category: "Contractor Tax",
     image: "/inside-vs-outside-ir35.jpeg",
     slug: "/inside-vs-outside-ir35"
+  },
+  {
+    id: 13,
+    title: "Tax Planning Guide for UK Individuals & Businesses",
+    excerpt: "What is tax planning and why does it matter more in 2026/27? A practical guide for Bristol individuals, landlords and business owners.",
+    content: "Redirecting...",
+    author: "Henleaze Team",
+    date: "August 2026",
+    readTime: "8 min read",
+    category: "Tax Planning",
+    image: "/tax-planning-services.png",
+    slug: "/what-is-tax-planning-uk-guide"
   }
 ];
 

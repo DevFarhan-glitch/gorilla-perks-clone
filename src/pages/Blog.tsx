@@ -163,6 +163,22 @@ const allBlogs = [
     featured: false,
     tags: ["IR35", "IR35 Rules", "Small Company Thresholds", "Record-Keeping"],
   },
+  {
+    id: "what-is-tax-planning-uk-guide",
+    slug: "/what-is-tax-planning-uk-guide",
+    title: "Tax Planning Guide for UK Individuals & Businesses",
+    subtitle: "What is Tax Planning? A Complete Guide for UK Individuals & Businesses",
+    excerpt:
+      "What is tax planning and why does it matter more in 2026/27? A practical guide for Bristol individuals, landlords and business owners.",
+    category: "Tax Planning Guide",
+    categoryColor: "green",
+    image: "/tax-planning-services.png",
+    author: "Henleaze Team",
+    date: "August 2026",
+    readTime: "8 min read",
+    featured: false,
+    tags: ["Tax Planning", "2026/27 Tax Year", "Landlords", "Corporation Tax"],
+  },
 ];
 
 

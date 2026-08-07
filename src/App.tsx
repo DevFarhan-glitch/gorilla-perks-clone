@@ -34,6 +34,7 @@ import HowDoesIR35Work from "./pages/HowDoesIR35Work";
 import WhatAreIR35Rules from "./pages/WhatAreIR35Rules";
 import Blog from "./pages/Blog";
 import InsideVsOutsideIR35 from "./pages/InsideVsOutsideIR35";
+import WhatIsTaxPlanningUKGuide from "./pages/WhatIsTaxPlanningUKGuide";
 
 import CustomCursor from "./components/ui/CustomCursor";
 import ScrollToTop from "./components/ui/ScrollToTop";
@@ -45,6 +46,7 @@ import AccountancyFirmInManchester from "./pages/AccountancyFirmInManchester";
 import AccountantInLeeds from "./pages/AccountantInLeeds";
 import AccountantInLiverpool from "./pages/AccountantInLiverpool";
 import AccountantsInSheffield from "./pages/AccountantsInSheffield";
+import AccountantInNottingham from "./pages/AccountantInNottingham";
 
 const queryClient = new QueryClient();
 
@@ -87,6 +89,8 @@ export const AppRoutes = () => (
       <Route path="/what-are-ir35-rules/" element={<WhatAreIR35Rules />} />
       <Route path="/inside-vs-outside-ir35" element={<InsideVsOutsideIR35 />} />
       <Route path="/inside-vs-outside-ir35/" element={<InsideVsOutsideIR35 />} />
+      <Route path="/what-is-tax-planning-uk-guide" element={<WhatIsTaxPlanningUKGuide />} />
+      <Route path="/what-is-tax-planning-uk-guide/" element={<WhatIsTaxPlanningUKGuide />} />
       <Route path="/accountants-in-birmingham-uk" element={<AccountantsInBirmingham />} />
       <Route path="/accountants-in-birmingham-uk/" element={<AccountantsInBirmingham />} />
       <Route path="/accountancy-firm-in-manchester" element={<AccountancyFirmInManchester />} />
@@ -97,6 +101,8 @@ export const AppRoutes = () => (
       <Route path="/accountant-in-liverpool/" element={<AccountantInLiverpool />} />
       <Route path="/accountants-in-sheffield" element={<AccountantsInSheffield />} />
       <Route path="/accountants-in-sheffield/" element={<AccountantsInSheffield />} />
+      <Route path="/accountant-in-nottingham" element={<AccountantInNottingham />} />
+      <Route path="/accountant-in-nottingham/" element={<AccountantInNottingham />} />
       <Route path="/privacy-policy" element={<PrivacyPolicy />} />
       {/* ── 301-EQUIVALENT CLIENT-SIDE REDIRECTS ────────────────── */}
       {/* Service page — old slugs that may have been indexed */}
