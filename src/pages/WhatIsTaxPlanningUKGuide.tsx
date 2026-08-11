@@ -211,7 +211,7 @@ const WhatIsTaxPlanningUKGuide = () => {
             {/* ── FEATURED IMAGE ─────────────────────────────────────────── */}
             <div className="my-8 rounded-2xl overflow-hidden border border-gray-200 shadow-md bg-gray-50 p-2 sm:p-3">
               <img
-                src="/tax-planning-services.png"
+                src="/what-is-tax-planning.jpeg"
                 alt="Tax Planning Guide for UK Individuals & Businesses"
                 className="w-full h-auto object-contain rounded-xl"
               />
@@ -461,7 +461,7 @@ const WhatIsTaxPlanningUKGuide = () => {
               {/* SECOND IMAGE INSERTION */}
               <div className="my-10 rounded-2xl overflow-hidden border border-gray-200 shadow-md bg-gray-50 p-2 sm:p-4">
                 <img
-                  src="/areas-most-tax-planning-services-cover.png"
+                  src="/key-areas-of-tax-planning.png"
                   alt="Key Areas of Tax Planning Services"
                   className="w-full h-auto object-contain rounded-xl"
                 />

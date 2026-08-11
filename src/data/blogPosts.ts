@@ -105,8 +105,20 @@ export const blogPosts: BlogPost[] = [
     date: "August 2026",
     readTime: "8 min read",
     category: "Tax Planning",
-    image: "/tax-planning-services.png",
+    image: "/what-is-tax-planning.jpeg",
     slug: "/what-is-tax-planning-uk-guide"
+  },
+  {
+    id: 14,
+    title: "Tax Planning Services Explained",
+    excerpt: "Discover what tax planning services include, from corporation tax and capital gains tax to inheritance tax planning.",
+    content: "Redirecting...",
+    author: "Henleaze Team",
+    date: "August 2026",
+    readTime: "8 min read",
+    category: "Tax Planning",
+    image: "/tax-planning-services.png",
+    slug: "/tax-planning-services-explained"
   }
 ];
 

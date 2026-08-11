@@ -35,6 +35,7 @@ import WhatAreIR35Rules from "./pages/WhatAreIR35Rules";
 import Blog from "./pages/Blog";
 import InsideVsOutsideIR35 from "./pages/InsideVsOutsideIR35";
 import WhatIsTaxPlanningUKGuide from "./pages/WhatIsTaxPlanningUKGuide";
+import TaxPlanningServicesExplained from "./pages/TaxPlanningServicesExplained";
 
 import CustomCursor from "./components/ui/CustomCursor";
 import ScrollToTop from "./components/ui/ScrollToTop";
@@ -91,6 +92,8 @@ export const AppRoutes = () => (
       <Route path="/inside-vs-outside-ir35/" element={<InsideVsOutsideIR35 />} />
       <Route path="/what-is-tax-planning-uk-guide" element={<WhatIsTaxPlanningUKGuide />} />
       <Route path="/what-is-tax-planning-uk-guide/" element={<WhatIsTaxPlanningUKGuide />} />
+      <Route path="/tax-planning-services-explained" element={<TaxPlanningServicesExplained />} />
+      <Route path="/tax-planning-services-explained/" element={<TaxPlanningServicesExplained />} />
       <Route path="/accountants-in-birmingham-uk" element={<AccountantsInBirmingham />} />
       <Route path="/accountants-in-birmingham-uk/" element={<AccountantsInBirmingham />} />
       <Route path="/accountancy-firm-in-manchester" element={<AccountancyFirmInManchester />} />
