@@ -2,6 +2,10 @@
   RewriteEngine On
   RewriteBase /
 
+  # Disable default DirectorySlash to prevent loops and force clean URL structure
+  DirectorySlash Off
+  DirectoryIndex index.html
+
   # ── 301 REDIRECTS: Old URLs → New URLs ─────────────────────────────────────
   # These MUST come before the HTTPS/WWW enforcement and the SPA fallback rule
   # so that crawlers receive a proper 301 and PageRank is passed to the new URLs.
@@ -50,22 +54,19 @@
   RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
   RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
 
-  # Pre-rendered pages: if a directory/index.html exists for the URL (without trailing slash),
-  # serve it directly. This fixes the white-screen-on-refresh for pre-rendered SPA routes.
+  # Force removal of trailing slashes (301 Redirect)
+  RewriteCond %{REQUEST_METHOD} =GET
+  RewriteRule ^(.+)/$ /$1 [R=301,L]
+
+  # Pre-rendered pages: serve index.html internally for requests without a trailing slash
   RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteCond %{REQUEST_FILENAME} !-d
   RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI}/index.html -f
   RewriteRule ^(.+)$ /$1/index.html [L]
 
-  # Remove trailing slash ONLY from paths that don't have a pre-rendered directory behind them
-  # This prevents duplicate content for non-prerendered URLs
-  RewriteCond %{REQUEST_FILENAME} !-d
-  RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI}index.html !-f
-  RewriteRule ^(.+)/$ /$1 [L,R=301]
-
-  # SPA Routing: Fallback all remaining requests to index.html
-  # (handles routes not pre-rendered, e.g. /blog/:id dynamic routes)
+  # Redirect any remaining non-existent pages (excluding static assets) to the homepage
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
-  RewriteRule . /index.html [L]
+  RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI}/index.html !-f
+  RewriteCond %{REQUEST_URI} !\.(jpe?g|png|gif|svg|webp|ico|css|js|woff2?|ttf|eot|xml|txt|json)$ [NC]
+  RewriteRule . / [R=301,L]
 </IfModule>

@@ -133,7 +133,7 @@ export const AppRoutes = () => (
       <Route path="/contractor-accountant-cost" element={<Navigate to="/how-much-does-a-contractor-accountant-cost-in-the-uk" replace />} />
       <Route path="/top-accounting-firms-contractors" element={<Navigate to="/top-accounting-firms-for-contractors-uk" replace />} />
       <Route path="/contractor-accounting-services" element={<Navigate to="/contractor-accountant-services-in-the-uk" replace />} />
-      <Route path="*" element={<NotFound />} />
+      <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
   </>
 );
