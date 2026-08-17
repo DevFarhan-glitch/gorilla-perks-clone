@@ -36,6 +36,8 @@ import Blog from "./pages/Blog";
 import InsideVsOutsideIR35 from "./pages/InsideVsOutsideIR35";
 import WhatIsTaxPlanningUKGuide from "./pages/WhatIsTaxPlanningUKGuide";
 import TaxPlanningServicesExplained from "./pages/TaxPlanningServicesExplained";
+import DividendTaxRates2627 from "./pages/DividendTaxRates2627";
+import WhatIsSalaryCalculatorUK from "./pages/WhatIsSalaryCalculatorUK";
 
 import CustomCursor from "./components/ui/CustomCursor";
 import ScrollToTop from "./components/ui/ScrollToTop";
@@ -48,6 +50,7 @@ import AccountantInLeeds from "./pages/AccountantInLeeds";
 import AccountantInLiverpool from "./pages/AccountantInLiverpool";
 import AccountantsInSheffield from "./pages/AccountantsInSheffield";
 import AccountantInNottingham from "./pages/AccountantInNottingham";
+import AccountantsInNewcastle from "./pages/AccountantsInNewcastle";
 
 const queryClient = new QueryClient();
 
@@ -94,6 +97,10 @@ export const AppRoutes = () => (
       <Route path="/what-is-tax-planning-uk-guide/" element={<WhatIsTaxPlanningUKGuide />} />
       <Route path="/tax-planning-services-explained" element={<TaxPlanningServicesExplained />} />
       <Route path="/tax-planning-services-explained/" element={<TaxPlanningServicesExplained />} />
+      <Route path="/dividend-tax-rates-2026-27" element={<DividendTaxRates2627 />} />
+      <Route path="/dividend-tax-rates-2026-27/" element={<DividendTaxRates2627 />} />
+      <Route path="/what-is-salary-calculator-uk" element={<WhatIsSalaryCalculatorUK />} />
+      <Route path="/what-is-salary-calculator-uk/" element={<WhatIsSalaryCalculatorUK />} />
       <Route path="/accountants-in-birmingham-uk" element={<AccountantsInBirmingham />} />
       <Route path="/accountants-in-birmingham-uk/" element={<AccountantsInBirmingham />} />
       <Route path="/accountancy-firm-in-manchester" element={<AccountancyFirmInManchester />} />
@@ -106,6 +113,8 @@ export const AppRoutes = () => (
       <Route path="/accountants-in-sheffield/" element={<AccountantsInSheffield />} />
       <Route path="/accountant-in-nottingham" element={<AccountantInNottingham />} />
       <Route path="/accountant-in-nottingham/" element={<AccountantInNottingham />} />
+      <Route path="/accountants-in-newcastle" element={<AccountantsInNewcastle />} />
+      <Route path="/accountants-in-newcastle/" element={<AccountantsInNewcastle />} />
       <Route path="/privacy-policy" element={<PrivacyPolicy />} />
       {/* ── 301-EQUIVALENT CLIENT-SIDE REDIRECTS ────────────────── */}
       {/* Service page — old slugs that may have been indexed */}

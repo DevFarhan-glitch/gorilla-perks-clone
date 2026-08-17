@@ -195,6 +195,38 @@ const allBlogs = [
     featured: false,
     tags: ["Tax Planning", "Corporation Tax", "Capital Gains Tax", "Inheritance Tax"],
   },
+  {
+    id: "dividend-tax-rates-2026-27",
+    slug: "/dividend-tax-rates-2026-27",
+    title: "Dividend Tax Rates 2026/27: Bristol Director Guide",
+    subtitle: "UK Dividend Tax Rates 2026/27: What Company Directors Need to Know",
+    excerpt:
+      "Dividend tax rates for 2026/27 are 10.75%, 35.75% and 39.35%. See what changed, what it costs, and how Bristol directors can plan ahead.",
+    category: "Tax Planning Guide",
+    categoryColor: "green",
+    image: "/uk-divident-tax.jpeg",
+    author: "Henleaze Team",
+    date: "August 2026",
+    readTime: "9 min read",
+    featured: false,
+    tags: ["Dividend Tax", "2026/27 Tax Year", "Salary vs Dividends", "Bristol Directors"],
+  },
+  {
+    id: "what-is-salary-calculator-uk",
+    slug: "/what-is-salary-calculator-uk",
+    title: "What is a Salary Calculator? A UK Pay Guide for 2026",
+    subtitle: "What Is Salary Calculator in the UK? A Complete Guide to Working Out Your Pay",
+    excerpt:
+      "See exactly how a UK salary calculator works, which type you actually need, and why contractors need a different one entirely.",
+    category: "Contractor Tax Guide",
+    categoryColor: "amber",
+    image: "/salary-calculator.jpeg",
+    author: "Henleaze Team",
+    date: "August 2026",
+    readTime: "7 min read",
+    featured: false,
+    tags: ["Salary Calculator", "Take Home Pay", "PAYE", "Contractor Pay"],
+  },
 ];
 
 

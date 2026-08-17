@@ -36,5 +36,8 @@ export const PRERENDER_ROUTES = [
   "/accountants-in-sheffield",
   "/accountant-in-nottingham",
   "/what-is-tax-planning-uk-guide",
-  "/tax-planning-services-explained"
+  "/tax-planning-services-explained",
+  "/dividend-tax-rates-2026-27",
+  "/accountants-in-newcastle",
+  "/what-is-salary-calculator-uk"
 ];
