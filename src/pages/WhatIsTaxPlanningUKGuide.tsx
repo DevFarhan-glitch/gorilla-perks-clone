@@ -220,7 +220,10 @@ const WhatIsTaxPlanningUKGuide = () => {
 
             {/* Opening Paragraphs */}
             <p className="text-lg text-gray-700 leading-relaxed mb-4">
-              Tax planning means organising your finances so you pay only the tax you legally owe, not a penny more. It is completely legal, HMRC does not discourage it and in the 2026-27 tax year it matters more than it has in a long time. Between rising compliance activity, changing rental income rules and shifting reliefs, the decisions you make this year could shape your tax position for several years to come.
+              <Link
+                to="/henleazetaxconsultancy.com/services/tax-planning"
+                className="inline-flex items-center gap-2 text-sm font-semibold text-gray-700 bg-gray-100 hover:bg-amber-500 hover:text-white border border-gray-200 hover:border-amber-500 px-4 py-2 rounded-full transition-all duration-200 group shadow-sm hover:shadow-md"
+              > Tax planning </Link>means organising your finances so you pay only the tax you legally owe, not a penny more. It is completely legal, HMRC does not discourage it and in the 2026-27 tax year it matters more than it has in a long time. Between rising compliance activity, changing rental income rules and shifting reliefs, the decisions you make this year could shape your tax position for several years to come.
             </p>
 
             <p className="text-lg text-gray-700 leading-relaxed mb-4">
@@ -347,7 +350,10 @@ const WhatIsTaxPlanningUKGuide = () => {
                     HMRC compliance activity is ramping up
                   </h3>
                   <p className="text-gray-700 leading-relaxed">
-                    HMRC is investing heavily in digital compliance and data matching technology, drawing on information from banks, property transactions, online marketplaces and even overseas tax authorities to identify undeclared income. As part of this push, HMRC plans to recruit thousands more compliance officers over the coming years, with over 2,000 already in post. In practical terms, the days of quietly under-reporting rental income or side earnings and hoping it goes unnoticed are pretty much over.
+                    HMRC is investing heavily in digital compliance and data matching technology, drawing on information from banks, property transactions, online marketplaces and even overseas tax authorities to identify undeclared income. As part of this push, HMRC <Link
+                      to="https://www.gov.uk/government/publications/summary-of-tax-update-2026-simplification-modernisation-and-fairness/tax-update-2026-simplification-modernisation-and-fairness-summary"
+                      className="inline-flex items-center gap-2 text-sm font-semibold text-gray-700 bg-gray-100 hover:bg-amber-500 hover:text-white border border-gray-200 hover:border-amber-500 px-4 py-2 rounded-full transition-all duration-200 group shadow-sm hover:shadow-md"
+                    >plans to recruit thousands more compliance officers over the coming years</Link> , with over 2,000 already in post. In practical terms, the days of quietly under-reporting rental income or side earnings and hoping it goes unnoticed are pretty much over.
                   </p>
                 </div>
 
@@ -357,7 +363,10 @@ const WhatIsTaxPlanningUKGuide = () => {
                     Rental income tax is rising from April 2027
                   </h3>
                   <p className="text-gray-700 leading-relaxed">
-                    This is one that a lot of Bristol landlords have not clocked yet. From 6 April 2027, new income tax rates will apply specifically to rental income, at 22 percent, 42 percent and 47 percent across the basic, higher and additional rate bands. That is a two percentage point rise on current rates. If you are a landlord thinking about selling a property or restructuring how you hold it, 2026 27 may be your last full tax year before the higher rates apply, which makes this the year to actually have that conversation rather than putting it off again.
+                    This is one that a lot of <Link
+                      to="https://henleazetaxconsultancy.com/services/landlord-accountants"
+                      className="inline-flex items-center gap-2 text-sm font-semibold text-gray-700 bg-gray-100 hover:bg-amber-500 hover:text-white border border-gray-200 hover:border-amber-500 px-4 py-2 rounded-full transition-all duration-200 group shadow-sm hover:shadow-md"
+                    >Bristol landlords </Link> have not clocked yet. From 6 April 2027, new income tax rates will apply specifically to rental income, at 22 percent, 42 percent and 47 percent across the basic, higher and additional rate bands. That is a two percentage point rise on current rates. If you are a landlord thinking about selling a property or restructuring how you hold it, 2026 27 may be your last full tax year before the higher rates apply, which makes this the year to actually have that conversation rather than putting it off again.
                   </p>
                 </div>
 
@@ -373,7 +382,10 @@ const WhatIsTaxPlanningUKGuide = () => {
               </div>
 
               <p className="text-gray-700 leading-relaxed mb-6">
-                If you work through your own limited company, it is also worth keeping an eye on the current IR35 rules, since your employment status directly affects how much of this tax planning applies to you versus an employer.
+                If you work through your own limited company, it is also worth keeping an eye on the <Link
+                  to="https://henleazetaxconsultancy.com/what-are-ir35-rules"
+                  className="inline-flex items-center gap-2 text-sm font-semibold text-gray-700 bg-gray-100 hover:bg-amber-500 hover:text-white border border-gray-200 hover:border-amber-500 px-4 py-2 rounded-full transition-all duration-200 group shadow-sm hover:shadow-md"
+                >current IR35 rules</Link>, since your employment status directly affects how much of this tax planning applies to you versus an employer.
               </p>
 
               <p className="text-gray-700 leading-relaxed mb-6">
@@ -472,7 +484,10 @@ const WhatIsTaxPlanningUKGuide = () => {
                 <div className="p-5 bg-gray-50 border border-gray-200 rounded-xl">
                   <h3 className="text-xl font-bold text-gray-900 mb-2">Income Tax Planning</h3>
                   <p className="text-gray-700 leading-relaxed">
-                    Look at how your income is structured, including salary, dividends, pension contributions and allowances, to make sure you are not tipping unnecessarily into a higher tax band.
+                    Look at how your income is structured, <Link
+                      to="https://henleazetaxconsultancy.com/dividend-tax-rates-2026-27"
+                      className="inline-flex items-center gap-2 text-sm font-semibold text-gray-700 bg-gray-100 hover:bg-amber-500 hover:text-white border border-gray-200 hover:border-amber-500 px-4 py-2 rounded-full transition-all duration-200 group shadow-sm hover:shadow-md"
+                    >including salary, dividends</Link>, pension contributions and allowances, to make sure you are not tipping unnecessarily into a higher tax band.
                   </p>
                 </div>
 
@@ -564,7 +579,7 @@ const WhatIsTaxPlanningUKGuide = () => {
 
               <p className="text-gray-700 leading-relaxed mb-6">
                 National platforms and app based tax services have their place, but they rarely understand the specifics of the Bristol property market, the mix of independent businesses across the city, or the practical realities facing local landlords with BS postcode portfolios. Our{" "}
-                <Link to="/services/tax-planning" className="text-amber-700 font-semibold hover:underline">
+                <Link to="https://henleazetaxconsultancy.com/tax-planning-services-explained" className="text-amber-700 font-semibold hover:underline">
                   tax planning services
                 </Link>{" "}
                 are built specifically around that local context, rather than a one size fits all national template.

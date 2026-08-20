@@ -227,6 +227,22 @@ const allBlogs = [
     featured: false,
     tags: ["Salary Calculator", "Take Home Pay", "PAYE", "Contractor Pay"],
   },
+  {
+    id: "how-do-you-calculate-your-annual-salary-in-uk",
+    slug: "/how-do-you-calculate-your-annual-salary-in-uk",
+    title: "How Do You Calculate Your Annual Salary in UK? 2026 Guide",
+    subtitle: "Annual Salary Calculation UK: A Simple Guide for Every Pay Type",
+    excerpt:
+      "Work out your annual salary from an hourly rate, monthly pay, part time hours or contract income, with formulas and real examples.",
+    category: "UK Pay & Tax Guide",
+    categoryColor: "amber",
+    image: "/annual-salary-calculation.png",
+    author: "Henleaze Team",
+    date: "August 2026",
+    readTime: "8 min read",
+    featured: false,
+    tags: ["Annual Salary", "Hourly Rate", "Part Time Pay", "Contractor Income"],
+  },
 ];
 
 

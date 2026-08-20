@@ -222,7 +222,9 @@ const TaxPlanningServicesExplained = () => {
             </p>
 
             <p className="text-lg text-gray-700 leading-relaxed mb-4">
-              In simple terms, tax planning is about making informed financial decisions before tax becomes due. Whether you're a business owner, landlord, contractor or an individual planning for the future, the right advice can help you make full use of available reliefs while staying compliant with HMRC.
+              In simple terms,<Link to="https://henleazetaxconsultancy.com/services/tax-planning" className="text-amber-700 font-semibold hover:underline">
+                tax planning
+              </Link> is about making informed financial decisions before tax becomes due. Whether you're a business owner, landlord, contractor or an individual planning for the future, the right advice can help you make full use of available reliefs while staying compliant with HMRC.
             </p>
 
             <p className="text-lg text-gray-700 leading-relaxed mb-8">
@@ -247,16 +249,14 @@ const TaxPlanningServicesExplained = () => {
                     <li key={section.id}>
                       <button
                         onClick={() => scrollToSection(section.id)}
-                        className={`group flex items-baseline gap-3 w-full text-left text-sm transition-colors duration-150 ${
-                          activeSection === section.id
-                            ? "text-amber-700 font-semibold"
-                            : "text-gray-600 hover:text-gray-900"
-                        }`}
+                        className={`group flex items-baseline gap-3 w-full text-left text-sm transition-colors duration-150 ${activeSection === section.id
+                          ? "text-amber-700 font-semibold"
+                          : "text-gray-600 hover:text-gray-900"
+                          }`}
                       >
                         <span
-                          className={`text-xs font-mono shrink-0 w-5 ${
-                            activeSection === section.id ? "text-amber-600" : "text-gray-400"
-                          }`}
+                          className={`text-xs font-mono shrink-0 w-5 ${activeSection === section.id ? "text-amber-600" : "text-gray-400"
+                            }`}
                         >
                           {String(idx + 1).padStart(2, "0")}
                         </span>
@@ -351,10 +351,14 @@ const TaxPlanningServicesExplained = () => {
                   </p>
                   <p className="text-gray-700 leading-relaxed mt-3">
                     For company directors, this often includes advice on how to take income in the most tax-efficient way. If you pay yourself through dividends as well as salary, it's also worth understanding the latest{" "}
-                    <Link to="/blog" className="text-amber-700 font-semibold hover:underline">
+                    <Link to="https://henleazetaxconsultancy.com/dividend-tax-rates-2026-27" className="text-amber-700 font-semibold hover:underline">
                       Dividend Tax Rates 2026 to 2027
                     </Link>
-                    , as changes can affect your overall tax position.
+                    , as changes can affect your overall tax position. You can also use our{" "}
+                    <Link to="https://henleazetaxconsultancy.com/calculator" className="text-amber-700 font-semibold hover:underline">
+                      UK Salary Calculator
+                    </Link>
+                    {" "} to check the salary side of your income.
                   </p>
                 </div>
 
@@ -387,11 +391,7 @@ const TaxPlanningServicesExplained = () => {
                     Protects an estate for the next generation. This usually involves reviewing how an estate is structured, calculating likely inheritance tax exposure, checking which reliefs and exemptions are available and planning how wealth is passed on over time rather than all at once.
                   </p>
                   <p className="text-gray-700 leading-relaxed mt-3">
-                    Recent changes have also made pension planning an increasingly important part of inheritance tax discussions. If you're thinking about passing on pension wealth, our guide to{" "}
-                    <Link to="/blog" className="text-amber-700 font-semibold hover:underline">
-                      Pensions and Inheritance Tax Changes 2027
-                    </Link>{" "}
-                    explains what these developments could mean for you.
+                    Recent changes have also made pension planning an increasingly important part of inheritance tax discussions.
                   </p>
                 </div>
 
@@ -432,7 +432,12 @@ const TaxPlanningServicesExplained = () => {
               </p>
 
               <p className="text-gray-700 leading-relaxed mb-4">
-                The same applies to contractors working through their own limited company. Decisions about salary, dividends, pension contributions and business expenses all influence each other, so looking at the bigger picture usually produces better long-term outcomes.
+                The same applies to contractors working through their own limited company. Decisions about salary, dividends, pension contributions and business expenses all influence each other, so looking at the bigger picture usually produces better long-term outcomes.This is where <Link to="https://henleazetaxconsultancy.com/contractor-accountant-services-in-the-uk" className="text-amber-700 font-semibold hover:underline">
+                  contractor accounting services
+                </Link> can help bring those decisions together. For contractors, <Link to="https://henleazetaxconsultancy.com/what-is-ir35-uk" className="text-amber-700 font-semibold hover:underline">
+                  IR35
+                </Link> can also affect how income is structured and taxed.
+
               </p>
 
               <p className="text-gray-700 leading-relaxed mb-10">
@@ -450,7 +455,9 @@ const TaxPlanningServicesExplained = () => {
               </p>
 
               <p className="text-gray-700 leading-relaxed mb-10 font-medium text-gray-900 bg-amber-50/60 p-4 rounded-lg border border-amber-200">
-                Genuine tax planning tends to involve conversations throughout the year, particularly before any major financial decision such as selling an asset, changing how you draw income, or restructuring a business.
+                Genuine tax planning tends to involve conversations throughout the year, particularly before any major financial decision such as selling an asset, changing how you draw income, or restructuring a business. Understanding <Link to="https://henleazetaxconsultancy.com/how-do-you-calculate-your-annual-salary-in-uk" className="text-amber-700 font-semibold hover:underline">
+                  how annual salary is calculated in the UK
+                </Link> can also help when reviewing your overall income
               </p>
 
               {/* Section 5 */}
@@ -505,7 +512,7 @@ const TaxPlanningServicesExplained = () => {
                   </div>
                   <p className="text-sm text-gray-600 leading-relaxed">
                     Working through their own limited company, where the right structure affects several of these areas at once, as covered in our{" "}
-                    <Link to="/contractor-accountant-services-in-the-uk" className="text-amber-700 font-semibold hover:underline">
+                    <Link to="https://henleazetaxconsultancy.com/what-is-a-contractor-accountant" className="text-amber-700 font-semibold hover:underline">
                       contractor accountant guide
                     </Link>.
                   </p>
@@ -560,7 +567,9 @@ const TaxPlanningServicesExplained = () => {
               </ul>
 
               <p className="text-gray-700 leading-relaxed mb-6">
-                This matters more than it used to. HMRC has been investing heavily in compliance activity, including recruiting several thousand additional compliance officers and expanding its use of data matching across banks, property records and online platforms to identify undeclared income. Working with a service that keeps you compliant while still planning properly is more valuable now than it has been in some time.
+                This matters more than it used to. HMRC has been investing heavily in <Link to="https://www.gov.uk/government/publications/summary-of-tax-update-2026-simplification-modernisation-and-fairness/tax-update-2026-simplification-modernisation-and-fairness-summary" className="text-amber-700 font-semibold hover:underline">
+                  compliance activity
+                </Link>, including recruiting several thousand additional compliance officers and expanding its use of data matching across banks, property records and online platforms to identify undeclared income. Working with a service that keeps you compliant while still planning properly is more valuable now than it has been in some time.
               </p>
 
               <p className="text-gray-700 leading-relaxed mb-10">
@@ -585,9 +594,8 @@ const TaxPlanningServicesExplained = () => {
                         {faq.question}
                       </span>
                       <ChevronDown
-                        className={`h-5 w-5 text-gray-400 transition-transform duration-200 shrink-0 ${
-                          openFaq === idx ? "rotate-180 text-amber-600" : ""
-                        }`}
+                        className={`h-5 w-5 text-gray-400 transition-transform duration-200 shrink-0 ${openFaq === idx ? "rotate-180 text-amber-600" : ""
+                          }`}
                       />
                     </button>
                     {openFaq === idx && (

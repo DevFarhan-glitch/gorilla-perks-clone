@@ -39,5 +39,6 @@ export const PRERENDER_ROUTES = [
   "/tax-planning-services-explained",
   "/dividend-tax-rates-2026-27",
   "/accountants-in-newcastle",
-  "/what-is-salary-calculator-uk"
+  "/what-is-salary-calculator-uk",
+  "/how-do-you-calculate-your-annual-salary-in-uk"
 ];

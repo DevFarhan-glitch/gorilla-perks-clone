@@ -362,7 +362,7 @@ const DividendTaxRates2627 = () => {
 
               {/* Section 3 — Top Slice Rule */}
               <h2 id="top-slice-rule" className="scroll-mt-28 text-3xl font-bold text-gray-900 mt-12 mb-4">
-                How Dividends are Actually Taxed — The "Top Slice" Rule
+                How Dividends are Actually Taxed: The "Top Slice" Rule
               </h2>
               <div className="w-10 h-0.5 bg-amber-500 mb-6" />
 
@@ -401,6 +401,11 @@ const DividendTaxRates2627 = () => {
                     <span>The remaining £2,500 is taxed at 10.75%</span>
                   </li>
                 </ul>
+                <p className="text-gray-700 leading-relaxed mb-4">
+                  If you want to check the salary side of the calculation separately, our <Link to="https://henleazetaxconsultancy.com/calculator" className="text-amber-700 font-semibold hover:underline">
+                    UK salary calculator
+                  </Link> can help you understand how gross salary translates into taxable income.
+                </p>
               </div>
 
               {/* Section 4 — What the Rise Costs */}
@@ -495,7 +500,9 @@ const DividendTaxRates2627 = () => {
               </h3>
 
               <p className="text-gray-700 leading-relaxed mb-4">
-                For many directors in 2026/27, a salary set at the full Personal Allowance of £12,570 now makes more sense. A few reasons why:
+                For many directors in 2026/27, a salary set at the full Personal Allowance of £12,570 now makes more sense. If you're unsure how your salary is worked out before considering dividends, our guide explains <Link to="https://henleazetaxconsultancy.com/how-do-you-calculate-your-annual-salary-in-uk" className="text-amber-700 font-semibold hover:underline">
+                  how annual salary is calculated in the UK
+                </Link>, including how regular and irregular income can affect the calculation. A few reasons why:
               </p>
 
               <ul className="space-y-3 text-gray-700 mb-8 pl-0 list-none">
@@ -522,10 +529,12 @@ const DividendTaxRates2627 = () => {
               </ul>
 
               <p className="text-gray-700 leading-relaxed mb-6">
-                Whether the old approach or the newer £12,570 salary works better for you depends on your company's profit level, whether you qualify for Employment Allowance, and your personal circumstances more broadly. This is exactly the kind of decision worth reviewing rather than leaving on autopilot from previous years, and it ties directly into the strategic{" "}
+                Whether the old approach or the newer £12,570 salary works better for you depends on your company's profit level, whether you qualify for Employment Allowance, and your personal circumstances more broadly. or contractors and directors operating through their own limited company, understanding  <Link to="https://henleazetaxconsultancy.com/what-is-a-contractor-accountant" className="text-amber-700 font-semibold hover:underline">
+                  what a contractor accountant does
+                </Link> can also help when deciding how salary, dividends and other company finances should be managed. This is exactly the kind of decision worth reviewing rather than leaving on autopilot from previous years, and it ties directly into the {" "}
                 <Link to="/services/tax-planning" className="text-amber-700 font-semibold hover:underline">
-                  tax planning
-                </Link>{" "}
+                  strategic tax planning
+                </Link> {" "}
                 side of what we do for Bristol business owners.
               </p>
 
@@ -564,7 +573,10 @@ const DividendTaxRates2627 = () => {
                 <div className="flex items-start gap-3">
                   <Building2 className="h-5 w-5 text-blue-600 shrink-0 mt-0.5" />
                   <p className="text-gray-700 leading-relaxed m-0">
-                    If you are based in Scotland, your higher rate band starts at £43,663 rather than £50,270, meaning the point at which dividend extraction becomes less attractive arrives sooner. Dividend tax rates themselves are set at a UK wide level and do not differ by nation, only the income tax bands that determine where your income sits do.
+                    If you are based in Scotland, your higher rate band starts at £43,663 rather than £50,270, meaning the point at which dividend extraction becomes less attractive arrives sooner. Dividend tax rates themselves are set at a UK wide level and do not differ by nation, only the income tax bands that determine where your income sits do. If you are a contractor, it is also worth understanding <Link to="https://henleazetaxconsultancy.com/how-does-ir35-work-in-the-uk" className="text-amber-700 font-semibold hover:underline">
+                      how IR35 works in the UK
+                    </Link> , as employment-status rules can affect how you are taxed.
+
                   </p>
                 </div>
               </div>
@@ -613,7 +625,9 @@ const DividendTaxRates2627 = () => {
               <div className="w-10 h-0.5 bg-amber-500 mb-6" />
 
               <p className="text-gray-700 leading-relaxed mb-6">
-                We are based at Park House on Park Street in Bristol and a large part of our work involves helping local company directors get their salary and dividend structure right for the year ahead rather than reacting after the fact. We work on fixed fees with clear advice from the outset, so you know what a review will cost before we start, and we look at your specific profit level and circumstances rather than applying a generic formula that might not actually suit your business.
+                We are based at Park House on Park Street in Bristol and a large part of our work involves helping local company directors get their salary and dividend structure right for the year ahead rather than reacting after the fact.For contractors running their own limited companies, our guide to  <Link to="https://henleazetaxconsultancy.com/contractor-accountant-services-in-the-uk" className="text-amber-700 font-semibold hover:underline">
+                  contractor accounting services
+                </Link> explains the wider accounting support available, from accounts and tax returns to ongoing financial management.  We work on fixed fees with clear advice from the outset, so you know what a review will cost before we start, and we look at your specific profit level and circumstances rather than applying a generic formula that might not actually suit your business.
               </p>
 
               <p className="text-gray-700 leading-relaxed mb-6">
