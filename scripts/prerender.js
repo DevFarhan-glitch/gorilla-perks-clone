@@ -42,8 +42,20 @@ async function prerender() {
       const linkStr = helmet.link ? helmet.link.toString() : "";
       const scriptStr = helmet.script ? helmet.script.toString() : "";
 
-      if (titleStr) {
+      if (titleStr && titleStr.trim() !== "<title data-rh=\"true\"></title>") {
         pageHtml = pageHtml.replace(/<title[^>]*>.*?<\/title>/gi, "");
+      }
+      if (metaStr.includes('name="description"')) {
+        pageHtml = pageHtml.replace(/<meta\s+name=["']description["'][^>]*\/?>/gi, "");
+      }
+      if (metaStr.includes('property="og:title"')) {
+        pageHtml = pageHtml.replace(/<meta\s+property=["']og:title["'][^>]*\/?>/gi, "");
+      }
+      if (metaStr.includes('property="og:description"')) {
+        pageHtml = pageHtml.replace(/<meta\s+property=["']og:description["'][^>]*\/?>/gi, "");
+      }
+      if (linkStr.includes('rel="canonical"')) {
+        pageHtml = pageHtml.replace(/<link\s+rel=["']canonical["'][^>]*\/?>/gi, "");
       }
 
       const helmetHeadContent = [titleStr, metaStr, linkStr, scriptStr].filter(Boolean).join("\n    ");

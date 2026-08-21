@@ -243,6 +243,22 @@ const allBlogs = [
     featured: false,
     tags: ["Annual Salary", "Hourly Rate", "Part Time Pay", "Contractor Income"],
   },
+  {
+    id: "how-to-calculate-monthly-salary-in-uk",
+    slug: "/how-to-calculate-monthly-salary-in-uk",
+    title: "How to Calculate Monthly Salary From Annual Pay (UK)",
+    subtitle: "How to Calculate Your Monthly Salary From Your Annual Pay in the UK",
+    excerpt:
+      "Most people get this calculation slightly wrong. Here's the correct way to work out monthly salary from annual pay in the UK, with examples.",
+    category: "UK Pay & Tax Guide",
+    categoryColor: "amber",
+    image: "/how-to-calculate.jpeg",
+    author: "Henleaze Team",
+    date: "August 2026",
+    readTime: "7 min read",
+    featured: false,
+    tags: ["Monthly Salary", "Annual Pay", "Salary Calculation", "Take Home Pay"],
+  },
 ];
 
 
