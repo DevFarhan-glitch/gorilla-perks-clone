@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import Layout from "@/components/layout/Layout";
+import NearbyLocationsSection from "@/components/common/NearbyLocationsSection";
 import { Button } from "@/components/ui/button";
 import {
   MapPin,
@@ -777,6 +778,9 @@ const AccountantsInBirmingham: React.FC = () => {
             </div>
           </div>
         </section>
+
+        {/* ── WE COVER BIRMINGHAM AND NEARBY AREAS ─────── */}
+        <NearbyLocationsSection currentCity="Birmingham" />
 
         {/* ── GET ACCOUNTING SUPPORT FROM OUR TEAM (FINAL CALL TO ACTION) ─────── */}
         <section className="py-20 bg-slate-950 text-white relative overflow-hidden">
