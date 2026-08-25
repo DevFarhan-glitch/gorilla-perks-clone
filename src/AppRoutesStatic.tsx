@@ -48,6 +48,7 @@ import AccountantInNottingham from "./pages/AccountantInNottingham";
 import AccountantsInNewcastle from "./pages/AccountantsInNewcastle";
 import AccountantsInCoventry from "./pages/AccountantsInCoventry";
 import AccountantsInReading from "./pages/AccountantsInReading";
+import AccountantsInLeicester from "./pages/AccountantsInLeicester";
 
 export const AppRoutesStatic = () => (
   <>
@@ -118,6 +119,8 @@ export const AppRoutesStatic = () => (
       <Route path="/accountants-in-coventry/" element={<AccountantsInCoventry />} />
       <Route path="/accountants-in-reading" element={<AccountantsInReading />} />
       <Route path="/accountants-in-reading/" element={<AccountantsInReading />} />
+      <Route path="/accountants-in-leicester" element={<AccountantsInLeicester />} />
+      <Route path="/accountants-in-leicester/" element={<AccountantsInLeicester />} />
       <Route path="/privacy-policy" element={<PrivacyPolicy />} />
       {/* ── 301-EQUIVALENT CLIENT-SIDE REDIRECTS ────────────────── */}
       <Route path="/services/contractor" element={<Navigate to="/services/contractor-accountants" replace />} />

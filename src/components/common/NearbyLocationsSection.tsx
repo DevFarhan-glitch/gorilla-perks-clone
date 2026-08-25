@@ -20,7 +20,7 @@ export const ALL_COVERED_LOCATIONS: LocationItem[] = [
   { name: "Nottingham", path: "/accountant-in-nottingham" },
   { name: "Newcastle", path: "/accountants-in-newcastle" },
   { name: "Reading", path: "/accountants-in-reading" },
-  { name: "Leicester", path: "/contact" },
+  { name: "Leicester", path: "/accountants-in-leicester" },
   { name: "Derby", path: "/contact" },
 ];
 

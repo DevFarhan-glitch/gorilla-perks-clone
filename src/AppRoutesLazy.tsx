@@ -49,6 +49,7 @@ const AccountantInNottingham = lazy(() => import("./pages/AccountantInNottingham
 const AccountantsInNewcastle = lazy(() => import("./pages/AccountantsInNewcastle"));
 const AccountantsInCoventry = lazy(() => import("./pages/AccountantsInCoventry"));
 const AccountantsInReading = lazy(() => import("./pages/AccountantsInReading"));
+const AccountantsInLeicester = lazy(() => import("./pages/AccountantsInLeicester"));
 
 export const AppRoutesLazy = () => (
   <>
@@ -120,6 +121,8 @@ export const AppRoutesLazy = () => (
         <Route path="/accountants-in-coventry/" element={<AccountantsInCoventry />} />
         <Route path="/accountants-in-reading" element={<AccountantsInReading />} />
         <Route path="/accountants-in-reading/" element={<AccountantsInReading />} />
+        <Route path="/accountants-in-leicester" element={<AccountantsInLeicester />} />
+        <Route path="/accountants-in-leicester/" element={<AccountantsInLeicester />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         {/* ── 301-EQUIVALENT CLIENT-SIDE REDIRECTS ────────────────── */}
         <Route path="/services/contractor" element={<Navigate to="/services/contractor-accountants" replace />} />
