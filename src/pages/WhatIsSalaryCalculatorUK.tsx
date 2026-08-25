@@ -416,7 +416,8 @@ const WhatIsSalaryCalculatorUK = () => {
                     <h3 className="text-xl font-bold text-gray-900">Hourly, Daily and Monthly Conversion Calculators</h3>
                   </div>
                   <p className="text-gray-700 leading-relaxed text-base m-0">
-                    These convert between pay frequencies rather than working out deductions. If you're comparing a day rate against an annual salary or trying to work out your effective hourly rate from a yearly figure, this is the type you need. We've covered the individual conversions in detail, including how to calculate your annual salary from scratch, how to work out your monthly salary from an annual figure, and how to convert an annual salary to an hourly rate, each with worked examples.
+                    These convert between pay frequencies rather than working out deductions. If you're comparing a day rate against an annual salary or trying to work out your effective hourly rate from a yearly figure, this is the type you need. We've covered the individual conversions in detail, including  <Link to="/how-do-you-calculate-your-annual-salary-in-uk" className="text-amber-700 font-semibold hover:underline">how to calculate your annual salary from scratch</Link> and <Link to="/how-to-calculate-monthly-salary-in-uk" className="text-amber-700 font-semibold hover:underline">how to work out your monthly salary from an annual figure</Link> and how to convert an annual salary to an hourly rate, each with worked examples.
+
                   </p>
                 </div>
 
@@ -709,7 +710,7 @@ const WhatIsSalaryCalculatorUK = () => {
             </div>
           </div>
         </div>
-      </Layout>
+      </Layout >
     </>
   );
 };

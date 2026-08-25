@@ -281,11 +281,11 @@ const HowDoYouCalculateAnnualSalaryUK = () => {
               <div className="w-10 h-0.5 bg-amber-500 mb-6" />
 
               <p className="text-gray-700 leading-relaxed mb-4">
-                Annual salary is the gross figure you'd earn over twelve months, before Income Tax, National Insurance, or pension contributions are taken off. It's the number you'll usually see quoted in a job advert or written into a contract and it's also the figure used as the starting point for most UK salary calculators.
+                Annual salary is the gross figure you'd earn over twelve months, before Income Tax, National Insurance, or pension contributions are taken off. It's the number you'll usually see quoted in a job advert or written into a contract and it's also the figure used as the starting point for most <Link to="/what-is-salary-calculator-uk" className="text-amber-700 font-semibold hover:underline">UK salary calculators</Link>.
               </p>
 
               <p className="text-gray-700 leading-relaxed mb-6">
-                One thing worth knowing early: for a standard salaried employee, annual salary already includes your paid holiday. UK employees are entitled to a minimum of 5.6 weeks of paid annual leave, so you're not expected to work all 52 weeks of the year to earn your full salary, the time off is already built in and paid.
+                One thing worth knowing early: for a standard salaried employee, annual salary already includes your paid holiday. UK employees are entitled to a minimum of  <Link to="https://www.gov.uk/holiday-entitlement-rights" className="text-amber-700 font-semibold hover:underline">5.6 weeks of paid annual leave</Link>, so you're not expected to work all 52 weeks of the year to earn your full salary, the time off is already built in and paid.
               </p>
 
               {/* CTA Box - Tax Calculator */}
@@ -393,7 +393,8 @@ const HowDoYouCalculateAnnualSalaryUK = () => {
               </div>
 
               <p className="text-gray-700 leading-relaxed mb-4">
-                If your monthly pay is £2,500, your annual salary is £30,000. Straightforward. The mistake people make is multiplying a weekly figure by four to estimate a monthly amount, or a monthly figure by four to estimate a weekly one. Since months vary in length and the year doesn't divide evenly into four week blocks, this shortcut produces a slightly wrong number.
+                If your monthly pay is £2,500, your annual salary is £30,000. Straightforward. The mistake people make is multiplying a weekly figure by four to estimate a monthly amount, or a monthly figure by four to estimate a weekly one. Since months vary in length and the year doesn't divide evenly into four week blocks, this shortcut produces a slightly wrong number.  We've covered the correct approach in detail in <Link to="https://henleazetaxconsultancy.com/how-to-calculate-monthly-salary-in-uk" className="text-amber-700 font-semibold hover:underline"> our guide to calculating your monthly salary</Link>.
+
               </p>
 
               <div className="my-8 p-5 bg-amber-50/70 rounded-xl border border-amber-200 not-prose">
