@@ -44,5 +44,6 @@ export const PRERENDER_ROUTES = [
   "/accountants-in-newcastle",
   "/accountants-in-coventry",
   "/accountants-in-reading",
-  "/accountants-in-leicester"
+  "/accountants-in-leicester",
+  "/top-5-accountancy-firms-in-bristol"
 ];

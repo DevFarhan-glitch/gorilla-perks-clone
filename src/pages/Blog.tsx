@@ -259,6 +259,22 @@ const allBlogs = [
     featured: false,
     tags: ["Monthly Salary", "Annual Pay", "Salary Calculation", "Take Home Pay"],
   },
+  {
+    id: "top-5-accountancy-firms-in-bristol",
+    slug: "/top-5-accountancy-firms-in-bristol",
+    title: "Top 5 Accountancy Firms in Bristol Compared for 2026",
+    subtitle: "Top 5 Accountancy Firms in Bristol and What Makes Each One Different",
+    excerpt:
+      "From large regional firms to specialist contractor accountants, here's how five Bristol accountancy firms compare and who each is best for.",
+    category: "Contractor Accounting Guide",
+    categoryColor: "blue",
+    image: "/top-5-accountancy-firms-in-bristol.jpeg",
+    author: "Henleaze Team",
+    date: "August 2026",
+    readTime: "8 min read",
+    featured: false,
+    tags: ["Bristol Accountants", "Accountancy Firms", "Contractors", "IR35"],
+  },
 ];
 
 

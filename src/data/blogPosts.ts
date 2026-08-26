@@ -119,6 +119,19 @@ export const blogPosts: BlogPost[] = [
     category: "Tax Planning",
     image: "/tax-planning-services.png",
     slug: "/tax-planning-services-explained"
-  }
+  },
+
+  {
+    id: 15,
+    title: "Top 5 Accountancy Firms in Bristol Compared for 2026",
+    excerpt: "From large regional firms to specialist contractor accountants, here's how five Bristol accountancy firms compare and who each is best for.",
+    content: "Redirecting...",
+    author: "Henleaze Team",
+    date: "August 2026",
+    readTime: "8 min read",
+    category: "Contractor Accounting",
+    image: "/top-5-accountancy-firms-in-bristol.jpeg",
+    slug: "/top-5-accountancy-firms-in-bristol"
+  },
 ];
 

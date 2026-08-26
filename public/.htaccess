@@ -56,17 +56,21 @@
 
   # Force removal of trailing slashes (301 Redirect)
   RewriteCond %{REQUEST_METHOD} =GET
+  RewriteCond %{REQUEST_URI} !^/+$
   RewriteRule ^(.+)/$ /$1 [R=301,L]
 
-  # Pre-rendered pages: serve index.html internally for requests without a trailing slash
-  RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI}/index.html -f
+  # Pre-rendered pages: serve index.html internally if subfolder index.html exists
+  RewriteCond %{REQUEST_FILENAME}/index.html -f
+  RewriteRule ^(.*)$ $1/index.html [L]
+
+  RewriteCond %{DOCUMENT_ROOT}/$1/index.html -f
   RewriteRule ^(.+)$ /$1/index.html [L]
 
-  # Redirect any remaining non-existent pages (excluding static assets) to the homepage
-  RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteCond %{REQUEST_FILENAME} !-d
-  RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI}/index.html !-f
+  # If actual file exists, serve directly
+  RewriteCond %{REQUEST_FILENAME} -f
+  RewriteRule ^ - [L]
+
+  # SPA Fallback: serve root index.html internally for React router
   RewriteCond %{REQUEST_URI} !\.(jpe?g|png|gif|svg|webp|ico|css|js|woff2?|ttf|eot|xml|txt|json)$ [NC]
-  RewriteRule . / [R=301,L]
+  RewriteRule . /index.html [L]
 </IfModule>

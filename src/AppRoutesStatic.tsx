@@ -49,6 +49,7 @@ import AccountantsInNewcastle from "./pages/AccountantsInNewcastle";
 import AccountantsInCoventry from "./pages/AccountantsInCoventry";
 import AccountantsInReading from "./pages/AccountantsInReading";
 import AccountantsInLeicester from "./pages/AccountantsInLeicester";
+import Top5AccountancyFirmsInBristol from "./pages/Top5AccountancyFirmsInBristol";
 
 export const AppRoutesStatic = () => (
   <>
@@ -75,6 +76,7 @@ export const AppRoutesStatic = () => (
       <Route path="/services/outsourced-accounting-services" element={<OutsourcedAccounting />} />
       <Route path="/blog/:id" element={<Article />} />
       <Route path="/blog" element={<Blog />} />
+      <Route path="/blog/" element={<Blog />} />
       <Route path="/what-is-a-contractor-accountant" element={<WhatIsAContractorAccountant />} />
       <Route path="/how-to-choose-contractor-accountant" element={<HowToChooseContractorAccountant />} />
       <Route path="/why-contractors-need-specialist-accountant" element={<WhyContractorsNeedSpecialistAccountant />} />
@@ -121,6 +123,8 @@ export const AppRoutesStatic = () => (
       <Route path="/accountants-in-reading/" element={<AccountantsInReading />} />
       <Route path="/accountants-in-leicester" element={<AccountantsInLeicester />} />
       <Route path="/accountants-in-leicester/" element={<AccountantsInLeicester />} />
+      <Route path="/top-5-accountancy-firms-in-bristol" element={<Top5AccountancyFirmsInBristol />} />
+      <Route path="/top-5-accountancy-firms-in-bristol/" element={<Top5AccountancyFirmsInBristol />} />
       <Route path="/privacy-policy" element={<PrivacyPolicy />} />
       {/* ── 301-EQUIVALENT CLIENT-SIDE REDIRECTS ────────────────── */}
       <Route path="/services/contractor" element={<Navigate to="/services/contractor-accountants" replace />} />

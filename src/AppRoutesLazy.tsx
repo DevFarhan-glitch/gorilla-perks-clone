@@ -50,6 +50,7 @@ const AccountantsInNewcastle = lazy(() => import("./pages/AccountantsInNewcastle
 const AccountantsInCoventry = lazy(() => import("./pages/AccountantsInCoventry"));
 const AccountantsInReading = lazy(() => import("./pages/AccountantsInReading"));
 const AccountantsInLeicester = lazy(() => import("./pages/AccountantsInLeicester"));
+const Top5AccountancyFirmsInBristol = lazy(() => import("./pages/Top5AccountancyFirmsInBristol"));
 
 export const AppRoutesLazy = () => (
   <>
@@ -77,6 +78,7 @@ export const AppRoutesLazy = () => (
         <Route path="/services/outsourced-accounting-services" element={<OutsourcedAccounting />} />
         <Route path="/blog/:id" element={<Article />} />
         <Route path="/blog" element={<Blog />} />
+        <Route path="/blog/" element={<Blog />} />
         <Route path="/what-is-a-contractor-accountant" element={<WhatIsAContractorAccountant />} />
         <Route path="/how-to-choose-contractor-accountant" element={<HowToChooseContractorAccountant />} />
         <Route path="/why-contractors-need-specialist-accountant" element={<WhyContractorsNeedSpecialistAccountant />} />
@@ -123,6 +125,8 @@ export const AppRoutesLazy = () => (
         <Route path="/accountants-in-reading/" element={<AccountantsInReading />} />
         <Route path="/accountants-in-leicester" element={<AccountantsInLeicester />} />
         <Route path="/accountants-in-leicester/" element={<AccountantsInLeicester />} />
+        <Route path="/top-5-accountancy-firms-in-bristol" element={<Top5AccountancyFirmsInBristol />} />
+        <Route path="/top-5-accountancy-firms-in-bristol/" element={<Top5AccountancyFirmsInBristol />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         {/* ── 301-EQUIVALENT CLIENT-SIDE REDIRECTS ────────────────── */}
         <Route path="/services/contractor" element={<Navigate to="/services/contractor-accountants" replace />} />
