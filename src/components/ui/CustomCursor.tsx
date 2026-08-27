@@ -4,22 +4,43 @@ const CustomCursor = () => {
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [isPointer, setIsPointer] = useState(false);
 
+  const [isVisible, setIsVisible] = useState(false);
+
   useEffect(() => {
+    // Only enable custom cursor on non-touch devices with fine pointers (mouse)
+    if (typeof window === "undefined" || !window.matchMedia("(pointer: fine)").matches) {
+      return;
+    }
+
+    setIsVisible(true);
+
     const updateCursor = (e: MouseEvent) => {
-      setPosition({ x: e.clientX, y: e.clientY });
-      
-      const target = e.target as HTMLElement;
-      setIsPointer(
-        window.getComputedStyle(target).cursor === 'pointer' ||
-        target.tagName.toLowerCase() === 'button' ||
-        target.closest('a') !== null ||
-        target.closest('button') !== null
-      );
+      try {
+        setPosition({ x: e.clientX, y: e.clientY });
+        
+        const target = e.target as HTMLElement | null;
+        if (!target || !(target instanceof Element)) {
+          setIsPointer(false);
+          return;
+        }
+
+        const isClickable =
+          window.getComputedStyle(target)?.cursor === "pointer" ||
+          target.tagName?.toLowerCase() === "button" ||
+          target.closest?.("a") !== null ||
+          target.closest?.("button") !== null;
+
+        setIsPointer(Boolean(isClickable));
+      } catch (err) {
+        // Suppress any DOM inspection errors
+      }
     };
 
-    window.addEventListener('mousemove', updateCursor);
-    return () => window.removeEventListener('mousemove', updateCursor);
+    window.addEventListener("mousemove", updateCursor, { passive: true });
+    return () => window.removeEventListener("mousemove", updateCursor);
   }, []);
+
+  if (!isVisible) return null;
 
   return (
     <div 

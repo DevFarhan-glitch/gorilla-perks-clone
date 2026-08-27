@@ -58,31 +58,54 @@ export const AppRoutesStatic = () => (
     <Routes>
       <Route path="/" element={<Index />} />
       <Route path="/about" element={<About />} />
+      <Route path="/about/" element={<About />} />
       <Route path="/pricing" element={<Pricing />} />
+      <Route path="/pricing/" element={<Pricing />} />
       <Route path="/calculator" element={<Calculator />} />
+      <Route path="/calculator/" element={<Calculator />} />
       <Route path="/tax-calculator" element={<Calculator />} />
+      <Route path="/tax-calculator/" element={<Calculator />} />
       <Route path="/careers" element={<Careers />} />
+      <Route path="/careers/" element={<Careers />} />
       <Route path="/contact" element={<Contact />} />
+      <Route path="/contact/" element={<Contact />} />
       <Route path="/services" element={<Services />} />
+      <Route path="/services/" element={<Services />} />
       <Route path="/services/contractor-accountants" element={<Contractors />} />
+      <Route path="/services/contractor-accountants/" element={<Contractors />} />
       <Route path="/services/small-business-accountants" element={<SmallBusiness />} />
+      <Route path="/services/small-business-accountants/" element={<SmallBusiness />} />
       <Route path="/services/landlord-accountants" element={<Landlords />} />
+      <Route path="/services/landlord-accountants/" element={<Landlords />} />
       <Route path="/services/tax-planning" element={<TaxPlanning />} />
+      <Route path="/services/tax-planning/" element={<TaxPlanning />} />
       <Route path="/services/payroll-and-hr-services" element={<PayrollHR />} />
+      <Route path="/services/payroll-and-hr-services/" element={<PayrollHR />} />
       <Route path="/services/vat-and-bookkeeping-accounting-services" element={<VATBookkeeping />} />
+      <Route path="/services/vat-and-bookkeeping-accounting-services/" element={<VATBookkeeping />} />
       <Route path="/services/company-secretarial-services" element={<CompanySecretarial />} />
+      <Route path="/services/company-secretarial-services/" element={<CompanySecretarial />} />
       <Route path="/services/rd-tax-credit-claim" element={<RDClaims />} />
+      <Route path="/services/rd-tax-credit-claim/" element={<RDClaims />} />
       <Route path="/services/personal-tax-and-self-assessment-service" element={<PersonalTax />} />
+      <Route path="/services/personal-tax-and-self-assessment-service/" element={<PersonalTax />} />
       <Route path="/services/outsourced-accounting-services" element={<OutsourcedAccounting />} />
+      <Route path="/services/outsourced-accounting-services/" element={<OutsourcedAccounting />} />
       <Route path="/blog/:id" element={<Article />} />
       <Route path="/blog" element={<Blog />} />
       <Route path="/blog/" element={<Blog />} />
       <Route path="/what-is-a-contractor-accountant" element={<WhatIsAContractorAccountant />} />
+      <Route path="/what-is-a-contractor-accountant/" element={<WhatIsAContractorAccountant />} />
       <Route path="/how-to-choose-contractor-accountant" element={<HowToChooseContractorAccountant />} />
+      <Route path="/how-to-choose-contractor-accountant/" element={<HowToChooseContractorAccountant />} />
       <Route path="/why-contractors-need-specialist-accountant" element={<WhyContractorsNeedSpecialistAccountant />} />
+      <Route path="/why-contractors-need-specialist-accountant/" element={<WhyContractorsNeedSpecialistAccountant />} />
       <Route path="/how-much-does-a-contractor-accountant-cost-in-the-uk" element={<HowMuchDoesContractorAccountantCost />} />
+      <Route path="/how-much-does-a-contractor-accountant-cost-in-the-uk/" element={<HowMuchDoesContractorAccountantCost />} />
       <Route path="/top-accounting-firms-for-contractors-uk" element={<TopAccountingFirmsForContractors />} />
+      <Route path="/top-accounting-firms-for-contractors-uk/" element={<TopAccountingFirmsForContractors />} />
       <Route path="/contractor-accountant-services-in-the-uk" element={<ContractorAccountantServices />} />
+      <Route path="/contractor-accountant-services-in-the-uk/" element={<ContractorAccountantServices />} />
       <Route path="/what-is-ir35-uk" element={<WhatIsIR35UK />} />
       <Route path="/what-is-ir35-uk/" element={<WhatIsIR35UK />} />
       <Route path="/how-does-ir35-work-in-the-uk" element={<HowDoesIR35Work />} />
@@ -126,6 +149,7 @@ export const AppRoutesStatic = () => (
       <Route path="/top-5-accountancy-firms-in-bristol" element={<Top5AccountancyFirmsInBristol />} />
       <Route path="/top-5-accountancy-firms-in-bristol/" element={<Top5AccountancyFirmsInBristol />} />
       <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+      <Route path="/privacy-policy/" element={<PrivacyPolicy />} />
       {/* ── 301-EQUIVALENT CLIENT-SIDE REDIRECTS ────────────────── */}
       <Route path="/services/contractor" element={<Navigate to="/services/contractor-accountants" replace />} />
       <Route path="/services/contractors" element={<Navigate to="/services" replace />} />

@@ -6,6 +6,7 @@ import { BrowserRouter } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 
 import CustomCursor from "./components/ui/CustomCursor";
+import ErrorBoundary from "./components/ErrorBoundary";
 import { AppRoutesLazy } from "./AppRoutesLazy";
 
 const queryClient = new QueryClient();
@@ -17,12 +18,14 @@ const App = () => (
   <HelmetProvider>
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
-        <CustomCursor />
-        <Toaster />
-        <Sonner />
-        <BrowserRouter>
-          <AppRoutesLazy />
-        </BrowserRouter>
+        <ErrorBoundary>
+          <CustomCursor />
+          <Toaster />
+          <Sonner />
+          <BrowserRouter>
+            <AppRoutesLazy />
+          </BrowserRouter>
+        </ErrorBoundary>
       </TooltipProvider>
     </QueryClientProvider>
   </HelmetProvider>

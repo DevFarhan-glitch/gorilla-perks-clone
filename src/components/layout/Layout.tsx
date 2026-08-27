@@ -51,11 +51,7 @@ const Layout = ({ children }: LayoutProps) => {
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
-      <main
-        className={`flex-1 transition-all duration-700 ease-out transform ${
-          mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
-        }`}
-      >
+      <main className="flex-1">
         {children}
       </main>
       <Footer />
