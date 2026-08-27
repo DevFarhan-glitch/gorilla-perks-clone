@@ -275,6 +275,22 @@ const allBlogs = [
     featured: false,
     tags: ["Bristol Accountants", "Accountancy Firms", "Contractors", "IR35"],
   },
+  {
+    id: "top-10-accounting-firms-uk",
+    slug: "/top-10-accounting-firms-uk",
+    title: "Top 10 Accounting Firms UK: Big Four to Mid Tier",
+    subtitle: "Top 10 Accounting Firms in the UK: What Makes Each Firm Different?",
+    excerpt:
+      "From the Big Four to fast growing mid tier firms, see how the UK largest accounting firms compare and which suits your business.",
+    category: "UK Accounting Guide",
+    categoryColor: "blue",
+    image: "/top-10-accounting-firms-in-the-uk.webp",
+    author: "Henleaze Team",
+    date: "August 2026",
+    readTime: "9 min read",
+    featured: false,
+    tags: ["Top 10 Accounting Firms", "Big Four", "Mid Tier", "UK Accounting"],
+  },
 ];
 
 
