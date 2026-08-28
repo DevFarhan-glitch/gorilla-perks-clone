@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { ArrowLeft, Calendar, Clock, User, ChevronDown, CheckCircle2, XCircle, AlertCircle, HelpCircle } from "lucide-react";
 import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
+import NearbyLocationsSection from "@/components/common/NearbyLocationsSection";
 
 const sections = [
   { id: "what-is-difference", title: "Inside vs Outside IR35: What Is the Difference and Why It Matters" },
@@ -502,6 +503,9 @@ const InsideVsOutsideIR35 = () => {
             </div>
           </div>
         </div>
+
+        <NearbyLocationsSection />
+
       </Layout>
     </>
   );

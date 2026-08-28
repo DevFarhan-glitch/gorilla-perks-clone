@@ -19,6 +19,7 @@ import {
 } from "lucide-react";
 import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
+import NearbyLocationsSection from "@/components/common/NearbyLocationsSection";
 
 const sections = [
   { id: "what-is-monthly-salary", title: "What is Monthly Salary and How is It Calculated in the UK?" },
@@ -258,16 +259,14 @@ const HowToCalculateMonthlySalaryInUK = () => {
                     <li key={section.id}>
                       <button
                         onClick={() => scrollToSection(section.id)}
-                        className={`group flex items-baseline gap-3 w-full text-left text-sm transition-colors duration-150 ${
-                          activeSection === section.id
+                        className={`group flex items-baseline gap-3 w-full text-left text-sm transition-colors duration-150 ${activeSection === section.id
                             ? "text-amber-700 font-semibold"
                             : "text-gray-600 hover:text-gray-900"
-                        }`}
+                          }`}
                       >
                         <span
-                          className={`text-xs font-mono shrink-0 w-5 ${
-                            activeSection === section.id ? "text-amber-600" : "text-gray-400"
-                          }`}
+                          className={`text-xs font-mono shrink-0 w-5 ${activeSection === section.id ? "text-amber-600" : "text-gray-400"
+                            }`}
                         >
                           {String(idx + 1).padStart(2, "0")}
                         </span>
@@ -599,9 +598,8 @@ const HowToCalculateMonthlySalaryInUK = () => {
                     >
                       <span className="font-semibold text-gray-900 text-base">{faq.question}</span>
                       <ChevronDown
-                        className={`h-5 w-5 text-gray-500 transition-transform duration-200 shrink-0 ${
-                          openFaq === idx ? "rotate-180 text-amber-600" : ""
-                        }`}
+                        className={`h-5 w-5 text-gray-500 transition-transform duration-200 shrink-0 ${openFaq === idx ? "rotate-180 text-amber-600" : ""
+                          }`}
                       />
                     </button>
                     {openFaq === idx && (
@@ -638,6 +636,8 @@ const HowToCalculateMonthlySalaryInUK = () => {
             </div>
           </div>
         </div>
+        <NearbyLocationsSection />
+
       </Layout>
     </>
   );

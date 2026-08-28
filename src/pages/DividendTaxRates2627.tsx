@@ -22,6 +22,7 @@ import {
 } from "lucide-react";
 import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
+import NearbyLocationsSection from "@/components/common/NearbyLocationsSection";
 
 const sections = [
   { id: "dividend-tax-rates-2026-27", title: "What are the Dividend Tax Rates for 2026/27?" },
@@ -719,6 +720,9 @@ const DividendTaxRates2627 = () => {
             </div>
           </div>
         </div>
+
+        <NearbyLocationsSection />
+
       </Layout>
     </>
   );

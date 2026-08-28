@@ -26,6 +26,7 @@ import {
 } from "lucide-react";
 import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
+import NearbyLocationsSection from "@/components/common/NearbyLocationsSection";
 
 const sections = [
   { id: "what-a-salary-calculator-actually-works-out", title: "What a Salary Calculator Actually Works Out" },
@@ -710,6 +711,8 @@ const WhatIsSalaryCalculatorUK = () => {
             </div>
           </div>
         </div>
+        <NearbyLocationsSection />
+
       </Layout >
     </>
   );

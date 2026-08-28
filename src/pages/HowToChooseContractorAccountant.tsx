@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { ArrowLeft, Calendar, Clock, User } from "lucide-react";
 import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
+import { NearbyLocationsSection } from "@/components/common/NearbyLocationsSection";
 
 const sections = [
   { id: "when-to-hire", title: "When Should You Hire a Contractor Accountant?" },
@@ -435,6 +436,9 @@ const HowToChooseContractorAccountant = () => {
           {/* end max-w-4xl */}
         </div>
         {/* end bg-white */}
+
+        {/* ── NEARBY LOCATIONS SECTION ─────── */}
+        <NearbyLocationsSection />
       </Layout>
     </>
   );

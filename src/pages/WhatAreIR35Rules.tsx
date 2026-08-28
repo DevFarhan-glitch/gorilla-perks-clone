@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { ArrowLeft, Calendar, Clock, User, ChevronDown } from "lucide-react";
 import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
+import NearbyLocationsSection from "@/components/common/NearbyLocationsSection";
 
 const sections = [
   { id: "what-are-ir35-rules", title: "What Are the IR35 Rules?" },
@@ -487,6 +488,9 @@ const WhatAreIR35Rules = () => {
             </div>
           </div>
         </div>
+
+        <NearbyLocationsSection />
+
       </Layout>
     </>
   );

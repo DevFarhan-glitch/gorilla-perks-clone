@@ -25,14 +25,28 @@ export const ALL_COVERED_LOCATIONS: LocationItem[] = [
 ];
 
 interface NearbyLocationsSectionProps {
-  currentCity: string;
+  currentCity?: string;
+  title?: string;
+  subtitle?: string;
   className?: string;
 }
 
 export const NearbyLocationsSection: React.FC<NearbyLocationsSectionProps> = ({
   currentCity,
+  title,
+  subtitle,
   className = "",
 }) => {
+  const displayTitle =
+    title ??
+    (currentCity
+      ? `We Cover ${currentCity} and Nearby Areas`
+      : "Locations We Cover Across the UK");
+
+  const displaySubtitle =
+    subtitle ??
+    "Providing proactive accounting, tax planning, and payroll support to businesses, landlords, and contractors across the UK.";
+
   return (
     <section className={`py-20 bg-white relative overflow-hidden ${className}`}>
       {/* Background Subtle Accent */}
@@ -42,18 +56,20 @@ export const NearbyLocationsSection: React.FC<NearbyLocationsSectionProps> = ({
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-14">
           <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-extrabold text-navy tracking-tight">
-            We Cover {currentCity} and Nearby Areas
+            {displayTitle}
           </h2>
           <div className="w-20 h-1 bg-gold mx-auto mt-4 rounded-full" />
           <p className="mt-4 text-slate-600 text-base sm:text-lg max-w-2xl mx-auto">
-            Providing proactive accounting, tax planning, and payroll support to businesses, landlords, and contractors across the UK.
+            {displaySubtitle}
           </p>
         </div>
 
         {/* Location Icons Grid */}
         <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 md:gap-8 max-w-5xl mx-auto mb-14">
           {ALL_COVERED_LOCATIONS.map((loc) => {
-            const isCurrent = loc.name.toLowerCase() === currentCity.toLowerCase();
+            const isCurrent = Boolean(
+              currentCity && loc.name.toLowerCase() === currentCity.toLowerCase()
+            );
 
             if (isCurrent) {
               return (

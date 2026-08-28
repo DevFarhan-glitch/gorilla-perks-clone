@@ -6,6 +6,7 @@ import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { Helmet } from "react-helmet-async";
 import CTASection from "@/components/home/CTASection";
+import { NearbyLocationsSection } from "@/components/common/NearbyLocationsSection";
 
 const Article = () => {
   const { id } = useParams<{ id: string }>();
@@ -110,6 +111,8 @@ const Article = () => {
             </div>
           </div>
         </article>
+
+        <NearbyLocationsSection />
 
         <CTASection />
       </Layout>

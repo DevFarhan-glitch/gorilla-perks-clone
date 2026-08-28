@@ -19,6 +19,7 @@ import {
 } from "lucide-react";
 import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
+import NearbyLocationsSection from "@/components/common/NearbyLocationsSection";
 
 const sections = [
   { id: "at-a-glance", title: "At a Glance" },
@@ -649,6 +650,9 @@ const TaxPlanningServicesExplained = () => {
             </div>
           </div>
         </div>
+
+        <NearbyLocationsSection />
+
       </Layout>
     </>
   );

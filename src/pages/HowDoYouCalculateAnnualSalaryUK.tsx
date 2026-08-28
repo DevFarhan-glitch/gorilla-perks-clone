@@ -19,6 +19,7 @@ import {
 } from "lucide-react";
 import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
+import NearbyLocationsSection from "@/components/common/NearbyLocationsSection";
 
 const sections = [
   { id: "what-does-annual-salary-mean", title: "What Does Annual Salary Mean?" },
@@ -692,6 +693,8 @@ const HowDoYouCalculateAnnualSalaryUK = () => {
             </div>
           </div>
         </div>
+        <NearbyLocationsSection />
+
       </Layout>
     </>
   );
