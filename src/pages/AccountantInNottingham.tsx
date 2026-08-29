@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import Layout from "@/components/layout/Layout";
 import NearbyLocationsSection from "@/components/common/NearbyLocationsSection";
+import LatestBlogsSection from "@/components/common/LatestBlogsSection";
 import { Button } from "@/components/ui/button";
 import {
   MapPin,
@@ -888,6 +889,9 @@ const AccountantInNottingham: React.FC = () => {
 
       {/* WE COVER NOTTINGHAM AND NEARBY AREAS */}
       <NearbyLocationsSection currentCity="Nottingham" />
+
+      {/* LATEST BLOGS & GUIDES */}
+      <LatestBlogsSection />
 
       {/* FINAL CTA SECTION */}
       <section className="py-24 bg-gradient-to-b from-slate-900 to-navy text-white relative overflow-hidden">

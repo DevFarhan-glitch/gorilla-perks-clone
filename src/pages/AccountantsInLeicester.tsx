@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import Layout from "@/components/layout/Layout";
 import NearbyLocationsSection from "@/components/common/NearbyLocationsSection";
+import LatestBlogsSection from "@/components/common/LatestBlogsSection";
 import { Button } from "@/components/ui/button";
 import {
   MapPin,
@@ -1126,6 +1127,9 @@ const AccountantsInLeicester: React.FC = () => {
 
         {/* ── NEARBY LOCATIONS ─────────────────────────────────────── */}
         <NearbyLocationsSection currentCity="Leicester" />
+
+        {/* ── LATEST BLOGS & GUIDES ─────────────────────────────────── */}
+        <LatestBlogsSection />
       </Layout>
     </>
   );

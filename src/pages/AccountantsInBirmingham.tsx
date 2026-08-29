@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import Layout from "@/components/layout/Layout";
 import NearbyLocationsSection from "@/components/common/NearbyLocationsSection";
+import LatestBlogsSection from "@/components/common/LatestBlogsSection";
 import { Button } from "@/components/ui/button";
 import {
   MapPin,
@@ -781,6 +782,9 @@ const AccountantsInBirmingham: React.FC = () => {
 
         {/* ── WE COVER BIRMINGHAM AND NEARBY AREAS ─────── */}
         <NearbyLocationsSection currentCity="Birmingham" />
+
+        {/* ── LATEST BLOGS & GUIDES ─────── */}
+        <LatestBlogsSection />
 
         {/* ── GET ACCOUNTING SUPPORT FROM OUR TEAM (FINAL CALL TO ACTION) ─────── */}
         <section className="py-20 bg-slate-950 text-white relative overflow-hidden">
