@@ -291,6 +291,22 @@ const allBlogs = [
     featured: false,
     tags: ["Top 10 Accounting Firms", "Big Four", "Mid Tier", "UK Accounting"],
   },
+  {
+    id: "tax-advisory-firms-bristol",
+    slug: "/tax-advisory-firms-bristol",
+    title: "Tax Advisory Firms in Bristol: A 2026 Comparison",
+    subtitle: "Tax Advisory Firms in Bristol: Services, Costs and What to Expect",
+    excerpt:
+      "From R&D specialists to fixed fee firms, see how six Bristol tax advisors compare, what they cost, and how to pick the right one.",
+    category: "Bristol Tax Advisory Guide",
+    categoryColor: "amber",
+    image: "/tax-advisory-firms-in-bristol.webp",
+    author: "Henleaze Team",
+    date: "August 2026",
+    readTime: "8 min read",
+    featured: false,
+    tags: ["Tax Advisory", "Bristol Tax Advisors", "R&D Relief", "Fixed Fee"],
+  },
 ];
 
 

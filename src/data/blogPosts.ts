@@ -133,5 +133,17 @@ export const blogPosts: BlogPost[] = [
     image: "/top-5-accountancy-firms-in-bristol.jpeg",
     slug: "/top-5-accountancy-firms-in-bristol"
   },
+  {
+    id: 16,
+    title: "Tax Advisory Firms in Bristol: A 2026 Comparison",
+    excerpt: "From R&D specialists to fixed fee firms, see how six Bristol tax advisors compare, what they cost, and how to pick the right one.",
+    content: "Redirecting...",
+    author: "Henleaze Team",
+    date: "August 2026",
+    readTime: "8 min read",
+    category: "Tax Advisory",
+    image: "/tax-advisory-firms-in-bristol.webp",
+    slug: "/tax-advisory-firms-bristol"
+  },
 ];
 
