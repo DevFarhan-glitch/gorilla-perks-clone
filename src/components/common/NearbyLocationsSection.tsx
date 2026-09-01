@@ -11,6 +11,7 @@ export interface LocationItem {
 
 export const ALL_COVERED_LOCATIONS: LocationItem[] = [
   { name: "Bristol", path: "/" },
+  { name: "Cardiff", path: "/accountants-in-cardiff" },
   { name: "Birmingham", path: "/accountants-in-birmingham-uk" },
   { name: "Coventry", path: "/accountants-in-coventry" },
   { name: "Manchester", path: "/accountancy-firm-in-manchester" },

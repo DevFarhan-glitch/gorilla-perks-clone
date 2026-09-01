@@ -49,6 +49,7 @@ import AccountantsInNewcastle from "./pages/AccountantsInNewcastle";
 import AccountantsInCoventry from "./pages/AccountantsInCoventry";
 import AccountantsInReading from "./pages/AccountantsInReading";
 import AccountantsInLeicester from "./pages/AccountantsInLeicester";
+import AccountantsInCardiff from "./pages/AccountantsInCardiff";
 import Top5AccountancyFirmsInBristol from "./pages/Top5AccountancyFirmsInBristol";
 import Top10AccountingFirmsUK from "./pages/Top10AccountingFirmsUK";
 import TaxAdvisoryFirmsBristol from "./pages/TaxAdvisoryFirmsBristol";
@@ -148,6 +149,8 @@ export const AppRoutesStatic = () => (
       <Route path="/accountants-in-reading/" element={<AccountantsInReading />} />
       <Route path="/accountants-in-leicester" element={<AccountantsInLeicester />} />
       <Route path="/accountants-in-leicester/" element={<AccountantsInLeicester />} />
+      <Route path="/accountants-in-cardiff" element={<AccountantsInCardiff />} />
+      <Route path="/accountants-in-cardiff/" element={<AccountantsInCardiff />} />
       <Route path="/top-5-accountancy-firms-in-bristol" element={<Top5AccountancyFirmsInBristol />} />
       <Route path="/top-5-accountancy-firms-in-bristol/" element={<Top5AccountancyFirmsInBristol />} />
       <Route path="/top-10-accounting-firms-uk" element={<Top10AccountingFirmsUK />} />
