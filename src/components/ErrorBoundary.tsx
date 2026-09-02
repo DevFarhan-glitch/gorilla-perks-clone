@@ -20,7 +20,32 @@ export class ErrorBoundary extends Component<Props, State> {
 
   public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     console.error("Uncaught error in React tree:", error, errorInfo);
+
+    const errorMessage = (error?.message || "").toLowerCase();
+    const isChunkError =
+      errorMessage.includes("failed to fetch dynamically imported module") ||
+      errorMessage.includes("importing a module script failed") ||
+      errorMessage.includes("loading chunk") ||
+      errorMessage.includes("unexpected token '<'") ||
+      error?.name === "ChunkLoadError";
+
+    if (isChunkError && typeof window !== "undefined") {
+      const lastReload = sessionStorage.getItem("error_boundary_reload_ts");
+      const now = Date.now();
+      if (!lastReload || now - parseInt(lastReload, 10) > 10000) {
+        sessionStorage.setItem("error_boundary_reload_ts", now.toString());
+        window.location.reload();
+      }
+    }
   }
+
+  private handleReload = () => {
+    if (typeof window !== "undefined") {
+      sessionStorage.removeItem("chunk_retry_timestamp");
+      sessionStorage.removeItem("error_boundary_reload_ts");
+      window.location.reload();
+    }
+  };
 
   public render() {
     if (this.state.hasError) {
@@ -33,8 +58,8 @@ export class ErrorBoundary extends Component<Props, State> {
             </p>
             <div className="flex gap-3 justify-center">
               <button
-                onClick={() => window.location.reload()}
-                className="px-5 py-2.5 bg-amber-600 text-white rounded-lg font-semibold text-sm hover:bg-amber-700 transition-colors"
+                onClick={this.handleReload}
+                className="px-5 py-2.5 bg-amber-600 text-white rounded-lg font-semibold text-sm hover:bg-amber-700 transition-colors cursor-pointer"
               >
                 Reload Page
               </button>
@@ -55,3 +80,4 @@ export class ErrorBoundary extends Component<Props, State> {
 }
 
 export default ErrorBoundary;
+
