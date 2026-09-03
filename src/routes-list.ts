@@ -48,5 +48,6 @@ export const PRERENDER_ROUTES = [
   "/accountants-in-cardiff",
   "/top-5-accountancy-firms-in-bristol",
   "/top-10-accounting-firms-uk",
-  "/tax-advisory-firms-bristol"
+  "/tax-advisory-firms-bristol",
+  "/outsourcing-accounting-firms-in-bristol"
 ];

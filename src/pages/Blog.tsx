@@ -307,6 +307,22 @@ const allBlogs = [
     featured: false,
     tags: ["Tax Advisory", "Bristol Tax Advisors", "R&D Relief", "Fixed Fee"],
   },
+  {
+    id: "outsourcing-accounting-firms-in-bristol",
+    slug: "/outsourcing-accounting-firms-in-bristol",
+    title: "Top Outsourcing Accounting Firms in Bristol",
+    subtitle: "Outsourcing Accounting Firms in Bristol: Services, Costs and How to Choose One",
+    excerpt:
+      "See how five Bristol firms compare, what to expect when switching providers, and an honest look at in house versus outsourced accounting.",
+    category: "Bristol Accounting Guide",
+    categoryColor: "blue",
+    image: "/outsourcing accounting services.webp",
+    author: "Henleaze Team",
+    date: "September 2026",
+    readTime: "8 min read",
+    featured: false,
+    tags: ["Outsourcing", "Bristol Accountants", "Bookkeeping", "Payroll"],
+  },
 ];
 
 
