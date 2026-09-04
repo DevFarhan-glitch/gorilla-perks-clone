@@ -49,5 +49,6 @@ export const PRERENDER_ROUTES = [
   "/top-5-accountancy-firms-in-bristol",
   "/top-10-accounting-firms-uk",
   "/tax-advisory-firms-bristol",
-  "/outsourcing-accounting-firms-in-bristol"
+  "/outsourcing-accounting-firms-in-bristol",
+  "/best-accountants-in-southampton"
 ];
