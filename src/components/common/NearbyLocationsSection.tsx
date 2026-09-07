@@ -23,7 +23,7 @@ export const ALL_COVERED_LOCATIONS: LocationItem[] = [
   { name: "Reading", path: "/accountants-in-reading" },
   { name: "Leicester", path: "/accountants-in-leicester" },
   { name: "Southampton", path: "/best-accountants-in-southampton" },
-  { name: "Derby", path: "/contact" },
+  { name: "Derby", path: "/affordable-accountants-in-derby" },
 ];
 
 interface NearbyLocationsSectionProps {
