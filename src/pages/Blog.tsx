@@ -323,6 +323,22 @@ const allBlogs = [
     featured: false,
     tags: ["Outsourcing", "Bristol Accountants", "Bookkeeping", "Payroll"],
   },
+  {
+    id: "payroll-consulting-firms-in-bristol",
+    slug: "/payroll-consulting-firms-in-bristol",
+    title: "Top 5 Payroll Consulting Firms in Bristol: Who to Choose",
+    subtitle: "Payroll Consulting Firms in Bristol: Services and How They Help Businesses",
+    excerpt:
+      "Five Bristol payroll firms compared, what a standard payroll service actually includes and how to pick the right provider for your business.",
+    category: "Bristol Payroll Guide",
+    categoryColor: "amber",
+    image: "/payroll-consulting-firms-in-bristol.webp",
+    author: "Henleaze Team",
+    date: "September 2026",
+    readTime: "8 min read",
+    featured: false,
+    tags: ["Payroll Firms", "Bristol Payroll", "PAYE", "Auto-Enrolment"],
+  },
 ];
 
 

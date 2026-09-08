@@ -58,6 +58,7 @@ const TaxAdvisoryFirmsBristol = lazyWithRetry(() => import("./pages/TaxAdvisoryF
 const OutsourcingAccountingFirmsBristol = lazyWithRetry(() => import("./pages/OutsourcingAccountingFirmsBristol"));
 const AccountantsInSouthampton = lazyWithRetry(() => import("./pages/AccountantsInSouthampton"));
 const AccountantsInDerby = lazyWithRetry(() => import("./pages/AccountantsInDerby"));
+const PayrollConsultingFirmsBristol = lazyWithRetry(() => import("./pages/PayrollConsultingFirmsBristol"));
 
 export const AppRoutesLazy = () => (
   <>
@@ -165,6 +166,8 @@ export const AppRoutesLazy = () => (
         <Route path="/tax-advisory-firms-bristol/" element={<TaxAdvisoryFirmsBristol />} />
         <Route path="/outsourcing-accounting-firms-in-bristol" element={<OutsourcingAccountingFirmsBristol />} />
         <Route path="/outsourcing-accounting-firms-in-bristol/" element={<OutsourcingAccountingFirmsBristol />} />
+        <Route path="/payroll-consulting-firms-in-bristol" element={<PayrollConsultingFirmsBristol />} />
+        <Route path="/payroll-consulting-firms-in-bristol/" element={<PayrollConsultingFirmsBristol />} />
         <Route path="/best-accountants-in-southampton" element={<AccountantsInSouthampton />} />
         <Route path="/best-accountants-in-southampton/" element={<AccountantsInSouthampton />} />
         <Route path="/affordable-accountants-in-derby" element={<AccountantsInDerby />} />
