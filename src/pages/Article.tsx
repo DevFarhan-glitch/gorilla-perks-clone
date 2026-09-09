@@ -11,11 +11,16 @@ import { NearbyLocationsSection } from "@/components/common/NearbyLocationsSecti
 const Article = () => {
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
-  const post = blogPosts.find((p) => p.id === Number(id));
+  const post = blogPosts.find(
+    (p) => p.id === Number(id) || p.slug === `/${id}` || p.slug === id
+  );
 
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, [id]);
+    if (post?.slug && post.slug !== `/blog/${id}`) {
+      navigate(post.slug, { replace: true });
+    }
+  }, [id, post, navigate]);
 
   if (!post) {
     return (

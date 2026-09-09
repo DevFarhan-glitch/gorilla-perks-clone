@@ -33,7 +33,7 @@ const Services = () => {
       features: ["IR35 Support", "Company Formation", "Salary-Dividend Optimisation", "Tax-Efficient Planning"],
       path: "/services/contractor-accountants",
       icon: Briefcase,
-      image: "landlord-guide.png",
+      image: "/landlord-guide.png",
       alt: "Contractor Accountants in Bristol",
     },
     {
@@ -43,7 +43,7 @@ const Services = () => {
       features: ["Bookkeeping", "VAT Returns", "Year-End Accounts", "Business Advisory"],
       path: "/services/small-business-accountants",
       icon: Building2,
-      image: "cta-consult.png",
+      image: "/cta-consult.png",
       alt: "Small Business Accountants in Bristol",
     },
     {
@@ -53,7 +53,7 @@ const Services = () => {
       features: ["Rental Income Reporting", "Capital Gains Tax Planning", "Portfolio Support", "Tailored Solutions"],
       path: "/services/landlord-accountants",
       icon: Home,
-      image: "cgt-guide.png",
+      image: "/cgt-guide.png",
       alt: "Landlord Accountants in Bristol",
     },
     {
@@ -63,7 +63,7 @@ const Services = () => {
       features: ["RTI Submissions", "Pension Auto-Enrolment", "Payslips", "HR Compliance"],
       path: "/services/payroll-and-hr-services",
       icon: Users,
-      image: "R&D Tax Credits.jpg",
+      image: "/R&D Tax Credits.jpg",
       alt: "Payroll and HR Services in Bristol",
     },
     {
@@ -73,7 +73,7 @@ const Services = () => {
       features: ["Corporation Tax", "Capital Gains", "Long-term Planning", "Minimise Liabilities"],
       path: "/services/tax-planning",
       icon: Calculator,
-      image: "small-business-guide.png",
+      image: "/small-business-guide.png",
       alt: "Tax Planning in Bristol",
     },
     {
@@ -83,7 +83,7 @@ const Services = () => {
       features: ["VAT Return Services", "Cloud Systems", "MTD Requirements", "Accurate Bookkeeping"],
       path: "/services/vat-and-bookkeeping-accounting-services",
       icon: FileText,
-      image: "office-bg.png",
+      image: "/office-bg.png",
       alt: "VAT & Bookkeeping Accounting Services in Bristol",
     },
     {
@@ -93,7 +93,7 @@ const Services = () => {
       features: ["Companies House Filings", "Confirmation Statements", "Registered Office Services", "Statutory Maintenance"],
       path: "/services/company-secretarial-services",
       icon: Scale,
-      image: "Company Secretarial.jpg",
+      image: "/Company Secretarial.jpg",
       alt: "Company Secretarial Services in Bristol",
     },
     {
@@ -103,7 +103,7 @@ const Services = () => {
       features: ["R&D Tax Relief", "Technical Reports", "Cost Analysis", "HMRC Submission"],
       path: "/services/rd-tax-credit-claim",
       icon: Zap,
-      image: "tax-saving-guide.jpg",
+      image: "/tax-saving-guide.jpg",
       alt: "R&D Tax Credit Claim in Bristol",
     },
     {
@@ -113,7 +113,7 @@ const Services = () => {
       features: ["Self-Assessment", "Income Tax Reporting", "Rental Tax", "Compliance Support"],
       path: "/services/personal-tax-and-self-assessment-service",
       icon: UserCheck,
-      image: "personal tax.jpg",
+      image: "/personal tax.jpg",
       alt: "Personal Tax & Self-Assessment Service in Bristol",
     },
     {
@@ -123,7 +123,7 @@ const Services = () => {
       features: ["Outsourced Finance", "Cost-Effective", "No In-House Staff Needed", "Reliable Support"],
       path: "/services/outsourced-accounting-services",
       icon: Users,
-      image: "outsourced accounting.jpg",
+      image: "/outsourced accounting.jpg",
       alt: "Outsourced Accounting Services in Bristol",
     },
   ];

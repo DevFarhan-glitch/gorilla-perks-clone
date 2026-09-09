@@ -1,4 +1,9 @@
+<IfModule mod_negotiation.c>
+  Options -MultiViews
+</IfModule>
+
 <IfModule mod_rewrite.c>
+  Options +FollowSymLinks
   RewriteEngine On
   RewriteBase /
 
@@ -54,9 +59,10 @@
   RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
   RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
 
-  # Force removal of trailing slashes (301 Redirect)
+  # Force removal of trailing slashes (301 Redirect) except for existing directories
   RewriteCond %{REQUEST_METHOD} =GET
   RewriteCond %{REQUEST_URI} !^/+$
+  RewriteCond %{REQUEST_FILENAME} !-d
   RewriteRule ^(.+)/$ /$1 [R=301,L]
 
   # Pre-rendered pages: serve index.html internally if subfolder index.html exists
@@ -72,8 +78,9 @@
   RewriteRule ^ - [L]
 
   # SPA Fallback: serve root index.html internally for React router
-  RewriteCond %{REQUEST_URI} !\.(jpe?g|png|gif|svg|webp|ico|css|js|woff2?|ttf|eot|xml|txt|json|jfif|avif|webmanifest)$ [NC]
-  RewriteRule . /index.html [L]
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule ^ index.html [L]
 </IfModule>
 
 # ── CACHING HEADERS (PREVENTS STALE CHUNKS & 'SOMETHING WENT WRONG' ERRORS) ──
