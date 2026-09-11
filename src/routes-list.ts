@@ -24,7 +24,7 @@ export const PRERENDER_ROUTES = [
   "/why-contractors-need-specialist-accountant",
   "/how-much-does-a-contractor-accountant-cost-in-the-uk",
   "/top-accounting-firms-for-contractors-uk",
-  "/contractor-accountant-services-in-the-uk",
+  "/whats-included-in-contractor-accounting",
   "/what-is-ir35-uk",
   "/how-does-ir35-work-in-the-uk",
   "/what-are-ir35-rules",
@@ -52,5 +52,6 @@ export const PRERENDER_ROUTES = [
   "/outsourcing-accounting-firms-in-bristol",
   "/payroll-consulting-firms-in-bristol",
   "/best-accountants-in-southampton",
-  "/affordable-accountants-in-derby"
+  "/affordable-accountants-in-derby",
+  "/company-secretarial-firms-in-bristol"
 ];

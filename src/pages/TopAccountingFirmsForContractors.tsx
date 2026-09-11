@@ -336,7 +336,7 @@ const TopAccountingFirmsForContractors = () => {
               </p>
               <p className="text-gray-700 mb-8 font-medium">
                 Learn{" "}
-                <Link to="/contractor-accountant-services-in-the-uk" className="text-amber-700 underline hover:text-amber-900 font-semibold">
+                <Link to="/whats-included-in-contractor-accounting" className="text-amber-700 underline hover:text-amber-900 font-semibold">
                   what services contractor accountants provide in the UK
                 </Link>
                 .

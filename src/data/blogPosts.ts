@@ -145,5 +145,17 @@ export const blogPosts: BlogPost[] = [
     image: "/tax-advisory-firms-in-bristol.webp",
     slug: "/tax-advisory-firms-bristol"
   },
+  {
+    id: 17,
+    title: "Company Secretarial Firms in Bristol: What to Know",
+    excerpt: "Five Bristol company secretarial firms compared, what the role actually covers, and the real penalties for getting filings wrong.",
+    content: "Redirecting...",
+    author: "Henleaze Team",
+    date: "September 2026",
+    readTime: "8 min read",
+    category: "Company Secretarial",
+    image: "/company-secretarial-firms-in-bristol-services-and-what-businesses-need-to-know.webp",
+    slug: "/company-secretarial-firms-in-bristol"
+  },
 ];
 

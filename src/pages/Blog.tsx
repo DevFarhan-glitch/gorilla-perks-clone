@@ -86,8 +86,8 @@ const allBlogs = [
     tags: ["Accounting Firms", "IR35", "Fees", "Contractor Accounting"],
   },
   {
-    id: "contractor-accountant-services-in-the-uk",
-    slug: "/contractor-accountant-services-in-the-uk",
+    id: "whats-included-in-contractor-accounting",
+    slug: "/whats-included-in-contractor-accounting",
     title: "Contractor Accounting Services in the UK: What's Included?",
     subtitle: "What Services Do Contractor Accountants Provide in the UK?",
     excerpt: "Wondering what contractor accounting services cover? From IR35 compliance to payroll & tax planning, here is everything contractor accountant provides in UK.",
@@ -338,6 +338,22 @@ const allBlogs = [
     readTime: "8 min read",
     featured: false,
     tags: ["Payroll Firms", "Bristol Payroll", "PAYE", "Auto-Enrolment"],
+  },
+  {
+    id: "company-secretarial-firms-in-bristol",
+    slug: "/company-secretarial-firms-in-bristol",
+    title: "Company Secretarial Firms in Bristol: What to Know",
+    subtitle: "Company Secretarial Firms in Bristol: Services and What Businesses Need to Know",
+    excerpt:
+      "Five Bristol company secretarial firms compared, what the role actually covers, and the real penalties for getting filings wrong.",
+    category: "Bristol Business Compliance Guide",
+    categoryColor: "blue",
+    image: "/company-secretarial-firms-in-bristol-services-and-what-businesses-need-to-know.webp",
+    author: "Henleaze Team",
+    date: "September 2026",
+    readTime: "8 min read",
+    featured: false,
+    tags: ["Company Secretarial", "Bristol Compliance", "Confirmation Statement", "Statutory Registers"],
   },
 ];
 

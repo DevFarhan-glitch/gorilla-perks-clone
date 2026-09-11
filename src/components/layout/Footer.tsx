@@ -89,7 +89,7 @@ const Footer = () => {
                 <Link to="/why-contractors-need-specialist-accountant" className={linkStyle}>Why Contractors Need a Specialist Accountant</Link>
                 <Link to="/how-much-does-a-contractor-accountant-cost-in-the-uk" className={linkStyle}>How Much Does a Contractor Accountant Cost?</Link>
                 <Link to="/top-accounting-firms-for-contractors-uk" className={linkStyle}>6 Best Accounting Firms for Contractors</Link>
-                <Link to="/contractor-accountant-services-in-the-uk" className={linkStyle}>Contractor Accounting Services</Link>
+                <Link to="/whats-included-in-contractor-accounting" className={linkStyle}>Contractor Accounting Services</Link>
                 <Link to="/what-is-ir35-uk" className={linkStyle}>IR35 Guide for UK Contractors</Link>
                 <Link to="/how-does-ir35-work-in-the-uk" className={linkStyle}>How Does IR35 Work?</Link>
                 <Link to="/what-are-ir35-rules" className={linkStyle}>IR35 Rules 2026: What Contractors Must Know</Link>

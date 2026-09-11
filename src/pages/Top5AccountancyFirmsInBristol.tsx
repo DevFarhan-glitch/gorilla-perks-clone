@@ -365,7 +365,7 @@ const Top5AccountancyFirmsInBristol = () => {
                 Bristol has no shortage of capable accountancy firms and the five covered here each bring something genuinely different to the table, from Bishop Fleming's scale and PKF Francis Clark's international reach, to Albert Goodman's specialist advisory work, Evans &amp; Partners' family run approach and Henleaze Tax Consultancy's focus on <Link to="/services/contractor-accountants" className="text-amber-700 hover:underline">contractors</Link> and <Link to="/services/small-business-accountants" className="text-amber-700 hover:underline">small businesses</Link>. The right one depends entirely on what you actually need from an accountant, not just which name is most recognisable.
               </p>
               <p className="text-gray-700 leading-relaxed mb-8">
-                If you're a contractor or run a small limited company and want clear, fixed fee advice from a team that understands contracting specifically, take a look at our <Link to="/contractor-accountant-services-in-the-uk" className="text-amber-700 underline hover:text-amber-900 font-semibold">contractor accountant services</Link> to see how we can help.
+                If you're a contractor or run a small limited company and want clear, fixed fee advice from a team that understands contracting specifically, take a look at our <Link to="/whats-included-in-contractor-accounting" className="text-amber-700 underline hover:text-amber-900 font-semibold">contractor accountant services</Link> to see how we can help.
               </p>
 
               {/* Section 10 — FAQ */}

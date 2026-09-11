@@ -59,6 +59,7 @@ const OutsourcingAccountingFirmsBristol = lazyWithRetry(() => import("./pages/Ou
 const AccountantsInSouthampton = lazyWithRetry(() => import("./pages/AccountantsInSouthampton"));
 const AccountantsInDerby = lazyWithRetry(() => import("./pages/AccountantsInDerby"));
 const PayrollConsultingFirmsBristol = lazyWithRetry(() => import("./pages/PayrollConsultingFirmsBristol"));
+const CompanySecretarialFirmsBristol = lazyWithRetry(() => import("./pages/CompanySecretarialFirmsBristol"));
 
 export const AppRoutesLazy = () => (
   <>
@@ -114,8 +115,8 @@ export const AppRoutesLazy = () => (
         <Route path="/how-much-does-a-contractor-accountant-cost-in-the-uk/" element={<HowMuchDoesContractorAccountantCost />} />
         <Route path="/top-accounting-firms-for-contractors-uk" element={<TopAccountingFirmsForContractors />} />
         <Route path="/top-accounting-firms-for-contractors-uk/" element={<TopAccountingFirmsForContractors />} />
-        <Route path="/contractor-accountant-services-in-the-uk" element={<ContractorAccountantServices />} />
-        <Route path="/contractor-accountant-services-in-the-uk/" element={<ContractorAccountantServices />} />
+        <Route path="/whats-included-in-contractor-accounting" element={<ContractorAccountantServices />} />
+        <Route path="/whats-included-in-contractor-accounting/" element={<ContractorAccountantServices />} />
         <Route path="/what-is-ir35-uk" element={<WhatIsIR35UK />} />
         <Route path="/what-is-ir35-uk/" element={<WhatIsIR35UK />} />
         <Route path="/how-does-ir35-work-in-the-uk" element={<HowDoesIR35Work />} />
@@ -172,6 +173,8 @@ export const AppRoutesLazy = () => (
         <Route path="/best-accountants-in-southampton/" element={<AccountantsInSouthampton />} />
         <Route path="/affordable-accountants-in-derby" element={<AccountantsInDerby />} />
         <Route path="/affordable-accountants-in-derby/" element={<AccountantsInDerby />} />
+        <Route path="/company-secretarial-firms-in-bristol" element={<CompanySecretarialFirmsBristol />} />
+        <Route path="/company-secretarial-firms-in-bristol/" element={<CompanySecretarialFirmsBristol />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/privacy-policy/" element={<PrivacyPolicy />} />
         {/* ── 301-EQUIVALENT CLIENT-SIDE REDIRECTS ────────────────── */}
@@ -197,7 +200,9 @@ export const AppRoutesLazy = () => (
         <Route path="/contractor-accountant-fees" element={<Navigate to="/how-much-does-a-contractor-accountant-cost-in-the-uk" replace />} />
         <Route path="/contractor-accountant-cost" element={<Navigate to="/how-much-does-a-contractor-accountant-cost-in-the-uk" replace />} />
         <Route path="/top-accounting-firms-contractors" element={<Navigate to="/top-accounting-firms-for-contractors-uk" replace />} />
-        <Route path="/contractor-accounting-services" element={<Navigate to="/contractor-accountant-services-in-the-uk" replace />} />
+        <Route path="/contractor-accounting-services" element={<Navigate to="/whats-included-in-contractor-accounting" replace />} />
+        <Route path="/contractor-accountant-services-in-the-uk" element={<Navigate to="/whats-included-in-contractor-accounting" replace />} />
+        <Route path="/contractor-accountant-services-in-the-uk/" element={<Navigate to="/whats-included-in-contractor-accounting" replace />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </Suspense>

@@ -568,7 +568,7 @@ const HowDoYouCalculateAnnualSalaryUK = () => {
 
               <p className="text-gray-700 leading-relaxed mb-6">
                 If you want a proper picture of your annual income as a contractor, our{" "}
-                <Link to="/contractor-accountant-services-in-the-uk" className="text-amber-700 font-semibold hover:underline">
+                <Link to="/whats-included-in-contractor-accounting" className="text-amber-700 font-semibold hover:underline">
                   contractor accountant services
                 </Link>
                 {" "}can build a realistic figure around your actual contract pattern rather than a rough estimate.

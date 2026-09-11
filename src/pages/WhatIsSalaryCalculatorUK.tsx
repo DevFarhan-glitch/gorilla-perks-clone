@@ -646,7 +646,7 @@ const WhatIsSalaryCalculatorUK = () => {
 
               <p className="text-gray-700 leading-relaxed mb-8">
                 Contractors working in and around Bristol in particular benefit from an accountant who understands local client rates and industry norms, rather than relying on a national average built into a generic tool. Our{" "}
-                <Link to="/contractor-accountant-services-in-the-uk" className="text-amber-700 font-semibold hover:underline">
+                <Link to="/whats-included-in-contractor-accounting" className="text-amber-700 font-semibold hover:underline">
                   contractor accountant services
                 </Link>{" "}
                 cover exactly this, building a realistic pay picture around your actual contract rather than a rough estimate.

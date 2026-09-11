@@ -497,7 +497,7 @@ const HowToCalculateMonthlySalaryInUK = () => {
                   inside versus outside IR35
                 </Link>
                 . For an accurate monthly figure based on your specific contract and company structure, our{" "}
-                <Link to="/contractor-accountant-services-in-the-uk" className="text-amber-700 font-semibold underline hover:text-amber-900">
+                <Link to="/whats-included-in-contractor-accounting" className="text-amber-700 font-semibold underline hover:text-amber-900">
                   contractor accountant services
                 </Link>{" "}
                 can help you plan around real numbers rather than a rough estimate, something we regularly help contractors across Bristol and further afield work through properly.

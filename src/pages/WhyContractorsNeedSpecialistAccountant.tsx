@@ -469,7 +469,7 @@ const WhyContractorsNeedSpecialistAccountant = () => {
               </p>
               <p className="text-gray-700 leading-relaxed mb-10">
                 Read our guide on:{" "}
-                <Link to="/contractor-accountant-services-in-the-uk" className="text-amber-700 underline hover:text-amber-900">
+                <Link to="/whats-included-in-contractor-accounting" className="text-amber-700 underline hover:text-amber-900">
                   What services do contractor accountants provide in the UK?
                 </Link>
               </p>

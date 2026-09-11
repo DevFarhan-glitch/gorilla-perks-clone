@@ -375,7 +375,7 @@ const HowToChooseContractorAccountant = () => {
               </p>
               <p className="text-gray-700 leading-relaxed mb-8">
                 For a full breakdown of what specialist contractor accountants offer, see our guide:{" "}
-                <Link to="/contractor-accountant-services-in-the-uk" className="text-amber-700 underline hover:text-amber-900">
+                <Link to="/whats-included-in-contractor-accounting" className="text-amber-700 underline hover:text-amber-900">
                   What services do contractor accountants provide in the UK?
                 </Link>
               </p>

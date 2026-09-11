@@ -430,7 +430,7 @@ const WhatAreIR35Rules = () => {
               </p>
               <p className="text-gray-700 leading-relaxed mb-4">
                 Given the penalties involved in getting any of this wrong, it's generally worth building into your annual routine rather than checking only when something feels uncertain. See our{" "}
-                <Link to="/contractor-accountant-services-in-the-uk" className="text-amber-700 underline hover:text-amber-900">
+                <Link to="/whats-included-in-contractor-accounting" className="text-amber-700 underline hover:text-amber-900">
                   contractor accountant services
                 </Link>{" "}
                 for how we support this.

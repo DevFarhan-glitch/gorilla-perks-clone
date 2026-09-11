@@ -527,7 +527,7 @@ const WhatIsTaxPlanningUKGuide = () => {
 
               <p className="text-gray-700 leading-relaxed mb-6">
                 If you would like a closer look at how your business structure affects your tax position, our guide on{" "}
-                <Link to="/contractor-accountant-services-in-the-uk" className="text-amber-700 font-semibold hover:underline">
+                <Link to="/whats-included-in-contractor-accounting" className="text-amber-700 font-semibold hover:underline">
                   contractor accounting services
                 </Link>{" "}
                 covers this in more detail, and our{" "}

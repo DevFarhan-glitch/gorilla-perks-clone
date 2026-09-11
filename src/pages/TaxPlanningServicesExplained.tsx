@@ -433,7 +433,7 @@ const TaxPlanningServicesExplained = () => {
               </p>
 
               <p className="text-gray-700 leading-relaxed mb-4">
-                The same applies to contractors working through their own limited company. Decisions about salary, dividends, pension contributions and business expenses all influence each other, so looking at the bigger picture usually produces better long-term outcomes.This is where <Link to="https://henleazetaxconsultancy.com/contractor-accountant-services-in-the-uk" className="text-amber-700 font-semibold hover:underline">
+                The same applies to contractors working through their own limited company. Decisions about salary, dividends, pension contributions and business expenses all influence each other, so looking at the bigger picture usually produces better long-term outcomes.This is where <Link to="https://henleazetaxconsultancy.com/whats-included-in-contractor-accounting" className="text-amber-700 font-semibold hover:underline">
                   contractor accounting services
                 </Link> can help bring those decisions together. For contractors, <Link to="https://henleazetaxconsultancy.com/what-is-ir35-uk" className="text-amber-700 font-semibold hover:underline">
                   IR35
