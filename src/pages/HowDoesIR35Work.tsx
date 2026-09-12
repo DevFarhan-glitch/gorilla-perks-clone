@@ -4,22 +4,27 @@ import { Link } from "react-router-dom";
 import { ArrowLeft, Calendar, Clock, User, ChevronDown } from "lucide-react";
 import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
-import NearbyLocationsSection from "@/components/common/NearbyLocationsSection";
+import { NearbyLocationsSection } from "@/components/common/NearbyLocationsSection";
 
 const sections = [
   { id: "overview", title: "How Does IR35 Work in the UK?" },
-  { id: "process", title: "The IR35 Process, From Start to Finish" },
-  { id: "tests", title: "The Tests Behind the Determination" },
+  { id: "process", title: "How the IR35 Assessment and Determination Process Works" },
+  { id: "tests", title: "The IR35 Tests Behind the Status Determination" },
   { id: "worked-example", title: "A Worked Example" },
   { id: "disagreeing", title: "Disagreeing With a Status Determination" },
   { id: "contract-length", title: "Does Contract Length or Client Count Matter?" },
   { id: "mid-contract", title: "When Working Practices Change Mid-contract" },
   { id: "common-mistakes", title: "Common Process Mistakes" },
   { id: "accountant-helps", title: "How a Contractor Accountant Helps" },
-  { id: "faqs", title: "FAQs" },
+  { id: "faqs", title: "Frequently Asked Questions" },
 ];
 
 const faqsData = [
+  {
+    question: "What Does IR35 Mean Actually?",
+    answer:
+      "IR35 is the name commonly used for the UK's off-payroll working rules, which are designed to determine whether someone working through an intermediary, such as their own limited company, should be treated as an employee for tax purposes.",
+  },
   {
     question: "How does IR35 actually work, step by step?",
     answer:
@@ -83,18 +88,18 @@ const HowDoesIR35Work = () => {
         />
         <meta
           name="keywords"
-          content="how does ir35 work, IR35 process, status determination statement, SDS, IR35 tests, contractor accountant, off-payroll working"
+          content="how does ir35 work, IR35 process, status determination statement, SDS, IR35 tests, contractor accountant, off-payroll working, inside vs outside IR35"
         />
+        <link rel="canonical" href="https://henleazetaxconsultancy.com/how-does-ir35-work-in-the-uk" />
       </Helmet>
 
       <Layout>
         {/* ── FEATURED IMAGE ─────────────────────────────────────────── */}
-        <div className="w-full" style={{ paddingTop: "72px" }}>
+        <div className="w-full shadow-inner" style={{ paddingTop: "72px" }}>
           <img
             src="/how-does-ir35-work.jpeg"
-            alt="How Does IR35 Work"
-            className="w-full object-cover"
-            style={{ maxHeight: "550px", objectPosition: "center" }}
+            alt="How Does IR35 Work in the UK"
+            className="w-full h-auto max-h-[520px] object-contain bg-gray-50 mx-auto"
           />
         </div>
 
@@ -128,14 +133,6 @@ const HowDoesIR35Work = () => {
               How Does IR35 Work in the UK? Everything Contractors Need to Know
             </h1>
 
-            {/* Subtitle */}
-            <p
-              className="text-xl text-gray-600 leading-relaxed mb-6"
-              style={{ fontFamily: "'Georgia', serif" }}
-            >
-              Curious how an IR35 status decision actually happens? See the real process, your appeal rights, and what working practice changes truly mean for you.
-            </p>
-
             {/* Meta row */}
             <div className="flex flex-wrap items-center gap-5 text-sm text-gray-500 border-b border-gray-200 pb-6 mb-8">
               <span className="flex items-center gap-1.5">
@@ -152,6 +149,16 @@ const HowDoesIR35Work = () => {
               </span>
             </div>
 
+            {/* Opening paragraphs */}
+            <div id="overview" className="scroll-mt-28">
+              <p className="text-lg text-gray-700 leading-relaxed mb-6">
+                <Link to="/what-is-ir35-uk" className="text-amber-700 underline hover:text-amber-900">IR35</Link> works by testing whether the reality of your working relationship with a client looks like employment, regardless of what your contract says. This IR35 assessment determines whether an engagement falls inside or outside the IR35 rules and it also decides who is responsible for deducting your tax. If an engagement is inside IR35, the fee-payer deducts Income Tax and National Insurance before you're paid, similar to being on payroll. If it's outside, your limited company invoices and gets paid gross and you manage your own tax as a genuine business would.
+              </p>
+              <p className="text-lg text-gray-700 leading-relaxed mb-8">
+                That's the short version. The fuller answer involves an actual process with steps, deadlines and responsibilities — something most explanations skip in favour of just listing the legal tests. This guide covers both: how a determination actually happens from the start of a contract and the tests behind it.
+              </p>
+            </div>
+
             {/* ── TABLE OF CONTENTS ─────────────────────────────────── */}
             <div className="bg-gray-50 border border-gray-200 rounded-xl p-6 mb-12">
               <h2 className="text-sm font-bold uppercase tracking-widest text-gray-500 mb-4">In This Article</h2>
@@ -161,14 +168,16 @@ const HowDoesIR35Work = () => {
                     <li key={section.id}>
                       <button
                         onClick={() => scrollToSection(section.id)}
-                        className={`group flex items-baseline gap-3 w-full text-left text-sm transition-colors duration-150 ${activeSection === section.id
-                          ? "text-amber-700 font-semibold"
-                          : "text-gray-600 hover:text-gray-900"
-                          }`}
+                        className={`group flex items-baseline gap-3 w-full text-left text-sm transition-colors duration-150 ${
+                          activeSection === section.id
+                            ? "text-amber-700 font-semibold"
+                            : "text-gray-600 hover:text-gray-900"
+                        }`}
                       >
                         <span
-                          className={`text-xs font-mono shrink-0 w-5 ${activeSection === section.id ? "text-amber-600" : "text-gray-400"
-                            }`}
+                          className={`text-xs font-mono shrink-0 w-5 ${
+                            activeSection === section.id ? "text-amber-600" : "text-gray-400"
+                          }`}
                         >
                           {String(idx + 1).padStart(2, "0")}
                         </span>
@@ -190,20 +199,8 @@ const HowDoesIR35Work = () => {
             >
 
               {/* Section 1 */}
-              <h2 id="overview" className="scroll-mt-28 text-3xl font-bold text-gray-900 mt-12 mb-4">
-                How Does IR35 Work in the UK? Everything Contractors Need to Know
-              </h2>
-              <div className="w-10 h-0.5 bg-amber-500 mb-6" />
-              <p className="text-gray-700 leading-relaxed mb-4">
-                IR35 works by testing whether the reality of your working relationship with a client looks like employment, regardless of what your contract says — and that outcome mechanically decides who deducts your tax. If an engagement is inside <Link to="/what-is-ir35-uk" className="text-amber-700 underline hover:text-amber-900">IR35</Link>, the fee-payer deducts Income Tax and National Insurance before you're paid, similar to being on payroll. If it's outside, your limited company invoices and gets paid gross and you manage your own tax as a genuine business would.
-              </p>
-              <p className="text-gray-700 leading-relaxed mb-8">
-                That's the short version. The fuller answer involves an actual process with steps, deadlines and responsibilities — something most explanations skip in favour of just listing the legal tests. This guide covers both: how a determination actually happens from the start of a contract and the tests behind it.
-              </p>
-
-              {/* Section 2 */}
               <h2 id="process" className="scroll-mt-28 text-3xl font-bold text-gray-900 mt-12 mb-4">
-                The IR35 Process, From Start to Finish
+                How the IR35 Assessment and Determination Process Works
               </h2>
               <div className="w-10 h-0.5 bg-amber-500 mb-6" />
               <p className="text-gray-700 leading-relaxed mb-4">
@@ -217,7 +214,7 @@ const HowDoesIR35Work = () => {
                   <strong>The client assesses status before work starts</strong>, based on the actual working practices agreed, not just the contract wording. CEST is a common starting point, though not always reliable on borderline cases.
                 </li>
                 <li>
-                  <strong>A Status Determination Statement (SDS) is issued</strong> to the contractor (and agency) before or shortly after work starts, setting out the decision and reasoning.
+                  <strong>A Status Determination Statement (SDS) is issued</strong> to the <Link to="/services/contractor-accountants" className="text-amber-700 underline hover:text-amber-900">contractor</Link> (and agency), where applicable, before or shortly after work starts. The SDS records whether the engagement is inside or outside IR35 and explains the reasoning behind the determination.
                 </li>
                 <li>
                   <strong>The contractor can formally disagree</strong>, typically within 45 days of receiving the SDS. The client must respond with either a revised determination or a reasoned justification.
@@ -233,31 +230,36 @@ const HowDoesIR35Work = () => {
                 This process side of "how IR35 works" gets skipped most often, but it's worth knowing even if you never dispute a determination — it tells you what should be happening and when, so you can flag it if a client misses a step they're legally required to follow.
               </p>
 
-              {/* Section 3 */}
+              {/* Section 2 */}
               <h2 id="tests" className="scroll-mt-28 text-3xl font-bold text-gray-900 mt-12 mb-4">
-                The Tests Behind the Determination
+                The IR35 Tests Behind the Status Determination
               </h2>
               <div className="w-10 h-0.5 bg-amber-500 mb-6" />
+              <p className="text-gray-700 leading-relaxed mb-4">
+                An IR35 status determination looks at several factors to establish whether the contractor is genuinely self-employed or is effectively working as an employee. The three key areas are control, substitution and Mutuality of Obligation.
+              </p>
               <p className="text-gray-700 leading-relaxed mb-4">
                 <strong>Control</strong> covers how much say the client has over how, when and where the work gets done. Heavy day-to-day direction points toward employment; being engaged to deliver a defined outcome on your own terms points away from it.
               </p>
               <p className="text-gray-700 leading-relaxed mb-4">
-                <strong>Substitution</strong> asks whether you could send someone else to do the work without the client having a veto. This has to be a genuine, exercisable right — an unused clause that would actually be refused in practice carries very little weight with HMRC.
+                <strong>Substitution</strong> asks whether you could send someone else to do the work without the client having a veto. This has to be a genuine, exercisable right. An unused clause that would actually be refused in practice carries very little weight with HMRC.
               </p>
               <p className="text-gray-700 leading-relaxed mb-6">
                 <strong>Mutuality of Obligation</strong> looks at whether there's an ongoing expectation the client will keep offering work and you'll keep accepting it, the way there is in employment. Project-based, defined-scope work tends to sit outside this; an open-ended expectation of continuous work tends to sit inside it.
-                We've covered these three tests in more depth, with worked examples,<Link to="/what-are-ir35-rules" className="text-amber-700 underline hover:text-amber-900"> in our guide to what IR35 rules currently say.</Link>
-
+              </p>
+              <p className="text-gray-700 leading-relaxed mb-8">
+                We've covered these three tests in more depth, with worked examples, <Link to="/what-are-ir35-rules" className="text-amber-700 underline hover:text-amber-900">in our guide to what IR35 rules currently say.</Link>
               </p>
 
-              <div className="my-8 rounded-xl overflow-hidden shadow-md">
+              <div className="my-10 rounded-xl overflow-hidden shadow-md">
                 <img
                   src="/tests-behind-determination.jpeg"
                   alt="The Tests Behind an IR35 Determination"
-                  className="w-full object-cover"
+                  className="w-full h-auto object-contain bg-gray-50"
                 />
               </div>
-              {/* Section 4 */}
+
+              {/* Section 3 */}
               <h2 id="worked-example" className="scroll-mt-28 text-3xl font-bold text-gray-900 mt-12 mb-4">
                 A Worked Example
               </h2>
@@ -269,23 +271,19 @@ const HowDoesIR35Work = () => {
                 Contrast that with a similar consultant on an open-ended basis, attending daily stand-ups, using a company laptop and email, with no realistic ability to send anyone else. Even with an identical contract on paper, the working practices point inside IR35 — exactly why HMRC looks past the paperwork to how the relationship actually functions.
               </p>
 
-              {/* Section 5 */}
+              {/* Section 4 */}
               <h2 id="disagreeing" className="scroll-mt-28 text-3xl font-bold text-gray-900 mt-12 mb-4">
                 Disagreeing With a Status Determination
               </h2>
               <div className="w-10 h-0.5 bg-amber-500 mb-6" />
               <p className="text-gray-700 leading-relaxed mb-4">
-                You're entitled to challenge an SDS you think is wrong through the client-led disagreement process: submit your case in writing within the appeal window, setting out specifically which factors were assessed incorrectly. The client must then respond with a revised determination or a reasoned explanation for keeping the original one.
+                You're entitled to challenge an SDS you think is wrong through the <a href="https://www.gov.uk/hmrc-internal-manuals/employment-status-manual/esm10015a" target="_blank" rel="noopener noreferrer" className="text-amber-700 underline hover:text-amber-900">client-led disagreement process</a>: submit your case in writing within the appeal window, setting out specifically which factors were assessed incorrectly. The client must then respond with a revised determination or a reasoned explanation for keeping the original one.
               </p>
               <p className="text-gray-700 leading-relaxed mb-8">
-                Many contractors don't use this right, either through not knowing it exists or being wary of raising it with a client they want to keep working with. If a determination looks clearly wrong, such as ignoring a substitution right you've genuinely used, it's worth raising — ideally with a{" "}
-                <Link to="/services/contractor-accountants" className="text-amber-700 underline hover:text-amber-900">
-                  contractor accountant
-                </Link>{" "}
-                helping you set out the case clearly.
+                <Link to="/what-is-a-contractor-accountant" className="text-amber-700 underline hover:text-amber-900">Many contractors</Link> don't use this right, either through not knowing it exists or being wary of raising it with a client they want to keep working with. If a determination looks clearly wrong, such as ignoring a substitution right you've genuinely used, it's worth raising — ideally with a contractor accountant helping you set out the case clearly.
               </p>
 
-              {/* Section 6 */}
+              {/* Section 5 */}
               <h2 id="contract-length" className="scroll-mt-28 text-3xl font-bold text-gray-900 mt-12 mb-4">
                 Does Contract Length or Client Count Matter?
               </h2>
@@ -294,7 +292,7 @@ const HowDoesIR35Work = () => {
                 Not directly, but both are circumstantial evidence feeding the wider picture. A very long, continuous engagement with one client can start to resemble a permanent role in practice, though length alone has never been decisive in tribunal cases. Working for several clients simultaneously tends to support an outside-IR35 case, since it's harder to argue you're "part and parcel" of one organisation when you're clearly running an independent business. Neither factor overrides the core tests, but both get weighed alongside them.
               </p>
 
-              {/* Section 7 */}
+              {/* Section 6 */}
               <h2 id="mid-contract" className="scroll-mt-28 text-3xl font-bold text-gray-900 mt-12 mb-4">
                 When Working Practices Change Mid-contract
               </h2>
@@ -303,7 +301,7 @@ const HowDoesIR35Work = () => {
                 IR35 status isn't fixed for the life of an engagement. If your role shifts — more supervisory responsibility, new meetings you weren't previously part of, losing the ability to send a substitute — that should trigger a reassessment. It works the other way too: a role becoming more genuinely autonomous over time might mean an original inside determination no longer reflects reality months later. Clients aren't always proactive about catching this, so it's worth watching your own working practices rather than assuming the original SDS still applies indefinitely.
               </p>
 
-              {/* Section 8 */}
+              {/* Section 7 */}
               <h2 id="common-mistakes" className="scroll-mt-28 text-3xl font-bold text-gray-900 mt-12 mb-4">
                 Common Process Mistakes
               </h2>
@@ -319,73 +317,68 @@ const HowDoesIR35Work = () => {
                   <strong>Skipping or delaying the SDS</strong> — clients must provide one before or shortly after the engagement starts, not months in.
                 </li>
                 <li>
-                  <strong>Treating CEST as the final word</strong> — it's a starting point, not a substitute for proper review on anything borderline. Our full breakdown of{" "}
-                  <Link to="/inside-vs-outside-ir35" className="text-amber-700 underline hover:text-amber-900">
-                    inside vs outside IR35
-                  </Link>{" "}
-                  covers what's financially at stake if this gets misjudged.
+                  <strong>Treating CEST as the final word</strong> — it's a starting point, not a substitute for proper review on anything borderline. Our full breakdown of <Link to="/inside-vs-outside-ir35" className="text-amber-700 underline hover:text-amber-900">inside vs outside IR35</Link> covers what's financially at stake if this gets misjudged.
                 </li>
               </ul>
 
-              {/* Section 9 */}
+              {/* Section 8 */}
               <h2 id="accountant-helps" className="scroll-mt-28 text-3xl font-bold text-gray-900 mt-12 mb-4">
                 How a Contractor Accountant Helps
               </h2>
               <div className="w-10 h-0.5 bg-amber-500 mb-6" />
-              <p className="text-gray-700 leading-relaxed mb-4">
-                Much of this process runs quietly in the background until something doesn't add up. A{" "}
-                <Link to="/what-is-a-contractor-accountant" className="text-amber-700 underline hover:text-amber-900">
-                  specialist contractor accountant
-                </Link>{" "}
-                can review your contract before you sign it, check your actual working practices support the expected status, help build a case if you need to challenge an SDS, and flag when a mid-contract change should trigger a fresh look. Given the money on either side of a determination, that oversight is generally worth more than the cost of the review.
+              <p className="text-gray-700 leading-relaxed mb-6">
+                Much of this process runs quietly in the background until something doesn't add up. A <Link to="/why-contractors-need-specialist-accountant" className="text-amber-700 underline hover:text-amber-900">specialist contractor accountant</Link> can review your contract before you sign it, check your actual working practices support the expected status, help build a case if you need to challenge an SDS, and flag when a mid-contract change should trigger a fresh look. Given the money on either side of a determination, that oversight is generally worth more than the cost of the review.
               </p>
 
-              <p className="text-sm text-gray-500 italic mb-8">
-                This guide reflects UK off-payroll working rules as they stood in July 2026. For a decision involving significant money, get a professional status review from a qualified contractor accountant rather than relying on any single article.
-              </p>
+              <div className="bg-amber-50 border-l-4 border-amber-500 p-4 rounded-r-lg mb-8">
+                <p className="text-sm text-gray-700 italic m-0">
+                  This guide reflects UK off-payroll working rules as they stood in July 2026. For a decision involving significant money, get a professional status review from a qualified contractor accountant rather than relying on any single article.
+                </p>
+              </div>
 
               {/* CTA */}
               <div className="bg-gray-900 text-white rounded-xl p-8 mb-12 flex flex-col sm:flex-row items-center gap-6">
                 <div className="flex-1">
                   <p className="font-bold text-lg mb-1">Need professional IR35 advice?</p>
                   <p className="text-gray-300 text-sm leading-relaxed">
-                    Our specialist accountants review your contracts and working arrangements to ensure full compliance.
+                    Our specialist accountants review your contracts and working arrangements to ensure full compliance and tax efficiency.
                   </p>
                 </div>
                 <Button
                   asChild
-                  className="shrink-0 bg-amber-50 hover:bg-amber-400 text-gray-900 font-bold rounded-lg px-6 py-3"
+                  className="shrink-0 bg-amber-500 hover:bg-amber-400 text-gray-900 font-bold rounded-lg px-6 py-3"
                 >
-                  <Link to="/contact">Speak to an Expert</Link>
+                  <Link to="/contact">Speak to an Expert →</Link>
                 </Button>
               </div>
 
               {/* Section 10 — FAQs */}
               <h2 id="faqs" className="scroll-mt-28 text-3xl font-bold text-gray-900 mt-12 mb-4">
-                Frequently asked questions
+                Frequently Asked Questions
               </h2>
               <div className="w-10 h-0.5 bg-amber-500 mb-6" />
-              <div className="divide-y divide-gray-200 border border-gray-200 rounded-xl overflow-hidden mb-10">
+              <div className="space-y-3 mb-10">
                 {faqsData.map((faq, idx) => (
-                  <div key={idx}>
+                  <div
+                    key={idx}
+                    className="border border-gray-200 rounded-xl overflow-hidden"
+                  >
                     <button
                       onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
-                      className="w-full flex items-center justify-between px-6 py-4 text-left font-semibold text-gray-900 hover:bg-gray-50 transition-colors"
+                      className="w-full flex items-center justify-between px-6 py-4 text-left font-semibold text-gray-900 hover:bg-gray-50 transition-colors duration-150 text-sm"
                     >
                       <span>{faq.question}</span>
                       <ChevronDown
-                        className={`h-5 w-5 text-gray-500 transition-transform duration-200 shrink-0 ml-4 ${openFaq === idx ? "rotate-180" : ""
-                          }`}
+                        className={`h-4 w-4 text-amber-500 shrink-0 ml-4 transition-transform duration-200 ${
+                          openFaq === idx ? "rotate-180" : ""
+                        }`}
                       />
                     </button>
-                    <div
-                      className={`overflow-hidden transition-all duration-300 ${openFaq === idx ? "max-h-[300px] border-t border-gray-100" : "max-h-0"
-                        }`}
-                    >
-                      <div className="px-6 py-4 text-gray-600 bg-gray-50 text-sm leading-relaxed">
+                    {openFaq === idx && (
+                      <div className="px-6 pb-5 pt-1 text-gray-600 text-sm leading-relaxed border-t border-gray-100 bg-gray-50">
                         {faq.answer}
                       </div>
-                    </div>
+                    )}
                   </div>
                 ))}
               </div>

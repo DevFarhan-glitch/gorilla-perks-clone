@@ -8,6 +8,7 @@ import { NearbyLocationsSection } from "@/components/common/NearbyLocationsSecti
 
 const sections = [
   { id: "what-makes-different", title: "What Makes Contractor Accounting Different?" },
+  { id: "key-reasons", title: "Key Reasons Why Contractors Need a Specialist Accountant" },
   { id: "reason-1", title: "Reason 1: IR35 Is Complex — And Getting It Wrong Is Costly" },
   { id: "reason-2", title: "Reason 2: Tax Efficiency — Keeping More of What You Earn" },
   { id: "reason-3", title: "Reason 3: Your Legal Duties as a Limited Company Director" },
@@ -16,9 +17,9 @@ const sections = [
   { id: "reason-6", title: "Reason 6: Making Tax Digital — Are You Ready?" },
   { id: "reason-7", title: "Reason 7: Mortgages, References & Life Beyond Tax" },
   { id: "consequences", title: "What Happens If You Get It Wrong?" },
-  { id: "why-henleaze", title: "Why Choose a Bristol-Based Specialist?" },
+  { id: "why-henleaze", title: "Why Choose a Bristol-Based Specialist Contractor Accountant?" },
   { id: "final-words", title: "Final Words" },
-  { id: "faqs", title: "FAQs" },
+  { id: "faqs", title: "Frequently Asked Questions" },
 ];
 
 const faqs = [
@@ -107,7 +108,7 @@ const WhyContractorsNeedSpecialistAccountant = () => {
         <div className="w-full shadow-inner" style={{ paddingTop: "72px" }}>
           <img
             src="/why-is-a-specialist-accountant-important-for-uk-contractors.jpeg"
-            alt="Why Contractors Need a Specialist Accountant"
+            alt="Why Is a Specialist Accountant Important for UK Contractors?"
             className="w-full h-auto max-h-[520px] object-contain bg-gray-50 mx-auto"
           />
         </div>
@@ -139,7 +140,7 @@ const WhyContractorsNeedSpecialistAccountant = () => {
               className="text-4xl sm:text-5xl font-bold text-gray-900 leading-tight mb-4"
               style={{ fontFamily: "'Georgia', serif" }}
             >
-              Why Do Contractors Need a Specialist Accountant in the UK?
+              Why Is a Specialist Accountant Important for UK Contractors?
             </h1>
 
             {/* Meta row */}
@@ -160,11 +161,11 @@ const WhyContractorsNeedSpecialistAccountant = () => {
 
             {/* Opening paragraphs */}
             <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              If you have recently started contracting, you might wonder whether a specialist accountant is really necessary. Your local accountant has handled your taxes before — surely they can manage a limited company too?
+              If you have recently started contracting, you might wonder whether a specialist accountant is really necessary. Your local accountant has handled your taxes before, surely they can manage a limited company too?
             </p>
             <p className="text-lg text-gray-700 leading-relaxed mb-8">
               <Link to="/services/contractor-accountants" className="text-amber-700 underline hover:text-amber-900">
-                Contractor Accounting
+                Contractor accounting
               </Link> is genuinely different. Between IR35, salary and dividend planning, corporation tax and Companies House obligations, the financial side of contracting carries real complexity. A generalist can file your paperwork, but they are unlikely to have the knowledge that saves you money or protects you from HMRC. Here is why UK contractors need a specialist in their corner.
             </p>
 
@@ -211,7 +212,7 @@ const WhyContractorsNeedSpecialistAccountant = () => {
               </h2>
               <div className="w-10 h-0.5 bg-amber-500 mb-6" />
               <p className="text-gray-700 leading-relaxed mb-4">
-                When you contract through your own limited company, you are not just self-employed — you are a company director. That distinction changes everything when it comes to tax and compliance.
+                When you contract through your own limited company, you are not just self-employed, you are a company director. That distinction changes everything when it comes to tax and compliance.
               </p>
               <p className="text-gray-700 leading-relaxed mb-3">
                 Unlike a sole trader or salaried employee, you are dealing with:
@@ -227,7 +228,12 @@ const WhyContractorsNeedSpecialistAccountant = () => {
               <p className="text-gray-700 leading-relaxed mb-4">
                 A high-street accountant who handles small shops and sole traders will rarely have the depth of knowledge to manage all of this efficiently, let alone proactively.
               </p>
-
+              <p className="text-gray-700 leading-relaxed mb-4">
+                Unlike employees whose taxes are deducted automatically through PAYE, contractors often manage multiple tax obligations simultaneously. Running a limited company means balancing compliance, tax planning and business administration, all while delivering work to clients.
+              </p>
+              <p className="text-gray-700 leading-relaxed mb-8">
+                For additional guidance, you can also compare <Link to="/tax-advisory-firms-bristol" className="text-amber-700 underline hover:text-amber-900">tax advisory firms in Bristol</Link> and the range of support they provide.
+              </p>
 
               {/* Key Reasons Image */}
               <div className="my-12 w-full">
@@ -242,17 +248,17 @@ const WhyContractorsNeedSpecialistAccountant = () => {
               </div>
 
               {/* Reasons intro list */}
-              <div className="bg-gray-50 border border-gray-200 rounded-xl p-6 mb-10">
-                <h3 className="text-sm font-bold uppercase tracking-widest text-gray-500 mb-4">Key Reasons at a Glance</h3>
+              <div id="key-reasons" className="scroll-mt-28 bg-gray-50 border border-gray-200 rounded-xl p-6 mb-10">
+                <h3 className="text-sm font-bold uppercase tracking-widest text-gray-500 mb-4">Key Reasons Why Contractors Need a Specialist Accountant</h3>
                 <ol className="space-y-2 text-gray-700 text-sm">
                   {[
-                    "IR35 Is Complex — And Getting It Wrong Is Costly",
-                    "Tax Efficiency — Keeping More of What You Earn",
-                    "Your Legal Duties as a Limited Company Director",
-                    "Protection If HMRC Comes Knocking",
-                    "Time Is Money — Stop Doing Admin You Shouldn't Be",
-                    "Making Tax Digital — Are You Ready?",
-                    "Mortgages, References & Life Beyond Tax",
+                    "Reason 1: IR35 Is Complex — And Getting It Wrong Is Costly",
+                    "Reason 2: Tax Efficiency — Keeping More of What You Earn",
+                    "Reason 3: Your Legal Duties as a Limited Company Director",
+                    "Reason 4: Protection If HMRC Comes Knocking",
+                    "Reason 5: Time Is Money — Stop Doing Admin You Shouldn't Be",
+                    "Reason 6: Making Tax Digital — Are You Ready?",
+                    "Reason 7: Mortgages, References & Life Beyond Tax",
                   ].map((r, i) => (
                     <li key={i} className="flex items-start gap-3">
                       <span className="shrink-0 w-6 h-6 rounded-full bg-amber-100 text-amber-700 text-xs font-bold flex items-center justify-center mt-0.5">
@@ -270,20 +276,23 @@ const WhyContractorsNeedSpecialistAccountant = () => {
               </h2>
               <div className="w-10 h-0.5 bg-amber-500 mb-6" />
               <p className="text-gray-700 leading-relaxed mb-4">
-                IR35 is the single biggest financial risk for most UK contractors. It is the legislation HMRC uses to determine whether someone contracting through a limited company is genuinely self-employed or a disguised employee.
+                <Link to="/what-is-ir35-uk" className="text-amber-700 underline hover:text-amber-900">IR35</Link> is the single biggest financial risk for most UK contractors. It is the legislation HMRC uses to determine whether someone contracting through a limited company is genuinely self-employed or a disguised employee.
               </p>
               <p className="text-gray-700 leading-relaxed mb-4">
-                If your contract falls inside IR35, you lose the ability to take dividends and your take-home pay drops significantly — often by thousands of pounds a year. A generalist accountant is unlikely to review your contracts, assess your working practices or flag risks before they become problems. A specialist does all of this as standard.
+                For a deeper explanation, see our guide to <Link to="/how-does-ir35-work-in-the-uk" className="text-amber-700 underline hover:text-amber-900">how IR35 works in the UK</Link> and what contractors need to consider.
+              </p>
+              <p className="text-gray-700 leading-relaxed mb-4">
+                If your contract falls inside IR35, you lose the ability to take dividends and your take-home pay drops significantly, often by thousands of pounds a year. A generalist accountant is unlikely to review your contracts, assess your working practices or flag risks before they become problems. A specialist does all of this as standard.
               </p>
               <p className="text-gray-700 leading-relaxed mb-4">
                 They will also represent you if HMRC opens an enquiry, which without expert guidance can be a costly and stressful experience.
               </p>
               <div className="bg-amber-50 border-l-4 border-amber-400 pl-5 py-4 mb-8 rounded-r-lg">
                 <p className="text-amber-900 text-sm font-medium m-0">
-                  💡 Getting IR35 wrong can mean thousands in back tax and National Insurance. HMRC can also investigate retrospectively for up to six years.{" "}
+                  “Getting IR35 wrong can mean thousands in back tax and National Insurance. HMRC can also investigate retrospectively for up to six years. Read more in our guide:{" "}
                   <Link to="/what-is-a-contractor-accountant" className="text-amber-700 underline hover:text-amber-900">
-                    Read more in our guide: What Is a Contractor Accountant?
-                  </Link>
+                    What Is a Contractor Accountant?
+                  </Link>”
                 </p>
               </div>
 
@@ -293,21 +302,20 @@ const WhyContractorsNeedSpecialistAccountant = () => {
               </h2>
               <div className="w-10 h-0.5 bg-amber-500 mb-6" />
               <p className="text-gray-700 leading-relaxed mb-4">
-                Operating through a limited company gives you real tax advantages — but only if someone who knows what they are doing sets things up properly.
+                Operating through a limited company gives you real tax advantages, but only if someone who knows what they are doing sets things up properly.
               </p>
-              <p className="text-gray-700 leading-relaxed mb-3">A specialist contractor accountant will:</p>
-              <ul className="list-disc pl-6 space-y-2 text-gray-700 mb-4">
-                <li>Structure the right salary and dividend split</li>
-                <li>Identify all your allowable business expenses</li>
-                <li>Explore pension contributions through the company to reduce your corporation tax bill</li>
-                <li>Assess whether the VAT Flat Rate Scheme works in your favour</li>
-              </ul>
+              <p className="text-gray-700 leading-relaxed mb-4">
+                A specialist contractor accountant will structure the right salary and dividend split, identify all your allowable business expenses, explore pension contributions through the company to reduce your corporation tax bill, and assess whether the VAT Flat Rate Scheme works in your favour.
+              </p>
               <p className="text-gray-700 leading-relaxed mb-8">
-                Most contractors save considerably more than their monthly <Link to="/pricing" className="text-amber-700 underline hover:text-amber-900">
-                  accountancy fee                </Link>
-
-                through specialist tax planning.
-
+                Most contractors save considerably more than their monthly{" "}
+                <Link to="/how-much-does-a-contractor-accountant-cost-in-the-uk" className="text-amber-700 underline hover:text-amber-900">
+                  accountancy fee
+                </Link>{" "}
+                through proper{" "}
+                <Link to="/services/tax-planning" className="text-amber-700 underline hover:text-amber-900">
+                  specialist tax planning
+                </Link>.
               </p>
 
               {/* Reason 3 */}
@@ -322,7 +330,7 @@ const WhyContractorsNeedSpecialistAccountant = () => {
                 <li>Annual accounts filed with Companies House on time</li>
                 <li>Confirmation statement submitted each year</li>
                 <li>Corporation tax return filed with HMRC</li>
-                <li><Link to="/services/payroll-and-hr-services" className="text-amber-700 hover:underline">PAYE payroll</Link> set up and run correctly</li>
+                <li>PAYE payroll set up and run correctly</li>
                 <li>Self Assessment personal tax return filed by 31 January</li>
               </ul>
               <p className="text-gray-700 leading-relaxed mb-8">
@@ -337,8 +345,18 @@ const WhyContractorsNeedSpecialistAccountant = () => {
               <p className="text-gray-700 leading-relaxed mb-4">
                 HMRC does investigate contractors, particularly around IR35 and expense claims. Having a specialist means your records are clean and you have a qualified professional to handle any enquiry. A generalist may not know how to respond to a contractor-specific investigation.
               </p>
+              <p className="text-gray-700 leading-relaxed mb-4">
+                A specialist deals with these regularly and knows exactly what HMRC looks for. Some{" "}
+                <Link to="/top-accounting-firms-for-contractors-uk" className="text-amber-700 underline hover:text-amber-900">
+                  accounting firms
+                </Link>{" "}
+                also include tax investigation insurance within their monthly package.
+              </p>
               <p className="text-gray-700 leading-relaxed mb-8">
-                A specialist deals with these regularly and knows exactly what HMRC looks for. Some <Link to="/top-accounting-firms-for-contractors-uk" className="text-amber-700 hover:underline">accounting firms</Link> also include tax investigation insurance within their monthly package.
+                For a wider comparison, you can also explore our{" "}
+                <Link to="/top-10-accounting-firms-uk" className="text-amber-700 underline hover:text-amber-900">
+                  guide to the top 10 accounting firms in the UK.
+                </Link>
               </p>
 
               {/* Reason 5 */}
@@ -346,14 +364,13 @@ const WhyContractorsNeedSpecialistAccountant = () => {
                 Reason 5: Time Is Money — Stop Doing Admin You Shouldn't Be
               </h2>
               <div className="w-10 h-0.5 bg-amber-500 mb-6" />
-              <p className="text-gray-700 leading-relaxed mb-4">
-                As a contractor, every hour spent on bookkeeping or chasing VAT deadlines is an hour you are not billing. Specialist contractor accountants use cloud software like FreeAgent or Xero to handle the day-to-day admin, giving you real-time visibility of your finances and keeping your accounts up to date throughout the year — not just at year end.
+              <p className="text-gray-700 leading-relaxed mb-8">
+                As a contractor, every hour spent on{" "}
+                <Link to="/services/vat-and-bookkeeping-accounting-services" className="text-amber-700 underline hover:text-amber-900">
+                  bookkeeping or chasing VAT
+                </Link>{" "}
+                deadlines is an hour you are not billing. Specialist contractor accountants use cloud software like FreeAgent or Xero to handle the day-to-day admin, giving you real-time visibility of your finances and keeping your accounts up to date throughout the year, not just at year end.
               </p>
-              <div className="bg-amber-50 border-l-4 border-amber-400 pl-5 py-3 mb-8 rounded-r-lg">
-                <p className="text-amber-900 text-sm font-medium m-0">
-                  💡 At Henleaze, FreeAgent is included in your monthly fee — no hidden software charges.
-                </p>
-              </div>
 
               {/* Reason 6 */}
               <h2 id="reason-6" className="scroll-mt-28 text-3xl font-bold text-gray-900 mt-14 mb-4">
@@ -363,13 +380,10 @@ const WhyContractorsNeedSpecialistAccountant = () => {
               <p className="text-gray-700 leading-relaxed mb-4">
                 HMRC is rolling out Making Tax Digital for Income Tax Self Assessment, requiring contractors earning over £50,000 to submit quarterly digital updates from April 2026, dropping to £30,000 from April 2027.
               </p>
-              <p className="text-gray-700 leading-relaxed mb-4">
-                A specialist accountant will already be set up for this. If your current accountant has not mentioned it, that is a sign they may not be across the latest requirements.
-              </p>
               <p className="text-gray-700 leading-relaxed mb-8">
-                You can check the full timeline on the{" "}
+                A specialist accountant will already be set up for this. If your current accountant has not mentioned it, that is a sign they may not be across the latest requirements. You can check the full timeline on the{" "}
                 <a
-                  href="https://www.gov.uk/guidance/making-tax-digital-for-income-tax"
+                  href="https://www.gov.uk/guidance/using-making-tax-digital-for-income-tax"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-amber-700 underline hover:text-amber-900"
@@ -384,11 +398,8 @@ const WhyContractorsNeedSpecialistAccountant = () => {
                 Reason 7: Mortgages, References &amp; Life Beyond Tax
               </h2>
               <div className="w-10 h-0.5 bg-amber-500 mb-6" />
-              <p className="text-gray-700 leading-relaxed mb-4">
-                Getting a mortgage as a contractor is often harder than it should be. Most lenders struggle to assess a combination of low salary, dividends and retained profits.
-              </p>
               <p className="text-gray-700 leading-relaxed mb-8">
-                A specialist contractor accountant knows which lenders assess income based on day rate and can provide the right documentation — SA302 forms, income verification letters, accountant references — in the format brokers and lenders actually need.
+                Getting a mortgage as a contractor is often harder than it should be. Most lenders struggle to assess a combination of low salary, dividends and retained profits. A specialist contractor accountant knows which lenders assess income based on day rate and can provide the right documentation, SA302 forms, income verification letters, accountant references — in the format brokers and lenders actually need.
               </p>
 
               {/* Consequences Table */}
@@ -396,10 +407,7 @@ const WhyContractorsNeedSpecialistAccountant = () => {
                 What Happens If You Get It Wrong?
               </h2>
               <div className="w-10 h-0.5 bg-amber-500 mb-6" />
-              <p className="text-gray-700 leading-relaxed mb-6">
-                A specialist does not just save you money — they protect you from mistakes that can set a contractor back significantly.
-              </p>
-              <div className="overflow-x-auto mb-10 rounded-xl border border-gray-200 shadow-sm">
+              <div className="overflow-x-auto mb-6 rounded-xl border border-gray-200 shadow-sm">
                 <table className="w-full text-sm text-left">
                   <thead>
                     <tr className="bg-gray-900 text-white">
@@ -424,6 +432,9 @@ const WhyContractorsNeedSpecialistAccountant = () => {
                   </tbody>
                 </table>
               </div>
+              <p className="text-gray-700 leading-relaxed mb-10">
+                A specialist does not just save you money, they protect you from mistakes that can set a contractor back significantly.
+              </p>
 
               {/* Why Henleaze */}
               <h2 id="why-henleaze" className="scroll-mt-28 text-3xl font-bold text-gray-900 mt-14 mb-4">
@@ -433,14 +444,13 @@ const WhyContractorsNeedSpecialistAccountant = () => {
               <p className="text-gray-700 leading-relaxed mb-4">
                 At Henleaze Tax Consultancy, we work with contractors, freelancers and limited company directors across Bristol and the UK. We offer fixed monthly fees, a dedicated point of contact, and plain-English advice on IR35, tax planning and everything in between. Face-to-face meetings are available for Bristol-based clients who prefer them.
               </p>
-              <ul className="list-disc pl-6 space-y-2 text-gray-700 mb-6">
-                <li>Fixed monthly fees with no hidden extras</li>
-                <li>A dedicated accountant for every client</li>
-                <li>Genuine IR35 expertise and contract review</li>
-                <li>Face-to-face availability for Bristol-based clients</li>
-                <li>FreeAgent included as standard, at no additional cost</li>
-                <li>Smooth transition from your current accountant without disruption</li>
-              </ul>
+              <p className="text-gray-700 leading-relaxed mb-6">
+                If you are comparing local providers, our guide to the{" "}
+                <Link to="/top-5-accountancy-firms-in-bristol" className="text-amber-700 underline hover:text-amber-900">
+                  top 5 accountancy firms in Bristol
+                </Link>{" "}
+                can help you explore your options.
+              </p>
               <div className="bg-gray-900 text-white rounded-xl p-8 mb-10 flex flex-col sm:flex-row items-center gap-6">
                 <div className="flex-1">
                   <p className="font-bold text-lg mb-1">Book a free consultation</p>
@@ -452,7 +462,7 @@ const WhyContractorsNeedSpecialistAccountant = () => {
                   asChild
                   className="shrink-0 bg-amber-500 hover:bg-amber-400 text-gray-900 font-bold rounded-lg px-6 py-3"
                 >
-                  <Link to="/contact">Book Free Consultation</Link>
+                  <Link to="/contact">Book a free consultation with Henleaze Tax Consultancy</Link>
                 </Button>
               </div>
 
@@ -465,11 +475,11 @@ const WhyContractorsNeedSpecialistAccountant = () => {
                 Contracting gives you real freedom, but it also brings genuine financial and legal complexity. A specialist contractor accountant pays for themselves many times over through tax savings, IR35 protection and time saved.
               </p>
               <p className="text-gray-700 leading-relaxed mb-4">
-                If you are serious about making contracting work long-term, specialist support is not a luxury — it is a smart business decision.
+                If you are serious about making contracting work long-term, specialist support is not a luxury, it is a smart business decision.
               </p>
               <p className="text-gray-700 leading-relaxed mb-10">
                 Read our guide on:{" "}
-                <Link to="/whats-included-in-contractor-accounting" className="text-amber-700 underline hover:text-amber-900">
+                <Link to="/contractor-accountant-services-in-the-uk" className="text-amber-700 underline hover:text-amber-900">
                   What services do contractor accountants provide in the UK?
                 </Link>
               </p>
@@ -520,3 +530,4 @@ const WhyContractorsNeedSpecialistAccountant = () => {
 };
 
 export default WhyContractorsNeedSpecialistAccountant;
+

@@ -117,6 +117,8 @@ export const AppRoutesLazy = () => (
         <Route path="/top-accounting-firms-for-contractors-uk/" element={<TopAccountingFirmsForContractors />} />
         <Route path="/whats-included-in-contractor-accounting" element={<ContractorAccountantServices />} />
         <Route path="/whats-included-in-contractor-accounting/" element={<ContractorAccountantServices />} />
+        <Route path="/contractor-accountant-services-in-the-uk" element={<ContractorAccountantServices />} />
+        <Route path="/contractor-accountant-services-in-the-uk/" element={<ContractorAccountantServices />} />
         <Route path="/what-is-ir35-uk" element={<WhatIsIR35UK />} />
         <Route path="/what-is-ir35-uk/" element={<WhatIsIR35UK />} />
         <Route path="/how-does-ir35-work-in-the-uk" element={<HowDoesIR35Work />} />

@@ -7,8 +7,8 @@ import { Button } from "@/components/ui/button";
 import { NearbyLocationsSection } from "@/components/common/NearbyLocationsSection";
 
 const sections = [
-  { id: "what-services", title: "What Services Do Contractor Accountants Provide?" },
-  { id: "core-services", title: "Core Contractor Accounting Services" },
+  { id: "what-services", title: "What Services Do Contractor Accountants Provide in the UK?" },
+  { id: "core-services", title: "Core Contractor Accounting Services in the UK" },
   { id: "company-formation", title: "Company Formation for Contractors" },
   { id: "ir35-compliance", title: "IR35 Compliance and Contract Reviews" },
   { id: "tax-planning", title: "Tax-Efficient Planning for Contractors" },
@@ -16,7 +16,7 @@ const sections = [
   { id: "payroll-services", title: "Payroll Services for Contractors" },
   { id: "real-time-support", title: "Real-Time Support and Ongoing Advice" },
   { id: "cloud-accounting", title: "Bookkeeping and Cloud Accounting Software" },
-  { id: "bristol-services", title: "Contractor Accounting Services in Bristol" },
+  { id: "bristol-services", title: "Contractor Accounting Services in Bristol — What Henleaze Offers" },
   { id: "final-words", title: "Final Words" },
   { id: "faqs", title: "FAQs" }
 ];
@@ -82,8 +82,9 @@ const ContractorAccountantServices = () => {
         />
         <meta
           name="keywords"
-          content="contractors accounting services, UK contractor accountant, IR35 compliance, limited company accounting"
+          content="contractors accounting services, UK contractor accountant, IR35 compliance, limited company accounting, contractor tax planning"
         />
+        <link rel="canonical" href="https://henleazetaxconsultancy.com/contractor-accountant-services-in-the-uk" />
       </Helmet>
 
       <Layout>
@@ -142,13 +143,16 @@ const ContractorAccountantServices = () => {
               </span>
             </div>
 
-            {/* Opening paragraphs */}
+            {/* Opening Section */}
             <h2 id="what-services" className="scroll-mt-28 text-3xl font-bold text-gray-900 mt-12 mb-4">
               What Services Do Contractor Accountants Provide in the UK?
             </h2>
             <div className="w-10 h-0.5 bg-amber-500 mb-6" />
             <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              A <Link to="/services/contractor-accountants" className="text-amber-700 underline hover:text-amber-900">contractor accountant</Link> provides far more than a standard tax return. For UK contractors operating through a limited company, the service covers everything from setting up your business correctly to managing IR35 compliance, <Link to="/services/payroll-and-hr-services" className="text-amber-700 hover:underline">payroll</Link>, VAT, annual accounts and ongoing <Link to="/services/tax-planning" className="text-amber-700 hover:underline">tax planning</Link> — all under one fixed monthly fee.
+              A <Link to="/services/contractor-accountants" className="text-amber-700 underline hover:text-amber-900">contractor accountant</Link> provides far more than a standard tax return. For UK contractors operating through a limited company, the service covers everything from setting up your business correctly to managing IR35 compliance, <Link to="/services/payroll-and-hr-services" className="text-amber-700 underline hover:text-amber-900">payroll</Link>, <Link to="/services/vat-and-bookkeeping-accounting-services" className="text-amber-700 underline hover:text-amber-900">VAT</Link>, <Link to="/services/outsourced-accounting-services" className="text-amber-700 underline hover:text-amber-900">annual accounts</Link> and ongoing <Link to="/services/tax-planning" className="text-amber-700 underline hover:text-amber-900">tax planning</Link> — all under one fixed monthly fee.
+            </p>
+            <p className="text-lg text-gray-700 leading-relaxed mb-6">
+              For a broader comparison of providers, you can also explore our <Link to="/top-10-accounting-firms-uk" className="text-amber-700 underline hover:text-amber-900">guide to the top 10 accounting firms in the UK.</Link>
             </p>
             <p className="text-lg text-gray-700 leading-relaxed mb-8">
               Unlike a general accountant, a specialist contractor accountant understands the specific financial and legal obligations that come with limited company contracting. This guide breaks down every core service you can expect, so you know exactly what you are getting before you sign up.
@@ -163,14 +167,16 @@ const ContractorAccountantServices = () => {
                     <li key={section.id}>
                       <button
                         onClick={() => scrollToSection(section.id)}
-                        className={`group flex items-baseline gap-3 w-full text-left text-sm transition-colors duration-150 ${activeSection === section.id
-                          ? "text-amber-700 font-semibold"
-                          : "text-gray-600 hover:text-gray-900"
-                          }`}
+                        className={`group flex items-baseline gap-3 w-full text-left text-sm transition-colors duration-150 ${
+                          activeSection === section.id
+                            ? "text-amber-700 font-semibold"
+                            : "text-gray-600 hover:text-gray-900"
+                        }`}
                       >
                         <span
-                          className={`text-xs font-mono shrink-0 w-5 ${activeSection === section.id ? "text-amber-600" : "text-gray-400"
-                            }`}
+                          className={`text-xs font-mono shrink-0 w-5 ${
+                            activeSection === section.id ? "text-amber-600" : "text-gray-400"
+                          }`}
                         >
                           {String(idx + 1).padStart(2, "0")}
                         </span>
@@ -204,7 +210,7 @@ const ContractorAccountantServices = () => {
                 <img
                   src="/core-contractor-accounting.jpeg"
                   alt="Core Contractor Accounting Services"
-                  className="w-full h-auto object-contain shadow-md"
+                  className="w-full h-auto object-contain shadow-md rounded-lg"
                 />
               </div>
 
@@ -215,9 +221,9 @@ const ContractorAccountantServices = () => {
               <p className="text-gray-700 leading-relaxed mb-4">
                 Before you can start contracting through a limited company, that company needs to be set up correctly. A specialist contractor accountant handles the entire process, ensuring your business is registered in line with UK requirements from day one.
               </p>
-              <p className="text-gray-700 leading-relaxed mb-3">This service typically covers:</p>
+              <p className="text-gray-700 leading-relaxed mb-3 font-semibold">This service typically covers:</p>
               <ul className="list-disc pl-6 space-y-2 text-gray-700 mb-4">
-                <li><Link to="/services/company-secretarial-services" className="text-amber-700 hover:underline">Limited company registration</Link> with Companies House</li>
+                <li><Link to="/services/company-secretarial-services" className="text-amber-700 underline hover:text-amber-900">Limited company registration</Link> with Companies House</li>
                 <li>Corporation Tax registration with HMRC</li>
                 <li>Guidance on the most appropriate business structure for your situation</li>
                 <li>Initial setup of your company records and statutory registers</li>
@@ -231,16 +237,16 @@ const ContractorAccountantServices = () => {
               </h2>
               <div className="w-10 h-0.5 bg-amber-500 mb-6" />
               <p className="text-gray-700 leading-relaxed mb-4">
-                IR35 compliance is the most important and specialist service a contractor accountant provides — and it is the area where working with a genuine specialist rather than a generalist matters most.
+                <Link to="/what-is-ir35-uk" className="text-amber-700 underline hover:text-amber-900">IR35</Link> compliance is the most important and specialist service a contractor accountant provides — and it is the area where working with a genuine specialist rather than a generalist matters most.
               </p>
               <p className="text-gray-700 leading-relaxed mb-4">
                 IR35 legislation determines whether a contractor working through a limited company is genuinely self-employed or, in HMRC's view, a disguised employee. Getting this wrong can result in substantial back tax and National Insurance liabilities, potentially covering several years.
               </p>
-              <p className="text-gray-700 leading-relaxed mb-3">A specialist contractor accountant will:</p>
+              <p className="text-gray-700 leading-relaxed mb-3 font-semibold">A specialist contractor accountant will:</p>
               <ul className="list-disc pl-6 space-y-2 text-gray-700 mb-4">
-                <li>Review your contracts against IR35 criteria before you sign them</li>
+                <li>Review your contracts against <Link to="/what-are-ir35-rules" className="text-amber-700 underline hover:text-amber-900">IR35 criteria</Link> before you sign them</li>
                 <li>Assess your working practices to identify any compliance risks</li>
-                <li>Provide clear guidance on your IR35 status and what it means for your income</li>
+                <li>Provide clear guidance on your <Link to="/inside-vs-outside-ir35" className="text-amber-700 underline hover:text-amber-900">IR35 status</Link> and what it means for your income</li>
                 <li>Offer ongoing compliance support as your contracts or working arrangements change</li>
                 <li>Represent you if HMRC opens a compliance enquiry</li>
               </ul>
@@ -258,7 +264,7 @@ const ContractorAccountantServices = () => {
               <p className="text-gray-700 leading-relaxed mb-4">
                 Operating through a limited company gives you genuine flexibility in how you structure your income. A specialist contractor accountant will work with you to make the most of that flexibility within HMRC's rules.
               </p>
-              <p className="text-gray-700 leading-relaxed mb-3">This typically includes:</p>
+              <p className="text-gray-700 leading-relaxed mb-3 font-semibold">This typically includes:</p>
               <ul className="list-disc pl-6 space-y-2 text-gray-700 mb-4">
                 <li>Setting a tax-efficient director's salary based on the current tax rules and your individual circumstances</li>
                 <li>Planning dividend payments to minimise your overall tax bill</li>
@@ -267,7 +273,7 @@ const ContractorAccountantServices = () => {
                 <li>Ongoing tax efficiency reviews as your income or circumstances change</li>
               </ul>
               <p className="text-gray-700 leading-relaxed mb-8">
-                For most contractors, proper tax planning saves considerably more than the monthly accountancy fee. The salary and dividend structure alone, when set up correctly, can make a meaningful difference to your annual take-home pay.
+                For most contractors, <Link to="/services/tax-planning" className="text-amber-700 underline hover:text-amber-900">proper tax planning</Link> saves considerably more than the monthly accountancy fee. The salary and dividend structure alone, when set up correctly, can make a meaningful difference to your annual take-home pay.
               </p>
 
               <h2 id="annual-accounts" className="scroll-mt-28 text-3xl font-bold text-gray-900 mt-14 mb-4">
@@ -277,7 +283,7 @@ const ContractorAccountantServices = () => {
               <p className="text-gray-700 leading-relaxed mb-4">
                 Every limited company is legally required to prepare annual accounts and submit a corporation tax return to HMRC each year. As a director, you are also personally required to complete a Self Assessment tax return. These are not optional obligations and the penalties for late or inaccurate submission start immediately.
               </p>
-              <p className="text-gray-700 leading-relaxed mb-3">A specialist contractor accountant handles all of this on your behalf:</p>
+              <p className="text-gray-700 leading-relaxed mb-3 font-semibold">A specialist contractor accountant handles all of this on your behalf:</p>
               <ul className="list-disc pl-6 space-y-2 text-gray-700 mb-4">
                 <li>Preparation of your company's annual accounts to the required standard</li>
                 <li>Submission of annual accounts to Companies House</li>
@@ -296,9 +302,9 @@ const ContractorAccountantServices = () => {
               <p className="text-gray-700 leading-relaxed mb-4">
                 Running payroll as a limited company director is a legal requirement, not an optional extra. Even if you are the only person on the payroll, your salary must be processed correctly each month and reported to HMRC through Real Time Information (RTI) submissions.
               </p>
-              <p className="text-gray-700 leading-relaxed mb-3">Contractor payroll services cover:</p>
+              <p className="text-gray-700 leading-relaxed mb-3 font-semibold">Contractor payroll services cover:</p>
               <ul className="list-disc pl-6 space-y-2 text-gray-700 mb-4">
-                <li><Link to="/services/payroll-and-hr-services" className="text-amber-700 hover:underline">Monthly payroll processing</Link> for the director and any additional employees</li>
+                <li><Link to="/services/payroll-and-hr-services" className="text-amber-700 underline hover:text-amber-900">Monthly payroll processing</Link> for the director and any additional employees</li>
                 <li>Payslip preparation each month</li>
                 <li>RTI submissions to HMRC on time</li>
                 <li>PAYE scheme registration and management</li>
@@ -315,7 +321,7 @@ const ContractorAccountantServices = () => {
               <p className="text-gray-700 leading-relaxed mb-4">
                 Filing annual accounts and tax returns is only part of what a good contractor accountant does. Throughout the year, contractors regularly need quick, practical answers to financial and tax questions — and waiting days for a response is not acceptable when you are running a business.
               </p>
-              <p className="text-gray-700 leading-relaxed mb-3">A specialist contractor accounting service provides:</p>
+              <p className="text-gray-700 leading-relaxed mb-3 font-semibold">A specialist contractor accounting service provides:</p>
               <ul className="list-disc pl-6 space-y-2 text-gray-700 mb-4">
                 <li>Fast responses to queries by phone and email</li>
                 <li>Practical, jargon-free guidance from accountants who work with contractors every day</li>
@@ -331,7 +337,7 @@ const ContractorAccountantServices = () => {
               </h2>
               <div className="w-10 h-0.5 bg-amber-500 mb-6" />
               <p className="text-gray-700 leading-relaxed mb-4">
-                Accurate, up-to-date bookkeeping throughout the year is the foundation of good contractor accounting. Without it, producing accurate annual accounts or responding quickly to an HMRC query becomes significantly harder.
+                Accurate, up-to-date <Link to="/services/vat-and-bookkeeping-accounting-services" className="text-amber-700 underline hover:text-amber-900">bookkeeping</Link> throughout the year is the foundation of good contractor accounting. Without it, producing accurate annual accounts or responding quickly to an HMRC query becomes significantly harder.
               </p>
               <p className="text-gray-700 leading-relaxed mb-3">
                 Most specialist contractor accountants provide access to cloud accounting software — typically FreeAgent or Xero — as part of their monthly package. These platforms give you:
@@ -346,8 +352,9 @@ const ContractorAccountantServices = () => {
                 For contractors in Bristol and across the UK, cloud software means your accountant and your records are always in sync — no year-end scramble, no boxes of receipts.
               </p>
               <p className="text-gray-700 leading-relaxed mb-8">
-                Most contractor accounting services are offered on a <Link to="/how-much-does-a-contractor-accountant-cost-in-the-uk" className="text-amber-700 underline hover:text-amber-900">fixed monthly package</Link>, giving contractors predictable costs while covering their routine accounting and tax obligations.<br /><br />
-                Read our guide on: <Link to="/how-to-choose-contractor-accountant" className="text-amber-700 underline hover:text-amber-900">How to choose a contractor accountant in the UK.</Link>
+                Most contractor accounting services are offered on a <Link to="/pricing" className="text-amber-700 underline hover:text-amber-900">fixed monthly package</Link>, giving contractors predictable costs while covering their routine accounting and tax obligations.
+                <br /><br />
+                Read our guide on: <Link to="/how-to-choose-contractor-accountant" className="text-amber-700 underline hover:text-amber-900">How to choose a contractor accountant in the UK</Link>.
               </p>
 
               <h2 id="bristol-services" className="scroll-mt-28 text-3xl font-bold text-gray-900 mt-14 mb-4">
@@ -355,11 +362,16 @@ const ContractorAccountantServices = () => {
               </h2>
               <div className="w-10 h-0.5 bg-amber-500 mb-6" />
               <p className="text-gray-700 leading-relaxed mb-4">
-                At Henleaze Tax Consultancy, we provide a full range of specialist contractor accounting services to contractors, freelancers and limited company directors in Bristol and across the UK. Every service listed in this guide is available through our practice, delivered by a dedicated accountant who gets to know your business and your specific contracting arrangements.
+                At Henleaze Tax Consultancy, we provide a full range of specialist contractor accounting services to contractors, freelancers and limited company directors in Bristol and across the UK. Every service listed in this guide is available through our practice, delivered by a dedicated accountant who gets to know your business and your specific contracting arrangements. Contractors looking for more specialised tax support can also compare <Link to="/tax-advisory-firms-bristol" className="text-amber-700 underline hover:text-amber-900">tax advisory firms in Bristol</Link> before choosing a provider.
               </p>
-              <p className="text-gray-700 leading-relaxed mb-8">
+              <p className="text-gray-700 leading-relaxed mb-4">
                 For Bristol-based contractors who prefer face-to-face contact, we offer in-person meetings alongside our full remote service capability.
               </p>
+              <p className="text-gray-700 leading-relaxed mb-8">
+                If you are comparing local providers, our guide to the <Link to="/top-5-accountancy-firms-in-bristol" className="text-amber-700 underline hover:text-amber-900">top 5 accountancy firms in Bristol</Link> can help you assess the options.
+              </p>
+
+              {/* Consultation Card */}
               <div className="bg-gray-900 text-white rounded-xl p-8 mb-10 flex flex-col sm:flex-row items-center gap-6">
                 <div className="flex-1">
                   <p className="font-bold text-lg mb-1">Book a free consultation with Henleaze Tax Consultancy</p>
@@ -371,7 +383,7 @@ const ContractorAccountantServices = () => {
                   asChild
                   className="shrink-0 bg-amber-500 hover:bg-amber-400 text-gray-900 font-bold rounded-lg px-6 py-3"
                 >
-                  <Link to="/contact">Speak to an Expert</Link>
+                  <Link to="/contact">Book a Free Consultation →</Link>
                 </Button>
               </div>
 
@@ -383,7 +395,7 @@ const ContractorAccountantServices = () => {
                 A specialist contractor accountant does far more than prepare your annual accounts. From setting up your limited company and managing IR35 to planning your salary and dividends, handling payroll and giving you real-time support throughout the year, the right contractor accounting service covers every aspect of your financial life as a contractor.
               </p>
               <p className="text-gray-700 leading-relaxed mb-10">
-                If you want to understand exactly what is included and what the monthly fee covers, read our guide: Contractor accountant fees.
+                If you want to understand exactly what is included and what the monthly fee covers, read our guide: <Link to="/how-much-does-a-contractor-accountant-cost-in-the-uk" className="text-amber-700 underline hover:text-amber-900">Contractor accountant fees.</Link>
               </p>
 
               <h2 id="faqs" className="scroll-mt-28 text-3xl font-bold text-gray-900 mt-12 mb-4">
@@ -402,8 +414,9 @@ const ContractorAccountantServices = () => {
                     >
                       <span>{faq.q}</span>
                       <ChevronDown
-                        className={`h-4 w-4 text-amber-500 shrink-0 ml-4 transition-transform duration-200 ${openFaq === idx ? "rotate-180" : ""
-                          }`}
+                        className={`h-4 w-4 text-amber-500 shrink-0 ml-4 transition-transform duration-200 ${
+                          openFaq === idx ? "rotate-180" : ""
+                        }`}
                       />
                     </button>
                     {openFaq === idx && (

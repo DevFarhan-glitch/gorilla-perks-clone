@@ -101,12 +101,12 @@ const TopAccountingFirmsForContractors = () => {
 
             {/* Title */}
             <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 leading-tight mb-4" style={{ fontFamily: "'Georgia', serif" }}>
-              6 Best Accounting Firms for Contractors in the UK (2026)
+              Top Accounting Firms for Contractors in the UK (2026 Guide)
             </h1>
 
             {/* Subtitle */}
             <p className="text-xl text-gray-600 leading-relaxed mb-6" style={{ fontFamily: "'Georgia', serif" }}>
-              Top Accounting Firms for Contractors in the UK (2026 Guide)
+              6 Best Accounting Firms for Contractors in the UK (2026)
             </p>
 
             {/* Meta row */}
@@ -130,7 +130,7 @@ const TopAccountingFirmsForContractors = () => {
               If you are a UK <Link to="/what-is-a-contractor-accountant" className="text-amber-700 hover:underline">contractor looking for an accountant</Link>, the honest answer is that the best firm is not the most famous one — it is the one that genuinely specialises in <Link to="/services/contractor-accountants" className="text-amber-700 hover:underline">contractor accounting</Link>, understands IR35 inside out and gives you a clear fixed fee with no hidden surprises.
             </p>
             <p className="text-lg text-gray-700 leading-relaxed mb-4">
-              This guide lists six of the top accounting firms for contractors in the UK in 2026, covering what each one is known for, who they suit best and what to expect from them. Whether you are setting up your first limited company, switching from a generalist accountant or looking for stronger IR35 support, this guide will help you find the right fit.
+              This guide lists seven of the top accounting firms for contractors in the UK in 2026, covering what each one is known for, who they suit best and what to expect from them. For a broader comparison beyond contractor specialists, you can also explore <Link to="/top-10-accounting-firms-uk" className="text-amber-700 underline hover:text-amber-900">our guide to the top 10 accounting firms in the UK.</Link> Whether you are setting up your first limited company, switching from a generalist accountant or looking for stronger IR35 support, this guide will help you find the right fit.
             </p>
             <p className="text-sm text-gray-500 italic mb-8">
               Disclaimer: This list is based on publicly available information, contractor specialisation, professional accreditations, pricing transparency, customer reviews and the range of services offered. The firms are listed for informational purposes and are not ranked in a specific order.
@@ -218,9 +218,13 @@ const TopAccountingFirmsForContractors = () => {
                   </thead>
                   <tbody className="divide-y divide-gray-100">
                     <tr className="hover:bg-gray-50 bg-amber-50/50">
-                      <td className="px-4 py-3 font-bold text-amber-800">Henleaze Tax Consultancy</td>
+                      <td className="px-4 py-3 font-bold text-amber-800">
+                        <Link to="/" className="text-amber-800 hover:underline">Henleaze Tax Consultancy</Link>
+                      </td>
                       <td className="px-4 py-3">Bristol contractors, personal service</td>
-                      <td className="px-4 py-3 font-semibold text-amber-800">From £70.50 + VAT</td>
+                      <td className="px-4 py-3 font-semibold text-amber-800">
+                        <Link to="/pricing" className="text-amber-800 hover:underline">From £70.50 + VAT</Link>
+                      </td>
                     </tr>
                     <tr className="hover:bg-gray-50">
                       <td className="px-4 py-3 font-medium">Gorilla Accounting</td>
@@ -256,10 +260,10 @@ const TopAccountingFirmsForContractors = () => {
                 Gorilla Accounting
               </h2>
               <p className="text-sm text-gray-500 mb-2">
-                Website: gorillaaccounting.com
+                Website: <a href="https://gorillaaccounting.com/" target="_blank" rel="noopener noreferrer" className="text-amber-700 underline hover:text-amber-900">https://gorillaaccounting.com/</a>
               </p>
               <p className="text-gray-700 leading-relaxed mb-4">
-                Founded in 2015, Gorilla has built one of the highest Trustpilot ratings of any UK accountancy firm, 5.0 out of 5 from over 2,100 verified reviews. Their standout feature is a Client Service Guarantee: respond to any query before 3pm the same day, or they pay you £50.
+                Founded in 2015, Gorilla has built the one of the highest Trustpilot ratings of any UK accountancy firm, 5.0 out of 5 from over 2,100 verified reviews. Their standout feature is a Client Service Guarantee: respond to any query before 3pm the same day, or they pay you £50.
               </p>
               <p className="font-semibold text-gray-800 mb-2">Best for: New contractors and those who prioritise fast, reliable communication.</p>
               <ul className="list-disc pl-6 space-y-1 text-gray-700 mb-6">
@@ -277,7 +281,7 @@ const TopAccountingFirmsForContractors = () => {
                 Clever Accounts
               </h2>
               <p className="text-sm text-gray-500 mb-2">
-                Website: cleveraccountants.co.uk
+                Website: <a href="https://cleveraccountants.co.uk/" target="_blank" rel="noopener noreferrer" className="text-amber-700 underline hover:text-amber-900">https://cleveraccountants.co.uk/</a>
               </p>
               <p className="text-gray-700 leading-relaxed mb-4">
                 Clever Accounts offers something genuinely unique in the market — their IR35 FLEX solution allows contractors to move between limited company and umbrella arrangements within a single monthly package. For contractors whose IR35 status changes between contracts, this removes a significant administrative headache.
@@ -298,7 +302,7 @@ const TopAccountingFirmsForContractors = () => {
                 SG Accounting
               </h2>
               <p className="text-sm text-gray-500 mb-2">
-                Website: sg-accounting.co.uk
+                Website: <a href="https://sg-accounting.co.uk/" target="_blank" rel="noopener noreferrer" className="text-amber-700 underline hover:text-amber-900">https://sg-accounting.co.uk/</a>
               </p>
               <p className="text-gray-700 leading-relaxed mb-4">
                 SG Accounting consistently appears on trusted contractor directories including ContractorUK and ITContracting. They are known for offering solid, reliable contractor accounting at one of the most competitive monthly rates in the market, making them a popular choice for contractors who want quality without paying premium prices.
@@ -322,24 +326,23 @@ const TopAccountingFirmsForContractors = () => {
                 Website: <a href="https://henleazetaxconsultancy.com" className="text-amber-700 underline hover:text-amber-900">henleazetaxconsultancy.com</a>
               </p>
               <p className="text-gray-700 leading-relaxed mb-4">
-                A Bristol-based specialist working with contractors, freelancers and limited company directors across Bristol and the UK. Every client gets a dedicated accountant, a fixed monthly fee and face-to-face availability for Bristol-based clients, something national firms rarely offer.
+                A Bristol-based specialist working with contractors, freelancers and limited company directors across Bristol and the UK. Contractors looking for broader tax support can also compare <Link to="/tax-advisory-firms-bristol" className="text-amber-700 underline hover:text-amber-900">tax advisory firms in Bristol</Link> before choosing a provider. Every client gets a dedicated accountant, a fixed monthly fee and face-to-face availability for Bristol-based clients, something national firms rarely offer.
               </p>
               <p className="font-semibold text-gray-800 mb-2">Best for: Bristol contractors wanting local specialist support and a genuinely personal service.</p>
               <ul className="list-disc pl-6 space-y-1 text-gray-700 mb-6">
                 <li>Fixed monthly fees, no hidden costs</li>
                 <li>Dedicated accountant and IR35 guidance</li>
-                <li><Link to="/services/tax-planning" className="text-amber-700 hover:underline">Salary and dividend planning</Link>, <Link to="/services/vat-and-bookkeeping-accounting-services" className="text-amber-700 hover:underline">VAT</Link>, <Link to="/services/payroll-and-hr-services" className="text-amber-700 hover:underline">payroll</Link>, <Link to="/services/personal-tax-and-self-assessment-service" className="text-amber-700 hover:underline">Self Assessment</Link></li>
+                <li>Salary and dividend planning, VAT, payroll, Self Assessment</li>
                 <li>Face-to-face meetings available locally</li>
               </ul>
               <p className="text-sm text-gray-500 italic mb-4">
-                Accreditation: ACCA | Pricing <Link to="/pricing" className="text-amber-700 hover:underline">Fixed fee</Link> :  —  <Link to="/contact" className="text-amber-700 hover:underline">Contact for quote</Link>
+                Accreditation: ACCA | Pricing: <Link to="/contact" className="text-amber-700 underline hover:text-amber-900">Fixed fee — contact for quote</Link>
               </p>
               <p className="text-gray-700 mb-8 font-medium">
                 Learn{" "}
-                <Link to="/whats-included-in-contractor-accounting" className="text-amber-700 underline hover:text-amber-900 font-semibold">
-                  what services contractor accountants provide in the UK
+                <Link to="/contractor-accountant-services-in-the-uk" className="text-amber-700 underline hover:text-amber-900 font-semibold">
+                  what services contractor accountants provide in the UK.
                 </Link>
-                .
               </p>
 
               {/* Section 7 */}
@@ -347,7 +350,7 @@ const TopAccountingFirmsForContractors = () => {
                 Integro Accounting
               </h2>
               <p className="text-sm text-gray-500 mb-2">
-                Website: integroaccounting.com
+                Website: <a href="https://www.integroaccounting.com/" target="_blank" rel="noopener noreferrer" className="text-amber-700 underline hover:text-amber-900">https://www.integroaccounting.com/</a>
               </p>
               <p className="text-gray-700 leading-relaxed mb-4">
                 Integro Accounting is a specialist contractor accountant with a strong following among IT and technology contractors. They appear consistently on ContractorEye and ITContracting recommended lists and offer a flexible introductory pricing structure that makes switching straightforward.
@@ -368,7 +371,7 @@ const TopAccountingFirmsForContractors = () => {
                 Dolan Accountancy
               </h2>
               <p className="text-sm text-gray-500 mb-2">
-                Website: dolanaccountancy.com
+                Website: <a href="https://www.dolanaccountancy.com/" target="_blank" rel="noopener noreferrer" className="text-amber-700 underline hover:text-amber-900">https://www.dolanaccountancy.com/</a>
               </p>
               <p className="text-gray-700 leading-relaxed mb-4">
                 Dolan Accountancy has built a specialist reputation particularly among locum doctors, dentists, nurses and other healthcare professionals contracting through limited companies. Their understanding of the specific IR35 considerations in the NHS and private healthcare sector sets them apart from generalist contractor accountants.
@@ -396,34 +399,31 @@ const TopAccountingFirmsForContractors = () => {
                 <li><strong>New to contracting</strong> — Gorilla Accounting and SG Accounting both offer strong onboarding support and competitive pricing, making them a solid starting point for first-time limited company directors.</li>
                 <li><strong>Complex IR35 situation</strong> — Clever Accounts is the standout choice, with their unique IR35 FLEX solution and written contract opinions included as standard.</li>
                 <li><strong>Healthcare or locum work</strong> — Dolan Accountancy has deep sector-specific expertise in NHS and private sector contractor arrangements that generalist firms cannot match.</li>
-                <li><strong>Bristol-based contractors</strong> — <Link to="/henleazetaxconsultancy.com" className="text-amber-700 underline hover:text-amber-900 font-semibold">Henleaze Tax Consultancy</Link> offers local specialist knowledge and face-to-face availability that national online firms simply do not provide.</li>
+                <li><strong>Bristol-based contractors</strong> — <Link to="/" className="text-amber-700 underline hover:text-amber-900 font-semibold">Henleaze Tax Consultancy</Link> offers local specialist knowledge and face-to-face availability that national online firms simply do not provide. If you are comparing local providers, our guide to the <Link to="/top-5-accountancy-firms-in-bristol" className="text-amber-700 underline hover:text-amber-900 font-semibold">top 5 accountancy firms in Bristol</Link> can help you explore the alternatives.</li>
                 <li><strong>Value for money</strong> — SG Accounting consistently offers one of the most competitive monthly rates in the market without compromising on core service quality.</li>
               </ul>
-              <p className="text-gray-700 mb-8 font-medium">
-                For a full breakdown of what to look for: <Link to="/how-to-choose-contractor-accountant" className="text-amber-700 underline hover:text-amber-900 font-semibold">How to Choose a Contractor Accountant: 9 Key Factors</Link>
-              </p>
 
               {/* Section 10 */}
               <h2 id="why-henleaze" className="scroll-mt-28 text-3xl font-bold text-gray-900 mt-12 mb-4">
                 Why Henleaze Tax Consultancy for Bristol Contractors
               </h2>
               <div className="w-10 h-0.5 bg-amber-500 mb-6" />
-              <p className="text-gray-700 leading-relaxed mb-4">
-                Bristol has a growing contractor community across technology, engineering and financial services. At Henleaze Tax Consultancy, every client works with a dedicated accountant, pays a fixed monthly fee with no surprises and has access to face-to-face meetings when needed. We cover IR35 guidance, salary planning, VAT, Self Assessment and Companies House filings — all under one straightforward package.
+              <p className="text-gray-700 leading-relaxed mb-6">
+                Bristol has a growing contractor community across technology, engineering and financial services. At Henleaze Tax Consultancy, every client works with a dedicated accountant, pays a fixed monthly fee with no surprises and has access to face-to-face meetings when needed. We cover <Link to="/what-is-ir35-uk" className="text-amber-700 underline hover:text-amber-900">IR35 guidance</Link>, salary planning, VAT, Self Assessment and Companies House filings — all under one straightforward package.
               </p>
 
               <div className="bg-gray-900 text-white rounded-xl p-8 mb-8 flex flex-col sm:flex-row items-center gap-6">
                 <div className="flex-1">
                   <p className="font-bold text-lg mb-1">Book a free consultation with Henleaze Tax Consultancy</p>
                   <p className="text-gray-300 text-sm leading-relaxed">
-                    Get clear guidance on your contractor status, <Link to="/services/tax-planning" className="text-amber-400 hover:underline">tax planning</Link>, and how we can support you.
+                    Get clear guidance on your contractor status, tax planning, and how we can support you.
                   </p>
                 </div>
                 <Button
                   asChild
                   className="shrink-0 bg-amber-500 hover:bg-amber-400 text-gray-900 font-bold rounded-lg px-6 py-3 border-none"
                 >
-                  <Link to="/contact">Book Free Consultation</Link>
+                  <Link to="/contact">Book a free consultation with Henleaze Tax Consultancy →</Link>
                 </Button>
               </div>
 
@@ -433,21 +433,10 @@ const TopAccountingFirmsForContractors = () => {
               </h2>
               <div className="w-10 h-0.5 bg-amber-500 mb-6" />
               <p className="text-gray-700 leading-relaxed mb-4">
-                Finding the right accounting firm as a contractor comes down to three things: genuine specialism, transparent pricing and solid IR35 knowledge. All six firms on this list meet that standard in their own way and the best choice simply depends on your situation and what matters most to you.
-              </p>
-              <p className="text-gray-700 leading-relaxed mb-4">
-                The right contractor accountant should do more than prepare your accounts. They should help you stay compliant, minimise tax and support your business as it grows.
+                Finding the right accounting firm as a contractor comes down to three things, genuine specialism, transparent pricing and solid IR35 knowledge. All seven firms on this list meet that standard in their own way and the best choice simply depends on your situation and what matters most to you.
               </p>
               <p className="text-gray-700 leading-relaxed mb-8">
-                Before making your decision, it is worth understanding{" "}
-                <Link to="/how-much-does-a-contractor-accountant-cost-in-the-uk" className="text-amber-700 underline hover:text-amber-900">
-                  how much a contractor accountant costs in the UK
-                </Link>
-                {" "}and reviewing the key factors in our guide on{" "}
-                <Link to="/how-to-choose-contractor-accountant" className="text-amber-700 underline hover:text-amber-900">
-                  how to choose a contractor accountant
-                </Link>
-                .
+                The right contractor accountant should do more than prepare your accounts. They should help you stay compliant, minimise tax and support your business as it grows.
               </p>
 
             </div>
@@ -462,3 +451,4 @@ const TopAccountingFirmsForContractors = () => {
 };
 
 export default TopAccountingFirmsForContractors;
+

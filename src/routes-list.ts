@@ -25,6 +25,7 @@ export const PRERENDER_ROUTES = [
   "/how-much-does-a-contractor-accountant-cost-in-the-uk",
   "/top-accounting-firms-for-contractors-uk",
   "/whats-included-in-contractor-accounting",
+  "/contractor-accountant-services-in-the-uk",
   "/what-is-ir35-uk",
   "/how-does-ir35-work-in-the-uk",
   "/what-are-ir35-rules",

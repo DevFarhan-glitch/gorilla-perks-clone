@@ -1,27 +1,27 @@
 import { useEffect, useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import { ArrowLeft, Calendar, Clock, User, ChevronDown } from "lucide-react";
+import { ArrowLeft, Calendar, Clock, User } from "lucide-react";
 import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { NearbyLocationsSection } from "@/components/common/NearbyLocationsSection";
 
 const sections = [
   { id: "intro", title: "Contractor Accountant Fees (2026)" },
-  { id: "how-much-does-it-cost", title: "How Much Does a Contractor Accountant Cost?" },
-  { id: "pricing-models", title: "What Pricing Models are Used?" },
-  { id: "whats-included", title: "What Does the Fee Include?" },
-  { id: "factors", title: "What Factors Affect the Cost?" },
-  { id: "tax-deductible", title: "Are Fees Tax Deductible?" },
-  { id: "worth-it", title: "Is it Worth the Cost?" },
-  { id: "bristol-fees", title: "Fees in Bristol — What to Expect" },
+  { id: "how-much-does-it-cost", title: "How Much Does a Contractor Accountant Cost in 2026?" },
+  { id: "pricing-models", title: "What Pricing Models Do Contractor Accountants Use in the UK?" },
+  { id: "whats-included", title: "What Does a Contractor Accountant Fee Typically Include?" },
+  { id: "factors", title: "What Factors Affect the Cost of a Contractor Accountant in the UK?" },
+  { id: "tax-deductible", title: "Are Contractor Accountant Fees Tax Deductible?" },
+  { id: "worth-it", title: "Is a Contractor Accountant Worth the Cost?" },
+  { id: "bristol-fees", title: "Contractor Accountant Fees in Bristol — What to Expect" },
   { id: "final-words", title: "Final Words" },
 ];
 
 const pricingPackages = [
   { level: "Entry level", fee: "£60 – £80", services: "Annual accounts, corporation tax return, basic HMRC support" },
-  { level: "Mid range", fee: "£80 – £120", services: <>All of the above plus <Link to="/services/personal-tax-and-self-assessment-service" className="text-amber-700 hover:underline">Self Assessment</Link>, <Link to="/services/payroll-and-hr-services" className="text-amber-700 hover:underline">payroll</Link>, <Link to="/services/vat-and-bookkeeping-accounting-services" className="text-amber-700 hover:underline">VAT returns</Link>, <Link to="/services/vat-and-bookkeeping-accounting-services" className="text-amber-700 hover:underline">bookkeeping software</Link></> },
-  { level: "Comprehensive", fee: "£120 – £150", services: <>Full service including IR35 support, dedicated accountant, <Link to="/services/tax-planning" className="text-amber-700 hover:underline">tax planning advice</Link></> },
+  { level: "Mid range", fee: "£80 – £120", services: "All of the above plus Self Assessment, payroll, VAT returns, bookkeeping software" },
+  { level: "Comprehensive", fee: "£120 – £150", services: "Full service including IR35 support, dedicated accountant, tax planning advice" },
 ];
 
 const HowMuchDoesContractorAccountantCost = () => {
@@ -133,7 +133,7 @@ const HowMuchDoesContractorAccountantCost = () => {
             {/* Introduction section */}
             <div id="intro" className="scroll-mt-28">
               <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                Pricing is usually one of the first things contractors want to know before hiring an accountant. And fair enough — you want to know what you are getting into before committing to a monthly fee. The good news is that <Link to="/services/contractor-accountants" className="text-amber-700 underline hover:text-amber-900">contractor accountant </Link> fees in the UK are generally transparent, predictable and in most cases, well worth what you pay.
+                Pricing is usually one of the first things contractors want to know before hiring an accountant. And fair enough — you want to know what you are getting into before committing to a monthly fee. The good news is that <Link to="/services/contractor-accountants" className="text-amber-700 underline hover:text-amber-900">contractor accountant</Link> fees in the UK are generally transparent, predictable and in most cases, well worth what you pay.
               </p>
               <p className="text-lg text-gray-700 leading-relaxed mb-8">
                 The typical monthly cost sits between £60 and £150 plus VAT, depending on the services included and the firm you choose. This article breaks down exactly what that money gets you, what to watch out for and how to decide whether the fee represents good value.
@@ -183,7 +183,7 @@ const HowMuchDoesContractorAccountantCost = () => {
               </h2>
               <div className="w-10 h-0.5 bg-amber-500 mb-6" />
               <p className="text-gray-700 leading-relaxed mb-4">
-                Most <Link to="/what-is-a-contractor-accountant" className="text-amber-700 underline hover:text-amber-900">specialist contractor accountants</Link> in the UK charge a fixed monthly fee. Here is what you can generally expect across different price points:
+                Most <Link to="/what-is-a-contractor-accountant" className="text-amber-700 underline hover:text-amber-900">specialist contractor accountants in the UK</Link> charge a fixed monthly fee. Here is what you can generally expect across different price points:
               </p>
 
               <div className="overflow-x-auto mb-8 rounded-xl border border-gray-200 shadow-sm">
@@ -217,7 +217,7 @@ const HowMuchDoesContractorAccountantCost = () => {
               </div>
 
               <p className="text-gray-700 leading-relaxed mb-6">
-                One thing many contractors miss when comparing prices: VAT is charged on top by <Link to="/services/top-accounting-firms-for-contractors-uk" className="text-amber-700 underline hover:text-amber-900">most accountancy firms</Link>. So a fee advertised at £100 per month will actually cost £120 once VAT is added. Always check whether the price quoted is inclusive or exclusive of VAT before you sign up.
+                One thing many contractors miss when comparing prices: VAT is charged on top by most <Link to="/top-10-accounting-firms-uk" className="text-amber-700 underline hover:text-amber-900">accountancy firms.</Link> So a fee advertised at £100 per month will actually cost £120 once VAT is added. Always check whether the price quoted is inclusive or exclusive of VAT before you sign up.
               </p>
 
               <div className="my-10 rounded-xl overflow-hidden shadow-md">
@@ -232,7 +232,7 @@ const HowMuchDoesContractorAccountantCost = () => {
               </h2>
               <div className="w-10 h-0.5 bg-amber-500 mb-6" />
               <p className="text-gray-700 leading-relaxed mb-4">
-                Before comparing quotes, it helps to understand  <Link to="/pricing" className="text-amber-700 underline hover:text-amber-900">how contractor accountants structure their pricing</Link>. Price is only one factor when choosing an accountant. It's also worth considering their experience with contractors, the level of support they provide and the services included in their package. Read our <Link to="/how-to-choose-contractor-accountant" className="text-amber-700 underline hover:text-amber-900">guide on how to choose a contractor accountant</Link> to understand what to look for before making your decision.
+                Before comparing quotes, it helps to understand <Link to="/pricing" className="text-amber-700 underline hover:text-amber-900">how contractor accountants structure their pricing</Link>. Price is only one factor when choosing an accountant. It's also worth considering their experience with contractors, the level of support they provide and the services included in their package. Read our guide on <Link to="/how-to-choose-contractor-accountant" className="text-amber-700 underline hover:text-amber-900">how to choose a contractor accountant</Link> to understand what to look for before making your decision.
               </p>
 
               <div className="space-y-4 mb-6">
@@ -243,7 +243,7 @@ const HowMuchDoesContractorAccountantCost = () => {
                   <strong>Hourly rate</strong> is less common in the contractor accounting space but does still exist, particularly among general accountants who take on contractor clients occasionally. Rates typically sit between £50 and £150 per hour. The problem with hourly billing is that costs can quickly become unpredictable, especially during busier periods like the Self Assessment deadline in January.
                 </p>
                 <p className="text-gray-700 leading-relaxed">
-                  <strong>One-off fees</strong> apply to specific tasks that fall outside a standard package — things like <Link to="/services/company-secretarial-services" className="text-amber-700 underline hover:text-amber-900">company formation</Link>, IR35 contract reviews or mortgage reference letters. Some firms include these in their monthly fee; others charge separately. This is worth clarifying before you commit to any package.
+                  <strong>One-off fees</strong> apply to specific tasks that fall outside a standard package — things like company formation, <Link to="/what-is-ir35-uk" className="text-amber-700 underline hover:text-amber-900">IR35</Link> contract reviews or mortgage reference letters. Some firms include these in their monthly fee; others charge separately. This is worth clarifying before you commit to any package.
                 </p>
               </div>
 
@@ -265,13 +265,13 @@ const HowMuchDoesContractorAccountantCost = () => {
                 <li><Link to="/services/personal-tax-and-self-assessment-service" className="text-amber-700 underline hover:text-amber-900">Self Assessment personal tax return</Link> for you as a director</li>
                 <li>Director <Link to="/services/payroll-and-hr-services" className="text-amber-700 underline hover:text-amber-900">payroll</Link> set up and run each month</li>
                 <li><Link to="/services/vat-and-bookkeeping-accounting-services" className="text-amber-700 underline hover:text-amber-900">VAT registration and quarterly VAT returns</Link></li>
-                <li>Access to cloud bookkeeping softwaresuch as FreeAgent or Xero</li>
-                <li>Companies House confirmation statement filed annually</li>
+                <li>Access to cloud <Link to="/services/vat-and-bookkeeping-accounting-services" className="text-amber-700 underline hover:text-amber-900">bookkeeping software</Link> such as FreeAgent or Xero</li>
+                <li><Link to="/services/company-secretarial-services" className="text-amber-700 underline hover:text-amber-900">Companies House confirmation statement</Link> filed annually</li>
                 <li>Ongoing support for HMRC queries and general tax questions</li>
                 <li><Link to="/services/tax-planning" className="text-amber-700 underline hover:text-amber-900">Salary and dividend planning advice</Link></li>
               </ul>
               <p className="text-gray-700 leading-relaxed mb-8">
-                This covers the core of what most limited company contractors need to stay compliant and run their finances efficiently throughout the year. If you'd like to see everything that's typically included, explore our <Link to="/whats-included-in-contractor-accounting" className="text-amber-700 underline hover:text-amber-900">guide on contractors accounting services</Link> to learn how specialist support can help keep your business compliant and tax efficient.
+                This covers the core of what most limited company contractors need to stay compliant and run their finances efficiently throughout the year. If you'd like to see everything that's typically included, explore our <Link to="/contractor-accountant-services-in-the-uk" className="text-amber-700 underline hover:text-amber-900">guide on contractors accounting services</Link> to learn how specialist support can help keep your business compliant and tax efficient.
               </p>
 
               {/* What Factors Affect the Cost of a Contractor Accountant in the UK? */}
@@ -299,7 +299,7 @@ const HowMuchDoesContractorAccountantCost = () => {
               </h2>
               <div className="w-10 h-0.5 bg-amber-500 mb-6" />
               <p className="text-gray-700 leading-relaxed mb-4">
-                Yes — and this is something many contractors do not fully appreciate when they first look at the monthly cost. Accountancy fees are a legitimate and allowable business expense under <Link to="https://www.gov.uk/expenses-if-youre-self-employed" className="text-amber-700 underline hover:text-amber-900">HMRC's guidelines on allowable expenses</Link>, which means they are deducted from your company's profits before corporation tax is calculated.
+                Yes — and this is something many contractors do not fully appreciate when they first look at the monthly cost. Accountancy fees are a legitimate and allowable business expense under <a href="https://www.gov.uk/expenses-if-youre-self-employed" target="_blank" rel="noopener noreferrer" className="text-amber-700 underline hover:text-amber-900">HMRC's guidelines on allowable expenses</a>, which means they are deducted from your company's profits before corporation tax is calculated.
               </p>
               <p className="text-gray-700 leading-relaxed mb-4">
                 In practice, this means the real cost of your accountant is lower than the headline figure. If your limited company pays corporation tax at 19%, a monthly fee of £100 effectively costs you around £81 after tax relief. At higher rates of corporation tax, the saving is even greater.
@@ -320,20 +320,20 @@ const HowMuchDoesContractorAccountantCost = () => {
                 Consider what a specialist contractor accountant actually delivers. The right salary and dividend structure alone can save most contractors between £2,000 and £5,000 per year compared to drawing everything as salary. Identifying all allowable business expenses, equipment, professional subscriptions, home office costs, travel, adds further savings. Pension contributions made through the company reduce your corporation tax bill on top of that.
               </p>
               <p className="text-gray-700 leading-relaxed mb-4">
+                Understanding the <Link to="/dividend-tax-rates-2026-27" className="text-amber-700 underline hover:text-amber-900">dividend tax rates for 2026/27</Link> can also help contractors make better decisions about how they draw income from their company.
+              </p>
+              <p className="text-gray-700 leading-relaxed mb-4">
                 Then there is the protection side. HMRC fines for late filing start at £100 and escalate quickly. An IR35 mistake can result in years of back tax and National Insurance being demanded at once. A missed VAT registration threshold means back-dated VAT owed from the point you should have registered.
               </p>
               <p className="text-gray-700 leading-relaxed mb-4">
                 When you look at the full picture, the monthly fee is not really a cost at all, it is what you pay to avoid much larger losses while keeping more of what you earn.
               </p>
-              <p className="text-gray-700 leading-relaxed mb-6">
-                Not all accounting firms for contractors offer the same level of expertise or support. Comparing services, contractor experience and fixed-fee packages can help you choose an accountant that delivers long-term value rather than simply the lowest monthly cost.
+              <p className="text-gray-700 leading-relaxed mb-4">
+                Not all <Link to="/top-accounting-firms-for-contractors-uk" className="text-amber-700 underline hover:text-amber-900">accounting firms for contractors</Link> offer the same level of expertise or support. Comparing services, contractor experience and fixed-fee packages can help you choose an accountant that delivers long-term value rather than simply the lowest monthly cost.
               </p>
-
-              <div className="bg-amber-50 border-l-4 border-amber-400 pl-5 py-4 mb-8 rounded-r-lg">
-                <p className="text-amber-900 text-sm font-medium m-0">
-                  💡 For more on this, see our guide: <Link to="/why-contractors-need-specialist-accountant" className="text-amber-700 underline hover:text-amber-900">Why Do Contractors Need a Specialist Accountant in the UK?</Link>
-                </p>
-              </div>
+              <p className="text-gray-700 leading-relaxed mb-8">
+                For more on this, see our guide: <Link to="/why-contractors-need-specialist-accountant" className="text-amber-700 underline hover:text-amber-900">Why Do Contractors Need a Specialist Accountant in the UK?</Link>
+              </p>
 
               {/* Contractor Accountant Fees in Bristol — What to Expect */}
               <h2 id="bristol-fees" className="scroll-mt-28 text-3xl font-bold text-gray-900 mt-14 mb-4">
@@ -344,7 +344,13 @@ const HowMuchDoesContractorAccountantCost = () => {
                 Bristol has a growing and active contractor community, particularly across technology, engineering and the creative industries. Local specialist accountants understand the kinds of contracts Bristol contractors typically work on and the IR35 considerations that come with them.
               </p>
               <p className="text-gray-700 leading-relaxed mb-4">
+                If you're comparing local options, our guide to the <Link to="/top-5-accountancy-firms-in-bristol" className="text-amber-700 underline hover:text-amber-900">top 5 accountancy firms in Bristol</Link> can help you see what different firms offer.
+              </p>
+              <p className="text-gray-700 leading-relaxed mb-4">
                 At Henleaze Tax Consultancy, we offer fixed monthly fees with no hidden extras, a dedicated accountant for every client and plain-English advice on everything from IR35 and VAT to salary planning and Self Assessment. Bristol-based clients are welcome to meet us face to face, we believe good accountancy is built on a genuine relationship, not just a ticketing system.
+              </p>
+              <p className="text-gray-700 leading-relaxed mb-4">
+                If you need broader tax support alongside accounting, comparing <Link to="/tax-advisory-firms-bristol" className="text-amber-700 underline hover:text-amber-900">tax advisory firms in Bristol</Link> can help you find the right level of specialist advice.
               </p>
               <p className="text-gray-700 leading-relaxed mb-6">
                 If you would like to know exactly what our fees include and whether we are the right fit for your situation, we are happy to have a no-obligation conversation.
@@ -361,7 +367,7 @@ const HowMuchDoesContractorAccountantCost = () => {
                   asChild
                   className="shrink-0 bg-amber-500 hover:bg-amber-400 text-gray-900 font-bold rounded-lg px-6 py-3"
                 >
-                  <Link to="/contact">Book Free Consultation</Link>
+                  <Link to="/contact">Get in touch with Henleaze Tax Consultancy</Link>
                 </Button>
               </div>
 
@@ -370,7 +376,7 @@ const HowMuchDoesContractorAccountantCost = () => {
                 Final Words
               </h2>
               <div className="w-10 h-0.5 bg-amber-500 mb-6" />
-              <p className="text-gray-700 leading-relaxed mb-4">
+              <p className="text-gray-700 leading-relaxed mb-8">
                 Choosing the right contractor accountant is about more than finding the lowest monthly fee. The best accountants help you stay compliant, minimise your tax liabilities and provide ongoing advice as your business grows. When comparing prices, always look at the services included, the level of support offered and the accountant's experience working with contractors. A slightly higher monthly fee can often deliver significantly greater value over the long term.
               </p>
 
@@ -390,3 +396,4 @@ const HowMuchDoesContractorAccountantCost = () => {
 };
 
 export default HowMuchDoesContractorAccountantCost;
+

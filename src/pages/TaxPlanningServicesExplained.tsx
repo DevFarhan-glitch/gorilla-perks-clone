@@ -223,9 +223,11 @@ const TaxPlanningServicesExplained = () => {
             </p>
 
             <p className="text-lg text-gray-700 leading-relaxed mb-4">
-              In simple terms,<Link to="https://henleazetaxconsultancy.com/services/tax-planning" className="text-amber-700 font-semibold hover:underline">
+              In simple terms,{" "}
+              <Link to="/services/tax-planning" className="text-amber-700 font-semibold hover:underline">
                 tax planning
-              </Link> is about making informed financial decisions before tax becomes due. Whether you're a business owner, landlord, contractor or an individual planning for the future, the right advice can help you make full use of available reliefs while staying compliant with HMRC.
+              </Link>{" "}
+              is about making informed financial decisions before tax becomes due. Whether you're a business owner, landlord, contractor or an individual planning for the future, the right advice can help you make full use of available reliefs while staying compliant with HMRC.
             </p>
 
             <p className="text-lg text-gray-700 leading-relaxed mb-8">
@@ -351,15 +353,15 @@ const TaxPlanningServicesExplained = () => {
                     Look at how a company manages its tax obligations throughout the year, not just at filing time. This typically includes corporation tax calculations, preparing the company tax return itself, reviewing available reliefs and allowances before they are missed and ongoing support with HMRC compliance.
                   </p>
                   <p className="text-gray-700 leading-relaxed mt-3">
-                    For company directors, this often includes advice on how to take income in the most tax-efficient way. If you pay yourself through dividends as well as salary, it's also worth understanding the latest{" "}
-                    <Link to="https://henleazetaxconsultancy.com/dividend-tax-rates-2026-27" className="text-amber-700 font-semibold hover:underline">
-                      Dividend Tax Rates 2026 to 2027
+                    For company directors, this often includes advice on how to take income in the most tax-efficient way. If you pay yourself through dividends as well as salary, it's also worth understanding the{" "}
+                    <Link to="/dividend-tax-rates-2026-27" className="text-amber-700 font-semibold hover:underline">
+                      latest Dividend Tax Rates 2026 to 2027
                     </Link>
                     , as changes can affect your overall tax position. You can also use our{" "}
-                    <Link to="https://henleazetaxconsultancy.com/calculator" className="text-amber-700 font-semibold hover:underline">
-                      UK Salary Calculator
-                    </Link>
-                    {" "} to check the salary side of your income.
+                    <Link to="/calculator" className="text-amber-700 font-semibold hover:underline">
+                      UK salary calculator
+                    </Link>{" "}
+                    to check the salary side of your income.
                   </p>
                 </div>
 
@@ -392,7 +394,7 @@ const TaxPlanningServicesExplained = () => {
                     Protects an estate for the next generation. This usually involves reviewing how an estate is structured, calculating likely inheritance tax exposure, checking which reliefs and exemptions are available and planning how wealth is passed on over time rather than all at once.
                   </p>
                   <p className="text-gray-700 leading-relaxed mt-3">
-                    Recent changes have also made pension planning an increasingly important part of inheritance tax discussions.
+                    Recent changes have also made pension planning an increasingly important part of inheritance tax discussions. If you're thinking about passing on pension wealth, our guide to Pensions and Inheritance Tax Changes 2027 explains what these developments could mean for you.
                   </p>
                 </div>
 
@@ -433,12 +435,15 @@ const TaxPlanningServicesExplained = () => {
               </p>
 
               <p className="text-gray-700 leading-relaxed mb-4">
-                The same applies to contractors working through their own limited company. Decisions about salary, dividends, pension contributions and business expenses all influence each other, so looking at the bigger picture usually produces better long-term outcomes.This is where <Link to="https://henleazetaxconsultancy.com/whats-included-in-contractor-accounting" className="text-amber-700 font-semibold hover:underline">
+                The same applies to contractors working through their own limited company. Decisions about salary, dividends, pension contributions and business expenses all influence each other, so looking at the bigger picture usually produces better long-term outcomes. This is where{" "}
+                <Link to="/contractor-accountant-services-in-the-uk" className="text-amber-700 font-semibold hover:underline">
                   contractor accounting services
-                </Link> can help bring those decisions together. For contractors, <Link to="https://henleazetaxconsultancy.com/what-is-ir35-uk" className="text-amber-700 font-semibold hover:underline">
+                </Link>{" "}
+                can help bring those decisions together. For contractors,{" "}
+                <Link to="/what-is-ir35-uk" className="text-amber-700 font-semibold hover:underline">
                   IR35
-                </Link> can also affect how income is structured and taxed.
-
+                </Link>
+                {" "}can also affect how income is structured and taxed.
               </p>
 
               <p className="text-gray-700 leading-relaxed mb-10">
@@ -456,9 +461,11 @@ const TaxPlanningServicesExplained = () => {
               </p>
 
               <p className="text-gray-700 leading-relaxed mb-10 font-medium text-gray-900 bg-amber-50/60 p-4 rounded-lg border border-amber-200">
-                Genuine tax planning tends to involve conversations throughout the year, particularly before any major financial decision such as selling an asset, changing how you draw income, or restructuring a business. Understanding <Link to="https://henleazetaxconsultancy.com/how-do-you-calculate-your-annual-salary-in-uk" className="text-amber-700 font-semibold hover:underline">
+                Genuine tax planning tends to involve conversations throughout the year, particularly before any major financial decision such as selling an asset, changing how you draw income, or restructuring a business. Understanding{" "}
+                <Link to="/how-do-you-calculate-your-annual-salary-in-uk" className="text-amber-700 font-semibold hover:underline">
                   how annual salary is calculated in the UK
-                </Link> can also help when reviewing your overall income
+                </Link>{" "}
+                can also help when reviewing your overall income.
               </p>
 
               {/* Section 5 */}
@@ -513,7 +520,7 @@ const TaxPlanningServicesExplained = () => {
                   </div>
                   <p className="text-sm text-gray-600 leading-relaxed">
                     Working through their own limited company, where the right structure affects several of these areas at once, as covered in our{" "}
-                    <Link to="https://henleazetaxconsultancy.com/what-is-a-contractor-accountant" className="text-amber-700 font-semibold hover:underline">
+                    <Link to="/what-is-a-contractor-accountant" className="text-amber-700 font-semibold hover:underline">
                       contractor accountant guide
                     </Link>.
                   </p>
@@ -568,13 +575,19 @@ const TaxPlanningServicesExplained = () => {
               </ul>
 
               <p className="text-gray-700 leading-relaxed mb-6">
-                This matters more than it used to. HMRC has been investing heavily in <Link to="https://www.gov.uk/government/publications/summary-of-tax-update-2026-simplification-modernisation-and-fairness/tax-update-2026-simplification-modernisation-and-fairness-summary" className="text-amber-700 font-semibold hover:underline">
+                This matters more than it used to. HMRC has been investing heavily in{" "}
+                <a href="https://www.gov.uk/government/publications/summary-of-tax-update-2026-simplification-modernisation-and-fairness/tax-update-2026-simplification-modernisation-and-fairness-summary" className="text-amber-700 font-semibold hover:underline" target="_blank" rel="noopener noreferrer">
                   compliance activity
-                </Link>, including recruiting several thousand additional compliance officers and expanding its use of data matching across banks, property records and online platforms to identify undeclared income. Working with a service that keeps you compliant while still planning properly is more valuable now than it has been in some time.
+                </a>
+                , including recruiting several thousand additional compliance officers and expanding its use of data matching across banks, property records and online platforms to identify undeclared income. Working with a service that keeps you compliant while still planning properly is more valuable now than it has been in some time.
               </p>
 
               <p className="text-gray-700 leading-relaxed mb-10">
-                Whether you're looking for tax planning services in Bristol or need support elsewhere in the UK, our focus is always the same. We provide straightforward advice that helps you make informed decisions with confidence.
+                Whether you're looking for tax planning services in Bristol or need support elsewhere in the UK, our focus is always the same. We provide straightforward advice that helps you make informed decisions with confidence. If you are comparing professional support, our guide to{" "}
+                <Link to="/tax-advisory-firms-bristol" className="text-amber-700 font-semibold hover:underline">
+                  tax advisory firms in Bristol
+                </Link>
+                {" "}can help you understand the options available.
               </p>
 
               {/* Section 7 — FAQs */}
@@ -618,8 +631,15 @@ const TaxPlanningServicesExplained = () => {
                 Tax planning services are not a single, mysterious offering — they are a set of practical areas, corporation tax, strategic planning, capital gains, inheritance tax, family planning and HMRC support, that apply differently depending on your circumstances. The right service should feel like an ongoing conversation built around your situation, not a once a year transaction.
               </p>
 
+              <p className="text-gray-700 leading-relaxed mb-4">
+                At Henleaze Tax Consultancy, we work with individuals, landlords, contractors and business owners across Bristol and throughout the UK, providing practical advice that's tailored to real life rather than a standard checklist.
+              </p>
               <p className="text-gray-700 leading-relaxed mb-8">
-                At Henleaze Tax Consultancy, we work with individuals, landlords, contractors and business owners across Bristol and throughout the UK, providing practical advice that's tailored to real life rather than a standard checklist. If you're unsure which tax planning services are right for you, we're always happy to have an initial conversation, understand your circumstances and recommend the support that best fits your goals.
+                If you're unsure which tax planning services are right for you,{" "}
+                <a href="https://henleazetaxconsultancy.com/contact" className="text-amber-700 font-semibold hover:underline">
+                  we're always happy to have an initial conversation
+                </a>
+                , understand your circumstances and recommend the support that best fits your goals.
               </p>
 
               {/* CTA Card */}

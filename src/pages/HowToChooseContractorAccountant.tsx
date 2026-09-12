@@ -8,6 +8,7 @@ import { NearbyLocationsSection } from "@/components/common/NearbyLocationsSecti
 
 const sections = [
   { id: "when-to-hire", title: "When Should You Hire a Contractor Accountant?" },
+  { id: "key-factors", title: "9 Key Factors to Consider When Choosing a Contractor Accountant" },
   { id: "factor-1", title: "1. Specialist Experience in Contractor Accounting" },
   { id: "factor-2", title: "2. Deep Knowledge of IR35" },
   { id: "factor-3", title: "3. Professional Qualifications and Accreditation" },
@@ -17,13 +18,12 @@ const sections = [
   { id: "factor-7", title: "7. Responsiveness and Communication" },
   { id: "factor-8", title: "8. Reputation and Reviews" },
   { id: "factor-9", title: "9. Online vs Local — What Suits You?" },
-  { id: "why-henleaze", title: "Why Bristol Contractors Choose Henleaze" },
+  { id: "why-henleaze", title: "Why Bristol Contractors Choose Henleaze Tax Consultancy" },
   { id: "final-words", title: "Final Words" },
 ];
 
 const HowToChooseContractorAccountant = () => {
   const [activeSection, setActiveSection] = useState("when-to-hire");
-  const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -130,10 +130,10 @@ const HowToChooseContractorAccountant = () => {
 
             {/* Opening paragraph */}
             <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              Choosing the right contractor accountant is about more than comparing fees. A  <Link to="/services/contractor-accountants" className="text-amber-700 underline hover:text-amber-900">specialist contractor accountant</Link> can help you manage your tax obligations, stay compliant with HMRC, navigate IR35 and maximise your take-home income. However, not every accountant has the expertise or services that contractors need.
+              Choosing the right contractor accountant is about more than comparing fees. A <Link to="/services/contractor-accountants" className="text-amber-700 underline hover:text-amber-900">specialist contractor accountant</Link> can help you manage your tax obligations, stay compliant with HMRC, navigate IR35 and maximise your take-home income. However, not every accountant has the expertise or services that contractors need.
             </p>
             <p className="text-lg text-gray-700 leading-relaxed mb-8">
-              This guide outlines the <strong>9 key factors to consider when choosing a contractor accountant</strong>, helping you make an informed decision and find the right support for your business.
+              This guide outlines the 9 key factors to consider when choosing a contractor accountant, helping you make an informed decision and find the right support for your business.
             </p>
 
             {/* ── TABLE OF CONTENTS ─────────────────────────────────── */}
@@ -179,16 +179,16 @@ const HowToChooseContractorAccountant = () => {
               </h2>
               <div className="w-10 h-0.5 bg-amber-500 mb-6" />
               <p className="text-gray-700 leading-relaxed mb-4">
-                The short answer is <strong>before you start contracting</strong> — not after your first invoice has gone out.
+                The short answer is before you start contracting — not after your first invoice has gone out.
               </p>
               <p className="text-gray-700 leading-relaxed mb-4">
-                Getting the right structure in place from day one means your limited company is set up correctly, your salary and VAT position is sorted from the outset and you are not paying to unpick early mistakes later. Most specialist contractor accountants will help you form your limited company as part of onboarding, so there is no reason to delay. Many <Link to="/top-accounting-firms-for-contractors-uk" className="text-amber-700 underline hover:text-amber-900">contractor accounting firms</Link> also provide ongoing contractor accounting services — including <Link to="/services/payroll-and-hr-services" className="text-amber-700 hover:underline">payroll</Link>, <Link to="/services/vat-and-bookkeeping-accounting-services" className="text-amber-700 hover:underline">VAT returns</Link> and <Link to="/services/tax-planning" className="text-amber-700 hover:underline">tax planning</Link> — making it easier to manage your business from day one.
+                Getting the right structure in place from day one means your limited company is set up correctly, your salary and VAT position is sorted from the outset and you are not paying to unpick early mistakes later. Most specialist contractor accountants will help you form your limited company as part of onboarding, so there is no reason to delay. Many <Link to="/top-accounting-firms-for-contractors-uk" className="text-amber-700 underline hover:text-amber-900">contractor accounting firms</Link> also provide ongoing contractor accounting services, including <Link to="/services/payroll-and-hr-services" className="text-amber-700 underline hover:text-amber-900">payroll</Link>, <Link to="/services/vat-and-bookkeeping-accounting-services" className="text-amber-700 underline hover:text-amber-900">VAT returns</Link> and <Link to="/services/tax-planning" className="text-amber-700 underline hover:text-amber-900">tax planning</Link>, making it easier to manage your business from day one.
               </p>
               <p className="text-gray-700 leading-relaxed mb-8">
-                If you are already contracting and using a generalist accountant or doing your own books, it is <strong>never too late to switch to a specialist</strong>. The process is straightforward and a good firm will handle the transition for you.
+                If you are already contracting and using a generalist accountant or doing your own books, it is never too late to switch to a specialist. The process is straightforward and a good firm will handle the transition for you.
               </p>
 
-              <h2 className="scroll-mt-28 text-3xl font-bold text-gray-900 mt-12 mb-4">
+              <h2 id="key-factors" className="scroll-mt-28 text-3xl font-bold text-gray-900 mt-12 mb-4">
                 9 Key Factors to Consider When Choosing a Contractor Accountant
               </h2>
               <div className="w-10 h-0.5 bg-amber-500 mb-8" />
@@ -209,25 +209,20 @@ const HowToChooseContractorAccountant = () => {
                 This is the most important factor of all. Not every accountant who says they work with contractors actually specialises in it. There is a significant difference between a firm that handles a handful of contractor clients alongside shops and sole traders and one where limited company contractors make up the majority of their client base.
               </p>
               <p className="text-gray-700 leading-relaxed mb-4">
-                A genuine specialist will understand IR35, PSC structures, salary and dividend planning, and off-payroll working rules as everyday matters — not as occasional topics they need to look up.
+                A genuine specialist will understand <Link to="/what-is-ir35-uk" className="text-amber-700 underline hover:text-amber-900">IR35</Link>, PSC structures, salary and dividend planning, and off-payroll working rules as everyday matters, not as occasional topics they need to look up. Before signing up, ask directly: what percentage of your clients are limited company contractors?
               </p>
-              <div className="bg-amber-50 border-l-4 border-amber-400 pl-5 py-3 mb-8 rounded-r-lg">
-                <p className="text-amber-900 text-sm font-medium m-0">
-                  💡 Before signing up, ask directly: <em>"What percentage of your clients are limited company contractors?"</em>
-                </p>
-              </div>
 
               {/* Factor 2 */}
               <h3 id="factor-2" className="scroll-mt-28 text-2xl font-bold text-gray-900 mt-10 mb-3">
                 2. Deep Knowledge of IR35
               </h3>
               <p className="text-gray-700 leading-relaxed mb-4">
-                IR35 is the single biggest financial risk most UK contractors face and your accountant must have a thorough, up-to-date understanding of it — not just a passing familiarity.
+                IR35 is the single biggest financial risk most UK contractors face and your accountant must have a thorough, up-to-date understanding of it, not just a passing familiarity.
               </p>
               <p className="text-gray-700 leading-relaxed mb-3">A strong contractor accountant will:</p>
               <ul className="list-disc pl-6 space-y-2 text-gray-700 mb-4">
                 <li>Review your contracts against IR35 criteria before you sign them</li>
-                <li>Advise on your working practices to help maintain outside IR35 status</li>
+                <li>Advise on your working practices to help maintain <Link to="/inside-vs-outside-ir35" className="text-amber-700 underline hover:text-amber-900">outside IR35 status</Link></li>
                 <li>Explain clearly what inside IR35 means for your take-home pay</li>
                 <li>Know how the off-payroll working rules apply in both the public and private sector</li>
                 <li>Represent you if HMRC opens a compliance enquiry</li>
@@ -244,15 +239,15 @@ const HowToChooseContractorAccountant = () => {
                 3. Professional Qualifications and Accreditation
               </h3>
               <p className="text-gray-700 leading-relaxed mb-4">
-                A qualified accountant is not just a nice-to-have — it is essential. Look for accountants who hold recognised professional qualifications:
+                A qualified accountant is not just a nice-to-have, it is essential. Look for accountants who hold recognised professional qualifications:
               </p>
               <ul className="list-disc pl-6 space-y-2 text-gray-700 mb-4">
-                <li><strong>ACCA</strong> — Association of Chartered Certified Accountants</li>
-                <li><strong>ACA / ICAEW</strong> — Institute of Chartered Accountants in England and Wales</li>
-                <li><strong>AAT</strong> — Association of Accounting Technicians (acceptable at junior level)</li>
+                <li>ACCA (Association of Chartered Certified Accountants)</li>
+                <li>ACA / ICAEW (Institute of Chartered Accountants in England and Wales)</li>
+                <li>AAT (Association of Accounting Technicians) — acceptable at junior level</li>
               </ul>
               <p className="text-gray-700 leading-relaxed mb-4">
-                For contractor specialists specifically, <strong>FCSA accreditation</strong> (Freelancer and Contractor Services Association) is a strong additional signal. FCSA members undergo independent audits to verify compliance and professional standards — it is one of the most credible marks of quality in the contractor accounting space.
+                For contractor specialists specifically, FCSA accreditation (Freelancer and Contractor Services Association) is a strong additional signal. FCSA members undergo independent audits to verify compliance and professional standards, it is one of the most credible marks of quality in the contractor accounting space.
               </p>
               <p className="text-gray-700 leading-relaxed mb-8">
                 You can verify an accountant's credentials directly through the{" "}
@@ -272,7 +267,7 @@ const HowToChooseContractorAccountant = () => {
                 4. Transparent Fixed-Fee Pricing
               </h3>
               <p className="text-gray-700 leading-relaxed mb-4">
-                Most reputable contractor accountants charge a fixed monthly fee and this is the model that works best for contractors. You know exactly what you are paying each month, with no surprise invoices at year end or extra charges for routine queries.
+                Most reputable contractor accountants charge a <Link to="/pricing" className="text-amber-700 underline hover:text-amber-900">fixed monthly fee</Link> and this is the model that works best for contractors. You know exactly what you are paying each month, with no surprise invoices at year end or extra charges for routine queries.
               </p>
               <p className="text-gray-700 leading-relaxed mb-3">What to look for:</p>
               <ul className="list-disc pl-6 space-y-2 text-gray-700 mb-4">
@@ -281,14 +276,12 @@ const HowToChooseContractorAccountant = () => {
                 <li>Whether VAT is included in the quoted price or charged on top</li>
                 <li>No long minimum contract periods that lock you in unnecessarily</li>
               </ul>
-              <div className="bg-red-50 border border-red-200 rounded-lg p-4 mb-8">
-                <p className="text-sm text-red-800 m-0">
-                  ⚠ <strong>Warning:</strong> If a firm is vague about pricing during the sales process, that is a red flag. For a full breakdown of typical fees, see our guide:{" "}
-                  <Link to="/how-much-does-a-contractor-accountant-cost-in-the-uk" className="text-red-700 underline hover:text-red-900">
-                    how much does a contractor accountant cost in the UK?
-                  </Link>
-                </p>
-              </div>
+              <p className="text-gray-700 leading-relaxed mb-8">
+                If a firm is vague about pricing during the sales process, that is a warning sign. For a full breakdown of what contractor accountant fees typically cover, see our guide:{" "}
+                <Link to="/how-much-does-a-contractor-accountant-cost-in-the-uk" className="text-amber-700 underline hover:text-amber-900">
+                  how much does a contractor accountant cost in the UK?
+                </Link>
+              </p>
 
               {/* Factor 5 */}
               <h3 id="factor-5" className="scroll-mt-28 text-2xl font-bold text-gray-900 mt-10 mb-3">
@@ -298,47 +291,42 @@ const HowToChooseContractorAccountant = () => {
                 Some firms assign you a single named accountant who gets to know your business. Others operate a shared team model where you deal with whoever picks up your query on any given day.
               </p>
               <p className="text-gray-700 leading-relaxed mb-4">
-                Neither model is automatically wrong, but for contractors particularly those with complex tax situations, IR35 considerations or multiple income streams having a dedicated point of contact makes a real difference. Your accountant should know your contracts, your working arrangements and your financial goals without you having to explain them from scratch every time you call.
+                Neither model is automatically wrong, but for contractors, particularly those with complex tax situations, IR35 considerations or multiple income streams — having a dedicated point of contact makes a real difference. Your accountant should know your contracts, your working arrangements and your financial goals without you having to explain them from scratch every time you call.
               </p>
-              <div className="bg-amber-50 border-l-4 border-amber-400 pl-5 py-3 mb-8 rounded-r-lg">
-                <p className="text-amber-900 text-sm font-medium m-0">
-                  💡 Ask before signing up: <em>"Will I have a named accountant and what happens if they are unavailable?"</em>
-                </p>
-              </div>
+              <p className="text-gray-700 leading-relaxed mb-8">
+                Ask before signing up: will I have a named accountant and what happens if they are unavailable?
+              </p>
 
               {/* Factor 6 */}
               <h3 id="factor-6" className="scroll-mt-28 text-2xl font-bold text-gray-900 mt-10 mb-3">
                 6. Cloud Accounting Software Included
               </h3>
               <p className="text-gray-700 leading-relaxed mb-4">
-                A good contractor accountant will use market-standard cloud accounting software typically <strong>FreeAgent</strong>, <strong>Xero</strong> or <strong>QuickBooks</strong>. These platforms give you real-time visibility of your finances, easy mobile expense tracking, automated VAT return preparation and instant access to key figures like your corporation tax liability.
+                A good contractor accountant will use market-standard cloud accounting software, typically FreeAgent, Xero or QuickBooks. These platforms give you real-time visibility of your finances, easy mobile expense tracking, automated VAT return preparation and instant access to key figures like your corporation tax liability.
               </p>
               <p className="text-gray-700 leading-relaxed mb-3">A few things worth checking:</p>
-              <ul className="list-disc pl-6 space-y-2 text-gray-700 mb-4">
+              <ul className="list-disc pl-6 space-y-2 text-gray-700 mb-8">
                 <li>Is the software licence included in the monthly fee or charged separately?</li>
-                <li>Does the firm use their own proprietary platform? If so, be cautious — proprietary systems have historically had more security vulnerabilities than established providers and make it harder to switch accountants later.</li>
+                <li>Does the firm use their own proprietary platform? If so, be cautious — proprietary systems have historically had more security vulnerabilities than established providers and make it harder to switch accountants later</li>
                 <li>Can you access your own data easily if you decide to move to a different firm?</li>
               </ul>
-              <p className="text-gray-700 leading-relaxed mb-8">
-                At Henleaze, we use <strong>FreeAgent as standard</strong>, included in your monthly fee no hidden software charges.
-              </p>
 
               {/* Factor 7 */}
               <h3 id="factor-7" className="scroll-mt-28 text-2xl font-bold text-gray-900 mt-10 mb-3">
                 7. Responsiveness and Communication
               </h3>
               <p className="text-gray-700 leading-relaxed mb-4">
-                An accountant who is slow to respond is more than just frustrating — it can lead to missed deadlines, late filings and HMRC penalties. Responsiveness matters most when it matters most: around the January <Link to="/services/personal-tax-and-self-assessment-service" className="text-amber-700 hover:underline">Self Assessment deadline</Link>, quarterly VAT return dates and any time HMRC gets in touch.
+                An accountant who is slow to respond is more than just frustrating, it can lead to missed deadlines, late filings and HMRC penalties. Responsiveness matters most when it matters most: around the January Self Assessment deadline, quarterly VAT return dates and any time HMRC gets in touch.
               </p>
               <p className="text-gray-700 leading-relaxed mb-3">Before committing to a firm, ask:</p>
               <ul className="list-disc pl-6 space-y-2 text-gray-700 mb-4">
                 <li>What is your typical response time for client queries?</li>
                 <li>Do I contact you directly by phone and email, or through a ticketing system?</li>
-                <li>What happens around busy periods like January do response times change?</li>
+                <li>What happens around busy periods like January — do response times change?</li>
               </ul>
-              <blockquote className="border-l-4 border-gray-300 pl-6 italic text-gray-600 text-base leading-relaxed mb-8">
-                "How a firm handles your questions before you become a client is usually a good indicator of how they will handle them after."
-              </blockquote>
+              <p className="text-gray-700 leading-relaxed mb-8">
+                How a firm handles your questions before you become a client is usually a good indicator of how they will handle them after.
+              </p>
 
               {/* Factor 8 */}
               <h3 id="factor-8" className="scroll-mt-28 text-2xl font-bold text-gray-900 mt-10 mb-3">
@@ -349,33 +337,31 @@ const HowToChooseContractorAccountant = () => {
               </p>
               <p className="text-gray-700 leading-relaxed mb-3">Check the following:</p>
               <ul className="list-disc pl-6 space-y-2 text-gray-700 mb-4">
-                <li><strong>Google Reviews</strong> look for volume and consistency, not just the star rating</li>
-                <li><strong>Trustpilot</strong> useful for spotting patterns in how complaints are handled</li>
-                <li><strong>ContractorUK forums</strong> one of the most honest sources of contractor feedback in the UK</li>
-                <li><strong>Personal recommendations</strong> ask fellow contractors who they use and whether they would recommend them</li>
+                <li>Google Reviews — look for volume and consistency, not just the star rating</li>
+                <li>Trustpilot — useful for spotting patterns in how complaints are handled</li>
+                <li>ContractorUK forums — one of the most honest sources of contractor feedback in the UK</li>
+                <li>Personal recommendations — ask fellow contractors who they use and whether they would recommend them</li>
               </ul>
-              <div className="bg-gray-50 border border-gray-200 rounded-lg p-4 mb-8">
-                <p className="text-sm text-gray-700 m-0">
-                  📌 Look beyond the headline rating. A firm with 200 reviews averaging 4.6 stars tells you more than one with 8 reviews averaging 5.0.
-                </p>
-              </div>
+              <p className="text-gray-700 leading-relaxed mb-8">
+                Look beyond the headline rating. A firm with 200 reviews averaging 4.6 stars tells you more than one with 8 reviews averaging 5.0. It can also be useful to compare the <Link to="/top-10-accounting-firms-uk" className="text-amber-700 underline hover:text-amber-900">top 10 accounting firms in the UK</Link> when researching reputable providers.
+              </p>
 
               {/* Factor 9 */}
               <h3 id="factor-9" className="scroll-mt-28 text-2xl font-bold text-gray-900 mt-10 mb-3">
-                9. Online vs Local What Suits You?
+                9. Online vs Local — What Suits You?
               </h3>
               <p className="text-gray-700 leading-relaxed mb-4">
-                Most contractor accountants in the UK now operate primarily online and for the majority of contractors this works perfectly well. Online-only firms tend to have lower overheads and pass some of that saving on through their pricing. Communication happens via email, phone and video call and cloud software means your records are always accessible.
+                Most contractor accountants in the UK now operate primarily online and for the majority of contractors this works perfectly well. Online-only firms tend to have lower overheads and pass some of that savings on through their pricing. Communication happens via email, phone and video call and cloud software means your records are always accessible.
               </p>
               <p className="text-gray-700 leading-relaxed mb-4">
-                That said, some contractors prefer face-to-face contact particularly when dealing with more complex matters like IR35 disputes,tax planning or significant business changes. If that applies to you, a local specialist firm is worth considering.
+                That said, some contractors prefer face-to-face contact — particularly when dealing with more complex matters like IR35 disputes, tax planning or significant business changes. If that applies to you, a local specialist firm is worth considering.
               </p>
-              <p className="text-gray-700 leading-relaxed mb-6">
+              <p className="text-gray-700 leading-relaxed mb-4">
                 For Bristol-based contractors, working with a local firm means your accountant understands the local contractor market, is available to meet in person when needed and is easy to reach without relying entirely on digital communication.
               </p>
               <p className="text-gray-700 leading-relaxed mb-8">
                 For a full breakdown of what specialist contractor accountants offer, see our guide:{" "}
-                <Link to="/whats-included-in-contractor-accounting" className="text-amber-700 underline hover:text-amber-900">
+                <Link to="/contractor-accountant-services-in-the-uk" className="text-amber-700 underline hover:text-amber-900">
                   What services do contractor accountants provide in the UK?
                 </Link>
               </p>
@@ -386,28 +372,30 @@ const HowToChooseContractorAccountant = () => {
               </h2>
               <div className="w-10 h-0.5 bg-amber-500 mb-6" />
               <p className="text-gray-700 leading-relaxed mb-4">
-                Bristol has a growing and active contracting community across technology, engineering and the creative industries. At Henleaze Tax Consultancy, we work exclusively with contractors, freelancers and limited company directors so everything we do is built around the way contractors actually work.
+                Bristol has a growing and active contracting community across technology, engineering and the creative industries. At Henleaze Tax Consultancy, we work exclusively with contractors, freelancers and limited company directors — so everything we do is built around the way contractors actually work.
               </p>
-              <ul className="list-disc pl-6 space-y-2 text-gray-700 mb-6">
-                <li>Fixed monthly fees with no hidden extras</li>
-                <li>A dedicated accountant for every client</li>
-                <li>Genuine IR35 expertise and contract review</li>
-                <li>Face-to-face availability for Bristol-based clients who prefer it</li>
-                <li>FreeAgent included as standard, at no additional cost</li>
-                <li>Smooth transition from your current accountant without disruption</li>
-              </ul>
+              <p className="text-gray-700 leading-relaxed mb-4">
+                We offer fixed monthly fees with no hidden extras, a dedicated accountant for every client, genuine IR35 expertise and face-to-face availability for Bristol-based clients who prefer it. We use FreeAgent as standard, included in your monthly fee and we are happy to handle the transition from your current accountant without any disruption to your business.
+              </p>
+              <p className="text-gray-700 leading-relaxed mb-6">
+                If you're comparing local providers, our guide to the{" "}
+                <Link to="/top-5-accountancy-firms-in-bristol" className="text-amber-700 underline hover:text-amber-900">
+                  top 5 accountancy firms in Bristol
+                </Link>{" "}
+                can help you assess the options available.
+              </p>
               <div className="bg-gray-900 text-white rounded-xl p-8 mb-10 flex flex-col sm:flex-row items-center gap-6">
                 <div className="flex-1">
                   <p className="font-bold text-lg mb-1">Book a free consultation</p>
                   <p className="text-gray-300 text-sm leading-relaxed">
-                    Talk to a specialist contractor accountant today. No pressure, no jargon just straightforward advice.
+                    Talk to a specialist contractor accountant today. No pressure, no jargon — just straightforward advice.
                   </p>
                 </div>
                 <Button
                   asChild
                   className="shrink-0 bg-amber-500 hover:bg-amber-400 text-gray-900 font-bold rounded-lg px-6 py-3"
                 >
-                  <Link to="/contact">Book Free Consultation</Link>
+                  <Link to="/contact">Book a free consultation with Henleaze Tax Consultancy</Link>
                 </Button>
               </div>
 
@@ -422,11 +410,12 @@ const HowToChooseContractorAccountant = () => {
               <p className="text-gray-700 leading-relaxed mb-4">
                 Take your time, ask the right questions and do not choose based on price alone. The right firm will cost less than you think — and save you far more than their fee.
               </p>
-              <p className="text-gray-700 leading-relaxed mb-10">
-                For a full breakdown of what specialist contractor accountants offer, see our guide:{" "}
-                <Link to="/top-accounting-firms-for-contractors-uk" className="text-amber-700 underline hover:text-amber-900">
-                  Top Accounting Firms for Contractors in the UK
-                </Link>
+              <p className="text-gray-700 leading-relaxed mb-8">
+                For contractors who need broader tax support,{" "}
+                <Link to="/tax-advisory-firms-bristol" className="text-amber-700 underline hover:text-amber-900">
+                  comparing tax advisory firms in Bristol
+                </Link>{" "}
+                can also help when choosing the right professional.
               </p>
 
             </div>
@@ -445,3 +434,4 @@ const HowToChooseContractorAccountant = () => {
 };
 
 export default HowToChooseContractorAccountant;
+

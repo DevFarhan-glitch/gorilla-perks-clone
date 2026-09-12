@@ -482,7 +482,11 @@ const TaxAdvisoryFirmsBristol = () => {
               <div className="mb-10 pb-8 border-b border-gray-100">
                 <h3 className="text-2xl font-bold text-gray-900 mb-3">5. Apex Accountants</h3>
                 <p className="text-gray-700 leading-relaxed mb-4">
-                  Apex Accountants is a smaller firm branded specifically around tax services rather than general accountancy, covering personal tax returns, corporate tax planning, VAT advisory and capital gains tax management. They also support businesses applying for the Enterprise Investment Scheme and Seed Enterprise Investment Scheme.
+                  Apex Accountants is a smaller firm branded specifically around{" "}
+                  <Link to="/tax-planning-services-explained" className="text-amber-700 hover:underline font-semibold">
+                    tax services
+                  </Link>{" "}
+                  rather than general accountancy, covering personal tax returns, corporate tax planning, VAT advisory and capital gains tax management. They also support businesses applying for the Enterprise Investment Scheme and Seed Enterprise Investment Scheme.
                 </p>
                 <p className="text-gray-700 leading-relaxed mb-4">
                   Their stated client base spans SMEs, charities, mid market companies and international firms, a broader spread than their size might suggest, worth asking about directly to gauge depth in each area.
@@ -629,7 +633,18 @@ const TaxAdvisoryFirmsBristol = () => {
               </h2>
               <div className="w-10 h-0.5 bg-amber-500 mb-6" />
               <p className="text-gray-700 leading-relaxed mb-4">
-                The right choice depends far more on matching a firm's genuine specialism to your situation than on picking the biggest name. Someone assessing an R&D claim needs a very different kind of expertise to a contractor working out their IR35 position or a family dealing with inheritance tax planning.
+                The right choice depends far more on matching a firm's genuine specialism to your situation than on picking the biggest name. Someone assessing an R&D claim needs a very different kind of expertise to a contractor working out their IR35 position or a family dealing with inheritance{" "}
+                <Link to="/what-is-tax-planning-uk-guide" className="text-amber-700 hover:underline font-semibold">
+                  tax planning
+                </Link>
+                .
+              </p>
+              <p className="text-gray-700 leading-relaxed mb-4">
+                If you're specifically comparing{" "}
+                <Link to="/tax-advisory-firms-bristol" className="text-amber-700 hover:underline font-semibold">
+                  tax advisory firms in Bristol
+                </Link>
+                , it's worth looking beyond general accountancy services and checking whether the firm has relevant experience in the type of tax advice you need.
               </p>
               <p className="text-gray-700 leading-relaxed mb-8">
                 As a general guide, larger firms with broad service lines, like Saffery or Azets, tend to suit businesses with varied or complex needs spanning several tax areas. Specialist firms, like ForrestBrown for R&D relief, are usually the stronger choice when your need is narrow but technical. Smaller, fixed fee firms often suit individuals and small businesses who want direct access and predictable costs without paying for services they don't need.

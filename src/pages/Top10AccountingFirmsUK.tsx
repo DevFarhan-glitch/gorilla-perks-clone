@@ -16,18 +16,17 @@ import {
   Briefcase,
   ShieldCheck,
   Scale,
-  DollarSign,
 } from "lucide-react";
 import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
-import NearbyLocationsSection from "@/components/common/NearbyLocationsSection";
+import { NearbyLocationsSection } from "@/components/common/NearbyLocationsSection";
 
 const sections = [
   { id: "quick-comparison", title: "Quick Comparison" },
   { id: "big-four", title: "The Big Four: Who They Are and Why They Dominate" },
   { id: "mid-tier", title: "The Mid-Tier Firms Closing the Gap" },
   { id: "what-separates", title: "What Actually Separates These Firms Beyond Revenue" },
-  { id: "revenue-rankings", title: "Why Revenue Rankings Don't Tell You Which Firm is Right" },
+  { id: "revenue-rankings", title: "Why Revenue Rankings Don't Tell You Which Firm is Right for You" },
   { id: "does-your-business-need", title: "Does Your Business Actually Need a Top 10 Firm?" },
   { id: "faqs", title: "Frequently Asked Questions" },
 ];
@@ -148,7 +147,10 @@ const Top10AccountingFirmsUK = () => {
           name="description"
           content="From the Big Four to fast growing mid tier firms, see how the UK largest accounting firms compare and which suits your business."
         />
-        <meta name="keywords" content="top 10 accounting firms uk, largest accounting firms uk, big four uk, mid tier accounting firms uk, best accounting firms uk" />
+        <meta
+          name="keywords"
+          content="top 10 accounting firms uk, largest accounting firms uk, big four uk, mid tier accounting firms uk, best accounting firms uk"
+        />
         <link rel="canonical" href="https://henleazetaxconsultancy.com/top-10-accounting-firms-uk" />
         <meta property="og:title" content="Top 10 Accounting Firms UK: Big Four to Mid Tier" />
         <meta
@@ -200,14 +202,6 @@ const Top10AccountingFirmsUK = () => {
               Top 10 Accounting Firms in the UK: What Makes Each Firm Different?
             </h1>
 
-            {/* Subtitle */}
-            <p
-              className="text-xl text-gray-600 leading-relaxed mb-6"
-              style={{ fontFamily: "'Georgia', serif" }}
-            >
-              From the Big Four to fast growing mid tier firms, see how the UK's largest accounting firms compare and which suits your business.
-            </p>
-
             {/* Meta row */}
             <div className="flex flex-wrap items-center gap-5 text-sm text-gray-500 border-b border-gray-200 pb-6 mb-8">
               <span className="flex items-center gap-1.5">
@@ -232,7 +226,7 @@ const Top10AccountingFirmsUK = () => {
               This guide breaks down who these firms are, what genuinely separates them beyond size and why a top 10 firm isn't automatically the right choice for every business. If you're specifically looking at options closer to home, our comparison of{" "}
               <Link
                 to="/top-5-accountancy-firms-in-bristol"
-                className="text-amber-700 font-semibold hover:underline"
+                className="text-amber-700 underline hover:text-amber-900"
               >
                 top accountancy firms in Bristol
               </Link>{" "}
@@ -250,16 +244,18 @@ const Top10AccountingFirmsUK = () => {
                     <li key={section.id}>
                       <button
                         onClick={() => scrollToSection(section.id)}
-                        className={`group flex items-baseline gap-3 w-full text-left text-sm transition-colors duration-150 ${activeSection === section.id
+                        className={`group flex items-baseline gap-3 w-full text-left text-sm transition-colors duration-150 ${
+                          activeSection === section.id
                             ? "text-amber-700 font-semibold"
                             : "text-gray-600 hover:text-gray-900"
-                          }`}
+                        }`}
                       >
                         <span
-                          className={`text-xs font-mono shrink-0 w-5 ${activeSection === section.id
+                          className={`text-xs font-mono shrink-0 w-5 ${
+                            activeSection === section.id
                               ? "text-amber-600"
                               : "text-gray-400"
-                            }`}
+                          }`}
                         >
                           {String(idx + 1).padStart(2, "0")}
                         </span>
@@ -306,10 +302,11 @@ const Top10AccountingFirmsUK = () => {
                         <td className="px-5 py-3.5 font-bold text-gray-900">{item.firm}</td>
                         <td className="px-5 py-3.5">
                           <span
-                            className={`inline-block text-xs font-semibold px-2.5 py-0.5 rounded-full ${item.tier === "Big Four"
+                            className={`inline-block text-xs font-semibold px-2.5 py-0.5 rounded-full ${
+                              item.tier === "Big Four"
                                 ? "bg-amber-100 text-amber-800 border border-amber-200"
                                 : "bg-blue-100 text-blue-800 border border-blue-200"
-                              }`}
+                            }`}
                           >
                             {item.tier}
                           </span>
@@ -585,7 +582,7 @@ const Top10AccountingFirmsUK = () => {
                       Serves a large base of SME and owner managed business clients across the widest UK office network of any firm here, the kind of business that often also needs a straightforward way to work out{" "}
                       <Link
                         to="/how-do-you-calculate-your-annual-salary-in-uk"
-                        className="text-amber-700 font-semibold hover:underline"
+                        className="text-amber-700 underline hover:text-amber-900"
                       >
                         annual salary figures
                       </Link>{" "}
@@ -633,23 +630,22 @@ const Top10AccountingFirmsUK = () => {
                 Revenue tells you about scale, but it doesn't tell you much about fit. When comparing any list of accountancy firms UK wide, a few other factors matter more for most businesses.
               </p>
 
-              <div className="space-y-4 mb-8 not-prose">
+              <div className="space-y-4 mb-6 not-prose">
                 <div className="p-5 bg-white border border-gray-200 rounded-xl shadow-sm hover:border-amber-300 transition-colors">
                   <div className="flex items-center gap-3 mb-2">
                     <div className="p-2 bg-amber-50 text-amber-700 rounded-lg border border-amber-200">
                       <Briefcase className="h-4 w-4" />
                     </div>
-                    <h3 className="text-base font-bold text-gray-900">Sector Specialism</h3>
+                    <h3 className="text-base font-bold text-gray-900">Sector specialism</h3>
                   </div>
                   <p className="text-gray-700 text-sm leading-relaxed m-0">
                     Some firms lean heavily into financial services or large corporate audit, while others focus on SMEs, owner managed businesses or specific industries, including practical needs like{" "}
                     <Link
                       to="/how-to-calculate-monthly-salary-in-uk"
-                      className="text-amber-700 font-semibold hover:underline"
+                      className="text-amber-700 underline hover:text-amber-900"
                     >
-                      calculating monthly salary correctly for payroll
+                      calculating monthly salary correctly for payroll.
                     </Link>
-                    .
                   </p>
                 </div>
 
@@ -658,7 +654,7 @@ const Top10AccountingFirmsUK = () => {
                     <div className="p-2 bg-amber-50 text-amber-700 rounded-lg border border-amber-200">
                       <Globe className="h-4 w-4" />
                     </div>
-                    <h3 className="text-base font-bold text-gray-900">Geographic Spread</h3>
+                    <h3 className="text-base font-bold text-gray-900">Geographic spread</h3>
                   </div>
                   <p className="text-gray-700 text-sm leading-relaxed m-0">
                     A firm with dozens of regional offices, like Azets or RSM, may offer easier in person access than one concentrated in major cities.
@@ -670,7 +666,7 @@ const Top10AccountingFirmsUK = () => {
                     <div className="p-2 bg-amber-50 text-amber-700 rounded-lg border border-amber-200">
                       <TrendingUp className="h-4 w-4" />
                     </div>
-                    <h3 className="text-base font-bold text-gray-900">Growth Rate and Investment</h3>
+                    <h3 className="text-base font-bold text-gray-900">Growth rate and investment</h3>
                   </div>
                   <p className="text-gray-700 text-sm leading-relaxed m-0">
                     Faster growing mid tier firms are often investing heavily in technology and expanding their advisory services beyond basic compliance.
@@ -682,13 +678,21 @@ const Top10AccountingFirmsUK = () => {
                     <div className="p-2 bg-amber-50 text-amber-700 rounded-lg border border-amber-200">
                       <Scale className="h-4 w-4" />
                     </div>
-                    <h3 className="text-base font-bold text-gray-900">Ownership and Structure</h3>
+                    <h3 className="text-base font-bold text-gray-900">Ownership and structure</h3>
                   </div>
                   <p className="text-gray-700 text-sm leading-relaxed m-0">
                     Some of these firms are structured as single consolidated entities, while others operate as networks of independent regional practices, which can affect consistency of service across locations.
                   </p>
                 </div>
               </div>
+
+              <p className="text-gray-700 leading-relaxed mb-8">
+                For businesses that need more specialised tax support, comparing{" "}
+                <Link to="/tax-advisory-firms-bristol" className="text-amber-700 underline hover:text-amber-900">
+                  tax advisory firms in Bristol
+                </Link>{" "}
+                can be useful when choosing a provider.
+              </p>
 
               {/* Section 5 — Why Revenue Rankings Don't Tell You Which Firm is Right */}
               <h2
@@ -706,7 +710,7 @@ const Top10AccountingFirmsUK = () => {
                 Larger firms generally suit large corporations, businesses needing statutory audit or companies with genuinely international operations. Smaller and mid sized businesses often find they get more attention, faster response times and more tailored advice from a firm sized appropriately to their needs, rather than a large practice where they represent a small fraction of the client base, particularly for situations like{" "}
                 <Link
                   to="/what-is-ir35-uk"
-                  className="text-amber-700 font-semibold hover:underline"
+                  className="text-amber-700 underline hover:text-amber-900"
                 >
                   IR35 status
                 </Link>{" "}
@@ -729,14 +733,14 @@ const Top10AccountingFirmsUK = () => {
                 This is exactly the gap a specialist practice fills.{" "}
                 <Link
                   to="/"
-                  className="text-amber-700 font-semibold hover:underline"
+                  className="text-amber-700 underline hover:text-amber-900"
                 >
                   Henleaze Tax Consultancy
                 </Link>
                 , based in Bristol, works specifically with contractors, sole traders, landlords and small limited companies, offering{" "}
                 <Link
                   to="/pricing"
-                  className="text-amber-700 font-semibold hover:underline"
+                  className="text-amber-700 underline hover:text-amber-900"
                 >
                   fixed fee pricing
                 </Link>{" "}
@@ -796,8 +800,9 @@ const Top10AccountingFirmsUK = () => {
                         {faq.question}
                       </span>
                       <ChevronDown
-                        className={`h-5 w-5 text-gray-400 transition-transform duration-200 shrink-0 ${openFaq === idx ? "rotate-180 text-amber-600" : ""
-                          }`}
+                        className={`h-5 w-5 text-gray-400 transition-transform duration-200 shrink-0 ${
+                          openFaq === idx ? "rotate-180 text-amber-600" : ""
+                        }`}
                       />
                     </button>
                     {openFaq === idx && (
