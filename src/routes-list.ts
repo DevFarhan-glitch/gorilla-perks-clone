@@ -54,5 +54,7 @@ export const PRERENDER_ROUTES = [
   "/payroll-consulting-firms-in-bristol",
   "/best-accountants-in-southampton",
   "/affordable-accountants-in-derby",
-  "/company-secretarial-firms-in-bristol"
+  "/company-secretarial-firms-in-bristol",
+  "/tax-planning-liverpool",
+  "/tax-planning-manchester"
 ];

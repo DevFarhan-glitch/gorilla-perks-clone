@@ -305,7 +305,7 @@ const TaxPlanningLiverpool: React.FC = () => {
                                 variant="outline"
                                 size="lg"
                                 onClick={scrollToServices}
-                                className="border-white/30 bg-white/5 backdrop-blur-sm hover:bg-white/10 text-white px-8 py-6 rounded-full transition-all duration-300"
+                                className="border-white/30 bg-white/5 backdrop-blur-sm hover:bg-white/10 hover:text-gold text-white px-8 py-6 rounded-full transition-all duration-300"
                             >
                                 Explore Services
                                 <ChevronDown className="ml-2 h-5 w-5 text-gold" />
@@ -712,10 +712,10 @@ const TaxPlanningLiverpool: React.FC = () => {
             </section>
 
             {/* WE COVER LIVERPOOL AND NEARBY AREAS */}
-            <NearbyLocationsSection currentCity="Liverpool" />
+            {/* <NearbyLocationsSection currentCity="Liverpool" /> */}
 
             {/* LATEST BLOGS & GUIDES */}
-            <LatestBlogsSection />
+            {/* <LatestBlogsSection /> */}
 
             {/* FINAL CTA - HAVE A PROPER CONVERSATION */}
             <section className="py-24 bg-navy text-white relative overflow-hidden">
