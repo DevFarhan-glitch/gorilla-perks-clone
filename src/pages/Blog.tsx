@@ -355,6 +355,22 @@ const allBlogs = [
     featured: false,
     tags: ["Company Secretarial", "Bristol Compliance", "Confirmation Statement", "Statutory Registers"],
   },
+  {
+    id: "what-is-outsourced-accounting-uk",
+    slug: "/what-is-outsourced-accounting-uk",
+    title: "What is Outsourced Accounting? A UK Guide for Business",
+    subtitle: "What is Outsourced Accounting and How Does It Work in the UK?",
+    excerpt:
+      "Everything you need to know about outsourced accounting in the UK, what it means, how it works, what it costs and who it's right for.",
+    category: "UK Accounting Guide",
+    categoryColor: "blue",
+    image: "/what-is-outsourced-accounting.webp",
+    author: "Henleaze Team",
+    date: "September 2026",
+    readTime: "8 min read",
+    featured: false,
+    tags: ["Outsourced Accounting", "Bookkeeping", "Payroll", "Small Business"],
+  },
 ];
 
 

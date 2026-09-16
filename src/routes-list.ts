@@ -56,5 +56,6 @@ export const PRERENDER_ROUTES = [
   "/affordable-accountants-in-derby",
   "/company-secretarial-firms-in-bristol",
   "/tax-planning-liverpool",
-  "/tax-planning-manchester"
+  "/tax-planning-manchester",
+  "/what-is-outsourced-accounting-uk"
 ];

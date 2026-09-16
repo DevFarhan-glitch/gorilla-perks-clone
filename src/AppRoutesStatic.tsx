@@ -60,6 +60,7 @@ import PayrollConsultingFirmsBristol from "./pages/PayrollConsultingFirmsBristol
 import CompanySecretarialFirmsBristol from "./pages/CompanySecretarialFirmsBristol";
 import TaxPlanningLiverpool from "./pages/TaxPlanningLiverpool";
 import TaxPlanningManchester from "./pages/TaxPlanningManchester";
+import WhatIsOutsourcedAccountingUK from "./pages/WhatIsOutsourcedAccountingUK";
 
 export const AppRoutesStatic = () => (
   <>
@@ -180,6 +181,8 @@ export const AppRoutesStatic = () => (
       <Route path="/tax-planning-liverpool/" element={<TaxPlanningLiverpool />} />
       <Route path="/tax-planning-manchester" element={<TaxPlanningManchester />} />
       <Route path="/tax-planning-manchester/" element={<TaxPlanningManchester />} />
+      <Route path="/what-is-outsourced-accounting-uk" element={<WhatIsOutsourcedAccountingUK />} />
+      <Route path="/what-is-outsourced-accounting-uk/" element={<WhatIsOutsourcedAccountingUK />} />
       <Route path="/privacy-policy" element={<PrivacyPolicy />} />
       <Route path="/privacy-policy/" element={<PrivacyPolicy />} />
       {/* ── 301-EQUIVALENT CLIENT-SIDE REDIRECTS ────────────────── */}
