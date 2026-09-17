@@ -371,6 +371,22 @@ const allBlogs = [
     featured: false,
     tags: ["Outsourced Accounting", "Bookkeeping", "Payroll", "Small Business"],
   },
+  {
+    id: "outsourced-accounting-cost-uk",
+    slug: "/outsourced-accounting-cost-uk",
+    title: "Outsourced Accounting Cost UK: Pricing Guide",
+    subtitle: "Outsourced Accounting Pricing in the UK: What You'll Actually Pay",
+    excerpt:
+      "From bookkeeping to payroll, see genuine UK pricing for outsourced accounting, what drives your quote up or down, and hidden fees to avoid.",
+    category: "UK Accounting Guide",
+    categoryColor: "amber",
+    image: "/outsourced-accounting-pricing.webp",
+    author: "Henleaze Team",
+    date: "September 2026",
+    readTime: "8 min read",
+    featured: false,
+    tags: ["Outsourced Accounting", "Pricing", "Bookkeeping Costs", "Small Business"],
+  },
 ];
 
 
