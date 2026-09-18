@@ -57,6 +57,7 @@ export const PRERENDER_ROUTES = [
   "/company-secretarial-firms-in-bristol",
   "/tax-planning-liverpool",
   "/tax-planning-manchester",
+  "/tax-planning-solihull",
   "/what-is-outsourced-accounting-uk",
   "/outsourced-accounting-cost-uk"
 ];

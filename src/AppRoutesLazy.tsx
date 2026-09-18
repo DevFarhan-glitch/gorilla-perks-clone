@@ -62,6 +62,7 @@ const PayrollConsultingFirmsBristol = lazyWithRetry(() => import("./pages/Payrol
 const CompanySecretarialFirmsBristol = lazyWithRetry(() => import("./pages/CompanySecretarialFirmsBristol"));
 const TaxPlanningLiverpool = lazyWithRetry(() => import("./pages/TaxPlanningLiverpool"));
 const TaxPlanningManchester = lazyWithRetry(() => import("./pages/TaxPlanningManchester"));
+const TaxPlanningSolihull = lazyWithRetry(() => import("./pages/TaxPlanningSolihull"));
 const WhatIsOutsourcedAccountingUK = lazyWithRetry(() => import("./pages/WhatIsOutsourcedAccountingUK"));
 const OutsourcedAccountingCostUK = lazyWithRetry(() => import("./pages/OutsourcedAccountingCostUK"));
 
@@ -185,6 +186,8 @@ export const AppRoutesLazy = () => (
         <Route path="/tax-planning-liverpool/" element={<TaxPlanningLiverpool />} />
         <Route path="/tax-planning-manchester" element={<TaxPlanningManchester />} />
         <Route path="/tax-planning-manchester/" element={<TaxPlanningManchester />} />
+        <Route path="/tax-planning-solihull" element={<TaxPlanningSolihull />} />
+        <Route path="/tax-planning-solihull/" element={<TaxPlanningSolihull />} />
         <Route path="/what-is-outsourced-accounting-uk" element={<WhatIsOutsourcedAccountingUK />} />
         <Route path="/what-is-outsourced-accounting-uk/" element={<WhatIsOutsourcedAccountingUK />} />
         <Route path="/outsourced-accounting-cost-uk" element={<OutsourcedAccountingCostUK />} />
