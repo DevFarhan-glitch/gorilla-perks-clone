@@ -59,5 +59,6 @@ export const PRERENDER_ROUTES = [
   "/tax-planning-manchester",
   "/tax-planning-solihull",
   "/what-is-outsourced-accounting-uk",
-  "/outsourced-accounting-cost-uk"
+  "/outsourced-accounting-cost-uk",
+  "/benefits-outsourcing-accounting-bristol"
 ];

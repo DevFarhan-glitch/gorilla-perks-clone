@@ -387,6 +387,22 @@ const allBlogs = [
     featured: false,
     tags: ["Outsourced Accounting", "Pricing", "Bookkeeping Costs", "Small Business"],
   },
+  {
+    id: "benefits-outsourcing-accounting-bristol",
+    slug: "/benefits-outsourcing-accounting-bristol",
+    title: "Benefits of Outsourcing Accounting for Bristol Businesses",
+    subtitle: "How Outsourcing Accounting Benefits Small Businesses in Bristol",
+    excerpt:
+      "See the real benefits of outsourcing accounting, from time saved to better compliance, and what it means for Bristol contractors.",
+    category: "Bristol Accounting Guide",
+    categoryColor: "blue",
+    image: "/benefits-of-outsourcing-accounting.webp",
+    author: "Henleaze Team",
+    date: "September 2026",
+    readTime: "8 min read",
+    featured: false,
+    tags: ["Outsourced Accounting", "Bristol Businesses", "Small Business", "Contractor Accounting", "IR35"],
+  },
 ];
 
 

@@ -157,5 +157,17 @@ export const blogPosts: BlogPost[] = [
     image: "/company-secretarial-firms-in-bristol-services-and-what-businesses-need-to-know.webp",
     slug: "/company-secretarial-firms-in-bristol"
   },
+  {
+    id: 18,
+    title: "Benefits of Outsourcing Accounting for Bristol Businesses",
+    excerpt: "See the real benefits of outsourcing accounting, from time saved to better compliance, and what it means for Bristol contractors.",
+    content: "Redirecting...",
+    author: "Henleaze Team",
+    date: "September 2026",
+    readTime: "8 min read",
+    category: "Outsourced Accounting",
+    image: "/benefits-of-outsourcing-accounting.webp",
+    slug: "/benefits-outsourcing-accounting-bristol"
+  },
 ];
 
