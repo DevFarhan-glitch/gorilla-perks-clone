@@ -403,6 +403,22 @@ const allBlogs = [
     featured: false,
     tags: ["Outsourced Accounting", "Bristol Businesses", "Small Business", "Contractor Accounting", "IR35"],
   },
+  {
+    id: "outsourced-vs-in-house-accounting",
+    slug: "/outsourced-vs-in-house-accounting",
+    title: "Outsourced vs In House Accounting: Which is Better?",
+    subtitle: "Outsourced Accounting vs In House-Accounting: How to Choose the Right Fit",
+    excerpt:
+      "Cost, expertise, scalability and compliance risk compared side by side, so you can work out which accounting setup actually fits you.",
+    category: "UK Accounting Guide",
+    categoryColor: "amber",
+    image: "/outsourced-accounting-vs-in-house-accounting.webp",
+    author: "Henleaze Team",
+    date: "September 2026",
+    readTime: "9 min read",
+    featured: false,
+    tags: ["Outsourced Accounting", "In-House Accounting", "Cost Comparison", "Small Business", "IR35"],
+  },
 ];
 
 

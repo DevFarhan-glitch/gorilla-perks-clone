@@ -1,8 +1,7 @@
-import { useState, useEffect, useCallback, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import {
   ArrowRight,
-  ArrowLeft,
   ShieldCheck,
   Calculator,
   TrendingUp,
@@ -115,77 +114,68 @@ const slides: HeroSlide[] = [
   },
 ];
 
+
+
 const Hero = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
+  const [activeSlide, setActiveSlide] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
-  const slideIntervalRef = useRef<NodeJS.Timeout | null>(null);
+  const autoplayRef = useRef<NodeJS.Timeout | null>(null);
 
   const totalSlides = slides.length;
 
-  const nextSlide = useCallback(() => {
-    setCurrentSlide((prev) => (prev + 1) % totalSlides);
-  }, [totalSlides]);
-
-  const prevSlide = useCallback(() => {
-    setCurrentSlide((prev) => (prev - 1 + totalSlides) % totalSlides);
-  }, [totalSlides]);
 
   const goToSlide = (index: number) => {
-    setCurrentSlide(index);
+    setActiveSlide(index);
   };
 
-  // Autoplay interval (6 seconds per slide)
+  // Autoplay: advance every 6 seconds unless hovered
   useEffect(() => {
-    if (!isHovered) {
-      slideIntervalRef.current = setInterval(() => {
-        nextSlide();
-      }, 6000);
-    }
-
+    if (isHovered) return;
+    autoplayRef.current = setTimeout(() => {
+      setActiveSlide((prev) => (prev + 1) % totalSlides);
+    }, 6000);
     return () => {
-      if (slideIntervalRef.current) {
-        clearInterval(slideIntervalRef.current);
-      }
+      if (autoplayRef.current) clearTimeout(autoplayRef.current);
     };
-  }, [isHovered, nextSlide]);
+  }, [isHovered, activeSlide, totalSlides]);
 
   return (
     <section
-      className="relative overflow-hidden min-h-[90vh] lg:min-h-[92vh] flex items-center justify-center text-white bg-[#0e1932] select-none"
+      className="relative overflow-hidden min-h-[90vh] lg:min-h-[92vh] flex items-center justify-center text-white bg-[#0a162e] select-none"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       aria-label="Hero Carousel"
     >
-      {/* Background Slides: Smooth 1000ms crossfade with 8s cinematic drift */}
+      {/* Background Slides: Pure cross-fade driven by activeSlide */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
         {slides.map((slide, index) => {
-          const isActive = index === currentSlide;
+          const isActive = index === activeSlide;
           return (
             <div
               key={`bg-${slide.id}`}
-              className={`absolute inset-0 transition-opacity duration-[1000ms] ease-in-out ${
-                isActive ? "opacity-100" : "opacity-0"
-              }`}
+              className="absolute inset-0"
               style={{
+                opacity: isActive ? 1 : 0,
+                transition: "opacity 1400ms cubic-bezier(0.4, 0, 0.2, 1)",
                 willChange: "opacity",
               }}
             >
-              {/* Very gentle, barely perceptible Ken-Burns zoom over 14 seconds */}
+              {/* Subtle Ken-Burns zoom on active slide */}
               <div
-                className={`w-full h-full bg-cover bg-center transition-transform duration-[8000ms] ease-out ${
-                  isActive ? "scale-[1.04]" : "scale-100"
-                }`}
+                className="w-full h-full bg-cover bg-center"
                 style={{
                   backgroundImage: `url('${slide.image}')`,
                   backgroundPosition: "center 30%",
+                  transform: isActive ? "scale(1.04)" : "scale(1)",
+                  transition: "transform 12000ms ease-out",
                   willChange: "transform",
                 }}
               />
 
-              {/* Navy Gradient Overlay — slightly darkened for text readability */}
+              {/* Navy gradient overlay for text readability */}
               <div className="absolute inset-0 bg-gradient-to-r from-[#0a162e]/85 via-[#0f2142]/72 to-[#09152b]/82" />
 
-              {/* Soft radial vignette accent */}
+              {/* Soft radial vignette */}
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_40%,rgba(6,12,26,0.50)_100%)]" />
 
               {/* Geometric pattern overlay */}
@@ -201,20 +191,22 @@ const Hero = () => {
       {/* Top Gold Accent Bar */}
       <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-gold/30 via-gold to-gold/30 z-20" />
 
-      {/* Left Vertical Side Label (Westbury Law style rotated text) with smooth 2000ms fade */}
+      {/* Left Vertical Side Label */}
       <div className="hidden 2xl:flex absolute left-0 bottom-36 z-20 items-center pointer-events-none">
         <div className="relative">
           {slides.map((slide, index) => {
-            const isActive = index === currentSlide;
+            const isActive = index === activeSlide;
             return (
               <div
                 key={`sidelabel-${slide.id}`}
-                className={`bg-white/10 backdrop-blur-md border-r border-y border-white/20 text-gold font-bold uppercase tracking-[0.3em] text-xs py-3 px-6 origin-bottom-left -rotate-90 rounded-t-md shadow-2xl transition-all duration-[800ms] ease-in-out ${
-                  isActive
-                    ? "opacity-100 translate-y-0"
-                    : "opacity-0 translate-y-1 pointer-events-none absolute inset-0"
-                }`}
-                style={{ transformOrigin: "left bottom" }}
+                className="bg-white/10 backdrop-blur-md border-r border-y border-white/20 text-gold font-bold uppercase tracking-[0.3em] text-xs py-3 px-6 origin-bottom-left -rotate-90 rounded-t-md shadow-2xl absolute inset-0"
+                style={{
+                  transformOrigin: "left bottom",
+                  opacity: isActive ? 1 : 0,
+                  transform: isActive ? "translateY(0)" : "translateY(6px)",
+                  transition: "opacity 1400ms cubic-bezier(0.4, 0, 0.2, 1), transform 1400ms cubic-bezier(0.4, 0, 0.2, 1)",
+                  pointerEvents: isActive ? "none" : "none",
+                }}
               >
                 {slide.sideLabel}
               </div>
@@ -223,33 +215,28 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Main Content: Stacked in single Grid Cell for ZERO layout shift, soft 2000ms crossfade */}
+      {/* Main Content: Pure cross-fade driven by activeSlide */}
       <div className="container relative z-10 py-16 sm:py-24 lg:py-28 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center grid grid-cols-1 grid-rows-1 items-center justify-items-center">
           {slides.map((slide, index) => {
-            const isActive = index === currentSlide;
+            const isActive = index === activeSlide;
             const BadgeIcon = slide.badgeIcon;
 
             return (
               <div
                 key={`content-${slide.id}`}
-                className={`col-start-1 row-start-1 w-full flex flex-col items-center justify-center transition-all duration-[800ms] ease-in-out ${
-                  isActive
-                    ? "opacity-100 scale-100 translate-y-0 pointer-events-auto z-10"
-                    : "opacity-0 scale-[0.99] translate-y-1 pointer-events-none z-0"
-                }`}
+                className="col-start-1 row-start-1 w-full flex flex-col items-center justify-center"
                 style={{
+                  opacity: isActive ? 1 : 0,
+                  transform: isActive ? "translateY(0) scale(1)" : "translateY(10px) scale(0.99)",
+                  transition: "opacity 1400ms cubic-bezier(0.4, 0, 0.2, 1), transform 1400ms cubic-bezier(0.4, 0, 0.2, 1)",
+                  pointerEvents: isActive ? "auto" : "none",
+                  zIndex: isActive ? 10 : 0,
                   willChange: "opacity, transform",
                 }}
               >
                 {/* Hexagonal Polygon Icon Badge (Westbury style) */}
-                <div
-                  className={`mb-6 flex items-center justify-center transition-all duration-[800ms] ease-out ${
-                    isActive
-                      ? "opacity-100 scale-100 translate-y-0"
-                      : "opacity-0 scale-95 translate-y-1"
-                  }`}
-                >
+                <div className="mb-6 flex items-center justify-center">
                   <div className="relative group">
                     <div
                       className="w-16 h-18 sm:w-20 sm:h-22 bg-gold/20 flex items-center justify-center shadow-lg transition-transform duration-1000 group-hover:scale-105"
@@ -276,13 +263,7 @@ const Hero = () => {
                 </div>
 
                 {/* Subtitle / Category Tag */}
-                <div
-                  className={`mb-4 flex items-center gap-3 transition-all duration-[800ms] ease-out ${
-                    isActive
-                      ? "opacity-100 translate-y-0"
-                      : "opacity-0 translate-y-1"
-                  }`}
-                >
+                <div className="mb-4 flex items-center gap-3">
                   <span className="h-0.5 w-6 sm:w-10 bg-gold/80 rounded-full inline-block" />
                   <span className="text-gold font-bold uppercase tracking-[0.25em] text-xs sm:text-sm font-sans">
                     {slide.badgeText}
@@ -291,13 +272,7 @@ const Hero = () => {
                 </div>
 
                 {/* Main Headline */}
-                <h1
-                  className={`font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.1] text-white tracking-tight text-center max-w-5xl drop-shadow-sm transition-all duration-[800ms] ease-out ${
-                    isActive
-                      ? "opacity-100 translate-y-0"
-                      : "opacity-0 translate-y-1"
-                  }`}
-                >
+                <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.1] text-white tracking-tight text-center max-w-5xl drop-shadow-sm">
                   {slide.title}
                   <span className="block mt-2 sm:mt-3 text-gold font-normal text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display">
                     {slide.highlightText}
@@ -305,24 +280,12 @@ const Hero = () => {
                 </h1>
 
                 {/* Paragraph Description */}
-                <p
-                  className={`mt-6 sm:mt-8 text-base sm:text-lg md:text-xl leading-relaxed text-white/90 max-w-3xl text-center font-normal font-sans transition-all duration-[800ms] ease-out ${
-                    isActive
-                      ? "opacity-100 translate-y-0"
-                      : "opacity-0 translate-y-1"
-                  }`}
-                >
+                <p className="mt-6 sm:mt-8 text-base sm:text-lg md:text-xl leading-relaxed text-white/90 max-w-3xl text-center font-normal font-sans">
                   {slide.description}
                 </p>
 
                 {/* Action CTAs */}
-                <div
-                  className={`mt-8 sm:mt-10 flex flex-col sm:flex-row gap-4 w-full sm:w-auto justify-center items-center transition-all duration-[800ms] ease-out ${
-                    isActive
-                      ? "opacity-100 translate-y-0"
-                      : "opacity-0 translate-y-1"
-                  }`}
-                >
+                <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row gap-4 w-full sm:w-auto justify-center items-center">
                   <Button
                     size="lg"
                     asChild
@@ -353,13 +316,7 @@ const Hero = () => {
                 </div>
 
                 {/* Trust Points Badges Grid */}
-                <div
-                  className={`mt-12 sm:mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 w-full max-w-5xl transition-all duration-[800ms] ease-out ${
-                    isActive
-                      ? "opacity-100 translate-y-0"
-                      : "opacity-0 translate-y-1"
-                  }`}
-                >
+                <div className="mt-12 sm:mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 w-full max-w-5xl">
                   {slide.trustPoints.map((point, ptIdx) => {
                     const PointIcon = point.icon;
                     return (
@@ -383,49 +340,28 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Slide Navigation Buttons (Bottom Right - Westbury Law aesthetic) */}
-      <div className="absolute bottom-6 sm:bottom-8 right-6 sm:right-10 flex items-center gap-3 z-30">
-        {/* Slide Counter */}
-        <div className="hidden sm:flex items-center text-xs font-mono text-white/70 bg-black/40 backdrop-blur-md px-3 py-2 rounded-md border border-white/10 mr-1">
-          <span className="text-gold font-bold">0{currentSlide + 1}</span>
-          <span className="mx-1 text-white/40">/</span>
+      {/* Slide Counter (Bottom Right - Arrows removed per requirement) */}
+      <div className="hidden sm:flex absolute bottom-6 sm:bottom-8 right-6 sm:right-10 z-30 pointer-events-none">
+        <div className="flex items-center text-xs font-mono text-white/80 bg-black/40 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-white/15 shadow-lg">
+          <span className="text-gold font-bold">0{activeSlide + 1}</span>
+          <span className="mx-1.5 text-white/40">/</span>
           <span>0{totalSlides}</span>
         </div>
-
-        {/* Previous Button */}
-        <button
-          type="button"
-          onClick={prevSlide}
-          aria-label="Previous slide"
-          className="w-11 h-11 sm:w-12 sm:h-12 bg-white/10 hover:bg-white/25 border border-white/20 hover:border-white/40 text-white rounded-md flex items-center justify-center transition-all duration-500 backdrop-blur-md shadow-lg active:scale-95 cursor-pointer"
-        >
-          <ArrowLeft className="h-5 w-5" />
-        </button>
-
-        {/* Next Button */}
-        <button
-          type="button"
-          onClick={nextSlide}
-          aria-label="Next slide"
-          className="w-11 h-11 sm:w-12 sm:h-12 bg-gold hover:bg-gold-light text-[#0a1224] rounded-md flex items-center justify-center font-bold transition-all duration-500 shadow-[0_0_20px_rgba(202,169,87,0.4)] active:scale-95 cursor-pointer"
-        >
-          <ArrowRight className="h-5 w-5" />
-        </button>
       </div>
 
       {/* Slide Indicators / Progress Dots (Bottom Center) */}
       <div className="absolute bottom-6 sm:bottom-8 left-1/2 -translate-x-1/2 flex items-center gap-2.5 z-30">
         {slides.map((_, index) => {
-          const isActive = index === currentSlide;
+          const isActive = index === activeSlide;
           return (
             <button
               key={index}
               type="button"
               onClick={() => goToSlide(index)}
               aria-label={`Go to slide ${index + 1}`}
-              className={`h-2.5 rounded-full transition-all duration-[500ms] ease-in-out cursor-pointer ${
+              className={`h-2.5 rounded-full transition-all duration-[600ms] ease-in-out cursor-pointer ${
                 isActive
-                  ? "w-8 bg-gold shadow-[0_0_12px_rgba(202,169,87,0.8)]"
+                  ? "w-8 bg-gold shadow-[0_0_12px_rgba(202,169,87,0.85)]"
                   : "w-2.5 bg-white/30 hover:bg-white/60"
               }`}
             />

@@ -715,7 +715,7 @@ const OutsourcedAccountingCostUK = () => {
                 <p className="text-gray-700 leading-relaxed">
                   We've broken this comparison down in more depth, including how it plays out across different business sizes, in our guide to{" "}
                   <Link
-                    to="/outsourcing-accounting-firms-in-bristol"
+                    to="/outsourced-vs-in-house-accounting"
                     className="text-amber-700 hover:underline font-semibold"
                   >
                     outsourced accounting versus in house accounting

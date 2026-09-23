@@ -443,7 +443,7 @@ const BenefitsOutsourcingAccountingBristol = () => {
                 <p>
                   We've broken this comparison down properly, cost by cost, in{" "}
                   <Link
-                    to="/outsourced-accounting-cost-uk"
+                    to="/outsourced-vs-in-house-accounting"
                     className="text-amber-700 hover:underline font-semibold"
                   >
                     our guide to outsourced accounting versus in house accounting
