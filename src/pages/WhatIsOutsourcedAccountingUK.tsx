@@ -507,8 +507,18 @@ const WhatIsOutsourcedAccountingUK = () => {
                   </div>
                 </div>
 
-                <p className="text-gray-700 leading-relaxed">
+                <p className="text-gray-700 leading-relaxed mb-4">
                   The relationship is meant to be collaborative rather than entirely hands off. You can stay as involved as you want, some business owners prefer regular check-ins, others are happy to let the provider run things and simply review the reports.
+                </p>
+                <p className="text-gray-700 leading-relaxed">
+                  This flexibility is one of the{" "}
+                  <Link
+                    to="/benefits-outsourcing-accounting-bristol"
+                    className="text-amber-700 hover:underline font-semibold"
+                  >
+                    benefits of outsourcing accounting for small businesses
+                  </Link>
+                  , particularly when you want professional support without building a full internal finance team.
                 </p>
               </section>
 
@@ -584,7 +594,7 @@ const WhatIsOutsourcedAccountingUK = () => {
                 <p className="text-gray-700 leading-relaxed">
                   We've covered this comparison properly, including a full cost breakdown for each option, in our guide to{" "}
                   <Link
-                    to="/outsourcing-accounting-firms-in-bristol"
+                    to="/outsourced-vs-in-house-accounting"
                     className="text-amber-700 hover:underline font-semibold"
                   >
                     outsourced accounting versus in house accounting
@@ -691,7 +701,7 @@ const WhatIsOutsourcedAccountingUK = () => {
                 <p className="text-gray-700 leading-relaxed">
                   We've broken this down properly, including a full range of typical UK pricing by service type, in our dedicated guide to{" "}
                   <Link
-                    to="/outsourcing-accounting-firms-in-bristol"
+                    to="/outsourced-accounting-cost-uk"
                     className="text-amber-700 hover:underline font-semibold"
                   >
                     how much outsourced accounting costs

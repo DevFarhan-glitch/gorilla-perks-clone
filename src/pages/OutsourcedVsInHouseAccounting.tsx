@@ -521,8 +521,18 @@ const OutsourcedVsInHouseAccounting = () => {
                 <p className="text-gray-700 leading-relaxed mb-4">
                   Outsourced accounting scales more easily than an in-house team, since support can be adjusted without a fresh recruitment process each time. In-house accounting requires hiring additional staff as workload grows, which takes time and adds ongoing cost regardless of whether the extra capacity is needed every month.
                 </p>
-                <p className="text-gray-700 leading-relaxed">
+                <p className="text-gray-700 leading-relaxed mb-4">
                   For a business going through a growth phase, taking on new clients, adding staff, or expanding into new areas, outsourcing tends to accommodate that change faster than recruiting can.
+                </p>
+                <p className="text-gray-700 leading-relaxed">
+                  Outsourced accounting scales more easily than an in-house team, since support can be adjusted without a fresh recruitment process each time. This is one of the{" "}
+                  <Link
+                    to="/benefits-outsourcing-accounting-bristol"
+                    className="text-amber-700 hover:underline font-semibold"
+                  >
+                    benefits of outsourcing accounting for small businesses
+                  </Link>
+                  , particularly during periods of growth.
                 </p>
               </section>
 
@@ -649,8 +659,15 @@ const OutsourcedVsInHouseAccounting = () => {
                     inside versus outside IR35
                   </Link>.
                 </p>
-                <p className="text-gray-700 leading-relaxed">
-                  We work with contractors, sole traders and small limited companies across Bristol specifically, on a fixed fee basis, if you'd like to see what this looks like for your own situation, our{" "}
+                <p className="text-gray-700 leading-relaxed mb-4">
+                  We work with contractors, sole traders and small limited companies across Bristol, and our guide to{" "}
+                  <Link
+                    to="/outsourcing-accounting-firms-in-bristol"
+                    className="text-amber-700 hover:underline font-semibold"
+                  >
+                    outsourcing accounting firms in Bristol
+                  </Link>{" "}
+                  explains what to look for when comparing providers. If you'd like to see what this looks like for your own situation, our{" "}
                   <Link
                     to="/services/contractor-accountants"
                     className="text-amber-700 hover:underline font-semibold"

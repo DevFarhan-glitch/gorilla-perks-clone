@@ -330,7 +330,7 @@ const OutsourcedAccountingCostUK = () => {
                   Cost by Service Type
                 </h2>
                 <div className="w-12 h-1 bg-amber-500 mb-6 rounded" />
-                <p className="text-gray-700 leading-relaxed mb-6">
+                <p className="text-gray-700 leading-relaxed mb-4">
                   Outsourced accounting isn't priced as one flat fee, different services carry different costs and most providers let you pick and choose rather than forcing a{" "}
                   <Link
                     to="/pricing"
@@ -338,6 +338,16 @@ const OutsourcedAccountingCostUK = () => {
                   >
                     single bundled package
                   </Link>.
+                </p>
+                <p className="text-gray-700 leading-relaxed mb-6">
+                  The difference in service levels is also one of the{" "}
+                  <Link
+                    to="/benefits-outsourcing-accounting-bristol"
+                    className="text-amber-700 hover:underline font-semibold"
+                  >
+                    benefits of outsourcing accounting for small businesses
+                  </Link>
+                  , particularly when you need more than basic bookkeeping.
                 </p>
 
                 {/* Pricing Table */}
@@ -543,6 +553,16 @@ const OutsourcedAccountingCostUK = () => {
                     </div>
                   </div>
                 </div>
+                <p className="text-gray-700 leading-relaxed">
+                  A few specific factors can also vary between{" "}
+                  <Link
+                    to="/outsourcing-accounting-firms-in-bristol"
+                    className="text-amber-700 hover:underline font-semibold"
+                  >
+                    outsourcing accounting firms in Bristol
+                  </Link>
+                  , so it is worth comparing exactly what each provider includes in its fee.
+                </p>
               </section>
 
               {/* Section 4 — Fixed Fee vs Hourly vs Retainer Pricing, and Why It Matters */}
