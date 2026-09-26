@@ -62,5 +62,7 @@ export const PRERENDER_ROUTES = [
   "/outsourced-accounting-cost-uk",
   "/benefits-outsourcing-accounting-bristol",
   "/accountants-in-edinburgh",
-  "/outsourced-vs-in-house-accounting"
+  "/outsourced-vs-in-house-accounting",
+  "/accountants-in-bradford",
+  "/accountants-in-belfast"
 ];
