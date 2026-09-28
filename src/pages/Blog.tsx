@@ -419,6 +419,22 @@ const allBlogs = [
     featured: false,
     tags: ["Outsourced Accounting", "In-House Accounting", "Cost Comparison", "Small Business", "IR35"],
   },
+  {
+    id: "payroll-consulting-vs-outsourced-payroll",
+    slug: "/payroll-consulting-vs-outsourced-payroll",
+    title: "Payroll Consulting vs Outsourced Payroll: Key Differences",
+    subtitle: "Payroll Consulting vs Outsourced Payroll: Which Do You Need?",
+    excerpt:
+      "Payroll consulting vs outsourced payroll explained. Learn the key differences, costs, responsibilities and which option suits your business.",
+    category: "UK Payroll Guide",
+    categoryColor: "amber",
+    image: "/payroll-consulting-vs-outsourced-payroll.webp",
+    author: "Henleaze Team",
+    date: "September 2026",
+    readTime: "8 min read",
+    featured: false,
+    tags: ["Payroll Consulting", "Outsourced Payroll", "HMRC Reporting", "Pension", "Bristol"],
+  },
 ];
 
 

@@ -301,7 +301,14 @@ const PayrollConsultingFirmsBristol = () => {
               >
                 outsourced accounting
               </Link>
-              . Some firms specialise purely in payroll, while others offer it as one part of a broader accountancy service. Bristol has a genuine mix of both. This guide looks at five local firms, what a standard payroll service actually includes, what it costs and how the process works if you're switching from doing it yourself.
+              . Some firms specialise purely in payroll, while others offer it as one part of a broader accountancy service. Bristol has a genuine mix of both. This guide looks at five local firms, what a standard payroll service actually includes, what it costs and how the process works if you're switching from doing it yourself. Unsure which model you need? Read our breakdown of{" "}
+              <Link
+                to="/payroll-consulting-vs-outsourced-payroll"
+                className="text-amber-700 hover:underline font-semibold"
+              >
+                payroll consulting vs outsourced payroll
+              </Link>
+              .
             </p>
 
             {/* ── TABLE OF CONTENTS ─────────────────────────────────── */}

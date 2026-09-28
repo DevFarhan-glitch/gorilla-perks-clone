@@ -70,6 +70,7 @@ const AccountantsInEdinburgh = lazyWithRetry(() => import("./pages/AccountantsIn
 const OutsourcedVsInHouseAccounting = lazyWithRetry(() => import("./pages/OutsourcedVsInHouseAccounting"));
 const AccountantsInBradford = lazyWithRetry(() => import("./pages/AccountantsInBradford"));
 const AccountantsInBelfast = lazyWithRetry(() => import("./pages/AccountantsInBelfast"));
+const PayrollConsultingVsOutsourcedPayroll = lazyWithRetry(() => import("./pages/PayrollConsultingVsOutsourcedPayroll"));
 
 export const AppRoutesLazy = () => (
   <>
@@ -207,6 +208,8 @@ export const AppRoutesLazy = () => (
         <Route path="/accountants-in-bradford/" element={<AccountantsInBradford />} />
         <Route path="/accountants-in-belfast" element={<AccountantsInBelfast />} />
         <Route path="/accountants-in-belfast/" element={<AccountantsInBelfast />} />
+        <Route path="/payroll-consulting-vs-outsourced-payroll" element={<PayrollConsultingVsOutsourcedPayroll />} />
+        <Route path="/payroll-consulting-vs-outsourced-payroll/" element={<PayrollConsultingVsOutsourcedPayroll />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/privacy-policy/" element={<PrivacyPolicy />} />
         {/* ── 301-EQUIVALENT CLIENT-SIDE REDIRECTS ────────────────── */}

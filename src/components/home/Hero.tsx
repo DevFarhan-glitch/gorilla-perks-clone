@@ -128,12 +128,12 @@ const Hero = () => {
     setActiveSlide(index);
   };
 
-  // Autoplay: advance every 6 seconds unless hovered
+  // Autoplay: advance every 3.8 seconds unless hovered (snappier, shorter interval)
   useEffect(() => {
     if (isHovered) return;
     autoplayRef.current = setTimeout(() => {
       setActiveSlide((prev) => (prev + 1) % totalSlides);
-    }, 6000);
+    }, 3800);
     return () => {
       if (autoplayRef.current) clearTimeout(autoplayRef.current);
     };
@@ -141,7 +141,7 @@ const Hero = () => {
 
   return (
     <section
-      className="relative overflow-hidden min-h-[90vh] lg:min-h-[92vh] flex items-center justify-center text-white bg-[#0a162e] select-none"
+      className="relative overflow-hidden min-h-[90vh] lg:min-h-[92vh] flex items-center justify-center text-white bg-[#060b17] select-none"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       aria-label="Hero Carousel"
@@ -156,7 +156,7 @@ const Hero = () => {
               className="absolute inset-0"
               style={{
                 opacity: isActive ? 1 : 0,
-                transition: "opacity 1400ms cubic-bezier(0.4, 0, 0.2, 1)",
+                transition: "opacity 450ms cubic-bezier(0.4, 0, 0.2, 1)",
                 willChange: "opacity",
               }}
             >
@@ -167,26 +167,26 @@ const Hero = () => {
                   backgroundImage: `url('${slide.image}')`,
                   backgroundPosition: "center 30%",
                   transform: isActive ? "scale(1.04)" : "scale(1)",
-                  transition: "transform 12000ms ease-out",
+                  transition: "transform 8000ms ease-out",
                   willChange: "transform",
                 }}
               />
 
-              {/* Navy gradient overlay for text readability */}
-              <div className="absolute inset-0 bg-gradient-to-r from-[#0a162e]/85 via-[#0f2142]/72 to-[#09152b]/82" />
+              {/* Darkened navy-slate gradient overlay for balanced contrast & readability */}
+              <div className="absolute inset-0 bg-gradient-to-r from-[#030712]/96 via-[#050d20]/93 to-[#030712]/96" />
 
-              {/* Soft radial vignette */}
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_40%,rgba(6,12,26,0.50)_100%)]" />
+              {/* Soft radial vignette & center dimming so text is immediately readable */}
+              <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(2,6,16,0.60)_0%,rgba(1,3,8,0.88)_100%)]" />
 
               {/* Geometric pattern overlay */}
-              <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0zNiAxOGMtNi42MjcgMC0xMiA1LjM3My0xMiAxMnM1LjM3MyAxMiAxMiAxMiAxMi01LjM3MyAxMi0xMi01LjM3My0xMi0xMi0xMnptMCAxOGMtMy4zMTQgMC02LTIuNjg2LTYtNnMyLjY4Ni02IDYtNiA2IDIuNjg2IDYgNi0yLjY4NiA2LTYgNnoiIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iLjAzNSIvPjwvZz48L3N2Zz4=')] opacity-30" />
+              <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0zNiAxOGMtNi42MjcgMC0xMiA1LjM3My0xMiAxMnM1LjM3MyAxMiAxMiAxMiAxMi01LjM3MyAxMi0xMi01LjM3My0xMi0xMi0xMnptMCAxOGMtMy4zMTQgMC02LTIuNjg2LTYtNnMyLjY4Ni02IDYtNiA2IDIuNjg2IDYgNi0yLjY4NiA2LTYgNnoiIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iLjAzNSIvPjwvZz48L3N2Zz4=')] opacity-20" />
             </div>
           );
         })}
       </div>
 
-      {/* Luminous Warm Ambient Center Glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[500px] bg-gold/15 blur-[140px] rounded-full pointer-events-none z-0" />
+      {/* Luminous Warm Ambient Center Glow - subtly dialed down to prevent washing out text */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[500px] bg-gold/[0.03] blur-[160px] rounded-full pointer-events-none z-0" />
 
       {/* Top Gold Accent Bar */}
       <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-gold/30 via-gold to-gold/30 z-20" />
@@ -204,7 +204,7 @@ const Hero = () => {
                   transformOrigin: "left bottom",
                   opacity: isActive ? 1 : 0,
                   transform: isActive ? "translateY(0)" : "translateY(6px)",
-                  transition: "opacity 1400ms cubic-bezier(0.4, 0, 0.2, 1), transform 1400ms cubic-bezier(0.4, 0, 0.2, 1)",
+                  transition: "opacity 450ms cubic-bezier(0.4, 0, 0.2, 1), transform 450ms cubic-bezier(0.4, 0, 0.2, 1)",
                   pointerEvents: isActive ? "none" : "none",
                 }}
               >
@@ -228,8 +228,8 @@ const Hero = () => {
                 className="col-start-1 row-start-1 w-full flex flex-col items-center justify-center"
                 style={{
                   opacity: isActive ? 1 : 0,
-                  transform: isActive ? "translateY(0) scale(1)" : "translateY(10px) scale(0.99)",
-                  transition: "opacity 1400ms cubic-bezier(0.4, 0, 0.2, 1), transform 1400ms cubic-bezier(0.4, 0, 0.2, 1)",
+                  transform: isActive ? "translateY(0) scale(1)" : "translateY(8px) scale(0.99)",
+                  transition: "opacity 450ms cubic-bezier(0.4, 0, 0.2, 1), transform 450ms cubic-bezier(0.4, 0, 0.2, 1)",
                   pointerEvents: isActive ? "auto" : "none",
                   zIndex: isActive ? 10 : 0,
                   willChange: "opacity, transform",
@@ -265,22 +265,22 @@ const Hero = () => {
                 {/* Subtitle / Category Tag */}
                 <div className="mb-4 flex items-center gap-3">
                   <span className="h-0.5 w-6 sm:w-10 bg-gold/80 rounded-full inline-block" />
-                  <span className="text-gold font-bold uppercase tracking-[0.25em] text-xs sm:text-sm font-sans">
+                  <span className="text-gold font-bold uppercase tracking-[0.25em] text-xs sm:text-sm font-sans drop-shadow-[0_1px_4px_rgba(0,0,0,0.6)]">
                     {slide.badgeText}
                   </span>
                   <span className="h-0.5 w-6 sm:w-10 bg-gold/80 rounded-full inline-block" />
                 </div>
 
                 {/* Main Headline */}
-                <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.1] text-white tracking-tight text-center max-w-5xl drop-shadow-sm">
+                <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.1] text-white tracking-tight text-center max-w-5xl drop-shadow-[0_2px_12px_rgba(0,0,0,0.85)]">
                   {slide.title}
-                  <span className="block mt-2 sm:mt-3 text-gold font-normal text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display">
+                  <span className="block mt-2 sm:mt-3 text-gold font-normal text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display drop-shadow-[0_2px_10px_rgba(0,0,0,0.7)]">
                     {slide.highlightText}
                   </span>
                 </h1>
 
                 {/* Paragraph Description */}
-                <p className="mt-6 sm:mt-8 text-base sm:text-lg md:text-xl leading-relaxed text-white/90 max-w-3xl text-center font-normal font-sans">
+                <p className="mt-6 sm:mt-8 text-base sm:text-lg md:text-xl leading-relaxed text-slate-100 max-w-3xl text-center font-normal font-sans drop-shadow-[0_1px_8px_rgba(0,0,0,0.8)]">
                   {slide.description}
                 </p>
 
@@ -359,7 +359,7 @@ const Hero = () => {
               type="button"
               onClick={() => goToSlide(index)}
               aria-label={`Go to slide ${index + 1}`}
-              className={`h-2.5 rounded-full transition-all duration-[600ms] ease-in-out cursor-pointer ${
+              className={`h-2.5 rounded-full transition-all duration-300 ease-in-out cursor-pointer ${
                 isActive
                   ? "w-8 bg-gold shadow-[0_0_12px_rgba(202,169,87,0.85)]"
                   : "w-2.5 bg-white/30 hover:bg-white/60"
