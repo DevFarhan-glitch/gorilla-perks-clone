@@ -65,5 +65,6 @@ export const PRERENDER_ROUTES = [
   "/outsourced-vs-in-house-accounting",
   "/accountants-in-bradford",
   "/accountants-in-belfast",
+  "/accountants-in-ballymena",
   "/payroll-consulting-vs-outsourced-payroll"
 ];
