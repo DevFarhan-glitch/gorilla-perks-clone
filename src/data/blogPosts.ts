@@ -169,5 +169,17 @@ export const blogPosts: BlogPost[] = [
     image: "/benefits-of-outsourcing-accounting.webp",
     slug: "/benefits-outsourcing-accounting-bristol"
   },
+  {
+    id: 19,
+    title: "Common Payroll Problems Small Businesses Face and How to Avoid Them in Bristol",
+    excerpt: "Spot the payroll problems that cost small businesses money, what HMRC penalties look like, and what to do if you have already made a mistake.",
+    content: "Redirecting...",
+    author: "Henleaze Team",
+    date: "September 2026",
+    readTime: "8 min read",
+    category: "Payroll & HR",
+    image: "/common payroll problems.png",
+    slug: "/common-payroll-problems"
+  },
 ];
 

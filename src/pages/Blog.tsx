@@ -435,6 +435,22 @@ const allBlogs = [
     featured: false,
     tags: ["Payroll Consulting", "Outsourced Payroll", "HMRC Reporting", "Pension", "Bristol"],
   },
+  {
+    id: "common-payroll-problems",
+    slug: "/common-payroll-problems",
+    title: "Payroll Problems: Common Mistakes and How to Avoid Them",
+    subtitle: "Common Payroll Problems Small Businesses Face and How to Avoid Them in Bristol",
+    excerpt:
+      "Spot the payroll problems that cost small businesses money, what HMRC penalties look like, and what to do if you have already made a mistake.",
+    category: "UK Payroll Guide",
+    categoryColor: "amber",
+    image: "/common payroll problems.png",
+    author: "Henleaze Team",
+    date: "September 2026",
+    readTime: "8 min read",
+    featured: false,
+    tags: ["Payroll Problems", "HMRC Penalties", "PAYE", "Auto-Enrolment", "Bristol Small Business"],
+  },
 ];
 
 
