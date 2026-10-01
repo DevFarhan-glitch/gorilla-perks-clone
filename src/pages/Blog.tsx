@@ -451,6 +451,22 @@ const allBlogs = [
     featured: false,
     tags: ["Payroll Problems", "HMRC Penalties", "PAYE", "Auto-Enrolment", "Bristol Small Business"],
   },
+
+  {
+    id: "what-do-payroll-services-include",
+    slug: "/what-do-payroll-services-include",
+    title: "Payroll Services in Bristol: What Is Actually Included",
+    subtitle: "Payroll services include PAYE, RTI, payslips, pension auto-enrolment, statutory pay and year end reporting.",
+    excerpt: "Explore what a standard payroll service covers, extra costs, and specifics for small businesses and single director companies in Bristol.",
+    category: "Bristol Payroll Guide",
+    categoryColor: "amber",
+    image: "/payroll services.png",
+    author: "Henleaze Team",
+    date: "October 2026",
+    readTime: "9 min read",
+    featured: false,
+    tags: ["Payroll", "Bristol", "PAYE", "Auto-Enrolment", "Statutory Payments"]
+  }
 ];
 
 

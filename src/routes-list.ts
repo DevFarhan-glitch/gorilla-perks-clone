@@ -67,5 +67,6 @@ export const PRERENDER_ROUTES = [
   "/accountants-in-belfast",
   "/accountants-in-ballymena",
   "/payroll-consulting-vs-outsourced-payroll",
-  "/common-payroll-problems"
+  "/common-payroll-problems",
+  "/what-do-payroll-services-include"
 ];
