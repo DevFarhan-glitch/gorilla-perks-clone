@@ -6,12 +6,10 @@ import {
   Calendar,
   Clock,
   User,
-  ChevronDown,
   CheckCircle2,
   AlertCircle,
   Layers,
-  Receipt,
-  FileSpreadsheet
+  Receipt
 } from "lucide-react";
 import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
@@ -28,7 +26,6 @@ const sections = [
   { id: "payroll-accounts-mismatch", title: "Payroll and Accounts That Don't Match" },
   { id: "directors-and-contractors", title: "Payroll Problems Specific to Directors and Contractors" },
   { id: "what-to-do-mistake", title: "What to Do If You've Already Made a Payroll Mistake" },
-  { id: "faqs", title: "Frequently Asked Questions" },
   { id: "final-words", title: "Final Words" },
 ];
 
@@ -113,42 +110,10 @@ const payeLatePaymentPenalties = [
   },
 ];
 
-const faqsData = [
-  {
-    question: "What is the most common payroll mistake small businesses make in the UK?",
-    answer:
-      "The most common payroll mistakes are wrong tax codes, late Real Time Information (RTI) submissions to HMRC, missed PAYE payment deadlines, and auto-enrolment pension non-compliance. Most arise from manual data entry, missing HMRC code notices, or unclear onboarding checklists.",
-  },
-  {
-    question: "What are the HMRC penalties for submitting payroll (RTI) late?",
-    answer:
-      "HMRC charges monthly penalties for late Full Payment Submissions (FPS) based on scheme size: £100/month for 1-9 employees, £200/month for 10-49 employees, £300/month for 50-249 employees, and £400/month for 250+ employees. Submissions over 3 months late can incur an additional 5% penalty.",
-  },
-  {
-    question: "When is PAYE due to HMRC each month?",
-    answer:
-      "Electronic PAYE payments must reach HMRC by the 22nd of the month following the end of the tax month (which runs from the 6th to the 5th). If paying by cheque, the deadline is the 19th. Setting up a Direct Debit removes the risk of late payment penalties.",
-  },
-  {
-    question: "How did Statutory Sick Pay (SSP) change on 6 April 2026?",
-    answer:
-      "From 6 April 2026, SSP is payable from day one of sickness (the three waiting days have been removed), the lower earnings threshold has been scrapped, and payment is set to the lower of 80% of average weekly earnings or the flat statutory rate (£123.25/week for 2026/27).",
-  },
-  {
-    question: "How long should small businesses keep payroll records in the UK?",
-    answer:
-      "Employers must retain all payroll records for at least three years from the end of the tax year they relate to. This includes gross pay, tax deductions, starter declarations, pension assessment records, and statutory leave calculations.",
-  },
-  {
-    question: "What should I do if I discover a payroll error from a previous pay run?",
-    answer:
-      "Work out the exact scope of the error, correct it in your payroll software using a corrected Full Payment Submission (FPS) for the current tax year or an Earlier Year Update (EYU) for past years, settle any tax underpayment with HMRC, and communicate transparently with affected employees.",
-  },
-];
+
 
 const CommonPayrollProblems = () => {
   const [activeSection, setActiveSection] = useState("common-problems-overview");
-  const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -209,18 +174,7 @@ const CommonPayrollProblems = () => {
     },
   };
 
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: faqsData.map((faq) => ({
-      "@type": "Question",
-      name: faq.question,
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: faq.answer,
-      },
-    })),
-  };
+
 
   const breadcrumbSchema = {
     "@context": "https://schema.org",
@@ -261,7 +215,7 @@ const CommonPayrollProblems = () => {
         />
         <link rel="canonical" href="https://henleazetaxconsultancy.com/common-payroll-problems" />
         <script type="application/ld+json">{JSON.stringify(articleSchema)}</script>
-        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
+
         <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
       </Helmet>
 
@@ -528,8 +482,18 @@ const CommonPayrollProblems = () => {
                 <p className="text-gray-700 leading-relaxed mb-4">
                   Employers must assess every worker for auto-enrolment and enrol those who qualify, and even a business with one or two employees can have these duties. The most common mistakes are missing an assessment for a new starter, missing the point at which an existing employee's earnings cross the earnings trigger, paying contributions late and forgetting the re-enrolment exercise that comes round every three years.
                 </p>
+                <p className="text-gray-700 leading-relaxed mb-4">
+                  These problems are usually quiet for a long time and expensive to unpick later. The Pensions Regulator can issue fixed and escalating penalties for non-compliance, so it's worth building assessments into every pay run rather than treating them as an occasional task. If payroll issues are becoming difficult to manage internally, understanding the difference between{" "}
+                  <Link
+                    to="/payroll-consulting-vs-outsourced-payroll"
+                    className="text-amber-700 hover:underline font-semibold"
+                  >
+                    payroll consulting and outsourced payroll
+                  </Link>{" "}
+                  can help you decide what type of support you need.
+                </p>
                 <p className="text-gray-700 leading-relaxed">
-                  These problems are usually quiet for a long time and expensive to unpick later. The Pensions Regulator can issue fixed and escalating penalties for non-compliance, so it's worth building assessments into every pay run rather than treating them as an occasional task. Payroll software with built in auto-enrolment checks helps, as does a diary reminder for your re-enrolment date.
+                  Payroll software with built in auto-enrolment checks helps, as does a diary reminder for your re-enrolment date.
                 </p>
               </section>
 
@@ -584,7 +548,7 @@ const CommonPayrollProblems = () => {
                 <p className="text-gray-700 leading-relaxed mb-4">
                   Treating someone as self-employed when they should be an employee is one of the most expensive payroll mistakes, because it can mean unpaid PAYE, National Insurance and interest going back several years. Whether someone is an employee depends on how the working relationship actually operates, not on what the paperwork says and not on whether they send you an invoice.
                 </p>
-                <p className="text-gray-700 leading-relaxed">
+                <p className="text-gray-700 leading-relaxed mb-4">
                   Similar factors to those in our guide to{" "}
                   <Link
                     to="/how-does-ir35-work-in-the-uk"
@@ -593,6 +557,16 @@ const CommonPayrollProblems = () => {
                     how IR35 works
                   </Link>
                   , such as how much control you have over the work and whether the person can send a substitute, feed into employment status more generally. If you're unsure about someone's status, it's worth getting it checked before the first payment rather than after HMRC asks.
+                </p>
+                <p className="text-gray-700 leading-relaxed">
+                  For businesses that would rather have these responsibilities managed externally,{" "}
+                  <Link
+                    to="/what-do-payroll-services-include"
+                    className="text-amber-700 hover:underline font-semibold"
+                  >
+                    payroll services in Bristol
+                  </Link>{" "}
+                  can provide support with payroll processing, HMRC reporting and pension administration.
                 </p>
               </section>
 
@@ -765,47 +739,21 @@ const CommonPayrollProblems = () => {
                     </div>
                   </div>
                 </div>
+
+                <p className="text-gray-700 leading-relaxed mt-6" style={{ fontFamily: "'Georgia', 'Times New Roman', serif" }}>
+                  If the underlying issue keeps recurring or your internal processes need reviewing,{" "}
+                  <Link
+                    to="/payroll-consulting-firms-in-bristol"
+                    className="text-amber-700 hover:underline font-semibold"
+                  >
+                    payroll consulting firms in Bristol
+                  </Link>{" "}
+                  can provide specialist advice on improving payroll procedures and preventing repeat errors.
+                </p>
               </section>
 
-              {/* Section 11: Frequently Asked Questions */}
-              <section id="faqs" className="scroll-mt-28">
-                <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">
-                  Frequently Asked Questions
-                </h2>
-                <div className="w-12 h-1 bg-amber-500 mb-6 rounded" />
 
-                <div className="space-y-4 mb-8 not-prose">
-                  {faqsData.map((faq, index) => (
-                    <div
-                      key={index}
-                      className="border border-gray-200 rounded-xl overflow-hidden transition-all duration-200 hover:border-amber-300 shadow-sm"
-                    >
-                      <button
-                        onClick={() => setOpenFaq(openFaq === index ? null : index)}
-                        className="w-full text-left p-5 bg-gray-50 hover:bg-gray-100 flex items-center justify-between gap-4 transition-colors"
-                        aria-expanded={openFaq === index}
-                      >
-                        <span className="font-bold text-gray-900 text-base sm:text-lg flex items-center gap-2">
-                          <span className="text-amber-600 text-sm font-mono font-bold">Q{index + 1}.</span>
-                          {faq.question}
-                        </span>
-                        <ChevronDown
-                          className={`h-5 w-5 text-gray-500 transition-transform duration-200 shrink-0 ${
-                            openFaq === index ? "rotate-180 text-amber-600" : ""
-                          }`}
-                        />
-                      </button>
-                      {openFaq === index && (
-                        <div className="p-5 bg-white border-t border-gray-100 text-gray-700 leading-relaxed text-sm sm:text-base">
-                          {faq.answer}
-                        </div>
-                      )}
-                    </div>
-                  ))}
-                </div>
-              </section>
-
-              {/* Section 12: Final Words */}
+              {/* Section 11: Final Words */}
               <section id="final-words" className="scroll-mt-28">
                 <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">
                   Final Words
