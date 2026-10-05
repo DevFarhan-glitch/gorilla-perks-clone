@@ -69,6 +69,7 @@ import OutsourcedVsInHouseAccounting from "./pages/OutsourcedVsInHouseAccounting
 import AccountantsInBradford from "./pages/AccountantsInBradford";
 import AccountantsInBelfast from "./pages/AccountantsInBelfast";
 import AccountantsInBallymena from "./pages/AccountantsInBallymena";
+import AccountantsInMagherafelt from "./pages/AccountantsInMagherafelt";
 import PayrollConsultingVsOutsourcedPayroll from "./pages/PayrollConsultingVsOutsourcedPayroll";
 import CommonPayrollProblems from "./pages/CommonPayrollProblems";
 
@@ -209,6 +210,8 @@ export const AppRoutesStatic = () => (
       <Route path="/accountants-in-belfast/" element={<AccountantsInBelfast />} />
       <Route path="/accountants-in-ballymena" element={<AccountantsInBallymena />} />
       <Route path="/accountants-in-ballymena/" element={<AccountantsInBallymena />} />
+      <Route path="/accountants-in-magherafelt" element={<AccountantsInMagherafelt />} />
+      <Route path="/accountants-in-magherafelt/" element={<AccountantsInMagherafelt />} />
       <Route path="/payroll-consulting-vs-outsourced-payroll" element={<PayrollConsultingVsOutsourcedPayroll />} />
       <Route path="/payroll-consulting-vs-outsourced-payroll/" element={<PayrollConsultingVsOutsourcedPayroll />} />
       <Route path="/common-payroll-problems" element={<CommonPayrollProblems />} />

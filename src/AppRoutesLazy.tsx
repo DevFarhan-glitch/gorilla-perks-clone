@@ -71,6 +71,7 @@ const OutsourcedVsInHouseAccounting = lazyWithRetry(() => import("./pages/Outsou
 const AccountantsInBradford = lazyWithRetry(() => import("./pages/AccountantsInBradford"));
 const AccountantsInBelfast = lazyWithRetry(() => import("./pages/AccountantsInBelfast"));
 const AccountantsInBallymena = lazyWithRetry(() => import("./pages/AccountantsInBallymena"));
+const AccountantsInMagherafelt = lazyWithRetry(() => import("./pages/AccountantsInMagherafelt"));
 const PayrollConsultingVsOutsourcedPayroll = lazyWithRetry(() => import("./pages/PayrollConsultingVsOutsourcedPayroll"));
 const CommonPayrollProblems = lazyWithRetry(() => import("./pages/CommonPayrollProblems"));
 const WhatDoPayrollServicesInclude = lazyWithRetry(() => import("./pages/WhatDoPayrollServicesInclude"));
@@ -213,6 +214,8 @@ export const AppRoutesLazy = () => (
         <Route path="/accountants-in-belfast/" element={<AccountantsInBelfast />} />
         <Route path="/accountants-in-ballymena" element={<AccountantsInBallymena />} />
         <Route path="/accountants-in-ballymena/" element={<AccountantsInBallymena />} />
+        <Route path="/accountants-in-magherafelt" element={<AccountantsInMagherafelt />} />
+        <Route path="/accountants-in-magherafelt/" element={<AccountantsInMagherafelt />} />
         <Route path="/payroll-consulting-vs-outsourced-payroll" element={<PayrollConsultingVsOutsourcedPayroll />} />
         <Route path="/payroll-consulting-vs-outsourced-payroll/" element={<PayrollConsultingVsOutsourcedPayroll />} />
         <Route path="/common-payroll-problems" element={<CommonPayrollProblems />} />
