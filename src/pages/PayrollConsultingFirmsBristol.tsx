@@ -301,14 +301,14 @@ const PayrollConsultingFirmsBristol = () => {
               >
                 outsourced accounting
               </Link>
-              . Some firms specialise purely in payroll, while others offer it as one part of a broader accountancy service. Bristol has a genuine mix of both. This guide looks at five local firms, what a standard payroll service actually includes, what it costs and how the process works if you're switching from doing it yourself. Unsure which model you need? Read our breakdown of{" "}
+              . If you're comparing the two approaches, it's also worth understanding the difference between{" "}
               <Link
                 to="/payroll-consulting-vs-outsourced-payroll"
                 className="text-amber-700 hover:underline font-semibold"
               >
-                payroll consulting vs outsourced payroll
+                Payroll Consulting vs Outsourced Payroll
               </Link>
-              .
+              . Some firms specialise purely in payroll, while others offer it as one part of a broader accountancy service.
             </p>
 
             {/* ── TABLE OF CONTENTS ─────────────────────────────────── */}
@@ -508,9 +508,17 @@ const PayrollConsultingFirmsBristol = () => {
                 </span>
                 <p className="text-gray-700 leading-relaxed mb-4">
                   <Link to="/" className="text-amber-800 hover:underline font-semibold">
-                    Henleaze Tax Consultancy is based in Bristol
+                    Henleaze Tax Consultancy is based in Bristol and
                   </Link>{" "}
-                  and works specifically with contractors, sole traders,{" "}
+                  provides{" "}
+                  <Link to="/what-do-payroll-services-include" className="text-amber-800 hover:underline font-semibold">
+                    payroll services
+                  </Link>{" "}
+                  for{" "}
+                  <Link to="/whats-included-in-contractor-accounting" className="text-amber-800 hover:underline font-semibold">
+                    contractors
+                  </Link>
+                  , sole traders,{" "}
                   <Link to="/services/landlord-accountants" className="text-amber-800 hover:underline font-semibold">
                     landlords
                   </Link>{" "}
@@ -611,7 +619,11 @@ const PayrollConsultingFirmsBristol = () => {
               </div>
 
               <p className="text-gray-700 leading-relaxed mb-8">
-                A few providers go further, offering things like holiday tracking, benefits administration or integration with time and attendance systems. It's worth checking exactly what's included before comparing prices between firms, since a cheaper quote sometimes reflects a narrower scope rather than better value.
+                A few providers go further, offering things like holiday tracking, benefits administration or integration with time and attendance systems. It's worth checking exactly what's included before comparing prices between firms, since a cheaper quote sometimes reflects a narrower scope rather than better value. This is particularly important if you're trying to prevent{" "}
+                <Link to="/common-payroll-problems" className="text-amber-700 hover:underline font-semibold">
+                  common payroll problems
+                </Link>
+                , such as incorrect tax codes, missed RTI submissions or pension errors.
               </p>
 
               {/* Section 4 — How Payroll Outsourcing Actually Works, Step by Step */}

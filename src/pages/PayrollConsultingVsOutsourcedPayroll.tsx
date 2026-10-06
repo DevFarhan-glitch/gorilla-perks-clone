@@ -396,7 +396,14 @@ const PayrollConsultingVsOutsourcedPayroll = () => {
                   The distinction becomes clearer when you look at what you are actually paying for.
                 </p>
                 <p className="text-gray-700 leading-relaxed mb-4">
-                  A payroll consultant may review your existing processes, help you choose software, investigate recurring errors, advise on compliance or help your team build a better payroll system. Your business generally remains responsible for operating the payroll after the advice has been provided.
+                  A consultant may review your existing processes, help you choose software, investigate{" "}
+                  <Link
+                    to="/common-payroll-problems"
+                    className="text-amber-700 hover:underline font-semibold"
+                  >
+                    common payroll problems
+                  </Link>
+                  , advise on compliance or help your team build a better payroll system. Your business generally remains responsible for operating the payroll after the advice has been provided.
                 </p>
                 <p className="text-gray-700 leading-relaxed mb-6">
                   With outsourced payroll, the provider becomes involved in the actual payroll cycle. Depending on the arrangement, they may calculate pay, prepare payslips, process deductions, submit information to HMRC and manage workplace pension administration.
@@ -594,7 +601,14 @@ const PayrollConsultingVsOutsourcedPayroll = () => {
                   For a small business, the main benefit is often the reduction in routine administration. Instead of remembering each payroll deadline and dealing with calculations every pay period, the business has an external specialist handling the process.
                 </p>
                 <p className="text-gray-700 leading-relaxed mb-4">
-                  This can be particularly useful once payroll has become more complicated than the owner or an existing administrator can comfortably manage.
+                  This can be particularly useful once payroll has become more complicated than the owner or an existing administrator can comfortably manage. Businesses looking for{" "}
+                  <Link
+                    to="/what-do-payroll-services-include"
+                    className="text-amber-700 hover:underline font-semibold"
+                  >
+                    payroll services Bristol
+                  </Link>{" "}
+                  can also use outsourced support to handle regular payroll processing, HMRC reporting and workplace pension administration.
                 </p>
                 <div className="not-prose p-5 bg-gradient-to-r from-amber-50/80 to-white border border-amber-200 rounded-xl">
                   <p className="text-sm sm:text-base text-gray-800 leading-relaxed">

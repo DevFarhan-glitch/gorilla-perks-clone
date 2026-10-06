@@ -273,7 +273,14 @@ const WhatDoPayrollServicesInclude = () => {
             {/* Opening paragraphs */}
             <div className="text-lg text-gray-700 leading-relaxed space-y-4 mb-8">
               <p>
-                A <a href="https://henleazetaxconsultancy.com/services/payroll-and-hr-services" className="text-amber-700 underline hover:text-amber-900">standard payroll service</a> calculates and pays your employees, deducts the right tax and National Insurance, reports everything to HMRC on time and keeps the records to prove it. Most providers also handle pension auto-enrolment, payslips and statutory payments such as sick pay and maternity pay as part of the core service.
+                A{" "}
+                <Link
+                  to="/services/payroll-and-hr-services"
+                  className="text-amber-700 underline hover:text-amber-900 font-semibold"
+                >
+                  standard payroll service
+                </Link>{" "}
+                calculates and pays your employees, deducts the right tax and National Insurance, reports everything to HMRC on time and keeps the records to prove it. Most providers also handle pension auto-enrolment, payslips and statutory payments such as sick pay and maternity pay as part of the core service.
               </p>
 
               <p>
@@ -488,7 +495,14 @@ const WhatDoPayrollServicesInclude = () => {
               </div>
 
               <p className="text-gray-700 leading-relaxed">
-                Before comparing two quotes, it's worth asking exactly what's included in each, since a lower price sometimes just means a narrower scope.
+                If you're also deciding between keeping payroll in-house with specialist advice and handing the ongoing work to an external provider, our guide to{" "}
+                <Link
+                  to="/payroll-consulting-vs-outsourced-payroll"
+                  className="text-amber-700 underline hover:text-amber-900 font-semibold"
+                >
+                  payroll consulting vs outsourced payroll
+                </Link>{" "}
+                explains how the two approaches differ.
               </p>
             </section>
 
