@@ -69,5 +69,6 @@ export const PRERENDER_ROUTES = [
   "/accountants-in-magherafelt",
   "/payroll-consulting-vs-outsourced-payroll",
   "/common-payroll-problems",
-  "/what-do-payroll-services-include"
+  "/what-do-payroll-services-include",
+  "/what-is-a-company-secretary-uk"
 ];

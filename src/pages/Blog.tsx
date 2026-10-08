@@ -466,6 +466,22 @@ const allBlogs = [
     readTime: "9 min read",
     featured: false,
     tags: ["Payroll", "Bristol", "PAYE", "Auto-Enrolment", "Statutory Payments"]
+  },
+  {
+    id: "what-is-a-company-secretary-uk",
+    slug: "/what-is-a-company-secretary-uk",
+    title: "Company Secretary UK: What the Role Actually Involves",
+    subtitle: "What Is a Company Secretary and What Do They Do in the UK?",
+    excerpt:
+      "A company secretary keeps a company legally compliant and properly governed, and most private UK companies do not have to appoint one.",
+    category: "Company Secretarial Guide",
+    categoryColor: "blue",
+    image: "/what-is-a-company-secretary.webp",
+    author: "Henleaze Team",
+    date: "October 2026",
+    readTime: "8 min read",
+    featured: false,
+    tags: ["Company Secretary", "Corporate Governance", "Companies House", "Compliance", "Limited Company"]
   }
 ];
 
