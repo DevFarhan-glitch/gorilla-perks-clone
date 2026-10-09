@@ -634,7 +634,7 @@ const DividendTaxRates2627 = () => {
 
               <p className="text-gray-700 leading-relaxed mb-4">
                 We are based at Park House on Park Street in Bristol and a large part of our work involves helping local company directors get their salary and dividend structure right for the year ahead rather than reacting after the fact. For contractors running their own limited companies, our guide to{" "}
-                <Link to="/contractor-accountant-services-in-the-uk" className="text-amber-700 font-semibold hover:underline">
+                <Link to="/whats-included-in-contractor-accounting" className="text-amber-700 font-semibold hover:underline">
                   contractor accounting services
                 </Link>{" "}
                 explains the wider accounting support available, from accounts and tax returns to ongoing financial management.

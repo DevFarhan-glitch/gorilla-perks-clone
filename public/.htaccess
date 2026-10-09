@@ -44,9 +44,9 @@
   RewriteRule ^how-much-does-contractor-accountant-cost/?$       /how-much-does-a-contractor-accountant-cost-in-the-uk [R=301,L]
   RewriteRule ^contractor-accountant-fees/?$                     /how-much-does-a-contractor-accountant-cost-in-the-uk [R=301,L]
   RewriteRule ^top-accounting-firms-contractors/?$               /top-accounting-firms-for-contractors-uk [R=301,L]
-  RewriteRule ^best-contractor-accountants/?$                    /top-accounting-firms-for-contractors-uk [R=301,L]
-  RewriteRule ^contractor-accounting-services/?$                 /contractor-accountant-services-in-the-uk [R=301,L]
-  RewriteRule ^services/contractor-accountants-uk/?$             /contractor-accountant-services-in-the-uk [R=301,L]
+  RewriteRule ^contractor-accounting-services/?$                 /whats-included-in-contractor-accounting [R=301,L]
+  RewriteRule ^services/contractor-accountants-uk/?$             /whats-included-in-contractor-accounting [R=301,L]
+  RewriteRule ^contractor-accountant-services-in-the-uk/?$       /whats-included-in-contractor-accounting [R=301,L]
 
   # Enforce HTTPS
   # If you are behind a proxy (like Hostinger's load balancer), use this:

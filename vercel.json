@@ -1,4 +1,21 @@
 {
+  "redirects": [
+    {
+      "source": "/contractor-accountant-services-in-the-uk",
+      "destination": "/whats-included-in-contractor-accounting",
+      "permanent": true
+    },
+    {
+      "source": "/contractor-accountant-services-in-the-uk/",
+      "destination": "/whats-included-in-contractor-accounting",
+      "permanent": true
+    },
+    {
+      "source": "/contractor-accounting-services",
+      "destination": "/whats-included-in-contractor-accounting",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     {
       "source": "/(.*)",

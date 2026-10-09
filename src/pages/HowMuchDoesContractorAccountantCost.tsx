@@ -271,7 +271,7 @@ const HowMuchDoesContractorAccountantCost = () => {
                 <li><Link to="/services/tax-planning" className="text-amber-700 underline hover:text-amber-900">Salary and dividend planning advice</Link></li>
               </ul>
               <p className="text-gray-700 leading-relaxed mb-8">
-                This covers the core of what most limited company contractors need to stay compliant and run their finances efficiently throughout the year. If you'd like to see everything that's typically included, explore our <Link to="/contractor-accountant-services-in-the-uk" className="text-amber-700 underline hover:text-amber-900">guide on contractors accounting services</Link> to learn how specialist support can help keep your business compliant and tax efficient.
+                This covers the core of what most limited company contractors need to stay compliant and run their finances efficiently throughout the year. If you'd like to see everything that's typically included, explore our <Link to="/whats-included-in-contractor-accounting" className="text-amber-700 underline hover:text-amber-900">guide on contractors accounting services</Link> to learn how specialist support can help keep your business compliant and tax efficient.
               </p>
 
               {/* What Factors Affect the Cost of a Contractor Accountant in the UK? */}

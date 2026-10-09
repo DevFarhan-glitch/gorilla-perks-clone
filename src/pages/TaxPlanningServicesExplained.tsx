@@ -436,7 +436,7 @@ const TaxPlanningServicesExplained = () => {
 
               <p className="text-gray-700 leading-relaxed mb-4">
                 The same applies to contractors working through their own limited company. Decisions about salary, dividends, pension contributions and business expenses all influence each other, so looking at the bigger picture usually produces better long-term outcomes. This is where{" "}
-                <Link to="/contractor-accountant-services-in-the-uk" className="text-amber-700 font-semibold hover:underline">
+                <Link to="/whats-included-in-contractor-accounting" className="text-amber-700 font-semibold hover:underline">
                   contractor accounting services
                 </Link>{" "}
                 can help bring those decisions together. For contractors,{" "}

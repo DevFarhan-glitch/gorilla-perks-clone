@@ -84,7 +84,7 @@ const ContractorAccountantServices = () => {
           name="keywords"
           content="contractors accounting services, UK contractor accountant, IR35 compliance, limited company accounting, contractor tax planning"
         />
-        <link rel="canonical" href="https://henleazetaxconsultancy.com/contractor-accountant-services-in-the-uk" />
+        <link rel="canonical" href="https://henleazetaxconsultancy.com/whats-included-in-contractor-accounting" />
       </Helmet>
 
       <Layout>
