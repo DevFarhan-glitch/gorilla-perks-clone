@@ -292,6 +292,22 @@ const allBlogs = [
     tags: ["Top 10 Accounting Firms", "Big Four", "Mid Tier", "UK Accounting"],
   },
   {
+    id: "top-10-accounting-firms-in-birmingham",
+    slug: "/top-10-accounting-firms-in-birmingham",
+    title: "Top 10 Accounting Firms in Birmingham: Compare & Choose",
+    subtitle: "Top 10 Accounting Firms in Birmingham: A Guide to Choosing the Right Accountant",
+    excerpt:
+      "Compare 10 accounting firms in Birmingham, explore their services and fees, and find the right accountant for your business or personal finances.",
+    category: "Birmingham Accounting Guide",
+    categoryColor: "blue",
+    image: "/top-10-accounting-firms-in-birmingham.jpg",
+    author: "Henleaze Team",
+    date: "October 2026",
+    readTime: "9 min read",
+    featured: false,
+    tags: ["Birmingham Accountants", "Accountancy Firms", "Due Diligence", "SME Accounting"],
+  },
+  {
     id: "tax-advisory-firms-bristol",
     slug: "/tax-advisory-firms-bristol",
     title: "Tax Advisory Firms in Bristol: A 2026 Comparison",

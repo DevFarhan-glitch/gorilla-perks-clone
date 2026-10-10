@@ -76,6 +76,7 @@ const PayrollConsultingVsOutsourcedPayroll = lazyWithRetry(() => import("./pages
 const CommonPayrollProblems = lazyWithRetry(() => import("./pages/CommonPayrollProblems"));
 const WhatDoPayrollServicesInclude = lazyWithRetry(() => import("./pages/WhatDoPayrollServicesInclude"));
 const WhatIsACompanySecretaryUK = lazyWithRetry(() => import("./pages/WhatIsACompanySecretaryUK"));
+const Top10AccountingFirmsInBirmingham = lazyWithRetry(() => import("./pages/Top10AccountingFirmsInBirmingham"));
 
 export const AppRoutesLazy = () => (
   <>
@@ -223,6 +224,8 @@ export const AppRoutesLazy = () => (
         <Route path="/what-do-payroll-services-include/" element={<WhatDoPayrollServicesInclude />} />
         <Route path="/what-is-a-company-secretary-uk" element={<WhatIsACompanySecretaryUK />} />
         <Route path="/what-is-a-company-secretary-uk/" element={<WhatIsACompanySecretaryUK />} />
+        <Route path="/top-10-accounting-firms-in-birmingham" element={<Top10AccountingFirmsInBirmingham />} />
+        <Route path="/top-10-accounting-firms-in-birmingham/" element={<Top10AccountingFirmsInBirmingham />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/privacy-policy/" element={<PrivacyPolicy />} />
         {/* ── 301-EQUIVALENT CLIENT-SIDE REDIRECTS ────────────────── */}

@@ -351,6 +351,18 @@ const AccountantsInBirmingham: React.FC = () => {
                 ))}
               </div>
 
+              {/* Top 10 Guide Callout */}
+              <div className="pt-2 flex justify-center">
+                <Link
+                  to="/top-10-accounting-firms-in-birmingham"
+                  className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-amber-500/10 hover:bg-amber-500/20 border border-amber-400/40 text-amber-300 text-xs sm:text-sm font-semibold transition-all group shadow-sm hover:scale-[1.02]"
+                >
+                  <Award className="w-4 h-4 text-amber-400 group-hover:rotate-12 transition-transform" />
+                  <span>Comparing local providers? Read our guide: Top 10 Accounting Firms in Birmingham</span>
+                  <ArrowRight className="w-4 h-4 text-amber-400 group-hover:translate-x-1 transition-transform" />
+                </Link>
+              </div>
+
               {/* Hero Action Buttons */}
               <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4 animate-slide-up [animation-delay:650ms]">
                 <Button

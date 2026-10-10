@@ -69,5 +69,6 @@ export const PRERENDER_ROUTES = [
   "/payroll-consulting-vs-outsourced-payroll",
   "/common-payroll-problems",
   "/what-do-payroll-services-include",
-  "/what-is-a-company-secretary-uk"
+  "/what-is-a-company-secretary-uk",
+  "/top-10-accounting-firms-in-birmingham"
 ];

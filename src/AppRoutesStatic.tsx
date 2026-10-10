@@ -74,6 +74,7 @@ import PayrollConsultingVsOutsourcedPayroll from "./pages/PayrollConsultingVsOut
 import CommonPayrollProblems from "./pages/CommonPayrollProblems";
 import WhatDoPayrollServicesInclude from "./pages/WhatDoPayrollServicesInclude";
 import WhatIsACompanySecretaryUK from "./pages/WhatIsACompanySecretaryUK";
+import Top10AccountingFirmsInBirmingham from "./pages/Top10AccountingFirmsInBirmingham";
 
 export const AppRoutesStatic = () => (
   <>
@@ -220,6 +221,8 @@ export const AppRoutesStatic = () => (
       <Route path="/what-do-payroll-services-include/" element={<WhatDoPayrollServicesInclude />} />
       <Route path="/what-is-a-company-secretary-uk" element={<WhatIsACompanySecretaryUK />} />
       <Route path="/what-is-a-company-secretary-uk/" element={<WhatIsACompanySecretaryUK />} />
+      <Route path="/top-10-accounting-firms-in-birmingham" element={<Top10AccountingFirmsInBirmingham />} />
+      <Route path="/top-10-accounting-firms-in-birmingham/" element={<Top10AccountingFirmsInBirmingham />} />
       <Route path="/privacy-policy" element={<PrivacyPolicy />} />
       <Route path="/privacy-policy/" element={<PrivacyPolicy />} />
       {/* ── 301-EQUIVALENT CLIENT-SIDE REDIRECTS ────────────────── */}
