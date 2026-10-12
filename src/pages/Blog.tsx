@@ -498,6 +498,22 @@ const allBlogs = [
     readTime: "8 min read",
     featured: false,
     tags: ["Company Secretary", "Corporate Governance", "Companies House", "Compliance", "Limited Company"]
+  },
+  {
+    id: "hmrc-mileage-rates-2026-27",
+    slug: "/hmrc-mileage-rates-2026-27",
+    title: "HMRC Mileage Rates 2026/27: Updated Rates and Rules",
+    subtitle: "HMRC Mileage Rates 2026/27: Updated Rates, Rules and Examples",
+    excerpt:
+      "The HMRC mileage rate for cars and vans increased to 55p per mile for the first 10,000 business miles from 6 April 2026. Check the latest rates, worked examples and who can claim.",
+    category: "HMRC Tax Guide",
+    categoryColor: "amber",
+    image: "/hmrc milaege.png",
+    author: "Henleaze Team",
+    date: "October 2026",
+    readTime: "9 min read",
+    featured: false,
+    tags: ["HMRC Mileage Rates", "Mileage Allowance", "Business Mileage", "Contractor Expenses", "Self-Employed"]
   }
 ];
 
