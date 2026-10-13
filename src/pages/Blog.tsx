@@ -300,7 +300,7 @@ const allBlogs = [
       "Compare 10 accounting firms in Birmingham, explore their services and fees, and find the right accountant for your business or personal finances.",
     category: "Birmingham Accounting Guide",
     categoryColor: "blue",
-    image: "/top-10-accounting-firms-in-birmingham.jpg",
+    image: "/top-10-accounting-firms-in-birmingham.PNG",
     author: "Henleaze Team",
     date: "October 2026",
     readTime: "9 min read",
