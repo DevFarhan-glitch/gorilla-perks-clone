@@ -514,6 +514,22 @@ const allBlogs = [
     readTime: "9 min read",
     featured: false,
     tags: ["HMRC Mileage Rates", "Mileage Allowance", "Business Mileage", "Contractor Expenses", "Self-Employed"]
+  },
+  {
+    id: "do-small-companies-need-a-company-secretary",
+    slug: "/do-small-companies-need-a-company-secretary",
+    title: "Company Secretary Requirements for Small UK Companies",
+    subtitle: "Do Small Companies Need a Company Secretary in the UK?",
+    excerpt:
+      "Small UK companies usually don't need a company secretary by law. Discover the exceptions, directors' duties and when secretarial support helps.",
+    category: "Company Secretarial Guide",
+    categoryColor: "blue",
+    image: "/do-small-companies-need-a-company-secretary-in-the-uk.webp",
+    author: "Henleaze Team",
+    date: "October 2026",
+    readTime: "7 min read",
+    featured: false,
+    tags: ["Company Secretary", "Small Business", "Companies House", "Directors Duties", "Compliance"]
   }
 ];
 

@@ -70,5 +70,7 @@ export const PRERENDER_ROUTES = [
   "/common-payroll-problems",
   "/what-do-payroll-services-include",
   "/what-is-a-company-secretary-uk",
-  "/top-10-accounting-firms-in-birmingham"
+  "/top-10-accounting-firms-in-birmingham",
+  "/hmrc-mileage-rates-2026-27",
+  "/do-small-companies-need-a-company-secretary"
 ];
