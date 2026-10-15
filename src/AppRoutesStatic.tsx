@@ -55,6 +55,7 @@ import Top10AccountingFirmsUK from "./pages/Top10AccountingFirmsUK";
 import TaxAdvisoryFirmsBristol from "./pages/TaxAdvisoryFirmsBristol";
 import OutsourcingAccountingFirmsBristol from "./pages/OutsourcingAccountingFirmsBristol";
 import AccountantsInSouthampton from "./pages/AccountantsInSouthampton";
+import AccountantsInPortsmouth from "./pages/AccountantsInPortsmouth";
 import AccountantsInDerby from "./pages/AccountantsInDerby";
 import PayrollConsultingFirmsBristol from "./pages/PayrollConsultingFirmsBristol";
 import CompanySecretarialFirmsBristol from "./pages/CompanySecretarialFirmsBristol";
@@ -187,6 +188,8 @@ export const AppRoutesStatic = () => (
       <Route path="/payroll-consulting-firms-in-bristol/" element={<PayrollConsultingFirmsBristol />} />
       <Route path="/best-accountants-in-southampton" element={<AccountantsInSouthampton />} />
       <Route path="/best-accountants-in-southampton/" element={<AccountantsInSouthampton />} />
+      <Route path="/accountants-in-portsmouth" element={<AccountantsInPortsmouth />} />
+      <Route path="/accountants-in-portsmouth/" element={<AccountantsInPortsmouth />} />
       <Route path="/affordable-accountants-in-derby" element={<AccountantsInDerby />} />
       <Route path="/affordable-accountants-in-derby/" element={<AccountantsInDerby />} />
       <Route path="/company-secretarial-firms-in-bristol" element={<CompanySecretarialFirmsBristol />} />

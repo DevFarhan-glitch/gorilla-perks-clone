@@ -57,6 +57,7 @@ const Top10AccountingFirmsUK = lazyWithRetry(() => import("./pages/Top10Accounti
 const TaxAdvisoryFirmsBristol = lazyWithRetry(() => import("./pages/TaxAdvisoryFirmsBristol"));
 const OutsourcingAccountingFirmsBristol = lazyWithRetry(() => import("./pages/OutsourcingAccountingFirmsBristol"));
 const AccountantsInSouthampton = lazyWithRetry(() => import("./pages/AccountantsInSouthampton"));
+const AccountantsInPortsmouth = lazyWithRetry(() => import("./pages/AccountantsInPortsmouth"));
 const AccountantsInDerby = lazyWithRetry(() => import("./pages/AccountantsInDerby"));
 const PayrollConsultingFirmsBristol = lazyWithRetry(() => import("./pages/PayrollConsultingFirmsBristol"));
 const CompanySecretarialFirmsBristol = lazyWithRetry(() => import("./pages/CompanySecretarialFirmsBristol"));
@@ -190,6 +191,8 @@ export const AppRoutesLazy = () => (
         <Route path="/payroll-consulting-firms-in-bristol/" element={<PayrollConsultingFirmsBristol />} />
         <Route path="/best-accountants-in-southampton" element={<AccountantsInSouthampton />} />
         <Route path="/best-accountants-in-southampton/" element={<AccountantsInSouthampton />} />
+        <Route path="/accountants-in-portsmouth" element={<AccountantsInPortsmouth />} />
+        <Route path="/accountants-in-portsmouth/" element={<AccountantsInPortsmouth />} />
         <Route path="/affordable-accountants-in-derby" element={<AccountantsInDerby />} />
         <Route path="/affordable-accountants-in-derby/" element={<AccountantsInDerby />} />
         <Route path="/company-secretarial-firms-in-bristol" element={<CompanySecretarialFirmsBristol />} />

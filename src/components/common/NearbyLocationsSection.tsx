@@ -23,6 +23,7 @@ export const ALL_COVERED_LOCATIONS: LocationItem[] = [
   { name: "Reading", path: "/accountants-in-reading" },
   { name: "Leicester", path: "/accountants-in-leicester" },
   { name: "Southampton", path: "/best-accountants-in-southampton" },
+  { name: "Portsmouth", path: "/accountants-in-portsmouth" },
   { name: "Derby", path: "/affordable-accountants-in-derby" },
   { name: "Edinburgh", path: "/accountants-in-edinburgh" },
   { name: "Bradford", path: "/accountants-in-bradford" },
