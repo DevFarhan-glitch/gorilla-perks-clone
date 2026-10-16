@@ -78,6 +78,7 @@ import WhatIsACompanySecretaryUK from "./pages/WhatIsACompanySecretaryUK";
 import Top10AccountingFirmsInBirmingham from "./pages/Top10AccountingFirmsInBirmingham";
 import HmrcMileageRates2627 from "./pages/HmrcMileageRates2627";
 import DoSmallCompaniesNeedACompanySecretary from "./pages/DoSmallCompaniesNeedACompanySecretary";
+import AccountancyInNorwich from "./pages/AccountancyInNorwich";
 
 export const AppRoutesStatic = () => (
   <>
@@ -232,6 +233,8 @@ export const AppRoutesStatic = () => (
       <Route path="/hmrc-mileage-rates-2026-27/" element={<HmrcMileageRates2627 />} />
       <Route path="/do-small-companies-need-a-company-secretary" element={<DoSmallCompaniesNeedACompanySecretary />} />
       <Route path="/do-small-companies-need-a-company-secretary/" element={<DoSmallCompaniesNeedACompanySecretary />} />
+      <Route path="/accountancy-in-norwich" element={<AccountancyInNorwich />} />
+      <Route path="/accountancy-in-norwich/" element={<AccountancyInNorwich />} />
       <Route path="/privacy-policy" element={<PrivacyPolicy />} />
       <Route path="/privacy-policy/" element={<PrivacyPolicy />} />
       {/* ── 301-EQUIVALENT CLIENT-SIDE REDIRECTS ────────────────── */}

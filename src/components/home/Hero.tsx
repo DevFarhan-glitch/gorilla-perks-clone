@@ -128,12 +128,12 @@ const Hero = () => {
     setActiveSlide(index);
   };
 
-  // Autoplay: advance every 3.8 seconds unless hovered (snappier, shorter interval)
+  // Autoplay: slide display interval extended by 1s (3200ms) with a slow, smooth, subtle transition
   useEffect(() => {
     if (isHovered) return;
     autoplayRef.current = setTimeout(() => {
       setActiveSlide((prev) => (prev + 1) % totalSlides);
-    }, 3800);
+    }, 3200);
     return () => {
       if (autoplayRef.current) clearTimeout(autoplayRef.current);
     };
@@ -156,7 +156,7 @@ const Hero = () => {
               className="absolute inset-0"
               style={{
                 opacity: isActive ? 1 : 0,
-                transition: "opacity 450ms cubic-bezier(0.4, 0, 0.2, 1)",
+                transition: "opacity 1000ms cubic-bezier(0.25, 0.1, 0.25, 1)",
                 willChange: "opacity",
               }}
             >
@@ -203,8 +203,8 @@ const Hero = () => {
                 style={{
                   transformOrigin: "left bottom",
                   opacity: isActive ? 1 : 0,
-                  transform: isActive ? "translateY(0)" : "translateY(6px)",
-                  transition: "opacity 450ms cubic-bezier(0.4, 0, 0.2, 1), transform 450ms cubic-bezier(0.4, 0, 0.2, 1)",
+                  transform: isActive ? "translateY(0)" : "translateY(4px)",
+                  transition: "opacity 1000ms cubic-bezier(0.25, 0.1, 0.25, 1), transform 1000ms cubic-bezier(0.25, 0.1, 0.25, 1)",
                   pointerEvents: isActive ? "none" : "none",
                 }}
               >
@@ -228,8 +228,8 @@ const Hero = () => {
                 className="col-start-1 row-start-1 w-full flex flex-col items-center justify-center"
                 style={{
                   opacity: isActive ? 1 : 0,
-                  transform: isActive ? "translateY(0) scale(1)" : "translateY(8px) scale(0.99)",
-                  transition: "opacity 450ms cubic-bezier(0.4, 0, 0.2, 1), transform 450ms cubic-bezier(0.4, 0, 0.2, 1)",
+                  transform: isActive ? "translateY(0)" : "translateY(4px)",
+                  transition: "opacity 1000ms cubic-bezier(0.25, 0.1, 0.25, 1), transform 1000ms cubic-bezier(0.25, 0.1, 0.25, 1)",
                   pointerEvents: isActive ? "auto" : "none",
                   zIndex: isActive ? 10 : 0,
                   willChange: "opacity, transform",
@@ -359,7 +359,7 @@ const Hero = () => {
               type="button"
               onClick={() => goToSlide(index)}
               aria-label={`Go to slide ${index + 1}`}
-              className={`h-2.5 rounded-full transition-all duration-300 ease-in-out cursor-pointer ${
+              className={`h-2.5 rounded-full transition-all duration-700 ease-in-out cursor-pointer ${
                 isActive
                   ? "w-8 bg-gold shadow-[0_0_12px_rgba(202,169,87,0.85)]"
                   : "w-2.5 bg-white/30 hover:bg-white/60"

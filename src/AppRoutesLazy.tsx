@@ -80,6 +80,7 @@ const WhatIsACompanySecretaryUK = lazyWithRetry(() => import("./pages/WhatIsACom
 const Top10AccountingFirmsInBirmingham = lazyWithRetry(() => import("./pages/Top10AccountingFirmsInBirmingham"));
 const HmrcMileageRates2627 = lazyWithRetry(() => import("./pages/HmrcMileageRates2627"));
 const DoSmallCompaniesNeedACompanySecretary = lazyWithRetry(() => import("./pages/DoSmallCompaniesNeedACompanySecretary"));
+const AccountancyInNorwich = lazyWithRetry(() => import("./pages/AccountancyInNorwich"));
 
 export const AppRoutesLazy = () => (
   <>
@@ -235,6 +236,8 @@ export const AppRoutesLazy = () => (
         <Route path="/hmrc-mileage-rates-2026-27/" element={<HmrcMileageRates2627 />} />
         <Route path="/do-small-companies-need-a-company-secretary" element={<DoSmallCompaniesNeedACompanySecretary />} />
         <Route path="/do-small-companies-need-a-company-secretary/" element={<DoSmallCompaniesNeedACompanySecretary />} />
+        <Route path="/accountancy-in-norwich" element={<AccountancyInNorwich />} />
+        <Route path="/accountancy-in-norwich/" element={<AccountancyInNorwich />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/privacy-policy/" element={<PrivacyPolicy />} />
         {/* ── 301-EQUIVALENT CLIENT-SIDE REDIRECTS ────────────────── */}
