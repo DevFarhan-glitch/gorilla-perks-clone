@@ -74,5 +74,6 @@ export const PRERENDER_ROUTES = [
   "/top-10-accounting-firms-in-birmingham",
   "/hmrc-mileage-rates-2026-27",
   "/do-small-companies-need-a-company-secretary",
-  "/accountancy-in-norwich"
+  "/accountancy-in-norwich",
+  "/accountants-in-york-uk"
 ];

@@ -81,6 +81,7 @@ const Top10AccountingFirmsInBirmingham = lazyWithRetry(() => import("./pages/Top
 const HmrcMileageRates2627 = lazyWithRetry(() => import("./pages/HmrcMileageRates2627"));
 const DoSmallCompaniesNeedACompanySecretary = lazyWithRetry(() => import("./pages/DoSmallCompaniesNeedACompanySecretary"));
 const AccountancyInNorwich = lazyWithRetry(() => import("./pages/AccountancyInNorwich"));
+const AccountantsInYorkUK = lazyWithRetry(() => import("./pages/AccountantsInYorkUK"));
 
 export const AppRoutesLazy = () => (
   <>
@@ -238,6 +239,8 @@ export const AppRoutesLazy = () => (
         <Route path="/do-small-companies-need-a-company-secretary/" element={<DoSmallCompaniesNeedACompanySecretary />} />
         <Route path="/accountancy-in-norwich" element={<AccountancyInNorwich />} />
         <Route path="/accountancy-in-norwich/" element={<AccountancyInNorwich />} />
+        <Route path="/accountants-in-york-uk" element={<AccountantsInYorkUK />} />
+        <Route path="/accountants-in-york-uk/" element={<AccountantsInYorkUK />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/privacy-policy/" element={<PrivacyPolicy />} />
         {/* ── 301-EQUIVALENT CLIENT-SIDE REDIRECTS ────────────────── */}
