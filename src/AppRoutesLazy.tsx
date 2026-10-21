@@ -82,6 +82,8 @@ const HmrcMileageRates2627 = lazyWithRetry(() => import("./pages/HmrcMileageRate
 const DoSmallCompaniesNeedACompanySecretary = lazyWithRetry(() => import("./pages/DoSmallCompaniesNeedACompanySecretary"));
 const AccountancyInNorwich = lazyWithRetry(() => import("./pages/AccountancyInNorwich"));
 const AccountantsInYorkUK = lazyWithRetry(() => import("./pages/AccountantsInYorkUK"));
+const CompanySecretaryVsSecretarialService = lazyWithRetry(() => import("./pages/CompanySecretaryVsSecretarialService"));
+const CompanySecretaryCostUk = lazyWithRetry(() => import("./pages/CompanySecretaryCostUk"));
 
 export const AppRoutesLazy = () => (
   <>
@@ -241,6 +243,10 @@ export const AppRoutesLazy = () => (
         <Route path="/accountancy-in-norwich/" element={<AccountancyInNorwich />} />
         <Route path="/accountants-in-york-uk" element={<AccountantsInYorkUK />} />
         <Route path="/accountants-in-york-uk/" element={<AccountantsInYorkUK />} />
+        <Route path="/company-secretary-vs-company-secretarial-service" element={<CompanySecretaryVsSecretarialService />} />
+        <Route path="/company-secretary-vs-company-secretarial-service/" element={<CompanySecretaryVsSecretarialService />} />
+        <Route path="/company-secretary-cost-uk" element={<CompanySecretaryCostUk />} />
+        <Route path="/company-secretary-cost-uk/" element={<CompanySecretaryCostUk />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/privacy-policy/" element={<PrivacyPolicy />} />
         {/* ── 301-EQUIVALENT CLIENT-SIDE REDIRECTS ────────────────── */}

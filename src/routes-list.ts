@@ -75,5 +75,7 @@ export const PRERENDER_ROUTES = [
   "/hmrc-mileage-rates-2026-27",
   "/do-small-companies-need-a-company-secretary",
   "/accountancy-in-norwich",
-  "/accountants-in-york-uk"
+  "/accountants-in-york-uk",
+  "/company-secretary-vs-company-secretarial-service",
+  "/company-secretary-cost-uk"
 ];

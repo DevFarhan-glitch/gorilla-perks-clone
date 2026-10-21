@@ -80,6 +80,8 @@ import HmrcMileageRates2627 from "./pages/HmrcMileageRates2627";
 import DoSmallCompaniesNeedACompanySecretary from "./pages/DoSmallCompaniesNeedACompanySecretary";
 import AccountancyInNorwich from "./pages/AccountancyInNorwich";
 import AccountantsInYorkUK from "./pages/AccountantsInYorkUK";
+import CompanySecretaryVsSecretarialService from "./pages/CompanySecretaryVsSecretarialService";
+import CompanySecretaryCostUk from "./pages/CompanySecretaryCostUk";
 
 export const AppRoutesStatic = () => (
   <>
@@ -238,6 +240,10 @@ export const AppRoutesStatic = () => (
       <Route path="/accountancy-in-norwich/" element={<AccountancyInNorwich />} />
       <Route path="/accountants-in-york-uk" element={<AccountantsInYorkUK />} />
       <Route path="/accountants-in-york-uk/" element={<AccountantsInYorkUK />} />
+      <Route path="/company-secretary-vs-company-secretarial-service" element={<CompanySecretaryVsSecretarialService />} />
+      <Route path="/company-secretary-vs-company-secretarial-service/" element={<CompanySecretaryVsSecretarialService />} />
+      <Route path="/company-secretary-cost-uk" element={<CompanySecretaryCostUk />} />
+      <Route path="/company-secretary-cost-uk/" element={<CompanySecretaryCostUk />} />
       <Route path="/privacy-policy" element={<PrivacyPolicy />} />
       <Route path="/privacy-policy/" element={<PrivacyPolicy />} />
       {/* ── 301-EQUIVALENT CLIENT-SIDE REDIRECTS ────────────────── */}

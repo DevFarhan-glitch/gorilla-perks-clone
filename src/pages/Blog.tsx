@@ -530,6 +530,38 @@ const allBlogs = [
     readTime: "7 min read",
     featured: false,
     tags: ["Company Secretary", "Small Business", "Companies House", "Directors Duties", "Compliance"]
+  },
+  {
+    id: "company-secretary-vs-company-secretarial-service",
+    slug: "/company-secretary-vs-company-secretarial-service",
+    title: "Company Secretary vs Company Secretarial Service | 2026 Guide",
+    subtitle: "Company Secretary vs Company Secretarial Service: What's the Difference?",
+    excerpt:
+      "Learn the difference between a company secretary and company secretarial services, what each involves, and which option suits your UK business.",
+    category: "Company Secretarial Guide",
+    categoryColor: "blue",
+    image: "/Company Secretary vs Company Secretarial Service.png",
+    author: "Henleaze Team",
+    date: "October 2026",
+    readTime: "8 min read",
+    featured: false,
+    tags: ["Company Secretary", "Company Secretarial", "Companies House", "Compliance", "Limited Company"]
+  },
+  {
+    id: "company-secretary-cost-uk",
+    slug: "/company-secretary-cost-uk",
+    title: "How Much Do Company Secretarial Services Cost in the UK?",
+    subtitle: "Company Secretary Cost UK: Fees, Packages and What to Expect",
+    excerpt:
+      "Discover company secretary costs in the UK, compare annual service fees, understand extra charges and find the right option for your small business.",
+    category: "Company Secretarial Guide",
+    categoryColor: "blue",
+    image: "/How Much Do Company Secretarial Services Cost in the UK.webp",
+    author: "Henleaze Team",
+    date: "October 2026",
+    readTime: "8 min read",
+    featured: false,
+    tags: ["Company Secretary Cost", "Company Secretarial", "Companies House Fees", "Small Business", "Compliance"]
   }
 ];
 
