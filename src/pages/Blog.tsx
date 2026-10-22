@@ -562,6 +562,22 @@ const allBlogs = [
     readTime: "8 min read",
     featured: false,
     tags: ["Company Secretary Cost", "Company Secretarial", "Companies House Fees", "Small Business", "Compliance"]
+  },
+  {
+    id: "responsibilities-of-a-company-director-uk",
+    slug: "/responsibilities-of-a-company-director-uk",
+    title: "Responsibilities of a Company Director UK: Duties and Rules",
+    subtitle: "What Are the Responsibilities of a Company Director in the UK?",
+    excerpt:
+      "Learn the legal responsibilities of a company director in the UK, including Companies House filings, tax, record keeping, dividends and personal liability.",
+    category: "Company Director Guide",
+    categoryColor: "amber",
+    image: "/UK Company Director Responsibilities.webp",
+    author: "Henleaze Team",
+    date: "October 2026",
+    readTime: "10 min read",
+    featured: false,
+    tags: ["Company Director", "Directors Duties", "Companies Act 2006", "Companies House", "Compliance"]
   }
 ];
 

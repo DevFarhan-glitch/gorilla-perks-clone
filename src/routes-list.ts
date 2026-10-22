@@ -77,5 +77,6 @@ export const PRERENDER_ROUTES = [
   "/accountancy-in-norwich",
   "/accountants-in-york-uk",
   "/company-secretary-vs-company-secretarial-service",
-  "/company-secretary-cost-uk"
+  "/company-secretary-cost-uk",
+  "/responsibilities-of-a-company-director-uk"
 ];
