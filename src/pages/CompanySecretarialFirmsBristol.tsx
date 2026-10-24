@@ -21,12 +21,12 @@ const faqsData = [
   {
     question: "Do I legally need to appoint a company secretary?",
     answer:
-      "No, not for a private limited company. This requirement was removed by the Companies Act 2006, though public limited companies (PLCs) must still appoint one and the underlying compliance duties still need to be handled by someone.",
+      "No, not for a private limited company. This requirement was removed by the Companies Act 2006, though public limited companies must still appoint one and the underlying compliance duties still need to be handled by someone.",
   },
   {
     question: "What happens if I file my confirmation statement late?",
     answer:
-      "There's no automatic financial penalty, but failing to file is a criminal offence and continued non-compliance can lead to Companies House striking the company off the register entirely.",
+      "There's no automatic financial penalty, but failing to file is a criminal offence and continued non-compliance can lead to Companies House striking the company off the register.",
   },
   {
     question: "How much does a confirmation statement cost?",
@@ -141,7 +141,7 @@ const CompanySecretarialFirmsBristol = () => {
       },
     },
     datePublished: "2026-09-11",
-    dateModified: "2026-09-11",
+    dateModified: "2026-10-24",
     mainEntityOfPage: {
       "@type": "WebPage",
       "@id": "https://henleazetaxconsultancy.com/company-secretarial-firms-in-bristol",
@@ -315,8 +315,11 @@ const CompanySecretarialFirmsBristol = () => {
               <p className="text-gray-700 leading-relaxed mb-4">
                 Most private limited companies in the UK haven't been legally required to appoint a company secretary since the Companies Act 2006 came into force. This surprises a lot of business owners, since the role sounds mandatory, but for a private company it's now optional.
               </p>
+              <p className="text-gray-700 leading-relaxed mb-4">
+                Public limited companies are different. A PLC is still required by law to appoint a qualified company secretary. Private companies can appoint one voluntarily if they want someone formally responsible for governance and filings, but the underlying duties themselves, confirmation statements, statutory registers, keeping Companies House records accurate, still have to be done regardless of whether anyone holds the job title. In practice, that responsibility usually falls to a director or gets <Link to="/services/outsourced-accounting-services" className="text-amber-700 underline hover:text-amber-900">outsourced to an accountant</Link> or <Link to="/services/company-secretarial-services" className="text-amber-700 underline hover:text-amber-900">company secretarial</Link> specialist.
+              </p>
               <p className="text-gray-700 leading-relaxed mb-8">
-                Public limited companies are different. A PLC is still required by law to appoint a qualified company secretary. Private companies can appoint one voluntarily if they want someone formally responsible for governance and filings, but the underlying duties themselves, confirmation statements, statutory registers, keeping Companies House records accurate, still have to be done regardless of whether anyone holds the job title. In practice, that responsibility usually falls to a director or gets outsourced to an accountant or <Link to="/services/company-secretarial-services" className="text-amber-700 underline hover:text-amber-900">company secretarial</Link> specialist.
+                If you're unsure what the position involves, our guide to <Link to="/what-is-a-company-secretary-uk" className="text-amber-700 underline hover:text-amber-900">what is a Company Secretary</Link> explains the role and its main responsibilities. In practice, company secretarial duties usually fall to a director or are outsourced to an accountant or company secretarial specialist.
               </p>
 
               {/* Section 2: What Company Secretarial Services Typically Cover */}
@@ -338,8 +341,11 @@ const CompanySecretarialFirmsBristol = () => {
                 <li><strong>PSC register updates</strong>, reflecting changes in who has significant control over the company</li>
               </ul>
 
-              <p className="text-gray-700 leading-relaxed mb-8">
+              <p className="text-gray-700 leading-relaxed mb-4">
                 Some firms handle this as a standalone service. Others bundle it into a wider <Link to="/services/contractor-accountants" className="text-amber-700 underline hover:text-amber-900">accountancy</Link> or legal relationship, which can make sense if you're already working with them on tax or corporate matters.
+              </p>
+              <p className="text-gray-700 leading-relaxed mb-8">
+                The right arrangement depends on your company's structure and how much administrative support you need. Our guide to <Link to="/company-secretary-vs-company-secretarial-service" className="text-amber-700 underline hover:text-amber-900">Company Secretary vs Company Secretarial Service</Link> explains the difference between appointing someone to the role and outsourcing company secretarial tasks to a specialist provider.
               </p>
 
               {/* Section 3: Quick Comparison */}
@@ -450,6 +456,9 @@ const CompanySecretarialFirmsBristol = () => {
               <p className="text-gray-700 leading-relaxed mb-3">
                 Where this connects to the wider picture for contractors is that getting the basics right, accurate company records, a properly filed confirmation statement, matters just as much as <Link to="/what-is-ir35-uk" className="text-amber-700 underline hover:text-amber-900">IR35 status</Link> when it comes to running a compliant limited company. We handle this alongside our standard <Link to="/pricing" className="text-amber-700 underline hover:text-amber-900">fixed fee</Link> accountancy and <Link to="/services/tax-planning" className="text-amber-700 underline hover:text-amber-900">tax support</Link>, rather than treating it as a separate add on service.
               </p>
+              <p className="text-gray-700 leading-relaxed mb-3">
+                Directors should also understand their wider legal obligations, not just the administrative tasks they outsource. Our guide to <Link to="/responsibilities-of-a-company-director-uk" className="text-amber-700 underline hover:text-amber-900">responsibilities of a company director in the UK</Link> explains the duties directors must follow and why delegating company filings does not remove their legal accountability.
+              </p>
               <p className="text-gray-700 leading-relaxed mb-8 bg-amber-50 p-4 rounded-lg border-l-4 border-amber-500">
                 <strong>Best suited for:</strong> contractors and small limited company directors wanting straightforward, fixed fee company secretarial support handled alongside their existing tax and accountancy needs.
               </p>
@@ -486,8 +495,11 @@ const CompanySecretarialFirmsBristol = () => {
                 </table>
               </div>
 
-              <p className="text-gray-700 leading-relaxed mb-8">
+              <p className="text-gray-700 leading-relaxed mb-4">
                 These penalties double if accounts are filed late in two consecutive years. Beyond the financial risk, inaccurate or outdated statutory records, particularly the PSC register, can create real problems if a business is ever sold, seeks investment or comes under scrutiny, since Companies House and HMRC increasingly cross reference this data against other compliance records.
+              </p>
+              <p className="text-gray-700 leading-relaxed mb-8">
+                Our guide to <Link to="/hmrc-mileage-rates-2026-27" className="text-amber-700 underline hover:text-amber-900">HMRC mileage rates 2026/27</Link> explains the applicable mileage allowances and the rules for claiming business mileage expenses.
               </p>
 
               {/* Section 6: Company Secretarial Needs by Business Type */}
@@ -497,10 +509,10 @@ const CompanySecretarialFirmsBristol = () => {
               <div className="w-10 h-0.5 bg-amber-500 mb-6" />
 
               <p className="text-gray-700 leading-relaxed mb-4">
-                What you actually need varies significantly depending on your business structure:
+                What you actually need varies significantly depending on your business structure.
               </p>
 
-              <ul className="list-disc pl-6 space-y-3 text-gray-700 mb-8">
+              <ul className="list-disc pl-6 space-y-3 text-gray-700 mb-4">
                 <li>
                   <strong>A new startup:</strong> Mainly needs its first confirmation statement filed correctly and accurate initial records, straightforward routine work.
                 </li>
@@ -517,6 +529,10 @@ const CompanySecretarialFirmsBristol = () => {
                   <strong>A contractor operating through a personal service company:</strong> Typically has the simplest ongoing needs, but still can't afford to let a confirmation statement lapse.
                 </li>
               </ul>
+
+              <p className="text-gray-700 leading-relaxed mb-8">
+                For small private companies, appointing a company secretary is generally optional, but the underlying duties still need to be handled. Read: <Link to="/do-small-companies-need-a-company-secretary" className="text-amber-700 underline hover:text-amber-900">Do small companies need a Company Secretary in the UK?</Link> for a closer look at the rules and what directors need to consider when deciding how to manage these responsibilities.
+              </p>
 
               {/* Section 7: How to Choose */}
               <h2 id="how-to-choose" className="scroll-mt-28 text-3xl font-bold text-gray-900 mt-12 mb-4">

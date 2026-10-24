@@ -161,7 +161,7 @@ const CompanySecretaryVsSecretarialService = () => {
       },
     },
     datePublished: "2026-10-20",
-    dateModified: "2026-10-20",
+    dateModified: "2026-10-24",
     mainEntityOfPage: {
       "@type": "WebPage",
       "@id": "https://henleazetaxconsultancy.com/company-secretary-vs-company-secretarial-service",
@@ -360,7 +360,13 @@ const CompanySecretaryVsSecretarialService = () => {
                 </h2>
                 <div className="w-12 h-1 bg-amber-500 mb-6 rounded" />
                 <p className="mb-4">
-                  A company secretary is a person appointed to carry out certain administrative, statutory and governance responsibilities for a company. Their precise duties depend on the company's needs, its governing documents and the terms of their appointment.
+                  <Link
+                    to="/what-is-a-company-secretary-uk"
+                    className="text-amber-700 hover:underline font-semibold"
+                  >
+                    A company secretary
+                  </Link>{" "}
+                  is a person appointed to carry out certain administrative, statutory and governance responsibilities for a company. Their precise duties depend on the company's needs, its governing documents and the terms of their appointment.
                 </p>
                 <p className="mb-6">
                   The role can be particularly important in larger businesses where company records, board decisions and shareholder matters require regular attention.
@@ -792,15 +798,35 @@ const CompanySecretaryVsSecretarialService = () => {
                 <p className="mb-4">
                   A clear agreement helps avoid gaps in responsibility and unexpected charges. It also makes it easier to change providers if your business requirements develop.
                 </p>
-                <p>
-                  If price is a key consideration, read our{" "}
+                <p className="mb-4">
+                  If price is a key consideration, read our guide to{" "}
                   <Link
                     to="/company-secretary-cost-uk"
                     className="text-amber-700 hover:underline font-semibold"
                   >
-                    guide to company secretary costs and duties in the UK
+                    company secretary costs in the UK
                   </Link>{" "}
                   for a breakdown of common pricing arrangements and what to check before choosing a package.
+                </p>
+                <p className="mb-4">
+                  For businesses that want to understand their wider legal obligations, our guide to the{" "}
+                  <Link
+                    to="/responsibilities-of-a-company-director-uk"
+                    className="text-amber-700 hover:underline font-semibold"
+                  >
+                    responsibilities of a company director in the UK
+                  </Link>{" "}
+                  explains why directors remain accountable even when administrative tasks are delegated.
+                </p>
+                <p>
+                  If you're comparing local options, our guide to{" "}
+                  <Link
+                    to="/company-secretarial-firms-in-bristol"
+                    className="text-amber-700 hover:underline font-semibold"
+                  >
+                    company secretarial firms in Bristol
+                  </Link>{" "}
+                  covers providers that may suit different business structures and support requirements.
                 </p>
               </section>
 
@@ -866,6 +892,16 @@ const CompanySecretaryVsSecretarialService = () => {
                 </p>
                 <p className="mb-4">
                   For a small private company, outsourced support may be enough. Businesses with more demanding governance requirements may need a formal appointment or a broader level of professional support.
+                </p>
+                <p className="mb-4">
+                  For business owners who also need help understanding tax-related expenses, our guide to{" "}
+                  <Link
+                    to="/hmrc-mileage-rates-2026-27"
+                    className="text-amber-700 hover:underline font-semibold"
+                  >
+                    HMRC mileage rates 2026/27
+                  </Link>{" "}
+                  explains the applicable mileage allowances and the rules for claiming business mileage.
                 </p>
                 <p>
                   Have questions about keeping your company records compliant?{" "}

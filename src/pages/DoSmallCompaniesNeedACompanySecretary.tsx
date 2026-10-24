@@ -117,7 +117,7 @@ const DoSmallCompaniesNeedACompanySecretary = () => {
       },
     },
     datePublished: "2026-10-14",
-    dateModified: "2026-10-14",
+    dateModified: "2026-10-24",
     mainEntityOfPage: {
       "@type": "WebPage",
       "@id": "https://henleazetaxconsultancy.com/do-small-companies-need-a-company-secretary",
@@ -435,7 +435,14 @@ const DoSmallCompaniesNeedACompanySecretary = () => {
                 </div>
 
                 <p className="text-gray-700 leading-relaxed">
-                  These tasks sit alongside your wider duties as a director, which we cover in our guide to the responsibilities of a company director in the UK.
+                  These tasks sit alongside your wider duties as a director, which we cover in our guide to the{" "}
+                  <Link
+                    to="/responsibilities-of-a-company-director-uk"
+                    className="text-amber-700 hover:underline font-semibold"
+                  >
+                    responsibilities of a company director in the UK
+                  </Link>
+                  .
                 </p>
               </section>
 
@@ -547,7 +554,21 @@ const DoSmallCompaniesNeedACompanySecretary = () => {
                 </div>
 
                 <p className="text-gray-700 leading-relaxed mb-4">
-                  The difference between the last two is easy to blur, so we've explained it in our guide to company secretary vs company secretarial service. If cost is what you're weighing up, see our breakdown of company secretary cost, and our comparison of{" "}
+                  The difference between the last two is easy to blur, so we've explained it in our guide to{" "}
+                  <Link
+                    to="/company-secretary-vs-company-secretarial-service"
+                    className="text-amber-700 hover:underline font-semibold"
+                  >
+                    company secretary vs company secretarial service
+                  </Link>
+                  . If cost is what you're weighing up, see our breakdown of{" "}
+                  <Link
+                    to="/company-secretary-cost-uk"
+                    className="text-amber-700 hover:underline font-semibold"
+                  >
+                    company secretary cost
+                  </Link>
+                  , and our comparison of{" "}
                   <Link
                     to="/company-secretarial-firms-in-bristol"
                     className="text-amber-700 hover:underline font-semibold"
@@ -557,8 +578,19 @@ const DoSmallCompaniesNeedACompanySecretary = () => {
                   covers local providers.
                 </p>
 
-                <p className="text-gray-700 leading-relaxed">
+                <p className="text-gray-700 leading-relaxed mb-4">
                   We're based in Bristol and work with contractors, sole traders, landlords and small limited companies on a fixed fee basis. For most of our clients the company secretarial work is routine, a confirmation statement and up to date registers, so we handle it alongside their accounts and tax rather than as a separate service.
+                </p>
+
+                <p className="text-gray-700 leading-relaxed">
+                  Accountancy support can also help business owners understand tax-related matters, including{" "}
+                  <Link
+                    to="/hmrc-mileage-rates-2026-27"
+                    className="text-amber-700 hover:underline font-semibold"
+                  >
+                    HMRC mileage rates 2026/27
+                  </Link>{" "}
+                  and the rules for claiming business mileage expenses.
                 </p>
               </section>
 

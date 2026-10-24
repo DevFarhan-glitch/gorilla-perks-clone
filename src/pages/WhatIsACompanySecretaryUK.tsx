@@ -117,7 +117,7 @@ const WhatIsACompanySecretaryUK = () => {
       },
     },
     datePublished: "2026-10-08",
-    dateModified: "2026-10-08",
+    dateModified: "2026-10-24",
     mainEntityOfPage: {
       "@type": "WebPage",
       "@id": "https://henleazetaxconsultancy.com/what-is-a-company-secretary-uk",
@@ -427,6 +427,17 @@ const WhatIsACompanySecretaryUK = () => {
                 <p className="text-gray-700 leading-relaxed mt-4">
                   Where someone does wear both hats, it's worth being clear which role they're acting in for any given task, since each carries different legal duties. A director making a business decision and a company secretary filing a statutory document are doing fundamentally different jobs, even if it's the same person doing both.
                 </p>
+
+                <p className="text-gray-700 leading-relaxed mt-4">
+                  Understanding the{" "}
+                  <Link
+                    to="/responsibilities-of-a-company-director-uk"
+                    className="text-amber-700 hover:underline font-semibold"
+                  >
+                    responsibilities of a company director in the UK
+                  </Link>{" "}
+                  can help business owners distinguish directors' legal obligations from the administrative and governance work associated with a company secretary.
+                </p>
               </section>
 
               {/* Section 4 — Who Can Be a Company Secretary? */}
@@ -441,7 +452,14 @@ const WhatIsACompanySecretaryUK = () => {
                 </p>
 
                 <p className="text-gray-700 leading-relaxed mb-6">
-                  In practice, UK companies typically fill the role one of three ways: a director takes it on alongside their existing duties, a suitably experienced employee is appointed, or a third party professional, such as an accountant or law firm, handles it on retainer.
+                  In practice, UK companies typically fill the role one of three ways: a director takes it on alongside their existing duties, a suitably experienced employee is appointed, or a third party professional, such as an accountant or law firm, handles it on retainer. Accountants can also help businesses understand tax-related matters, including{" "}
+                  <Link
+                    to="/hmrc-mileage-rates-2026-27"
+                    className="text-amber-700 hover:underline font-semibold"
+                  >
+                    HMRC mileage rates 2026/27
+                  </Link>{" "}
+                  and the rules for claiming business mileage expenses.
                 </p>
 
                 <div className="grid sm:grid-cols-3 gap-4 not-prose">
@@ -510,7 +528,14 @@ const WhatIsACompanySecretaryUK = () => {
                 </p>
 
                 <p className="text-gray-700 leading-relaxed">
-                  It's also worth understanding how this role sits alongside a director's own legal duties. We've covered the broader picture of a director's obligations in our guide to the responsibilities of a company director in the UK.
+                  It's also worth considering{" "}
+                  <Link
+                    to="/do-small-companies-need-a-company-secretary"
+                    className="text-amber-700 hover:underline font-semibold"
+                  >
+                    do small companies need a Company Secretary in the UK?
+                  </Link>{" "}
+                  The answer depends on the type of company and its articles of association, but even when an appointment isn't compulsory, someone must still ensure that the relevant statutory responsibilities are handled.
                 </p>
               </section>
 
@@ -522,11 +547,25 @@ const WhatIsACompanySecretaryUK = () => {
                 <div className="w-12 h-1 bg-amber-500 mb-6 rounded" />
 
                 <p className="text-gray-700 leading-relaxed mb-4">
-                  A growing number of small businesses choose a third party provider rather than handling company secretarial duties internally, particularly once the admin becomes more than a quick annual task. This is a genuinely different arrangement to simply appointing a company secretary, and it's worth understanding the distinction properly, which we've covered in our guide to company secretary versus a company secretarial service.
+                  A growing number of small businesses choose a third party provider rather than handling company secretarial duties internally, particularly once the admin becomes more than a quick annual task. This is a genuinely different arrangement to simply appointing a company secretary, and it's worth understanding the distinction properly, which we've covered in our guide to{" "}
+                  <Link
+                    to="/company-secretary-vs-company-secretarial-service"
+                    className="text-amber-700 hover:underline font-semibold"
+                  >
+                    company secretary versus a company secretarial service
+                  </Link>
+                  .
                 </p>
 
                 <p className="text-gray-700 leading-relaxed mb-4">
-                  Cost is usually the first question once outsourcing comes up, and it varies depending on how much is covered. We've broken down realistic UK pricing in our guide to company secretary cost.
+                  Cost is usually the first question once outsourcing comes up, and it varies depending on how much is covered. We've broken down realistic UK pricing in our guide to{" "}
+                  <Link
+                    to="/company-secretary-cost-uk"
+                    className="text-amber-700 hover:underline font-semibold"
+                  >
+                    company secretary cost
+                  </Link>
+                  .
                 </p>
 
                 <p className="text-gray-700 leading-relaxed mb-4">

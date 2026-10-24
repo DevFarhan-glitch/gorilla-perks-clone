@@ -174,7 +174,7 @@ const CompanySecretaryCostUk = () => {
       },
     },
     datePublished: "2026-10-21",
-    dateModified: "2026-10-21",
+    dateModified: "2026-10-24",
     mainEntityOfPage: {
       "@type": "WebPage",
       "@id": "https://henleazetaxconsultancy.com/company-secretary-cost-uk",
@@ -614,8 +614,28 @@ const CompanySecretaryCostUk = () => {
                 <p className="mb-4">
                   For example, if you file your own online confirmation statement, the official fee is £50 for the relevant 12-month payment period. You must still keep company information accurate, maintain the required records and meet other filing obligations.
                 </p>
-                <p>
+                <p className="mb-4">
                   For a straightforward company with one director and one shareholder, handling routine administration yourself may be practical. However, if you regularly deal with changes in ownership or have limited time to manage deadlines, professional support may be worthwhile.
+                </p>
+                <p className="mb-4">
+                  If you're unsure about the role and its legal requirements, read our guide to{" "}
+                  <Link
+                    to="/what-is-a-company-secretary-uk"
+                    className="text-amber-700 hover:underline font-semibold"
+                  >
+                    What Is a Company Secretary
+                  </Link>
+                  .
+                </p>
+                <p>
+                  If you're unsure whether an appointment is necessary, our guide to{" "}
+                  <Link
+                    to="/do-small-companies-need-a-company-secretary"
+                    className="text-amber-700 hover:underline font-semibold"
+                  >
+                    Do Small Companies Need a Company Secretary in the UK?
+                  </Link>{" "}
+                  explains the legal position for private limited companies.
                 </p>
               </section>
 
@@ -660,8 +680,18 @@ const CompanySecretaryCostUk = () => {
                 <p className="mb-4">
                   Hiring an in-house company secretary can be expensive for a small company that only needs occasional filings. A full-time salary is not directly comparable with an annual outsourced package because the responsibilities and hours differ.
                 </p>
-                <p>
+                <p className="mb-4">
                   Outsourcing allows a company to pay for an agreed level of support without employing someone. It can be particularly suitable for contractors, landlords and small limited companies that want their records and routine filings managed alongside their other business administration.
+                </p>
+                <p>
+                  Before deciding who should handle these duties, it's also worth understanding the{" "}
+                  <Link
+                    to="/responsibilities-of-a-company-director-uk"
+                    className="text-amber-700 hover:underline font-semibold"
+                  >
+                    responsibilities of a company director in the UK
+                  </Link>
+                  , as directors remain accountable for meeting their legal obligations.
                 </p>
               </section>
 
@@ -711,8 +741,18 @@ const CompanySecretaryCostUk = () => {
                     </li>
                   ))}
                 </ul>
-                <p>
+                <p className="mb-4">
                   For a simple company with few changes, doing the work yourself may be sufficient. For a more complex business, paying for a service with clearly defined responsibilities can offer better value than choosing the cheapest available package.
+                </p>
+                <p>
+                  Before deciding, it's helpful to understand{" "}
+                  <Link
+                    to="/company-secretary-vs-company-secretarial-service"
+                    className="text-amber-700 hover:underline font-semibold"
+                  >
+                    Company Secretary vs Company Secretarial Service
+                  </Link>
+                  , as appointing an individual and outsourcing the work are different arrangements.
                 </p>
               </section>
 
@@ -758,8 +798,28 @@ const CompanySecretaryCostUk = () => {
                   </div>
                 </div>
 
-                <p>
+                <p className="mb-4">
                   The right package should match your company's actual needs. Paying for services you never use is unnecessary, but choosing a package that excludes essential work may cost more in the long run.
+                </p>
+                <p className="mb-4">
+                  If you're comparing local providers, our guide to{" "}
+                  <Link
+                    to="/company-secretarial-firms-in-bristol"
+                    className="text-amber-700 hover:underline font-semibold"
+                  >
+                    company secretarial firms in Bristol
+                  </Link>{" "}
+                  covers options for businesses looking for professional support in the area.
+                </p>
+                <p>
+                  If you also need help with business expenses and tax claims, our guide to{" "}
+                  <Link
+                    to="/hmrc-mileage-rates-2026-27"
+                    className="text-amber-700 hover:underline font-semibold"
+                  >
+                    HMRC mileage rates 2026/27
+                  </Link>{" "}
+                  explains the applicable mileage allowances and rules.
                 </p>
               </section>
 

@@ -184,7 +184,7 @@ const ResponsibilitiesOfACompanyDirectorUK = () => {
       },
     },
     datePublished: "2026-10-22",
-    dateModified: "2026-10-22",
+    dateModified: "2026-10-24",
     mainEntityOfPage: {
       "@type": "WebPage",
       "@id":
@@ -815,7 +815,7 @@ const ResponsibilitiesOfACompanyDirectorUK = () => {
                   </Link>
                   ? to learn when an appointment is required.
                 </p>
-                <p>
+                <p className="mb-4">
                   For help comparing service packages, see our guide to{" "}
                   <Link
                     to="/company-secretary-cost-uk"
@@ -824,6 +824,16 @@ const ResponsibilitiesOfACompanyDirectorUK = () => {
                     company secretary cost
                   </Link>
                   .
+                </p>
+                <p>
+                  Businesses looking for local support can also compare{" "}
+                  <Link
+                    to="/company-secretarial-firms-in-bristol"
+                    className="text-amber-700 hover:underline font-semibold"
+                  >
+                    company secretarial firms in Bristol
+                  </Link>{" "}
+                  to find a provider whose services match their statutory filing and record-keeping requirements.
                 </p>
               </section>
 
