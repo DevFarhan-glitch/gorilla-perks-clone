@@ -84,6 +84,7 @@ import CompanySecretaryVsSecretarialService from "./pages/CompanySecretaryVsSecr
 import CompanySecretaryCostUk from "./pages/CompanySecretaryCostUk";
 import ResponsibilitiesOfACompanyDirectorUK from "./pages/ResponsibilitiesOfACompanyDirectorUK";
 import AccountantsInSwindon from "./pages/AccountantsInSwindon";
+import AccountantsInOxford from "./pages/AccountantsInOxford";
 
 export const AppRoutesStatic = () => (
   <>
@@ -250,6 +251,8 @@ export const AppRoutesStatic = () => (
       <Route path="/responsibilities-of-a-company-director-uk/" element={<ResponsibilitiesOfACompanyDirectorUK />} />
       <Route path="/accountants-in-swindon" element={<AccountantsInSwindon />} />
       <Route path="/accountants-in-swindon/" element={<AccountantsInSwindon />} />
+      <Route path="/accountants-in-oxford" element={<AccountantsInOxford />} />
+      <Route path="/accountants-in-oxford/" element={<AccountantsInOxford />} />
       <Route path="/privacy-policy" element={<PrivacyPolicy />} />
       <Route path="/privacy-policy/" element={<PrivacyPolicy />} />
       {/* ── 301-EQUIVALENT CLIENT-SIDE REDIRECTS ────────────────── */}

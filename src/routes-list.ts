@@ -79,5 +79,6 @@ export const PRERENDER_ROUTES = [
   "/company-secretary-vs-company-secretarial-service",
   "/company-secretary-cost-uk",
   "/responsibilities-of-a-company-director-uk",
-  "/accountants-in-swindon"
+  "/accountants-in-swindon",
+  "/accountants-in-oxford"
 ];
