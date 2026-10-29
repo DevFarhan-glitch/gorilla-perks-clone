@@ -578,6 +578,22 @@ const allBlogs = [
     readTime: "10 min read",
     featured: false,
     tags: ["Company Director", "Directors Duties", "Companies Act 2006", "Companies House", "Compliance"]
+  },
+  {
+    id: "accounting-firms-in-southampton",
+    slug: "/accounting-firms-in-southampton",
+    title: "Accounting Firms in Southampton: 6 Options",
+    subtitle: "Accounting Firms in Southampton: 6 Options for Businesses and Individuals",
+    excerpt:
+      "Compare six accounting firms in Southampton, with office addresses, services and who each suits best, for businesses, directors and individuals.",
+    category: "Accounting Firms",
+    categoryColor: "amber",
+    image: "/accounting-firms-in-southampton.webp",
+    author: "Henleaze Team",
+    date: "October 2026",
+    readTime: "8 min read",
+    featured: false,
+    tags: ["Accounting Firms", "Southampton", "Accountants Southampton", "Chartered Accountants", "Small Business", "Contractor Accounting"]
   }
 ];
 

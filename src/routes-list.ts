@@ -80,5 +80,6 @@ export const PRERENDER_ROUTES = [
   "/company-secretary-cost-uk",
   "/responsibilities-of-a-company-director-uk",
   "/accountants-in-swindon",
-  "/accountants-in-oxford"
+  "/accountants-in-oxford",
+  "/accounting-firms-in-southampton"
 ];

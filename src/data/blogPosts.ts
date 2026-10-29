@@ -181,5 +181,17 @@ export const blogPosts: BlogPost[] = [
     image: "/common payroll problems.png",
     slug: "/common-payroll-problems"
   },
+  {
+    id: 20,
+    title: "Accounting Firms in Southampton: 6 Options",
+    excerpt: "Compare six accounting firms in Southampton, with office addresses, services and who each suits best, for businesses, directors and individuals.",
+    content: "Redirecting...",
+    author: "Henleaze Team",
+    date: "October 2026",
+    readTime: "8 min read",
+    category: "Accounting Firms",
+    image: "/accounting-firms-in-southampton.webp",
+    slug: "/accounting-firms-in-southampton"
+  },
 ];
 
