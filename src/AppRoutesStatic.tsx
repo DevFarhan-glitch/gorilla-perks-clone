@@ -85,6 +85,7 @@ import CompanySecretaryCostUk from "./pages/CompanySecretaryCostUk";
 import ResponsibilitiesOfACompanyDirectorUK from "./pages/ResponsibilitiesOfACompanyDirectorUK";
 import AccountantsInSwindon from "./pages/AccountantsInSwindon";
 import AccountantsInOxford from "./pages/AccountantsInOxford";
+import AccountantsInStokeOnTrent from "./pages/AccountantsInStokeOnTrent";
 import AccountingFirmsInSouthampton from "./pages/AccountingFirmsInSouthampton";
 
 export const AppRoutesStatic = () => (
@@ -254,6 +255,8 @@ export const AppRoutesStatic = () => (
       <Route path="/accountants-in-swindon/" element={<AccountantsInSwindon />} />
       <Route path="/accountants-in-oxford" element={<AccountantsInOxford />} />
       <Route path="/accountants-in-oxford/" element={<AccountantsInOxford />} />
+      <Route path="/accountants-in-stoke-on-trent" element={<AccountantsInStokeOnTrent />} />
+      <Route path="/accountants-in-stoke-on-trent/" element={<AccountantsInStokeOnTrent />} />
       <Route path="/accounting-firms-in-southampton" element={<AccountingFirmsInSouthampton />} />
       <Route path="/accounting-firms-in-southampton/" element={<AccountingFirmsInSouthampton />} />
       <Route path="/privacy-policy" element={<PrivacyPolicy />} />

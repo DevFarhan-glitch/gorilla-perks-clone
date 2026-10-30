@@ -81,5 +81,6 @@ export const PRERENDER_ROUTES = [
   "/responsibilities-of-a-company-director-uk",
   "/accountants-in-swindon",
   "/accountants-in-oxford",
-  "/accounting-firms-in-southampton"
+  "/accounting-firms-in-southampton",
+  "/accountants-in-stoke-on-trent"
 ];

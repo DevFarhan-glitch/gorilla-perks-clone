@@ -87,6 +87,7 @@ const CompanySecretaryCostUk = lazyWithRetry(() => import("./pages/CompanySecret
 const ResponsibilitiesOfACompanyDirectorUK = lazyWithRetry(() => import("./pages/ResponsibilitiesOfACompanyDirectorUK"));
 const AccountantsInSwindon = lazyWithRetry(() => import("./pages/AccountantsInSwindon"));
 const AccountantsInOxford = lazyWithRetry(() => import("./pages/AccountantsInOxford"));
+const AccountantsInStokeOnTrent = lazyWithRetry(() => import("./pages/AccountantsInStokeOnTrent"));
 const AccountingFirmsInSouthampton = lazyWithRetry(() => import("./pages/AccountingFirmsInSouthampton"));
 
 export const AppRoutesLazy = () => (
@@ -257,6 +258,8 @@ export const AppRoutesLazy = () => (
         <Route path="/accountants-in-swindon/" element={<AccountantsInSwindon />} />
         <Route path="/accountants-in-oxford" element={<AccountantsInOxford />} />
         <Route path="/accountants-in-oxford/" element={<AccountantsInOxford />} />
+        <Route path="/accountants-in-stoke-on-trent" element={<AccountantsInStokeOnTrent />} />
+        <Route path="/accountants-in-stoke-on-trent/" element={<AccountantsInStokeOnTrent />} />
         <Route path="/accounting-firms-in-southampton" element={<AccountingFirmsInSouthampton />} />
         <Route path="/accounting-firms-in-southampton/" element={<AccountingFirmsInSouthampton />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
