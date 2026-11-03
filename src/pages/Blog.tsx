@@ -594,6 +594,22 @@ const allBlogs = [
     readTime: "8 min read",
     featured: false,
     tags: ["Accounting Firms", "Southampton", "Accountants Southampton", "Chartered Accountants", "Small Business", "Contractor Accounting"]
+  },
+  {
+    id: "accounting-firms-in-derby",
+    slug: "/accounting-firms-in-derby",
+    title: "Accounting Firms in Derby: 8 Accountants Compared",
+    subtitle: "Accounting Firms in Derby: Addresses, Services, Best For",
+    excerpt:
+      "Compare eight accounting firms in Derby, with office addresses, services and who each suits best, for businesses, directors and individuals.",
+    category: "Accounting Firms",
+    categoryColor: "amber",
+    image: "/Accounting Firms in Derby 8 Accountants Compared.webp",
+    author: "Henleaze Team",
+    date: "November 2026",
+    readTime: "9 min read",
+    featured: false,
+    tags: ["Accounting Firms", "Derby", "Accountants Derby", "Chartered Accountants", "Small Business", "Contractor Accounting"]
   }
 ];
 
