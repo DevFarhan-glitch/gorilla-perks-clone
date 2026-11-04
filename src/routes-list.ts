@@ -83,5 +83,6 @@ export const PRERENDER_ROUTES = [
   "/accountants-in-oxford",
   "/accounting-firms-in-southampton",
   "/accountants-in-stoke-on-trent",
-  "/accounting-firms-in-derby"
+  "/accounting-firms-in-derby",
+  "/accountant-in-wolverhampton"
 ];

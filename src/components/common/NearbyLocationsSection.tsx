@@ -35,6 +35,7 @@ export const ALL_COVERED_LOCATIONS: LocationItem[] = [
   { name: "Swindon", path: "/accountants-in-swindon" },
   { name: "Oxford", path: "/accountants-in-oxford" },
   { name: "Stoke-on-Trent", path: "/accountants-in-stoke-on-trent" },
+  { name: "Wolverhampton", path: "/accountant-in-wolverhampton" },
 ];
 
 interface NearbyLocationsSectionProps {
