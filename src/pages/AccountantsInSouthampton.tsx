@@ -23,11 +23,7 @@ import {
   TrendingUp,
   Phone,
   Anchor,
-  Ship,
-  Bot,
-  GraduationCap,
-  HeartPulse,
-  Scale,
+  Shield,
 } from "lucide-react";
 import TrustBar from "@/components/home/TrustBar";
 
@@ -35,78 +31,66 @@ interface ServiceItem {
   id: string;
   category: "contractor" | "business" | "landlord" | "tax";
   title: string;
+  tag: string;
   description: React.ReactNode;
   covers: string[];
   ctaText: string;
   ctaLink: string;
   icon: React.ElementType;
-  tag: string;
 }
 
 const servicesData: ServiceItem[] = [
   {
     id: "contractor-accounting",
     category: "contractor",
-    title: "Contractor Accounting",
-    tag: "Maritime & Port Expansion",
+    title: "Contractor Accountants in Southampton",
+    tag: "Port, Marine & Tech Contractors",
     description: (
       <>
-        Southampton's maritime, marine engineering and logistics sectors support a steady stream
-        of contract work, much of it project based and tied to the port's ongoing expansion. Our{" "}
-        <Link
-          to="/services/contractor-accountants"
-          className="text-gold font-semibold underline decoration-gold/60 underline-offset-4 hover:text-gold-light transition-colors"
-        >
-          contractor accounting
-        </Link>{" "}
-        service covers your{" "}
-        <Link
-          to="/what-is-ir35-uk"
-          className="text-gold font-semibold underline decoration-gold/60 underline-offset-4 hover:text-gold-light transition-colors"
-        >
-          IR35 position
-        </Link>{" "}
-        properly, along with limited company structuring, dividend planning, bookkeeping, VAT,
-        payroll and year end filing.
+        Southampton’s port, logistics, marine engineering and technology
+        sectors create regular project-based contract work. If you work through
+        your own limited company, we can help with company formation,
+        bookkeeping, VAT, payroll, dividend planning, annual accounts and IR35
+        status reviews. Our contractor accounting support is designed for
+        engineers, IT contractors, consultants and project professionals
+        working with employers or agencies in Southampton and across the Solent
+        region.
       </>
     ),
     covers: [
-      "Rigorous IR35 contract & working practice reviews",
-      "Tax-efficient limited company structuring & setup",
-      "Strategic dividend planning & salary extraction",
-      "Digital bookkeeping, VAT returns & RTI payroll",
+      "Rigorous IR35 contract & working practices reviews",
+      "Tax-efficient limited company formation & PSC setup",
+      "Strategic salary vs dividend timing & profit extraction",
+      "Quarterly VAT returns & MTD digital record-keeping",
       "Statutory annual accounts & Corporation Tax filing",
     ],
-    ctaText: "Explore Contractor Accounting",
+    ctaText: "Contractor Accounting Services",
     ctaLink: "/services/contractor-accountants",
     icon: Briefcase,
   },
   {
     id: "small-business-accounting",
     category: "business",
-    title: "Small Business Accounting",
-    tag: "City Centre to Shirley & Docks",
+    title: "Small Business Accountants in Southampton",
+    tag: "SMEs & Local Traders",
     description: (
       <>
-        Whether you're running a business near the city centre, out toward Shirley, or supplying
-        into the port's supply chain, our{" "}
-        <Link
-          to="/services/small-business-accountants"
-          className="text-gold font-semibold underline decoration-gold/60 underline-offset-4 hover:text-gold-light transition-colors"
-        >
-          small business accounting
-        </Link>{" "}
-        service keeps your bookkeeping, VAT and payroll accurate and current.
+        We support small businesses across Southampton with day-to-day
+        bookkeeping, VAT returns, management reporting, payroll, year-end
+        accounts and practical advice on cash flow and profitability. This is
+        useful whether you run a business in the city centre, operate from
+        home, supply the port economy, work in professional services or are
+        building a local service business.
       </>
     ),
     covers: [
-      "Day-to-day cloud bookkeeping (Xero & QuickBooks)",
+      "Accurate day-to-day cloud bookkeeping with bank feeds",
       "Making Tax Digital (MTD) compliant VAT filing",
       "Monthly management accounts & cash flow visibility",
-      "Statutory annual accounts & CT600 Corporation Tax",
-      "Direct accountant access without call center delays",
+      "Annual accounts preparation & Corporation Tax returns",
+      "Direct advice without confusing jargon or hidden fees",
     ],
-    ctaText: "Discover Small Business Support",
+    ctaText: "Small Business Accountants",
     ctaLink: "/services/small-business-accountants",
     icon: Building2,
   },
@@ -114,60 +98,50 @@ const servicesData: ServiceItem[] = [
     id: "landlord-accounting",
     category: "landlord",
     title: "Landlord Accounting",
-    tag: "Student & NHS Rental Market",
+    tag: "Portswood, HMOs & Portfolios",
     description: (
       <>
-        Southampton rents have risen faster than house prices over the past decade, driven by
-        consistent demand from students, NHS staff and port economy professionals, and the market
-        remains structurally undersupplied. Recent changes under the Renters' Rights Act have also
-        added new considerations for landlords to get right. Our{" "}
-        <Link
-          to="/services/landlord-accountants"
-          className="text-gold font-semibold underline decoration-gold/60 underline-offset-4 hover:text-gold-light transition-colors"
-        >
-          landlord accounting
-        </Link>{" "}
-        service covers rental income reporting, allowable expenses and Capital Gains Tax planning,
-        whether you hold a single let or a wider portfolio.
+        Southampton’s rental market is shaped by students, NHS staff, port
+        workers and young professionals. Areas such as Portswood and Swaythling
+        remain particularly relevant for student and professional lets, while
+        landlords elsewhere in the city may hold single buy-to-lets, HMOs or
+        growing portfolios. We help with rental income reporting, allowable
+        expenses, property bookkeeping, Capital Gains Tax planning, portfolio
+        reporting and the tax side of ownership-structure decisions.
       </>
     ),
     covers: [
-      "Rental income reporting & Self-Assessment filing",
-      "Maximising allowable property repair & running costs",
-      "Section 24 finance cost & mortgage interest relief",
-      "Capital Gains Tax (CGT) advice prior to disposals",
-      "HMO & student let portfolio tax structuring",
+      "Rental income reporting & Self Assessment submissions",
+      "Maximising allowable property expenditure & repair deductions",
+      "Section 24 mortgage interest relief calculations",
+      "Capital Gains Tax (CGT) advice prior to property sales",
+      "Student let, HMO & multi-unit portfolio guidance",
     ],
-    ctaText: "View Landlord Services",
+    ctaText: "Landlord Accounting Services",
     ctaLink: "/services/landlord-accountants",
     icon: Home,
   },
   {
     id: "payroll-support",
     category: "business",
-    title: "Payroll and HR Support",
-    tag: "On-Time PAYE & Auto-Enrolment",
+    title: "Payroll Support for Southampton Employers",
+    tag: "PAYE & Auto-Enrolment",
     description: (
       <>
-        A late payroll run or an incorrect PAYE submission causes disproportionate stress for
-        something entirely preventable. Our{" "}
-        <Link
-          to="/services/payroll-and-hr-services"
-          className="text-gold font-semibold underline decoration-gold/60 underline-offset-4 hover:text-gold-light transition-colors"
-        >
-          payroll and HR support
-        </Link>{" "}
-        keeps this accurate and on schedule, every cycle.
+        If you employ staff in Southampton, payroll needs to be accurate every
+        cycle. We provide payroll support covering payslips, RTI submissions,
+        pension auto-enrolment, starter and leaver processing, and PAYE
+        compliance.
       </>
     ),
     covers: [
-      "Accurate & timely PAYE calculations",
-      "Workplace pension auto-enrolment compliance",
-      "Real-Time Information (RTI) HMRC submissions",
-      "Digital payslips, P60s & P45 production",
-      "Director & employee payroll handled properly",
+      "Accurate weekly, fortnightly, or monthly PAYE pay runs",
+      "Workplace pension auto-enrolment compliance & reporting",
+      "Real-Time Information (RTI) submissions to HMRC",
+      "Digital payslips, P60s, and P45 generation",
+      "Director and employee payroll handled smoothly",
     ],
-    ctaText: "See Payroll & HR Services",
+    ctaText: "Payroll and HR Services",
     ctaLink: "/services/payroll-and-hr-services",
     icon: Users,
   },
@@ -175,27 +149,22 @@ const servicesData: ServiceItem[] = [
     id: "tax-planning",
     category: "tax",
     title: "Tax Planning",
-    tag: "Year-Round Advisory",
+    tag: "Year-Round Proactive Planning",
     description: (
       <>
-        Most overpaid tax comes from a decision made too late in the year to actually matter. Our{" "}
-        <Link
-          to="/services/tax-planning"
-          className="text-gold font-semibold underline decoration-gold/60 underline-offset-4 hover:text-gold-light transition-colors"
-        >
-          tax planning
-        </Link>{" "}
-        service works with you throughout the year, not just in the weeks before a deadline.
+        Most overpaid tax comes from a decision made too late in the year to
+        actually matter. Our tax planning service works with you throughout the
+        year, not just in the weeks before a deadline.
       </>
     ),
     covers: [
-      "Proactive year-round tax reviews & forecasts",
-      "Director dividend timing & profit extraction",
-      "Corporation Tax relief & allowance optimisation",
-      "Capital allowance timing on equipment & assets",
-      "Structuring advice before locking in commercial decisions",
+      "Proactive year-round reviews before your year-end passes",
+      "Optimised director salary vs dividend extraction mix",
+      "Pension contribution allowances & Corporation Tax relief",
+      "Capital allowances timing on equipment & business assets",
+      "Clear forward guidance to avoid surprise tax bills",
     ],
-    ctaText: "Explore Tax Planning",
+    ctaText: "Tax Planning Services",
     ctaLink: "/services/tax-planning",
     icon: Calculator,
   },
@@ -203,28 +172,23 @@ const servicesData: ServiceItem[] = [
     id: "outsourced-accounting",
     category: "business",
     title: "Outsourced Accounting",
-    tag: "Full Fractional Finance",
+    tag: "Complete Finance Function",
     description: (
       <>
-        For growing Southampton businesses not yet ready to bring finance in house, our{" "}
-        <Link
-          to="/services/outsourced-accounting-services"
-          className="text-gold font-semibold underline decoration-gold/60 underline-offset-4 hover:text-gold-light transition-colors"
-        >
-          outsourced accounting
-        </Link>{" "}
-        service takes on bookkeeping, reporting, payroll and cash flow monitoring, without the
-        cost of a permanent hire.
+        For growing Southampton businesses not yet ready to bring finance in
+        house, our outsourced accounting service takes on bookkeeping,
+        reporting, payroll and cash flow monitoring, without the cost of a
+        permanent hire.
       </>
     ),
     covers: [
-      "End-to-end bookkeeping & bank feeds management",
-      "Monthly management accounts & KPI dashboards",
-      "Cash flow forecasting & working capital monitoring",
-      "Seamless Xero / QuickBooks cloud setup",
-      "Strategic financial guidance without full-time overhead",
+      "End-to-end cloud bookkeeping & bank reconciliations",
+      "Monthly KPI dashboards & management reporting packs",
+      "Cash flow forecasting & supplier payment tracking",
+      "Xero / QuickBooks integration & accounting oversight",
+      "Senior finance expertise at a fraction of full-time cost",
     ],
-    ctaText: "Explore Outsourced Accounting",
+    ctaText: "Outsourced Accounting Services",
     ctaLink: "/services/outsourced-accounting-services",
     icon: TrendingUp,
   },
@@ -232,28 +196,23 @@ const servicesData: ServiceItem[] = [
     id: "vat-bookkeeping",
     category: "business",
     title: "VAT and Bookkeeping",
-    tag: "Clean MTD Compliance",
+    tag: "Cloud Records & MTD",
     description: (
       <>
-        Clean, current records make VAT filing and funding applications considerably more
-        straightforward. Our{" "}
-        <Link
-          to="/services/vat-and-bookkeeping-accounting-services"
-          className="text-gold font-semibold underline decoration-gold/60 underline-offset-4 hover:text-gold-light transition-colors"
-        >
-          VAT and bookkeeping
-        </Link>{" "}
-        service keeps this side of things tidy throughout the year.
+        Accurate records make VAT returns, funding applications and year-end
+        accounts much easier. We help Southampton businesses maintain
+        cloud-based bookkeeping, reconcile transactions, prepare VAT returns
+        and stay organised for Making Tax Digital requirements.
       </>
     ),
     covers: [
-      "Making Tax Digital (MTD) compliant VAT returns",
-      "Regular bank feed reconciliations & transaction coding",
-      "Clean records for bank financing & mortgage proof",
-      "VAT scheme suitability (Standard vs Flat Rate)",
-      "Elimination of year-end receipt scrambles",
+      "Making Tax Digital (MTD) compliant VAT filing",
+      "Rolling 12-month turnover threshold monitoring",
+      "Standard, Flat Rate and Margin VAT scheme advice",
+      "Automated bank feed reconciliation & digital receipts",
+      "Zero last-minute receipt scrambles or late filing fines",
     ],
-    ctaText: "View VAT & Bookkeeping Services",
+    ctaText: "VAT & Bookkeeping Services",
     ctaLink: "/services/vat-and-bookkeeping-accounting-services",
     icon: Receipt,
   },
@@ -261,58 +220,48 @@ const servicesData: ServiceItem[] = [
     id: "company-secretarial",
     category: "business",
     title: "Company Secretarial Services",
-    tag: "Companies House Filings",
+    tag: "Companies House Compliance",
     description: (
       <>
-        Companies House filings are easy to lose track of precisely because they don't come around
-        often. Our{" "}
-        <Link
-          to="/services/company-secretarial-services"
-          className="text-gold font-semibold underline decoration-gold/60 underline-offset-4 hover:text-gold-light transition-colors"
-        >
-          company secretarial
-        </Link>{" "}
-        service tracks confirmation statements and any changes to directors or shareholders.
+        Companies House filings are easy to lose track of precisely because they
+        don't come around often. Our company secretarial service tracks
+        confirmation statements and any changes to directors or shareholders.
       </>
     ),
     covers: [
-      "Annual Confirmation Statement filings",
-      "Director, PSC & officer appointments / resignations",
-      "Share allotments, transfers & reorganisations",
-      "Statutory registers maintenance & compliance",
-      "Registered office address facility",
+      "Annual Confirmation Statement submissions",
+      "Director, secretary & PSC change filings",
+      "Share allotments, transfers & restructuring",
+      "Maintenance of statutory company registers",
+      "Registered office address support",
     ],
-    ctaText: "Explore Company Secretarial",
+    ctaText: "Company Secretarial Services",
     ctaLink: "/services/company-secretarial-services",
     icon: FileText,
   },
   {
     id: "rd-tax-relief",
     category: "tax",
-    title: "R&D Tax Credit Claims",
-    tag: "Marine Tech, Robotics & Innovation",
+    title: "R&D Tax Relief for Southampton Innovation Businesses",
+    tag: "Marine Tech & Software Innovation",
     description: (
       <>
-        Given Southampton's strength in marine engineering, robotics and maritime technology,
-        genuine research and development activity is more common here than many business owners
-        realise. Our{" "}
-        <Link
-          to="/services/rd-tax-credit-claim"
-          className="text-gold font-semibold underline decoration-gold/60 underline-offset-4 hover:text-gold-light transition-colors"
-        >
-          R&D tax credit
-        </Link>{" "}
-        service checks eligibility properly and builds a claim that holds up.
+        Southampton has strengths in marine technology, engineering, robotics,
+        software and research-led businesses. If your company is developing new
+        products, processes or technical solutions, it may be worth reviewing
+        whether R&amp;D tax relief applies. We assess eligibility carefully and
+        prepare claims based on the actual technical and financial evidence,
+        rather than making broad assumptions.
       </>
     ),
     covers: [
-      "Marine engineering & robotics R&D eligibility reviews",
-      "Staff costs, subcontractor & consumable analysis",
-      "HMRC-compliant technical narrative preparation",
-      "Corporation Tax reduction or payable cash credit",
-      "Comprehensive claim defense & audit-ready records",
+      "Rigorous eligibility review before committing client resources",
+      "Marine technology, robotics & software expenditure analysis",
+      "Substantiated HMRC-compliant technical narrative preparation",
+      "Apportionment of qualifying staff, subcontractor & consumable costs",
+      "Corporation Tax reduction or cash tax credit recovery",
     ],
-    ctaText: "Find Out About R&D Claims",
+    ctaText: "R&D Tax Credit Services",
     ctaLink: "/services/rd-tax-credit-claim",
     icon: Sparkles,
   },
@@ -320,80 +269,97 @@ const servicesData: ServiceItem[] = [
     id: "personal-tax",
     category: "tax",
     title: "Personal Tax and Self Assessment",
-    tag: "Dividends, Property & Gains",
+    tag: "Multi-Source Income & Directors",
     description: (
       <>
-        Dividend income, rental profits and capital gains each affect your personal tax position
-        differently. Our{" "}
-        <Link
-          to="/services/personal-tax-and-self-assessment-service"
-          className="text-gold font-semibold underline decoration-gold/60 underline-offset-4 hover:text-gold-light transition-colors"
-        >
-          personal tax and self assessment
-        </Link>{" "}
-        service handles the filing and explains how everything connects.
+        We help Southampton individuals with Self Assessment tax returns,
+        dividend income, rental profits, capital gains, sole trader accounts and
+        personal tax planning. This is particularly useful for contractors,
+        landlords and company directors who have more than one source of
+        income.
       </>
     ),
     covers: [
-      "Self-Assessment tax return preparation & filing",
-      "Dividend, rental & capital gains tax calculation",
-      "Payment on account scheduling & forecasting",
-      "Personal tax allowance & threshold optimisation",
-      "Direct HMRC liaison & correspondence handling",
+      "Self Assessment tax return preparation & filing",
+      "Combining trade profit, rental yields & company dividends",
+      "Payments on account scheduling to prevent cash surprises",
+      "Claiming all allowable business mileage & expenses",
+      "Direct correspondence and liaison with HMRC",
     ],
-    ctaText: "View Personal Tax Services",
+    ctaText: "Personal Tax and Self Assessment",
     ctaLink: "/services/personal-tax-and-self-assessment-service",
     icon: UserCheck,
   },
 ];
 
-const southamptonClientProfiles = [
+const whyChooseUsPoints = [
+  "Fixed monthly fees agreed in advance.",
+  "A named point of contact rather than a call-centre experience.",
+  "Support with bookkeeping, VAT, payroll, year-end accounts and tax planning.",
+  "Clear guidance for contractors on IR35, limited company setup and salary-dividend planning.",
+  "Landlord accounting for single lets, HMOs and property portfolios.",
+  "Remote accounting support without travelling to an office.",
+];
+
+const areasServedList = [
   {
-    title: "Marine, Logistics & Engineering Contractors",
-    badge: "Port & Maritime Supply Chain",
-    description:
-      "A good number of our Southampton clients are contractors and engineers working into the port's maritime, logistics and marine technology supply chain, often wanting proper IR35 guidance rather than generic freelance advice.",
-    icon: Anchor,
-    highlight: "Proper IR35 reviews and contract assessments, not generic templates.",
+    title: "Southampton City Centre & Ocean Village",
+    desc: "Supporting maritime professionals, tech start-ups, hospitality venues, and consultancies.",
   },
   {
-    title: "Student & NHS Landlords",
-    badge: "Portswood, Swaythling & HMO Lets",
-    description:
-      "We also work with landlords holding property near the university in Portswood and Swaythling, many of whom came to us wanting clarity on the recent Renters' Rights Act changes before they took effect.",
-    icon: Home,
-    highlight: "Renters' Rights Act compliance, allowable expenses and CGT advice.",
+    title: "Shirley, Shirley Warren & Lordshill",
+    desc: "Fixed-fee support for local trades, healthcare workers, sole traders, and retail businesses.",
   },
   {
-    title: "NHS Professionals & Small Businesses",
-    badge: "Healthcare & City-Wide Commerce",
-    description:
-      "A steady group are NHS professionals and small business owners across the wider city who simply wanted their tax affairs handled properly without surprise bills or missed deadlines.",
-    icon: HeartPulse,
-    highlight: "Transparent fixed fees and year-round proactive tax support.",
+    title: "Portswood, Highfield & Swaythling",
+    desc: "Specialist landlord tax services for student HMOs and professional buy-to-let properties.",
+  },
+  {
+    title: "Bitterne, Woolston & Sholing",
+    desc: "Accounting, bookkeeping, and payroll for small service businesses and sole traders.",
+  },
+  {
+    title: "Totton, Hythe & the Waterside",
+    desc: "Serving marine engineering contractors, logistics firms, and industrial supply specialists.",
+  },
+  {
+    title: "Eastleigh, Chandler’s Ford & Hedge End",
+    desc: "Comprehensive remote accounting for transport, retail, commercial hubs, and growing SMEs.",
+  },
+  {
+    title: "Romsey & the Wider Test Valley Area",
+    desc: "Tax planning, director dividend strategies, and business accounting for local owners.",
+  },
+  {
+    title: "Fareham, Gosport & the Solent Region",
+    desc: "Cross-Solent contractor support, VAT compliance, and corporate finance assistance.",
   },
 ];
 
 const faqs = [
   {
-    q: "Do you have a physical office in Southampton?",
-    a: "No, we work with Southampton clients entirely remotely, in the same way we do everywhere outside Bristol. Video calls, phone, email and cloud accounting cover what an office visit would, without requiring travel on either side.",
+    q: "Who are the best accountants in Southampton?",
+    a: "The best accountant for you depends on your needs, not just the firm’s location. Look for transparent fixed fees, relevant experience with your client type, clear communication, strong tax-planning support and a process for handling VAT, payroll, year-end accounts and HMRC deadlines. Henleaze Tax Consultancy provides fixed-fee accounting and tax support for Southampton contractors, landlords and small businesses remotely from Bristol.",
   },
   {
-    q: "I own rental property near the university in Portswood or Swaythling. How does the Renters' Rights Act affect my tax position?",
-    a: "The changes primarily affect tenancy structure and management, but they can have knock-on implications for how income and certain costs are reported, particularly for HMOs. Worth a specific conversation to check your setup is aligned with the new rules.",
+    q: "Do you have accountants based in Southampton?",
+    a: "No. Henleaze Tax Consultancy is based in Bristol and supports Southampton clients remotely. We use cloud accounting software, secure document sharing, phone calls, email and video meetings, so clients do not need to attend an office in person.",
   },
   {
-    q: "I contract into Southampton's port or maritime sector through my own limited company. Do you understand this kind of work?",
-    a: "Yes, this is a common client profile for us given the strength of Southampton's maritime and marine engineering sector. We review your actual contract and working arrangements to assess your IR35 position properly.",
+    q: "Can you help contractors in Southampton with IR35?",
+    a: "Yes. We review contracts and working arrangements to help contractors understand their IR35 position. We also support limited company contractors with company formation, bookkeeping, VAT, payroll, salary and dividend planning, and year-end accounts.",
   },
   {
-    q: "Can I switch accountants partway through my current tax year?",
-    a: "Yes, this happens regularly. We contact your outgoing accountant, request your records, and continue from wherever you currently stand, without disrupting any upcoming deadlines.",
+    q: "Can I switch accountants during the tax year?",
+    a: "Yes. We can contact your previous accountant, request professional clearance and obtain the records needed to continue without disrupting your deadlines. This is a common process and can usually be handled smoothly.",
   },
   {
-    q: "Is your pricing different for Southampton clients compared to other locations?",
-    a: "No. Every client gets the same fixed fee structure, based on what your specific situation actually requires, agreed before any work starts.",
+    q: "Do Southampton clients pay different fees?",
+    a: "No. Fees are based on the work required, not the client’s location. Every quotation is fixed and agreed before work starts, whether you are in Southampton, Bristol or elsewhere in the UK.",
+  },
+  {
+    q: "Can you help a new business in Southampton?",
+    a: "Yes. We can help with choosing between sole trader and limited company status, company formation, VAT registration, bookkeeping setup, payroll, tax registration and ongoing compliance.",
   },
 ];
 
@@ -415,20 +381,20 @@ const AccountantsInSouthampton: React.FC = () => {
   const schemaData = {
     "@context": "https://schema.org",
     "@type": "AccountingService",
-    name: "Henleaze Tax Consultancy - Best Southampton Accountants",
+    name: "Henleaze Tax Consultancy - Best Accountants in Southampton",
     url: "https://henleazetaxconsultancy.com/best-accountants-in-southampton",
     description:
-      "Looking for the best accountants in Southampton? Fixed-fee support for contractors, landlords and small businesses. Free consultation available.",
+      "Looking for best accountants in Southampton? Henleaze Tax Consultancy provides fixed-fee accounting, tax planning & landlord tax support across Southampton.",
     telephone: "+447949956279",
-    email: "info@henleazetaxconsultancy.com",
+    email: "info@henleazetaxconsultancy.co.uk",
     areaServed: { "@type": "City", name: "Southampton" },
     serviceType: [
       "Contractor Accounting",
       "IR35 Review",
       "Small Business Accounting",
       "Landlord Accounting",
-      "Tax Planning",
       "Payroll Services",
+      "Tax Planning",
       "Outsourced Accounting",
       "VAT and Bookkeeping",
       "Company Secretarial",
@@ -455,14 +421,14 @@ const AccountantsInSouthampton: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Best Southampton Accountants for Contractors &amp; SMEs</title>
+        <title>Best Accountants in Southampton | Fixed-Fee Tax &amp; Accounting</title>
         <meta
           name="description"
-          content="Looking for the best accountants in Southampton? Fixed-fee support for contractors, landlords and small businesses. Free consultation available."
+          content="Looking for best accountants in Southampton? Henleaze Tax Consultancy provides fixed-fee accounting, tax planning &amp; landlord tax support across Southampton."
         />
         <meta
           name="keywords"
-          content="best accountants in southampton, accountants in southampton, accountant southampton, contractor accountants southampton, landlord accountants southampton, small business accountant southampton, IR35 southampton, tax planning southampton"
+          content="best accountants in southampton, accountants in southampton, accountant southampton, contractor accountants southampton, landlord accounting southampton, small business accountant southampton, ir35 southampton, fixed fee accountant southampton"
         />
         <link
           rel="canonical"
@@ -470,11 +436,11 @@ const AccountantsInSouthampton: React.FC = () => {
         />
         <meta
           property="og:title"
-          content="Best Southampton Accountants for Contractors &amp; SMEs"
+          content="Best Accountants in Southampton | Fixed-Fee Tax &amp; Accounting"
         />
         <meta
           property="og:description"
-          content="Looking for the best accountants in Southampton? Fixed-fee support for contractors, landlords and small businesses. Free consultation available."
+          content="Looking for best accountants in Southampton? Henleaze Tax Consultancy provides fixed-fee accounting, tax planning &amp; landlord tax support across Southampton."
         />
         <meta
           property="og:url"
@@ -484,11 +450,11 @@ const AccountantsInSouthampton: React.FC = () => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:title"
-          content="Best Southampton Accountants for Contractors &amp; SMEs"
+          content="Best Accountants in Southampton | Fixed-Fee Tax &amp; Accounting"
         />
         <meta
           name="twitter:description"
-          content="Looking for the best accountants in Southampton? Fixed-fee support for contractors, landlords and small businesses. Free consultation available."
+          content="Looking for best accountants in Southampton? Henleaze Tax Consultancy provides fixed-fee accounting, tax planning &amp; landlord tax support across Southampton."
         />
         <script type="application/ld+json">{JSON.stringify(schemaData)}</script>
       </Helmet>
@@ -502,23 +468,62 @@ const AccountantsInSouthampton: React.FC = () => {
           </div>
 
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div className="max-w-4xl mx-auto text-center">
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/15 text-gold text-sm font-semibold mb-6 shadow-sm">
-                <MapPin className="w-4 h-4 text-gold" />
-                <span>Southampton &amp; Solent Coverage</span>
-                <span className="w-1.5 h-1.5 rounded-full bg-gold animate-ping" />
+            {/* Featured Image on Top */}
+            <div className="max-w-4xl mx-auto mb-10">
+              <div className="relative rounded-3xl overflow-hidden border border-white/20 shadow-2xl group">
+                <img
+                  src="/southampton.png"
+                  alt="Accountants in Southampton providing fixed-fee tax and accounting support remotely"
+                  className="w-full h-64 sm:h-80 md:h-96 object-cover object-center group-hover:scale-105 transition-transform duration-700"
+                  width={1200}
+                  height={600}
+                  loading="eager"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/30 to-transparent flex items-end p-6 sm:p-8">
+                  <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-navy/80 backdrop-blur-md border border-gold/40 text-gold text-xs sm:text-sm font-semibold shadow-md">
+                    <MapPin className="w-4 h-4 text-gold" />
+                    <span>Southampton &amp; Solent &bull; Fixed-Fee Remote Support</span>
+                    <span className="w-1.5 h-1.5 rounded-full bg-gold animate-ping" />
+                  </div>
+                </div>
               </div>
+            </div>
 
+            <div className="max-w-4xl mx-auto text-center">
               <h1 className="font-display text-3xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-white leading-tight mb-6">
-                Accountants in Southampton:{" "}
+                Best Accountants in Southampton for{" "}
                 <span className="text-gold block sm:inline">
-                  Clear Advice, Fixed Fees, No Surprises
+                  Contractors, Landlords &amp; SMEs
                 </span>
               </h1>
 
-              <p className="text-lg sm:text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed mb-8">
-                Looking for the best accountants in Southampton? Fixed-fee support for contractors,
-                landlords, sole traders and small businesses. Free consultation available.
+              <p className="text-lg sm:text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed mb-6">
+                Henleaze Tax Consultancy provides fixed-fee accounting and tax
+                support for contractors, landlords, sole traders and small
+                businesses across{" "}
+                <Link
+                  to="/accounting-firms-in-southampton"
+                  className="text-gold font-semibold underline decoration-gold/60 underline-offset-4 hover:text-gold-light transition-colors"
+                >
+                  Southampton
+                </Link>
+                . We are based in Bristol and work with Southampton clients
+                remotely through cloud accounting, secure document sharing, phone
+                and video calls.
+              </p>
+
+              <p className="text-base sm:text-lg text-slate-300 max-w-3xl mx-auto leading-relaxed mb-6">
+                Choosing an accountant should not depend on hoping the advice is
+                good after you have signed up. Our approach is straightforward:
+                agree the scope and fee before work begins, keep records organised
+                throughout the year, and give practical tax advice rather than
+                only filing returns at the deadline.
+              </p>
+
+              <p className="text-sm sm:text-base text-slate-400 max-w-3xl mx-auto leading-relaxed mb-10">
+                We support clients across Southampton, including the city
+                centre, Shirley, Portswood, Swaythling, Bitterne, Woolston,
+                Totton, Eastleigh and the wider Solent area.
               </p>
 
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 mb-12">
@@ -548,10 +553,10 @@ const AccountantsInSouthampton: React.FC = () => {
 
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-3xl mx-auto pt-6 border-t border-white/10 text-xs sm:text-sm text-slate-300">
                 {[
-                  "Fixed Agreed Fees",
-                  "IR35 & Maritime Expertise",
-                  "Year-Round Proactive Advice",
-                  "100% Cloud & Remote-Ready",
+                  "Fixed Monthly Fees",
+                  "Named Point of Contact",
+                  "IR35 & Landlord Focus",
+                  "100% Remote-Ready",
                 ].map((t) => (
                   <div
                     key={t}
@@ -569,7 +574,7 @@ const AccountantsInSouthampton: React.FC = () => {
         {/* ── TRUST BAR ─────────────────────────────────────────────── */}
         <TrustBar />
 
-        {/* ── INTRO / PHILOSOPHY ────────────────────────────────────── */}
+        {/* ── WHY SOUTHAMPTON CLIENTS CHOOSE US ────────────────────── */}
         <section className="py-20 bg-white relative">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
             <div className="bg-slate-50 border border-slate-200/80 rounded-3xl p-8 sm:p-12 md:p-14 shadow-xl relative overflow-hidden">
@@ -577,127 +582,68 @@ const AccountantsInSouthampton: React.FC = () => {
 
               <div className="max-w-3xl">
                 <span className="text-xs font-extrabold uppercase tracking-widest text-gold bg-gold/10 px-3.5 py-1.5 rounded-full inline-block mb-4 border border-gold/20">
-                  Straightforward Accounting
+                  Value &amp; Certainty
                 </span>
 
                 <h2 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-navy mb-6 leading-snug">
-                  Accountants in Southampton: Clear Advice, Fixed Fees, No Surprises
+                  Why Southampton Clients Choose Us
                 </h2>
 
                 <div className="space-y-5 text-slate-700 text-base sm:text-lg leading-relaxed">
                   <p>
-                    Every accountant claims to offer clear advice and fair pricing. Most people
-                    only find out whether that's actually true once they've already signed up, which
-                    is a fairly poor way to choose someone responsible for your tax position. It's
-                    worth being able to check beforehand instead.
+                    Southampton has a diverse business base: port and logistics
+                    work, marine engineering, healthcare, professional
+                    services, hospitality, student rentals and growing technology
+                    businesses. That mix creates different accounting needs,
+                    from{" "}
+                    <Link
+                      to="/what-is-ir35-uk"
+                      className="text-gold font-semibold underline decoration-gold/60 underline-offset-4 hover:text-gold-light transition-colors"
+                    >
+                      IR35
+                    </Link>{" "}
+                    reviews for{" "}
+                    <Link
+                      to="/what-is-a-contractor-accountant"
+                      className="text-gold font-semibold underline decoration-gold/60 underline-offset-4 hover:text-gold-light transition-colors"
+                    >
+                      contractors
+                    </Link>{" "}
+                    to rental income reporting for landlords and VAT support for
+                    growing SMEs.
                   </p>
-                  <p>
-                    Henleaze Tax Consultancy works with contractors, landlords, sole traders and
-                    small businesses across Southampton. We're based in Bristol and the distance
-                    between the two cities has never actually affected how we work with clients,
-                    since everything runs through cloud accounting, phone calls and email rather
-                    than office visits.
-                  </p>
+                  <p>We work with Southampton clients who want:</p>
                 </div>
 
-                <div className="mt-8 pt-8 border-t border-slate-200 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-                  <div className="flex items-center gap-3 text-slate-700 font-medium">
-                    <div className="w-10 h-10 rounded-full bg-gold/20 flex items-center justify-center text-navy font-bold">
-                      ✓
+                <div className="grid grid-cols-1 gap-3.5 mt-6 mb-8">
+                  {whyChooseUsPoints.map((point, index) => (
+                    <div
+                      key={index}
+                      className="flex items-start gap-3 bg-white border border-slate-200/80 rounded-2xl p-4 shadow-sm"
+                    >
+                      <div className="w-6 h-6 rounded-full bg-gold/20 flex items-center justify-center text-navy font-bold shrink-0 mt-0.5">
+                        ✓
+                      </div>
+                      <span className="text-slate-800 text-sm sm:text-base font-medium">
+                        {point}
+                      </span>
                     </div>
-                    <span>
-                      Direct contact with your dedicated accountant — no call-centre runarounds
-                    </span>
-                  </div>
+                  ))}
+                </div>
+
+                <div className="pt-6 border-t border-slate-200 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                  <span className="text-slate-600 text-sm">
+                    Ready to speak with an experienced accountant?
+                  </span>
                   <Link
                     to="/contact"
                     className="inline-flex items-center text-navy font-bold text-sm hover:text-gold transition-colors gap-1 group"
                   >
-                    Speak with an accountant
+                    Book a free consultation
                     <ChevronRight className="w-4 h-4 text-gold group-hover:translate-x-1 transition-transform" />
                   </Link>
                 </div>
               </div>
-            </div>
-          </div>
-        </section>
-
-        {/* ── SOUTHAMPTON ECONOMY CONTEXT ───────────────────────────── */}
-        <section className="py-20 bg-slate-900 text-white relative overflow-hidden">
-          <div className="absolute inset-0 opacity-15 pointer-events-none">
-            <div className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-gradient-to-tl from-gold/30 to-blue-600/20 rounded-full blur-3xl" />
-          </div>
-
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 max-w-5xl">
-            <div className="text-center max-w-3xl mx-auto mb-14">
-              <span className="text-xs font-extrabold uppercase tracking-widest text-gold bg-gold/15 px-3.5 py-1.5 rounded-full inline-block mb-3 border border-gold/30">
-                Local Economic Context
-              </span>
-              <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight">
-                Southampton's Economy Still Runs on Its Port, But Not Only That
-              </h2>
-              <div className="w-20 h-1 bg-gold mx-auto mt-4 rounded-full" />
-            </div>
-
-            <div className="space-y-6 text-slate-300 text-base sm:text-lg leading-relaxed max-w-4xl mx-auto">
-              <p>
-                Southampton's identity is tied closely to its maritime economy, and for good reason.
-                The Port of Southampton handles over 40 million tonnes of cargo a year and is the
-                UK's busiest cruise port, hosting P&amp;O, Cunard, MSC and Celebrity Cruises, alongside
-                a growing Solent Freeport initiative expected to bring significant new investment and
-                jobs to the region. That maritime base supports a wide engineering, logistics and
-                marine technology sector, including newer arrivals like Ocean Infinity's robotics
-                operations.
-              </p>
-              <p>
-                Southampton's economy extends well beyond the docks too, with a large NHS and
-                healthcare workforce centred around University Hospital Southampton, and the
-                University of Southampton, a Russell Group institution with around 24,000 students,
-                driving one of the busiest rental markets on the South Coast.
-              </p>
-              <div className="bg-white/5 border-l-4 border-gold p-6 rounded-r-2xl text-white font-medium">
-                That combination brings us a genuinely mixed set of Southampton clients: marine and
-                logistics contractors, engineers working across the port and its supply chain,
-                landlords letting to a large student population in areas like Portswood and
-                Swaythling, and NHS professionals and small business owners across the wider city.
-              </div>
-            </div>
-
-            {/* Economy Pillars */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-14">
-              {[
-                {
-                  Icon: Ship,
-                  title: "Port of Southampton",
-                  body: "40M+ tonnes of cargo yearly & UK's leading cruise hub hosting P&O, Cunard, MSC and Celebrity.",
-                },
-                {
-                  Icon: Bot,
-                  title: "Marine Tech & Freeport",
-                  body: "Solent Freeport initiative, marine engineering and innovative robotics hubs like Ocean Infinity.",
-                },
-                {
-                  Icon: GraduationCap,
-                  title: "University & Student Lets",
-                  body: "24,000+ students at the Russell Group university driving vibrant lettings in Portswood & Swaythling.",
-                },
-                {
-                  Icon: HeartPulse,
-                  title: "NHS & Healthcare",
-                  body: "Major regional healthcare workforce centred around University Hospital Southampton.",
-                },
-              ].map(({ Icon, title, body }) => (
-                <div
-                  key={title}
-                  className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-gold/50 transition-all"
-                >
-                  <Icon className="w-8 h-8 text-gold mb-3" />
-                  <h3 className="font-display font-bold text-white text-lg mb-2">
-                    {title}
-                  </h3>
-                  <p className="text-slate-400 text-sm leading-relaxed">{body}</p>
-                </div>
-              ))}
             </div>
           </div>
         </section>
@@ -707,21 +653,21 @@ const AccountantsInSouthampton: React.FC = () => {
           id="services"
           className="py-24 bg-gradient-to-b from-blue-950 via-slate-900 to-navy text-white relative overflow-hidden"
         >
-          {/* Glow Effects */}
           <div className="absolute top-10 left-10 w-96 h-96 bg-blue-600/20 rounded-full blur-3xl pointer-events-none" />
           <div className="absolute bottom-10 right-10 w-96 h-96 bg-gold/15 rounded-full blur-3xl pointer-events-none" />
 
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="max-w-3xl mx-auto text-center mb-12">
               <span className="text-xs font-extrabold uppercase tracking-widest text-blue-300 bg-blue-500/20 border border-blue-400/30 px-4 py-1.5 rounded-full inline-block mb-3 shadow-sm">
-                Expert Services
+                Tailored Solutions
               </span>
               <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white">
-                Accounting and Tax Support for Southampton Clients
+                Accounting Support for Southampton Businesses
               </h2>
               <p className="text-blue-100/90 text-base sm:text-lg mt-4 max-w-2xl mx-auto">
-                Comprehensive, fixed-fee accounting, bookkeeping and tax planning tailored for
-                Southampton's contractors, landlords, and growing businesses.
+                Comprehensive, fixed-fee accounting and practical tax advice
+                tailored for contractors, small businesses, landlords and growing
+                enterprises.
               </p>
               <div className="w-24 h-1.5 bg-gold mx-auto mt-5 rounded-full shadow-lg shadow-gold/30" />
             </div>
@@ -733,7 +679,7 @@ const AccountantsInSouthampton: React.FC = () => {
                 { key: "contractor", label: "Contractor Accounting" },
                 { key: "business", label: "Small Business & Payroll" },
                 { key: "landlord", label: "Landlord Accounting" },
-                { key: "tax", label: "Tax & Advisory" },
+                { key: "tax", label: "Tax Planning & R&D" },
               ].map((tab) => (
                 <button
                   key={tab.key}
@@ -812,153 +758,19 @@ const AccountantsInSouthampton: React.FC = () => {
               })}
             </div>
 
-            {/* View All Services Link Button */}
-            <div className="mt-14 text-center">
+            {/* View All Services Banner */}
+            <div className="mt-16 text-center max-w-3xl mx-auto bg-white/5 border border-white/10 rounded-2xl p-6 backdrop-blur-md">
+              <p className="text-slate-200 text-sm sm:text-base mb-4">
+                Explore our full suite of personal tax, secretarial, and business
+                accounting solutions.
+              </p>
               <Button
                 asChild
                 size="lg"
-                className="bg-gold hover:bg-gold-light text-navy font-bold text-base px-10 py-6 rounded-full shadow-xl hover:shadow-gold/30 hover:scale-105 transition-all duration-300"
+                className="bg-gold hover:bg-gold-light text-navy font-bold px-8 py-5 rounded-full shadow-lg hover:scale-105 transition-all"
               >
                 <Link to="/services">
                   View All Services
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
-              </Button>
-            </div>
-          </div>
-        </section>
-
-        {/* ── RENTERS' RIGHTS ACT SPOTLIGHT ───────────────────────── */}
-        <section className="py-20 bg-slate-50 relative">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
-            <div className="bg-navy text-white rounded-3xl p-8 sm:p-12 md:p-14 shadow-2xl relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-72 h-72 bg-gold/10 rounded-full blur-3xl pointer-events-none" />
-
-              <div className="max-w-3xl relative z-10">
-                <span className="text-xs font-extrabold uppercase tracking-widest text-gold bg-gold/15 px-3.5 py-1.5 rounded-full inline-block mb-5 border border-gold/30 flex items-center gap-1.5 w-fit">
-                  <Scale className="w-3.5 h-3.5 text-gold" />
-                  Landlord Regulatory Update
-                </span>
-
-                <h2 className="font-display text-2xl sm:text-3xl md:text-4xl font-extrabold text-white mb-6 leading-snug">
-                  What the Renters' Rights Act Means for Southampton Landlords
-                </h2>
-
-                <div className="space-y-5 text-slate-300 text-base sm:text-lg leading-relaxed">
-                  <p>
-                    The Renters' Rights Act, which came into force on 1 May 2026, is the biggest
-                    change to the private rented sector since the late 1980s, abolishing Section 21
-                    evictions and converting tenancies to a rolling periodic structure with new rules
-                    on rent increases.
-                  </p>
-                  <p>
-                    It's a legal and operational shift more than a tax one, but for Southampton{" "}
-                    <Link
-                      to="/services/landlord-accountants"
-                      className="text-gold font-bold underline decoration-gold/60 underline-offset-4 hover:text-gold-light transition-colors"
-                    >
-                      landlords
-                    </Link>{" "}
-                    managing HMOs or multiple properties, particularly given how tight the local
-                    rental market already is, it's worth reviewing tenancy agreements and rent
-                    review processes alongside your usual tax reporting, since the two often get
-                    updated together.
-                  </p>
-                  <p>
-                    If anything changes in how a property is let or structured as a result, that's
-                    the point to flag it with us so your reporting stays accurate too.
-                  </p>
-                </div>
-
-                <div className="mt-8 flex flex-col sm:flex-row gap-4">
-                  <Button
-                    asChild
-                    size="lg"
-                    className="bg-gold hover:bg-gold-light text-navy font-bold px-8 py-6 rounded-full shadow-lg hover:scale-105 transition-all"
-                  >
-                    <Link to="/calculator">
-                      Get a Quick Estimate
-                      <ArrowRight className="ml-2 h-4 w-4" />
-                    </Link>
-                  </Button>
-
-                  <Button
-                    asChild
-                    variant="outline"
-                    size="lg"
-                    className="w-full sm:w-auto border-white/40 text-black hover:bg-navy hover:text-white font-semibold text-base px-8 py-6 rounded-full transition-all duration-300 cursor-pointer shadow-sm hover:border-gold/60"
-                  >
-                    <Link to="/services/landlord-accountants">Explore Landlord Services</Link>
-                  </Button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* ── CLIENT PROFILES ───────────────────────────────────────── */}
-        <section className="py-20 bg-white relative">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
-            <div className="text-center max-w-3xl mx-auto mb-14">
-              <span className="text-xs font-extrabold uppercase tracking-widest text-gold bg-gold/10 px-3.5 py-1.5 rounded-full inline-block mb-3 border border-gold/20">
-                Client Profiles
-              </span>
-              <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-extrabold text-navy tracking-tight">
-                Where Our Southampton Clients Tend to Come From
-              </h2>
-              <div className="w-20 h-1 bg-gold mx-auto mt-4 rounded-full" />
-              <p className="mt-4 text-slate-600 text-base sm:text-lg">
-                We work across Southampton's diverse commercial landscape, from maritime engineering
-                to academic and healthcare rental sectors.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-              {southamptonClientProfiles.map((profile, index) => {
-                const ProfileIcon = profile.icon;
-                return (
-                  <div
-                    key={index}
-                    className="bg-white rounded-3xl p-8 border border-slate-200 shadow-lg flex flex-col justify-between hover:border-gold/50 transition-all duration-300 group"
-                  >
-                    <div>
-                      <div className="w-12 h-12 rounded-xl bg-gold/15 flex items-center justify-center text-navy mb-5 group-hover:bg-gold group-hover:scale-105 transition-all">
-                        <ProfileIcon className="w-6 h-6" />
-                      </div>
-                      <span className="text-xs font-bold text-gold uppercase tracking-wider block mb-2">
-                        {profile.badge}
-                      </span>
-                      <h3 className="font-display text-xl font-bold text-navy mb-4">
-                        {profile.title}
-                      </h3>
-                      <p className="text-slate-600 text-sm sm:text-base leading-relaxed mb-6">
-                        {profile.description}
-                      </p>
-                    </div>
-                    <div className="p-3.5 rounded-xl bg-amber-50/80 border border-amber-200/60 text-xs text-navy font-semibold">
-                      💡 {profile.highlight}
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-
-            <div className="bg-navy text-white rounded-3xl p-8 sm:p-10 shadow-xl flex flex-col sm:flex-row items-center justify-between gap-6 max-w-4xl mx-auto">
-              <div className="space-y-2 text-center sm:text-left">
-                <h4 className="font-display text-xl sm:text-2xl font-bold text-white">
-                  Sound like where you're at?
-                </h4>
-                <p className="text-slate-300 text-sm sm:text-base">
-                  Get in touch if any of that sounds close to your situation.
-                </p>
-              </div>
-              <Button
-                asChild
-                size="lg"
-                className="bg-gold hover:bg-gold-light text-navy font-bold px-8 py-6 rounded-full shrink-0 shadow-lg hover:scale-105 transition-all"
-              >
-                <Link to="/contact">
-                  Get in Touch
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
@@ -966,47 +778,44 @@ const AccountantsInSouthampton: React.FC = () => {
           </div>
         </section>
 
-        {/* ── HOW OUR FEES WORK ────────────────────────────────────── */}
-        <section className="py-20 bg-slate-50 relative">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
-            <div className="bg-gradient-to-br from-slate-900 via-navy to-slate-900 text-white rounded-3xl p-8 sm:p-14 shadow-2xl border border-white/10 relative overflow-hidden text-center">
-              <div className="absolute -right-20 -top-20 w-60 h-60 bg-gold/20 rounded-full blur-3xl pointer-events-none" />
-
-              <span className="text-xs font-extrabold uppercase tracking-widest text-gold bg-gold/15 px-3.5 py-1.5 rounded-full inline-block mb-4 border border-gold/30">
-                Transparent Pricing
+        {/* ── AREAS WE SERVE AROUND SOUTHAMPTON ────────────────────── */}
+        <section className="py-20 bg-white relative">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
+            <div className="text-center max-w-3xl mx-auto mb-14">
+              <span className="text-xs font-extrabold uppercase tracking-widest text-gold bg-gold/10 px-3.5 py-1.5 rounded-full inline-block mb-3 border border-gold/20">
+                Solent Coverage
               </span>
-
-              <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-extrabold text-white mb-6">
-                How Our Fees Work
+              <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-extrabold text-navy tracking-tight">
+                Areas We Serve Around Southampton
               </h2>
-
-              <p className="text-slate-300 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto mb-8">
-                Every quote is fixed and agreed before any work begins, whether you're based in
-                Southampton, Bristol or elsewhere in the UK. There's no hourly billing, and nothing
-                changes because a query needed a longer conversation than expected.
+              <div className="w-20 h-1 bg-gold mx-auto mt-4 rounded-full" />
+              <p className="mt-4 text-slate-600 text-base sm:text-lg">
+                We provide remote accounting and tax support across Southampton
+                and nearby areas, including:
               </p>
+            </div>
 
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <Button
-                  asChild
-                  size="lg"
-                  className="bg-gold hover:bg-gold-light text-navy font-bold text-base px-10 py-6 rounded-full shadow-xl hover:shadow-gold/30 hover:scale-105 transition-all duration-300"
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
+              {areasServedList.map((area, idx) => (
+                <div
+                  key={idx}
+                  className="bg-slate-50 border border-slate-200 rounded-2xl p-6 shadow-sm hover:border-gold/60 hover:-translate-y-1 transition-all"
                 >
-                  <Link to="/pricing">
-                    See Our Pricing
-                    <ArrowRight className="ml-2 h-5 w-5" />
-                  </Link>
-                </Button>
+                  <MapPin className="w-6 h-6 text-gold mb-3" />
+                  <h3 className="font-display font-bold text-navy text-lg mb-2">
+                    {area.title}
+                  </h3>
+                  <p className="text-slate-600 text-xs sm:text-sm leading-relaxed">
+                    {area.desc}
+                  </p>
+                </div>
+              ))}
+            </div>
 
-                <Button
-                  asChild
-                  variant="outline"
-                  size="lg"
-                  className="w-full sm:w-auto border-white/40 text-black hover:bg-navy hover:text-white font-semibold text-base px-8 py-6 rounded-full transition-all duration-300 cursor-pointer shadow-sm hover:border-gold/60"
-                >
-                  <Link to="/contact">Request Custom Quote</Link>
-                </Button>
-              </div>
+            <div className="text-center max-w-2xl mx-auto p-4 rounded-2xl bg-amber-50/80 border border-amber-200/60 text-xs sm:text-sm text-navy font-medium">
+              💡 <strong>Please note:</strong> This does not mean we have an
+              office in every area. It means we support clients in these
+              locations remotely, using cloud accounting and online meetings.
             </div>
           </div>
         </section>
@@ -1020,9 +829,12 @@ const AccountantsInSouthampton: React.FC = () => {
                 Clear Answers
               </span>
               <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-white">
-                Frequently Asked Questions From Southampton Clients
+                Frequently Asked Questions
               </h2>
               <div className="w-20 h-1 bg-gold mx-auto mt-4 rounded-full" />
+              <p className="mt-4 text-slate-300 text-sm sm:text-base">
+                Clear answers to common questions from Southampton clients
+              </p>
             </div>
 
             <div className="space-y-4">
@@ -1073,13 +885,14 @@ const AccountantsInSouthampton: React.FC = () => {
 
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center max-w-4xl">
             <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-extrabold text-white mb-6">
-              Let's Get This Sorted Properly
+              Speak to a Southampton Accountant
             </h2>
 
             <p className="text-slate-300 text-lg sm:text-xl max-w-2xl mx-auto leading-relaxed mb-10">
-              If you're looking for accountants in Southampton who give you a straight answer and
-              stick to it, get in touch. A first conversation is free and doesn't commit you to
-              anything further.
+              If you want clear advice, fixed fees and practical support with
+              your accounts and tax, book a free consultation. We will review
+              your situation, explain what support you need and set out the cost
+              before any work begins.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6">

@@ -22,385 +22,323 @@ import {
   UserCheck,
   TrendingUp,
   Phone,
-  Cpu,
-  Train,
-  Car,
-  Rocket,
-  Wrench,
-  Store,
+  Clock,
+  Shield,
+  HelpCircle,
 } from "lucide-react";
 import TrustBar from "@/components/home/TrustBar";
 
 interface ServiceItem {
   id: string;
-  category: "contractor" | "business" | "landlord" | "tax";
+  category: "business" | "contractor" | "landlord" | "tax";
   title: string;
+  tag: string;
   description: React.ReactNode;
   covers: string[];
   ctaText: string;
   ctaLink: string;
   icon: React.ElementType;
-  tag: string;
 }
 
 const servicesData: ServiceItem[] = [
   {
-    id: "contractor-accounting",
-    category: "contractor",
-    title: "Contractor Accounting",
-    tag: "Aerospace, Rail & Automotive",
-    description: (
-      <>
-        Engineering and technical contractors supplying Derby's aerospace, rail and
-        automotive sectors need their{" "}
-        <Link
-          to="/services/contractor-accountants"
-          className="text-gold font-semibold underline decoration-gold/60 underline-offset-4 hover:text-gold-light transition-colors"
-        >
-          contractor accounting
-        </Link>{" "}
-        handled properly,{" "}
-        <Link
-          to="/what-is-ir35-uk"
-          className="text-gold font-semibold underline decoration-gold/60 underline-offset-4 hover:text-gold-light transition-colors"
-        >
-          IR35 status
-        </Link>
-        , limited company structuring, dividend planning, bookkeeping, VAT, payroll
-        and year end filing, all covered under one fixed fee.
-      </>
-    ),
-    covers: [
-      "Rigorous IR35 status & contract reviews",
-      "Tax-efficient limited company structuring",
-      "Strategic salary vs dividend planning",
-      "Digital bookkeeping, VAT & RTI payroll",
-      "Statutory accounts & Corporation Tax filing",
-    ],
-    ctaText: "Explore Contractor Accounting",
-    ctaLink: "/services/contractor-accountants",
-    icon: Briefcase,
-  },
-  {
-    id: "small-business-accounting",
+    id: "sole-trader-accounting",
     category: "business",
-    title: "Small Business Accounting",
-    tag: "Sole Traders & Small Companies",
+    title: "Sole Trader Accountants in Derby",
+    tag: "Self-Employed & Freelance",
     description: (
       <>
-        For sole traders and small companies across Derby, our{" "}
-        <Link
-          to="/services/small-business-accountants"
-          className="text-gold font-semibold underline decoration-gold/60 underline-offset-4 hover:text-gold-light transition-colors"
-        >
-          small business accounting
-        </Link>{" "}
-        service keeps bookkeeping, VAT and payroll current and accurate, without
-        charging you for services sized for a much bigger business.
-      </>
-    ),
-    covers: [
-      "Day-to-day cloud bookkeeping (Xero & QuickBooks)",
-      "Making Tax Digital (MTD) VAT returns",
-      "Monthly management accounts & cash flow visibility",
-      "Year-end statutory accounts & CT600 filing",
-      "Direct accountant access without call-centre queues",
-    ],
-    ctaText: "Discover Small Business Support",
-    ctaLink: "/services/small-business-accountants",
-    icon: Building2,
-  },
-  {
-    id: "landlord-accounting",
-    category: "landlord",
-    title: "Landlord Accounting",
-    tag: "Single Lets & Portfolios",
-    description: (
-      <>
-        Derby's stable, well paid workforce keeps rental demand consistent across
-        the city. Our{" "}
-        <Link
-          to="/services/landlord-accountants"
-          className="text-gold font-semibold underline decoration-gold/60 underline-offset-4 hover:text-gold-light transition-colors"
-        >
-          landlord accounting
-        </Link>{" "}
-        service covers rental income reporting, allowable expenses and Capital
-        Gains Tax planning for a single property or a growing portfolio.
-      </>
-    ),
-    covers: [
-      "Rental income reporting & Self Assessment filing",
-      "Maximising allowable property repairs & running costs",
-      "Section 24 mortgage interest relief planning",
-      "Capital Gains Tax (CGT) advice prior to disposals",
-      "Property portfolio limited company structuring",
-    ],
-    ctaText: "View Landlord Services",
-    ctaLink: "/services/landlord-accountants",
-    icon: Home,
-  },
-  {
-    id: "payroll-support",
-    category: "business",
-    title: "Payroll and HR Support",
-    tag: "Accurate PAYE & Auto-Enrolment",
-    description: (
-      <>
-        Payroll mistakes are noticed immediately by the people they affect. Our{" "}
-        <Link
-          to="/services/payroll-and-hr-services"
-          className="text-gold font-semibold underline decoration-gold/60 underline-offset-4 hover:text-gold-light transition-colors"
-        >
-          payroll and HR support
-        </Link>{" "}
-        runs PAYE, pension auto enrolment and HMRC submissions accurately, every
-        cycle.
-      </>
-    ),
-    covers: [
-      "Accurate & timely PAYE calculations",
-      "Workplace pension auto-enrolment compliance",
-      "Real-Time Information (RTI) HMRC submissions",
-      "Digital payslips, P60s & P45 production",
-      "Director & employee payroll handled properly",
-    ],
-    ctaText: "See Payroll & HR Services",
-    ctaLink: "/services/payroll-and-hr-services",
-    icon: Users,
-  },
-  {
-    id: "tax-planning",
-    category: "tax",
-    title: "Tax Planning",
-    tag: "Proactive Year-Round Advice",
-    description: (
-      <>
-        Overpaying tax is usually the result of a decision made too late to matter,
-        not an actual mistake. Our{" "}
-        <Link
-          to="/services/tax-planning"
-          className="text-gold font-semibold underline decoration-gold/60 underline-offset-4 hover:text-gold-light transition-colors"
-        >
-          tax planning
-        </Link>{" "}
-        service works with you throughout the year, so opportunities aren't missed
-        at the last minute.
-      </>
-    ),
-    covers: [
-      "Proactive year-round tax reviews & forecasts",
-      "Director dividend timing & profit extraction",
-      "Corporation Tax relief & allowance optimisation",
-      "Capital allowance timing on machinery & equipment",
-      "Structuring advice before locking in commercial decisions",
-    ],
-    ctaText: "Explore Tax Planning",
-    ctaLink: "/services/tax-planning",
-    icon: Calculator,
-  },
-  {
-    id: "outsourced-accounting",
-    category: "business",
-    title: "Outsourced Accounting",
-    tag: "Fractional Finance Department",
-    description: (
-      <>
-        If bringing finance in house isn't the right move yet, our{" "}
-        <Link
-          to="/services/outsourced-accounting-services"
-          className="text-gold font-semibold underline decoration-gold/60 underline-offset-4 hover:text-gold-light transition-colors"
-        >
-          outsourced accounting
-        </Link>{" "}
-        service covers bookkeeping, reporting, payroll and cash flow monitoring,
-        without the overhead of a salaried position.
-      </>
-    ),
-    covers: [
-      "End-to-end bookkeeping & automated bank feeds",
-      "Monthly management accounts & KPI dashboards",
-      "Cash flow forecasting & working capital tracking",
-      "Seamless cloud setup (Xero / QuickBooks)",
-      "Strategic financial oversight without full-time overhead",
-    ],
-    ctaText: "Explore Outsourced Accounting",
-    ctaLink: "/services/outsourced-accounting-services",
-    icon: TrendingUp,
-  },
-  {
-    id: "vat-bookkeeping",
-    category: "business",
-    title: "VAT and Bookkeeping",
-    tag: "Tidy & MTD Compliant",
-    description: (
-      <>
-        Accurate, current records make VAT filing and any funding application
-        considerably easier. Our{" "}
-        <Link
-          to="/services/vat-and-bookkeeping-accounting-services"
-          className="text-gold font-semibold underline decoration-gold/60 underline-offset-4 hover:text-gold-light transition-colors"
-        >
-          VAT and bookkeeping
-        </Link>{" "}
-        service keeps this tidy year round.
-      </>
-    ),
-    covers: [
-      "Making Tax Digital (MTD) compliant VAT returns",
-      "Regular bank reconciliations & transaction categorization",
-      "Clean records for lenders, investors & grant bodies",
-      "VAT scheme reviews (Standard vs Flat Rate)",
-      "Elimination of year-end receipt scrambles",
-    ],
-    ctaText: "View VAT & Bookkeeping Services",
-    ctaLink: "/services/vat-and-bookkeeping-accounting-services",
-    icon: Receipt,
-  },
-  {
-    id: "company-secretarial",
-    category: "business",
-    title: "Company Secretarial Services",
-    tag: "Companies House Compliance",
-    description: (
-      <>
-        Companies House deadlines are easy to lose track of precisely because they
-        don't come around often. Our{" "}
-        <Link
-          to="/services/company-secretarial-services"
-          className="text-gold font-semibold underline decoration-gold/60 underline-offset-4 hover:text-gold-light transition-colors"
-        >
-          company secretarial
-        </Link>{" "}
-        service tracks filings, confirmation statements and any changes to directors
-        or shareholders.
-      </>
-    ),
-    covers: [
-      "Annual Confirmation Statement filings",
-      "Director, PSC & officer appointments / updates",
-      "Share allotments, transfers & reorganisations",
-      "Statutory registers maintenance & compliance",
-      "Registered office address support",
-    ],
-    ctaText: "Explore Company Secretarial",
-    ctaLink: "/services/company-secretarial-services",
-    icon: FileText,
-  },
-  {
-    id: "rd-tax-relief",
-    category: "tax",
-    title: "R&D Tax Credit Claims",
-    tag: "Engineering, Rail & Tech Innovation",
-    description: (
-      <>
-        Given how much of Derby's economy sits in advanced engineering, aerospace
-        and rail manufacturing, genuine research and development activity is more
-        common among smaller suppliers than most realise. Our{" "}
-        <Link
-          to="/services/rd-tax-credit-claim"
-          className="text-gold font-semibold underline decoration-gold/60 underline-offset-4 hover:text-gold-light transition-colors"
-        >
-          R&D tax credit
-        </Link>{" "}
-        service checks eligibility properly and prepares a claim that holds up.
-      </>
-    ),
-    covers: [
-      "Engineering, tooling & manufacturing R&D checks",
-      "Staff costs, subcontractor & consumable expenditure audits",
-      "HMRC-compliant technical narrative preparation",
-      "Corporation Tax reduction or payable cash tax credits",
-      "Full claim defense & audit-ready documentation",
-    ],
-    ctaText: "Find Out About R&D Claims",
-    ctaLink: "/services/rd-tax-credit-claim",
-    icon: Sparkles,
-  },
-  {
-    id: "personal-tax",
-    category: "tax",
-    title: "Personal Tax and Self Assessment",
-    tag: "Sole Traders, Dividends & Gains",
-    description: (
-      <>
-        Self employment income, rental profits and the occasional capital gain each
-        affect your tax position differently. Our{" "}
-        <Link
-          to="/services/personal-tax-and-self-assessment-service"
-          className="text-gold font-semibold underline decoration-gold/60 underline-offset-4 hover:text-gold-light transition-colors"
-        >
-          personal tax and self assessment
-        </Link>{" "}
-        service handles the filing and explains how it all connects.
+        If you are a self-employed tradesperson, consultant, retailer,
+        freelancer or small supplier, we can handle your Self Assessment tax
+        return, bookkeeping, expense records, VAT registration and ongoing tax
+        planning. Our sole trader support is suitable for businesses that want a
+        simple monthly cost rather than paying separately for each return, phone
+        call or piece of advice.
       </>
     ),
     covers: [
       "Self Assessment tax return preparation & filing",
-      "Sole trader profit & allowable expense calculations",
-      "Dividend, rental & capital gains tax computations",
-      "Payment on account scheduling & cash forecasting",
-      "Direct HMRC liaison & correspondence handling",
+      "Digital bookkeeping & expense categorisation",
+      "Allowable expense maximisation to reduce tax",
+      "Making Tax Digital (MTD) guidance & readiness",
+      "Unlimited routine support without extra charges",
     ],
-    ctaText: "View Personal Tax Services",
+    ctaText: "Personal Tax & Self Assessment Services",
     ctaLink: "/services/personal-tax-and-self-assessment-service",
     icon: UserCheck,
   },
+  {
+    id: "small-business-accounting",
+    category: "business",
+    title: "Small Business Accountants in Derby",
+    tag: "SMEs & Growing Teams",
+    description: (
+      <>
+        We support small companies across Derby with bookkeeping, VAT returns,
+        payroll, management accounts, year-end accounts, corporation tax and
+        Companies House compliance. This is useful for businesses supplying
+        larger manufacturers, operating in professional services, running a
+        local trade business or growing from a one-person operation into a small
+        team.
+      </>
+    ),
+    covers: [
+      "Accurate day-to-day cloud bookkeeping",
+      "Quarterly VAT return preparation & submission",
+      "Year-end statutory accounts & Corporation Tax",
+      "Companies House confirmation statements & compliance",
+      "Periodic management figures to track monthly profit",
+    ],
+    ctaText: "Small Business Accounting",
+    ctaLink: "/services/small-business-accountants",
+    icon: Building2,
+  },
+  {
+    id: "contractor-accounting",
+    category: "contractor",
+    title: "Contractor Accountants in Derby",
+    tag: "Aerospace, Rail & Automotive",
+    description: (
+      <>
+        Derby’s aerospace, rail and automotive sectors create demand for
+        engineering, technical, IT and project-based contractors. If you work
+        through a limited company, we can support you with IR35 reviews,
+        company formation, salary and dividend planning, VAT, bookkeeping,
+        payroll and annual accounts.
+      </>
+    ),
+    covers: [
+      "Comprehensive IR35 contract & working practices reviews",
+      "Limited company formation & PSC setup",
+      "Tax-efficient dividend and salary optimisation",
+      "Quarterly VAT returns & MTD digital records",
+      "Annual accounts and Corporation Tax filing",
+    ],
+    ctaText: "Contractor Accounting Services",
+    ctaLink: "/services/contractor-accountants",
+    icon: Briefcase,
+  },
+  {
+    id: "landlord-accounting",
+    category: "landlord",
+    title: "Landlord Accountants in Derby",
+    tag: "Single Lets, HMOs & Portfolios",
+    description: (
+      <>
+        Derby’s employment base and transport links support steady rental
+        demand across the city and surrounding areas. We help landlords with
+        rental income reporting, allowable expenses, property bookkeeping,
+        Capital Gains Tax planning and portfolio reporting. This applies whether
+        you let one property, manage an HMO or are building a buy-to-let
+        portfolio.
+      </>
+    ),
+    covers: [
+      "Rental property accounts & Self Assessment declarations",
+      "Maximising allowable repair, maintenance & running costs",
+      "Section 24 mortgage interest relief calculations",
+      "Capital Gains Tax (CGT) advice before property disposals",
+      "HMO and multi-unit portfolio bookkeeping",
+    ],
+    ctaText: "Landlord Accounting Services",
+    ctaLink: "/services/landlord-accountants",
+    icon: Home,
+  },
+  {
+    id: "vat-bookkeeping",
+    category: "business",
+    title: "VAT and Bookkeeping for Derby Businesses",
+    tag: "Making Tax Digital Compliant",
+    description: (
+      <>
+        Accurate bookkeeping makes VAT returns, cash-flow planning and year-end
+        accounts easier. We help Derby businesses maintain cloud-based records,
+        prepare VAT returns, reconcile transactions and meet Making Tax Digital
+        requirements.
+      </>
+    ),
+    covers: [
+      "Real-time cloud bookkeeping with automated bank feeds",
+      "Making Tax Digital (MTD) compliant digital VAT filing",
+      "VAT registration monitoring against rolling turnover",
+      "Guidance on Flat Rate, Standard and Margin VAT schemes",
+      "Clean financial ledgers that withstand HMRC checks",
+    ],
+    ctaText: "VAT & Bookkeeping Services",
+    ctaLink: "/services/vat-and-bookkeeping-accounting-services",
+    icon: Receipt,
+  },
+  {
+    id: "payroll-services",
+    category: "business",
+    title: "Payroll for Small Derby Employers",
+    tag: "PAYE & Auto-Enrolment",
+    description: (
+      <>
+        If you employ staff in Derby, payroll needs to be accurate every pay
+        cycle. We provide payroll support covering payslips, RTI submissions,
+        pension auto-enrolment, PAYE compliance and starter or leaver
+        processing.
+      </>
+    ),
+    covers: [
+      "Accurate weekly, fortnightly, or monthly pay runs",
+      "Itemised digital payslips, P60s, and P45 generation",
+      "Real-Time Information (RTI) submissions to HMRC",
+      "Workplace pension auto-enrolment & contribution reports",
+      "Hassle-free starter and leaver onboarding compliance",
+    ],
+    ctaText: "Payroll and HR Services",
+    ctaLink: "/services/payroll-and-hr-services",
+    icon: Users,
+  },
+  {
+    id: "rd-tax-relief",
+    category: "tax",
+    title: "R&D Tax Relief for Derby Suppliers",
+    tag: "Engineering & Technical Problem Solving",
+    description: (
+      <>
+        Derby’s engineering and manufacturing base means smaller suppliers,
+        subcontractors and technical businesses may carry out qualifying
+        research and development work—even when they are not the main
+        manufacturer. We assess eligibility carefully and prepare R&amp;D tax
+        relief claims using appropriate technical and financial evidence. This
+        is relevant for businesses involved in product development, process
+        improvement, engineering problem-solving, software development or
+        technical testing.
+      </>
+    ),
+    covers: [
+      "Honest eligibility assessment before spending time on a claim",
+      "Engineering, manufacturing & technical process review",
+      "Detailed technical narrative preparation aligned to HMRC guidelines",
+      "Apportionment of qualifying staff, subcontractor & material costs",
+      "Corporation Tax reduction or payable cash credit claim",
+    ],
+    ctaText: "R&D Tax Credit Services",
+    ctaLink: "/services/rd-tax-credit-claim",
+    icon: Sparkles,
+  },
+  {
+    id: "outsourced-accounting",
+    category: "business",
+    title: "Outsourced Finance for Growing Derby Companies",
+    tag: "Complete Finance Function",
+    description: (
+      <>
+        For businesses that need better financial control but are not ready to
+        hire a full-time accountant, our outsourced accounting service can cover
+        bookkeeping, management reporting, payroll coordination, cash-flow
+        monitoring and month-end reporting.
+      </>
+    ),
+    covers: [
+      "Full month-end bookkeeping & bank reconciliations",
+      "Periodic management accounts & performance KPIs",
+      "Cash-flow forecasting & working capital tracking",
+      "Payroll coordination & supplier payment runs",
+      "Senior finance expertise at a fraction of full-time cost",
+    ],
+    ctaText: "Outsourced Accounting Services",
+    ctaLink: "/services/outsourced-accounting-services",
+    icon: TrendingUp,
+  },
 ];
 
-const derbyClientProfiles = [
+const whoWeHelpList = [
+  "Sole traders and self-employed tradespeople.",
+  "Small suppliers and subcontractors in engineering, rail, automotive and construction.",
+  "Contractors working through limited companies.",
+  "Landlords with single lets, HMOs or property portfolios.",
+  "Retailers, hospitality businesses and local service providers.",
+  "Startups and growing limited companies needing structured accounting support.",
+];
+
+const areasServedList = [
   {
-    title: "Engineering, Aerospace & Rail Supply Chain",
-    badge: "Advanced Manufacturing & Subcontractors",
-    description:
-      "Sole traders and small suppliers connected to Derby's aerospace, rail and automotive manufacturing base make up a meaningful part of our client base, often people who'd been managing their own books for years and finally wanted it done properly.",
-    icon: Cpu,
-    highlight: "IR35 compliance, R&D tax relief, and accurate supply chain accounting.",
+    title: "Derby City Centre & Cathedral Quarter",
+    desc: "Supporting independent shops, professional practices, hospitality venues, and consultancies.",
   },
   {
-    title: "Tradespeople & Independent Retailers",
-    badge: "Local Services & City Centre Commerce",
-    description:
-      "We also work with tradespeople and independent retailers who wanted a fixed monthly cost they could actually plan around, without worrying about surprise bills or hidden fees.",
-    icon: Wrench,
-    highlight: "Predictable monthly cash flow and clear, fixed-fee bookkeeping.",
+    title: "Littleover, Mickleover & Sunnyhill",
+    desc: "Fixed-fee accounts for local trades, service firms, contractors, and buy-to-let landlords.",
   },
   {
-    title: "Derby Property Landlords",
-    badge: "Single Lets, HMOs & Growing Portfolios",
-    description:
-      "A steady group of landlords with property across the city who wanted their returns handled without paying for services built for a much larger portfolio.",
-    icon: Home,
-    highlight: "Allowable expenses, Section 24 advice, and prompt Self Assessment filing.",
+    title: "Alvaston, Boulton & Shelton Lock",
+    desc: "Sole trader, SME, and payroll support across residential and light commercial hubs.",
+  },
+  {
+    title: "Chaddesden, Spondon & Oakwood",
+    desc: "Cloud bookkeeping, Self Assessment, and limited company accounting for local businesses.",
+  },
+  {
+    title: "Allestree, Darley Abbey & Quarndon",
+    desc: "Tax planning, director dividend strategies, and property accounts for local owners.",
+  },
+  {
+    title: "Belper, Ripley & Amber Valley",
+    desc: "Supporting manufacturing subcontractors, independent businesses, and sole traders.",
+  },
+  {
+    title: "Ilkeston, Long Eaton & Erewash",
+    desc: "Comprehensive remote accounting for transport, logistics, engineering, and trade firms.",
+  },
+  {
+    title: "Burton upon Trent & South Derbyshire",
+    desc: "VAT, bookkeeping, payroll, and corporate compliance for cross-border businesses.",
+  },
+];
+
+const remoteProcessSteps = [
+  {
+    step: "01",
+    title: "Free Consultation",
+    desc: "We discuss your business structure, income, bookkeeping setup and accounting needs to understand what you require.",
+  },
+  {
+    step: "02",
+    title: "Onboarding",
+    desc: "We collect records, connect cloud accounting software and identify any urgent deadlines so everything is under control.",
+  },
+  {
+    step: "03",
+    title: "Ongoing Support",
+    desc: "We manage bookkeeping, VAT, payroll, accounts and tax filings as agreed, keeping your records current and compliant.",
+  },
+  {
+    step: "04",
+    title: "Advice When Needed",
+    desc: "You can contact us by email, phone or video call for practical guidance without worrying about an hourly clock.",
   },
 ];
 
 const faqs = [
   {
+    q: "Who are the most affordable accountants in Derby?",
+    a: "The most affordable accountant is not necessarily the one with the lowest headline price. Look for a fixed fee, a clear list of included services, accurate bookkeeping, timely filings and proactive tax advice. Henleaze Tax Consultancy offers fixed-fee accounting for Derby sole traders, contractors, landlords and small companies, with costs agreed before work begins.",
+  },
+  {
+    q: "How much does an accountant cost in Derby?",
+    a: "Accountant costs in Derby depend on the services required, business structure, transaction volume, payroll needs and whether VAT or multiple income sources are involved. A basic sole trader arrangement usually costs less than a limited company package that includes bookkeeping, VAT, payroll, year-end accounts and corporation tax.",
+  },
+  {
     q: "Do you have an office in Derby?",
-    a: "No, we work with Derby clients entirely remotely, the same way we do across the rest of the UK. Video calls, phone, email and cloud accounting cover everything an office visit would.",
+    a: "No. Henleaze Tax Consultancy is based in Bristol and supports Derby clients remotely. We use cloud accounting, secure document sharing, phone, email and video calls, so clients do not need to visit an office.",
   },
   {
-    q: "I'm a sole trader, not a limited company. Is your pricing actually suited to someone my size?",
-    a: "Yes. Our fixed fees are based on what your specific situation needs, so a sole trader isn't paying for services built around a much larger company.",
+    q: "Is a fixed-fee accountant better for a small business?",
+    a: "For many small businesses, yes. Fixed-fee accounting makes monthly costs predictable and avoids hourly charges for routine advice. The most important point is to confirm exactly what the fee includes before signing up.",
   },
   {
-    q: "Could a small supplier to Rolls-Royce, Alstom or Toyota's supply chain actually qualify for R&D relief?",
-    a: "It's worth checking. Genuine technical problem solving can qualify for R&D relief regardless of how small the business is or how far removed from the larger manufacturer.",
-  },
-  {
-    q: "Can I switch accountants partway through my tax year?",
-    a: "Yes, this happens often. We contact your outgoing accountant, request your records, and pick things up from wherever you currently stand.",
-  },
-  {
-    q: "Is Derby pricing any different from your other locations?",
-    a: "No. Every client gets the same fixed fee approach, based on what they actually need, agreed before any work begins.",
+    q: "Is your Derby pricing different from other locations?",
+    a: "No. Fees are based on the level of support required, not the client’s location. Derby clients receive the same fixed-fee approach as clients elsewhere in the UK.",
   },
 ];
 
 const AccountantsInDerby: React.FC = () => {
   const [activeTab, setActiveTab] = useState<
-    "all" | "contractor" | "business" | "landlord" | "tax"
+    "all" | "business" | "contractor" | "landlord" | "tax"
   >("all");
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
@@ -421,20 +359,17 @@ const AccountantsInDerby: React.FC = () => {
     description:
       "Fixed-fee, affordable accountants in Derby for sole traders and small companies. No hidden costs, clear advice. Book a free consultation today.",
     telephone: "+447949956279",
-    email: "info@henleazetaxconsultancy.com",
+    email: "info@henleazetaxconsultancy.co.uk",
     areaServed: { "@type": "City", name: "Derby" },
     serviceType: [
-      "Contractor Accounting",
-      "IR35 Review",
-      "Small Business Accounting",
       "Sole Trader Accounting",
+      "Small Business Accounting",
+      "Contractor Accounting",
       "Landlord Accounting",
-      "Tax Planning",
-      "Payroll Services",
-      "Outsourced Accounting",
       "VAT and Bookkeeping",
-      "Company Secretarial",
-      "R&D Tax Credit Claims",
+      "Payroll Services",
+      "R&D Tax Relief Claims",
+      "Outsourced Finance",
       "Personal Tax and Self Assessment",
     ],
     priceRange: "££",
@@ -457,14 +392,14 @@ const AccountantsInDerby: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Affordable Accountants in Derby | Sole Traders & SMEs</title>
+        <title>Affordable Accountants in Derby For SMEs &amp; Sole Traders</title>
         <meta
           name="description"
           content="Fixed-fee, affordable accountants in Derby for sole traders and small companies. No hidden costs, clear advice. Book a free consultation today."
         />
         <meta
           name="keywords"
-          content="affordable accountants in derby, accountants in derby, accountant derby, contractor accountants derby, small business accountant derby, sole trader accountant derby, tax planning derby, fixed fee accountants derby"
+          content="affordable accountants in derby, accountants in derby, accountant derby, sole trader accountants derby, small business accountants derby, fixed fee accountants derby, contractor accountants derby, landlord accountants derby"
         />
         <link
           rel="canonical"
@@ -472,7 +407,7 @@ const AccountantsInDerby: React.FC = () => {
         />
         <meta
           property="og:title"
-          content="Affordable Accountants in Derby | Sole Traders & SMEs"
+          content="Affordable Accountants in Derby For SMEs &amp; Sole Traders"
         />
         <meta
           property="og:description"
@@ -486,7 +421,7 @@ const AccountantsInDerby: React.FC = () => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:title"
-          content="Affordable Accountants in Derby | Sole Traders & SMEs"
+          content="Affordable Accountants in Derby For SMEs &amp; Sole Traders"
         />
         <meta
           name="twitter:description"
@@ -504,13 +439,28 @@ const AccountantsInDerby: React.FC = () => {
           </div>
 
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div className="max-w-4xl mx-auto text-center">
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/15 text-gold text-sm font-semibold mb-6 shadow-sm">
-                <MapPin className="w-4 h-4 text-gold" />
-                <span>Derby &amp; Derbyshire Coverage</span>
-                <span className="w-1.5 h-1.5 rounded-full bg-gold animate-ping" />
+            {/* Featured Image on Top */}
+            <div className="max-w-4xl mx-auto mb-10">
+              <div className="relative rounded-3xl overflow-hidden border border-white/20 shadow-2xl group">
+                <img
+                  src="/derby.png"
+                  alt="Affordable Accountants in Derby - Henleaze Tax Consultancy"
+                  className="w-full h-64 sm:h-80 md:h-96 object-cover object-center group-hover:scale-105 transition-transform duration-700"
+                  width={1200}
+                  height={600}
+                  loading="eager"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/30 to-transparent flex items-end p-6 sm:p-8">
+                  <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-navy/80 backdrop-blur-md border border-gold/40 text-gold text-xs sm:text-sm font-semibold shadow-md">
+                    <MapPin className="w-4 h-4 text-gold" />
+                    <span>Derby &amp; Derbyshire &bull; Fixed-Fee Remote Support</span>
+                    <span className="w-1.5 h-1.5 rounded-full bg-gold animate-ping" />
+                  </div>
+                </div>
               </div>
+            </div>
 
+            <div className="max-w-4xl mx-auto text-center">
               <h1 className="font-display text-3xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-white leading-tight mb-6">
                 Affordable Accountants in Derby for{" "}
                 <span className="text-gold block sm:inline">
@@ -518,10 +468,28 @@ const AccountantsInDerby: React.FC = () => {
                 </span>
               </h1>
 
-              <p className="text-lg sm:text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed mb-8">
-                Cost is usually the first thing people ask about when looking for an
-                accountant, and it's the wrong first question. The right one is whether
-                the fee you're paying actually reflects the value you're getting.
+              <p className="text-lg sm:text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed mb-6">
+                Henleaze Tax Consultancy provides affordable, fixed-fee
+                accounting and tax support for sole traders, contractors,
+                landlords and small companies across Derby. We are based in
+                Bristol and work with Derby clients remotely through cloud
+                accounting, secure document sharing, phone and video calls.
+              </p>
+
+              <p className="text-base sm:text-lg text-slate-300 max-w-3xl mx-auto leading-relaxed mb-6">
+                Affordable does not mean cutting corners. A low monthly fee is
+                only good value if your bookkeeping is accurate, allowable
+                expenses are claimed correctly, deadlines are met and you
+                understand the tax position before it becomes a problem. Our
+                fees are agreed before work begins, so you know what support you
+                are paying for each month.
+              </p>
+
+              <p className="text-sm sm:text-base text-slate-400 max-w-3xl mx-auto leading-relaxed mb-10">
+                We support businesses and individuals across Derby, Littleover,
+                Mickleover, Alvaston, Chaddesden, Spondon, Oakwood, Allestree,
+                Darley Abbey and nearby areas including Belper, Ilkeston and
+                Burton upon Trent.
               </p>
 
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 mb-12">
@@ -552,11 +520,14 @@ const AccountantsInDerby: React.FC = () => {
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-3xl mx-auto pt-6 border-t border-white/10 text-xs sm:text-sm text-slate-300">
                 {[
                   "Fixed Agreed Fees",
+                  "No Hidden Costs",
                   "Sole Trader & SME Focus",
-                  "Supply Chain & R&D Support",
-                  "100% Cloud & Remote-Ready",
+                  "100% Remote-Ready",
                 ].map((t) => (
-                  <div key={t} className="flex items-center justify-center gap-2">
+                  <div
+                    key={t}
+                    className="flex items-center justify-center gap-2"
+                  >
                     <CheckCircle2 className="w-4 h-4 text-gold shrink-0" />
                     <span>{t}</span>
                   </div>
@@ -569,7 +540,7 @@ const AccountantsInDerby: React.FC = () => {
         {/* ── TRUST BAR ─────────────────────────────────────────────── */}
         <TrustBar />
 
-        {/* ── INTRO / PHILOSOPHY ────────────────────────────────────── */}
+        {/* ── WHY DERBY BUSINESSES CHOOSE FIXED-FEE ────────────────── */}
         <section className="py-20 bg-white relative">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
             <div className="bg-slate-50 border border-slate-200/80 rounded-3xl p-8 sm:p-12 md:p-14 shadow-xl relative overflow-hidden">
@@ -577,126 +548,68 @@ const AccountantsInDerby: React.FC = () => {
 
               <div className="max-w-3xl">
                 <span className="text-xs font-extrabold uppercase tracking-widest text-gold bg-gold/10 px-3.5 py-1.5 rounded-full inline-block mb-4 border border-gold/20">
-                  Fair Pricing &amp; True Value
+                  Predictable &amp; Practical
                 </span>
 
                 <h2 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-navy mb-6 leading-snug">
-                  Affordable Accountants in Derby for Sole Traders and Small Companies
+                  Why Derby Businesses Choose Fixed-fee Accounting
                 </h2>
 
                 <div className="space-y-5 text-slate-700 text-base sm:text-lg leading-relaxed">
                   <p>
-                    Cost is usually the first thing people ask about when looking for an
-                    accountant, and it's the wrong first question. The right one is
-                    whether the fee you're paying actually reflects the value you're
-                    getting, since a cheap accountant who misses deductions or files late
-                    can end up costing far more than a properly priced one who gets
-                    things right.
+                    <Link
+                      to="/accounting-firms-in-derby"
+                      className="text-gold font-semibold underline decoration-gold/60 underline-offset-4 hover:text-gold-light transition-colors"
+                    >
+                      Derby
+                    </Link>{" "}
+                    has a strong base of engineering, advanced manufacturing,
+                    rail, automotive, construction, professional services and
+                    small supply-chain businesses. Many sole traders and SMEs in
+                    the city need dependable accounting without paying for a
+                    large in-house finance team.
                   </p>
                   <p>
-                    Henleaze Tax Consultancy works with sole traders, small companies,
-                    landlords and contractors across Derby. We're based in Bristol, and
-                    that's rarely mattered to anyone we've worked with here, since
-                    everything runs through cloud accounting, phone calls and email.
-                    Every quote is fixed and agreed before we start, so you always know
-                    exactly what you're paying for.
+                    Our fixed-fee approach is designed for businesses that want
+                    predictable costs and practical advice:
                   </p>
                 </div>
 
-                <div className="mt-8 pt-8 border-t border-slate-200 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-                  <div className="flex items-center gap-3 text-slate-700 font-medium">
-                    <div className="w-10 h-10 rounded-full bg-gold/20 flex items-center justify-center text-navy font-bold">
-                      ✓
+                <div className="grid grid-cols-1 gap-3.5 mt-6 mb-8">
+                  {[
+                    "No hourly billing or unexpected charges for routine questions.",
+                    "A clear monthly cost based on the services your business actually needs.",
+                    "Bookkeeping, VAT, payroll and year-end support handled in one place.",
+                    "Support for sole traders, limited companies, contractors and landlords.",
+                    "Remote accounting support, so there is no need to travel to Bristol.",
+                  ].map((point, index) => (
+                    <div
+                      key={index}
+                      className="flex items-start gap-3 bg-white border border-slate-200/80 rounded-2xl p-4 shadow-sm"
+                    >
+                      <div className="w-6 h-6 rounded-full bg-gold/20 flex items-center justify-center text-navy font-bold shrink-0 mt-0.5">
+                        ✓
+                      </div>
+                      <span className="text-slate-800 text-sm sm:text-base font-medium">
+                        {point}
+                      </span>
                     </div>
-                    <span>
-                      Direct contact with your dedicated accountant — no call-centre runarounds
-                    </span>
-                  </div>
+                  ))}
+                </div>
+
+                <div className="pt-6 border-t border-slate-200 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                  <span className="text-slate-600 text-sm">
+                    Ready to discuss your fixed-fee plan?
+                  </span>
                   <Link
                     to="/contact"
                     className="inline-flex items-center text-navy font-bold text-sm hover:text-gold transition-colors gap-1 group"
                   >
-                    Speak with an accountant
+                    Book a free consultation
                     <ChevronRight className="w-4 h-4 text-gold group-hover:translate-x-1 transition-transform" />
                   </Link>
                 </div>
               </div>
-            </div>
-          </div>
-        </section>
-
-        {/* ── DERBY ECONOMY CONTEXT ─────────────────────────────────── */}
-        <section className="py-20 bg-slate-900 text-white relative overflow-hidden">
-          <div className="absolute inset-0 opacity-15 pointer-events-none">
-            <div className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-gradient-to-tl from-gold/30 to-blue-600/20 rounded-full blur-3xl" />
-          </div>
-
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 max-w-5xl">
-            <div className="text-center max-w-3xl mx-auto mb-14">
-              <span className="text-xs font-extrabold uppercase tracking-widest text-gold bg-gold/15 px-3.5 py-1.5 rounded-full inline-block mb-3 border border-gold/30">
-                Local Economic Context
-              </span>
-              <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight">
-                Derby's Engineering Base Shapes the Kind of Support We Provide
-              </h2>
-              <div className="w-20 h-1 bg-gold mx-auto mt-4 rounded-full" />
-            </div>
-
-            <div className="space-y-6 text-slate-300 text-base sm:text-lg leading-relaxed max-w-4xl mx-auto">
-              <p>
-                Rolls-Royce's civil aerospace headquarters, Alstom's Litchurch Lane rail
-                works, and Toyota's plant at Burnaston between them anchor a large share of
-                Derby's economy, and that concentration of advanced manufacturing supports a
-                wide supply chain of smaller businesses and sole traders working alongside
-                them. Add a growing digital and startup scene backed by schemes like Connect
-                Derby, and city centre regeneration through the Becketwell and Castleward
-                projects, and Derby's business base is broader and more active than its
-                engineering reputation alone suggests.
-              </p>
-              <p>
-                For sole traders and small companies working within or alongside that
-                ecosystem, we focus on what actually matters day to day: bookkeeping that's
-                kept accurate rather than reconstructed at year end, expense claims that
-                aren't missed, and fees that stay fixed as your business grows rather than
-                climbing with it.
-              </p>
-            </div>
-
-            {/* Economy Pillars */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-14">
-              {[
-                {
-                  Icon: Cpu,
-                  title: "Aerospace & Engineering",
-                  body: "Rolls-Royce civil aerospace headquarters and its expansive tier-1 and tier-2 precision engineering supply network.",
-                },
-                {
-                  Icon: Train,
-                  title: "Rail & Transport",
-                  body: "Alstom's historic Litchurch Lane rolling stock works anchoring the UK's railway manufacturing hub.",
-                },
-                {
-                  Icon: Car,
-                  title: "Automotive Manufacturing",
-                  body: "Toyota's flagship vehicle manufacturing facility at Burnaston driving local specialist automotive engineering.",
-                },
-                {
-                  Icon: Rocket,
-                  title: "Digital & Regeneration",
-                  body: "Connect Derby startup hubs, Becketwell & Castleward urban regeneration broadening the commercial base.",
-                },
-              ].map(({ Icon, title, body }) => (
-                <div
-                  key={title}
-                  className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-gold/50 transition-all"
-                >
-                  <Icon className="w-8 h-8 text-gold mb-3" />
-                  <h3 className="font-display font-bold text-white text-lg mb-2">
-                    {title}
-                  </h3>
-                  <p className="text-slate-400 text-sm leading-relaxed">{body}</p>
-                </div>
-              ))}
             </div>
           </div>
         </section>
@@ -706,21 +619,20 @@ const AccountantsInDerby: React.FC = () => {
           id="services"
           className="py-24 bg-gradient-to-b from-blue-950 via-slate-900 to-navy text-white relative overflow-hidden"
         >
-          {/* Glow Effects */}
           <div className="absolute top-10 left-10 w-96 h-96 bg-blue-600/20 rounded-full blur-3xl pointer-events-none" />
           <div className="absolute bottom-10 right-10 w-96 h-96 bg-gold/15 rounded-full blur-3xl pointer-events-none" />
 
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="max-w-3xl mx-auto text-center mb-12">
               <span className="text-xs font-extrabold uppercase tracking-widest text-blue-300 bg-blue-500/20 border border-blue-400/30 px-4 py-1.5 rounded-full inline-block mb-3 shadow-sm">
-                Tailored Services
+                Tailored Solutions
               </span>
               <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white">
-                How We Support Sole Traders and Small Companies in Derby
+                Accounting Support for Derby’s SME Economy
               </h2>
               <p className="text-blue-100/90 text-base sm:text-lg mt-4 max-w-2xl mx-auto">
-                Comprehensive, fixed-fee accounting, bookkeeping and tax planning built for
-                sole traders, contractors, landlords and small businesses across Derby.
+                Comprehensive, fixed-fee accounting and practical tax advice
+                tailored for sole traders, SMEs, contractors and landlords.
               </p>
               <div className="w-24 h-1.5 bg-gold mx-auto mt-5 rounded-full shadow-lg shadow-gold/30" />
             </div>
@@ -732,7 +644,7 @@ const AccountantsInDerby: React.FC = () => {
                 { key: "business", label: "Sole Traders & SMEs" },
                 { key: "contractor", label: "Contractor Accounting" },
                 { key: "landlord", label: "Landlord Accounting" },
-                { key: "tax", label: "Tax & Advisory" },
+                { key: "tax", label: "R&D & Tax Planning" },
               ].map((tab) => (
                 <button
                   key={tab.key}
@@ -811,85 +723,19 @@ const AccountantsInDerby: React.FC = () => {
               })}
             </div>
 
-            {/* View All Services Link Button */}
-            <div className="mt-14 text-center">
+            {/* See All Services Banner */}
+            <div className="mt-16 text-center max-w-3xl mx-auto bg-white/5 border border-white/10 rounded-2xl p-6 backdrop-blur-md">
+              <p className="text-slate-200 text-sm sm:text-base mb-4">
+                Looking for our complete range of tax planning, secretarial, and
+                business advisory solutions?
+              </p>
               <Button
                 asChild
                 size="lg"
-                className="bg-gold hover:bg-gold-light text-navy font-bold text-base px-10 py-6 rounded-full shadow-xl hover:shadow-gold/30 hover:scale-105 transition-all duration-300"
+                className="bg-gold hover:bg-gold-light text-navy font-bold px-8 py-5 rounded-full shadow-lg hover:scale-105 transition-all"
               >
                 <Link to="/services">
-                  View All Services
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
-              </Button>
-            </div>
-          </div>
-        </section>
-
-        {/* ── CLIENT PROFILES ───────────────────────────────────────── */}
-        <section className="py-20 bg-white relative">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
-            <div className="text-center max-w-3xl mx-auto mb-14">
-              <span className="text-xs font-extrabold uppercase tracking-widest text-gold bg-gold/10 px-3.5 py-1.5 rounded-full inline-block mb-3 border border-gold/20">
-                Client Profiles
-              </span>
-              <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-extrabold text-navy tracking-tight">
-                The Kind of Businesses We Tend to Work With Here
-              </h2>
-              <div className="w-20 h-1 bg-gold mx-auto mt-4 rounded-full" />
-              <p className="mt-4 text-slate-600 text-base sm:text-lg">
-                We work across Derby's vibrant economy, from advanced engineering suppliers and
-                sole traders to independent retail and residential landlords.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-              {derbyClientProfiles.map((profile, index) => {
-                const ProfileIcon = profile.icon;
-                return (
-                  <div
-                    key={index}
-                    className="bg-white rounded-3xl p-8 border border-slate-200 shadow-lg flex flex-col justify-between hover:border-gold/50 transition-all duration-300 group"
-                  >
-                    <div>
-                      <div className="w-12 h-12 rounded-xl bg-gold/15 flex items-center justify-center text-navy mb-5 group-hover:bg-gold group-hover:scale-105 transition-all">
-                        <ProfileIcon className="w-6 h-6" />
-                      </div>
-                      <span className="text-xs font-bold text-gold uppercase tracking-wider block mb-2">
-                        {profile.badge}
-                      </span>
-                      <h3 className="font-display text-xl font-bold text-navy mb-4">
-                        {profile.title}
-                      </h3>
-                      <p className="text-slate-600 text-sm sm:text-base leading-relaxed mb-6">
-                        {profile.description}
-                      </p>
-                    </div>
-                    <div className="p-3.5 rounded-xl bg-amber-50/80 border border-amber-200/60 text-xs text-navy font-semibold">
-                      💡 {profile.highlight}
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-
-            <div className="bg-navy text-white rounded-3xl p-8 sm:p-10 shadow-xl flex flex-col sm:flex-row items-center justify-between gap-6 max-w-4xl mx-auto">
-              <div className="space-y-2 text-center sm:text-left">
-                <h4 className="font-display text-xl sm:text-2xl font-bold text-white">
-                  Sound like where you are?
-                </h4>
-                <p className="text-slate-300 text-sm sm:text-base">
-                  Get in touch if that sounds like where you are and let's get your numbers sorted.
-                </p>
-              </div>
-              <Button
-                asChild
-                size="lg"
-                className="bg-gold hover:bg-gold-light text-navy font-bold px-8 py-6 rounded-full shrink-0 shadow-lg hover:scale-105 transition-all"
-              >
-                <Link to="/contact">
-                  Get in Touch
+                  See All Services
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
@@ -897,7 +743,66 @@ const AccountantsInDerby: React.FC = () => {
           </div>
         </section>
 
-        {/* ── FIXED FEES, NO GUESSING ──────────────────────────────── */}
+        {/* ── WHO WE HELP IN DERBY ─────────────────────────────────── */}
+        <section className="py-20 bg-white relative">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
+            <div className="text-center max-w-3xl mx-auto mb-14">
+              <span className="text-xs font-extrabold uppercase tracking-widest text-gold bg-gold/10 px-3.5 py-1.5 rounded-full inline-block mb-3 border border-gold/20">
+                Derby Client Base
+              </span>
+              <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-extrabold text-navy tracking-tight">
+                Who We Help in Derby
+              </h2>
+              <div className="w-20 h-1 bg-gold mx-auto mt-4 rounded-full" />
+              <p className="mt-4 text-slate-600 text-base sm:text-lg">
+                We work with a range of Derby clients across multiple sectors
+                and setups.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10">
+              {whoWeHelpList.map((client, idx) => (
+                <div
+                  key={idx}
+                  className="bg-slate-50 border border-slate-200 rounded-2xl p-5 flex items-start gap-3.5 shadow-sm hover:border-gold/60 transition-all"
+                >
+                  <div className="w-8 h-8 rounded-xl bg-gold/20 text-navy font-bold flex items-center justify-center shrink-0">
+                    ✓
+                  </div>
+                  <span className="text-slate-800 text-sm sm:text-base font-medium">
+                    {client}
+                  </span>
+                </div>
+              ))}
+            </div>
+
+            <div className="bg-gradient-to-r from-navy to-slate-900 text-white rounded-3xl p-8 sm:p-10 shadow-xl relative overflow-hidden">
+              <div className="max-w-2xl">
+                <h3 className="font-display text-xl sm:text-2xl font-bold text-white mb-3">
+                  Tired of Reconstructing Records at Year End?
+                </h3>
+                <p className="text-slate-300 text-sm sm:text-base leading-relaxed mb-6">
+                  If you have been managing your own books but want a clearer,
+                  more reliable process, a fixed-fee accountant can often be
+                  more cost-effective than trying to reconstruct records at year
+                  end.
+                </p>
+                <Button
+                  asChild
+                  size="lg"
+                  className="bg-gold hover:bg-gold-light text-navy font-bold px-8 py-5 rounded-full shadow-lg hover:scale-105 transition-all"
+                >
+                  <Link to="/contact">
+                    Speak to an Accountant
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Link>
+                </Button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ── HOW OUR DERBY ACCOUNTING FEES WORK ───────────────────── */}
         <section className="py-20 bg-slate-50 relative">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
             <div className="bg-gradient-to-br from-slate-900 via-navy to-slate-900 text-white rounded-3xl p-8 sm:p-14 shadow-2xl border border-white/10 relative overflow-hidden text-center">
@@ -908,14 +813,20 @@ const AccountantsInDerby: React.FC = () => {
               </span>
 
               <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-extrabold text-white mb-6">
-                Fixed Fees, No Guessing
+                How Our Derby Accounting Fees Work
               </h2>
 
-              <p className="text-slate-300 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto mb-8">
-                Every quote is fixed and agreed before any work starts, whether you're in
-                Derby, Bristol or anywhere else in the UK. Nothing changes because a question
-                took a longer conversation than expected, and there's no hourly clock running
-                in the background.
+              <p className="text-slate-300 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto mb-4">
+                Our pricing is fixed and agreed before work starts. You will know
+                what is included, what is excluded and when the fee applies.
+              </p>
+
+              <p className="text-slate-300 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto mb-8">
+                We do not charge by the hour for routine questions, and we do
+                not increase a fee simply because a conversation took longer
+                than expected. Where your requirements change—for example, you
+                take on employees, register for VAT or add a new company—we will
+                explain the revised scope before any change is made.
               </p>
 
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -943,6 +854,105 @@ const AccountantsInDerby: React.FC = () => {
           </div>
         </section>
 
+        {/* ── AREAS WE SERVE AROUND DERBY ──────────────────────────── */}
+        <section className="py-20 bg-white relative">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
+            <div className="text-center max-w-3xl mx-auto mb-14">
+              <span className="text-xs font-extrabold uppercase tracking-widest text-gold bg-gold/10 px-3.5 py-1.5 rounded-full inline-block mb-3 border border-gold/20">
+                Local Coverage
+              </span>
+              <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-extrabold text-navy tracking-tight">
+                Areas We Serve Around Derby
+              </h2>
+              <div className="w-20 h-1 bg-gold mx-auto mt-4 rounded-full" />
+              <p className="mt-4 text-slate-600 text-base sm:text-lg">
+                We provide remote accounting and tax support across Derby and
+                the surrounding area, including:
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
+              {areasServedList.map((area, idx) => (
+                <div
+                  key={idx}
+                  className="bg-slate-50 border border-slate-200 rounded-2xl p-6 shadow-sm hover:border-gold/60 hover:-translate-y-1 transition-all"
+                >
+                  <MapPin className="w-6 h-6 text-gold mb-3" />
+                  <h3 className="font-display font-bold text-navy text-lg mb-2">
+                    {area.title}
+                  </h3>
+                  <p className="text-slate-600 text-xs sm:text-sm leading-relaxed">
+                    {area.desc}
+                  </p>
+                </div>
+              ))}
+            </div>
+
+            <div className="text-center max-w-2xl mx-auto p-4 rounded-2xl bg-amber-50/80 border border-amber-200/60 text-xs sm:text-sm text-navy font-medium">
+              💡 <strong>Please note:</strong> This means we support clients in
+              these areas remotely; it does not mean we have a physical office in
+              each location.
+            </div>
+          </div>
+        </section>
+
+        {/* ── HOW REMOTE ACCOUNTING WORKS ──────────────────────────── */}
+        <section className="py-20 bg-slate-900 text-white relative overflow-hidden">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl relative z-10">
+            <div className="text-center max-w-3xl mx-auto mb-14">
+              <span className="text-xs font-extrabold uppercase tracking-widest text-gold bg-gold/15 px-3.5 py-1.5 rounded-full inline-block mb-3 border border-gold/30">
+                Simple Online Workflow
+              </span>
+              <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight">
+                How Remote Accounting Works
+              </h2>
+              <div className="w-20 h-1 bg-gold mx-auto mt-4 rounded-full" />
+              <p className="mt-4 text-slate-300 text-base sm:text-lg">
+                Working with an online accountant does not need to be
+                complicated. Most Derby clients follow a simple process:
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+              {remoteProcessSteps.map((step, idx) => (
+                <div
+                  key={idx}
+                  className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-gold/50 transition-all flex flex-col justify-between"
+                >
+                  <div>
+                    <span className="font-display text-3xl font-extrabold text-gold block mb-3">
+                      {step.step}
+                    </span>
+                    <h3 className="font-display font-bold text-white text-lg mb-2">
+                      {step.title}
+                    </h3>
+                    <p className="text-slate-300 text-xs sm:text-sm leading-relaxed">
+                      {step.desc}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div className="text-center">
+              <p className="text-slate-300 text-sm sm:text-base max-w-2xl mx-auto mb-6">
+                This model suits Derby business owners who want responsive
+                support without arranging office meetings.
+              </p>
+              <Button
+                asChild
+                size="lg"
+                className="bg-gold hover:bg-gold-light text-navy font-bold px-8 py-5 rounded-full shadow-lg hover:scale-105 transition-all"
+              >
+                <Link to="/contact">
+                  Start with a Free Consultation
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </Button>
+            </div>
+          </div>
+        </section>
+
         {/* ── FAQ ───────────────────────────────────────────────────── */}
         <section className="py-24 bg-gradient-to-b from-navy via-slate-900 to-navy text-white relative overflow-hidden">
           <div className="absolute top-10 right-10 w-80 h-80 bg-blue-600/15 rounded-full blur-3xl pointer-events-none" />
@@ -952,7 +962,7 @@ const AccountantsInDerby: React.FC = () => {
                 Clear Answers
               </span>
               <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-white">
-                Frequently Asked Questions From Derby Clients
+                Derby Accountant FAQs
               </h2>
               <div className="w-20 h-1 bg-gold mx-auto mt-4 rounded-full" />
             </div>
@@ -1005,13 +1015,14 @@ const AccountantsInDerby: React.FC = () => {
 
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center max-w-4xl">
             <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-extrabold text-white mb-6">
-              Ready to Get Your Numbers Sorted?
+              Speak to an Affordable Derby Accountant
             </h2>
 
             <p className="text-slate-300 text-lg sm:text-xl max-w-2xl mx-auto leading-relaxed mb-10">
-              If you're a sole trader or small company in Derby looking for accounting that's
-              genuinely affordable and properly explained, get in touch. A first conversation
-              is free and doesn't commit you to anything.
+              If you are looking for affordable accountants in Derby who offer
+              clear fixed fees, practical advice and reliable support, book a
+              free consultation. We will review your situation, explain the
+              support you need and provide a quote before any work begins.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
