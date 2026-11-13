@@ -610,6 +610,22 @@ const allBlogs = [
     readTime: "9 min read",
     featured: false,
     tags: ["Accounting Firms", "Derby", "Accountants Derby", "Chartered Accountants", "Small Business", "Contractor Accounting"]
+  },
+  {
+    id: "accounting-firms-in-manchester-8-firms-for-businesses-and-contractors",
+    slug: "/accounting-firms-in-manchester-8-firms-for-businesses-and-contractors",
+    title: "Accounting Firms in Manchester: 8 Firms for Businesses and Contractors",
+    subtitle: "Accounting Firms in Manchester: Offices and Best Fit",
+    excerpt:
+      "Compare eight accounting firms in Manchester, with office addresses, services and who each suits best, for businesses, contractors and individuals.",
+    category: "Accounting Firms",
+    categoryColor: "amber",
+    image: "/manchester-accounting-firms.png",
+    author: "Henleaze Team",
+    date: "November 2026",
+    readTime: "9 min read",
+    featured: false,
+    tags: ["Accounting Firms", "Manchester", "Accountants Manchester", "Chartered Accountants", "Small Business", "Contractor Accounting"]
   }
 ];
 

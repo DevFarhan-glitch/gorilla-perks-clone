@@ -21,14 +21,10 @@ import {
   Sparkles,
   UserCheck,
   TrendingUp,
-  Laptop,
   Phone,
-  Check,
-  Rocket,
-  Truck,
   Factory,
-  ShieldCheck,
-  Coins,
+  Truck,
+  Rocket,
   Shield,
   Layers,
   Clock,
@@ -38,391 +34,348 @@ import TrustBar from "@/components/home/TrustBar";
 
 interface ServiceItem {
   id: string;
-  category: "contractor" | "business" | "landlord" | "tax";
+  category: "manufacturing" | "contractor" | "landlord" | "business" | "tax";
   title: string;
+  tag: string;
   description: React.ReactNode;
   covers: string[];
   ctaText: string;
   ctaLink: string;
   icon: React.ElementType;
-  tag: string;
 }
 
-const servicesData: ServiceItem[] = [
+const sectorMatrix = [
   {
-    id: "contractor-accounting",
-    category: "contractor",
-    title: "Contractor Accounting",
-    tag: "Logistics, Engineering & Space Tech",
-    description: (
+    type: "Manufacturer or food producer",
+    priority: "Stock, margins, payroll and R&D eligibility",
+    howWeHelp:
+      "Bookkeeping, management reporting, VAT, payroll and R&D tax relief review",
+    icon: Factory,
+  },
+  {
+    type: "Logistics or distribution business",
+    priority: "Cash flow, vehicle costs, subcontractors and VAT",
+    howWeHelp:
+      "Bookkeeping, VAT, management accounts and cash-flow support",
+    icon: Truck,
+  },
+  {
+    type: "Contractor or consultant",
+    priority: (
       <>
-        Leicester's logistics, engineering and manufacturing sectors support a
-        steady flow of contractor work and increasingly the space and technology
-        cluster around Pioneer Park does too. Our{" "}
-        <Link
-          to="/services/contractor-accountants"
-          className="text-gold font-semibold underline decoration-gold/60 underline-offset-4 hover:text-gold-light transition-colors"
-        >
-          contractor accounting
-        </Link>{" "}
-        service covers your{" "}
         <Link
           to="/what-is-ir35-uk"
           className="text-gold font-semibold underline decoration-gold/60 underline-offset-4 hover:text-gold-light transition-colors"
         >
           IR35
-        </Link>{" "}
-        position, limited company structure and dividend planning, so
-        contracting stays financially efficient rather than becoming a compliance
-        headache.
+        </Link>
+        , salary/dividend planning and compliance
+      </>
+    ),
+    howWeHelp:
+      "IR35 review, limited company accounts, payroll and tax planning",
+    icon: Briefcase,
+  },
+  {
+    type: "Landlord",
+    priority:
+      "Rental income, expenses, portfolio reporting and Capital Gains Tax",
+    howWeHelp: "Property bookkeeping, Self Assessment and CGT planning",
+    icon: Home,
+  },
+  {
+    type: "Startup or tech business",
+    priority: "Clean records, funding readiness and R&D support",
+    howWeHelp:
+      "Cloud accounting setup, management reporting and R&D tax relief",
+    icon: Rocket,
+  },
+];
+
+const servicesData: ServiceItem[] = [
+  {
+    id: "manufacturers-food-producers",
+    category: "manufacturing",
+    title: "Manufacturers and Food Producers",
+    tag: "Textiles, Food & Production",
+    description: (
+      <>
+        Leicester has long-standing strengths in textiles, manufacturing and
+        food production. Businesses in these sectors often need more than a
+        basic year-end filing service: they need visibility of margins, stock
+        movements, labour costs, supplier payments and project profitability.
       </>
     ),
     covers: [
-      "Rigorous IR35 status & working practice reviews",
-      "Limited company setup & PSC dividend planning",
-      "Strategic salary vs dividend extraction advice",
-      "Cloud bookkeeping integration & VAT management",
-      "Statutory annual accounts & Corporation Tax returns",
+      "Bookkeeping and reconciliations",
+      "VAT returns and Making Tax Digital support",
+      "Payroll and pension administration",
+      "Management accounts and margin reporting",
+      "Corporation Tax and year-end accounts",
+      "R&D tax relief eligibility reviews",
     ],
-    ctaText: "Explore Contractor Accounting",
+    ctaText: "Small Business Accounting Services",
+    ctaLink: "/services/small-business-accountants",
+    icon: Factory,
+  },
+  {
+    id: "contractors-leicester",
+    category: "contractor",
+    title: "Contractors in Leicester",
+    tag: "Logistics, Engineering & Tech",
+    description: (
+      <>
+        Leicester’s logistics, engineering, manufacturing and technology
+        sectors create demand for contractors, consultants and project
+        specialists. If you work through a limited company, we can support you
+        with IR35 reviews, company formation, salary and dividend planning,
+        VAT, payroll and annual accounts. IR35 status depends on the actual
+        working relationship, not just the contract wording. We review the
+        arrangements and provide practical guidance based on the relevant
+        factors.
+      </>
+    ),
+    covers: [
+      "IR35 status & working practice reviews",
+      "Limited company formation & PSC setup",
+      "Tax-efficient salary & dividend extraction planning",
+      "Quarterly VAT returns & digital records",
+      "Statutory annual accounts and Corporation Tax",
+    ],
+    ctaText: "Contractor Accounting Services",
     ctaLink: "/services/contractor-accountants",
     icon: Briefcase,
   },
   {
-    id: "small-business-accounting",
-    category: "business",
-    title: "Small Business Accounting",
-    tag: "Manufacturing, Retail & Food Production",
-    description: (
-      <>
-        Whether you're running a manufacturing business, a food producer or a
-        shop trading out of the city centre, our{" "}
-        <Link
-          to="/services/small-business-accountants"
-          className="text-gold font-semibold underline decoration-gold/60 underline-offset-4 hover:text-gold-light transition-colors"
-        >
-          small business accounting
-        </Link>{" "}
-        service keeps your bookkeeping, VAT and payroll accurate and current,
-        giving you a real picture of the business rather than a rough guess.
-      </>
-    ),
-    covers: [
-      "Real-time cloud bookkeeping & bank feeds",
-      "Making Tax Digital (MTD) VAT returns",
-      "Monthly management accounts & cash flow monitoring",
-      "Year-end statutory accounts & CT600 filing",
-      "Dedicated accountant advice throughout the year",
-    ],
-    ctaText: "Discover Small Business Support",
-    ctaLink: "/services/small-business-accountants",
-    icon: Building2,
-  },
-  {
-    id: "landlord-accounting",
+    id: "landlords-leicester",
     category: "landlord",
-    title: "Landlord Accounting",
-    tag: "LE Postcodes, Student Lets & HMOs",
+    title: "Landlords in Leicester",
+    tag: "Student HMOs & LE Portfolios",
     description: (
       <>
-        With two universities and strong demand across LE postcodes including
-        areas near Stoneygate and the wider city centre, Leicester's rental
-        market has stayed active and undersupplied for years. Our{" "}
-        <Link
-          to="/services/landlord-accountants"
-          className="text-gold font-semibold underline decoration-gold/60 underline-offset-4 hover:text-gold-light transition-colors"
-        >
-          landlord accounting
-        </Link>{" "}
-        service covers rental income reporting, allowable expenses and Capital
-        Gains Tax planning, whether you hold a single property or a growing
-        portfolio.
+        Leicester’s two universities and large student population support
+        rental demand across the city. Landlords may hold student HMOs,
+        professional lets, family homes or a growing portfolio across different
+        LE postcodes.
       </>
     ),
     covers: [
-      "Rental income reporting & Self Assessment filing",
-      "HMO & student let expense maximisation",
-      "Section 24 mortgage interest relief planning",
-      "Capital Gains Tax (CGT) advice prior to sales",
-      "Property portfolio limited company structuring",
+      "Rental income and expense records",
+      "Self Assessment tax returns",
+      "Property bookkeeping",
+      "Capital Gains Tax planning",
+      "Portfolio reporting",
+      "Accounting support for HMOs and limited-company property structures",
     ],
-    ctaText: "View Landlord Services",
+    ctaText: "Landlord Accounting Services",
     ctaLink: "/services/landlord-accountants",
     icon: Home,
   },
   {
-    id: "payroll-support",
-    category: "business",
-    title: "Payroll and HR Support",
-    tag: "PAYE, RTI & Pension Auto-Enrolment",
-    description: (
-      <>
-        An inaccurate payroll run tends to cause disproportionate stress for
-        something entirely avoidable. Our{" "}
-        <Link
-          to="/services/payroll-and-hr-services"
-          className="text-gold font-semibold underline decoration-gold/60 underline-offset-4 hover:text-gold-light transition-colors"
-        >
-          payroll and HR support
-        </Link>{" "}
-        keeps this accurate and on schedule, covering PAYE, pension auto
-        enrolment and HMRC submissions.
-      </>
-    ),
-    covers: [
-      "Accurate & timely monthly PAYE payroll runs",
-      "Workplace pension auto-enrolment compliance",
-      "Real-Time Information (RTI) submissions to HMRC",
-      "Digital employee payslips & P60/P45 generation",
-      "Director salary structuring & HR admin support",
-    ],
-    ctaText: "See Payroll & HR Services",
-    ctaLink: "/services/payroll-and-hr-services",
-    icon: Users,
-  },
-  {
-    id: "tax-planning",
+    id: "startups-research-businesses",
     category: "tax",
-    title: "Tax Planning",
-    tag: "Year-Round Proactive Optimisation",
+    title: "Startups and Research-Led Businesses",
+    tag: "Space Park & Innovation",
     description: (
       <>
-        Most overpaid tax comes down to a decision made too late in the year to
-        actually change anything. Our{" "}
-        <Link
-          to="/services/tax-planning"
-          className="text-gold font-semibold underline decoration-gold/60 underline-offset-4 hover:text-gold-light transition-colors"
-        >
-          tax planning
-        </Link>{" "}
-        service works with you across the year, not just in the run up to a
-        deadline.
+        Businesses connected to Space Park Leicester, research, software,
+        engineering and product development may have different accounting needs
+        from a traditional local business. They may need clean financial
+        records for funding discussions, clear project-cost tracking and
+        support with R&amp;D tax relief.
       </>
     ),
     covers: [
-      "Year-round corporation & personal tax planning",
-      "Dividend timing & tax-efficient profit extraction",
-      "Capital allowances & business asset investment reviews",
-      "Capital Gains Tax & restructuring advice",
-      "Proactive reviews before tax year-end deadlines",
+      "Cloud accounting setup",
+      "Bookkeeping and management reporting",
+      "VAT registration and returns",
+      "Payroll and contractor payments",
+      "R&D tax relief eligibility reviews",
+      "Year-end accounts and Corporation Tax",
     ],
-    ctaText: "Explore Tax Planning",
-    ctaLink: "/services/tax-planning",
-    icon: Calculator,
-  },
-  {
-    id: "outsourced-accounting",
-    category: "business",
-    title: "Outsourced Accounting",
-    tag: "Complete Fractional Finance Team",
-    description: (
-      <>
-        For growing Leicester businesses not yet ready to bring finance in
-        house, our{" "}
-        <Link
-          to="/services/outsourced-accounting-services"
-          className="text-gold font-semibold underline decoration-gold/60 underline-offset-4 hover:text-gold-light transition-colors"
-        >
-          outsourced accounting
-        </Link>{" "}
-        service manages bookkeeping, reporting, payroll and cash flow
-        monitoring, without the cost or commitment of a permanent hire.
-      </>
-    ),
-    covers: [
-      "End-to-end cloud bookkeeping & bank reconciliations",
-      "Monthly management KPI reporting & dashboards",
-      "Cash flow forecasting & creditor/debtor control",
-      "Integrated payroll & VAT return submissions",
-      "Virtual financial controller advisory support",
-    ],
-    ctaText: "Explore Outsourced Accounting",
-    ctaLink: "/services/outsourced-accounting-services",
-    icon: TrendingUp,
+    ctaText: "R&D Tax Credit Services",
+    ctaLink: "/services/rd-tax-credit-claim",
+    icon: Sparkles,
   },
   {
     id: "vat-bookkeeping",
     category: "business",
     title: "VAT and Bookkeeping",
-    tag: "MTD Compliant & Clean Records",
+    tag: "Cloud Ledgers & MTD",
     description: (
       <>
-        Clean, current records make VAT filing, funding applications and general
-        decision making considerably easier. Our{" "}
-        <Link
-          to="/services/vat-and-bookkeeping-accounting-services"
-          className="text-gold font-semibold underline decoration-gold/60 underline-offset-4 hover:text-gold-light transition-colors"
-        >
-          VAT and bookkeeping
-        </Link>{" "}
-        service keeps this side of things tidy throughout the year.
+        Accurate records make VAT returns, funding applications and year-end
+        accounts easier. We help Leicester businesses maintain cloud-based
+        bookkeeping, reconcile transactions, prepare VAT returns and meet
+        Making Tax Digital requirements.
       </>
     ),
     covers: [
       "Making Tax Digital (MTD) compliant VAT filing",
-      "Automated receipt & invoice management",
-      "Clean financial records for bank loans & tenders",
-      "Standard, Flat Rate & Partial Exemption schemes",
-      "Zero year-end panic or missing receipts",
+      "Rolling turnover threshold monitoring",
+      "Automated bank feed reconciliations",
+      "Standard, Flat Rate and Margin VAT guidance",
+      "Clean digital records ready for year end or audits",
     ],
-    ctaText: "View VAT & Bookkeeping Services",
+    ctaText: "VAT & Bookkeeping Services",
     ctaLink: "/services/vat-and-bookkeeping-accounting-services",
     icon: Receipt,
   },
   {
-    id: "company-secretarial",
+    id: "payroll-leicester",
     category: "business",
-    title: "Company Secretarial Services",
-    tag: "Companies House Filings & Governance",
+    title: "Payroll for Leicester Employers",
+    tag: "PAYE & Auto-Enrolment",
     description: (
       <>
-        Companies House filings are easy to lose track of precisely because they
-        don't come around often. Our{" "}
-        <Link
-          to="/services/company-secretarial-services"
-          className="text-gold font-semibold underline decoration-gold/60 underline-offset-4 hover:text-gold-light transition-colors"
-        >
-          company secretarial
-        </Link>{" "}
-        service tracks confirmation statements and any changes to directors or
-        shareholders.
+        If you employ staff in Leicester, payroll needs to be accurate every
+        pay cycle. We provide payroll support covering payslips, RTI submissions,
+        pension auto-enrolment, PAYE compliance and starter or leaver
+        processing.
       </>
     ),
     covers: [
-      "Annual Confirmation Statement submissions",
-      "Director appointments, resignations & PSC updates",
-      "Share allotments, transfers & dividend resolutions",
-      "Maintenance of statutory company books & registers",
-      "Registered office address services",
+      "Accurate weekly, fortnightly, or monthly PAYE pay runs",
+      "Itemised digital payslips, P60s, and P45 production",
+      "Real-Time Information (RTI) submissions to HMRC",
+      "Workplace pension auto-enrolment administration",
+      "Starter, leaver and statutory payment calculations",
     ],
-    ctaText: "Explore Company Secretarial",
-    ctaLink: "/services/company-secretarial-services",
-    icon: FileText,
+    ctaText: "Payroll and HR Services",
+    ctaLink: "/services/payroll-and-hr-services",
+    icon: Users,
   },
   {
-    id: "rd-tax-credit-claims",
+    id: "tax-planning-leicester",
     category: "tax",
-    title: "R&D Tax Credit Claims",
-    tag: "Manufacturing, Space Tech & Food Innovation",
+    title: "Tax Planning for Leicester Business Owners",
+    tag: "Proactive Pre-Year-End Advice",
     description: (
       <>
-        Between Leicester's manufacturing base, its growing space and Earth
-        observation sector and ongoing food production innovation, genuine
-        research and development activity is more common here than many business
-        owners assume. Our{" "}
-        <Link
-          to="/services/rd-tax-credit-claim"
-          className="text-gold font-semibold underline decoration-gold/60 underline-offset-4 hover:text-gold-light transition-colors"
-        >
-          R&D tax credit
-        </Link>{" "}
-        service checks eligibility properly and prepares a claim that holds up
-        under scrutiny.
+        Tax planning should happen before the tax year closes, not after the
+        deadline. We help Leicester business owners consider salary and dividend
+        planning, pension contributions, Corporation Tax, Capital Gains Tax,
+        business structure and cash-flow decisions while there is still time to
+        act.
       </>
     ),
     covers: [
-      "Manufacturing & food production process R&D assessments",
-      "Space science & software development project checks",
-      "Qualifying expenditure & staff cost calculations",
-      "Robust HMRC-compliant technical claim documentation",
-      "Corporation Tax relief or direct cash tax credit",
+      "Proactive year-round reviews before deadline",
+      "Optimised director salary vs dividend extraction",
+      "Pension contribution timing & Corporation Tax relief",
+      "Capital allowances on plant, machinery & vehicles",
+      "Structure advice for growing partnerships & limited companies",
     ],
-    ctaText: "Find Out About R&D Claims",
-    ctaLink: "/services/rd-tax-credit-claim",
-    icon: Sparkles,
+    ctaText: "Tax Planning Services",
+    ctaLink: "/services/tax-planning",
+    icon: Calculator,
   },
   {
-    id: "personal-tax-self-assessment",
-    category: "tax",
-    title: "Personal Tax and Self Assessment",
-    tag: "Dividends, Rental Income & CGT",
+    id: "self-assessment-personal-tax",
+    category: "business",
+    title: "Self Assessment and Personal Tax",
+    tag: "Directors, Landlords & Sole Traders",
     description: (
       <>
-        Rental income, dividends and capital gains each affect your personal tax
-        position differently. Our{" "}
-        <Link
-          to="/services/personal-tax-and-self-assessment-service"
-          className="text-gold font-semibold underline decoration-gold/60 underline-offset-4 hover:text-gold-light transition-colors"
-        >
-          personal tax and self assessment
-        </Link>{" "}
-        service handles the filing and explains how everything fits together.
+        We support Leicester individuals with Self Assessment tax returns,
+        rental income, dividends, capital gains, sole trader accounts and
+        personal tax planning. This is useful for contractors, landlords and
+        company directors with more than one source of income.
       </>
     ),
     covers: [
-      "Comprehensive Self Assessment return preparation & filing",
-      "Dividend, rental income & capital gains reconciliation",
-      "Plain-English explanation of tax liability & bands",
-      "Payments on account calculation & future forecasting",
-      "Direct representation with HMRC on personal tax matters",
+      "Self Assessment tax return preparation & filing",
+      "Multiple income streams reported accurately together",
+      "Payment on account planning to prevent surprises",
+      "Allowable business expenses and mileage claims",
+      "Direct liaison with HMRC on your behalf",
     ],
-    ctaText: "View Personal Tax Services",
+    ctaText: "Personal Tax Services",
     ctaLink: "/services/personal-tax-and-self-assessment-service",
     icon: UserCheck,
   },
 ];
 
-const leicesterClientProfiles = [
+const areasServedList = [
   {
-    title: "Logistics & Engineering Contractors",
-    badge: "M1 / M69 Corridor & Pioneer Park",
-    description:
-      "Contractors working across the city's logistics and distribution corridor make up a fair share of our Leicester client base, often looking for clearer IR35 guidance than they'd previously had, alongside engineering and space tech specialists.",
-    icon: Truck,
-    highlight: "Clear IR35 assessments & tax-efficient PSC contractor setups.",
+    title: "Leicester City Centre & Waterside",
+    desc: "Commercial practices, retailers, hospitality venues, and creative consultancies.",
   },
   {
-    title: "LE Postcode & University Landlords",
-    badge: "LE3, LE4, LE5 & Stoneygate",
-    description:
-      "Landlords with properties spread across LE postcodes are another common group, generally wanting more certainty around what they can claim before a return goes in, not after.",
-    icon: Home,
-    highlight: "Student HMO expense maximisation, Section 24 & CGT planning.",
+    title: "Stoneygate, Clarendon Park & Knighton",
+    desc: "Professional practices, residential landlords, and self-employed consultants.",
   },
   {
-    title: "Small Manufacturers & Food Producers",
-    badge: "Industrial Heritage & Golden Mile",
-    description:
-      "We also work with a number of small manufacturers and food producers, sectors where Leicester has genuine depth, who wanted an accountant that understood their business rather than treated it as a generic small business admin.",
-    icon: Factory,
-    highlight: "Industry-specific bookkeeping, stock accounting & R&D claims.",
+    title: "Evington, Spinney Hills & Highfields",
+    desc: "Independent retailers, trade businesses, logistics operators, and local suppliers.",
   },
   {
-    title: "Tech & Space Sector Innovators",
-    badge: "Space Park Leicester & Research Spinouts",
-    description:
-      "A growing number of tech and research-focused businesses connected to Space Park Leicester and the city's university research ecosystem who need proactive financial guidance and R&D support.",
-    icon: Rocket,
-    highlight: "Qualifying R&D relief, grant tracking & outsourced finance.",
+    title: "Oadby, Wigston & South Leicester",
+    desc: "Engineering subcontractors, manufacturing workshops, and growing SME teams.",
+  },
+  {
+    title: "Braunstone, Aylestone & Narborough",
+    desc: "Distribution hubs, contractors, logistics specialists, and family-owned businesses.",
+  },
+  {
+    title: "Loughborough, Hinckley & Market Harborough",
+    desc: "Tech startups, university spinoffs, precision engineering, and rural enterprises.",
+  },
+  {
+    title: "Melton Mowbray & Wider Leicestershire",
+    desc: "Food producers, manufacturing facilities, transport firms, and agricultural businesses.",
+  },
+];
+
+const remoteProcessSteps = [
+  {
+    step: "01",
+    title: "Introductory Call",
+    desc: "A free introductory call to discuss your business, income sources, bookkeeping setup and accounting needs.",
+  },
+  {
+    step: "02",
+    title: "Secure Onboarding",
+    desc: "Secure onboarding to collect records, connect cloud software and identify urgent deadlines.",
+  },
+  {
+    step: "03",
+    title: "Ongoing Support",
+    desc: "Ongoing support with bookkeeping, VAT, payroll, accounts and tax filings without administrative friction.",
+  },
+  {
+    step: "04",
+    title: "Clear Communication",
+    desc: "Clear communication by email, phone or video call whenever advice is needed — no unexpected hourly fees.",
   },
 ];
 
 const faqs = [
   {
-    q: "Do you have a physical office in Leicester?",
-    a: "No, we work with Leicester clients entirely remotely, in the same way we do everywhere outside Bristol. Video calls, phone, email and cloud accounting cover what an office visit would, without requiring travel on either side.",
+    q: "Who are the best accountants in Leicester?",
+    a: "The best accountant depends on your needs. Look for transparent fixed fees, relevant sector experience, clear communication, reliable deadline management and proactive tax advice. Henleaze Tax Consultancy provides fixed-fee accounting and tax support for Leicester manufacturers, contractors, landlords and small businesses remotely from Bristol.",
   },
   {
-    q: "I run a manufacturing or food production business in Leicester. Do you understand the sector well enough to advise properly?",
-    a: "Yes, this is one of the areas we work in regularly given how much of Leicester's economy sits in manufacturing and food production. It's also a sector where R&D tax relief is frequently under-claimed, so it's worth a conversation even if you're not sure your work would qualify.",
+    q: "Do you have an office in Leicester?",
+    a: "No. Henleaze Tax Consultancy is based in Bristol and supports Leicester clients remotely. We use cloud accounting, secure document sharing, phone, email and video calls, so clients do not need to attend an office in person.",
   },
   {
-    q: "I own rental property in Leicester near one of the universities. What should I know about reporting income correctly?",
-    a: "Student focused rental income can involve different expense treatment depending on how the property is let and structured, particularly for HMOs. It's worth a specific conversation rather than assuming standard buy to let rules apply without checking your setup.",
+    q: "Can you help Leicester manufacturers with accounting?",
+    a: "Yes. We support manufacturers and food producers with bookkeeping, VAT, payroll, management reporting, year-end accounts, Corporation Tax and R&D tax relief reviews.",
   },
   {
-    q: "Can I switch accountants partway through my current tax year?",
-    a: "Yes, this happens regularly. We contact your outgoing accountant directly, request your records and continue from wherever you currently stand, without disrupting any upcoming filing deadlines.",
+    q: "Can I switch accountants during the tax year?",
+    a: "Yes. We can contact your previous accountant, request professional clearance and obtain the records needed to continue without disrupting your deadlines. This is a common process and can usually be handled smoothly.",
   },
   {
-    q: "Is your pricing different for Leicester clients compared to other locations?",
-    a: "No. Every client gets the same fixed fee structure, based on what your specific situation requires, agreed before any work starts.",
+    q: "Is your Leicester pricing different from other locations?",
+    a: "No. Fees are based on the level of support required, not the client’s location. Leicester clients receive the same fixed-fee approach as clients elsewhere in the UK.",
   },
 ];
 
 const AccountantsInLeicester: React.FC = () => {
   const [activeTab, setActiveTab] = useState<
-    "all" | "contractor" | "business" | "landlord" | "tax"
+    "all" | "manufacturing" | "contractor" | "landlord" | "business" | "tax"
   >("all");
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
@@ -433,157 +386,151 @@ const AccountantsInLeicester: React.FC = () => {
   const filteredServices =
     activeTab === "all"
       ? servicesData
-      : servicesData.filter((service) => service.category === activeTab);
+      : servicesData.filter((s) => s.category === activeTab);
 
-  // Schema.org Structured Data
   const schemaData = {
     "@context": "https://schema.org",
     "@type": "AccountingService",
     name: "Henleaze Tax Consultancy - Accountants in Leicester",
     url: "https://henleazetaxconsultancy.com/accountants-in-leicester",
     description:
-      "Fixed-fee accountants in Leicester for contractors, landlords and small businesses. Clear pricing, honest advice. Book a free consultation today.",
+      "Accountants in Leicester for manufacturers, logistics firms, contractors, landlords & growing SMEs. Fixed-fee bookkeeping, VAT, payroll, R&D & tax support.",
     telephone: "+447949956279",
-    email: "info@henleazetaxconsultancy.com",
-    areaServed: {
-      "@type": "City",
-      name: "Leicester",
-      containedInPlace: {
-        "@type": "AdministrativeArea",
-        name: "Leicestershire",
-      },
-    },
+    email: "info@henleazetaxconsultancy.co.uk",
+    areaServed: { "@type": "City", name: "Leicester" },
     serviceType: [
+      "Manufacturing Accounting",
       "Contractor Accounting",
+      "IR35 Review",
       "Small Business Accounting",
       "Landlord Accounting",
-      "Tax Planning",
-      "Payroll and HR Services",
+      "Payroll Services",
       "VAT and Bookkeeping",
-      "Company Secretarial",
-      "R&D Tax Credits",
+      "R&D Tax Credit Claims",
+      "Tax Planning",
       "Personal Tax and Self Assessment",
-      "Outsourced Accounting",
     ],
     priceRange: "££",
     openingHoursSpecification: [
       {
         "@type": "OpeningHoursSpecification",
-        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        dayOfWeek: [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+        ],
         opens: "09:00",
         closes: "17:30",
       },
     ],
   };
 
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: faqs.map((faq) => ({
-      "@type": "Question",
-      name: faq.q,
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: faq.a,
-      },
-    })),
-  };
-
   return (
     <>
       <Helmet>
-        <title>Accountants in Leicester | Fixed-Fee, No Surprises</title>
+        <title>Accountants in Leicester for Manufacturers, Landlords &amp; SMEs</title>
         <meta
           name="description"
-          content="Fixed-fee accountants in Leicester for contractors, landlords and small businesses. Clear pricing, honest advice. Book a free consultation today."
+          content="Accountants in Leicester for manufacturers, logistics firms, contractors, landlords &amp; growing SMEs. Fixed-fee bookkeeping, VAT, payroll, R&amp;D &amp; tax support."
         />
         <meta
           name="keywords"
-          content="accountants in leicester, accountant leicester, tax consultant leicester, small business accountant leicester, contractor accountant leicester, landlord accountant leicester, fixed fee accountant leicester"
+          content="accountants in leicester, accountant leicester, manufacturing accountants leicester, contractor accountants leicester, landlord accountants leicester, small business accountant leicester, ir35 leicester, fixed fee accountants leicester"
         />
         <link
           rel="canonical"
           href="https://henleazetaxconsultancy.com/accountants-in-leicester"
         />
-
-        {/* OpenGraph */}
         <meta
           property="og:title"
-          content="Accountants in Leicester | Fixed-Fee, No Surprises"
+          content="Accountants in Leicester for Manufacturers, Landlords &amp; SMEs"
         />
         <meta
           property="og:description"
-          content="Fixed-fee accountants in Leicester for contractors, landlords and small businesses. Clear pricing, honest advice. Book a free consultation today."
+          content="Accountants in Leicester for manufacturers, logistics firms, contractors, landlords &amp; growing SMEs. Fixed-fee bookkeeping, VAT, payroll, R&amp;D &amp; tax support."
         />
         <meta
           property="og:url"
           content="https://henleazetaxconsultancy.com/accountants-in-leicester"
         />
         <meta property="og:type" content="website" />
-
-        {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:title"
-          content="Accountants in Leicester | Fixed-Fee, No Surprises"
+          content="Accountants in Leicester for Manufacturers, Landlords &amp; SMEs"
         />
         <meta
           name="twitter:description"
-          content="Fixed-fee accountants in Leicester for contractors, landlords and small businesses. Clear pricing, honest advice. Book a free consultation today."
+          content="Accountants in Leicester for manufacturers, logistics firms, contractors, landlords &amp; growing SMEs. Fixed-fee bookkeeping, VAT, payroll, R&amp;D &amp; tax support."
         />
-
         <script type="application/ld+json">{JSON.stringify(schemaData)}</script>
-        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
 
       <Layout>
-        {/* HERO SECTION */}
+        {/* ── HERO ─────────────────────────────────────────────────── */}
         <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 bg-gradient-to-b from-navy via-navy to-slate-900 text-white overflow-hidden">
-          {/* Ambient Glows */}
           <div className="absolute inset-0 opacity-25 pointer-events-none">
             <div className="absolute top-0 right-1/4 w-96 h-96 bg-gold/20 rounded-full blur-3xl animate-pulse" />
             <div className="absolute bottom-0 left-10 w-[500px] h-[500px] bg-blue-600/20 rounded-full blur-3xl" />
           </div>
 
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div className="max-w-4xl mx-auto text-center">
-              {/* Location Badge */}
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/15 text-gold text-sm font-semibold mb-6 shadow-sm">
-                <MapPin className="w-4 h-4 text-gold" />
-                <span>Serving Leicester &amp; Leicestershire</span>
-                <span className="w-1.5 h-1.5 rounded-full bg-gold animate-ping" />
+            {/* Featured Hero Image on Top */}
+            <div className="max-w-4xl mx-auto mb-10">
+              <div className="relative rounded-3xl overflow-hidden border border-white/20 shadow-2xl group">
+                <img
+                  src="/leicester.jpg"
+                  alt="Accountants in Leicester for Manufacturers, Landlords & SMEs - Henleaze Tax Consultancy"
+                  className="w-full h-64 sm:h-80 md:h-96 object-cover object-center group-hover:scale-105 transition-transform duration-700"
+                  width={1200}
+                  height={600}
+                  loading="eager"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/30 to-transparent flex items-end p-6 sm:p-8">
+                  <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-navy/80 backdrop-blur-md border border-gold/40 text-gold text-xs sm:text-sm font-semibold shadow-md">
+                    <MapPin className="w-4 h-4 text-gold" />
+                    <span>Leicester &amp; Leicestershire &bull; Fixed-Fee Remote Support</span>
+                    <span className="w-1.5 h-1.5 rounded-full bg-gold animate-ping" />
+                  </div>
+                </div>
               </div>
+            </div>
 
-              {/* H1 Heading */}
+            <div className="max-w-4xl mx-auto text-center">
               <h1 className="font-display text-3xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-white leading-tight mb-6">
-                Accountants in Leicester —{" "}
+                Accountants in Leicester for{" "}
                 <span className="text-gold block sm:inline">
-                  Fixed-Fee Tax &amp; Accounting Support
+                  Manufacturing, Logistics &amp; Growing Businesses
                 </span>
               </h1>
 
-              {/* Subtitle / Intro Description */}
-              <div className="space-y-4 max-w-3xl mx-auto text-base sm:text-lg text-slate-300 leading-relaxed font-normal mb-10 text-left sm:text-center">
-                <p>
-                  Choosing an accountant often comes down to trust built on very
-                  little actual evidence: a recommendation, a nice looking
-                  website, a fee that seemed reasonable. It's only once you're a
-                  client that you find out whether they actually respond
-                  promptly, catch things before they become problems and explain
-                  their reasoning rather than just handing you a number.
-                </p>
-                <p>
-                  Henleaze Tax Consultancy works with contractors, landlords,
-                  sole traders and small businesses across Leicester. We're based
-                  in Bristol and the practical reality is that this makes very
-                  little difference to how the relationship works day to day.
-                  Bookkeeping, filing, payroll and advice all run through cloud
-                  accounting, phone calls and email, in exactly the same way
-                  they would with a firm based five minutes from your office.
-                </p>
-              </div>
+              <p className="text-lg sm:text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed mb-6">
+                Leicester businesses often face a different financial challenge
+                from office-based firms: stock, margins, project costs, payroll,
+                seasonal demand and cash tied up in work in progress. Henleaze
+                Tax Consultancy provides fixed-fee accounting and tax support
+                for manufacturers, logistics businesses, contractors, landlords
+                and growing SMEs across Leicester.
+              </p>
 
-              {/* CTA Group */}
+              <p className="text-base sm:text-lg text-slate-300 max-w-3xl mx-auto leading-relaxed mb-6">
+                We are based in Bristol and support Leicester clients remotely
+                through cloud accounting, secure document sharing, phone and
+                video calls. That means you can access practical accounting
+                support without needing to travel for a meeting, while still
+                having someone who understands your business and responds when
+                you need advice.
+              </p>
+
+              <p className="text-sm sm:text-base text-slate-400 max-w-3xl mx-auto leading-relaxed mb-10">
+                We work with clients across Leicester city centre, Stoneygate,
+                Clarendon Park, Evington, Knighton, Oadby, Wigston,
+                Loughborough, Hinckley, Market Harborough and the wider
+                Leicestershire area.
+              </p>
+
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 mb-12">
                 <Button
                   asChild
@@ -609,144 +556,158 @@ const AccountantsInLeicester: React.FC = () => {
                 </Button>
               </div>
 
-              {/* Trust Badges */}
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-3xl mx-auto pt-6 border-t border-white/10 text-xs sm:text-sm text-slate-300">
-                <div className="flex items-center justify-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-gold shrink-0" />
-                  <span>Fixed Agreed Fees</span>
-                </div>
-                <div className="flex items-center justify-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-gold shrink-0" />
-                  <span>Prompt Response Time</span>
-                </div>
-                <div className="flex items-center justify-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-gold shrink-0" />
-                  <span>Proactive Advice</span>
-                </div>
-                <div className="flex items-center justify-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-gold shrink-0" />
-                  <span>Cloud &amp; Remote Ease</span>
-                </div>
+                {[
+                  "Fixed Agreed Fees",
+                  "Manufacturing & Stock Focus",
+                  "IR35 & R&D Relief Support",
+                  "100% Remote-Ready",
+                ].map((t) => (
+                  <div
+                    key={t}
+                    className="flex items-center justify-center gap-2"
+                  >
+                    <CheckCircle2 className="w-4 h-4 text-gold shrink-0" />
+                    <span>{t}</span>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
         </section>
 
-        {/* TRUST BAR */}
+        {/* ── TRUST BAR ─────────────────────────────────────────────── */}
         <TrustBar />
 
-        {/* ── LEICESTER ECONOMY & BUSINESS BASE SECTION ────────────── */}
-        <section className="py-20 bg-slate-900 text-white relative overflow-hidden">
-          <div className="absolute inset-0 opacity-15 pointer-events-none">
-            <div className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-gradient-to-tl from-gold/30 to-blue-600/20 rounded-full blur-3xl" />
-          </div>
-
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 max-w-6xl">
-            <div className="text-center max-w-3xl mx-auto mb-14">
-              <span className="text-xs font-extrabold uppercase tracking-widest text-gold bg-gold/10 px-3.5 py-1.5 rounded-full inline-block mb-4 border border-gold/20">
-                Local Economic Context
+        {/* ── WHAT LEICESTER BUSINESSES NEED FROM AN ACCOUNTANT ─────── */}
+        <section className="py-20 bg-white relative">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
+            <div className="text-center max-w-3xl mx-auto mb-12">
+              <span className="text-xs font-extrabold uppercase tracking-widest text-gold bg-gold/10 px-3.5 py-1.5 rounded-full inline-block mb-3 border border-gold/20">
+                Sector Priorities
               </span>
-              <h2 className="font-display text-2xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight leading-tight">
-                Leicester's Business Base is Broader Than Its Reputation Suggests
+              <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-extrabold text-navy tracking-tight">
+                What Leicester Businesses Need From an Accountant
               </h2>
               <div className="w-20 h-1 bg-gold mx-auto mt-4 rounded-full" />
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-12">
-              <div className="bg-slate-800/80 border border-slate-700/80 rounded-3xl p-8 sm:p-10 backdrop-blur-sm shadow-xl space-y-5">
-                <h3 className="font-display text-xl sm:text-2xl font-bold text-white flex items-center gap-3">
-                  <Factory className="w-6 h-6 text-gold" />
-                  Heritage &amp; New Economic Drivers
-                </h3>
-                <p className="text-slate-300 text-base leading-relaxed">
-                  Leicester has long been known for textiles and manufacturing and
-                  that industrial heritage still underpins a meaningful part of the
-                  local economy, particularly around the Golden Mile and the wider
-                  garment and food production sector. But the city has diversified
-                  considerably in recent years.
-                </p>
-                <p className="text-slate-300 text-base leading-relaxed">
-                  Space Park Leicester at Pioneer Park has become a genuine centre
-                  for space technology and Earth observation research, tied to the
-                  University of Leicester's research strength. Leicester also sits
-                  at the heart of one of the UK's busiest logistics corridors, with
-                  the M1 and M69 connecting major distribution employers across the
-                  area.
-                </p>
-              </div>
-
-              <div className="bg-slate-800/80 border border-slate-700/80 rounded-3xl p-8 sm:p-10 backdrop-blur-sm shadow-xl space-y-5">
-                <h3 className="font-display text-xl sm:text-2xl font-bold text-white flex items-center gap-3">
-                  <Rocket className="w-6 h-6 text-gold" />
-                  Regeneration, Property &amp; Modern Sectors
-                </h3>
-                <p className="text-slate-300 text-base leading-relaxed">
-                  Add two universities driving consistent rental demand and the
-                  Waterside regeneration project reshaping a large stretch of the
-                  city centre and Leicester's economy looks considerably more
-                  varied than its textile trade reputation alone suggests.
-                </p>
-                <p className="text-slate-300 text-base leading-relaxed">
-                  That range shows up directly in the clients we work with:
-                  contractors tied to logistics and distribution work, small
-                  manufacturers and food producers, landlords with properties across
-                  LE3, LE4 and LE5, and a growing number of tech and research
-                  focused businesses connected to the city's space sector.
-                </p>
-              </div>
-            </div>
-
-            <div className="bg-gradient-to-r from-gold/10 via-slate-800 to-gold/10 border border-gold/30 rounded-2xl p-6 text-center max-w-3xl mx-auto">
-              <p className="text-slate-200 text-sm sm:text-base font-medium">
-                Whether you're operating out of Pioneer Park, manufacturing in LE postcodes, or managing student accommodation, we tailor our support directly to your sector.
+              <p className="mt-4 text-slate-700 text-base sm:text-lg leading-relaxed">
+                Leicester’s economy combines traditional manufacturing and food
+                production with logistics, distribution, space technology,
+                research, retail, hospitality and a substantial rental market.
+                Space Park Leicester and the city’s research base add a growing
+                technology and innovation element, while the wider logistics
+                network around the M1 and M69 supports a large number of
+                distribution and supply-chain businesses.
               </p>
+              <p className="mt-3 text-slate-600 text-sm sm:text-base font-medium">
+                These sectors create different accounting priorities:
+              </p>
+            </div>
+
+            {/* Sector Matrix Cards */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+              {sectorMatrix.map((item, index) => {
+                const IconComponent = item.icon;
+                return (
+                  <div
+                    key={index}
+                    className="bg-slate-50 border border-slate-200/90 rounded-2xl p-6 shadow-sm hover:border-gold/60 hover:shadow-md transition-all flex flex-col justify-between"
+                  >
+                    <div>
+                      <div className="w-12 h-12 rounded-xl bg-gold/15 flex items-center justify-center text-navy mb-4">
+                        <IconComponent className="w-6 h-6 text-gold" />
+                      </div>
+                      <h3 className="font-display font-bold text-navy text-lg mb-2">
+                        {item.type}
+                      </h3>
+                      <div className="mb-4">
+                        <span className="text-xs font-bold uppercase tracking-wider text-slate-500 block mb-1">
+                          Financial Priority:
+                        </span>
+                        <p className="text-slate-700 text-sm font-medium">
+                          {item.priority}
+                        </p>
+                      </div>
+                    </div>
+                    <div className="pt-3 border-t border-slate-200">
+                      <span className="text-xs font-bold uppercase tracking-wider text-navy block mb-1">
+                        How We Help:
+                      </span>
+                      <p className="text-slate-600 text-xs sm:text-sm">
+                        {item.howWeHelp}
+                      </p>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+
+            <div className="bg-navy text-white rounded-3xl p-8 sm:p-10 shadow-xl flex flex-col sm:flex-row items-center justify-between gap-6 max-w-4xl mx-auto">
+              <div className="space-y-2 text-center sm:text-left">
+                <h4 className="font-display text-xl sm:text-2xl font-bold text-white">
+                  No Standard Packages &mdash; Tailored to How You Earn
+                </h4>
+                <p className="text-slate-300 text-sm sm:text-base">
+                  This is why we do not start with a standard package. We start
+                  by understanding how the business earns money, where costs
+                  arise and which deadlines or decisions need attention.
+                </p>
+              </div>
+              <Button
+                asChild
+                size="lg"
+                className="bg-gold hover:bg-gold-light text-navy font-bold px-8 py-6 rounded-full shrink-0 shadow-lg hover:scale-105 transition-all"
+              >
+                <Link to="/contact">
+                  Discuss Your Needs
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </Button>
             </div>
           </div>
         </section>
 
-        {/* ── SERVICES SECTION ──────────────────────────────────────── */}
-        <section id="services" className="py-24 bg-slate-950 text-white relative">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl relative z-10">
-            {/* Section Header */}
-            <div className="text-center max-w-3xl mx-auto mb-12">
-              <span className="text-xs font-extrabold uppercase tracking-widest text-gold bg-gold/10 px-3.5 py-1.5 rounded-full inline-block mb-4 border border-gold/20">
-                Complete Support
+        {/* ── SERVICES SECTION ─────────────────────────────────────── */}
+        <section
+          id="services"
+          className="py-24 bg-gradient-to-b from-blue-950 via-slate-900 to-navy text-white relative overflow-hidden"
+        >
+          <div className="absolute top-10 left-10 w-96 h-96 bg-blue-600/20 rounded-full blur-3xl pointer-events-none" />
+          <div className="absolute bottom-10 right-10 w-96 h-96 bg-gold/15 rounded-full blur-3xl pointer-events-none" />
+
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div className="max-w-3xl mx-auto text-center mb-12">
+              <span className="text-xs font-extrabold uppercase tracking-widest text-blue-300 bg-blue-500/20 border border-blue-400/30 px-4 py-1.5 rounded-full inline-block mb-3 shadow-sm">
+                Practical Support
               </span>
-              <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight leading-tight">
-                Accounting and Tax Support for Leicester Clients
+              <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white">
+                Accounting Support by Business Type
               </h2>
-              <div className="w-20 h-1 bg-gold mx-auto mt-4 rounded-full" />
-              <p className="mt-4 text-slate-400 text-base sm:text-lg">
-                Select a category below to explore how we support Leicester's
-                contractors, landlords, growing enterprises and sole traders.
+              <p className="text-blue-100/90 text-base sm:text-lg mt-4 max-w-2xl mx-auto">
+                Comprehensive, fixed-fee accounting and proactive tax advisory
+                tailored for Leicester's diverse manufacturing, logistics, and
+                commercial sectors.
               </p>
+              <div className="w-24 h-1.5 bg-gold mx-auto mt-5 rounded-full shadow-lg shadow-gold/30" />
             </div>
 
             {/* Filter Tabs */}
-            <div className="flex flex-wrap justify-center gap-2 sm:gap-3 mb-12">
+            <div className="flex flex-wrap items-center justify-center gap-3 mb-14">
               {[
                 { key: "all", label: "All Services" },
+                { key: "manufacturing", label: "Manufacturing & Production" },
                 { key: "contractor", label: "Contractor Accounting" },
-                { key: "business", label: "Small Business & Payroll" },
                 { key: "landlord", label: "Landlord Accounting" },
-                { key: "tax", label: "Tax Planning & R&D" },
+                { key: "tax", label: "Startups & Tax Planning" },
+                { key: "business", label: "VAT & Payroll" },
               ].map((tab) => (
                 <button
                   key={tab.key}
-                  onClick={() =>
-                    setActiveTab(
-                      tab.key as
-                        | "all"
-                        | "contractor"
-                        | "business"
-                        | "landlord"
-                        | "tax"
-                    )
-                  }
-                  className={`px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold transition-all duration-300 cursor-pointer ${
+                  onClick={() => setActiveTab(tab.key as any)}
+                  className={`px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all duration-300 cursor-pointer ${
                     activeTab === tab.key
-                      ? "bg-gold text-navy shadow-lg shadow-gold/20 scale-105"
-                      : "bg-slate-900/90 text-slate-300 border border-slate-800 hover:border-gold/40 hover:text-white"
+                      ? "bg-gold text-navy shadow-lg shadow-gold/30 font-bold scale-105"
+                      : "bg-white/10 text-slate-300 hover:bg-white/20 hover:text-white border border-white/10"
                   }`}
                 >
                   {tab.label}
@@ -755,47 +716,45 @@ const AccountantsInLeicester: React.FC = () => {
             </div>
 
             {/* Services Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
               {filteredServices.map((service) => {
                 const IconComponent = service.icon;
                 return (
                   <div
                     key={service.id}
-                    className="bg-slate-900/90 border border-slate-800 hover:border-gold/50 rounded-3xl p-7 flex flex-col justify-between transition-all duration-300 hover:shadow-2xl hover:shadow-gold/10 hover:-translate-y-1.5 group"
+                    className="bg-slate-900/90 backdrop-blur-xl rounded-2xl p-8 border border-blue-500/20 hover:border-gold/60 shadow-xl hover:shadow-[0_10px_35px_rgba(212,175,55,0.18)] transition-all duration-500 flex flex-col justify-between group hover:-translate-y-2 relative overflow-hidden"
                   >
+                    <div className="absolute -top-12 -right-12 w-24 h-24 bg-blue-500/10 rounded-full blur-xl group-hover:bg-gold/20 transition-all duration-500" />
+
                     <div>
-                      {/* Top Row: Icon & Tag */}
-                      <div className="flex items-start justify-between gap-4 mb-6">
-                        <div className="w-14 h-14 rounded-2xl bg-gold/10 border border-gold/30 flex items-center justify-center text-gold group-hover:bg-gold group-hover:text-navy transition-all duration-300 shadow-md">
-                          <IconComponent className="w-7 h-7" />
+                      <div className="flex items-center justify-between mb-6">
+                        <div className="h-14 w-14 rounded-2xl bg-blue-600/20 group-hover:bg-gold flex items-center justify-center text-blue-400 group-hover:text-navy transition-all duration-300 shadow-inner">
+                          <IconComponent className="h-7 w-7 transition-transform duration-300 group-hover:scale-110" />
                         </div>
-                        <span className="text-[11px] font-bold text-gold bg-gold/10 border border-gold/20 px-3 py-1 rounded-full uppercase tracking-wider text-right">
+                        <span className="text-[11px] font-bold px-3 py-1 rounded-full bg-gold/15 text-gold border border-gold/30">
                           {service.tag}
                         </span>
                       </div>
 
-                      {/* Title */}
-                      <h3 className="font-display text-xl sm:text-2xl font-bold text-white mb-3 group-hover:text-gold transition-colors">
+                      <h3 className="font-display text-xl font-bold text-white mb-3 group-hover:text-gold transition-colors duration-300">
                         {service.title}
                       </h3>
 
-                      {/* Description */}
                       <div className="text-slate-300 text-sm leading-relaxed mb-6">
                         {service.description}
                       </div>
 
-                      {/* What's Covered */}
-                      <div className="border-t border-slate-800/80 pt-5 mb-6">
-                        <span className="text-xs font-bold text-slate-400 uppercase tracking-wider block mb-3">
-                          What We Handle:
-                        </span>
+                      <div className="border-t border-white/10 pt-5 mb-6">
+                        <p className="text-xs font-bold uppercase tracking-wider text-blue-400 mb-3">
+                          Key Features &amp; Support:
+                        </p>
                         <ul className="space-y-2.5">
                           {service.covers.map((item, idx) => (
                             <li
                               key={idx}
-                              className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-300"
+                              className="flex items-start text-xs sm:text-sm text-slate-200 font-medium"
                             >
-                              <Check className="w-4 h-4 text-gold shrink-0 mt-0.5" />
+                              <CheckCircle2 className="h-4 w-4 text-gold mr-2.5 shrink-0 mt-0.5" />
                               <span>{item}</span>
                             </li>
                           ))}
@@ -803,19 +762,14 @@ const AccountantsInLeicester: React.FC = () => {
                       </div>
                     </div>
 
-                    {/* CTA Button */}
                     <div className="pt-2">
                       <Button
                         asChild
-                        variant="outline"
-                        className="w-full border-slate-700 bg-slate-800/50 hover:bg-gold hover:text-navy text-white font-semibold text-xs sm:text-sm py-5 rounded-xl transition-all duration-300 group-hover:border-gold/60"
+                        className="w-full justify-between bg-gold hover:bg-gold-light text-navy font-bold rounded-xl shadow-md hover:shadow-gold/30 hover:scale-[1.02] transition-all duration-300"
                       >
-                        <Link
-                          to={service.ctaLink}
-                          className="flex items-center justify-center gap-2"
-                        >
-                          {service.ctaText}
-                          <ChevronRight className="w-4 h-4" />
+                        <Link to={service.ctaLink}>
+                          <span>{service.ctaText}</span>
+                          <ChevronRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
                         </Link>
                       </Button>
                     </div>
@@ -824,303 +778,222 @@ const AccountantsInLeicester: React.FC = () => {
               })}
             </div>
 
-            {/* View All Services Link */}
-            <div className="mt-14 text-center">
+            {/* View All Services Banner */}
+            <div className="mt-16 text-center max-w-3xl mx-auto bg-white/5 border border-white/10 rounded-2xl p-6 backdrop-blur-md">
+              <p className="text-slate-200 text-sm sm:text-base mb-4">
+                Explore our full suite of personal tax, secretarial, and business
+                accounting solutions.
+              </p>
               <Button
                 asChild
                 size="lg"
-                className="bg-gold hover:bg-gold-light text-navy font-bold text-base px-8 py-6 rounded-full shadow-lg hover:shadow-gold/30 hover:scale-105 transition-all duration-300"
+                className="bg-gold hover:bg-gold-light text-navy font-bold px-8 py-5 rounded-full shadow-lg hover:scale-105 transition-all"
               >
-                <Link to="/services" className="inline-flex items-center gap-2">
+                <Link to="/services">
                   View All Services
-                  <ArrowRight className="w-5 h-5" />
+                  <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
             </div>
           </div>
         </section>
 
-        {/* ── LEICESTER REGENERATION SECTION ──────────────────────── */}
+        {/* ── AREAS WE SERVE AROUND LEICESTER ──────────────────────── */}
         <section className="py-20 bg-white relative">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
-            <div className="bg-slate-50 border border-slate-200/80 rounded-3xl p-8 sm:p-12 md:p-14 shadow-xl relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-72 h-72 bg-gold/10 rounded-full blur-3xl pointer-events-none" />
-
-              <div className="max-w-3xl">
-                <span className="text-xs font-extrabold uppercase tracking-widest text-gold bg-gold/10 px-3.5 py-1.5 rounded-full inline-block mb-4 border border-gold/20">
-                  City Growth &amp; Development
-                </span>
-
-                <h2 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-navy mb-6 leading-snug">
-                  What Leicester's Regeneration Means for Local Landlords and Businesses
-                </h2>
-
-                <div className="space-y-5 text-slate-700 text-base sm:text-lg leading-relaxed">
-                  <p>
-                    The Waterside scheme, delivering new homes and office space along
-                    a former industrial stretch of the River Soar, is one of the
-                    larger regeneration projects in the East Midlands outside
-                    Nottingham.
-                  </p>
-                  <p>
-                    For landlords and small business owners in Leicester, that kind
-                    of development tends to shift local demand gradually over several
-                    years, affecting everything from rental yields to the value of
-                    holding commercial premises nearby. It's the sort of change worth
-                    factoring into longer term tax and investment planning rather
-                    than reacting to after the fact.
-                  </p>
-                </div>
-
-                <div className="mt-8 pt-8 border-t border-slate-200 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-                  <Button
-                    asChild
-                    size="lg"
-                    className="bg-navy hover:bg-navy/90 text-white font-bold text-base px-8 py-6 rounded-full shadow-lg hover:scale-105 transition-all duration-300"
-                  >
-                    <Link to="/calculator" className="inline-flex items-center gap-2">
-                      <Calculator className="w-5 h-5 text-gold" />
-                      Get a Quick Estimate
-                      <ArrowRight className="w-4 h-4 ml-1" />
-                    </Link>
-                  </Button>
-
-                  <Link
-                    to="/contact"
-                    className="inline-flex items-center text-navy font-bold text-sm hover:text-gold transition-colors gap-1 group"
-                  >
-                    Discuss your property tax position
-                    <ChevronRight className="w-4 h-4 text-gold group-hover:translate-x-1 transition-transform" />
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* ── CLIENT PROFILES SECTION ──────────────────────────────── */}
-        <section className="py-20 bg-slate-900 text-white relative">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl relative z-10">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
             <div className="text-center max-w-3xl mx-auto mb-14">
-              <span className="text-xs font-extrabold uppercase tracking-widest text-gold bg-gold/10 px-3.5 py-1.5 rounded-full inline-block mb-4 border border-gold/20">
-                Leicester Clients
+              <span className="text-xs font-extrabold uppercase tracking-widest text-gold bg-gold/10 px-3.5 py-1.5 rounded-full inline-block mb-3 border border-gold/20">
+                County Coverage
               </span>
-              <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight leading-tight">
-                The Kind of Clients Leicester Tends to Send Our Way
+              <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-extrabold text-navy tracking-tight">
+                Areas We Serve Around Leicester
               </h2>
               <div className="w-20 h-1 bg-gold mx-auto mt-4 rounded-full" />
-              <p className="mt-4 text-slate-300 text-base sm:text-lg">
-                Contractors working across the city's logistics and distribution
-                corridor make up a fair share of our Leicester client base, often
-                looking for clearer IR35 guidance than they'd previously had.
-                Landlords with properties spread across LE postcodes are another
-                common group, generally wanting more certainty around what they can
-                claim before a return goes in, not after. We also work with a
-                number of small manufacturers and food producers, sectors where
-                Leicester has genuine depth, who wanted an accountant that
-                understood their business rather than treated it as a generic
-                small business admin.
+              <p className="mt-4 text-slate-600 text-base sm:text-lg">
+                We provide remote accounting and tax support across Leicester
+                and surrounding areas, including:
               </p>
             </div>
 
-            {/* Profile Cards */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-              {leicesterClientProfiles.map((profile, idx) => {
-                const IconComp = profile.icon;
-                return (
-                  <div
-                    key={idx}
-                    className="bg-slate-800/80 border border-slate-700/80 hover:border-gold/50 rounded-2xl p-6 flex flex-col justify-between transition-all duration-300 hover:shadow-xl hover:shadow-gold/10"
-                  >
-                    <div>
-                      <div className="w-12 h-12 rounded-xl bg-gold/10 border border-gold/30 flex items-center justify-center text-gold mb-4">
-                        <IconComp className="w-6 h-6" />
-                      </div>
-                      <span className="text-[11px] font-bold text-gold uppercase tracking-wider block mb-1">
-                        {profile.badge}
-                      </span>
-                      <h3 className="font-display text-lg font-bold text-white mb-2">
-                        {profile.title}
-                      </h3>
-                      <p className="text-slate-300 text-xs sm:text-sm leading-relaxed mb-4">
-                        {profile.description}
-                      </p>
-                    </div>
-                    <div className="pt-3 border-t border-slate-700/60 text-xs text-gold font-medium">
-                      ✓ {profile.highlight}
-                    </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
+              {areasServedList.map((area, idx) => (
+                <div
+                  key={idx}
+                  className="bg-slate-50 border border-slate-200 rounded-2xl p-6 shadow-sm hover:border-gold/60 hover:-translate-y-1 transition-all"
+                >
+                  <MapPin className="w-6 h-6 text-gold mb-3" />
+                  <h3 className="font-display font-bold text-navy text-lg mb-2">
+                    {area.title}
+                  </h3>
+                  <p className="text-slate-600 text-xs sm:text-sm leading-relaxed">
+                    {area.desc}
+                  </p>
+                </div>
+              ))}
+            </div>
+
+            <div className="text-center max-w-2xl mx-auto p-4 rounded-2xl bg-amber-50/80 border border-amber-200/60 text-xs sm:text-sm text-navy font-medium">
+              💡 <strong>Please note:</strong> This means we support clients in
+              these areas remotely; it does not mean we have a physical office in
+              each location.
+            </div>
+          </div>
+        </section>
+
+        {/* ── HOW REMOTE ACCOUNTING WORKS ──────────────────────────── */}
+        <section className="py-20 bg-slate-900 text-white relative overflow-hidden">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl relative z-10">
+            <div className="text-center max-w-3xl mx-auto mb-14">
+              <span className="text-xs font-extrabold uppercase tracking-widest text-gold bg-gold/15 px-3.5 py-1.5 rounded-full inline-block mb-3 border border-gold/30">
+                Simple Online Workflow
+              </span>
+              <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight">
+                How Remote Accounting Works
+              </h2>
+              <div className="w-20 h-1 bg-gold mx-auto mt-4 rounded-full" />
+              <p className="mt-4 text-slate-300 text-base sm:text-lg">
+                You do not need to visit our Bristol office to work with us.
+                Most Leicester clients use:
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+              {remoteProcessSteps.map((step, idx) => (
+                <div
+                  key={idx}
+                  className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-gold/50 transition-all flex flex-col justify-between"
+                >
+                  <div>
+                    <span className="font-display text-3xl font-extrabold text-gold block mb-3">
+                      {step.step}
+                    </span>
+                    <h3 className="font-display font-bold text-white text-lg mb-2">
+                      {step.title}
+                    </h3>
+                    <p className="text-slate-300 text-xs sm:text-sm leading-relaxed">
+                      {step.desc}
+                    </p>
                   </div>
-                );
-              })}
+                </div>
+              ))}
             </div>
 
             <div className="text-center">
+              <p className="text-slate-300 text-sm sm:text-base max-w-2xl mx-auto mb-6">
+                This approach suits busy manufacturers, contractors, landlords
+                and business owners who want responsive support without
+                arranging in-person meetings.
+              </p>
               <Button
                 asChild
                 size="lg"
-                className="bg-gold hover:bg-gold-light text-navy font-bold text-base px-8 py-6 rounded-full shadow-xl hover:shadow-gold/30 hover:scale-105 transition-all duration-300"
+                className="bg-gold hover:bg-gold-light text-navy font-bold px-8 py-5 rounded-full shadow-lg hover:scale-105 transition-all"
               >
-                <Link to="/contact" className="inline-flex items-center gap-2">
-                  Get in touch if any of that sounds close to your situation
-                  <ArrowRight className="w-5 h-5" />
+                <Link to="/contact">
+                  Start with a Free Consultation
+                  <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
             </div>
           </div>
         </section>
 
-        {/* ── HOW FEES ACTUALLY WORK ────────────────────────────────── */}
-        <section className="py-20 bg-slate-950 text-white border-t border-slate-800 relative">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
-            <div className="bg-gradient-to-br from-slate-900 to-navy border border-slate-800 rounded-3xl p-8 sm:p-12 md:p-14 shadow-2xl relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-80 h-80 bg-gold/10 rounded-full blur-3xl pointer-events-none" />
+        {/* ── FIXED FEES, AGREED BEFORE WE START ───────────────────── */}
+        <section className="py-20 bg-slate-50 relative">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
+            <div className="bg-gradient-to-br from-slate-900 via-navy to-slate-900 text-white rounded-3xl p-8 sm:p-14 shadow-2xl border border-white/10 relative overflow-hidden text-center">
+              <div className="absolute -right-20 -top-20 w-60 h-60 bg-gold/20 rounded-full blur-3xl pointer-events-none" />
 
-              <div className="max-w-3xl">
-                <span className="text-xs font-extrabold uppercase tracking-widest text-gold bg-gold/10 px-3.5 py-1.5 rounded-full inline-block mb-4 border border-gold/20">
-                  Clear &amp; Transparent
-                </span>
+              <span className="text-xs font-extrabold uppercase tracking-widest text-gold bg-gold/15 px-3.5 py-1.5 rounded-full inline-block mb-4 border border-gold/30">
+                Transparent Pricing
+              </span>
 
-                <h2 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-6 leading-snug">
-                  How Fees Actually Work
-                </h2>
+              <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-extrabold text-white mb-6">
+                Fixed Fees, Agreed Before We Start
+              </h2>
 
-                <p className="text-slate-300 text-base sm:text-lg leading-relaxed mb-8">
-                  Every quote is fixed and agreed before any work begins,
-                  regardless of whether you're based in Leicester, Bristol or
-                  elsewhere in the UK. There's no hourly billing and no invoice
-                  that grows because a query needed a longer conversation than
-                  expected.
-                </p>
+              <p className="text-slate-300 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto mb-4">
+                Our fees are fixed and agreed before work begins. You will know
+                what is included, what is excluded and when the fee applies.
+              </p>
 
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
-                  <div className="bg-slate-800/60 border border-slate-700/60 rounded-xl p-4">
-                    <CheckCircle2 className="w-5 h-5 text-gold mb-2" />
-                    <span className="font-bold text-sm text-white block">
-                      100% Fixed Quotes
-                    </span>
-                    <span className="text-xs text-slate-400">
-                      No surprise charges or hidden extras
-                    </span>
-                  </div>
-                  <div className="bg-slate-800/60 border border-slate-700/60 rounded-xl p-4">
-                    <CheckCircle2 className="w-5 h-5 text-gold mb-2" />
-                    <span className="font-bold text-sm text-white block">
-                      No Hourly Invoicing
-                    </span>
-                    <span className="text-xs text-slate-400">
-                      Unlimited advice &amp; routine queries
-                    </span>
-                  </div>
-                  <div className="bg-slate-800/60 border border-slate-700/60 rounded-xl p-4">
-                    <CheckCircle2 className="w-5 h-5 text-gold mb-2" />
-                    <span className="font-bold text-sm text-white block">
-                      Predictable Cash Flow
-                    </span>
-                    <span className="text-xs text-slate-400">
-                      Monthly direct debit options available
-                    </span>
-                  </div>
-                </div>
+              <p className="text-slate-300 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto mb-8">
+                We do not charge hourly for routine questions, and we do not
+                increase the fee simply because a conversation took longer than
+                expected. If your requirements change—for example, you register
+                for VAT, employ staff or add a new company—we will explain the
+                revised scope before any change is made.
+              </p>
 
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <Button
                   asChild
                   size="lg"
-                  className="bg-gold hover:bg-gold-light text-navy font-bold text-base px-8 py-6 rounded-full shadow-lg hover:shadow-gold/30 hover:scale-105 transition-all duration-300"
+                  className="bg-gold hover:bg-gold-light text-navy font-bold text-base px-10 py-6 rounded-full shadow-xl hover:shadow-gold/30 hover:scale-105 transition-all duration-300"
                 >
-                  <Link to="/pricing" className="inline-flex items-center gap-2">
+                  <Link to="/pricing">
                     See Our Pricing
-                    <ArrowRight className="w-5 h-5" />
+                    <ArrowRight className="ml-2 h-5 w-5" />
                   </Link>
+                </Button>
+
+                <Button
+                  asChild
+                  variant="outline"
+                  size="lg"
+                  className="w-full sm:w-auto border-white/40 text-black hover:bg-navy hover:text-white font-semibold text-base px-8 py-6 rounded-full transition-all duration-300 cursor-pointer shadow-sm hover:border-gold/60"
+                >
+                  <Link to="/contact">Request Custom Quote</Link>
                 </Button>
               </div>
             </div>
           </div>
         </section>
 
-        {/* ── FAQS SECTION ──────────────────────────────────────────── */}
-        <section className="py-20 bg-slate-900 text-white relative">
+        {/* ── FAQ ───────────────────────────────────────────────────── */}
+        <section className="py-24 bg-gradient-to-b from-navy via-slate-900 to-navy text-white relative overflow-hidden">
+          <div className="absolute top-10 right-10 w-80 h-80 bg-blue-600/15 rounded-full blur-3xl pointer-events-none" />
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl relative z-10">
-            <div className="text-center max-w-2xl mx-auto mb-12">
-              <span className="text-xs font-extrabold uppercase tracking-widest text-gold bg-gold/10 px-3.5 py-1.5 rounded-full inline-block mb-4 border border-gold/20">
-                Got Questions?
+            <div className="text-center mb-16">
+              <span className="text-xs font-extrabold uppercase tracking-widest text-gold bg-white/10 border border-gold/30 px-3.5 py-1.5 rounded-full inline-block mb-3">
+                Clear Answers
               </span>
-              <h2 className="font-display text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
-                Frequently Asked Questions From Leicester Clients
+              <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-white">
+                Leicester Accountant FAQs
               </h2>
               <div className="w-20 h-1 bg-gold mx-auto mt-4 rounded-full" />
             </div>
 
             <div className="space-y-4">
-              {faqs.map((faq, index) => (
-                <div
-                  key={index}
-                  className="bg-slate-800/80 border border-slate-700/80 rounded-2xl overflow-hidden transition-all duration-200"
-                >
-                  <button
-                    onClick={() => toggleFaq(index)}
-                    className="w-full p-6 text-left flex items-center justify-between gap-4 hover:bg-slate-800 transition-colors"
+              {faqs.map((faq, index) => {
+                const isOpen = openFaq === index;
+                return (
+                  <div
+                    key={index}
+                    className="border border-white/15 rounded-2xl overflow-hidden transition-all duration-300 hover:border-gold/60 shadow-sm bg-white/5 backdrop-blur-md"
                   >
-                    <span className="font-display font-semibold text-base sm:text-lg text-white">
-                      {faq.q}
-                    </span>
-                    <ChevronDown
-                      className={`w-5 h-5 text-gold shrink-0 transition-transform duration-200 ${
-                        openFaq === index ? "rotate-180" : ""
-                      }`}
-                    />
-                  </button>
+                    <button
+                      onClick={() => toggleFaq(index)}
+                      className="w-full flex items-center justify-between p-6 text-left hover:bg-white/5 transition-colors cursor-pointer"
+                    >
+                      <span className="font-display font-bold text-base sm:text-lg text-white pr-4">
+                        {faq.q}
+                      </span>
+                      <ChevronDown
+                        className={`h-5 w-5 text-gold shrink-0 transition-transform duration-300 ${
+                          isOpen ? "rotate-180" : ""
+                        }`}
+                      />
+                    </button>
 
-                  {openFaq === index && (
-                    <div className="px-6 pb-6 pt-2 text-slate-300 text-sm sm:text-base leading-relaxed border-t border-slate-700/50">
-                      <p>{faq.a}</p>
-                    </div>
-                  )}
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* ── FINAL CTA BANNER ──────────────────────────────────────── */}
-        <section className="py-20 bg-gradient-to-b from-navy via-navy to-slate-900 text-white relative overflow-hidden">
-          <div className="absolute inset-0 opacity-20 pointer-events-none">
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-gold/15 rounded-full blur-3xl" />
-          </div>
-
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl text-center relative z-10">
-            <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight mb-6">
-              Your Business Deserves More Than a Template
-            </h2>
-            <p className="text-slate-300 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed mb-8">
-              If you're looking for accountants in Leicester who take the time to
-              actually understand your business, rather than applying the same
-              generic advice to everyone, get in touch. A first conversation is
-              free and doesn't commit you to anything further.
-            </p>
-
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Button
-                asChild
-                size="lg"
-                className="w-full sm:w-auto bg-gold hover:bg-gold-light text-navy font-bold text-base px-10 py-6 rounded-full shadow-2xl hover:shadow-gold/40 hover:scale-105 transition-all duration-300 uppercase tracking-wider"
-              >
-                <Link to="/contact" className="inline-flex items-center gap-2">
-                  Book a Free Consultation
-                  <ArrowRight className="w-5 h-5" />
-                </Link>
-              </Button>
-
-              <Button
-                asChild
-                variant="outline"
-                size="lg"
-                className="w-full sm:w-auto border-white/30 text-black hover:bg-white/10 hover:text-white font-semibold text-base px-8 py-6 rounded-full transition-all duration-300 cursor-pointer"
-              >
-                <a href="tel:+447949956279" className="inline-flex items-center gap-2">
-                  <Phone className="w-4 h-4 text-gold" />
-                  +44 7949 956279
-                </a>
-              </Button>
+                    {isOpen && (
+                      <div className="px-6 pb-6 pt-2 text-slate-300 text-sm sm:text-base leading-relaxed border-t border-white/10">
+                        {faq.a}
+                      </div>
+                    )}
+                  </div>
+                );
+              })}
             </div>
           </div>
         </section>
@@ -1130,6 +1003,60 @@ const AccountantsInLeicester: React.FC = () => {
 
         {/* ── LATEST BLOGS & GUIDES ─────────────────────────────────── */}
         <LatestBlogsSection />
+
+        {/* ── FINAL CTA ─────────────────────────────────────────────── */}
+        <section className="py-24 bg-navy text-white relative overflow-hidden">
+          <div className="absolute inset-0 opacity-20 pointer-events-none">
+            <div className="absolute top-0 right-0 w-[650px] h-[650px] bg-gradient-to-br from-gold via-blue-600 to-navy rounded-full blur-3xl" />
+          </div>
+
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center max-w-4xl">
+            <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-extrabold text-white mb-6">
+              Speak to a Leicester Accountant
+            </h2>
+
+            <p className="text-slate-300 text-lg sm:text-xl max-w-2xl mx-auto leading-relaxed mb-10">
+              If you are looking for accountants in Leicester who understand the
+              practical needs of manufacturing, logistics, contracting, property
+              and growing businesses, book a free consultation. We will review
+              your situation, explain what support you need and set out the
+              cost before any work begins.
+            </p>
+
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
+              <Button
+                asChild
+                size="lg"
+                className="w-full sm:w-auto bg-gold hover:bg-gold-light text-navy font-bold text-base px-10 py-6 rounded-full shadow-xl hover:shadow-gold/30 hover:scale-105 transition-all duration-300"
+              >
+                <Link to="/contact">
+                  Book a Free Consultation
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
+              </Button>
+
+              <a
+                href="tel:+447949956279"
+                className="inline-flex items-center text-white hover:text-gold font-bold text-lg transition-colors py-3 px-6 rounded-full border border-white/20 hover:border-gold/40 shadow-sm"
+              >
+                <Phone className="mr-3 h-5 w-5 text-gold" />
+                +44 7949 956279
+              </a>
+            </div>
+
+            <div className="pt-10 flex flex-wrap justify-center items-center gap-6 text-xs text-slate-400">
+              <span className="flex items-center gap-1.5">
+                <CheckCircle2 className="w-4 h-4 text-gold" /> Free Initial Consultation
+              </span>
+              <span className="flex items-center gap-1.5">
+                <CheckCircle2 className="w-4 h-4 text-gold" /> Fixed Fees Agreed Upfront
+              </span>
+              <span className="flex items-center gap-1.5">
+                <CheckCircle2 className="w-4 h-4 text-gold" /> No Long-Term Contract Lock-in
+              </span>
+            </div>
+          </div>
+        </section>
       </Layout>
     </>
   );

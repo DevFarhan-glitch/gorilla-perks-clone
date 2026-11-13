@@ -193,5 +193,17 @@ export const blogPosts: BlogPost[] = [
     image: "/accounting-firms-in-southampton.webp",
     slug: "/accounting-firms-in-southampton"
   },
+  {
+    id: 21,
+    title: "Accounting Firms in Manchester: 8 Firms for Businesses and Contractors",
+    excerpt: "Compare eight accounting firms in Manchester, with office addresses, services and who each suits best, for businesses, contractors and individuals.",
+    content: "Redirecting...",
+    author: "Henleaze Team",
+    date: "November 2026",
+    readTime: "9 min read",
+    category: "Accounting Firms",
+    image: "/manchester-accounting-firms.png",
+    slug: "/accounting-firms-in-manchester-8-firms-for-businesses-and-contractors"
+  },
 ];
 
