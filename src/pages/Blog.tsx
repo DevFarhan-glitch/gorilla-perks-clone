@@ -626,6 +626,22 @@ const allBlogs = [
     readTime: "9 min read",
     featured: false,
     tags: ["Accounting Firms", "Manchester", "Accountants Manchester", "Chartered Accountants", "Small Business", "Contractor Accounting"]
+  },
+  {
+    id: "accountancy-firms-in-cardiff",
+    slug: "/accountancy-firms-in-cardiff",
+    title: "Accountancy Firms in Cardiff: 10 Firms and Their Services",
+    subtitle: "Accountancy Firms in Cardiff: 10 Firms Compared",
+    excerpt:
+      "Compare 10 accountancy firms in Cardiff, explore their services and find suitable accounting support for your business or personal tax needs.",
+    category: "Accounting Firms",
+    categoryColor: "amber",
+    image: "/accountancy-firms-in-cardiff - Copy.png",
+    author: "Henleaze Team",
+    date: "November 2026",
+    readTime: "10 min read",
+    featured: false,
+    tags: ["Accounting Firms", "Cardiff", "Accountants Cardiff", "Chartered Accountants", "Small Business", "Contractor Accounting"]
   }
 ];
 

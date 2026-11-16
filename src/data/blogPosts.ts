@@ -205,5 +205,17 @@ export const blogPosts: BlogPost[] = [
     image: "/manchester-accounting-firms.png",
     slug: "/accounting-firms-in-manchester-8-firms-for-businesses-and-contractors"
   },
+  {
+    id: 22,
+    title: "Accountancy Firms in Cardiff: 10 Firms and Their Services",
+    excerpt: "Compare 10 accountancy firms in Cardiff, explore their services and find suitable accounting support for your business or personal tax needs.",
+    content: "Redirecting...",
+    author: "Henleaze Team",
+    date: "November 2026",
+    readTime: "10 min read",
+    category: "Accounting Firms",
+    image: "/accountancy-firms-in-cardiff - Copy.png",
+    slug: "/accountancy-firms-in-cardiff"
+  },
 ];
 
