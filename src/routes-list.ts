@@ -86,5 +86,6 @@ export const PRERENDER_ROUTES = [
   "/accounting-firms-in-derby",
   "/accountant-in-wolverhampton",
   "/accounting-firms-in-manchester-8-firms-for-businesses-and-contractors",
-  "/accountancy-firms-in-cardiff"
+  "/accountancy-firms-in-cardiff",
+  "/top-10-accountancy-firms-in-leicester"
 ];

@@ -217,5 +217,17 @@ export const blogPosts: BlogPost[] = [
     image: "/accountancy-firms-in-cardiff - Copy.png",
     slug: "/accountancy-firms-in-cardiff"
   },
+  {
+    id: 23,
+    title: "Accountancy Firms in Leicester: 10 Options Worth Comparing",
+    excerpt: "Compare 10 accountancy firms in Leicester, explore their services and find suitable accounting support for your business or personal tax needs.",
+    content: "Redirecting...",
+    author: "Henleaze Team",
+    date: "November 2026",
+    readTime: "10 min read",
+    category: "Accounting Firms",
+    image: "/Accountancy Firms in Leicester 10 Options.webp",
+    slug: "/top-10-accountancy-firms-in-leicester"
+  },
 ];
 

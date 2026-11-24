@@ -642,6 +642,22 @@ const allBlogs = [
     readTime: "10 min read",
     featured: false,
     tags: ["Accounting Firms", "Cardiff", "Accountants Cardiff", "Chartered Accountants", "Small Business", "Contractor Accounting"]
+  },
+  {
+    id: "top-10-accountancy-firms-in-leicester",
+    slug: "/top-10-accountancy-firms-in-leicester",
+    title: "Accountancy Firms in Leicester: 10 Options Worth Comparing",
+    subtitle: "Accountancy Firms in Leicester: 10 Options Compared",
+    excerpt:
+      "Compare 10 accountancy firms in Leicester, explore their services and find suitable accounting support for your business or personal tax needs.",
+    category: "Accounting Firms",
+    categoryColor: "amber",
+    image: "/Accountancy Firms in Leicester 10 Options.webp",
+    author: "Henleaze Team",
+    date: "November 2026",
+    readTime: "10 min read",
+    featured: false,
+    tags: ["Accounting Firms", "Leicester", "Accountants Leicester", "Chartered Accountants", "Small Business", "Contractor Accounting"]
   }
 ];
 
