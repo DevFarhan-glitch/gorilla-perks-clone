@@ -15,407 +15,367 @@ import {
   Building2,
   Home,
   Users,
-  TrendingUp,
-  Phone,
-  Laptop,
-  Landmark,
-  ShieldCheck,
+  Calculator,
+  FileText,
+  Receipt,
   Sparkles,
   UserCheck,
-  Receipt,
-  FileText,
-  Wrench,
-  Tractor,
+  TrendingUp,
+  Phone,
   Factory,
+  Tractor,
+  HardHat,
+  ShieldCheck,
+  Layers,
+  Laptop,
+  Check,
 } from "lucide-react";
 import TrustBar from "@/components/home/TrustBar";
 
 interface ServiceItem {
   id: string;
-  category: "contractor" | "business" | "landlord" | "tax";
+  category: "all" | "manufacturing" | "contractor" | "farming" | "landlord" | "business" | "tax";
   title: string;
+  tag: string;
   description: React.ReactNode;
   covers: string[];
   ctaText: string;
   ctaLink: string;
   icon: React.ElementType;
-  tag: string;
 }
+
+const businessPriorityMatrix = [
+  {
+    type: "Manufacturer or trades business",
+    priority: "Stock, WIP, margins and payroll",
+    howWeHelp:
+      "Bookkeeping, management reporting, VAT, payroll and year-end accounts",
+    icon: Factory,
+  },
+  {
+    type: "Construction contractor or subcontractor",
+    priority: "CIS, tax status and project costs",
+    howWeHelp:
+      "CIS support, contractor accounting, IR35 reviews and tax planning",
+    icon: HardHat,
+  },
+  {
+    type: "Farm or agri-business",
+    priority: "Income timing, capital allowances and diversification",
+    howWeHelp:
+      "Bookkeeping, Self Assessment, capital allowances and tax planning",
+    icon: Tractor,
+  },
+  {
+    type: "Landlord",
+    priority: "Rental income, expenses and Capital Gains Tax",
+    howWeHelp:
+      "Property bookkeeping, Self Assessment and portfolio reporting",
+    icon: Home,
+  },
+  {
+    type: "Growing SME",
+    priority: "Cash flow, VAT, payroll and management information",
+    howWeHelp:
+      "Bookkeeping, VAT, payroll, management accounts and year-end support",
+    icon: Building2,
+  },
+];
 
 const servicesData: ServiceItem[] = [
   {
-    id: "contractor-accounting",
-    category: "contractor",
-    title: "Contractor Accounting",
-    tag: "CIS & Construction Subcontractors",
+    id: "manufacturing-trades",
+    category: "manufacturing",
+    title: "Manufacturing and Trades Accountants in Magherafelt",
+    tag: "Stock, WIP & Margins",
     description: (
       <>
-        Magherafelt's construction and manufacturing supply chain sustains a
-        steady flow of contractor and subcontractor work across Mid Ulster. Our{" "}
-        <Link
-          to="/services/contractor-accountants"
-          className="text-gold font-semibold underline decoration-gold/60 underline-offset-4 hover:text-gold-light transition-colors"
-        >
-          contractor accounting
-        </Link>{" "}
-        service covers your{" "}
-        <Link
-          to="/what-is-ir35-uk"
-          className="text-gold font-semibold underline decoration-gold/60 underline-offset-4 hover:text-gold-light transition-colors"
-        >
-          IR35
-        </Link>{" "}
-        position where relevant, limited company structuring, dividend
-        planning, bookkeeping, VAT, payroll and year end filing.
+        Businesses holding stock or work in progress need records that show more
+        than annual turnover. Whether you run a building-products business,
+        joinery firm, workshop or local trade business, we help track income,
+        costs, stock movements and profitability so you can make decisions with
+        clearer information.
       </>
     ),
     covers: [
-      "IR35 status assessments & bespoke contract reviews",
-      "CIS registration, deduction statements & overpaid tax reclaims",
-      "Limited company setup & PSC tax-efficient structuring",
-      "Optimised director salary & dividend extraction planning",
-      "Statutory annual accounts & CT600 Corporation Tax filing",
+      "Cloud bookkeeping and reconciliations",
+      "Stock and work-in-progress reporting",
+      "VAT returns and Making Tax Digital support",
+      "Payroll for hourly-paid or seasonal staff",
+      "Management accounts and year-end accounts",
+      "Corporation Tax and Companies House filings",
     ],
-    ctaText: "Explore Contractor Accounting",
-    ctaLink: "/services/contractor-accountants",
-    icon: Briefcase,
+    ctaText: "Small Business Accounting Services",
+    ctaLink: "/services/small-business-accountants",
+    icon: Factory,
   },
   {
-    id: "small-business-accounting",
-    category: "business",
-    title: "Small Business Accounting",
-    tag: "Manufacturers, Trades & Town Centre",
+    id: "cis-construction",
+    category: "contractor",
+    title: "CIS and Construction Subcontractors",
+    tag: "CIS & Tax Status",
     description: (
       <>
-        Whether you're running a building product business, a joinery firm, or a
-        retail operation in Magherafelt town centre, our{" "}
-        <Link
-          to="/services/small-business-accountants"
-          className="text-gold font-semibold underline decoration-gold/60 underline-offset-4 hover:text-gold-light transition-colors"
-        >
-          small business accounting
-        </Link>{" "}
-        service keeps your bookkeeping, VAT and payroll accurate and current,
-        with stock and work in progress valued properly from month to month.
+        Construction contractors and subcontractors across Mid Ulster may need
+        support with CIS registration, deduction statements, subcontractor
+        payments, project costs and tax planning.
       </>
     ),
     covers: [
-      "Day-to-day cloud bookkeeping (Xero / QuickBooks / FreeAgent)",
-      "Making Tax Digital (MTD) compliant VAT return management",
-      "Monthly management reporting with accurate stock & WIP valuation",
-      "Statutory year-end accounts & Companies House submissions",
-      "Dedicated accountant support with responsive communication",
+      "CIS registration and monthly returns",
+      "CIS deduction statements and reconciliation",
+      "Contractor accounting and IR35 reviews where relevant",
+      "Limited company accounts and Corporation Tax",
+      "Bookkeeping, VAT and payroll",
     ],
-    ctaText: "Discover Small Business Support",
-    ctaLink: "/services/small-business-accountants",
-    icon: Building2,
+    ctaText: "Contractor Accounting Services",
+    ctaLink: "/services/contractor-accountants",
+    icon: HardHat,
+  },
+  {
+    id: "farm-agri",
+    category: "farming",
+    title: "Farm Accountants in Mid Ulster",
+    tag: "Farming & Agri-Business",
+    description: (
+      <>
+        Farm and agricultural businesses may need to account for farming
+        income, diversification income, machinery, buildings, capital
+        allowances and longer-term planning. These businesses often have income
+        and costs that do not follow a simple monthly pattern.
+      </>
+    ),
+    covers: [
+      "Farm and agri-business bookkeeping",
+      "Self Assessment tax returns",
+      "Capital allowance reviews",
+      "Diversification income reporting",
+      "Tax planning and record-keeping support",
+    ],
+    ctaText: "Explore Tax Planning Services",
+    ctaLink: "/services/tax-planning",
+    icon: Tractor,
   },
   {
     id: "landlord-accounting",
     category: "landlord",
-    title: "Landlord Accounting",
-    tag: "Mid Ulster Rental Properties",
+    title: "Landlord Accountants in Magherafelt",
+    tag: "Rental Portfolios & CGT",
     description: (
       <>
-        Mid Ulster's economic growth has kept local rental demand healthy across
-        Magherafelt and the surrounding district. Our{" "}
-        <Link
-          to="/services/landlord-accountants"
-          className="text-gold font-semibold underline decoration-gold/60 underline-offset-4 hover:text-gold-light transition-colors"
-        >
-          landlord accounting
-        </Link>{" "}
-        service covers rental income reporting, allowable expenses and Capital
-        Gains Tax planning, for a single let or a wider portfolio.
+        Landlords across Magherafelt and Mid Ulster may hold a single rental, an
+        HMO or a growing portfolio. We help with rental income reporting,
+        allowable expenses, property bookkeeping, Capital Gains Tax planning and
+        portfolio reporting.
       </>
     ),
     covers: [
-      "Rental property income reporting & Self Assessment filing",
-      "Allowable expense maximisation & repair deduction advice",
-      "UK Capital Gains Tax (CGT) advice & 60-day residential reporting",
-      "Single buy-to-let & multi-property portfolio support",
-      "Mortgage interest relief optimisation (Section 24)",
+      "Rental property income reporting and Self Assessment filing",
+      "Allowable expense maximisation and repair deduction advice",
+      "Capital Gains Tax planning and 60-day residential reporting",
+      "Single buy-to-let and multi-property portfolio support",
+      "Finance cost relief and tax-efficient property structuring",
     ],
-    ctaText: "View Landlord Services",
+    ctaText: "Landlord Accounting Services",
     ctaLink: "/services/landlord-accountants",
     icon: Home,
   },
   {
-    id: "payroll-hr",
+    id: "vat-bookkeeping",
     category: "business",
-    title: "Payroll and HR Support",
-    tag: "Manufacturing & Hourly-Paid Staff",
+    title: "VAT and Bookkeeping",
+    tag: "MTD & Windsor Framework",
     description: (
       <>
-        A late payroll run or an incorrect PAYE submission causes
-        disproportionate stress for something entirely avoidable. Our{" "}
-        <Link
-          to="/services/payroll-and-hr-services"
-          className="text-gold font-semibold underline decoration-gold/60 underline-offset-4 hover:text-gold-light transition-colors"
-        >
-          payroll and HR support
-        </Link>{" "}
-        keeps this accurate and on schedule, particularly important for
-        Magherafelt's manufacturing and trades businesses with hourly paid
-        staff.
+        Accurate records make VAT returns, funding applications and year-end
+        accounts easier. We help Magherafelt businesses maintain cloud-based
+        bookkeeping, reconcile transactions, prepare VAT returns and meet
+        Making Tax Digital requirements. For Northern Ireland businesses trading
+        goods with Great Britain, VAT treatment can involve additional
+        considerations under the Windsor Framework. We can help you keep records
+        organised and flag areas that may need review.
       </>
     ),
     covers: [
-      "Timely weekly and monthly PAYE payroll processing",
-      "Workplace pension auto-enrolment & compliance",
-      "Real Time Information (RTI) submissions to HMRC",
-      "Digital employee payslips, P45 & P60 distribution",
-      "Director payroll & salary sacrifice optimisation",
+      "Making Tax Digital (MTD) compliant VAT return preparation",
+      "Windsor Framework & GB-NI movement record-keeping guidance",
+      "Real-time cloud bookkeeping and transaction reconciliation",
+      "Clean financial books for bank finance, grants and year-end accounts",
     ],
-    ctaText: "See Payroll & HR Services",
+    ctaText: "VAT and Bookkeeping Services",
+    ctaLink: "/services/vat-and-bookkeeping-accounting-services",
+    icon: Receipt,
+  },
+  {
+    id: "payroll-employers",
+    category: "business",
+    title: "Payroll for Magherafelt Employers",
+    tag: "Weekly & Monthly PAYE",
+    description: (
+      <>
+        If you employ staff in Magherafelt, payroll needs to be accurate every
+        pay cycle. We provide payroll support covering payslips, RTI
+        submissions, pension auto-enrolment, PAYE compliance and starter or
+        leaver processing.
+      </>
+    ),
+    covers: [
+      "Weekly and monthly employee payroll processing",
+      "Digital payslips, P45 and P60 production",
+      "Real Time Information (RTI) submissions to HMRC",
+      "Workplace pension auto-enrolment administration",
+      "Starter, leaver, statutory sick pay and maternity management",
+    ],
+    ctaText: "Payroll and HR Services",
     ctaLink: "/services/payroll-and-hr-services",
     icon: Users,
   },
   {
     id: "tax-planning",
     category: "tax",
-    title: "Tax Planning",
-    tag: "Dividend Timing & Profit Extraction",
+    title: "Tax Planning for Mid Ulster Business Owners",
+    tag: "Proactive Profit Extraction",
     description: (
       <>
-        Most overpaid tax comes down to a decision made too late in the year to
-        actually change anything. Our{" "}
-        <Link
-          to="/services/tax-planning"
-          className="text-gold font-semibold underline decoration-gold/60 underline-offset-4 hover:text-gold-light transition-colors"
-        >
-          tax planning
-        </Link>{" "}
-        service works with you throughout the year, covering dividend timing,
-        profit extraction and business structure.
+        Tax planning should happen before the tax year closes, not after the
+        deadline. We help Magherafelt business owners consider salary and
+        dividend planning, pension contributions, Corporation Tax, Capital
+        Gains Tax, business structure and cash-flow decisions while there is
+        still time to act.
       </>
     ),
     covers: [
-      "Year-round proactive tax reduction strategies",
-      "Dividend timing & director profit extraction planning",
-      "Corporation Tax relief & capital allowances utilisation",
-      "Business structure efficiency (Sole Trader vs Limited Company)",
-      "Personal & corporate wealth alignment",
+      "Director salary and dividend extraction strategies",
+      "Corporation Tax and capital allowance optimisation",
+      "Pension contribution planning and tax relief",
+      "Capital Gains Tax planning on asset and property sales",
+      "Business structure reviews (Sole Trader vs Limited Company)",
     ],
-    ctaText: "Explore Tax Planning",
+    ctaText: "Tax Planning Services",
     ctaLink: "/services/tax-planning",
     icon: TrendingUp,
   },
   {
-    id: "outsourced-accounting",
-    category: "business",
-    title: "Outsourced Accounting",
-    tag: "Full-Function Virtual Finance Team",
-    description: (
-      <>
-        For growing Magherafelt businesses not yet ready to bring finance in
-        house, our{" "}
-        <Link
-          to="/services/outsourced-accounting-services"
-          className="text-gold font-semibold underline decoration-gold/60 underline-offset-4 hover:text-gold-light transition-colors"
-        >
-          outsourced accounting
-        </Link>{" "}
-        service takes on bookkeeping, reporting, payroll and cash flow
-        monitoring, without the cost of a permanent hire.
-      </>
-    ),
-    covers: [
-      "End-to-end management of your finance function",
-      "Monthly management accounts & tailored KPI reporting",
-      "Cash flow forecasting, budgeting & scenario modelling",
-      "Accounts payable, supplier invoices & credit control",
-      "Direct access to senior accountants without in-house overheads",
-    ],
-    ctaText: "Discover Outsourced Accounting",
-    ctaLink: "/services/outsourced-accounting-services",
-    icon: Laptop,
-  },
-  {
-    id: "vat-bookkeeping",
-    category: "business",
-    title: "VAT and Bookkeeping",
-    tag: "Windsor Framework & Clean Records",
-    description: (
-      <>
-        Clean, current records make VAT filing and any funding application
-        considerably more straightforward, and Northern Ireland businesses
-        trading goods with Great Britain sometimes face added VAT complexity
-        under the Windsor Framework. Our{" "}
-        <Link
-          to="/services/vat-and-bookkeeping-accounting-services"
-          className="text-gold font-semibold underline decoration-gold/60 underline-offset-4 hover:text-gold-light transition-colors"
-        >
-          VAT and bookkeeping
-        </Link>{" "}
-        service keeps this properly managed either way.
-      </>
-    ),
-    covers: [
-      "Windsor Framework & GB-NI goods movement VAT guidance",
-      "Making Tax Digital (MTD) compliant VAT return submissions",
-      "Real-time cloud bank reconciliation & transaction tagging",
-      "Clean financial books for audit, lenders and grant funding",
-      "Cross-border EU VAT treatment and reverse charge rules",
-    ],
-    ctaText: "View VAT & Bookkeeping Services",
-    ctaLink: "/services/vat-and-bookkeeping-accounting-services",
-    icon: Receipt,
-  },
-  {
-    id: "company-secretarial",
-    category: "business",
-    title: "Company Secretarial Services",
-    tag: "Companies House NI Compliance",
-    description: (
-      <>
-        Companies House filings are easy to lose track of precisely because
-        they don't come around often. Our{" "}
-        <Link
-          to="/services/company-secretarial-services"
-          className="text-gold font-semibold underline decoration-gold/60 underline-offset-4 hover:text-gold-light transition-colors"
-        >
-          company secretarial
-        </Link>{" "}
-        service tracks confirmation statements and any changes to directors or
-        shareholders.
-      </>
-    ),
-    covers: [
-      "Annual Confirmation Statement preparation & filing",
-      "Director appointments, resignations & PSC register updates",
-      "Share allotments, transfers & restructuring documentation",
-      "Companies House statutory register maintenance",
-      "Registered office address services",
-    ],
-    ctaText: "Explore Company Secretarial",
-    ctaLink: "/services/company-secretarial-services",
-    icon: FileText,
-  },
-  {
-    id: "rd-tax-credits",
+    id: "rd-tax-relief",
     category: "tax",
-    title: "R&D Tax Credit Claims",
-    tag: "Manufacturing & Product Development",
+    title: "R&D Tax Relief for Magherafelt Businesses",
+    tag: "Innovation & Product Development",
     description: (
       <>
-        Given Magherafelt's concentration of building product manufacturers and
-        the scale of product development work happening locally, genuine
-        research and development activity is more common here than many small
-        business owners assume. Our{" "}
-        <Link
-          to="/services/rd-tax-credit-claim"
-          className="text-gold font-semibold underline decoration-gold/60 underline-offset-4 hover:text-gold-light transition-colors"
-        >
-          R&D tax credit
-        </Link>{" "}
-        service checks eligibility properly and builds a claim that holds up.
+        Businesses involved in manufacturing, construction products, joinery,
+        engineering, software or product development may be eligible for R&amp;D
+        tax relief. A business does not need to be a large manufacturer to
+        qualify; smaller suppliers and specialist firms may also carry out
+        qualifying research and development work. We assess eligibility
+        carefully and prepare claims using appropriate technical and financial
+        evidence.
       </>
     ),
     covers: [
-      "Eligibility assessment across construction products, joinery & manufacturing",
-      "Qualifying expenditure calculation (staff, subcontractors, consumables)",
-      "Technical narrative preparation aligned with HMRC guidelines",
-      "Corporation Tax reduction or cash credit repayment",
-      "Robust, defensible claim documentation prepared by specialists",
+      "Eligibility review for manufacturing, joinery & engineering development",
+      "Qualifying expenditure calculation (subcontractor, staff, consumables)",
+      "Technical project narrative in line with HMRC guidelines",
+      "Corporation Tax liability reduction or cash credit reclaim",
     ],
-    ctaText: "Find Out About R&D Claims",
+    ctaText: "R&D Tax Credit Services",
     ctaLink: "/services/rd-tax-credit-claim",
     icon: Sparkles,
   },
   {
-    id: "personal-tax",
+    id: "self-assessment-personal-tax",
     category: "tax",
-    title: "Personal Tax and Self Assessment",
-    tag: "Sole Trader, Landlord & Farming Income",
+    title: "Self Assessment and Personal Tax",
+    tag: "Multi-Source Income",
     description: (
       <>
-        Self employment income, rental profits, farming income and the
-        occasional capital gain each affect your personal tax position
-        differently. Our{" "}
-        <Link
-          to="/services/personal-tax-and-self-assessment-service"
-          className="text-gold font-semibold underline decoration-gold/60 underline-offset-4 hover:text-gold-light transition-colors"
-        >
-          personal tax and self assessment
-        </Link>{" "}
-        service handles the filing and explains how everything connects.
+        We support Magherafelt individuals with Self Assessment tax returns,
+        rental income, dividends, capital gains, sole trader accounts and
+        personal tax planning. This is useful for contractors, landlords,
+        farmers and company directors with more than one source of income.
       </>
     ),
     covers: [
       "Self Assessment tax return preparation and HMRC submission",
-      "Director dividend, self-employed, farming & rental income reconciliation",
-      "Capital Gains Tax calculations and allowable deductions",
-      "High Income Child Benefit Charge & payment on account planning",
-      "Transparent calculations with clear liability timelines",
+      "Sole trader accounts and business expense claims",
+      "Farming, dividend and rental income reconciliation",
+      "Payment on account and future tax liability forecasting",
     ],
-    ctaText: "View Personal Tax Services",
+    ctaText: "Personal Tax Services",
     ctaLink: "/services/personal-tax-and-self-assessment-service",
     icon: UserCheck,
   },
 ];
 
-const magherafeltClientProfiles = [
+const areasServedList = [
   {
-    badge: "Manufacturing & Building Products",
-    title: "Small Manufacturers & Trades Businesses",
-    icon: Factory,
-    description:
-      "A good number of our Magherafelt clients are smaller manufacturers and trades businesses connected to the town's building products sector, wanting management accounts that actually reflect stock and work in progress properly, not a rough estimate.",
-    highlight: "Accurate stock valuation, monthly management accounts, and WIP reporting.",
+    title: "Magherafelt Town Centre",
+    desc: "Retailers, hospitality, trade workshops, property owners and professional practices across the town.",
   },
   {
-    badge: "Farming & Agriculture",
-    title: "Farms & Agricultural Businesses",
-    icon: Tractor,
-    description:
-      "We work with farms and agri-businesses across Mid Ulster, where the accounting genuinely differs from a standard small company. Profit averaging, capital allowances on machinery and buildings, and succession planning are all handled as specialist areas.",
-    highlight: "Profit averaging, agricultural capital allowances, diversification income, and succession planning.",
+    title: "Tobermore & Castledawson",
+    desc: "Building product manufacturers, joinery companies, transport operators and local trades.",
   },
   {
-    badge: "Property & Rentals",
-    title: "Landlords & Property Investors",
-    icon: Home,
-    description:
-      "We work with landlords and sole traders across the wider Mid Ulster district who wanted their tax handled properly, whether that's a single rental property or a growing portfolio.",
-    highlight: "Section 24 interest relief, allowable expenses, and UK Capital Gains Tax reporting.",
+    title: "Maghera & Desertmartin",
+    desc: "Agricultural holdings, specialist engineering, contractors and independent family businesses.",
   },
   {
-    badge: "Construction & Trades",
-    title: "Contractors & Tradespeople",
-    icon: Wrench,
-    description:
-      "For contractors, subcontractors and tradespeople working across Mid Ulster's construction and manufacturing supply chain, getting your tax position set up correctly from day one makes a genuine difference to what you take home.",
-    highlight: "CIS registration, IR35 status, limited company setup, and dividend planning.",
+    title: "Draperstown & the Sperrins",
+    desc: "Farms, rural enterprises, tourism, forestry and construction trades across the foot of the Sperrins.",
+  },
+  {
+    title: "Cookstown & Dungannon",
+    desc: "Mid Ulster's extensive industrial, food processing and heavy engineering manufacturing corridor.",
+  },
+  {
+    title: "Coalisland & Stewartstown",
+    desc: "Fabrication businesses, sub-contractors, sole traders and growing commercial enterprises.",
+  },
+  {
+    title: "The Wider Mid Ulster Area",
+    desc: "Complete digital accounting and tax advisory support across all rural and commercial districts of Mid Ulster.",
   },
 ];
 
 const faqs = [
   {
-    q: "Do you have a physical office in Magherafelt?",
-    a: "No, we work with Magherafelt clients entirely remotely, the same way we do across the rest of the UK. Video calls, phone, email and cloud accounting cover what an office visit would.",
+    q: "Who are the best accountants in Magherafelt?",
+    a: "The best accountants in Magherafelt depend on your needs. Look for transparent fixed fees, relevant experience with your business type, clear communication, reliable deadline management and proactive tax advice. Henleaze Tax Consultancy provides fixed-fee accounting and tax support for Magherafelt manufacturers, contractors, landlords, farms and small businesses remotely from Bristol.",
   },
   {
-    q: "I run a small manufacturing business in Magherafelt that holds stock and work in progress. Can you actually handle that properly?",
-    a: "Yes, and it's worth getting right. Stock and work in progress are where smaller manufacturers most often misstate profit, valuing them loosely makes your monthly numbers swing for reasons that have nothing to do with how the business is actually trading.",
+    q: "Do you have an office in Magherafelt?",
+    a: "No. Henleaze Tax Consultancy is based in Bristol and supports Magherafelt clients remotely. We use cloud accounting, secure document sharing, phone, email and video calls, so clients do not need to attend an office in person.",
   },
   {
-    q: "I run a farm near Magherafelt. Is your service genuinely suited to farm accounts, or is it just standard small business accounting?",
-    a: "Farm accounts are treated as their own discipline here, covering profit averaging, capital allowances on machinery and buildings, diversification income and succession planning, not a generic small business template.",
+    q: "I run a small manufacturing business in Magherafelt that holds stock and work in progress. Can you handle that properly?",
+    a: "Yes. We can help you maintain bookkeeping and management reporting that reflects stock, work in progress and business performance. The exact support depends on your stock system, production process and reporting needs.",
   },
   {
-    q: "Can I switch accountants partway through my current tax year?",
-    a: "Yes, this happens regularly. We contact your outgoing accountant, request your records, and continue from wherever you currently stand, without disrupting any upcoming deadlines.",
+    q: "Can I switch accountants during the tax year?",
+    a: "Yes. We can contact your previous accountant, request professional clearance and obtain the records needed to continue without disrupting your deadlines. This is a common process and can usually be handled smoothly.",
   },
   {
-    q: "Is your pricing different for Magherafelt clients compared to other locations?",
-    a: "No. Every client gets the same fixed fee structure, based on what their specific situation actually requires, agreed before any work starts.",
+    q: "Is your pricing different for Magherafelt clients compared with other locations?",
+    a: "No. Fees are based on the level of support required, not the client's location. Magherafelt clients receive the same fixed-fee approach as clients elsewhere in the UK.",
   },
+];
+
+const fixedFeeFeatures = [
+  "Bookkeeping and reconciliations.",
+  "VAT return preparation.",
+  "Payroll and pension administration.",
+  "Year-end accounts and Corporation Tax.",
+  "Self Assessment tax returns.",
+  "CIS support for construction subcontractors.",
+  "IR35 reviews for contractors.",
+  "Rental income and property tax support.",
+  "Management reporting and cash-flow monitoring.",
+  "Tax planning advice.",
 ];
 
 const AccountantsInMagherafelt: React.FC = () => {
   const [activeTab, setActiveTab] = useState<
-    "all" | "contractor" | "business" | "landlord" | "tax"
+    "all" | "manufacturing" | "contractor" | "farming" | "landlord" | "business" | "tax"
   >("all");
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
@@ -426,12 +386,15 @@ const AccountantsInMagherafelt: React.FC = () => {
   const filteredServices =
     activeTab === "all"
       ? servicesData
-      : servicesData.filter((s) => s.category === activeTab);
+      : servicesData.filter(
+          (s) => s.category === activeTab || (activeTab === "business" && s.category === "manufacturing")
+        );
 
   const schemaData = {
     "@context": "https://schema.org",
     "@type": "AccountingService",
     name: "Henleaze Tax Consultancy - Accountants in Magherafelt",
+    image: "https://henleazetaxconsultancy.com/Magherafelt.jpg",
     url: "https://henleazetaxconsultancy.com/accountants-in-magherafelt",
     description:
       "Reliable accounting for Magherafelt manufacturers, farms, tradespeople and small businesses. Fixed fees, clear advice. Free consultation.",
@@ -444,16 +407,16 @@ const AccountantsInMagherafelt: React.FC = () => {
       { "@type": "AdministrativeArea", name: "Northern Ireland" },
     ],
     serviceType: [
-      "Contractor Accounting",
+      "Manufacturing Accounting",
+      "Farm and Agricultural Accounting",
+      "Contractor Accounting & CIS",
       "Small Business Accounting",
       "Landlord Accounting",
       "Payroll and HR Support",
       "Tax Planning",
-      "Outsourced Accounting",
       "VAT and Bookkeeping",
-      "Company Secretarial Services",
       "R&D Tax Credit Claims",
-      "Personal Tax and Self Assessment",
+      "Self Assessment and Personal Tax",
     ],
     priceRange: "££",
     openingHoursSpecification: [
@@ -514,7 +477,7 @@ const AccountantsInMagherafelt: React.FC = () => {
         />
         <meta
           name="keywords"
-          content="accountants in magherafelt, magherafelt accountants, accountant in magherafelt, manufacturing accountants mid ulster, farming accountants magherafelt, small business accountant magherafelt, tax planning magherafelt, vat northern ireland windsor framework, bookkeeping magherafelt"
+          content="accountants in magherafelt, magherafelt accountants, accountant in magherafelt, manufacturing accountants mid ulster, farm accountants mid ulster, cis contractors magherafelt, landlord accountants magherafelt, fixed fee accountants northern ireland"
         />
         <link
           rel="canonical"
@@ -533,6 +496,10 @@ const AccountantsInMagherafelt: React.FC = () => {
           content="https://henleazetaxconsultancy.com/accountants-in-magherafelt"
         />
         <meta property="og:type" content="website" />
+        <meta
+          property="og:image"
+          content="https://henleazetaxconsultancy.com/Magherafelt.jpg"
+        />
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:title"
@@ -541,6 +508,10 @@ const AccountantsInMagherafelt: React.FC = () => {
         <meta
           name="twitter:description"
           content="Reliable accounting for Magherafelt manufacturers, farms, tradespeople and small businesses. Fixed fees, clear advice. Free consultation."
+        />
+        <meta
+          name="twitter:image"
+          content="https://henleazetaxconsultancy.com/Magherafelt.jpg"
         />
         <script type="application/ld+json">{JSON.stringify(schemaData)}</script>
         <script type="application/ld+json">{JSON.stringify(faqSchemaData)}</script>
@@ -556,36 +527,56 @@ const AccountantsInMagherafelt: React.FC = () => {
           </div>
 
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div className="max-w-4xl mx-auto text-center">
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/15 text-gold text-sm font-semibold mb-6 shadow-sm">
-                <MapPin className="w-4 h-4 text-gold" />
-                <span>Magherafelt &amp; Mid Ulster</span>
-                <span className="w-1.5 h-1.5 rounded-full bg-gold animate-ping" />
+            {/* Featured Image */}
+            <div className="max-w-4xl mx-auto mb-10">
+              <div className="relative rounded-3xl overflow-hidden border border-white/20 shadow-2xl group">
+                <img
+                  src="/Magherafelt.jpg"
+                  alt="Accountants in Magherafelt for Manufacturers, Farms, Trades & Landlords - Henleaze Tax Consultancy"
+                  className="w-full h-64 sm:h-80 md:h-96 object-cover object-center group-hover:scale-105 transition-transform duration-700"
+                  width={1200}
+                  height={600}
+                  loading="eager"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/30 to-transparent flex items-end p-6 sm:p-8">
+                  <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-navy/80 backdrop-blur-md border border-gold/40 text-gold text-xs sm:text-sm font-semibold shadow-md">
+                    <MapPin className="w-4 h-4 text-gold" />
+                    <span>Magherafelt &bull; Mid Ulster &bull; Fixed-Fee Remote Support</span>
+                    <span className="w-1.5 h-1.5 rounded-full bg-gold animate-ping" />
+                  </div>
+                </div>
               </div>
+            </div>
 
+            <div className="max-w-4xl mx-auto text-center">
               <h1 className="font-display text-3xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-white leading-tight mb-6">
-                Accountants in Magherafelt:{" "}
+                Accountants in Magherafelt for{" "}
                 <span className="text-gold block sm:inline">
-                  Reliable Tax Planning &amp; Bookkeeping
+                  Manufacturers, Farms, Trades &amp; Landlords
                 </span>
               </h1>
 
               <p className="text-lg sm:text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed mb-6">
-                Magherafelt sits at the centre of Mid Ulster, a district that's
-                grown faster than anywhere else in Northern Ireland outside
-                Belfast over the past decade, now generating over £2 billion in
-                economic output a year. A lot of the businesses behind that
-                growth don't need complicated accounting. They need it done
-                properly, on time, by someone who understands how their
-                particular kind of business actually works.
+                Magherafelt and the wider Mid Ulster area have a business base
+                shaped by manufacturing, construction, agriculture and local
+                trades. That creates accounting needs that differ from a typical
+                office-based business: stock and work in progress, CIS
+                deductions, machinery and capital allowances, seasonal income,
+                rental portfolios and long-term tax planning.
               </p>
 
-              <p className="text-base sm:text-lg text-slate-300/90 max-w-3xl mx-auto leading-relaxed mb-10">
-                Henleaze Tax Consultancy provides accounting and tax support to
-                sole traders, small companies, landlords and contractors across
-                Magherafelt and the wider Mid Ulster area. We're based in
-                Bristol, and for the work itself that changes very little, since
-                everything runs through cloud accounting, phone calls and email.
+              <p className="text-base sm:text-lg text-slate-300 max-w-3xl mx-auto leading-relaxed mb-6">
+                Henleaze Tax Consultancy provides fixed-fee accounting and tax
+                support for sole traders, contractors, landlords, small companies
+                and agricultural businesses across Magherafelt and Mid Ulster.
+                We are based in Bristol and work remotely through cloud
+                accounting, secure document sharing, phone and video calls.
+              </p>
+
+              <p className="text-sm sm:text-base text-slate-400 max-w-3xl mx-auto leading-relaxed mb-10">
+                We support clients across Magherafelt, Cookstown, Dungannon,
+                Maghera, Tobermore, Castledawson, Desertmartin, Draperstown and
+                the wider Mid Ulster area.
               </p>
 
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 mb-12">
@@ -606,8 +597,8 @@ const AccountantsInMagherafelt: React.FC = () => {
                   size="lg"
                   className="w-full sm:w-auto border-white/40 text-black hover:bg-navy hover:text-white font-semibold text-base px-8 py-6 rounded-full transition-all duration-300 cursor-pointer shadow-sm hover:border-gold/60"
                 >
-                  <a href="#services">
-                    Explore Services
+                  <a href="#priorities">
+                    Explore Support
                     <ChevronDown className="ml-2 h-5 w-5 text-gold" />
                   </a>
                 </Button>
@@ -615,10 +606,10 @@ const AccountantsInMagherafelt: React.FC = () => {
 
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-3xl mx-auto pt-6 border-t border-white/10 text-xs sm:text-sm text-slate-300">
                 {[
-                  "100% Fixed Agreed Fees",
-                  "Manufacturing & WIP Specialists",
-                  "Farm & Agricultural Accounts",
-                  "Seamless Cloud Delivery",
+                  "100% Agreed Fixed Fees",
+                  "Stock & WIP Valuation",
+                  "Farming Capital Allowances",
+                  "CIS & Contractor Support",
                 ].map((item) => (
                   <div key={item} className="flex items-center justify-center gap-2">
                     <CheckCircle2 className="w-4 h-4 text-gold shrink-0" />
@@ -633,150 +624,91 @@ const AccountantsInMagherafelt: React.FC = () => {
         {/* ── TRUST BAR ─────────────────────────────────────────────── */}
         <TrustBar />
 
-        {/* ── MAGHERAFELT ECONOMY CONTEXT ─────────────────────────────── */}
-        <section className="py-20 bg-slate-900 text-white relative overflow-hidden">
-          <div className="absolute inset-0 opacity-15 pointer-events-none">
-            <div className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-gradient-to-tl from-gold/30 to-blue-600/20 rounded-full blur-3xl" />
-          </div>
-
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 max-w-5xl">
-            <div className="text-center max-w-3xl mx-auto mb-14">
-              <span className="text-xs font-extrabold uppercase tracking-widest text-gold bg-gold/15 px-3.5 py-1.5 rounded-full inline-block mb-3 border border-gold/30">
-                Magherafelt Economic Landscape
+        {/* ── WHAT MAGHERAFELT BUSINESSES NEED FROM AN ACCOUNTANT ───── */}
+        <section id="priorities" className="py-20 bg-white relative">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
+            <div className="text-center max-w-3xl mx-auto mb-12">
+              <span className="text-xs font-extrabold uppercase tracking-widest text-gold bg-gold/10 px-3.5 py-1.5 rounded-full inline-block mb-3 border border-gold/20">
+                Mid Ulster Priorities
               </span>
-              <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight">
-                Magherafelt's Economy is Built on Manufacturing and Agriculture, in Roughly Equal Measure
+              <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-extrabold text-navy tracking-tight">
+                What Magherafelt Businesses Need from an Accountant
               </h2>
               <div className="w-20 h-1 bg-gold mx-auto mt-4 rounded-full" />
-            </div>
-
-            <div className="space-y-6 text-slate-300 text-base sm:text-lg leading-relaxed max-w-4xl mx-auto">
-              <p>
-                Few towns of Magherafelt's size can claim three manufacturers
-                with turnovers in the tens of millions, but Magherafelt can. FP
-                McCann, a precast concrete manufacturer, Heron Bros, a joinery
-                business, and Tobermore, a paving and walling producer, are all
-                based here and between them employ a significant share of the
-                local workforce. That manufacturing strength sits alongside a
-                genuinely substantial agricultural base.
+              <p className="mt-4 text-slate-700 text-base sm:text-lg leading-relaxed">
+                Businesses in Mid Ulster often need more than a basic year-end
+                filing service. A manufacturer may need to understand stock,
+                margins and payroll; a contractor may need clarity on CIS and tax
+                status; a farm may need help organising income, expenses and
+                capital allowances; a landlord may need support with rental
+                income and Capital Gains Tax.
               </p>
-              <p>
-                Northern Ireland's agri-food sector generates over £7 billion
-                in economic value a year, and Mid Ulster's farms, agri-machinery
-                dealers and agricultural service businesses are a meaningful
-                part of that figure. The result is a town where building product
-                manufacturing and farming sit side by side as the two main
-                pillars of the local economy, each with its own accounting
-                demands.
-              </p>
-              <p className="bg-white/5 border-l-4 border-gold p-6 rounded-r-2xl text-white font-medium">
-                That combination shapes who we tend to work with: smaller
-                manufacturers and trades businesses connected to the building
-                products sector, farms and agri-businesses across Mid Ulster,
-                landlords and sole traders across the wider district, and
-                contractors and tradespeople working across the construction
-                and manufacturing supply chain.
+              <p className="mt-3 text-slate-600 text-sm sm:text-base font-medium">
+                Rather than treating every client the same, we start by
+                understanding how the business operates, when income arrives,
+                what costs recur and which deadlines or decisions need attention.
               </p>
             </div>
 
-            {/* Economy Pillars Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-14">
-              {[
-                {
-                  Icon: Factory,
-                  title: "Building Products Hub",
-                  body: "FP McCann, Heron Bros and Tobermore anchor a manufacturing cluster with turnovers in the tens of millions and a significant local workforce.",
-                },
-                {
-                  Icon: Tractor,
-                  title: "Agricultural Heartland",
-                  body: "Mid Ulster's farms, agri-machinery dealers and agricultural services are a meaningful part of NI's £7 billion agri-food sector.",
-                },
-                {
-                  Icon: Landmark,
-                  title: "£2 Billion District Output",
-                  body: "Mid Ulster has grown faster than anywhere outside Belfast over the past decade, generating over £2 billion in economic output a year.",
-                },
-                {
-                  Icon: ShieldCheck,
-                  title: "Construction Supply Chain",
-                  body: "A deep network of contractors, subcontractors, joinery firms and tradespeople supporting the region's construction and manufacturing sectors.",
-                },
-              ].map(({ Icon, title, body }) => (
-                <div
-                  key={title}
-                  className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-gold/50 transition-all duration-300"
-                >
-                  <Icon className="w-8 h-8 text-gold mb-3" />
-                  <h3 className="font-display font-bold text-white text-lg mb-2">
-                    {title}
-                  </h3>
-                  <p className="text-slate-400 text-sm leading-relaxed">{body}</p>
-                </div>
-              ))}
+            {/* Business Priority Table / Matrix Cards */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+              {businessPriorityMatrix.map((item, index) => {
+                const IconComponent = item.icon;
+                return (
+                  <div
+                    key={index}
+                    className="bg-slate-50 border border-slate-200/90 rounded-2xl p-6 shadow-sm hover:border-gold/60 hover:shadow-md transition-all flex flex-col justify-between"
+                  >
+                    <div>
+                      <div className="w-12 h-12 rounded-xl bg-gold/15 flex items-center justify-center text-navy mb-4">
+                        <IconComponent className="w-6 h-6 text-gold" />
+                      </div>
+                      <h3 className="font-display font-bold text-navy text-lg mb-2">
+                        {item.type}
+                      </h3>
+                      <div className="mb-4">
+                        <span className="text-xs font-bold uppercase tracking-wider text-slate-500 block mb-1">
+                          Accounting Priority:
+                        </span>
+                        <p className="text-slate-800 text-sm font-semibold">
+                          {item.priority}
+                        </p>
+                      </div>
+                    </div>
+                    <div className="pt-3 border-t border-slate-200">
+                      <span className="text-xs font-bold uppercase tracking-wider text-navy block mb-1">
+                        How We Help:
+                      </span>
+                      <p className="text-slate-600 text-xs sm:text-sm leading-relaxed">
+                        {item.howWeHelp}
+                      </p>
+                    </div>
+                  </div>
+                );
+              })}
             </div>
-          </div>
-        </section>
 
-        {/* ── MANUFACTURING & TRADES SECTOR DETAIL ─────────────────── */}
-        <section className="py-20 bg-white relative">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-              <div>
-                <span className="text-xs font-extrabold uppercase tracking-widest text-gold bg-gold/10 px-3.5 py-1.5 rounded-full inline-block mb-3 border border-gold/20">
-                  Manufacturing & Construction
-                </span>
-                <h2 className="font-display text-2xl sm:text-3xl font-extrabold text-navy tracking-tight mb-4">
-                  For Manufacturing, Construction and Trades Businesses
-                </h2>
-                <div className="w-16 h-1 bg-gold rounded-full mb-6" />
-                <p className="text-slate-600 text-base leading-relaxed mb-4">
-                  If your business holds stock or work in progress, whether
-                  that's precast concrete, joinery materials, or paving stone,
-                  getting an accurate monthly picture of profit depends on
-                  valuing that stock properly, not estimating it once a year.
-                  This is where a lot of smaller manufacturers unintentionally
-                  mislead themselves about how the business is actually
-                  performing.
-                </p>
-                <p className="text-slate-600 text-base leading-relaxed">
-                  We build this into your bookkeeping and management reporting
-                  from the outset, so the numbers you're looking at mean
-                  something.
-                </p>
-                <p className="text-slate-600 text-base leading-relaxed mt-4">
-                  For contractors, subcontractors and tradespeople working across
-                  Mid Ulster's construction and manufacturing supply chain,
-                  getting your tax position set up correctly from day one,
-                  whether that's as a sole trader, under CIS, or through a
-                  limited company, makes a genuine difference to what you take
-                  home.
+            {/* Interactive Callout */}
+            <div className="bg-navy text-white rounded-3xl p-8 sm:p-10 shadow-xl flex flex-col sm:flex-row items-center justify-between gap-6 max-w-4xl mx-auto">
+              <div className="space-y-2 text-center sm:text-left">
+                <h4 className="font-display text-xl sm:text-2xl font-bold text-white">
+                  Clear, Proactive Advice for Mid Ulster Businesses
+                </h4>
+                <p className="text-slate-300 text-sm sm:text-base">
+                  From stock valuations and CIS filings to agricultural capital
+                  allowances, we tailor our support to your exact operating model.
                 </p>
               </div>
-
-              <div>
-                <span className="text-xs font-extrabold uppercase tracking-widest text-gold bg-gold/10 px-3.5 py-1.5 rounded-full inline-block mb-3 border border-gold/20">
-                  Farming & Agriculture
-                </span>
-                <h2 className="font-display text-2xl sm:text-3xl font-extrabold text-navy tracking-tight mb-4">
-                  For Farms and Agricultural Businesses
-                </h2>
-                <div className="w-16 h-1 bg-gold rounded-full mb-6" />
-                <p className="text-slate-600 text-base leading-relaxed mb-4">
-                  Farm accounts follow their own rules, and treating them like a
-                  standard small business return tends to miss things that
-                  matter. Averaging profits across strong and weak years,
-                  claiming capital allowances properly on machinery and
-                  buildings, accounting for diversification income alongside
-                  core farming activity, and thinking ahead about how a farm
-                  eventually passes to the next generation are all genuinely
-                  specialist areas.
-                </p>
-                <p className="text-slate-600 text-base leading-relaxed">
-                  We handle farm and agricultural accounts with that in mind, not
-                  as a generic small business add on.
-                </p>
-              </div>
+              <Button
+                asChild
+                size="lg"
+                className="bg-gold hover:bg-gold-light text-navy font-bold px-8 py-6 rounded-full shrink-0 shadow-lg hover:scale-105 transition-all"
+              >
+                <Link to="/contact">
+                  Discuss Your Needs
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </Button>
             </div>
           </div>
         </section>
@@ -792,15 +724,14 @@ const AccountantsInMagherafelt: React.FC = () => {
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="max-w-3xl mx-auto text-center mb-12">
               <span className="text-xs font-extrabold uppercase tracking-widest text-blue-300 bg-blue-500/20 border border-blue-400/30 px-4 py-1.5 rounded-full inline-block mb-3 shadow-sm">
-                Every Service, in Plain Terms
+                Specialist Practice
               </span>
               <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white">
-                Accounting and Tax Support for Magherafelt Clients
+                Our Accounting Services in Magherafelt
               </h2>
               <p className="text-blue-100/90 text-base sm:text-lg mt-4 max-w-2xl mx-auto">
-                Comprehensive, fixed-fee accountancy, tax strategy and
-                compliance designed for Magherafelt's manufacturers, farms,
-                trades businesses, and landlords.
+                Fixed-fee accounting, CIS compliance, agricultural support and
+                tax advisory tailored for Magherafelt and Mid Ulster businesses.
               </p>
               <div className="w-24 h-1.5 bg-gold mx-auto mt-5 rounded-full shadow-lg shadow-gold/30" />
             </div>
@@ -809,9 +740,11 @@ const AccountantsInMagherafelt: React.FC = () => {
             <div className="flex flex-wrap items-center justify-center gap-3 mb-14">
               {[
                 { key: "all", label: "All Services" },
-                { key: "contractor", label: "Contractor & Trades" },
-                { key: "business", label: "Small Business & Manufacturing" },
-                { key: "landlord", label: "Landlord Accounting" },
+                { key: "manufacturing", label: "Manufacturing & Trades" },
+                { key: "contractor", label: "CIS & Contractors" },
+                { key: "farming", label: "Farming & Agri" },
+                { key: "landlord", label: "Landlords" },
+                { key: "business", label: "VAT & Payroll" },
                 { key: "tax", label: "Tax Planning & R&D" },
               ].map((tab) => (
                 <button
@@ -859,7 +792,7 @@ const AccountantsInMagherafelt: React.FC = () => {
 
                       <div className="border-t border-white/10 pt-5 mb-6">
                         <p className="text-xs font-bold uppercase tracking-wider text-blue-400 mb-3">
-                          Key Features &amp; Support:
+                          What We Help With:
                         </p>
                         <ul className="space-y-2.5">
                           {service.covers.map((item, idx) => (
@@ -891,97 +824,19 @@ const AccountantsInMagherafelt: React.FC = () => {
               })}
             </div>
 
-            {/* View All Services Link */}
-            <div className="mt-14 text-center">
-              <Button
-                asChild
-                variant="outline"
-                size="lg"
-                className="border-gold/50 text-gold hover:bg-gold hover:text-navy font-bold px-8 py-6 rounded-full transition-all duration-300 shadow-lg"
-              >
-                <Link to="/services" className="inline-flex items-center gap-2">
-                  View All Services
-                  <ArrowRight className="w-5 h-5" />
-                </Link>
-              </Button>
-            </div>
-          </div>
-        </section>
-
-        {/* ── WHERE OUR CLIENTS TEND TO COME FROM ──────────────────── */}
-        <section className="py-20 bg-white relative">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
-            <div className="text-center max-w-3xl mx-auto mb-14">
-              <span className="text-xs font-extrabold uppercase tracking-widest text-gold bg-gold/10 px-3.5 py-1.5 rounded-full inline-block mb-3 border border-gold/20">
-                Magherafelt Client Profiles
-              </span>
-              <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-extrabold text-navy tracking-tight">
-                Where Our Magherafelt Clients Tend to Come From
-              </h2>
-              <div className="w-20 h-1 bg-gold mx-auto mt-4 rounded-full" />
-              <p className="mt-4 text-slate-600 text-base sm:text-lg leading-relaxed">
-                A good number of our Magherafelt clients are smaller
-                manufacturers and trades businesses connected to the town's
-                building products sector, wanting management accounts that
-                actually reflect stock and work in progress properly, not a
-                rough estimate. We also work with farms and agri-businesses
-                across Mid Ulster, where the accounting genuinely differs from
-                a standard small company, and with landlords and sole traders
-                across the wider district who wanted their tax handled properly.
+            {/* View All Services Banner */}
+            <div className="mt-16 text-center max-w-3xl mx-auto bg-white/5 border border-white/10 rounded-2xl p-6 backdrop-blur-md">
+              <p className="text-slate-200 text-sm sm:text-base mb-4">
+                Explore our full suite of personal tax, secretarial, and business
+                accounting solutions.
               </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-              {magherafeltClientProfiles.map((profile, index) => {
-                const ProfileIcon = profile.icon;
-                return (
-                  <div
-                    key={index}
-                    className="bg-slate-50 rounded-3xl p-8 border border-slate-200 shadow-md flex flex-col justify-between hover:border-gold/60 hover:shadow-xl transition-all duration-300 group"
-                  >
-                    <div>
-                      <div className="flex items-center gap-4 mb-4">
-                        <div className="w-12 h-12 rounded-xl bg-gold/15 flex items-center justify-center text-navy group-hover:bg-gold group-hover:scale-105 transition-all">
-                          <ProfileIcon className="w-6 h-6" />
-                        </div>
-                        <div>
-                          <span className="text-xs font-bold text-gold uppercase tracking-wider block">
-                            {profile.badge}
-                          </span>
-                          <h3 className="font-display text-xl font-bold text-navy">
-                            {profile.title}
-                          </h3>
-                        </div>
-                      </div>
-                      <p className="text-slate-600 text-sm sm:text-base leading-relaxed mb-6">
-                        {profile.description}
-                      </p>
-                    </div>
-                    <div className="p-3.5 rounded-xl bg-amber-50/90 border border-amber-200/60 text-xs sm:text-sm text-navy font-semibold">
-                      💡 {profile.highlight}
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-
-            <div className="bg-navy text-white rounded-3xl p-8 sm:p-10 shadow-xl flex flex-col sm:flex-row items-center justify-between gap-6 max-w-4xl mx-auto">
-              <div className="space-y-2 text-center sm:text-left">
-                <h4 className="font-display text-xl sm:text-2xl font-bold text-white">
-                  Get in touch if any of that sounds close to your situation.
-                </h4>
-                <p className="text-slate-300 text-sm sm:text-base">
-                  First conversation is free and doesn't commit you to anything
-                  further.
-                </p>
-              </div>
               <Button
                 asChild
                 size="lg"
-                className="bg-gold hover:bg-gold-light text-navy font-bold px-8 py-6 rounded-full shrink-0 shadow-lg hover:scale-105 transition-all"
+                className="bg-gold hover:bg-gold-light text-navy font-bold px-8 py-5 rounded-full shadow-lg hover:scale-105 transition-all"
               >
-                <Link to="/contact">
-                  Get in Touch
+                <Link to="/services">
+                  View All Services
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
@@ -989,33 +844,56 @@ const AccountantsInMagherafelt: React.FC = () => {
           </div>
         </section>
 
-        {/* ── HOW OUR FEES WORK ────────────────────────────────────── */}
+        {/* ── WHAT YOUR FIXED FEE CAN INCLUDE ──────────────────────── */}
         <section className="py-20 bg-slate-50 relative">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
-            <div className="bg-gradient-to-br from-slate-900 via-navy to-slate-900 text-white rounded-3xl p-8 sm:p-14 shadow-2xl border border-white/10 relative overflow-hidden text-center">
+            <div className="bg-gradient-to-br from-slate-900 via-navy to-slate-900 text-white rounded-3xl p-8 sm:p-14 shadow-2xl border border-white/10 relative overflow-hidden">
               <div className="absolute -right-20 -top-20 w-60 h-60 bg-gold/20 rounded-full blur-3xl pointer-events-none" />
 
-              <span className="text-xs font-extrabold uppercase tracking-widest text-gold bg-gold/15 px-3.5 py-1.5 rounded-full inline-block mb-4 border border-gold/30">
-                Transparent Pricing
-              </span>
+              <div className="text-center mb-10">
+                <span className="text-xs font-extrabold uppercase tracking-widest text-gold bg-gold/15 px-3.5 py-1.5 rounded-full inline-block mb-4 border border-gold/30">
+                  Transparent Pricing
+                </span>
 
-              <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-extrabold text-white mb-6">
-                How Our Fees Work
-              </h2>
+                <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-extrabold text-white mb-6">
+                  What Your Fixed Fee Can Include
+                </h2>
 
-              <p className="text-slate-300 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto mb-8">
-                Every quote is fixed and agreed before any work begins, whether
-                you're based in Magherafelt, Bristol or elsewhere in the UK.
-                There's no hourly billing, and nothing changes because your
-                business carries more complexity than most, stock valuation and
-                farm accounts included.
+                <p className="text-slate-300 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto mb-4">
+                  Our pricing is fixed and agreed before work begins. You will
+                  know what is included, what is excluded and when the fee
+                  applies.
+                </p>
+
+                <p className="text-slate-400 text-xs sm:text-sm leading-relaxed max-w-2xl mx-auto mb-6">
+                  Depending on your needs, a fixed-fee package can include:
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 max-w-2xl mx-auto mb-10">
+                {fixedFeeFeatures.map((item, idx) => (
+                  <div
+                    key={idx}
+                    className="flex items-start gap-2.5 p-3 rounded-xl bg-white/5 border border-white/10 text-xs sm:text-sm text-slate-200"
+                  >
+                    <Check className="h-4 w-4 text-gold shrink-0 mt-0.5" />
+                    <span>{item}</span>
+                  </div>
+                ))}
+              </div>
+
+              <p className="text-slate-300 text-xs sm:text-sm leading-relaxed max-w-2xl mx-auto text-center mb-8">
+                We do not charge hourly for routine questions, and we do not
+                increase the fee simply because a conversation took longer than
+                expected. If your requirements change, we explain the revised
+                scope before any change is made.
               </p>
 
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <Button
                   asChild
                   size="lg"
-                  className="bg-gold hover:bg-gold-light text-navy font-bold text-base px-10 py-6 rounded-full shadow-xl hover:shadow-gold/30 hover:scale-105 transition-all duration-300"
+                  className="w-full sm:w-auto bg-gold hover:bg-gold-light text-navy font-bold text-base px-10 py-6 rounded-full shadow-xl hover:shadow-gold/30 hover:scale-105 transition-all duration-300"
                 >
                   <Link to="/pricing">
                     See Our Pricing
@@ -1029,14 +907,135 @@ const AccountantsInMagherafelt: React.FC = () => {
                   size="lg"
                   className="w-full sm:w-auto border-white/40 text-black hover:bg-navy hover:text-white font-semibold text-base px-8 py-6 rounded-full transition-all duration-300 cursor-pointer shadow-sm hover:border-gold/60"
                 >
-                  <Link to="/contact">Request a Fixed Quote</Link>
+                  <Link to="/contact">Request a Custom Quote</Link>
                 </Button>
               </div>
             </div>
           </div>
         </section>
 
-        {/* ── FAQ SECTION ──────────────────────────────────────────── */}
+        {/* ── AREAS WE SERVE AROUND MAGHERAFELT ────────────────────── */}
+        <section className="py-20 bg-white relative">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
+            <div className="text-center max-w-3xl mx-auto mb-14">
+              <span className="text-xs font-extrabold uppercase tracking-widest text-gold bg-gold/10 px-3.5 py-1.5 rounded-full inline-block mb-3 border border-gold/20">
+                Mid Ulster Coverage
+              </span>
+              <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-extrabold text-navy tracking-tight">
+                Areas We Serve Around Magherafelt
+              </h2>
+              <div className="w-20 h-1 bg-gold mx-auto mt-4 rounded-full" />
+              <p className="mt-4 text-slate-600 text-base sm:text-lg">
+                We provide remote accounting and tax support across Magherafelt
+                and nearby areas, including:
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
+              {areasServedList.map((area, idx) => (
+                <div
+                  key={idx}
+                  className="bg-slate-50 border border-slate-200 rounded-2xl p-6 shadow-sm hover:border-gold/60 hover:-translate-y-1 transition-all"
+                >
+                  <MapPin className="w-6 h-6 text-gold mb-3" />
+                  <h3 className="font-display font-bold text-navy text-lg mb-2">
+                    {area.title}
+                  </h3>
+                  <p className="text-slate-600 text-xs sm:text-sm leading-relaxed">
+                    {area.desc}
+                  </p>
+                </div>
+              ))}
+            </div>
+
+            <div className="text-center max-w-2xl mx-auto p-4 rounded-2xl bg-amber-50/80 border border-amber-200/60 text-xs sm:text-sm text-navy font-medium">
+              💡 <strong>Please note:</strong> This means we support clients in
+              these areas remotely; it does not mean we have a physical office in
+              each location.
+            </div>
+          </div>
+        </section>
+
+        {/* ── HOW REMOTE ACCOUNTING WORKS ──────────────────────────── */}
+        <section className="py-20 bg-slate-900 text-white relative overflow-hidden">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl relative z-10">
+            <div className="text-center max-w-3xl mx-auto mb-14">
+              <span className="text-xs font-extrabold uppercase tracking-widest text-gold bg-gold/15 px-3.5 py-1.5 rounded-full inline-block mb-3 border border-gold/30">
+                Seamless Collaboration
+              </span>
+              <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight">
+                How Remote Accounting Works
+              </h2>
+              <div className="w-20 h-1 bg-gold mx-auto mt-4 rounded-full" />
+              <p className="mt-4 text-slate-300 text-base sm:text-lg">
+                You do not need to visit an office in person to receive proactive
+                accounting and tax support.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+              {[
+                {
+                  step: "01",
+                  title: "Introductory Review",
+                  desc: "We discuss your business structure, turnover, stock, payroll and filing deadlines via phone or video call.",
+                },
+                {
+                  step: "02",
+                  title: "Agreed Scope & Fee",
+                  desc: "You receive an itemised proposal with a clear monthly fixed fee covering all routine filings and advice.",
+                },
+                {
+                  step: "03",
+                  title: "Cloud Connection",
+                  desc: "We connect to Xero, QuickBooks or FreeAgent with automated bank feeds and secure receipt capture.",
+                },
+                {
+                  step: "04",
+                  title: "Year-Round Advisory",
+                  desc: "Timely VAT submissions, payroll runs, management figures and proactive tax reviews throughout the year.",
+                },
+              ].map((step, idx) => (
+                <div
+                  key={idx}
+                  className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-gold/50 transition-all flex flex-col justify-between"
+                >
+                  <div>
+                    <span className="font-display text-3xl font-extrabold text-gold block mb-3">
+                      {step.step}
+                    </span>
+                    <h3 className="font-display font-bold text-white text-lg mb-2">
+                      {step.title}
+                    </h3>
+                    <p className="text-slate-300 text-xs sm:text-sm leading-relaxed">
+                      {step.desc}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div className="text-center">
+              <p className="text-slate-300 text-sm sm:text-base max-w-2xl mx-auto mb-6">
+                This approach suits busy manufacturers, contractors, landlords,
+                farmers and business owners who want responsive support without
+                arranging travel for in-person meetings.
+              </p>
+              <Button
+                asChild
+                size="lg"
+                className="bg-gold hover:bg-gold-light text-navy font-bold px-8 py-5 rounded-full shadow-lg hover:scale-105 transition-all"
+              >
+                <Link to="/contact">
+                  Start with a Free Consultation
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </Button>
+            </div>
+          </div>
+        </section>
+
+        {/* ── MAGHERAFELT ACCOUNTANT FAQS ──────────────────────────── */}
         <section className="py-24 bg-gradient-to-b from-navy via-slate-900 to-navy text-white relative overflow-hidden">
           <div className="absolute top-10 right-10 w-80 h-80 bg-blue-600/15 rounded-full blur-3xl pointer-events-none" />
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl relative z-10">
@@ -1045,7 +1044,7 @@ const AccountantsInMagherafelt: React.FC = () => {
                 Clear Answers
               </span>
               <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-white">
-                Frequently Asked Questions From Magherafelt Clients
+                Magherafelt Accountant FAQs
               </h2>
               <div className="w-20 h-1 bg-gold mx-auto mt-4 rounded-full" />
             </div>
@@ -1087,10 +1086,10 @@ const AccountantsInMagherafelt: React.FC = () => {
         {/* ── NEARBY LOCATIONS ─────────────────────────────────────── */}
         <NearbyLocationsSection currentCity="Magherafelt" />
 
-        {/* ── LATEST BLOGS & INSIGHTS ──────────────────────────────── */}
+        {/* ── LATEST BLOGS & GUIDES ─────────────────────────────────── */}
         <LatestBlogsSection />
 
-        {/* ── FINAL CTA SECTION ────────────────────────────────────── */}
+        {/* ── SPEAK TO A MAGHERAFELT ACCOUNTANT (FINAL CTA) ────────── */}
         <section className="py-24 bg-navy text-white relative overflow-hidden">
           <div className="absolute inset-0 opacity-20 pointer-events-none">
             <div className="absolute top-0 right-0 w-[650px] h-[650px] bg-gradient-to-br from-gold via-blue-600 to-navy rounded-full blur-3xl" />
@@ -1098,14 +1097,15 @@ const AccountantsInMagherafelt: React.FC = () => {
 
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center max-w-4xl">
             <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-extrabold text-white mb-6">
-              Let's Talk About Your Business
+              Speak to a Magherafelt Accountant
             </h2>
 
             <p className="text-slate-300 text-lg sm:text-xl max-w-2xl mx-auto leading-relaxed mb-10">
-              If you're looking for accountants in Magherafelt who understand
-              manufacturing, construction and farming properly, not just generic
-              small business advice, get in touch. A first conversation is free
-              and doesn't commit you to anything further.
+              If you are looking for accountants in Magherafelt who understand the
+              practical needs of manufacturing, construction, farming, property
+              and growing businesses, book a free consultation. We will review
+              your situation, explain what support you need and set out the cost
+              before any work begins.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
@@ -1137,7 +1137,7 @@ const AccountantsInMagherafelt: React.FC = () => {
                 <CheckCircle2 className="w-4 h-4 text-gold" /> Fixed Fees Agreed Upfront
               </span>
               <span className="flex items-center gap-1.5">
-                <CheckCircle2 className="w-4 h-4 text-gold" /> No Long-Term Lock-in
+                <CheckCircle2 className="w-4 h-4 text-gold" /> No Long-Term Contract Lock-in
               </span>
             </div>
           </div>
