@@ -92,6 +92,8 @@ import AccountantInWolverhampton from "./pages/AccountantInWolverhampton";
 import AccountingFirmsInManchester from "./pages/AccountingFirmsInManchester";
 import AccountancyFirmsInCardiff from "./pages/AccountancyFirmsInCardiff";
 import Top10AccountancyFirmsInLeicester from "./pages/Top10AccountancyFirmsInLeicester";
+import LimitedCompanyVsSoleTrader from "./pages/LimitedCompanyVsSoleTrader";
+import SalaryVsDividendsUK from "./pages/SalaryVsDividendsUK";
 
 export const AppRoutesStatic = () => (
   <>
@@ -274,6 +276,10 @@ export const AppRoutesStatic = () => (
       <Route path="/accountancy-firms-in-cardiff/" element={<AccountancyFirmsInCardiff />} />
       <Route path="/top-10-accountancy-firms-in-leicester" element={<Top10AccountancyFirmsInLeicester />} />
       <Route path="/top-10-accountancy-firms-in-leicester/" element={<Top10AccountancyFirmsInLeicester />} />
+      <Route path="/limited-company-vs-sole-trader" element={<LimitedCompanyVsSoleTrader />} />
+      <Route path="/limited-company-vs-sole-trader/" element={<LimitedCompanyVsSoleTrader />} />
+      <Route path="/salary-vs-dividends-uk" element={<SalaryVsDividendsUK />} />
+      <Route path="/salary-vs-dividends-uk/" element={<SalaryVsDividendsUK />} />
       <Route path="/privacy-policy" element={<PrivacyPolicy />} />
       <Route path="/privacy-policy/" element={<PrivacyPolicy />} />
       {/* ── 301-EQUIVALENT CLIENT-SIDE REDIRECTS ────────────────── */}

@@ -94,6 +94,8 @@ const AccountantInWolverhampton = lazyWithRetry(() => import("./pages/Accountant
 const AccountingFirmsInManchester = lazyWithRetry(() => import("./pages/AccountingFirmsInManchester"));
 const AccountancyFirmsInCardiff = lazyWithRetry(() => import("./pages/AccountancyFirmsInCardiff"));
 const Top10AccountancyFirmsInLeicester = lazyWithRetry(() => import("./pages/Top10AccountancyFirmsInLeicester"));
+const LimitedCompanyVsSoleTrader = lazyWithRetry(() => import("./pages/LimitedCompanyVsSoleTrader"));
+const SalaryVsDividendsUK = lazyWithRetry(() => import("./pages/SalaryVsDividendsUK"));
 
 export const AppRoutesLazy = () => (
   <>
@@ -277,6 +279,10 @@ export const AppRoutesLazy = () => (
         <Route path="/accountancy-firms-in-cardiff/" element={<AccountancyFirmsInCardiff />} />
         <Route path="/top-10-accountancy-firms-in-leicester" element={<Top10AccountancyFirmsInLeicester />} />
         <Route path="/top-10-accountancy-firms-in-leicester/" element={<Top10AccountancyFirmsInLeicester />} />
+        <Route path="/limited-company-vs-sole-trader" element={<LimitedCompanyVsSoleTrader />} />
+        <Route path="/limited-company-vs-sole-trader/" element={<LimitedCompanyVsSoleTrader />} />
+        <Route path="/salary-vs-dividends-uk" element={<SalaryVsDividendsUK />} />
+        <Route path="/salary-vs-dividends-uk/" element={<SalaryVsDividendsUK />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/privacy-policy/" element={<PrivacyPolicy />} />
         {/* ── 301-EQUIVALENT CLIENT-SIDE REDIRECTS ────────────────── */}

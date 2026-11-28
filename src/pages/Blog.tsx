@@ -658,6 +658,38 @@ const allBlogs = [
     readTime: "10 min read",
     featured: false,
     tags: ["Accounting Firms", "Leicester", "Accountants Leicester", "Chartered Accountants", "Small Business", "Contractor Accounting"]
+  },
+  {
+    id: "limited-company-vs-sole-trader",
+    slug: "/limited-company-vs-sole-trader",
+    title: "Limited Company vs Sole Trader: What’s the Difference and Which Is Better in 2026?",
+    subtitle: "Limited Company vs Sole Trader: Key Differences 2026",
+    excerpt:
+      "Compare limited company vs sole trader in the UK. Understand tax, liability, costs and responsibilities to choose the right business structure.",
+    category: "Business Structure",
+    categoryColor: "blue",
+    image: "/limited-company-vs-sole-trader.webp",
+    author: "Henleaze Team",
+    date: "November 2026",
+    readTime: "9 min read",
+    featured: false,
+    tags: ["Business Structure", "Sole Trader", "Limited Company", "Tax Planning", "Corporation Tax", "Contractor Accounting"]
+  },
+  {
+    id: "salary-vs-dividends-uk",
+    slug: "/salary-vs-dividends-uk",
+    title: "Salary vs Dividends in the UK: Which Is More Tax Efficient in 2027?",
+    subtitle: "Salary vs Dividends UK: Which Is Better in 2027?",
+    excerpt:
+      "Compare salary vs dividends in the UK. Understand tax rates, National Insurance and how company directors can pay themselves.",
+    category: "Director Tax Guide",
+    categoryColor: "blue",
+    image: "/Salary vs Dividends in the UK.webp",
+    author: "Henleaze Team",
+    date: "November 2026",
+    readTime: "8 min read",
+    featured: false,
+    tags: ["Director Salary", "Dividends", "Corporation Tax", "Tax Planning", "Contractor Accounting", "National Insurance"]
   }
 ];
 

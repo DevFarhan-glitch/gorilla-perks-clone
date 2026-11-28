@@ -229,5 +229,29 @@ export const blogPosts: BlogPost[] = [
     image: "/Accountancy Firms in Leicester 10 Options.webp",
     slug: "/top-10-accountancy-firms-in-leicester"
   },
+  {
+    id: 24,
+    title: "Limited Company vs Sole Trader: What’s the Difference and Which Is Better in 2026?",
+    excerpt: "Compare limited company vs sole trader in the UK. Understand tax, liability, costs and responsibilities to choose the right business structure.",
+    content: "Redirecting...",
+    author: "Henleaze Team",
+    date: "November 2026",
+    readTime: "9 min read",
+    category: "Business Structure",
+    image: "/limited-company-vs-sole-trader.webp",
+    slug: "/limited-company-vs-sole-trader"
+  },
+  {
+    id: 25,
+    title: "Salary vs Dividends in the UK: Which Is More Tax Efficient in 2027?",
+    excerpt: "Compare salary vs dividends in the UK. Understand tax rates, National Insurance and how company directors can pay themselves.",
+    content: "Redirecting...",
+    author: "Henleaze Team",
+    date: "November 2026",
+    readTime: "8 min read",
+    category: "Director Tax Guide",
+    image: "/Salary vs Dividends in the UK.webp",
+    slug: "/salary-vs-dividends-uk"
+  },
 ];
 
